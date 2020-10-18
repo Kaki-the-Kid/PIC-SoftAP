@@ -9584,7 +9584,13 @@ void i2c_master_stop(void);
 void i2c_master_ack(void);
 void i2c_master_nack(void);
 # 18 "rtc/rtc_ds1337/../rtc_ds1337/rtc_ds1337.h" 2
-# 85 "rtc/rtc_ds1337/../rtc_ds1337/rtc_ds1337.h"
+# 83 "rtc/rtc_ds1337/../rtc_ds1337/rtc_ds1337.h"
+void rtc_init(void);
+
+
+
+
+
 void rtc_ds_1337_getTimeAll(void);
 void rtc_ds_1337_setTimeAll(uint8_t, uint8_t, uint8_t, uint8_t, uint8_t, uint8_t, int16_t);
 
@@ -9613,7 +9619,7 @@ void rtc_ds_1337_setMonth(void);
 
 uint8_t rtc_ds_1337_getYear(void);
 void rtc_ds_1337_setYear(void);
-# 121 "rtc/rtc_ds1337/../rtc_ds1337/rtc_ds1337.h"
+# 125 "rtc/rtc_ds1337/../rtc_ds1337/rtc_ds1337.h"
 void setAlarm1(void);
 
 uint8_t rtc_ds_1337_getAlarm1Seconds(void);

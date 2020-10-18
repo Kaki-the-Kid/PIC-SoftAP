@@ -1,4 +1,4 @@
-# 1 "rtc/rtc_ds1337/rtc_ds1337.c"
+# 1 "lcd/lcd.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,18 +6,16 @@
 # 1 "<built-in>" 2
 # 1 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "rtc/rtc_ds1337/rtc_ds1337.c" 2
+# 1 "lcd/lcd.c" 2
 
 
 
 
 
-
-
-# 1 "rtc/rtc_ds1337/rtc_ds1337.h" 1
-# 10 "rtc/rtc_ds1337/rtc_ds1337.h"
-# 1 "rtc/rtc_ds1337/../../mcc_generated_files/mcc.h" 1
-# 49 "rtc/rtc_ds1337/../../mcc_generated_files/mcc.h"
+# 1 "lcd/lcd.h" 1
+# 13 "lcd/lcd.h"
+# 1 "lcd/../mcc_generated_files/mcc.h" 1
+# 49 "lcd/../mcc_generated_files/mcc.h"
 # 1 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -9138,17 +9136,17 @@ extern __attribute__((nonreentrant)) void _delaywdt(unsigned long);
 #pragma intrinsic(_delay3)
 extern __attribute__((nonreentrant)) void _delay3(unsigned char);
 # 33 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\\pic\\include\\xc.h" 2 3
-# 49 "rtc/rtc_ds1337/../../mcc_generated_files/mcc.h" 2
+# 49 "lcd/../mcc_generated_files/mcc.h" 2
 
-# 1 "rtc/rtc_ds1337/../../mcc_generated_files/device_config.h" 1
-# 50 "rtc/rtc_ds1337/../../mcc_generated_files/mcc.h" 2
+# 1 "lcd/../mcc_generated_files/device_config.h" 1
+# 50 "lcd/../mcc_generated_files/mcc.h" 2
 
-# 1 "rtc/rtc_ds1337/../../mcc_generated_files/pin_manager.h" 1
-# 201 "rtc/rtc_ds1337/../../mcc_generated_files/pin_manager.h"
+# 1 "lcd/../mcc_generated_files/pin_manager.h" 1
+# 201 "lcd/../mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 213 "rtc/rtc_ds1337/../../mcc_generated_files/pin_manager.h"
+# 213 "lcd/../mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
-# 51 "rtc/rtc_ds1337/../../mcc_generated_files/mcc.h" 2
+# 51 "lcd/../mcc_generated_files/mcc.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\stdint.h" 1 3
 # 22 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\stdint.h" 3
@@ -9235,68 +9233,68 @@ typedef int32_t int_fast32_t;
 typedef uint16_t uint_fast16_t;
 typedef uint32_t uint_fast32_t;
 # 144 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\stdint.h" 2 3
-# 52 "rtc/rtc_ds1337/../../mcc_generated_files/mcc.h" 2
+# 52 "lcd/../mcc_generated_files/mcc.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\stdbool.h" 1 3
-# 53 "rtc/rtc_ds1337/../../mcc_generated_files/mcc.h" 2
+# 53 "lcd/../mcc_generated_files/mcc.h" 2
 
-# 1 "rtc/rtc_ds1337/../../mcc_generated_files/interrupt_manager.h" 1
-# 110 "rtc/rtc_ds1337/../../mcc_generated_files/interrupt_manager.h"
+# 1 "lcd/../mcc_generated_files/interrupt_manager.h" 1
+# 110 "lcd/../mcc_generated_files/interrupt_manager.h"
 void INTERRUPT_Initialize (void);
-# 54 "rtc/rtc_ds1337/../../mcc_generated_files/mcc.h" 2
+# 54 "lcd/../mcc_generated_files/mcc.h" 2
 
-# 1 "rtc/rtc_ds1337/../../mcc_generated_files/tmr2.h" 1
-# 104 "rtc/rtc_ds1337/../../mcc_generated_files/tmr2.h"
+# 1 "lcd/../mcc_generated_files/tmr2.h" 1
+# 104 "lcd/../mcc_generated_files/tmr2.h"
 void TMR2_Initialize(void);
-# 133 "rtc/rtc_ds1337/../../mcc_generated_files/tmr2.h"
+# 133 "lcd/../mcc_generated_files/tmr2.h"
 void TMR2_StartTimer(void);
-# 165 "rtc/rtc_ds1337/../../mcc_generated_files/tmr2.h"
+# 165 "lcd/../mcc_generated_files/tmr2.h"
 void TMR2_StopTimer(void);
-# 200 "rtc/rtc_ds1337/../../mcc_generated_files/tmr2.h"
+# 200 "lcd/../mcc_generated_files/tmr2.h"
 uint8_t TMR2_ReadTimer(void);
-# 239 "rtc/rtc_ds1337/../../mcc_generated_files/tmr2.h"
+# 239 "lcd/../mcc_generated_files/tmr2.h"
 void TMR2_WriteTimer(uint8_t timerVal);
-# 291 "rtc/rtc_ds1337/../../mcc_generated_files/tmr2.h"
+# 291 "lcd/../mcc_generated_files/tmr2.h"
 void TMR2_LoadPeriodRegister(uint8_t periodVal);
-# 309 "rtc/rtc_ds1337/../../mcc_generated_files/tmr2.h"
+# 309 "lcd/../mcc_generated_files/tmr2.h"
 void TMR2_ISR(void);
-# 327 "rtc/rtc_ds1337/../../mcc_generated_files/tmr2.h"
+# 327 "lcd/../mcc_generated_files/tmr2.h"
  void TMR2_CallBack(void);
-# 344 "rtc/rtc_ds1337/../../mcc_generated_files/tmr2.h"
+# 344 "lcd/../mcc_generated_files/tmr2.h"
  void TMR2_SetInterruptHandler(void (* InterruptHandler)(void));
-# 362 "rtc/rtc_ds1337/../../mcc_generated_files/tmr2.h"
+# 362 "lcd/../mcc_generated_files/tmr2.h"
 extern void (*TMR2_InterruptHandler)(void);
-# 380 "rtc/rtc_ds1337/../../mcc_generated_files/tmr2.h"
+# 380 "lcd/../mcc_generated_files/tmr2.h"
 void TMR2_DefaultInterruptHandler(void);
-# 55 "rtc/rtc_ds1337/../../mcc_generated_files/mcc.h" 2
+# 55 "lcd/../mcc_generated_files/mcc.h" 2
 
-# 1 "rtc/rtc_ds1337/../../mcc_generated_files/tmr4.h" 1
-# 104 "rtc/rtc_ds1337/../../mcc_generated_files/tmr4.h"
+# 1 "lcd/../mcc_generated_files/tmr4.h" 1
+# 104 "lcd/../mcc_generated_files/tmr4.h"
 void TMR4_Initialize(void);
-# 133 "rtc/rtc_ds1337/../../mcc_generated_files/tmr4.h"
+# 133 "lcd/../mcc_generated_files/tmr4.h"
 void TMR4_StartTimer(void);
-# 165 "rtc/rtc_ds1337/../../mcc_generated_files/tmr4.h"
+# 165 "lcd/../mcc_generated_files/tmr4.h"
 void TMR4_StopTimer(void);
-# 200 "rtc/rtc_ds1337/../../mcc_generated_files/tmr4.h"
+# 200 "lcd/../mcc_generated_files/tmr4.h"
 uint8_t TMR4_ReadTimer(void);
-# 239 "rtc/rtc_ds1337/../../mcc_generated_files/tmr4.h"
+# 239 "lcd/../mcc_generated_files/tmr4.h"
 void TMR4_WriteTimer(uint8_t timerVal);
-# 291 "rtc/rtc_ds1337/../../mcc_generated_files/tmr4.h"
+# 291 "lcd/../mcc_generated_files/tmr4.h"
 void TMR4_LoadPeriodRegister(uint8_t periodVal);
-# 309 "rtc/rtc_ds1337/../../mcc_generated_files/tmr4.h"
+# 309 "lcd/../mcc_generated_files/tmr4.h"
 void TMR4_ISR(void);
-# 327 "rtc/rtc_ds1337/../../mcc_generated_files/tmr4.h"
+# 327 "lcd/../mcc_generated_files/tmr4.h"
  void TMR4_CallBack(void);
-# 344 "rtc/rtc_ds1337/../../mcc_generated_files/tmr4.h"
+# 344 "lcd/../mcc_generated_files/tmr4.h"
  void TMR4_SetInterruptHandler(void (* InterruptHandler)(void));
-# 362 "rtc/rtc_ds1337/../../mcc_generated_files/tmr4.h"
+# 362 "lcd/../mcc_generated_files/tmr4.h"
 extern void (*TMR4_InterruptHandler)(void);
-# 380 "rtc/rtc_ds1337/../../mcc_generated_files/tmr4.h"
+# 380 "lcd/../mcc_generated_files/tmr4.h"
 void TMR4_DefaultInterruptHandler(void);
-# 56 "rtc/rtc_ds1337/../../mcc_generated_files/mcc.h" 2
+# 56 "lcd/../mcc_generated_files/mcc.h" 2
 
-# 1 "rtc/rtc_ds1337/../../mcc_generated_files/eusart1.h" 1
-# 57 "rtc/rtc_ds1337/../../mcc_generated_files/eusart1.h"
+# 1 "lcd/../mcc_generated_files/eusart1.h" 1
+# 57 "lcd/../mcc_generated_files/eusart1.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\stdio.h" 1 3
 # 24 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\stdio.h" 3
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\bits/alltypes.h" 1 3
@@ -9435,8 +9433,8 @@ char *ctermid(char *);
 
 
 char *tempnam(const char *, const char *);
-# 57 "rtc/rtc_ds1337/../../mcc_generated_files/eusart1.h" 2
-# 76 "rtc/rtc_ds1337/../../mcc_generated_files/eusart1.h"
+# 57 "lcd/../mcc_generated_files/eusart1.h" 2
+# 76 "lcd/../mcc_generated_files/eusart1.h"
 typedef union {
     struct {
         unsigned perr : 1;
@@ -9458,119 +9456,128 @@ extern volatile uint8_t eusart1RxCount;
 
 extern void (*EUSART1_TxDefaultInterruptHandler)(void);
 extern void (*EUSART1_RxDefaultInterruptHandler)(void);
-# 118 "rtc/rtc_ds1337/../../mcc_generated_files/eusart1.h"
+# 118 "lcd/../mcc_generated_files/eusart1.h"
 void EUSART1_Initialize(void);
-# 166 "rtc/rtc_ds1337/../../mcc_generated_files/eusart1.h"
+# 166 "lcd/../mcc_generated_files/eusart1.h"
 _Bool EUSART1_is_tx_ready(void);
-# 214 "rtc/rtc_ds1337/../../mcc_generated_files/eusart1.h"
+# 214 "lcd/../mcc_generated_files/eusart1.h"
 _Bool EUSART1_is_rx_ready(void);
-# 261 "rtc/rtc_ds1337/../../mcc_generated_files/eusart1.h"
+# 261 "lcd/../mcc_generated_files/eusart1.h"
 _Bool EUSART1_is_tx_done(void);
-# 309 "rtc/rtc_ds1337/../../mcc_generated_files/eusart1.h"
+# 309 "lcd/../mcc_generated_files/eusart1.h"
 eusart1_status_t EUSART1_get_last_status(void);
-# 329 "rtc/rtc_ds1337/../../mcc_generated_files/eusart1.h"
+# 329 "lcd/../mcc_generated_files/eusart1.h"
 uint8_t EUSART1_Read(void);
-# 349 "rtc/rtc_ds1337/../../mcc_generated_files/eusart1.h"
+# 349 "lcd/../mcc_generated_files/eusart1.h"
 void EUSART1_Write(uint8_t txData);
-# 370 "rtc/rtc_ds1337/../../mcc_generated_files/eusart1.h"
+# 370 "lcd/../mcc_generated_files/eusart1.h"
 void EUSART1_Transmit_ISR(void);
-# 391 "rtc/rtc_ds1337/../../mcc_generated_files/eusart1.h"
+# 391 "lcd/../mcc_generated_files/eusart1.h"
 void EUSART1_Receive_ISR(void);
-# 412 "rtc/rtc_ds1337/../../mcc_generated_files/eusart1.h"
+# 412 "lcd/../mcc_generated_files/eusart1.h"
 void EUSART1_RxDataHandler(void);
-# 430 "rtc/rtc_ds1337/../../mcc_generated_files/eusart1.h"
+# 430 "lcd/../mcc_generated_files/eusart1.h"
 void EUSART1_SetFramingErrorHandler(void (* interruptHandler)(void));
-# 448 "rtc/rtc_ds1337/../../mcc_generated_files/eusart1.h"
+# 448 "lcd/../mcc_generated_files/eusart1.h"
 void EUSART1_SetOverrunErrorHandler(void (* interruptHandler)(void));
-# 466 "rtc/rtc_ds1337/../../mcc_generated_files/eusart1.h"
+# 466 "lcd/../mcc_generated_files/eusart1.h"
 void EUSART1_SetErrorHandler(void (* interruptHandler)(void));
-# 486 "rtc/rtc_ds1337/../../mcc_generated_files/eusart1.h"
+# 486 "lcd/../mcc_generated_files/eusart1.h"
 void EUSART1_SetTxInterruptHandler(void (* interruptHandler)(void));
-# 506 "rtc/rtc_ds1337/../../mcc_generated_files/eusart1.h"
+# 506 "lcd/../mcc_generated_files/eusart1.h"
 void EUSART1_SetRxInterruptHandler(void (* interruptHandler)(void));
-# 57 "rtc/rtc_ds1337/../../mcc_generated_files/mcc.h" 2
-# 72 "rtc/rtc_ds1337/../../mcc_generated_files/mcc.h"
+# 57 "lcd/../mcc_generated_files/mcc.h" 2
+# 72 "lcd/../mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
-# 85 "rtc/rtc_ds1337/../../mcc_generated_files/mcc.h"
+# 85 "lcd/../mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
-# 10 "rtc/rtc_ds1337/rtc_ds1337.h" 2
+# 13 "lcd/lcd.h" 2
+
+
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\string.h" 1 3
+# 25 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\string.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 411 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef struct __locale_struct * locale_t;
+# 25 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\string.h" 2 3
+
+
+void *memcpy (void *restrict, const void *restrict, size_t);
+void *memmove (void *, const void *, size_t);
+void *memset (void *, int, size_t);
+int memcmp (const void *, const void *, size_t);
+void *memchr (const void *, int, size_t);
+
+char *strcpy (char *restrict, const char *restrict);
+char *strncpy (char *restrict, const char *restrict, size_t);
+
+char *strcat (char *restrict, const char *restrict);
+char *strncat (char *restrict, const char *restrict, size_t);
+
+int strcmp (const char *, const char *);
+int strncmp (const char *, const char *, size_t);
+
+int strcoll (const char *, const char *);
+size_t strxfrm (char *restrict, const char *restrict, size_t);
+
+char *strchr (const char *, int);
+char *strrchr (const char *, int);
+
+size_t strcspn (const char *, const char *);
+size_t strspn (const char *, const char *);
+char *strpbrk (const char *, const char *);
+char *strstr (const char *, const char *);
+char *strtok (char *restrict, const char *restrict);
+
+size_t strlen (const char *);
+
+char *strerror (int);
+# 65 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\string.h" 3
+char *strtok_r (char *restrict, const char *restrict, char **restrict);
+int strerror_r (int, char *, size_t);
+char *stpcpy(char *restrict, const char *restrict);
+char *stpncpy(char *restrict, const char *restrict, size_t);
+size_t strnlen (const char *, size_t);
+char *strdup (const char *);
+char *strndup (const char *, size_t);
+char *strsignal(int);
+char *strerror_l (int, locale_t);
+int strcoll_l (const char *, const char *, locale_t);
+size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
 
 
 
 
-# 1 "rtc/rtc_ds1337/../rtc.h" 1
-# 16 "rtc/rtc_ds1337/../rtc.h"
-uint8_t rtc_addr;
-# 28 "rtc/rtc_ds1337/../rtc.h"
-const char rtc_htmlTemplate[] = "<h1>Server tid</h1><div id ='clock' onload='startTime()'></div>";
-const char rtc_fontTemplate[] = "<link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>";
-const char rtc_cssTemplate[] = "body{background:black;}#clock{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#FFFF00;font-family:Orbitron;letter-spacing:7px;font-weight:bold;font-size:10em;}";
-const char rtc_scriptTemplate[] = "<script>function startTime(){var today=new Date();var h=today.getHours();var m=today.getMinutes();var s=today.getSeconds();m=checkTime(m);s=checkTime(s);document.getElementById('clock').innerHTML=h+':'+m+':'+s;var t=setTimeout(startTime,500);}function checkTime(i){if(i<10){i='0'+i};return i;}</script>";
-
-uint8_t _clockDataString[] = {"hh:mm:ss - dd-mm-yyyy"};
-uint8_t rtcData[16];
-uint8_t rtc_data[1];
-
-
-
-typedef struct TIME {
-    uint8_t seconds;
-    uint8_t minutes;
-    uint8_t hours;
-    uint8_t day;
-    uint8_t date;
-    uint8_t month;
-    uint8_t year;
-    _Bool time12_n24;
-    _Bool timePM_nAM;
-    _Bool century;
-
-    _Bool A1M1;
-    _Bool A1M2;
-    _Bool A1M3;
-    _Bool A1M4;
-    uint8_t alarm1Seconds;
-    uint8_t alarm1Minutes;
-    uint8_t alarm1Hour;
-    uint8_t alarm1Day;
-    uint8_t alarm1Date;
-    _Bool alarm112n24;
-    _Bool alarm1PMnAM;
-    _Bool alarm1DYnDT;
-
-    _Bool A2M2;
-    _Bool A2M3;
-    _Bool A2M4;
-    uint8_t alarm2Minutes;
-    uint8_t alarm2Hours;
-    uint8_t alarm2Day;
-    uint8_t alarm2Date;
-    _Bool alarm212n24;
-    _Bool alarm2PMnAM;
-    _Bool alarm2DYnDT;
-
-    _Bool EOSC;
-    _Bool RS2;
-    _Bool RS1;
-    _Bool INTCN;
-    _Bool A2IE;
-    _Bool A1IE;
-    _Bool OSF;
-    _Bool A2F;
-    _Bool A1F;
-} time_t;
-
-time_t time;
-
-uint8_t convertBCD2Bytes(uint8_t);
-uint8_t convertByte2BCD(uint8_t);
-# 14 "rtc/rtc_ds1337/../rtc_ds1337/rtc_ds1337.h" 2
+void *memccpy (void *restrict, const void *restrict, int, size_t);
+# 16 "lcd/lcd.h" 2
 
 
 
 
-# 1 "rtc/rtc_ds1337/../../i2c/i2c.h" 1
-# 32 "rtc/rtc_ds1337/../../i2c/i2c.h"
+
+
+
+
+const uint8_t display_addr = 0b0111100;
+const char display_init[] = {0x00, 0x38, 0x0C, 0x06};
+const char first_line[] = {0x00, 0x80};
+const char shift_line[] = {0x00, 0xC0};
+const char empty_line[] = "                ";
+char text[50] = "";
+
+
+
+void lcd_displayInit(void);
+void lcd_write(char *, uint8_t, uint8_t);
+void lcd_outputPosXY(char *string, uint8_t posX, uint8_t posY);
+# 6 "lcd/lcd.c" 2
+
+
+
+
+# 1 "lcd/../i2c/i2c.h" 1
+# 32 "lcd/../i2c/i2c.h"
 uint8_t data_out[4];
 
 void i2c_init(void);
@@ -9583,263 +9590,21 @@ void i2c_master_start(void);
 void i2c_master_stop(void);
 void i2c_master_ack(void);
 void i2c_master_nack(void);
-# 18 "rtc/rtc_ds1337/../rtc_ds1337/rtc_ds1337.h" 2
-# 85 "rtc/rtc_ds1337/../rtc_ds1337/rtc_ds1337.h"
-void rtc_ds_1337_getTimeAll(void);
-void rtc_ds_1337_setTimeAll(uint8_t, uint8_t, uint8_t, uint8_t, uint8_t, uint8_t, int16_t);
+# 10 "lcd/lcd.c" 2
 
 
 
 
+void lcd_displayInit(void) {
 
 
-uint8_t rtc_ds_1337_getSeconds(void);
-void rtc_ds_1337_setSeconds(void);
 
-uint8_t rtc_ds_1337_getMinutes(void);
-void rtc_ds_1337_setMinutes(void);
+    i2c_write_serial(display_addr, display_init, 10);
+    i2c_write_serial(display_addr, first_line, 2);
+    i2c_write_serial(display_addr, empty_line, 16);
 
-uint8_t rtc_ds_1337_getHour(void);
-void rtc_ds_1337_setHour(void);
-
-uint8_t rtc_ds_1337_getAMPM(void);
-void rtc_ds_1337_setAMPM(void);
-
-uint8_t rtc_ds_1337_getDay(void);
-void rtc_ds_1337_setDay(void);
-
-uint8_t rtc_ds_1337_getMonth(void);
-void rtc_ds_1337_setMonth(void);
-
-uint8_t rtc_ds_1337_getYear(void);
-void rtc_ds_1337_setYear(void);
-# 121 "rtc/rtc_ds1337/../rtc_ds1337/rtc_ds1337.h"
-void setAlarm1(void);
-
-uint8_t rtc_ds_1337_getAlarm1Seconds(void);
-void rtc_ds_1337_setAlarm1Seconds(void);
-
-uint8_t rtc_ds_1337_getAlarm1Minutes(void);
-void rtc_ds_1337_setAlarm1Minutes(void);
-
-uint8_t rtc_ds_1337_getAlarm1Hours(void);
-void rtc_ds_1337_setAlarm1Hours(void);
-
-uint8_t rtc_ds_1337_getAlarm1Date(void);
-void rtc_ds_1337_setAlarm1Date(void);
-
-uint8_t rtc_ds_1337_getAlarm1AMPM(void);
-void rtc_ds_1337_setAlarm1AMPM(void);
-
-void rtc_ds_1337_setAlarm1A1M4(void);
-void rtc_ds_1337_setAlarm1A1M2(void);
-void rtc_ds_1337_setAlarm1A1M3(void);
-void rtc_ds_1337_setAlarm1A1M1(void);
-
-
-
-
-
-
-void rtc_ds_1337_setAlarm2Type(uint8_t);
-
-uint8_t rtc_ds_1337_getAlarm2Seconds(void);
-void rtc_ds_1337_setAlarm2Seconds(void);
-
-uint8_t rtc_ds_1337_getAlarm2Minutes(void);
-void rtc_ds_1337_setAlarm2Minutes(void);
-
-uint8_t rtc_ds_1337_getAlarm2Hours(void);
-void rtc_ds_1337_setAlarm2Hours(void);
-
-uint8_t rtc_ds_1337_getAlarm2Date(void);
-void rtc_ds_1337_setAlarm2Date(void);
-
-_Bool rtc_ds_1337_getAlarm2AMPM(void);
-void rtc_ds_1337_setAlarm2AMPM(void);
-
-void rtc_ds_1337_setAlarm2A2M4(void);
-void rtc_ds_1337_setAlarm2A2M3(void);
-void rtc_ds_1337_setAlarm2A2M2(void);
-
-
-
-
-
-
-_Bool rtc_ds_1337_getEnableOscillator(void);
-void rtc_ds_1337_setEnableOscillator(_Bool);
-# 8 "rtc/rtc_ds1337/rtc_ds1337.c" 2
-# 22 "rtc/rtc_ds1337/rtc_ds1337.c"
-void rtc_ds_1337_getTimeAll(void)
-{
-
-    i2c_write_serial(0b1101000, 0, 1);
-    i2c_read_serial(0b1101000, rtcData, 16);
-
-
-
-
-    time.seconds = convertBCD2Bytes(rtcData[0x00]);
-
-
-    time.minutes = convertBCD2Bytes(rtcData[0x01]);
-
-
-    time.time12_n24 = rtcData[0x02] & 0b01000000;
-    rtcData[0x02] &= ~0b01000000;
-
-    if ( time.time12_n24 )
-    {
-        time.timePM_nAM = rtcData[0x02] & 0b00100000;
-        rtcData[0x02] &= 0b11011111;
-    }
-    time.hours = convertBCD2Bytes(rtcData[0x02]);
-
-
-    time.day = rtcData[0x03];
-
-
-    time.date = convertBCD2Bytes(rtcData[0x04]);
-
-
-    time.century = rtcData[0x05] & 0b10000000;
-    rtcData[0x05] &= 0b01111111;
-    time.month = convertBCD2Bytes(rtcData[0x05]);
-
-
-    time.year = convertBCD2Bytes(rtcData[0x06]);
-
-
-    time.A1M1 = rtcData[0x07] & 0b10000000;
-    rtcData[0x07] &= ~0b10000000;
-    time.alarm1Seconds = convertBCD2Bytes(rtcData[0x07]);
-
-
-    time.A1M2 = rtcData[0x08] & 0b10000000;
-    rtcData[0x08] &= ~0b10000000;
-    time.alarm1Minutes = convertBCD2Bytes(rtcData[0x08]);
-
-
-    time.A1M2 = rtcData[0x09] & 0b10000000;
-    rtcData[0x09] &= ~0b10000000;
-    time.alarm112n24 = rtcData[0x09] & 0b01000000;
-    rtcData[0x09] &= ~0b01000000;
-    if ( time.alarm112n24 )
-    {
-        time.alarm1PMnAM = rtcData[0x09] & 0b00100000;
-        rtcData[0x09] &= 0b11011111;
-    }
-    time.alarm1Hour = convertBCD2Bytes(rtcData[0x09]);
-
-
-    time.A1M4 = rtcData[0x0A] & 0b10000000;
-    rtcData[0x0A] &= ~0b10000000;
-    time.alarm1DYnDT = rtcData[0x0A] & 0b01000000;
-    rtcData[0x0A] &= ~0b01000000;
-    if(time.alarm1DYnDT)
-    {
-        time.alarm1Day = convertBCD2Bytes(rtcData[0x0A]);
-        time.alarm1Date = 0;
-    }
-    else
-    {
-        time.alarm1Date = convertBCD2Bytes(rtcData[0x0A]);
-        time.alarm1Day = 0;
-    }
-
-
-    time.A2M2 = rtcData[0x0B] & 0b10000000;
-    rtcData[0x0B] &= 0b01111111;
-    time.alarm2Minutes = convertBCD2Bytes(rtcData[0x0B]);
-
-
-    time.A2M3 = rtcData[0x0C] & 0b10000000;
-    rtcData[0x0C] &= 0b01111111;
-    time.alarm212n24 = rtcData[0x0C] & 0b01000000;
-    rtcData[0x0C] &= ~0b01000000;
-    if(time.alarm212n24)
-    {
-        time.alarm2PMnAM = rtcData[0x0C] & 0b00100000;
-        rtcData[0x09] &= 0b11011111;
-    }
-    time.alarm2Hours = convertBCD2Bytes(rtcData[0x0C]);
-
-
-    time.A2M4 = rtcData[0x0D] & 0b10000000;
-    rtcData[0x0D] &= 0b01111111;
-    time.alarm1DYnDT = rtcData[0x0D] & 0b01000000;
-    rtcData[0x0D] &= ~0b01000000;
-    if(time.alarm1DYnDT)
-    {
-        time.alarm2Day = convertBCD2Bytes(rtcData[0x0A]);
-        time.alarm2Date = 0;
-    }
-    else
-    {
-        time.alarm1Date = convertBCD2Bytes(rtcData[0x0A]);
-        time.alarm1Day = 0;
-    }
-
-
-
-
-
-
-    time.EOSC = rtcData[0x0E] & 0b10000000;
-# 154 "rtc/rtc_ds1337/rtc_ds1337.c"
-    time.RS2 = rtcData[0x0E] & 0b00010000;
-    time.RS1 = rtcData[0x0E] & 0b00001000;
-# 167 "rtc/rtc_ds1337/rtc_ds1337.c"
-    time.INTCN = rtcData[0x0E] & 0b00000100;
-
-
-
-
-
-
-
-    time.A2IE = rtcData[0x0E] & 0b00000010;
-
-
-
-
-
-
-    time.A1IE = rtcData[0x0E] & 0b00100001;
-# 198 "rtc/rtc_ds1337/rtc_ds1337.c"
-    time.OSF = rtcData[0x0F] & 0b10000000;
-# 210 "rtc/rtc_ds1337/rtc_ds1337.c"
-    time.A2F = rtcData[0x0F] & 0b00000010;
-
-
-
-
-
-
-    time.A1F = rtcData[0x0F] & 0b00100001;
-}
-
-
-
-
-
-void rtc_ds_1337_setTimeAll(uint8_t hours, uint8_t mins, uint8_t secs, uint8_t day, uint8_t date, uint8_t month, int16_t years)
-{
-    _Bool century = (years>1999 || (years>=0 && years <=99) )?1:0;
-
-
-    uint8_t rtc_date[] = {
-        convertByte2BCD(secs),
-        convertByte2BCD(mins),
-        convertByte2BCD(hours),
-        convertByte2BCD(day),
-        convertByte2BCD(date),
-        (century)?(convertByte2BCD(month) & 0x80):(convertByte2BCD(month)),
-        convertByte2BCD((uint8_t)(years-1900))
-    };
-
-    i2c_write_serial(0b1101000, rtc_date, 7);
+    i2c_write_serial(display_addr, shift_line, 2);
+    i2c_write_serial(display_addr, empty_line, 16);
 }
 
 
@@ -9847,253 +9612,17 @@ void rtc_ds_1337_setTimeAll(uint8_t hours, uint8_t mins, uint8_t secs, uint8_t d
 
 
 
-uint8_t rtc_ds_1337_getSeconds(void)
-{
-    uint8_t data[1];
+void lcd_write(char *tmpmsg, uint8_t line, uint8_t pos) {
+    uint8_t posLcd[] = { 0x00, ((line == 2)?(0xC0 + pos):(0x80 + pos)) };
+    char msg[30];
+    strcpy(msg, empty_line);
+    strcpy(msg, tmpmsg);
 
-    i2c_write_serial(0b1101000, 0x00, 1);
-    i2c_read_serial(0b1101000, data , 1);
-    time.seconds = (uint8_t) convertBCD2Bytes(data);
-
-    return time.seconds;
+    i2c_write_serial(display_addr, posLcd, 2);
+    i2c_write_serial(display_addr, tmpmsg, 16 );
 }
 
-void rtc_ds_1337_setSeconds(void)
-{
-    uint8_t data = convertByte2BCD(time.seconds);
-    uint8_t rtcRegister[] = { 0x00, data};
-    i2c_write_serial(0b1101000, rtcRegister, 2);
-}
-
-
-
-
-
-uint8_t rtc_ds_1337_getMinutes(void)
-{
-    i2c_write_serial(0b1101000, (uint8_t)0x01, 1);
-    i2c_read_serial(0b1101000, rtc_data , 1);
-    time.minutes = convertBCD2Bytes(rtc_data[1]);
-
-    return time.minutes;
-}
-
-void rtc_ds_1337_setMinutes(void)
-{
-    uint8_t data = convertByte2BCD(time.minutes);
-    uint8_t rtcRegister[] = { 0x01, data};
-    i2c_write_serial(0b1101000, rtcRegister, 2);
-}
-
-
-
-
-
-uint8_t rtc_ds_1337_getHour(void)
-{
-    i2c_write_serial(0b1101000, (uint8_t)0x02, 1);
-    i2c_read_serial(0b1101000, rtc_data , 1);
-    time.hours = convertBCD2Bytes(rtc_data);
-
-    return time.hours;
-}
-
-void rtc_ds_1337_setHour(void)
-{
-    uint8_t data = convertByte2BCD(time.hours);
-    uint8_t rtcRegister[] = { (uint8_t)0x02, data};
-    i2c_write_serial(0b1101000, rtcRegister, 2);
-}
-
-uint8_t rtc_ds_1337_getAMPM(void) { return 0; }
-void rtc_ds_1337_setAMPM(void)
-{
-
-
-
-
+void lcd_outputPosXY(char *string, uint8_t posX, uint8_t posY) {
 
 
 }
-
-
-
-
-
-uint8_t rtc_ds_1337_getDay(void)
-{
-    i2c_write_serial((uint8_t)0b1101000, (uint8_t)0x03, 1);
-    i2c_read_serial(0b1101000, rtc_data , 1);
-    time.day = convertBCD2Bytes((uint8_t)rtc_data[1]);
-
-    return time.day;
-}
-
-void rtc_ds_1337_setDay(void)
-{
-    uint8_t rtcRegister[] = { 0x03, convertByte2BCD(time.day) };
-    i2c_write_serial(0b1101000, rtcRegister, 2);
-}
-
-
-
-
-
-uint8_t rtc_ds_1337_getMonth(void)
-{
-    return 0;
-}
-
-
-void rtc_ds_1337_setMonth(void)
-{
-    uint8_t data = convertByte2BCD(time.month);
-    uint8_t rtcRegister[] = { (uint8_t) 0x05, data };
-    i2c_write_serial(0b1101000, rtcRegister, 2);
-}
-
-uint8_t rtc_ds_1337_getYear(void) { return 0; }
-void rtc_ds_1337_setYear(void)
-{
-    uint8_t data = convertByte2BCD(time.year);
-    uint8_t rtcRegister[] = { 0x06, data };
-    i2c_write_serial(0b1101000, rtcRegister, 2);
-}
-# 411 "rtc/rtc_ds1337/rtc_ds1337.c"
-void rtc_ds_1337_setAlarm1Type(_Bool DYnDT, uint8_t alarm1Mask)
-{
-    time.A1M4 = alarm1Mask & 0b00001000;
-    time.A1M3 = alarm1Mask & 0b00000100;
-    time.A1M2 = alarm1Mask & 0b00000010;
-    time.A1M1 = alarm1Mask & 0b00100001;
-
-    rtc_ds_1337_setAlarm1A1M4();
-    rtc_ds_1337_setAlarm1A1M2();
-    rtc_ds_1337_setAlarm1A1M3();
-    rtc_ds_1337_setAlarm1A1M1();
-}
-
-uint8_t rtc_ds_1337_getAlarm1Seconds(void) { return 0; }
-void rtc_ds_1337_setAlarm1Seconds(void)
-{
-}
-
-uint8_t rtc_ds_1337_getAlarm1Minutes(void) { return 0; }
-
-
-
-
-
-
-void rtc_ds_1337_setAlarm1Minutes(void)
-{
-    uint8_t minsReg = time.alarm1Minutes;
-    minsReg += time.A1M2<<7;
-
-    uint8_t transmit[] = { 0x08, minsReg };
-    i2c_write_serial(0b1101000, transmit, 2 );
-}
-
-uint8_t rtc_ds_1337_getAlarm1Hours(void) { return 0; }
-
-
-
-
-
-
-
-void rtc_ds_1337_setAlarm1Hours(void)
-{
-    uint8_t hoursReg;
-
-    hoursReg = convertByte2BCD(time.alarm1Hour);
-    hoursReg += time.A1M2<<7;
-    hoursReg += time.alarm112n24<<6;
-    hoursReg += (time.alarm112n24)?time.alarm2PMnAM<<5:0;
-
-    uint8_t transmit[] = { 0x09, hoursReg };
-    i2c_write_serial(0b1101000, transmit, 2 );
-}
-
-uint8_t rtc_ds_1337_getAlarm1Date(void)
-{
-    return 0;
-}
-
-void rtc_ds_1337_setAlarm1Date(void) {}
-
-uint8_t rtc_ds_1337_getAlarm1AMPM(void) { return 0; }
-void rtc_ds_1337_setAlarm1AMPM(void) {}
-
-
-void rtc_ds_1337_setAlarm1A1M4(void)
-{
-    uint8_t tmp = rtc_ds_1337_getAlarm1Date();
-}
-
-
-void rtc_ds_1337_setAlarm1A1M3(void)
-{
-    uint8_t tmp = rtc_ds_1337_getAlarm1Hours();
-}
-
-
-void rtc_ds_1337_setAlarm1A1M2(void)
-{
-    uint8_t minsReg = rtc_ds_1337_getAlarm1Minutes();
-    time.alarm1Minutes = minsReg & ~0b10000000;
-
-    rtc_ds_1337_setAlarm1Minutes();
-}
-
-
-void rtc_ds_1337_setAlarm1A1M1(void)
-{
-    uint8_t secsReg = rtc_ds_1337_getAlarm1Seconds();
-    time.alarm1Seconds = secsReg & ~0b10000000;
-    secsReg = time.alarm1Seconds + (uint8_t)( time.A1M1<<7 );
-    rtc_ds_1337_setAlarm1Seconds();
-}
-# 531 "rtc/rtc_ds1337/rtc_ds1337.c"
-void rtc_ds_1337_setAlarm2Type(uint8_t alarm2Mask)
-{
-    time.A2M4 = alarm2Mask & 0b00000100;
-    rtc_ds_1337_setAlarm2A2M4();
-
-    time.A2M3 = alarm2Mask & 0b00000010;
-    rtc_ds_1337_setAlarm2A2M3();
-
-    time.A2M2 = alarm2Mask & 0b00100001;
-    rtc_ds_1337_setAlarm2A2M2();
-}
-
-uint8_t rtc_ds_1337_getAlarm2Seconds(void) { return 0; }
-void rtc_ds_1337_setAlarm2Seconds(void) {}
-
-uint8_t rtc_ds_1337_getAlarm2Minutes(void) { return 0; }
-void rtc_ds_1337_setAlarm2Minutes(void) {}
-
-uint8_t rtc_ds_1337_getAlarm2Hours(void) { return 0; }
-void rtc_ds_1337_setAlarm2Hours(void) {}
-
-uint8_t rtc_ds_1337_getAlarm2Date(void) { return 0; }
-
-void rtc_ds_1337_setAlarm2Date(void) {}
-
-_Bool rtc_ds_1337_getAlarm2AMPM(void) { return 0; }
-void rtc_ds_1337_setAlarm2AMPM(void) {}
-
-void rtc_ds_1337_setAlarm2A2M2(void) {}
-
-void rtc_ds_1337_setAlarm2A2M3(void)
-{
-    rtc_ds_1337_getAlarm2Hours();
-}
-
-void rtc_ds_1337_setAlarm2A2M4(void)
-{
-    rtc_ds_1337_getAlarm2Date();
-}
-
-_Bool rtc_ds_1337_getEnableOscillator(void) { return 0;}
-void rtc_ds_1337_setEnableOscillator(_Bool EOSC) {}

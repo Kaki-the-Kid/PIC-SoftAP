@@ -288,7 +288,7 @@ void rtc_ds_1337_setMinutes(void)
  ***************************************************************************/
 uint8_t rtc_ds_1337_getHour(void) 
 { 
-    i2c_write_serial(rtc_addr, *hoursAddr, 1); 
+    i2c_write_serial(rtc_addr, (uint8_t)hoursAddr, 1); 
     i2c_read_serial(rtc_addr, rtc_data , 1);
     time.hours = convertBCD2Bytes(rtc_data);
     
@@ -298,7 +298,7 @@ uint8_t rtc_ds_1337_getHour(void)
 void rtc_ds_1337_setHour(void) 
 {
     uint8_t data = convertByte2BCD(time.hours);
-    uint8_t rtcRegister[] = { hoursAddr, data};
+    uint8_t rtcRegister[] = { (uint8_t)hoursAddr, data};
     i2c_write_serial(rtc_addr, rtcRegister, 2);
 }
 
@@ -319,9 +319,9 @@ void rtc_ds_1337_setAMPM(void)
  ***************************************************************************/
 uint8_t rtc_ds_1337_getDay(void) 
 {
-    i2c_write_serial(rtc_addr, (uint8_t)dayAddr, 1); 
+    i2c_write_serial((uint8_t)rtc_addr, (uint8_t)dayAddr, 1); 
     i2c_read_serial(rtc_addr, rtc_data , 1);
-    time.day = convertBCD2Bytes(rtc_data[1]);
+    time.day = convertBCD2Bytes((uint8_t)rtc_data[1]);
     
     return time.day; 
 }
