@@ -40,7 +40,7 @@
  * especially with the wide variety of Android hardware and software.         *
  *                                                                            *
  ******************************************************************************/
-#pragma once
+
 
 #ifndef ESP_H
 #include "esp8266.h"

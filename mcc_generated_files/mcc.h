@@ -51,12 +51,9 @@
 #include "pin_manager.h"
 #include <stdint.h>
 #include <stdbool.h>
-#include <string.h>
-#include <math.h>
 #include "interrupt_manager.h"
 #include "tmr2.h"
 #include "tmr4.h"
-#include "eusart2.h"
 #include "eusart1.h"
 
 

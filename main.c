@@ -42,7 +42,7 @@
 #endif
 
 #ifndef ESP8266_H
-#include "esp8266.h"
+#include "webserver/esp8266.h"
 #endif
 
 #ifndef I2C_H

@@ -17,8 +17,6 @@
 /**************************************************************
                 TCP/IP Server - single connection 
  **************************************************************/
-#ifndef SERVER_H
-
 struct SERVER {
     bool    busy;                // Er ESP modulet optaget? Bruges ved kommandoer som tager lang tid
     uint8_t wifiMode;            // Hvad for en mode kører vi i? Station, SoftAP eller begge
@@ -89,6 +87,8 @@ void toogleGPIO(uint8_t, uint8_t);
 /**************************************************************
                        TCP/IP Client
  **************************************************************/
+
+const char htmlMsgPart1[] = "<!DOCTYPE html><html xmlns=\"http://www.w3.org/1999/xhtml\"><head><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><link rel=\"icon\" href=\"data:,\"><style>html { font-family: Helvetica; display: inline-block; margin: 0px auto; text-align: center;} .button { background-color: #195B6A; border: none; color: white; padding: 16px 40px; text-decoration: none; font-size: 30px; margin: 2px; cursor: pointer;} .button2 {background-color: #77878A;}</style></head><body><h1>ESP8266 Web Server</h1>";
 
 //typedef enum {} 
 

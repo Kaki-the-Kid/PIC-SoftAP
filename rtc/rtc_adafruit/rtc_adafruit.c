@@ -1,20 +1,32 @@
+/* 
+ * File:   rtc_adafruit.c
+ * Author: karst
+ *
+ * Created on 18. oktober 2020, 15:37
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+
 /***********************************************************//*
  * File:    rtc.c
  * Author:  Karsten 'Kaki' Reitan SÃ¸rensen
  * @brief:  Realtime clock
  **************************************************************/
 
-#ifndef RTC_H
-#include "rtc.h"
+#ifndef RTC_ADAFRUIT_H
+#include "rtc_adafruit.h"
 #endif
 
 
 /********************************************************************
  * Funktion som returnerer alle data fra real-time clocken, og 
- * returnerer en pointer til de hentede data. Vi er så heldige at 
- * real-time har en addresse ponter med auto increment, så det er 
- * bare at sætte adresse pointer til slave adresse 0x00 og derefter 
- * læse 0x0F bytes. Alle bytes er i BCD format, så ¤e er nemme at 
+ * returnerer en pointer til de hentede data. Vi er sï¿½heldige at 
+ * real-time har en addresse ponter med auto increment, sï¿½det er 
+ * bare at sï¿½tte adresse pointer til slave adresse 0x00 og derefter 
+ * lï¿½se 0x0F bytes. Alle bytes er i BCD format, så ¤e er nemme at 
  * konvertere.
  *
  * @param rtcData	Buffer til at holde de indkomne data fra RTC
@@ -25,7 +37,7 @@ void rtc_getTimeAll(void)
     i2c_write_serial(rtc_addr, 0, 1); //rtc register 0x00
     i2c_read_serial(rtc_addr, rtcData, 16); // 0x00 til 0x0F
     
-    // ... og afkod så værdier
+    // ... og afkod sï¿½vï¿½rdier
     
     // Register 0x00 Seconds Range: 00?59
     time.seconds = convertBCD2Bytes(rtcData[secondsAddr]);
@@ -241,9 +253,9 @@ void rtc_setTimeAll(uint8_t hours, uint8_t mins, uint8_t secs, uint8_t day, uint
 
 
 /************************************************************************
- * Funktion som konverterer BCD værdi til decial byte værdi
+ * Funktion som konverterer BCD vï¿½rdi til decial byte vï¿½rdi
  ************************************************************************
- * @param bcdByte:  byte som skal oversættes, med control og 
+ * @param bcdByte:  byte som skal oversï¿½ttes, med control og 
  *                  status bits afmasket
  * @return result:  resultat i decimal tal
  ************************************************************************/
@@ -272,8 +284,8 @@ uint8_t convertByte2BCD(uint8_t byte)
 }
 
 /***************************************************************************
- * Funktion som opdaterer den lokale time værdien udfra rtc værdi
- * @return time.day:    opdateret lokal værdi fra rtc
+ * Funktion som opdaterer den lokale time vï¿½rdien udfra rtc vï¿½rdi
+ * @return time.day:    opdateret lokal vï¿½rdi fra rtc
  ***************************************************************************/
 uint8_t getSeconds(void) 
 { 
@@ -294,8 +306,8 @@ void setSeconds(void)
 }
 
 /***************************************************************************
- * Funktion som opdaterer den lokale time værdien udfra rtc værdi
- * @return time.day:    opdateret lokal værdi fra rtc
+ * Funktion som opdaterer den lokale time vï¿½rdien udfra rtc vï¿½rdi
+ * @return time.day:    opdateret lokal vï¿½rdi fra rtc
  ***************************************************************************/
 uint8_t getMinutes(void) 
 { 
@@ -316,8 +328,8 @@ void setMinutes(void)
 }
 
 /***************************************************************************
- * Funktion som opdaterer den lokale time værdien udfra rtc værdi
- * @return time.day:    opdateret lokal værdi fra rtc
+ * Funktion som opdaterer den lokale time vï¿½rdien udfra rtc vï¿½rdi
+ * @return time.day:    opdateret lokal vï¿½rdi fra rtc
  ***************************************************************************/
 uint8_t getHour(void) 
 { 
@@ -349,8 +361,8 @@ void setAMPM(void)
 }
 
 /***************************************************************************
- * Funktion som opdaterer den lokale time værdien udfra rtc værdi
- * @return time.day:    opdateret lokal værdi fra rtc
+ * Funktion som opdaterer den lokale time vï¿½rdien udfra rtc vï¿½rdi
+ * @return time.day:    opdateret lokal vï¿½rdi fra rtc
  ***************************************************************************/
 uint8_t getDay(void) 
 {
@@ -370,8 +382,8 @@ void setDay(void)
 }
 
 /***************************************************************************
- * Funktion som opdaterer den lokale time værdien udfra rtc værdi
- * @return time.day:    opdateret lokal værdi fra rtc
+ * Funktion som opdaterer den lokale time vï¿½rdien udfra rtc vï¿½rdi
+ * @return time.day:    opdateret lokal vï¿½rdi fra rtc
  ***************************************************************************/
 uint8_t getMonth(void) 
 {
@@ -464,9 +476,9 @@ void setAlarm1Seconds(void)
 uint8_t getAlarm1Minutes(void) { return false; }
 
 /*****************************************************************************
- * Funktion som sætter minutter værdi for alarm 1
+ * Funktion som sï¿½tter minutter vï¿½rdi for alarm 1
  * @param: none
- * @brief: time.alarm1Minutes og time.A1M2 sættes før funktionen kaldes
+ * @brief: time.alarm1Minutes og time.A1M2 sï¿½ttes fï¿½r funktionen kaldes
  *****************************************************************************/
 void setAlarm1Minutes(void) 
 {
@@ -480,10 +492,10 @@ void setAlarm1Minutes(void)
 uint8_t getAlarm1Hours(void) { return false; }
 
 /*****************************************************************************
- * Funktion som sætter time værdi for alarm 1
+ * Funktion som sï¿½tter time vï¿½rdi for alarm 1
  * @param: none
  * @brief: time.alarm1Hour, time.A1M3, time.alarm112n24 og time.alarm1PMnAM
- *         sættes før funktionen kaldes
+ *         sï¿½ttes fï¿½r funktionen kaldes
  *****************************************************************************/
 void setAlarm1Hours(void) 
 {
@@ -543,8 +555,8 @@ void setAlarm1A1M1(void)
 /************************************************************************
  * Alarm 2 indstillinger registre 0x0B-0x0D
  ************************************************************************
- * @param DYnDT:      Vælger imellem date (0) eller day (1) indstilling 
- * @param alarm2Mask: Sætter funktionen af alarm 2 
+ * @param DYnDT:      Vï¿½lger imellem date (0) eller day (1) indstilling 
+ * @param alarm2Mask: Sï¿½tter funktionen af alarm 2 
  ************************************************************************/
 
 /**<pre>

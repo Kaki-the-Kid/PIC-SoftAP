@@ -12,50 +12,57 @@
         <itemPath>mcc_generated_files/mcc.h</itemPath>
         <itemPath>mcc_generated_files/eusart1.h</itemPath>
         <itemPath>mcc_generated_files/interrupt_manager.h</itemPath>
-        <itemPath>mcc_generated_files/eusart2.h</itemPath>
         <itemPath>mcc_generated_files/tmr2.h</itemPath>
         <itemPath>mcc_generated_files/tmr4.h</itemPath>
       </logicalFolder>
     </logicalFolder>
     <logicalFolder name="f3" displayName="lib_eeprom" projectFiles="true">
-      <itemPath>eeprom.h</itemPath>
-      <itemPath>eeprom.c</itemPath>
+      <itemPath>eeprom/eeprom.h</itemPath>
+      <itemPath>eeprom/eeprom.c</itemPath>
     </logicalFolder>
     <logicalFolder name="f6" displayName="lib_esp" projectFiles="true">
-      <itemPath>esp8266.c</itemPath>
-      <itemPath>tcpip.c</itemPath>
-      <itemPath>esp8266.h</itemPath>
-      <itemPath>esptouch.h</itemPath>
-      <itemPath>tcpip.h</itemPath>
-      <itemPath>wps.h</itemPath>
-      <itemPath>wifi.h</itemPath>
-      <itemPath>wifi.c</itemPath>
-      <itemPath>softap.h</itemPath>
-      <itemPath>softap.c</itemPath>
-      <itemPath>sntp.h</itemPath>
-      <itemPath>dns.h</itemPath>
-      <itemPath>dhcp.h</itemPath>
-      <itemPath>ssl.h</itemPath>
+      <itemPath>webserver/esp8266.c</itemPath>
+      <itemPath>webserver/tcpip.c</itemPath>
+      <itemPath>webserver/esp8266.h</itemPath>
+      <itemPath>webserver/esptouch.h</itemPath>
+      <itemPath>webserver/tcpip.h</itemPath>
+      <itemPath>webserver/wps.h</itemPath>
+      <itemPath>webserver/wifi.h</itemPath>
+      <itemPath>webserver/wifi.c</itemPath>
+      <itemPath>webserver/softap.h</itemPath>
+      <itemPath>webserver/softap.c</itemPath>
+      <itemPath>webserver/sntp.h</itemPath>
+      <itemPath>webserver/dns.h</itemPath>
+      <itemPath>webserver/dhcp.h</itemPath>
+      <itemPath>webserver/ssl.h</itemPath>
     </logicalFolder>
     <logicalFolder name="f1" displayName="lib_i2c" projectFiles="true">
-      <itemPath>i2c.h</itemPath>
-      <itemPath>i2c.c</itemPath>
+      <itemPath>i2c/i2c.h</itemPath>
+      <itemPath>i2c/i2c.c</itemPath>
     </logicalFolder>
     <logicalFolder name="f2" displayName="lib_lcd" projectFiles="true">
-      <itemPath>lcd.h</itemPath>
-      <itemPath>lcd.c</itemPath>
+      <itemPath>lcd/lcd.h</itemPath>
+      <itemPath>lcd/lcd.c</itemPath>
     </logicalFolder>
-    <logicalFolder name="f4" displayName="lib_rtc" projectFiles="true">
-      <itemPath>rtc.h</itemPath>
-      <itemPath>rtc.c</itemPath>
+    <logicalFolder name="f9" displayName="lib_rtc" projectFiles="true">
+      <logicalFolder name="f1" displayName="lib_rtc_adafruit" projectFiles="true">
+        <itemPath>rtc/rtc_adafruit/rtc_adafruit.c</itemPath>
+        <itemPath>rtc/rtc_adafruit/rtc_adafruit.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f2" displayName="lib_rtc_ds1337" projectFiles="true">
+        <itemPath>rtc/rtc_ds1337/rtc_ds1337.c</itemPath>
+        <itemPath>rtc/rtc_ds1337/rtc_ds1337.h</itemPath>
+      </logicalFolder>
+      <itemPath>rtc/rtc.h</itemPath>
+      <itemPath>rtc/rtc.c</itemPath>
     </logicalFolder>
     <logicalFolder name="f7" displayName="lib_sensor" projectFiles="true">
-      <itemPath>sensor.h</itemPath>
-      <itemPath>sensor.c</itemPath>
+      <itemPath>sensor/sensor.h</itemPath>
+      <itemPath>sensor/sensor.c</itemPath>
     </logicalFolder>
     <logicalFolder name="f5" displayName="lib_spi" projectFiles="true">
-      <itemPath>spi.h</itemPath>
-      <itemPath>spi.c</itemPath>
+      <itemPath>spi/spi.h</itemPath>
+      <itemPath>spi/spi.c</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -72,7 +79,6 @@
         <itemPath>mcc_generated_files/pin_manager.c</itemPath>
         <itemPath>mcc_generated_files/eusart1.c</itemPath>
         <itemPath>mcc_generated_files/interrupt_manager.c</itemPath>
-        <itemPath>mcc_generated_files/eusart2.c</itemPath>
         <itemPath>mcc_generated_files/tmr2.c</itemPath>
         <itemPath>mcc_generated_files/tmr4.c</itemPath>
       </logicalFolder>
@@ -96,7 +102,7 @@
         <targetDevice>PIC18F26K22</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>noID</platformTool>
+        <platformTool></platformTool>
         <languageToolchain>XC8</languageToolchain>
         <languageToolchainVersion>2.30</languageToolchainVersion>
         <platform>3</platform>

@@ -8,8 +8,7 @@
  */
 
 #ifndef MCC_H
-    #include "mcc_generated_files/mcc.h"
-    #include <string.h>
+    #include "../mcc_generated_files/mcc.h"
 #endif
 
 #ifndef TCPIP_H
@@ -28,6 +27,7 @@
 #include "lcd.h"
 #endif
 
+#include <string.h>
 
 /**************************************************************
                 TCP/IP Server - single connection 
@@ -993,7 +993,6 @@ void tcpip_sendHTTPPage(void) {
     char tmp[60];
     unsigned int len = 0;
     
-    const char htmlMsgPart1[] = "<!DOCTYPE html><html xmlns=\"http://www.w3.org/1999/xhtml\"><head><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><link rel=\"icon\" href=\"data:,\"><style>html { font-family: Helvetica; display: inline-block; margin: 0px auto; text-align: center;} .button { background-color: #195B6A; border: none; color: white; padding: 16px 40px; text-decoration: none; font-size: 30px; margin: 2px; cursor: pointer;} .button2 {background-color: #77878A;}</style></head><body><h1>ESP8266 Web Server</h1>";
     len += strlen(htmlMsgPart1);
 
     // Display current state, and ON/OFF buttons for GPIO 5

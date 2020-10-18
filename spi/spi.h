@@ -18,7 +18,7 @@
 #pragma once
 
 #ifndef MCC_H
-#include "mcc_generated_files/mcc.h"
+#include "../mcc_generated_files/mcc.h"
 #endif
 
 #ifndef SPI_H

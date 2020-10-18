@@ -13,7 +13,7 @@
 #include <ctype.h>
 
 #ifndef I2C_H
-#include "i2c.h"
+#include "../i2c/i2c.h"
 #endif
 
 #ifndef EEPROM_H

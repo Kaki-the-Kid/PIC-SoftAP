@@ -88,7 +88,7 @@
  * Example:
  * AT+CWSTOPSMART
  */
-#define  AT_CWSTOPSMART { printf("AT+CWSTOPSMART\r\"); }
+#define  AT_CWSTOPSMART { printf("AT+CWSTOPSMART\r\n"); }
 
 
 /**************************************************************/                

@@ -4,7 +4,7 @@
  */
 
 #ifndef MCC_H
-#include "mcc_generated_files/mcc.h"
+#include "../mcc_generated_files/mcc.h"
 #include <string.h>
 #endif
 

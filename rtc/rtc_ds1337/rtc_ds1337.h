@@ -6,22 +6,16 @@
  **************************************************************/
 
 #ifndef MCC_H
-#include "mcc_generated_files/mcc.h"
+#include "../../mcc_generated_files/mcc.h"
 #include <string.h>
 #endif
 
 #ifndef I2C
-#include "i2c.h"
+#include "../../i2c/i2c.h"
 #endif
 
-#ifndef RTC_H
-#define	RTC_H
-
-
-const char rtc_htmlTemplate[]   = "<h1>Server tid</h1><div id ='clock' onload='startTime()'></div>";
-const char rtc_fontTemplate[]   = "<link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>";
-const char rtc_cssTemplate[]    = "body{background:black;}#clock{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#FFFF00;font-family:Orbitron;letter-spacing:7px;font-weight:bold;font-size:10em;}";
-const char rtc_scriptTemplate[] = "<script>function startTime(){var today=new Date();var h=today.getHours();var m=today.getMinutes();var s=today.getSeconds();m=checkTime(m);s=checkTime(s);document.getElementById('clock').innerHTML=h+':'+m+':'+s;var t=setTimeout(startTime,500);}function checkTime(i){if(i<10){i='0'+i};return i;}</script>";
+#ifndef RTC_DS1337_H
+#define	RTC_DS1337_H
 
 
 /**************************************************************
@@ -71,54 +65,6 @@ uint8_t       _clockDataString[] = {"hh:mm:ss - dd-mm-yyyy"};
 #define rtcControlAddr      0x0E
 #define rtcStatusAddr       0x0F
 
-typedef struct TIME { // Registre i Real-time clock
-    uint8_t seconds;
-    uint8_t minutes;
-    uint8_t hours;
-    uint8_t day;
-    uint8_t date;
-    uint8_t month;
-    uint8_t year;
-    bool    time12_n24;
-    bool    timePM_nAM;
-    bool    century;
-
-    bool    A1M1;
-    bool    A1M2;
-    bool    A1M3;
-    bool    A1M4;
-    uint8_t alarm1Seconds;
-    uint8_t alarm1Minutes;
-    uint8_t alarm1Hour;
-    uint8_t alarm1Day;
-    uint8_t alarm1Date;
-    bool    alarm112n24;
-    bool    alarm1PMnAM;
-    bool    alarm1DYnDT;
-
-    bool    A2M2;
-    bool    A2M3;
-    bool    A2M4;
-    uint8_t alarm2Minutes;
-    uint8_t alarm2Hours;
-    uint8_t alarm2Day;
-    uint8_t alarm2Date;
-    bool    alarm212n24;
-    bool    alarm2PMnAM;
-    bool    alarm2DYnDT;
-
-    bool    EOSC;
-    bool    RS2;
-    bool    RS1;
-    bool    INTCN;
-    bool    A2IE;
-    bool    A1IE;
-    bool    OSF;
-    bool    A2F;
-    bool    A1F;
-} time_t;
-
-time_t time;
 
 #define bit7    0b10000000
 #define bit6    0b01000000
@@ -239,5 +185,5 @@ void setEnableOscillator(bool);
 /**************************************************************/
 
 
-#endif	/* RTC_H */
+#endif	/* RTC_DS1337_H */
 

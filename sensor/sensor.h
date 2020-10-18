@@ -7,17 +7,17 @@
  **************************************************************/
 
 #ifndef MCC_H
-#include "mcc_generated_files/mcc.h"
+#include "../mcc_generated_files/mcc.h"
 #include <string.h>
 #include <ctype.h>
 #endif
 
 #ifndef I2C_H
-#include "i2c.h"
+#include "../i2c/i2c.h"
 #endif
 
 #ifndef LCD_H
-#include "lcd.h"
+#include "../lcd/lcd.h"
 #endif
 
 #ifndef SENSOR_H
