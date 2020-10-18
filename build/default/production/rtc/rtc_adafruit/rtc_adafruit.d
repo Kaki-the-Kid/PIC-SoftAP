@@ -1,4 +1,4 @@
-build/default/production/rtc/rtc_adafruit\rtc_adafruit.i: \
+build/default/production/rtc/rtc_adafruit\rtc_adafruit.p1: \
   rtc/rtc_adafruit/rtc_adafruit.c rtc/rtc_adafruit/rtc_adafruit.h \
   rtc/rtc_adafruit/../../mcc_generated_files/mcc.h \
   rtc/rtc_adafruit/../../mcc_generated_files/device_config.h \
@@ -7,4 +7,6 @@ build/default/production/rtc/rtc_adafruit\rtc_adafruit.i: \
   rtc/rtc_adafruit/../../mcc_generated_files/tmr2.h \
   rtc/rtc_adafruit/../../mcc_generated_files/tmr4.h \
   rtc/rtc_adafruit/../../mcc_generated_files/eusart1.h \
+  rtc/rtc_adafruit/../rtc.h rtc/rtc_adafruit/../rtc_ds1337/rtc_ds1337.h \
+  rtc/rtc_adafruit/../rtc_ds1337/../../i2c/i2c.h \
   rtc/rtc_adafruit/../../i2c/i2c.h

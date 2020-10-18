@@ -1,4 +1,4 @@
-# 1 "rtc_ds1337/rtc.c"
+# 1 "rtc/rtc_adafruit/rtc_adafruit.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,7 +6,7 @@
 # 1 "<built-in>" 2
 # 1 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "rtc_ds1337/rtc.c" 2
+# 1 "rtc/rtc_adafruit/rtc_adafruit.c" 2
 
 
 
@@ -14,35 +14,12 @@
 
 
 
-# 1 "rtc_ds1337/rtc.h" 1
-
-
-
-
-
-
-
-
-# 1 "rtc_ds1337/../mcc_generated_files/mcc.h" 1
-# 49 "rtc_ds1337/../mcc_generated_files/mcc.h"
-# 1 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\\pic\\include\\xc.h" 1 3
-# 18 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\\pic\\include\\xc.h" 3
-extern const char __xc8_OPTIM_SPEED;
-
-extern double __fpnormalize(double);
-
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\xc8debug.h" 1 3
-
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\stdlib.h" 1 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\stdio.h" 1 3
 
 
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\musl_xc8.h" 1 3
-# 4 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\stdlib.h" 2 3
+# 4 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\stdio.h" 2 3
 
 
 
@@ -50,17 +27,157 @@ extern double __fpnormalize(double);
 
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\features.h" 1 3
-# 10 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\stdlib.h" 2 3
-# 21 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\stdlib.h" 3
+# 10 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\stdio.h" 2 3
+# 24 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\stdio.h" 3
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\bits/alltypes.h" 1 3
-# 18 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long int wchar_t;
+
+
+
+
+
+typedef void * va_list[1];
+
+
+
+
+typedef void * __isoc_va_list[1];
 # 122 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\bits/alltypes.h" 3
 typedef unsigned size_t;
+# 137 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long ssize_t;
 # 168 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\bits/alltypes.h" 3
 typedef __int24 int24_t;
 # 204 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\bits/alltypes.h" 3
 typedef __uint24 uint24_t;
+# 246 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long long off_t;
+# 399 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef struct _IO_FILE FILE;
+# 24 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\stdio.h" 2 3
+# 52 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\stdio.h" 3
+typedef union _G_fpos64_t {
+ char __opaque[16];
+ double __align;
+} fpos_t;
+
+extern FILE *const stdin;
+extern FILE *const stdout;
+extern FILE *const stderr;
+
+
+
+
+
+FILE *fopen(const char *restrict, const char *restrict);
+FILE *freopen(const char *restrict, const char *restrict, FILE *restrict);
+int fclose(FILE *);
+
+int remove(const char *);
+int rename(const char *, const char *);
+
+int feof(FILE *);
+int ferror(FILE *);
+int fflush(FILE *);
+void clearerr(FILE *);
+
+int fseek(FILE *, long, int);
+long ftell(FILE *);
+void rewind(FILE *);
+
+int fgetpos(FILE *restrict, fpos_t *restrict);
+int fsetpos(FILE *, const fpos_t *);
+
+size_t fread(void *restrict, size_t, size_t, FILE *restrict);
+size_t fwrite(const void *restrict, size_t, size_t, FILE *restrict);
+
+int fgetc(FILE *);
+int getc(FILE *);
+int getchar(void);
+int ungetc(int, FILE *);
+
+int fputc(int, FILE *);
+int putc(int, FILE *);
+int putchar(int);
+
+char *fgets(char *restrict, int, FILE *restrict);
+
+char *gets(char *);
+
+
+int fputs(const char *restrict, FILE *restrict);
+int puts(const char *);
+
+#pragma printf_check(printf) const
+#pragma printf_check(vprintf) const
+#pragma printf_check(sprintf) const
+#pragma printf_check(snprintf) const
+#pragma printf_check(vsprintf) const
+#pragma printf_check(vsnprintf) const
+
+int printf(const char *restrict, ...);
+int fprintf(FILE *restrict, const char *restrict, ...);
+int sprintf(char *restrict, const char *restrict, ...);
+int snprintf(char *restrict, size_t, const char *restrict, ...);
+
+int vprintf(const char *restrict, __isoc_va_list);
+int vfprintf(FILE *restrict, const char *restrict, __isoc_va_list);
+int vsprintf(char *restrict, const char *restrict, __isoc_va_list);
+int vsnprintf(char *restrict, size_t, const char *restrict, __isoc_va_list);
+
+int scanf(const char *restrict, ...);
+int fscanf(FILE *restrict, const char *restrict, ...);
+int sscanf(const char *restrict, const char *restrict, ...);
+int vscanf(const char *restrict, __isoc_va_list);
+int vfscanf(FILE *restrict, const char *restrict, __isoc_va_list);
+int vsscanf(const char *restrict, const char *restrict, __isoc_va_list);
+
+void perror(const char *);
+
+int setvbuf(FILE *restrict, char *restrict, int, size_t);
+void setbuf(FILE *restrict, char *restrict);
+
+char *tmpnam(char *);
+FILE *tmpfile(void);
+
+
+
+
+FILE *fmemopen(void *restrict, size_t, const char *restrict);
+FILE *open_memstream(char **, size_t *);
+FILE *fdopen(int, const char *);
+FILE *popen(const char *, const char *);
+int pclose(FILE *);
+int fileno(FILE *);
+int fseeko(FILE *, off_t, int);
+off_t ftello(FILE *);
+int dprintf(int, const char *restrict, ...);
+int vdprintf(int, const char *restrict, __isoc_va_list);
+void flockfile(FILE *);
+int ftrylockfile(FILE *);
+void funlockfile(FILE *);
+int getc_unlocked(FILE *);
+int getchar_unlocked(void);
+int putc_unlocked(int, FILE *);
+int putchar_unlocked(int);
+ssize_t getdelim(char **restrict, size_t *restrict, int, FILE *restrict);
+ssize_t getline(char **restrict, size_t *restrict, FILE *restrict);
+int renameat(int, const char *, int, const char *);
+char *ctermid(char *);
+
+
+
+
+
+
+
+char *tempnam(const char *, const char *);
+# 8 "rtc/rtc_adafruit/rtc_adafruit.c" 2
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\stdlib.h" 1 3
+# 21 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\stdlib.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 18 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long int wchar_t;
 # 21 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\stdlib.h" 2 3
 
 
@@ -114,15 +231,22 @@ uldiv_t uldiv (unsigned long, unsigned long);
 
 
 size_t __ctype_get_mb_cur_max(void);
-# 4 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\xc8debug.h" 2 3
+# 9 "rtc/rtc_adafruit/rtc_adafruit.c" 2
+# 20 "rtc/rtc_adafruit/rtc_adafruit.c"
+# 1 "rtc/rtc_adafruit/rtc_adafruit.h" 1
+# 10 "rtc/rtc_adafruit/rtc_adafruit.h"
+# 1 "rtc/rtc_adafruit/../../mcc_generated_files/mcc.h" 1
+# 49 "rtc/rtc_adafruit/../../mcc_generated_files/mcc.h"
+# 1 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\\pic\\include\\xc.h" 1 3
+# 18 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\\pic\\include\\xc.h" 3
+extern const char __xc8_OPTIM_SPEED;
+
+extern double __fpnormalize(double);
 
 
 
-
-
-
-
-
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\xc8debug.h" 1 3
+# 12 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\xc8debug.h" 3
 #pragma intrinsic(__builtin_software_breakpoint)
 extern void __builtin_software_breakpoint(void);
 # 24 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\\pic\\include\\xc.h" 2 3
@@ -9145,17 +9269,17 @@ extern __attribute__((nonreentrant)) void _delaywdt(unsigned long);
 #pragma intrinsic(_delay3)
 extern __attribute__((nonreentrant)) void _delay3(unsigned char);
 # 33 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\\pic\\include\\xc.h" 2 3
-# 49 "rtc_ds1337/../mcc_generated_files/mcc.h" 2
+# 49 "rtc/rtc_adafruit/../../mcc_generated_files/mcc.h" 2
 
-# 1 "rtc_ds1337/../mcc_generated_files/device_config.h" 1
-# 50 "rtc_ds1337/../mcc_generated_files/mcc.h" 2
+# 1 "rtc/rtc_adafruit/../../mcc_generated_files/device_config.h" 1
+# 50 "rtc/rtc_adafruit/../../mcc_generated_files/mcc.h" 2
 
-# 1 "rtc_ds1337/../mcc_generated_files/pin_manager.h" 1
-# 201 "rtc_ds1337/../mcc_generated_files/pin_manager.h"
+# 1 "rtc/rtc_adafruit/../../mcc_generated_files/pin_manager.h" 1
+# 201 "rtc/rtc_adafruit/../../mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 213 "rtc_ds1337/../mcc_generated_files/pin_manager.h"
+# 213 "rtc/rtc_adafruit/../../mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
-# 51 "rtc_ds1337/../mcc_generated_files/mcc.h" 2
+# 51 "rtc/rtc_adafruit/../../mcc_generated_files/mcc.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\stdint.h" 1 3
 # 22 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\stdint.h" 3
@@ -9242,208 +9366,68 @@ typedef int32_t int_fast32_t;
 typedef uint16_t uint_fast16_t;
 typedef uint32_t uint_fast32_t;
 # 144 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\stdint.h" 2 3
-# 52 "rtc_ds1337/../mcc_generated_files/mcc.h" 2
+# 52 "rtc/rtc_adafruit/../../mcc_generated_files/mcc.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\stdbool.h" 1 3
-# 53 "rtc_ds1337/../mcc_generated_files/mcc.h" 2
+# 53 "rtc/rtc_adafruit/../../mcc_generated_files/mcc.h" 2
 
-# 1 "rtc_ds1337/../mcc_generated_files/interrupt_manager.h" 1
-# 110 "rtc_ds1337/../mcc_generated_files/interrupt_manager.h"
+# 1 "rtc/rtc_adafruit/../../mcc_generated_files/interrupt_manager.h" 1
+# 110 "rtc/rtc_adafruit/../../mcc_generated_files/interrupt_manager.h"
 void INTERRUPT_Initialize (void);
-# 54 "rtc_ds1337/../mcc_generated_files/mcc.h" 2
+# 54 "rtc/rtc_adafruit/../../mcc_generated_files/mcc.h" 2
 
-# 1 "rtc_ds1337/../mcc_generated_files/tmr2.h" 1
-# 104 "rtc_ds1337/../mcc_generated_files/tmr2.h"
+# 1 "rtc/rtc_adafruit/../../mcc_generated_files/tmr2.h" 1
+# 104 "rtc/rtc_adafruit/../../mcc_generated_files/tmr2.h"
 void TMR2_Initialize(void);
-# 133 "rtc_ds1337/../mcc_generated_files/tmr2.h"
+# 133 "rtc/rtc_adafruit/../../mcc_generated_files/tmr2.h"
 void TMR2_StartTimer(void);
-# 165 "rtc_ds1337/../mcc_generated_files/tmr2.h"
+# 165 "rtc/rtc_adafruit/../../mcc_generated_files/tmr2.h"
 void TMR2_StopTimer(void);
-# 200 "rtc_ds1337/../mcc_generated_files/tmr2.h"
+# 200 "rtc/rtc_adafruit/../../mcc_generated_files/tmr2.h"
 uint8_t TMR2_ReadTimer(void);
-# 239 "rtc_ds1337/../mcc_generated_files/tmr2.h"
+# 239 "rtc/rtc_adafruit/../../mcc_generated_files/tmr2.h"
 void TMR2_WriteTimer(uint8_t timerVal);
-# 291 "rtc_ds1337/../mcc_generated_files/tmr2.h"
+# 291 "rtc/rtc_adafruit/../../mcc_generated_files/tmr2.h"
 void TMR2_LoadPeriodRegister(uint8_t periodVal);
-# 309 "rtc_ds1337/../mcc_generated_files/tmr2.h"
+# 309 "rtc/rtc_adafruit/../../mcc_generated_files/tmr2.h"
 void TMR2_ISR(void);
-# 327 "rtc_ds1337/../mcc_generated_files/tmr2.h"
+# 327 "rtc/rtc_adafruit/../../mcc_generated_files/tmr2.h"
  void TMR2_CallBack(void);
-# 344 "rtc_ds1337/../mcc_generated_files/tmr2.h"
+# 344 "rtc/rtc_adafruit/../../mcc_generated_files/tmr2.h"
  void TMR2_SetInterruptHandler(void (* InterruptHandler)(void));
-# 362 "rtc_ds1337/../mcc_generated_files/tmr2.h"
+# 362 "rtc/rtc_adafruit/../../mcc_generated_files/tmr2.h"
 extern void (*TMR2_InterruptHandler)(void);
-# 380 "rtc_ds1337/../mcc_generated_files/tmr2.h"
+# 380 "rtc/rtc_adafruit/../../mcc_generated_files/tmr2.h"
 void TMR2_DefaultInterruptHandler(void);
-# 55 "rtc_ds1337/../mcc_generated_files/mcc.h" 2
+# 55 "rtc/rtc_adafruit/../../mcc_generated_files/mcc.h" 2
 
-# 1 "rtc_ds1337/../mcc_generated_files/tmr4.h" 1
-# 104 "rtc_ds1337/../mcc_generated_files/tmr4.h"
+# 1 "rtc/rtc_adafruit/../../mcc_generated_files/tmr4.h" 1
+# 104 "rtc/rtc_adafruit/../../mcc_generated_files/tmr4.h"
 void TMR4_Initialize(void);
-# 133 "rtc_ds1337/../mcc_generated_files/tmr4.h"
+# 133 "rtc/rtc_adafruit/../../mcc_generated_files/tmr4.h"
 void TMR4_StartTimer(void);
-# 165 "rtc_ds1337/../mcc_generated_files/tmr4.h"
+# 165 "rtc/rtc_adafruit/../../mcc_generated_files/tmr4.h"
 void TMR4_StopTimer(void);
-# 200 "rtc_ds1337/../mcc_generated_files/tmr4.h"
+# 200 "rtc/rtc_adafruit/../../mcc_generated_files/tmr4.h"
 uint8_t TMR4_ReadTimer(void);
-# 239 "rtc_ds1337/../mcc_generated_files/tmr4.h"
+# 239 "rtc/rtc_adafruit/../../mcc_generated_files/tmr4.h"
 void TMR4_WriteTimer(uint8_t timerVal);
-# 291 "rtc_ds1337/../mcc_generated_files/tmr4.h"
+# 291 "rtc/rtc_adafruit/../../mcc_generated_files/tmr4.h"
 void TMR4_LoadPeriodRegister(uint8_t periodVal);
-# 309 "rtc_ds1337/../mcc_generated_files/tmr4.h"
+# 309 "rtc/rtc_adafruit/../../mcc_generated_files/tmr4.h"
 void TMR4_ISR(void);
-# 327 "rtc_ds1337/../mcc_generated_files/tmr4.h"
+# 327 "rtc/rtc_adafruit/../../mcc_generated_files/tmr4.h"
  void TMR4_CallBack(void);
-# 344 "rtc_ds1337/../mcc_generated_files/tmr4.h"
+# 344 "rtc/rtc_adafruit/../../mcc_generated_files/tmr4.h"
  void TMR4_SetInterruptHandler(void (* InterruptHandler)(void));
-# 362 "rtc_ds1337/../mcc_generated_files/tmr4.h"
+# 362 "rtc/rtc_adafruit/../../mcc_generated_files/tmr4.h"
 extern void (*TMR4_InterruptHandler)(void);
-# 380 "rtc_ds1337/../mcc_generated_files/tmr4.h"
+# 380 "rtc/rtc_adafruit/../../mcc_generated_files/tmr4.h"
 void TMR4_DefaultInterruptHandler(void);
-# 56 "rtc_ds1337/../mcc_generated_files/mcc.h" 2
+# 56 "rtc/rtc_adafruit/../../mcc_generated_files/mcc.h" 2
 
-# 1 "rtc_ds1337/../mcc_generated_files/eusart1.h" 1
-# 57 "rtc_ds1337/../mcc_generated_files/eusart1.h"
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\stdio.h" 1 3
-# 24 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\stdio.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\bits/alltypes.h" 1 3
-
-
-
-
-
-typedef void * va_list[1];
-
-
-
-
-typedef void * __isoc_va_list[1];
-# 137 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long ssize_t;
-# 246 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long long off_t;
-# 399 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef struct _IO_FILE FILE;
-# 24 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\stdio.h" 2 3
-# 52 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\stdio.h" 3
-typedef union _G_fpos64_t {
- char __opaque[16];
- double __align;
-} fpos_t;
-
-extern FILE *const stdin;
-extern FILE *const stdout;
-extern FILE *const stderr;
-
-
-
-
-
-FILE *fopen(const char *restrict, const char *restrict);
-FILE *freopen(const char *restrict, const char *restrict, FILE *restrict);
-int fclose(FILE *);
-
-int remove(const char *);
-int rename(const char *, const char *);
-
-int feof(FILE *);
-int ferror(FILE *);
-int fflush(FILE *);
-void clearerr(FILE *);
-
-int fseek(FILE *, long, int);
-long ftell(FILE *);
-void rewind(FILE *);
-
-int fgetpos(FILE *restrict, fpos_t *restrict);
-int fsetpos(FILE *, const fpos_t *);
-
-size_t fread(void *restrict, size_t, size_t, FILE *restrict);
-size_t fwrite(const void *restrict, size_t, size_t, FILE *restrict);
-
-int fgetc(FILE *);
-int getc(FILE *);
-int getchar(void);
-int ungetc(int, FILE *);
-
-int fputc(int, FILE *);
-int putc(int, FILE *);
-int putchar(int);
-
-char *fgets(char *restrict, int, FILE *restrict);
-
-char *gets(char *);
-
-
-int fputs(const char *restrict, FILE *restrict);
-int puts(const char *);
-
-#pragma printf_check(printf) const
-#pragma printf_check(vprintf) const
-#pragma printf_check(sprintf) const
-#pragma printf_check(snprintf) const
-#pragma printf_check(vsprintf) const
-#pragma printf_check(vsnprintf) const
-
-int printf(const char *restrict, ...);
-int fprintf(FILE *restrict, const char *restrict, ...);
-int sprintf(char *restrict, const char *restrict, ...);
-int snprintf(char *restrict, size_t, const char *restrict, ...);
-
-int vprintf(const char *restrict, __isoc_va_list);
-int vfprintf(FILE *restrict, const char *restrict, __isoc_va_list);
-int vsprintf(char *restrict, const char *restrict, __isoc_va_list);
-int vsnprintf(char *restrict, size_t, const char *restrict, __isoc_va_list);
-
-int scanf(const char *restrict, ...);
-int fscanf(FILE *restrict, const char *restrict, ...);
-int sscanf(const char *restrict, const char *restrict, ...);
-int vscanf(const char *restrict, __isoc_va_list);
-int vfscanf(FILE *restrict, const char *restrict, __isoc_va_list);
-int vsscanf(const char *restrict, const char *restrict, __isoc_va_list);
-
-void perror(const char *);
-
-int setvbuf(FILE *restrict, char *restrict, int, size_t);
-void setbuf(FILE *restrict, char *restrict);
-
-char *tmpnam(char *);
-FILE *tmpfile(void);
-
-
-
-
-FILE *fmemopen(void *restrict, size_t, const char *restrict);
-FILE *open_memstream(char **, size_t *);
-FILE *fdopen(int, const char *);
-FILE *popen(const char *, const char *);
-int pclose(FILE *);
-int fileno(FILE *);
-int fseeko(FILE *, off_t, int);
-off_t ftello(FILE *);
-int dprintf(int, const char *restrict, ...);
-int vdprintf(int, const char *restrict, __isoc_va_list);
-void flockfile(FILE *);
-int ftrylockfile(FILE *);
-void funlockfile(FILE *);
-int getc_unlocked(FILE *);
-int getchar_unlocked(void);
-int putc_unlocked(int, FILE *);
-int putchar_unlocked(int);
-ssize_t getdelim(char **restrict, size_t *restrict, int, FILE *restrict);
-ssize_t getline(char **restrict, size_t *restrict, FILE *restrict);
-int renameat(int, const char *, int, const char *);
-char *ctermid(char *);
-
-
-
-
-
-
-
-char *tempnam(const char *, const char *);
-# 57 "rtc_ds1337/../mcc_generated_files/eusart1.h" 2
-# 76 "rtc_ds1337/../mcc_generated_files/eusart1.h"
+# 1 "rtc/rtc_adafruit/../../mcc_generated_files/eusart1.h" 1
+# 76 "rtc/rtc_adafruit/../../mcc_generated_files/eusart1.h"
 typedef union {
     struct {
         unsigned perr : 1;
@@ -9465,42 +9449,42 @@ extern volatile uint8_t eusart1RxCount;
 
 extern void (*EUSART1_TxDefaultInterruptHandler)(void);
 extern void (*EUSART1_RxDefaultInterruptHandler)(void);
-# 118 "rtc_ds1337/../mcc_generated_files/eusart1.h"
+# 118 "rtc/rtc_adafruit/../../mcc_generated_files/eusart1.h"
 void EUSART1_Initialize(void);
-# 166 "rtc_ds1337/../mcc_generated_files/eusart1.h"
+# 166 "rtc/rtc_adafruit/../../mcc_generated_files/eusart1.h"
 _Bool EUSART1_is_tx_ready(void);
-# 214 "rtc_ds1337/../mcc_generated_files/eusart1.h"
+# 214 "rtc/rtc_adafruit/../../mcc_generated_files/eusart1.h"
 _Bool EUSART1_is_rx_ready(void);
-# 261 "rtc_ds1337/../mcc_generated_files/eusart1.h"
+# 261 "rtc/rtc_adafruit/../../mcc_generated_files/eusart1.h"
 _Bool EUSART1_is_tx_done(void);
-# 309 "rtc_ds1337/../mcc_generated_files/eusart1.h"
+# 309 "rtc/rtc_adafruit/../../mcc_generated_files/eusart1.h"
 eusart1_status_t EUSART1_get_last_status(void);
-# 329 "rtc_ds1337/../mcc_generated_files/eusart1.h"
+# 329 "rtc/rtc_adafruit/../../mcc_generated_files/eusart1.h"
 uint8_t EUSART1_Read(void);
-# 349 "rtc_ds1337/../mcc_generated_files/eusart1.h"
+# 349 "rtc/rtc_adafruit/../../mcc_generated_files/eusart1.h"
 void EUSART1_Write(uint8_t txData);
-# 370 "rtc_ds1337/../mcc_generated_files/eusart1.h"
+# 370 "rtc/rtc_adafruit/../../mcc_generated_files/eusart1.h"
 void EUSART1_Transmit_ISR(void);
-# 391 "rtc_ds1337/../mcc_generated_files/eusart1.h"
+# 391 "rtc/rtc_adafruit/../../mcc_generated_files/eusart1.h"
 void EUSART1_Receive_ISR(void);
-# 412 "rtc_ds1337/../mcc_generated_files/eusart1.h"
+# 412 "rtc/rtc_adafruit/../../mcc_generated_files/eusart1.h"
 void EUSART1_RxDataHandler(void);
-# 430 "rtc_ds1337/../mcc_generated_files/eusart1.h"
+# 430 "rtc/rtc_adafruit/../../mcc_generated_files/eusart1.h"
 void EUSART1_SetFramingErrorHandler(void (* interruptHandler)(void));
-# 448 "rtc_ds1337/../mcc_generated_files/eusart1.h"
+# 448 "rtc/rtc_adafruit/../../mcc_generated_files/eusart1.h"
 void EUSART1_SetOverrunErrorHandler(void (* interruptHandler)(void));
-# 466 "rtc_ds1337/../mcc_generated_files/eusart1.h"
+# 466 "rtc/rtc_adafruit/../../mcc_generated_files/eusart1.h"
 void EUSART1_SetErrorHandler(void (* interruptHandler)(void));
-# 486 "rtc_ds1337/../mcc_generated_files/eusart1.h"
+# 486 "rtc/rtc_adafruit/../../mcc_generated_files/eusart1.h"
 void EUSART1_SetTxInterruptHandler(void (* interruptHandler)(void));
-# 506 "rtc_ds1337/../mcc_generated_files/eusart1.h"
+# 506 "rtc/rtc_adafruit/../../mcc_generated_files/eusart1.h"
 void EUSART1_SetRxInterruptHandler(void (* interruptHandler)(void));
-# 57 "rtc_ds1337/../mcc_generated_files/mcc.h" 2
-# 72 "rtc_ds1337/../mcc_generated_files/mcc.h"
+# 57 "rtc/rtc_adafruit/../../mcc_generated_files/mcc.h" 2
+# 72 "rtc/rtc_adafruit/../../mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
-# 85 "rtc_ds1337/../mcc_generated_files/mcc.h"
+# 85 "rtc/rtc_adafruit/../../mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
-# 9 "rtc_ds1337/rtc.h" 2
+# 10 "rtc/rtc_adafruit/rtc_adafruit.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\string.h" 1 3
 # 25 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\string.h" 3
@@ -9557,13 +9541,24 @@ size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
 
 
 void *memccpy (void *restrict, const void *restrict, int, size_t);
-# 10 "rtc_ds1337/rtc.h" 2
+# 11 "rtc/rtc_adafruit/rtc_adafruit.h" 2
 
 
 
 
-# 1 "rtc_ds1337/../i2c/i2c.h" 1
-# 32 "rtc_ds1337/../i2c/i2c.h"
+# 1 "rtc/rtc_adafruit/../rtc.h" 1
+# 16 "rtc/rtc_adafruit/../rtc.h"
+uint8_t rtc_address;
+
+
+
+
+
+
+# 1 "rtc/rtc_adafruit/../rtc_ds1337/rtc_ds1337.h" 1
+# 17 "rtc/rtc_adafruit/../rtc_ds1337/rtc_ds1337.h"
+# 1 "rtc/rtc_adafruit/../rtc_ds1337/../../i2c/i2c.h" 1
+# 32 "rtc/rtc_adafruit/../rtc_ds1337/../../i2c/i2c.h"
 uint8_t data_out[4];
 
 void i2c_init(void);
@@ -9576,72 +9571,10 @@ void i2c_master_start(void);
 void i2c_master_stop(void);
 void i2c_master_ack(void);
 void i2c_master_nack(void);
-# 14 "rtc_ds1337/rtc.h" 2
-
-
-
-
-
-
-
-const char rtc_htmlTemplate[] = "<h1>Server tid</h1><div id ='clock' onload='startTime()'></div>";
-const char rtc_fontTemplate[] = "<link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>";
-const char rtc_cssTemplate[] = "body{background:black;}#clock{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#FFFF00;font-family:Orbitron;letter-spacing:7px;font-weight:bold;font-size:10em;}";
-const char rtc_scriptTemplate[] = "<script>function startTime(){var today=new Date();var h=today.getHours();var m=today.getMinutes();var s=today.getSeconds();m=checkTime(m);s=checkTime(s);document.getElementById('clock').innerHTML=h+':'+m+':'+s;var t=setTimeout(startTime,500);}function checkTime(i){if(i<10){i='0'+i};return i;}</script>";
-# 49 "rtc_ds1337/rtc.h"
-const uint8_t rtc_addr = 0b1101000;
-uint8_t rtcData[16];
-uint8_t _clockDataString[] = {"hh:mm:ss - dd-mm-yyyy"};
-# 74 "rtc_ds1337/rtc.h"
-typedef struct TIME {
-    uint8_t seconds;
-    uint8_t minutes;
-    uint8_t hours;
-    uint8_t day;
-    uint8_t date;
-    uint8_t month;
-    uint8_t year;
-    _Bool time12_n24;
-    _Bool timePM_nAM;
-    _Bool century;
-
-    _Bool A1M1;
-    _Bool A1M2;
-    _Bool A1M3;
-    _Bool A1M4;
-    uint8_t alarm1Seconds;
-    uint8_t alarm1Minutes;
-    uint8_t alarm1Hour;
-    uint8_t alarm1Day;
-    uint8_t alarm1Date;
-    _Bool alarm112n24;
-    _Bool alarm1PMnAM;
-    _Bool alarm1DYnDT;
-
-    _Bool A2M2;
-    _Bool A2M3;
-    _Bool A2M4;
-    uint8_t alarm2Minutes;
-    uint8_t alarm2Hours;
-    uint8_t alarm2Day;
-    uint8_t alarm2Date;
-    _Bool alarm212n24;
-    _Bool alarm2PMnAM;
-    _Bool alarm2DYnDT;
-
-    _Bool EOSC;
-    _Bool RS2;
-    _Bool RS1;
-    _Bool INTCN;
-    _Bool A2IE;
-    _Bool A1IE;
-    _Bool OSF;
-    _Bool A2F;
-    _Bool A1F;
-} time_t;
-
-time_t time;
-# 137 "rtc_ds1337/rtc.h"
+# 17 "rtc/rtc_adafruit/../rtc_ds1337/rtc_ds1337.h" 2
+# 50 "rtc/rtc_adafruit/../rtc_ds1337/rtc_ds1337.h"
+uint8_t rtc_addr = 0b1101000;
+# 88 "rtc/rtc_adafruit/../rtc_ds1337/rtc_ds1337.h"
 void rtc_getTimeAll(void);
 void rtc_setTimeAll(uint8_t, uint8_t, uint8_t, uint8_t, uint8_t, uint8_t, int16_t);
 uint8_t convertBCD2Bytes(uint8_t);
@@ -9672,7 +9605,7 @@ void setMonth(void);
 
 uint8_t getYear(void);
 void setYear(void);
-# 175 "rtc_ds1337/rtc.h"
+# 126 "rtc/rtc_adafruit/../rtc_ds1337/rtc_ds1337.h"
 void setAlarm1(void);
 
 uint8_t getAlarm1Seconds(void);
@@ -9728,8 +9661,169 @@ void setAlarm2A2M2(void);
 
 _Bool getEnableOscillator(void);
 void setEnableOscillator(_Bool);
-# 8 "rtc_ds1337/rtc.c" 2
-# 22 "rtc_ds1337/rtc.c"
+# 22 "rtc/rtc_adafruit/../rtc.h" 2
+
+
+
+
+
+
+const char rtc_htmlTemplate[] = "<h1>Server tid</h1><div id ='clock' onload='startTime()'></div>";
+const char rtc_fontTemplate[] = "<link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>";
+const char rtc_cssTemplate[] = "body{background:black;}#clock{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#FFFF00;font-family:Orbitron;letter-spacing:7px;font-weight:bold;font-size:10em;}";
+const char rtc_scriptTemplate[] = "<script>function startTime(){var today=new Date();var h=today.getHours();var m=today.getMinutes();var s=today.getSeconds();m=checkTime(m);s=checkTime(s);document.getElementById('clock').innerHTML=h+':'+m+':'+s;var t=setTimeout(startTime,500);}function checkTime(i){if(i<10){i='0'+i};return i;}</script>";
+
+uint8_t _clockDataString[] = {"hh:mm:ss - dd-mm-yyyy"};
+uint8_t rtcData[16];
+
+
+
+typedef struct TIME {
+    uint8_t seconds;
+    uint8_t minutes;
+    uint8_t hours;
+    uint8_t day;
+    uint8_t date;
+    uint8_t month;
+    uint8_t year;
+    _Bool time12_n24;
+    _Bool timePM_nAM;
+    _Bool century;
+
+    _Bool A1M1;
+    _Bool A1M2;
+    _Bool A1M3;
+    _Bool A1M4;
+    uint8_t alarm1Seconds;
+    uint8_t alarm1Minutes;
+    uint8_t alarm1Hour;
+    uint8_t alarm1Day;
+    uint8_t alarm1Date;
+    _Bool alarm112n24;
+    _Bool alarm1PMnAM;
+    _Bool alarm1DYnDT;
+
+    _Bool A2M2;
+    _Bool A2M3;
+    _Bool A2M4;
+    uint8_t alarm2Minutes;
+    uint8_t alarm2Hours;
+    uint8_t alarm2Day;
+    uint8_t alarm2Date;
+    _Bool alarm212n24;
+    _Bool alarm2PMnAM;
+    _Bool alarm2DYnDT;
+
+    _Bool EOSC;
+    _Bool RS2;
+    _Bool RS1;
+    _Bool INTCN;
+    _Bool A2IE;
+    _Bool A1IE;
+    _Bool OSF;
+    _Bool A2F;
+    _Bool A1F;
+} time_t;
+
+time_t time;
+# 15 "rtc/rtc_adafruit/rtc_adafruit.h" 2
+
+
+
+
+# 1 "rtc/rtc_adafruit/../../i2c/i2c.h" 1
+# 19 "rtc/rtc_adafruit/rtc_adafruit.h" 2
+# 48 "rtc/rtc_adafruit/rtc_adafruit.h"
+uint8_t rtc_addr = 0b1101000;
+# 85 "rtc/rtc_adafruit/rtc_adafruit.h"
+void rtc_getTimeAll(void);
+void rtc_setTimeAll(uint8_t, uint8_t, uint8_t, uint8_t, uint8_t, uint8_t, int16_t);
+uint8_t convertBCD2Bytes(uint8_t);
+uint8_t convertByte2BCD(uint8_t);
+
+
+
+
+
+
+uint8_t getSeconds(void);
+void setSeconds(void);
+
+uint8_t getMinutes(void);
+void setMinutes(void);
+
+uint8_t getHour(void);
+void setHour(void);
+
+uint8_t getAMPM(void);
+void setAMPM(void);
+
+uint8_t getDay(void);
+void setDay(void);
+
+uint8_t getMonth(void);
+void setMonth(void);
+
+uint8_t getYear(void);
+void setYear(void);
+# 123 "rtc/rtc_adafruit/rtc_adafruit.h"
+void setAlarm1(void);
+
+uint8_t getAlarm1Seconds(void);
+void setAlarm1Seconds(void);
+
+uint8_t getAlarm1Minutes(void);
+void setAlarm1Minutes(void);
+
+uint8_t getAlarm1Hours(void);
+void setAlarm1Hours(void);
+
+uint8_t getAlarm1Date(void);
+void setAlarm1Date(void);
+
+uint8_t getAlarm1AMPM(void);
+void setAlarm1AMPM(void);
+
+void setAlarm1A1M4(void);
+void setAlarm1A1M2(void);
+void setAlarm1A1M3(void);
+void setAlarm1A1M1(void);
+
+
+
+
+
+
+void setAlarm2Type(uint8_t);
+
+uint8_t getAlarm2Seconds(void);
+void setAlarm2Seconds(void);
+
+uint8_t getAlarm2Minutes(void);
+void setAlarm2Minutes(void);
+
+uint8_t getAlarm2Hours(void);
+void setAlarm2Hours(void);
+
+uint8_t getAlarm2Date(void);
+void setAlarm2Date(void);
+
+_Bool getAlarm2AMPM(void);
+void setAlarm2AMPM(void);
+
+void setAlarm2A2M4(void);
+void setAlarm2A2M3(void);
+void setAlarm2A2M2(void);
+
+
+
+
+
+
+_Bool getEnableOscillator(void);
+void setEnableOscillator(_Bool);
+# 20 "rtc/rtc_adafruit/rtc_adafruit.c" 2
+# 34 "rtc/rtc_adafruit/rtc_adafruit.c"
 void rtc_getTimeAll(void)
 {
 
@@ -9846,10 +9940,10 @@ void rtc_getTimeAll(void)
 
 
     time.EOSC = rtcData[0x0E] & 0b10000000;
-# 154 "rtc_ds1337/rtc.c"
+# 166 "rtc/rtc_adafruit/rtc_adafruit.c"
     time.RS2 = rtcData[0x0E] & 0b00010000;
     time.RS1 = rtcData[0x0E] & 0b00001000;
-# 167 "rtc_ds1337/rtc.c"
+# 179 "rtc/rtc_adafruit/rtc_adafruit.c"
     time.INTCN = rtcData[0x0E] & 0b00000100;
 
 
@@ -9866,9 +9960,9 @@ void rtc_getTimeAll(void)
 
 
     time.A1IE = rtcData[0x0E] & 0b00100001;
-# 198 "rtc_ds1337/rtc.c"
+# 210 "rtc/rtc_adafruit/rtc_adafruit.c"
     time.OSF = rtcData[0x0F] & 0b10000000;
-# 210 "rtc_ds1337/rtc.c"
+# 222 "rtc/rtc_adafruit/rtc_adafruit.c"
     time.A2F = rtcData[0x0F] & 0b00000010;
 
 
@@ -9900,7 +9994,7 @@ void rtc_setTimeAll(uint8_t hours, uint8_t mins, uint8_t secs, uint8_t day, uint
 
     i2c_write_serial(rtc_addr, rtc_date, 7);
 }
-# 250 "rtc_ds1337/rtc.c"
+# 262 "rtc/rtc_adafruit/rtc_adafruit.c"
 uint8_t convertBCD2Bytes(uint8_t bcdByte)
 {
     uint8_t result = 0;
@@ -10045,7 +10139,7 @@ void setYear(void)
     char rtcRegister[] = { (char) 0x06, data };
     i2c_write_serial(rtc_addr, rtcRegister, 2);
 }
-# 446 "rtc_ds1337/rtc.c"
+# 458 "rtc/rtc_adafruit/rtc_adafruit.c"
 void setAlarm1Type(_Bool DYnDT, uint8_t alarm1Mask)
 {
     time.A1M4 = alarm1Mask & 0b00001000;
@@ -10140,7 +10234,7 @@ void setAlarm1A1M1(void)
     secsReg = time.alarm1Seconds + ( time.A1M1<<7 );
     setAlarm1Seconds();
 }
-# 566 "rtc_ds1337/rtc.c"
+# 578 "rtc/rtc_adafruit/rtc_adafruit.c"
 void setAlarm2Type(uint8_t alarm2Mask)
 {
     time.A2M4 = alarm2Mask & 0b00000100;

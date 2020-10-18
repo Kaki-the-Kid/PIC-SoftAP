@@ -9502,6 +9502,38 @@ void SYSTEM_Initialize(void);
 void OSCILLATOR_Initialize(void);
 # 9 "rtc/rtc_ds1337/rtc_ds1337.h" 2
 
+
+
+
+# 1 "rtc/rtc_ds1337/../rtc.h" 1
+# 16 "rtc/rtc_ds1337/../rtc.h"
+uint8_t rtc_address;
+
+
+
+
+
+
+# 1 "rtc/rtc_ds1337/../rtc_ds1337/rtc_ds1337.h" 1
+# 17 "rtc/rtc_ds1337/../rtc_ds1337/rtc_ds1337.h"
+# 1 "rtc/rtc_ds1337/../../i2c/i2c.h" 1
+# 32 "rtc/rtc_ds1337/../../i2c/i2c.h"
+uint8_t data_out[4];
+
+void i2c_init(void);
+void i2c_portScan(void);
+void i2c_write_serial(uint8_t, char*, uint8_t);
+void i2c_read_serial(uint8_t, uint8_t *, uint8_t);
+
+void i2c_master_wait(void);
+void i2c_master_start(void);
+void i2c_master_stop(void);
+void i2c_master_ack(void);
+void i2c_master_nack(void);
+# 17 "rtc/rtc_ds1337/../rtc_ds1337/rtc_ds1337.h" 2
+
+
+
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\string.h" 1 3
 # 25 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\string.h" 3
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\bits/alltypes.h" 1 3
@@ -9557,31 +9589,10 @@ size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
 
 
 void *memccpy (void *restrict, const void *restrict, int, size_t);
-# 10 "rtc/rtc_ds1337/rtc_ds1337.h" 2
-
-
-
-
-# 1 "rtc/rtc_ds1337/../../i2c/i2c.h" 1
-# 32 "rtc/rtc_ds1337/../../i2c/i2c.h"
-uint8_t data_out[4];
-
-void i2c_init(void);
-void i2c_portScan(void);
-void i2c_write_serial(uint8_t, char*, uint8_t);
-void i2c_read_serial(uint8_t, uint8_t *, uint8_t);
-
-void i2c_master_wait(void);
-void i2c_master_start(void);
-void i2c_master_stop(void);
-void i2c_master_ack(void);
-void i2c_master_nack(void);
-# 14 "rtc/rtc_ds1337/rtc_ds1337.h" 2
-# 43 "rtc/rtc_ds1337/rtc_ds1337.h"
-const uint8_t rtc_addr = 0b1101000;
-uint8_t rtcData[16];
-uint8_t _clockDataString[] = {"hh:mm:ss - dd-mm-yyyy"};
-# 83 "rtc/rtc_ds1337/rtc_ds1337.h"
+# 20 "rtc/rtc_ds1337/../rtc_ds1337/rtc_ds1337.h" 2
+# 50 "rtc/rtc_ds1337/../rtc_ds1337/rtc_ds1337.h"
+uint8_t rtc_addr = 0b1101000;
+# 88 "rtc/rtc_ds1337/../rtc_ds1337/rtc_ds1337.h"
 void rtc_getTimeAll(void);
 void rtc_setTimeAll(uint8_t, uint8_t, uint8_t, uint8_t, uint8_t, uint8_t, int16_t);
 uint8_t convertBCD2Bytes(uint8_t);
@@ -9612,7 +9623,7 @@ void setMonth(void);
 
 uint8_t getYear(void);
 void setYear(void);
-# 121 "rtc/rtc_ds1337/rtc_ds1337.h"
+# 126 "rtc/rtc_ds1337/../rtc_ds1337/rtc_ds1337.h"
 void setAlarm1(void);
 
 uint8_t getAlarm1Seconds(void);
@@ -9668,6 +9679,78 @@ void setAlarm2A2M2(void);
 
 _Bool getEnableOscillator(void);
 void setEnableOscillator(_Bool);
+# 22 "rtc/rtc_ds1337/../rtc.h" 2
+
+
+
+
+
+
+const char rtc_htmlTemplate[] = "<h1>Server tid</h1><div id ='clock' onload='startTime()'></div>";
+const char rtc_fontTemplate[] = "<link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>";
+const char rtc_cssTemplate[] = "body{background:black;}#clock{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#FFFF00;font-family:Orbitron;letter-spacing:7px;font-weight:bold;font-size:10em;}";
+const char rtc_scriptTemplate[] = "<script>function startTime(){var today=new Date();var h=today.getHours();var m=today.getMinutes();var s=today.getSeconds();m=checkTime(m);s=checkTime(s);document.getElementById('clock').innerHTML=h+':'+m+':'+s;var t=setTimeout(startTime,500);}function checkTime(i){if(i<10){i='0'+i};return i;}</script>";
+
+uint8_t _clockDataString[] = {"hh:mm:ss - dd-mm-yyyy"};
+uint8_t rtcData[16];
+
+
+
+typedef struct TIME {
+    uint8_t seconds;
+    uint8_t minutes;
+    uint8_t hours;
+    uint8_t day;
+    uint8_t date;
+    uint8_t month;
+    uint8_t year;
+    _Bool time12_n24;
+    _Bool timePM_nAM;
+    _Bool century;
+
+    _Bool A1M1;
+    _Bool A1M2;
+    _Bool A1M3;
+    _Bool A1M4;
+    uint8_t alarm1Seconds;
+    uint8_t alarm1Minutes;
+    uint8_t alarm1Hour;
+    uint8_t alarm1Day;
+    uint8_t alarm1Date;
+    _Bool alarm112n24;
+    _Bool alarm1PMnAM;
+    _Bool alarm1DYnDT;
+
+    _Bool A2M2;
+    _Bool A2M3;
+    _Bool A2M4;
+    uint8_t alarm2Minutes;
+    uint8_t alarm2Hours;
+    uint8_t alarm2Day;
+    uint8_t alarm2Date;
+    _Bool alarm212n24;
+    _Bool alarm2PMnAM;
+    _Bool alarm2DYnDT;
+
+    _Bool EOSC;
+    _Bool RS2;
+    _Bool RS1;
+    _Bool INTCN;
+    _Bool A2IE;
+    _Bool A1IE;
+    _Bool OSF;
+    _Bool A2F;
+    _Bool A1F;
+} time_t;
+
+time_t time;
+# 13 "rtc/rtc_ds1337/../rtc_ds1337/rtc_ds1337.h" 2
+
+
+
+
+# 1 "rtc/rtc_ds1337/../../i2c/i2c.h" 1
+# 17 "rtc/rtc_ds1337/../rtc_ds1337/rtc_ds1337.h" 2
 # 8 "rtc/rtc_ds1337/rtc_ds1337.c" 2
 # 22 "rtc/rtc_ds1337/rtc_ds1337.c"
 void rtc_getTimeAll(void)
@@ -10077,7 +10160,7 @@ void setAlarm1A1M1(void)
 {
     uint8_t secsReg = getAlarm1Seconds();
     time.alarm1Seconds = secsReg & ~0b10000000;
-    secsReg = time.alarm1Seconds + ( time.A1M1<<7 );
+    secsReg = time.alarm1Seconds + (uint8_t)( time.A1M1<<7 );
     setAlarm1Seconds();
 }
 # 566 "rtc/rtc_ds1337/rtc_ds1337.c"

@@ -234,18 +234,9 @@ size_t __ctype_get_mb_cur_max(void);
 # 9 "rtc/rtc.c" 2
 # 20 "rtc/rtc.c"
 # 1 "rtc/rtc.h" 1
-# 17 "rtc/rtc.h"
-# 1 "rtc/rtc_ds1337/rtc_ds1337.h" 1
-
-
-
-
-
-
-
-
-# 1 "rtc/rtc_ds1337/../../mcc_generated_files/mcc.h" 1
-# 49 "rtc/rtc_ds1337/../../mcc_generated_files/mcc.h"
+# 10 "rtc/rtc.h"
+# 1 "rtc/../mcc_generated_files/mcc.h" 1
+# 49 "rtc/../mcc_generated_files/mcc.h"
 # 1 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -9278,17 +9269,17 @@ extern __attribute__((nonreentrant)) void _delaywdt(unsigned long);
 #pragma intrinsic(_delay3)
 extern __attribute__((nonreentrant)) void _delay3(unsigned char);
 # 33 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\\pic\\include\\xc.h" 2 3
-# 49 "rtc/rtc_ds1337/../../mcc_generated_files/mcc.h" 2
+# 49 "rtc/../mcc_generated_files/mcc.h" 2
 
-# 1 "rtc/rtc_ds1337/../../mcc_generated_files/device_config.h" 1
-# 50 "rtc/rtc_ds1337/../../mcc_generated_files/mcc.h" 2
+# 1 "rtc/../mcc_generated_files/device_config.h" 1
+# 50 "rtc/../mcc_generated_files/mcc.h" 2
 
-# 1 "rtc/rtc_ds1337/../../mcc_generated_files/pin_manager.h" 1
-# 201 "rtc/rtc_ds1337/../../mcc_generated_files/pin_manager.h"
+# 1 "rtc/../mcc_generated_files/pin_manager.h" 1
+# 201 "rtc/../mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 213 "rtc/rtc_ds1337/../../mcc_generated_files/pin_manager.h"
+# 213 "rtc/../mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
-# 51 "rtc/rtc_ds1337/../../mcc_generated_files/mcc.h" 2
+# 51 "rtc/../mcc_generated_files/mcc.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\stdint.h" 1 3
 # 22 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\stdint.h" 3
@@ -9375,68 +9366,68 @@ typedef int32_t int_fast32_t;
 typedef uint16_t uint_fast16_t;
 typedef uint32_t uint_fast32_t;
 # 144 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\stdint.h" 2 3
-# 52 "rtc/rtc_ds1337/../../mcc_generated_files/mcc.h" 2
+# 52 "rtc/../mcc_generated_files/mcc.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\stdbool.h" 1 3
-# 53 "rtc/rtc_ds1337/../../mcc_generated_files/mcc.h" 2
+# 53 "rtc/../mcc_generated_files/mcc.h" 2
 
-# 1 "rtc/rtc_ds1337/../../mcc_generated_files/interrupt_manager.h" 1
-# 110 "rtc/rtc_ds1337/../../mcc_generated_files/interrupt_manager.h"
+# 1 "rtc/../mcc_generated_files/interrupt_manager.h" 1
+# 110 "rtc/../mcc_generated_files/interrupt_manager.h"
 void INTERRUPT_Initialize (void);
-# 54 "rtc/rtc_ds1337/../../mcc_generated_files/mcc.h" 2
+# 54 "rtc/../mcc_generated_files/mcc.h" 2
 
-# 1 "rtc/rtc_ds1337/../../mcc_generated_files/tmr2.h" 1
-# 104 "rtc/rtc_ds1337/../../mcc_generated_files/tmr2.h"
+# 1 "rtc/../mcc_generated_files/tmr2.h" 1
+# 104 "rtc/../mcc_generated_files/tmr2.h"
 void TMR2_Initialize(void);
-# 133 "rtc/rtc_ds1337/../../mcc_generated_files/tmr2.h"
+# 133 "rtc/../mcc_generated_files/tmr2.h"
 void TMR2_StartTimer(void);
-# 165 "rtc/rtc_ds1337/../../mcc_generated_files/tmr2.h"
+# 165 "rtc/../mcc_generated_files/tmr2.h"
 void TMR2_StopTimer(void);
-# 200 "rtc/rtc_ds1337/../../mcc_generated_files/tmr2.h"
+# 200 "rtc/../mcc_generated_files/tmr2.h"
 uint8_t TMR2_ReadTimer(void);
-# 239 "rtc/rtc_ds1337/../../mcc_generated_files/tmr2.h"
+# 239 "rtc/../mcc_generated_files/tmr2.h"
 void TMR2_WriteTimer(uint8_t timerVal);
-# 291 "rtc/rtc_ds1337/../../mcc_generated_files/tmr2.h"
+# 291 "rtc/../mcc_generated_files/tmr2.h"
 void TMR2_LoadPeriodRegister(uint8_t periodVal);
-# 309 "rtc/rtc_ds1337/../../mcc_generated_files/tmr2.h"
+# 309 "rtc/../mcc_generated_files/tmr2.h"
 void TMR2_ISR(void);
-# 327 "rtc/rtc_ds1337/../../mcc_generated_files/tmr2.h"
+# 327 "rtc/../mcc_generated_files/tmr2.h"
  void TMR2_CallBack(void);
-# 344 "rtc/rtc_ds1337/../../mcc_generated_files/tmr2.h"
+# 344 "rtc/../mcc_generated_files/tmr2.h"
  void TMR2_SetInterruptHandler(void (* InterruptHandler)(void));
-# 362 "rtc/rtc_ds1337/../../mcc_generated_files/tmr2.h"
+# 362 "rtc/../mcc_generated_files/tmr2.h"
 extern void (*TMR2_InterruptHandler)(void);
-# 380 "rtc/rtc_ds1337/../../mcc_generated_files/tmr2.h"
+# 380 "rtc/../mcc_generated_files/tmr2.h"
 void TMR2_DefaultInterruptHandler(void);
-# 55 "rtc/rtc_ds1337/../../mcc_generated_files/mcc.h" 2
+# 55 "rtc/../mcc_generated_files/mcc.h" 2
 
-# 1 "rtc/rtc_ds1337/../../mcc_generated_files/tmr4.h" 1
-# 104 "rtc/rtc_ds1337/../../mcc_generated_files/tmr4.h"
+# 1 "rtc/../mcc_generated_files/tmr4.h" 1
+# 104 "rtc/../mcc_generated_files/tmr4.h"
 void TMR4_Initialize(void);
-# 133 "rtc/rtc_ds1337/../../mcc_generated_files/tmr4.h"
+# 133 "rtc/../mcc_generated_files/tmr4.h"
 void TMR4_StartTimer(void);
-# 165 "rtc/rtc_ds1337/../../mcc_generated_files/tmr4.h"
+# 165 "rtc/../mcc_generated_files/tmr4.h"
 void TMR4_StopTimer(void);
-# 200 "rtc/rtc_ds1337/../../mcc_generated_files/tmr4.h"
+# 200 "rtc/../mcc_generated_files/tmr4.h"
 uint8_t TMR4_ReadTimer(void);
-# 239 "rtc/rtc_ds1337/../../mcc_generated_files/tmr4.h"
+# 239 "rtc/../mcc_generated_files/tmr4.h"
 void TMR4_WriteTimer(uint8_t timerVal);
-# 291 "rtc/rtc_ds1337/../../mcc_generated_files/tmr4.h"
+# 291 "rtc/../mcc_generated_files/tmr4.h"
 void TMR4_LoadPeriodRegister(uint8_t periodVal);
-# 309 "rtc/rtc_ds1337/../../mcc_generated_files/tmr4.h"
+# 309 "rtc/../mcc_generated_files/tmr4.h"
 void TMR4_ISR(void);
-# 327 "rtc/rtc_ds1337/../../mcc_generated_files/tmr4.h"
+# 327 "rtc/../mcc_generated_files/tmr4.h"
  void TMR4_CallBack(void);
-# 344 "rtc/rtc_ds1337/../../mcc_generated_files/tmr4.h"
+# 344 "rtc/../mcc_generated_files/tmr4.h"
  void TMR4_SetInterruptHandler(void (* InterruptHandler)(void));
-# 362 "rtc/rtc_ds1337/../../mcc_generated_files/tmr4.h"
+# 362 "rtc/../mcc_generated_files/tmr4.h"
 extern void (*TMR4_InterruptHandler)(void);
-# 380 "rtc/rtc_ds1337/../../mcc_generated_files/tmr4.h"
+# 380 "rtc/../mcc_generated_files/tmr4.h"
 void TMR4_DefaultInterruptHandler(void);
-# 56 "rtc/rtc_ds1337/../../mcc_generated_files/mcc.h" 2
+# 56 "rtc/../mcc_generated_files/mcc.h" 2
 
-# 1 "rtc/rtc_ds1337/../../mcc_generated_files/eusart1.h" 1
-# 76 "rtc/rtc_ds1337/../../mcc_generated_files/eusart1.h"
+# 1 "rtc/../mcc_generated_files/eusart1.h" 1
+# 76 "rtc/../mcc_generated_files/eusart1.h"
 typedef union {
     struct {
         unsigned perr : 1;
@@ -9458,42 +9449,74 @@ extern volatile uint8_t eusart1RxCount;
 
 extern void (*EUSART1_TxDefaultInterruptHandler)(void);
 extern void (*EUSART1_RxDefaultInterruptHandler)(void);
-# 118 "rtc/rtc_ds1337/../../mcc_generated_files/eusart1.h"
+# 118 "rtc/../mcc_generated_files/eusart1.h"
 void EUSART1_Initialize(void);
-# 166 "rtc/rtc_ds1337/../../mcc_generated_files/eusart1.h"
+# 166 "rtc/../mcc_generated_files/eusart1.h"
 _Bool EUSART1_is_tx_ready(void);
-# 214 "rtc/rtc_ds1337/../../mcc_generated_files/eusart1.h"
+# 214 "rtc/../mcc_generated_files/eusart1.h"
 _Bool EUSART1_is_rx_ready(void);
-# 261 "rtc/rtc_ds1337/../../mcc_generated_files/eusart1.h"
+# 261 "rtc/../mcc_generated_files/eusart1.h"
 _Bool EUSART1_is_tx_done(void);
-# 309 "rtc/rtc_ds1337/../../mcc_generated_files/eusart1.h"
+# 309 "rtc/../mcc_generated_files/eusart1.h"
 eusart1_status_t EUSART1_get_last_status(void);
-# 329 "rtc/rtc_ds1337/../../mcc_generated_files/eusart1.h"
+# 329 "rtc/../mcc_generated_files/eusart1.h"
 uint8_t EUSART1_Read(void);
-# 349 "rtc/rtc_ds1337/../../mcc_generated_files/eusart1.h"
+# 349 "rtc/../mcc_generated_files/eusart1.h"
 void EUSART1_Write(uint8_t txData);
-# 370 "rtc/rtc_ds1337/../../mcc_generated_files/eusart1.h"
+# 370 "rtc/../mcc_generated_files/eusart1.h"
 void EUSART1_Transmit_ISR(void);
-# 391 "rtc/rtc_ds1337/../../mcc_generated_files/eusart1.h"
+# 391 "rtc/../mcc_generated_files/eusart1.h"
 void EUSART1_Receive_ISR(void);
-# 412 "rtc/rtc_ds1337/../../mcc_generated_files/eusart1.h"
+# 412 "rtc/../mcc_generated_files/eusart1.h"
 void EUSART1_RxDataHandler(void);
-# 430 "rtc/rtc_ds1337/../../mcc_generated_files/eusart1.h"
+# 430 "rtc/../mcc_generated_files/eusart1.h"
 void EUSART1_SetFramingErrorHandler(void (* interruptHandler)(void));
-# 448 "rtc/rtc_ds1337/../../mcc_generated_files/eusart1.h"
+# 448 "rtc/../mcc_generated_files/eusart1.h"
 void EUSART1_SetOverrunErrorHandler(void (* interruptHandler)(void));
-# 466 "rtc/rtc_ds1337/../../mcc_generated_files/eusart1.h"
+# 466 "rtc/../mcc_generated_files/eusart1.h"
 void EUSART1_SetErrorHandler(void (* interruptHandler)(void));
-# 486 "rtc/rtc_ds1337/../../mcc_generated_files/eusart1.h"
+# 486 "rtc/../mcc_generated_files/eusart1.h"
 void EUSART1_SetTxInterruptHandler(void (* interruptHandler)(void));
-# 506 "rtc/rtc_ds1337/../../mcc_generated_files/eusart1.h"
+# 506 "rtc/../mcc_generated_files/eusart1.h"
 void EUSART1_SetRxInterruptHandler(void (* interruptHandler)(void));
-# 57 "rtc/rtc_ds1337/../../mcc_generated_files/mcc.h" 2
-# 72 "rtc/rtc_ds1337/../../mcc_generated_files/mcc.h"
+# 57 "rtc/../mcc_generated_files/mcc.h" 2
+# 72 "rtc/../mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
-# 85 "rtc/rtc_ds1337/../../mcc_generated_files/mcc.h"
+# 85 "rtc/../mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
-# 9 "rtc/rtc_ds1337/rtc_ds1337.h" 2
+# 10 "rtc/rtc.h" 2
+
+
+
+
+
+
+uint8_t rtc_address;
+
+
+
+
+
+
+# 1 "rtc/rtc_ds1337/rtc_ds1337.h" 1
+# 17 "rtc/rtc_ds1337/rtc_ds1337.h"
+# 1 "rtc/rtc_ds1337/../../i2c/i2c.h" 1
+# 32 "rtc/rtc_ds1337/../../i2c/i2c.h"
+uint8_t data_out[4];
+
+void i2c_init(void);
+void i2c_portScan(void);
+void i2c_write_serial(uint8_t, char*, uint8_t);
+void i2c_read_serial(uint8_t, uint8_t *, uint8_t);
+
+void i2c_master_wait(void);
+void i2c_master_start(void);
+void i2c_master_stop(void);
+void i2c_master_ack(void);
+void i2c_master_nack(void);
+# 17 "rtc/rtc_ds1337/rtc_ds1337.h" 2
+
+
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\string.h" 1 3
 # 25 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\string.h" 3
@@ -9550,31 +9573,10 @@ size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
 
 
 void *memccpy (void *restrict, const void *restrict, int, size_t);
-# 10 "rtc/rtc_ds1337/rtc_ds1337.h" 2
-
-
-
-
-# 1 "rtc/rtc_ds1337/../../i2c/i2c.h" 1
-# 32 "rtc/rtc_ds1337/../../i2c/i2c.h"
-uint8_t data_out[4];
-
-void i2c_init(void);
-void i2c_portScan(void);
-void i2c_write_serial(uint8_t, char*, uint8_t);
-void i2c_read_serial(uint8_t, uint8_t *, uint8_t);
-
-void i2c_master_wait(void);
-void i2c_master_start(void);
-void i2c_master_stop(void);
-void i2c_master_ack(void);
-void i2c_master_nack(void);
-# 14 "rtc/rtc_ds1337/rtc_ds1337.h" 2
-# 43 "rtc/rtc_ds1337/rtc_ds1337.h"
-const uint8_t rtc_addr = 0b1101000;
-uint8_t rtcData[16];
-uint8_t _clockDataString[] = {"hh:mm:ss - dd-mm-yyyy"};
-# 83 "rtc/rtc_ds1337/rtc_ds1337.h"
+# 20 "rtc/rtc_ds1337/rtc_ds1337.h" 2
+# 50 "rtc/rtc_ds1337/rtc_ds1337.h"
+uint8_t rtc_addr = 0b1101000;
+# 88 "rtc/rtc_ds1337/rtc_ds1337.h"
 void rtc_getTimeAll(void);
 void rtc_setTimeAll(uint8_t, uint8_t, uint8_t, uint8_t, uint8_t, uint8_t, int16_t);
 uint8_t convertBCD2Bytes(uint8_t);
@@ -9605,7 +9607,7 @@ void setMonth(void);
 
 uint8_t getYear(void);
 void setYear(void);
-# 121 "rtc/rtc_ds1337/rtc_ds1337.h"
+# 126 "rtc/rtc_ds1337/rtc_ds1337.h"
 void setAlarm1(void);
 
 uint8_t getAlarm1Seconds(void);
@@ -9661,7 +9663,7 @@ void setAlarm2A2M2(void);
 
 _Bool getEnableOscillator(void);
 void setEnableOscillator(_Bool);
-# 17 "rtc/rtc.h" 2
+# 22 "rtc/rtc.h" 2
 
 
 
@@ -9673,7 +9675,8 @@ const char rtc_fontTemplate[] = "<link href='https://fonts.googleapis.com/css?fa
 const char rtc_cssTemplate[] = "body{background:black;}#clock{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#FFFF00;font-family:Orbitron;letter-spacing:7px;font-weight:bold;font-size:10em;}";
 const char rtc_scriptTemplate[] = "<script>function startTime(){var today=new Date();var h=today.getHours();var m=today.getMinutes();var s=today.getSeconds();m=checkTime(m);s=checkTime(s);document.getElementById('clock').innerHTML=h+':'+m+':'+s;var t=setTimeout(startTime,500);}function checkTime(i){if(i<10){i='0'+i};return i;}</script>";
 
-
+uint8_t _clockDataString[] = {"hh:mm:ss - dd-mm-yyyy"};
+uint8_t rtcData[16];
 
 
 

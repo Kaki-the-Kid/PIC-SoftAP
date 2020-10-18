@@ -4,14 +4,18 @@
  * Created: September 8, 2019, 6:00 PM
  * @brief:  Realtime Clock header fil
  **************************************************************/
+#pragma once
 
 #ifndef MCC_H
-#include "../../mcc_generated_files/mcc.h"
-#include <string.h>
+    #include "../../mcc_generated_files/mcc.h"
+#endif
+
+#ifndef RTC_H
+    #include "../rtc.h"
 #endif
 
 #ifndef I2C
-#include "../../i2c/i2c.h"
+    #include "../../i2c/i2c.h"
 #endif
 
 #ifndef RTC_DS1337_H
@@ -40,7 +44,7 @@
    0FH: |    OSF    | 0 | 0 | 0 | 0 | 0 | A2F | A1F |                      Funtion: Status
  */
 
-const uint8_t rtc_addr           = 0b1101000; // 7-bit adresse på Real-time clock
+rtc_address = 0b1101000; // 7-bit adresse på Real-time clock
 
 //
 #define secondsAddr         0x00

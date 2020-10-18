@@ -534,7 +534,7 @@ void setAlarm1A1M1(void)
 {
     uint8_t secsReg = getAlarm1Seconds(); // read from rtc
     time.alarm1Seconds = secsReg & ~bit7; // update local value
-    secsReg = time.alarm1Seconds + ( time.A1M1<<7 );
+    secsReg = time.alarm1Seconds + (uint8_t)( time.A1M1<<7 );
     setAlarm1Seconds();
 }
 

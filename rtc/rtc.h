@@ -4,11 +4,16 @@
  *
  * Created on October 18, 2020, 4:09 PM
  */
+#pragma once
+
+#ifndef MCC_H
+    #include "../mcc_generated_files/mcc.h"
+#endif
 
 #ifndef RTC_H
 #define	RTC_H
 
-#define rtc_address     0x00
+uint8_t rtc_address;
 #define rtc_type        0x00 // Brug denne til at vælge i mellem de forskellige RTC moduler
                              //    Type 0: DS1337
                              //    Type 1: Adafruit RTC

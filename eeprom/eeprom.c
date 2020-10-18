@@ -86,7 +86,7 @@ void eeprom_dumpLogData(void) {
         j = 0;
         while ( j < 8 ) {
 
-            tmp_humid  = ( eeprom_buffer[j++] & 0b00111111 ) << 8;
+            tmp_humid  = (uint32_t)(( eeprom_buffer[j++] & 0b00111111 ) << 8);
             tmp_humid +=   eeprom_buffer[j++];
             tmp_humid *= 100;
             tmp_humid /= 16382;

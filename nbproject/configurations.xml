@@ -1,6 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configurationDescriptor version="65">
   <logicalFolder name="root" displayName="root" projectFiles="true">
+    <logicalFolder name="f4" displayName="assignment" projectFiles="true">
+      <itemPath>dokumentation/Opgaver/Server opgave.pdf</itemPath>
+    </logicalFolder>
+    <logicalFolder name="f8" displayName="datablade" projectFiles="true">
+      <logicalFolder name="#Vejledning i opgradering af ESP modul"
+                     displayName="#Vejledning i opgradering af ESP modul"
+                     projectFiles="true">
+        <itemPath>datablade/#Vejledning i opgradering af ESP modul/2a-esp8266-sdk_getting_started_guide_en.pdf</itemPath>
+      </logicalFolder>
+      <logicalFolder name="ESP01" displayName="ESP01" projectFiles="true">
+        <itemPath>datablade/ESP01/ESP-TOUCH User Guide v 2.0.pdf</itemPath>
+        <itemPath>datablade/ESP01/ESP8266 AT Command Examples v 1.3.pdf</itemPath>
+        <itemPath>datablade/ESP01/ESP8266 AT Instruction Set v 2.2.1.pdf</itemPath>
+        <itemPath>datablade/ESP01/ESP8266 AT Instruction Set v 3.0.2.pdf</itemPath>
+        <itemPath>datablade/ESP01/ESP8266 Technical Reference v 1.4.pdf</itemPath>
+      </logicalFolder>
+      <logicalFolder name="rtc AdaFruit"
+                     displayName="RTC AdaFruit"
+                     projectFiles="true">
+        <itemPath>datablade/rtc AdaFruit/Downloads - Adafruit PCF8523 Real Time Clock - Adafruit Learning System.url</itemPath>
+        <itemPath>datablade/rtc AdaFruit/PCF8523 - NXP.url</itemPath>
+        <itemPath>datablade/rtc AdaFruit/PCF8523.pdf</itemPath>
+        <itemPath>datablade/rtc AdaFruit/adafruit-pcf8523-real-time-clock.pdf</itemPath>
+      </logicalFolder>
+      <logicalFolder name="rtc ds1337" displayName="RTC DS1337" projectFiles="true">
+        <logicalFolder name="DS1337 I2C Serial Real-Time Clock - Maxim_files"
+                       displayName="DS1337 I2C Serial Real-Time Clock - Maxim_files"
+                       projectFiles="true">
+          <itemPath>datablade/rtc ds1337/DS1337 I2C Serial Real-Time Clock - Maxim_files/3128.png</itemPath>
+          <itemPath>datablade/rtc ds1337/DS1337 I2C Serial Real-Time Clock - Maxim_files/Api.html</itemPath>
+          <itemPath>datablade/rtc ds1337/DS1337 I2C Serial Real-Time Clock - Maxim_files/AppMeasurement.min.js.download</itemPath>
+          <itemPath>datablade/rtc ds1337/DS1337 I2C Serial Real-Time Clock - Maxim_files/PYJC4-LQY7J-GZG3X-RR5M2-8BKF6</itemPath>
+          <itemPath>datablade/rtc ds1337/DS1337 I2C Serial Real-Time Clock - Maxim_files/aem-gigya.min.js.download</itemPath>
+          <itemPath>datablade/rtc ds1337/DS1337 I2C Serial Real-Time Clock - Maxim_files/analytics.js.download</itemPath>
+          <itemPath>datablade/rtc ds1337/DS1337 I2C Serial Real-Time Clock - Maxim_files/blogger_icon.svg</itemPath>
+          <itemPath>datablade/rtc ds1337/DS1337 I2C Serial Real-Time Clock - Maxim_files/bookmark_icon.svg</itemPath>
+          <itemPath>datablade/rtc ds1337/DS1337 I2C Serial Real-Time Clock - Maxim_files/bookmark_icon.webp</itemPath>
+          <itemPath>datablade/rtc ds1337/DS1337 I2C Serial Real-Time Clock - Maxim_files/cart_icon.webp</itemPath>
+          <itemPath>datablade/rtc ds1337/DS1337 I2C Serial Real-Time Clock - Maxim_files/check.gif</itemPath>
+          <itemPath>datablade/rtc ds1337/DS1337 I2C Serial Real-Time Clock - Maxim_files/clientcontext-publish.min.js.download</itemPath>
+          <itemPath>datablade/rtc ds1337/DS1337 I2C Serial Real-Time Clock - Maxim_files/common.min.css</itemPath>
+          <itemPath>datablade/rtc ds1337/DS1337 I2C Serial Real-Time Clock - Maxim_files/datasheet_download_icon.webp</itemPath>
+          <itemPath>datablade/rtc ds1337/DS1337 I2C Serial Real-Time Clock - Maxim_files/delicious_icon.svg</itemPath>
+          <itemPath>datablade/rtc ds1337/DS1337 I2C Serial Real-Time Clock - Maxim_files/dest5.html</itemPath>
+          <itemPath>datablade/rtc ds1337/DS1337 I2C Serial Real-Time Clock - Maxim_files/digg_icon.svg</itemPath>
+          <itemPath>datablade/rtc ds1337/DS1337 I2C Serial Real-Time Clock - Maxim_files/elqCfg.min.js.download</itemPath>
+          <itemPath>datablade/rtc ds1337/DS1337 I2C Serial Real-Time Clock - Maxim_files/email_icon.svg</itemPath>
+          <itemPath>datablade/rtc ds1337/DS1337 I2C Serial Real-Time Clock - Maxim_files/facebook.webp</itemPath>
+          <itemPath>datablade/rtc ds1337/DS1337 I2C Serial Real-Time Clock - Maxim_files/fb_icon.svg</itemPath>
+          <itemPath>datablade/rtc ds1337/DS1337 I2C Serial Real-Time Clock - Maxim_files/gigya.js.download</itemPath>
+          <itemPath>datablade/rtc ds1337/DS1337 I2C Serial Real-Time Clock - Maxim_files/google+_icon.svg</itemPath>
+          <itemPath>datablade/rtc ds1337/DS1337 I2C Serial Real-Time Clock - Maxim_files/gtm.js.download</itemPath>
+          <itemPath>datablade/rtc ds1337/DS1337 I2C Serial Real-Time Clock - Maxim_files/hCknWs2u.min.js.download</itemPath>
+          <itemPath>datablade/rtc ds1337/DS1337 I2C Serial Real-Time Clock - Maxim_files/ib_icon-2.webp</itemPath>
+          <itemPath>datablade/rtc ds1337/DS1337 I2C Serial Real-Time Clock - Maxim_files/ib_icon.webp</itemPath>
+          <itemPath>datablade/rtc ds1337/DS1337 I2C Serial Real-Time Clock - Maxim_files/info_icon.webp</itemPath>
+          <itemPath>datablade/rtc ds1337/DS1337 I2C Serial Real-Time Clock - Maxim_files/ip.json</itemPath>
+          <itemPath>datablade/rtc ds1337/DS1337 I2C Serial Real-Time Clock - Maxim_files/launch-EN6cfe8ca62c774be4a09adacdccdda796.min.js.download</itemPath>
+          <itemPath>datablade/rtc ds1337/DS1337 I2C Serial Real-Time Clock - Maxim_files/linkedin.webp</itemPath>
+          <itemPath>datablade/rtc ds1337/DS1337 I2C Serial Real-Time Clock - Maxim_files/linkedin_icon.svg</itemPath>
+          <itemPath>datablade/rtc ds1337/DS1337 I2C Serial Real-Time Clock - Maxim_files/loading.gif</itemPath>
+          <itemPath>datablade/rtc ds1337/DS1337 I2C Serial Real-Time Clock - Maxim_files/maxim-logo-web.svg</itemPath>
+          <itemPath>datablade/rtc ds1337/DS1337 I2C Serial Real-Time Clock - Maxim_files/maxim_confidential_icon.webp</itemPath>
+          <itemPath>datablade/rtc ds1337/DS1337 I2C Serial Real-Time Clock - Maxim_files/member_center.min.js.download</itemPath>
+          <itemPath>datablade/rtc ds1337/DS1337 I2C Serial Real-Time Clock - Maxim_files/mymaxim_icon.svg</itemPath>
+          <itemPath>datablade/rtc ds1337/DS1337 I2C Serial Real-Time Clock - Maxim_files/mymaxim_icon.webp</itemPath>
+          <itemPath>datablade/rtc ds1337/DS1337 I2C Serial Real-Time Clock - Maxim_files/new_icon.webp</itemPath>
+          <itemPath>datablade/rtc ds1337/DS1337 I2C Serial Real-Time Clock - Maxim_files/packaging_icon.webp</itemPath>
+          <itemPath>datablade/rtc ds1337/DS1337 I2C Serial Real-Time Clock - Maxim_files/packaging_icon_o.webp</itemPath>
+          <itemPath>datablade/rtc ds1337/DS1337 I2C Serial Real-Time Clock - Maxim_files/para-search-icon.webp</itemPath>
+          <itemPath>datablade/rtc ds1337/DS1337 I2C Serial Real-Time Clock - Maxim_files/pinterest_icon.svg</itemPath>
+          <itemPath>datablade/rtc ds1337/DS1337 I2C Serial Real-Time Clock - Maxim_files/print_icon.svg</itemPath>
+          <itemPath>datablade/rtc ds1337/DS1337 I2C Serial Real-Time Clock - Maxim_files/productpackageinfo.min.js.download</itemPath>
+          <itemPath>datablade/rtc ds1337/DS1337 I2C Serial Real-Time Clock - Maxim_files/productpage.min.css</itemPath>
+          <itemPath>datablade/rtc ds1337/DS1337 I2C Serial Real-Time Clock - Maxim_files/productpage.min.js.download</itemPath>
+          <itemPath>datablade/rtc ds1337/DS1337 I2C Serial Real-Time Clock - Maxim_files/productsbyfunction_icon.webp</itemPath>
+          <itemPath>datablade/rtc ds1337/DS1337 I2C Serial Real-Time Clock - Maxim_files/productsbyfunction_icon_o.png</itemPath>
+          <itemPath>datablade/rtc ds1337/DS1337 I2C Serial Real-Time Clock - Maxim_files/publish.min.js.download</itemPath>
+          <itemPath>datablade/rtc ds1337/DS1337 I2C Serial Real-Time Clock - Maxim_files/quote-request.webp</itemPath>
+          <itemPath>datablade/rtc ds1337/DS1337 I2C Serial Real-Time Clock - Maxim_files/reddit_icon.svg</itemPath>
+          <itemPath>datablade/rtc ds1337/DS1337 I2C Serial Real-Time Clock - Maxim_files/rightcol-arrow.webp</itemPath>
+          <itemPath>datablade/rtc ds1337/DS1337 I2C Serial Real-Time Clock - Maxim_files/rightcol.min.css</itemPath>
+          <itemPath>datablade/rtc ds1337/DS1337 I2C Serial Real-Time Clock - Maxim_files/rightcol.min.js.download</itemPath>
+          <itemPath>datablade/rtc ds1337/DS1337 I2C Serial Real-Time Clock - Maxim_files/saved_resource(1).html</itemPath>
+          <itemPath>datablade/rtc ds1337/DS1337 I2C Serial Real-Time Clock - Maxim_files/saved_resource(2).html</itemPath>
+          <itemPath>datablade/rtc ds1337/DS1337 I2C Serial Real-Time Clock - Maxim_files/saved_resource.html</itemPath>
+          <itemPath>datablade/rtc ds1337/DS1337 I2C Serial Real-Time Clock - Maxim_files/screenset-validation.min.js.download</itemPath>
+          <itemPath>datablade/rtc ds1337/DS1337 I2C Serial Real-Time Clock - Maxim_files/search-icon.webp</itemPath>
+          <itemPath>datablade/rtc ds1337/DS1337 I2C Serial Real-Time Clock - Maxim_files/share_icon.svg</itemPath>
+          <itemPath>datablade/rtc ds1337/DS1337 I2C Serial Real-Time Clock - Maxim_files/spiffy.gif</itemPath>
+          <itemPath>datablade/rtc ds1337/DS1337 I2C Serial Real-Time Clock - Maxim_files/spinner_home.webp</itemPath>
+          <itemPath>datablade/rtc ds1337/DS1337 I2C Serial Real-Time Clock - Maxim_files/subscribe_icon.webp</itemPath>
+          <itemPath>datablade/rtc ds1337/DS1337 I2C Serial Real-Time Clock - Maxim_files/tech_docs_icon.webp</itemPath>
+          <itemPath>datablade/rtc ds1337/DS1337 I2C Serial Real-Time Clock - Maxim_files/tech_docs_icon_o.webp</itemPath>
+          <itemPath>datablade/rtc ds1337/DS1337 I2C Serial Real-Time Clock - Maxim_files/twitter.webp</itemPath>
+          <itemPath>datablade/rtc ds1337/DS1337 I2C Serial Real-Time Clock - Maxim_files/twitter_icon.svg</itemPath>
+          <itemPath>datablade/rtc ds1337/DS1337 I2C Serial Real-Time Clock - Maxim_files/youtube.webp</itemPath>
+        </logicalFolder>
+        <itemPath>datablade/rtc ds1337/DS1337 I2C Serial Real-Time Clock - Maxim.html</itemPath>
+        <itemPath>datablade/rtc ds1337/DS1337-DS1337C - I2C Serial Real-Time Clock.pdf</itemPath>
+      </logicalFolder>
+    </logicalFolder>
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">

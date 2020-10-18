@@ -1,6 +1,6 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"32 rtc/rtc.h
-[; ;rtc/rtc.h: 32: typedef struct TIME {
+"38 rtc/rtc.h
+[; ;rtc/rtc.h: 38: typedef struct TIME {
 [s S834 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `uc 1 `uc 1 `uc 1 `uc 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 ]
 [n S834 TIME seconds minutes hours day date month year time12_n24 timePM_nAM century A1M1 A1M2 A1M3 A1M4 alarm1Seconds alarm1Minutes alarm1Hour alarm1Day alarm1Date alarm112n24 alarm1PMnAM alarm1DYnDT A2M2 A2M3 A2M4 alarm2Minutes alarm2Hours alarm2Day alarm2Date alarm212n24 alarm2PMnAM alarm2DYnDT EOSC RS2 RS1 INTCN A2IE A1IE OSF A2F A1F ]
 "54 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k22.h
@@ -738,49 +738,20 @@ Version 4.0 HI-TECH Software Intermediate Code
 "16609
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k22.h: 16609: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
+"16 rtc/rtc.h
+[; ;rtc/rtc.h: 16: uint8_t rtc_address;
+[v _rtc_address `uc ~T0 @X0 1 e ]
 "32 rtc/rtc_ds1337/../../i2c/i2c.h
 [; ;rtc/rtc_ds1337/../../i2c/i2c.h: 32: uint8_t data_out[4];
 [v _data_out `uc ~T0 @X0 -> 4 `i e ]
-"43 rtc/rtc_ds1337/rtc_ds1337.h
-[; ;rtc/rtc_ds1337/rtc_ds1337.h: 43: const uint8_t rtc_addr = 0b1101000;
-[v _rtc_addr `Cuc ~T0 @X0 1 e ]
+"50 rtc/rtc_ds1337/rtc_ds1337.h
+[; ;rtc/rtc_ds1337/rtc_ds1337.h: 50: uint8_t rtc_addr = 0b1101000;
+[v _rtc_addr `uc ~T0 @X0 1 e ]
 [i _rtc_addr
 -> -> 104 `i `uc
 ]
-"44
-[; ;rtc/rtc_ds1337/rtc_ds1337.h: 44: uint8_t rtcData[16];
-[v _rtcData `uc ~T0 @X0 -> 16 `i e ]
-"45
-[; ;rtc/rtc_ds1337/rtc_ds1337.h: 45: uint8_t _clockDataString[] = {"hh:mm:ss - dd-mm-yyyy"};
-[v __clockDataString `uc ~T0 @X0 -> 22 `i e ]
-[i __clockDataString
-:U ..
--> 104 `c
--> 104 `c
--> 58 `c
--> 109 `c
--> 109 `c
--> 58 `c
--> 115 `c
--> 115 `c
--> 32 `c
--> 45 `c
--> 32 `c
--> 100 `c
--> 100 `c
--> 45 `c
--> 109 `c
--> 109 `c
--> 45 `c
--> 121 `c
--> 121 `c
--> 121 `c
--> 121 `c
--> 0 `c
-..
-]
-"23 rtc/rtc.h
-[; ;rtc/rtc.h: 23: const char rtc_htmlTemplate[] = "<h1>Server tid</h1><div id ='clock' onload='startTime()'></div>";
+"28 rtc/rtc.h
+[; ;rtc/rtc.h: 28: const char rtc_htmlTemplate[] = "<h1>Server tid</h1><div id ='clock' onload='startTime()'></div>";
 [v _rtc_htmlTemplate `Cuc ~T0 @X0 -> 64 `i e ]
 [i _rtc_htmlTemplate
 :U ..
@@ -850,8 +821,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-"24
-[; ;rtc/rtc.h: 24: const char rtc_fontTemplate[] = "<link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>";
+"29
+[; ;rtc/rtc.h: 29: const char rtc_fontTemplate[] = "<link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>";
 [v _rtc_fontTemplate `Cuc ~T0 @X0 -> 96 `i e ]
 [i _rtc_fontTemplate
 :U ..
@@ -953,8 +924,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-"25
-[; ;rtc/rtc.h: 25: const char rtc_cssTemplate[] = "body{background:black;}#clock{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#FFFF00;font-family:Orbitron;letter-spacing:7px;font-weight:bold;font-size:10em;}";
+"30
+[; ;rtc/rtc.h: 30: const char rtc_cssTemplate[] = "body{background:black;}#clock{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#FFFF00;font-family:Orbitron;letter-spacing:7px;font-weight:bold;font-size:10em;}";
 [v _rtc_cssTemplate `Cuc ~T0 @X0 -> 184 `i e ]
 [i _rtc_cssTemplate
 :U ..
@@ -1144,8 +1115,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-"26
-[; ;rtc/rtc.h: 26: const char rtc_scriptTemplate[] = "<script>function startTime(){var today=new Date();var h=today.getHours();var m=today.getMinutes();var s=today.getSeconds();m=checkTime(m);s=checkTime(s);document.getElementById('clock').innerHTML=h+':'+m+':'+s;var t=setTimeout(startTime,500);}function checkTime(i){if(i<10){i='0'+i};return i;}</script>";
+"31
+[; ;rtc/rtc.h: 31: const char rtc_scriptTemplate[] = "<script>function startTime(){var today=new Date();var h=today.getHours();var m=today.getMinutes();var s=today.getSeconds();m=checkTime(m);s=checkTime(s);document.getElementById('clock').innerHTML=h+':'+m+':'+s;var t=setTimeout(startTime,500);}function checkTime(i){if(i<10){i='0'+i};return i;}</script>";
 [v _rtc_scriptTemplate `Cuc ~T0 @X0 -> 303 `i e ]
 [i _rtc_scriptTemplate
 :U ..
@@ -1454,6 +1425,38 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-"79
-[; ;rtc/rtc.h: 79: time_t time;
+"33
+[; ;rtc/rtc.h: 33: uint8_t _clockDataString[] = {"hh:mm:ss - dd-mm-yyyy"};
+[v __clockDataString `uc ~T0 @X0 -> 22 `i e ]
+[i __clockDataString
+:U ..
+-> 104 `c
+-> 104 `c
+-> 58 `c
+-> 109 `c
+-> 109 `c
+-> 58 `c
+-> 115 `c
+-> 115 `c
+-> 32 `c
+-> 45 `c
+-> 32 `c
+-> 100 `c
+-> 100 `c
+-> 45 `c
+-> 109 `c
+-> 109 `c
+-> 45 `c
+-> 121 `c
+-> 121 `c
+-> 121 `c
+-> 121 `c
+-> 0 `c
+..
+]
+"34
+[; ;rtc/rtc.h: 34: uint8_t rtcData[16];
+[v _rtcData `uc ~T0 @X0 -> 16 `i e ]
+"85
+[; ;rtc/rtc.h: 85: time_t time;
 [v _time `S834 ~T0 @X0 1 e ]

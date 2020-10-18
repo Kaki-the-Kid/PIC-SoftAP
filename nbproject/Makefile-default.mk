@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=eeprom/eeprom.c webserver/esp8266.c webserver/tcpip.c webserver/wifi.c webserver/softap.c i2c/i2c.c lcd/lcd.c sensor/sensor.c spi/spi.c mcc_generated_files/device_config.c mcc_generated_files/mcc.c mcc_generated_files/pin_manager.c mcc_generated_files/eusart1.c mcc_generated_files/interrupt_manager.c mcc_generated_files/tmr2.c mcc_generated_files/tmr4.c main.c rtc/rtc_adafruit/rtc_adafruit.c rtc/rtc_ds1337/rtc_ds1337.c rtc/rtc.c
+SOURCEFILES_QUOTED_IF_SPACED=eeprom/eeprom.c webserver/esp8266.c webserver/tcpip.c webserver/wifi.c webserver/softap.c i2c/i2c.c lcd/lcd.c rtc/rtc_adafruit/rtc_adafruit.c rtc/rtc_ds1337/rtc_ds1337.c rtc/rtc.c sensor/sensor.c spi/spi.c mcc_generated_files/device_config.c mcc_generated_files/mcc.c mcc_generated_files/pin_manager.c mcc_generated_files/eusart1.c mcc_generated_files/interrupt_manager.c mcc_generated_files/tmr2.c mcc_generated_files/tmr4.c main.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/eeprom/eeprom.p1 ${OBJECTDIR}/webserver/esp8266.p1 ${OBJECTDIR}/webserver/tcpip.p1 ${OBJECTDIR}/webserver/wifi.p1 ${OBJECTDIR}/webserver/softap.p1 ${OBJECTDIR}/i2c/i2c.p1 ${OBJECTDIR}/lcd/lcd.p1 ${OBJECTDIR}/sensor/sensor.p1 ${OBJECTDIR}/spi/spi.p1 ${OBJECTDIR}/mcc_generated_files/device_config.p1 ${OBJECTDIR}/mcc_generated_files/mcc.p1 ${OBJECTDIR}/mcc_generated_files/pin_manager.p1 ${OBJECTDIR}/mcc_generated_files/eusart1.p1 ${OBJECTDIR}/mcc_generated_files/interrupt_manager.p1 ${OBJECTDIR}/mcc_generated_files/tmr2.p1 ${OBJECTDIR}/mcc_generated_files/tmr4.p1 ${OBJECTDIR}/main.p1 ${OBJECTDIR}/rtc/rtc_adafruit/rtc_adafruit.p1 ${OBJECTDIR}/rtc/rtc_ds1337/rtc_ds1337.p1 ${OBJECTDIR}/rtc/rtc.p1
-POSSIBLE_DEPFILES=${OBJECTDIR}/eeprom/eeprom.p1.d ${OBJECTDIR}/webserver/esp8266.p1.d ${OBJECTDIR}/webserver/tcpip.p1.d ${OBJECTDIR}/webserver/wifi.p1.d ${OBJECTDIR}/webserver/softap.p1.d ${OBJECTDIR}/i2c/i2c.p1.d ${OBJECTDIR}/lcd/lcd.p1.d ${OBJECTDIR}/sensor/sensor.p1.d ${OBJECTDIR}/spi/spi.p1.d ${OBJECTDIR}/mcc_generated_files/device_config.p1.d ${OBJECTDIR}/mcc_generated_files/mcc.p1.d ${OBJECTDIR}/mcc_generated_files/pin_manager.p1.d ${OBJECTDIR}/mcc_generated_files/eusart1.p1.d ${OBJECTDIR}/mcc_generated_files/interrupt_manager.p1.d ${OBJECTDIR}/mcc_generated_files/tmr2.p1.d ${OBJECTDIR}/mcc_generated_files/tmr4.p1.d ${OBJECTDIR}/main.p1.d ${OBJECTDIR}/rtc/rtc_adafruit/rtc_adafruit.p1.d ${OBJECTDIR}/rtc/rtc_ds1337/rtc_ds1337.p1.d ${OBJECTDIR}/rtc/rtc.p1.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/eeprom/eeprom.p1 ${OBJECTDIR}/webserver/esp8266.p1 ${OBJECTDIR}/webserver/tcpip.p1 ${OBJECTDIR}/webserver/wifi.p1 ${OBJECTDIR}/webserver/softap.p1 ${OBJECTDIR}/i2c/i2c.p1 ${OBJECTDIR}/lcd/lcd.p1 ${OBJECTDIR}/rtc/rtc_adafruit/rtc_adafruit.p1 ${OBJECTDIR}/rtc/rtc_ds1337/rtc_ds1337.p1 ${OBJECTDIR}/rtc/rtc.p1 ${OBJECTDIR}/sensor/sensor.p1 ${OBJECTDIR}/spi/spi.p1 ${OBJECTDIR}/mcc_generated_files/device_config.p1 ${OBJECTDIR}/mcc_generated_files/mcc.p1 ${OBJECTDIR}/mcc_generated_files/pin_manager.p1 ${OBJECTDIR}/mcc_generated_files/eusart1.p1 ${OBJECTDIR}/mcc_generated_files/interrupt_manager.p1 ${OBJECTDIR}/mcc_generated_files/tmr2.p1 ${OBJECTDIR}/mcc_generated_files/tmr4.p1 ${OBJECTDIR}/main.p1
+POSSIBLE_DEPFILES=${OBJECTDIR}/eeprom/eeprom.p1.d ${OBJECTDIR}/webserver/esp8266.p1.d ${OBJECTDIR}/webserver/tcpip.p1.d ${OBJECTDIR}/webserver/wifi.p1.d ${OBJECTDIR}/webserver/softap.p1.d ${OBJECTDIR}/i2c/i2c.p1.d ${OBJECTDIR}/lcd/lcd.p1.d ${OBJECTDIR}/rtc/rtc_adafruit/rtc_adafruit.p1.d ${OBJECTDIR}/rtc/rtc_ds1337/rtc_ds1337.p1.d ${OBJECTDIR}/rtc/rtc.p1.d ${OBJECTDIR}/sensor/sensor.p1.d ${OBJECTDIR}/spi/spi.p1.d ${OBJECTDIR}/mcc_generated_files/device_config.p1.d ${OBJECTDIR}/mcc_generated_files/mcc.p1.d ${OBJECTDIR}/mcc_generated_files/pin_manager.p1.d ${OBJECTDIR}/mcc_generated_files/eusart1.p1.d ${OBJECTDIR}/mcc_generated_files/interrupt_manager.p1.d ${OBJECTDIR}/mcc_generated_files/tmr2.p1.d ${OBJECTDIR}/mcc_generated_files/tmr4.p1.d ${OBJECTDIR}/main.p1.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/eeprom/eeprom.p1 ${OBJECTDIR}/webserver/esp8266.p1 ${OBJECTDIR}/webserver/tcpip.p1 ${OBJECTDIR}/webserver/wifi.p1 ${OBJECTDIR}/webserver/softap.p1 ${OBJECTDIR}/i2c/i2c.p1 ${OBJECTDIR}/lcd/lcd.p1 ${OBJECTDIR}/sensor/sensor.p1 ${OBJECTDIR}/spi/spi.p1 ${OBJECTDIR}/mcc_generated_files/device_config.p1 ${OBJECTDIR}/mcc_generated_files/mcc.p1 ${OBJECTDIR}/mcc_generated_files/pin_manager.p1 ${OBJECTDIR}/mcc_generated_files/eusart1.p1 ${OBJECTDIR}/mcc_generated_files/interrupt_manager.p1 ${OBJECTDIR}/mcc_generated_files/tmr2.p1 ${OBJECTDIR}/mcc_generated_files/tmr4.p1 ${OBJECTDIR}/main.p1 ${OBJECTDIR}/rtc/rtc_adafruit/rtc_adafruit.p1 ${OBJECTDIR}/rtc/rtc_ds1337/rtc_ds1337.p1 ${OBJECTDIR}/rtc/rtc.p1
+OBJECTFILES=${OBJECTDIR}/eeprom/eeprom.p1 ${OBJECTDIR}/webserver/esp8266.p1 ${OBJECTDIR}/webserver/tcpip.p1 ${OBJECTDIR}/webserver/wifi.p1 ${OBJECTDIR}/webserver/softap.p1 ${OBJECTDIR}/i2c/i2c.p1 ${OBJECTDIR}/lcd/lcd.p1 ${OBJECTDIR}/rtc/rtc_adafruit/rtc_adafruit.p1 ${OBJECTDIR}/rtc/rtc_ds1337/rtc_ds1337.p1 ${OBJECTDIR}/rtc/rtc.p1 ${OBJECTDIR}/sensor/sensor.p1 ${OBJECTDIR}/spi/spi.p1 ${OBJECTDIR}/mcc_generated_files/device_config.p1 ${OBJECTDIR}/mcc_generated_files/mcc.p1 ${OBJECTDIR}/mcc_generated_files/pin_manager.p1 ${OBJECTDIR}/mcc_generated_files/eusart1.p1 ${OBJECTDIR}/mcc_generated_files/interrupt_manager.p1 ${OBJECTDIR}/mcc_generated_files/tmr2.p1 ${OBJECTDIR}/mcc_generated_files/tmr4.p1 ${OBJECTDIR}/main.p1
 
 # Source Files
-SOURCEFILES=eeprom/eeprom.c webserver/esp8266.c webserver/tcpip.c webserver/wifi.c webserver/softap.c i2c/i2c.c lcd/lcd.c sensor/sensor.c spi/spi.c mcc_generated_files/device_config.c mcc_generated_files/mcc.c mcc_generated_files/pin_manager.c mcc_generated_files/eusart1.c mcc_generated_files/interrupt_manager.c mcc_generated_files/tmr2.c mcc_generated_files/tmr4.c main.c rtc/rtc_adafruit/rtc_adafruit.c rtc/rtc_ds1337/rtc_ds1337.c rtc/rtc.c
+SOURCEFILES=eeprom/eeprom.c webserver/esp8266.c webserver/tcpip.c webserver/wifi.c webserver/softap.c i2c/i2c.c lcd/lcd.c rtc/rtc_adafruit/rtc_adafruit.c rtc/rtc_ds1337/rtc_ds1337.c rtc/rtc.c sensor/sensor.c spi/spi.c mcc_generated_files/device_config.c mcc_generated_files/mcc.c mcc_generated_files/pin_manager.c mcc_generated_files/eusart1.c mcc_generated_files/interrupt_manager.c mcc_generated_files/tmr2.c mcc_generated_files/tmr4.c main.c
 
 
 
@@ -150,6 +150,30 @@ ${OBJECTDIR}/lcd/lcd.p1: lcd/lcd.c  nbproject/Makefile-${CND_CONF}.mk
 	@-${MV} ${OBJECTDIR}/lcd/lcd.d ${OBJECTDIR}/lcd/lcd.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/lcd/lcd.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
+${OBJECTDIR}/rtc/rtc_adafruit/rtc_adafruit.p1: rtc/rtc_adafruit/rtc_adafruit.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/rtc/rtc_adafruit" 
+	@${RM} ${OBJECTDIR}/rtc/rtc_adafruit/rtc_adafruit.p1.d 
+	@${RM} ${OBJECTDIR}/rtc/rtc_adafruit/rtc_adafruit.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/rtc/rtc_adafruit/rtc_adafruit.p1 rtc/rtc_adafruit/rtc_adafruit.c 
+	@-${MV} ${OBJECTDIR}/rtc/rtc_adafruit/rtc_adafruit.d ${OBJECTDIR}/rtc/rtc_adafruit/rtc_adafruit.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/rtc/rtc_adafruit/rtc_adafruit.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/rtc/rtc_ds1337/rtc_ds1337.p1: rtc/rtc_ds1337/rtc_ds1337.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/rtc/rtc_ds1337" 
+	@${RM} ${OBJECTDIR}/rtc/rtc_ds1337/rtc_ds1337.p1.d 
+	@${RM} ${OBJECTDIR}/rtc/rtc_ds1337/rtc_ds1337.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/rtc/rtc_ds1337/rtc_ds1337.p1 rtc/rtc_ds1337/rtc_ds1337.c 
+	@-${MV} ${OBJECTDIR}/rtc/rtc_ds1337/rtc_ds1337.d ${OBJECTDIR}/rtc/rtc_ds1337/rtc_ds1337.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/rtc/rtc_ds1337/rtc_ds1337.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/rtc/rtc.p1: rtc/rtc.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/rtc" 
+	@${RM} ${OBJECTDIR}/rtc/rtc.p1.d 
+	@${RM} ${OBJECTDIR}/rtc/rtc.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/rtc/rtc.p1 rtc/rtc.c 
+	@-${MV} ${OBJECTDIR}/rtc/rtc.d ${OBJECTDIR}/rtc/rtc.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/rtc/rtc.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
 ${OBJECTDIR}/sensor/sensor.p1: sensor/sensor.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/sensor" 
 	@${RM} ${OBJECTDIR}/sensor/sensor.p1.d 
@@ -230,30 +254,6 @@ ${OBJECTDIR}/main.p1: main.c  nbproject/Makefile-${CND_CONF}.mk
 	@-${MV} ${OBJECTDIR}/main.d ${OBJECTDIR}/main.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/main.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/rtc/rtc_adafruit/rtc_adafruit.p1: rtc/rtc_adafruit/rtc_adafruit.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/rtc/rtc_adafruit" 
-	@${RM} ${OBJECTDIR}/rtc/rtc_adafruit/rtc_adafruit.p1.d 
-	@${RM} ${OBJECTDIR}/rtc/rtc_adafruit/rtc_adafruit.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/rtc/rtc_adafruit/rtc_adafruit.p1 rtc/rtc_adafruit/rtc_adafruit.c 
-	@-${MV} ${OBJECTDIR}/rtc/rtc_adafruit/rtc_adafruit.d ${OBJECTDIR}/rtc/rtc_adafruit/rtc_adafruit.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/rtc/rtc_adafruit/rtc_adafruit.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
-${OBJECTDIR}/rtc/rtc_ds1337/rtc_ds1337.p1: rtc/rtc_ds1337/rtc_ds1337.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/rtc/rtc_ds1337" 
-	@${RM} ${OBJECTDIR}/rtc/rtc_ds1337/rtc_ds1337.p1.d 
-	@${RM} ${OBJECTDIR}/rtc/rtc_ds1337/rtc_ds1337.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/rtc/rtc_ds1337/rtc_ds1337.p1 rtc/rtc_ds1337/rtc_ds1337.c 
-	@-${MV} ${OBJECTDIR}/rtc/rtc_ds1337/rtc_ds1337.d ${OBJECTDIR}/rtc/rtc_ds1337/rtc_ds1337.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/rtc/rtc_ds1337/rtc_ds1337.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
-${OBJECTDIR}/rtc/rtc.p1: rtc/rtc.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/rtc" 
-	@${RM} ${OBJECTDIR}/rtc/rtc.p1.d 
-	@${RM} ${OBJECTDIR}/rtc/rtc.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/rtc/rtc.p1 rtc/rtc.c 
-	@-${MV} ${OBJECTDIR}/rtc/rtc.d ${OBJECTDIR}/rtc/rtc.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/rtc/rtc.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
 else
 ${OBJECTDIR}/eeprom/eeprom.p1: eeprom/eeprom.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/eeprom" 
@@ -310,6 +310,30 @@ ${OBJECTDIR}/lcd/lcd.p1: lcd/lcd.c  nbproject/Makefile-${CND_CONF}.mk
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/lcd/lcd.p1 lcd/lcd.c 
 	@-${MV} ${OBJECTDIR}/lcd/lcd.d ${OBJECTDIR}/lcd/lcd.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/lcd/lcd.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/rtc/rtc_adafruit/rtc_adafruit.p1: rtc/rtc_adafruit/rtc_adafruit.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/rtc/rtc_adafruit" 
+	@${RM} ${OBJECTDIR}/rtc/rtc_adafruit/rtc_adafruit.p1.d 
+	@${RM} ${OBJECTDIR}/rtc/rtc_adafruit/rtc_adafruit.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/rtc/rtc_adafruit/rtc_adafruit.p1 rtc/rtc_adafruit/rtc_adafruit.c 
+	@-${MV} ${OBJECTDIR}/rtc/rtc_adafruit/rtc_adafruit.d ${OBJECTDIR}/rtc/rtc_adafruit/rtc_adafruit.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/rtc/rtc_adafruit/rtc_adafruit.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/rtc/rtc_ds1337/rtc_ds1337.p1: rtc/rtc_ds1337/rtc_ds1337.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/rtc/rtc_ds1337" 
+	@${RM} ${OBJECTDIR}/rtc/rtc_ds1337/rtc_ds1337.p1.d 
+	@${RM} ${OBJECTDIR}/rtc/rtc_ds1337/rtc_ds1337.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/rtc/rtc_ds1337/rtc_ds1337.p1 rtc/rtc_ds1337/rtc_ds1337.c 
+	@-${MV} ${OBJECTDIR}/rtc/rtc_ds1337/rtc_ds1337.d ${OBJECTDIR}/rtc/rtc_ds1337/rtc_ds1337.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/rtc/rtc_ds1337/rtc_ds1337.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/rtc/rtc.p1: rtc/rtc.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/rtc" 
+	@${RM} ${OBJECTDIR}/rtc/rtc.p1.d 
+	@${RM} ${OBJECTDIR}/rtc/rtc.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/rtc/rtc.p1 rtc/rtc.c 
+	@-${MV} ${OBJECTDIR}/rtc/rtc.d ${OBJECTDIR}/rtc/rtc.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/rtc/rtc.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 ${OBJECTDIR}/sensor/sensor.p1: sensor/sensor.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/sensor" 
@@ -390,30 +414,6 @@ ${OBJECTDIR}/main.p1: main.c  nbproject/Makefile-${CND_CONF}.mk
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/main.p1 main.c 
 	@-${MV} ${OBJECTDIR}/main.d ${OBJECTDIR}/main.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/main.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
-${OBJECTDIR}/rtc/rtc_adafruit/rtc_adafruit.p1: rtc/rtc_adafruit/rtc_adafruit.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/rtc/rtc_adafruit" 
-	@${RM} ${OBJECTDIR}/rtc/rtc_adafruit/rtc_adafruit.p1.d 
-	@${RM} ${OBJECTDIR}/rtc/rtc_adafruit/rtc_adafruit.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/rtc/rtc_adafruit/rtc_adafruit.p1 rtc/rtc_adafruit/rtc_adafruit.c 
-	@-${MV} ${OBJECTDIR}/rtc/rtc_adafruit/rtc_adafruit.d ${OBJECTDIR}/rtc/rtc_adafruit/rtc_adafruit.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/rtc/rtc_adafruit/rtc_adafruit.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
-${OBJECTDIR}/rtc/rtc_ds1337/rtc_ds1337.p1: rtc/rtc_ds1337/rtc_ds1337.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/rtc/rtc_ds1337" 
-	@${RM} ${OBJECTDIR}/rtc/rtc_ds1337/rtc_ds1337.p1.d 
-	@${RM} ${OBJECTDIR}/rtc/rtc_ds1337/rtc_ds1337.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/rtc/rtc_ds1337/rtc_ds1337.p1 rtc/rtc_ds1337/rtc_ds1337.c 
-	@-${MV} ${OBJECTDIR}/rtc/rtc_ds1337/rtc_ds1337.d ${OBJECTDIR}/rtc/rtc_ds1337/rtc_ds1337.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/rtc/rtc_ds1337/rtc_ds1337.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
-${OBJECTDIR}/rtc/rtc.p1: rtc/rtc.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/rtc" 
-	@${RM} ${OBJECTDIR}/rtc/rtc.p1.d 
-	@${RM} ${OBJECTDIR}/rtc/rtc.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/rtc/rtc.p1 rtc/rtc.c 
-	@-${MV} ${OBJECTDIR}/rtc/rtc.d ${OBJECTDIR}/rtc/rtc.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/rtc/rtc.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 endif
 
