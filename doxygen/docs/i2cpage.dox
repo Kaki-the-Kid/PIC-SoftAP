@@ -1,0 +1,230 @@
+/**
+@page I2C Information om I2C protokollen
+
+@section i2c_files Filer for I2C forbindelser
+- i2c.h
+- i2c.c
+
+<hr/>
+
+Det kan være lidt svært, at komme igang med at bruge I2C busssen første gang. 
+Jeg vil her prøve, at komme med lidt mere uddybende forklaringer på hvordan 
+bussen fungerer, med kode eksempler.
+
+Lad os først kigge overordnet på I2C bussen og prøve at afmystificere den.
+
+<h2>Den fysiske del af I2C bussen</h2>
+Der er kun 2 forbindelser kaldet <b>S</b>erial <b>CL</b>ock og <b>S</b>erial 
+<b>DA</b>ta. 
+SCL er clock linien som synkronisrer alt data der overføres over the I2C bussen.
+SDA er selve data linien, hvor data overføres. 
+
+De to linier er de samme for hele opstillingen og forbundet til alle enhder på I2C bussen.
+
+Derudover forbindes til stel eller 0 volt og enhederne skal forbindes 5 volt som ikke behøver, at komme fra samme spændingskilde.
+
+Visse enheder arbejder på 3,3 Volt, så man skal være opmærksom på at have det samme spændingsniveau på de logiske linier uanset hvad forsyningssyningen til enheden er. Det kan være nødvendigt, at bruge en 2-vejs niveau skifter.
+
+
+Både SCL og SDA er "open drain". Det betyder, at chippen kan drive dens out lav, men den kan ikke drive den høj. For at linien skal kunne drives høj er det nødvendigt at indsætte
+pullup modstande på 5v spændingsforsyningen. Der skal være en modstand forbundet fra SCL til 5v og en anden fra SDA til 5V. Der skal kun bruges et sæt modstande for hele opstillingen og altså ikke for hver enhed.
+
+
+<img alt="" src="./assets/img/i2ca.GIF">
+
+Værdien på modstandene er ikke så kritisk. Man ser alt fra 1,8Kohm til 47KOhm. 1,8KOhm, 4,7KOhm og 10KOhm er almindeligt brugt, men alt indenfor det spand skulle virke OK.
+Man kan referere til databladet for den microcontroller man bruger og det afhænger også af hastigheden på bussen. 
+Hvis modstandene ikke sættes på vil linierne altid være lav - nær 0 volt - og I2C bussen vil ikke virke.
+
+<h2>Hastighed på bussen</h2>
+Standard clock (SCL) hastighed for I2C er op til 100KHz. Philips definerer højere hastigheder: <i>Fast mode</i>, som er op til 400KHz og <i>High Speed mode</i> som er op til 3.4MHz. 
+
+Når man laver en opstilling kan man starte med de 100KHz og når det virker kan prøve med en højere hastighed. Der er dog som regel ikke brug for højere hastigheder end standarden, eftersom de fleste delays er internt i enhederne på I2C busssen, så 100KHz er nok til langt de fleste projekter.
+
+<h2>Master og Slave enheder</h2>
+Enheder på I2C bussen har roller som enten master eller slave. Master enheden er den som driver SCL clock. Slave enheder responderer til Master. En slave enhed kan ikke igangsætte overførsler over bussen, det er kun muligt for en Master. Der kan være, og det der som regel, flere slave enheder i en opstilling. Men der som regel kun en master enhed. Det er muligt, at have flere Master enheder, men det er udsædvanligt og ikke noget vi kigger på her. Sagt på anden måde kan både Master og Slave sende data over I2C bussen, men det er altid kontrolleret af Master enhenden alene.
+
+<h2>I2C fysisk protokol</h2>
+Når controlleren som Master skal komminikerer med en slave enhed begynder den en start sekvens på I2C bussen. En start sekvens er en af de to specielle sekvenser på I2C den anden er logisk nok en stop sekvens. Start og stop sekvenserne er specielle i det de er de eneste hvor Datalinien er tilladt at skifte mens SCL (clock linien) er høj. 
+
+Når data sendes skal SDA holdes stabil og ikke skifte mens SCL er høj. Start og stop sekvenserne markerer begundelsen og slutningen af en transaktion med slave enheden.
+
+<img alt="" src="./assets/img/i2cb.GIF">
+
+Data is transferred in sequences of 8 bits. The bits are placed on the SDA line starting with the MSB (Most Significant Bit). The SCL line is then pulsed high, then low. Remember that the chip cannot really drive the line high, it simply "lets go" of it and the resistor actually pulls it high. For every 8 bits transferred, the device receiving the data sends back an acknowledge bit, so there are actually 9 SCL clock pulses to transfer each 8 bit byte of data. If the receiving device sends back a low ACK bit, then it has received the data and is ready to accept another byte. If it sends back a high then it is indicating it cannot accept any further data and the master should terminate the transfer by sending a stop sequence. 
+
+<img alt="" src="./assets/img/i2cc.GIF">
+
+
+<h2>I2C adressering</h2>
+Alle I2C adresser er enten 7 eller 10 bits. Brugen af 10 bit adressering er sjælden og ikke beskrevet her. En begrænsning på 7 bit giver mulighed for 128 enheder på I2C bussen (værdier fra 0-127). Afsendelse af data sker i bytes og den sidste bit bliver brugt til at indikere om Master enheden ønsker, at læse fra eller skrive til slave enheden.
+- Bitværdi på 0, Masteren ønsker at skrive til slave enheden.
+- Bitværdi på 1, Masteren ønsker at læse fra slave enheden.
+
+7 bit adressen placeres øverst i byten og Read/Write (R/W) bit er i LSB (Least Significant Bit).
+
+<img alt="" src="./assets/img/i2cd.GIF">
+
+Placeringen af 7 bit adressen i de øvre 7 bits af byten kan være en kilde til forvirring for nybegynderen. Det betyder, at når man skriver til adresse 21, sender man faktisk værdien 42 - 21 flyttet 1 bit til venstre. Det giver lidt mere mening, når man kigger på de enkelte bits inden byte værdien.
+
+Lad os tage de to tilstande for adresse 21:
+
+Decimal værdi: 21 = hex værdi: 0x15 = binær værdi: 0010101‬b
+
+Vi flytter værdien 1 bit mod venstre:
+00101010‬b = hex: 0x2A‬ = decimal: 42
+
+Så kan man plusser værdierne passende for den øsnskede retning. I kode vil det bliver
+
+<code style="padding: 10px; background-color: #e6ebf6;">
+uint8_t eeprom_addr      = 0b1010000; // Adresse 0x15
+<br />
+//Read from eeprom slave unit
+uint8_t read_start_byte = (eeprom_addr << 1) + 1 // Start Byte: 0b00101011‬ = 0x2B = 43
+
+//Write to eeprom
+uint8_t write_start_byte = (eeprom_addr << 1) + 0 // Start Byte: 0b00101010‬ = 0x2A = 42
+</code>
+
+
+<h2>I2C software protokol</h2>
+Den første ting en Master gør, er at sende en start sekvens. Det gør alle slave enheder på bus opmærksomme på at der er startet en transaktion og at de skal lytte efter om den er til dem. Dernæst sender Master adressen på den ønskede enhed, sammen med læse/skrive tilstanden. Slave som matcher adressen vil fortsætte med transaktionen, alle andre vil ignorere resten af denne transaktion og vente på den næste. Alt efter slavens interne opbygning, skal Master enheden sende den interne adresse, eller et register nummer i slaven, som der ønskes at skrive til. Nogle enheder sender bare værdier ud og andre skal pinges for at sætte f.eks. en måling igang. Du kan læse den information i databladet for den givne enhed.
+
+Efter at have sendt I2C adressen og Slavens interne register adresse, kan Master enheden nu sende data bytes. Master enheden kan fortsætte med at sende data bytes til Slaven og de bliver normalt placeret fortløbende fra det angivne registers fordi slaven oftest selv vil forøge den interne register adresse efter hver byte. Når master er færdig med at skrive data til slaven, sender den en stop sekvens som afslutter transaktionen. Når Master skriver en byte venter den på Acnowledge fra Slave enheden. 
+
+Så for at skrive til en slave enhed: 
+
+1. Send en start sekvens
+2. Send I2C adressen på slaven med R/W bit = 0
+3. Send evt, det interne register som du ønsker, at skrive til
+4. Send data byte(s)
+5. Vent på Acknowledge for modtaget data til slaven
+6. Send stop sekvensen.
+
+Læse fra Slave enheden
+Er en lille smule mere kompliceret, men ikke meget. Før du læser skal du fortælle slaven, fra hvilket af dets interne adresser du ønsker at læse fra. Så en læsning starter faktisk ofte med en skrivning. This is the same as when you want to write to it: You send the start sequence, the I2C address of the slave with the R/W bit low (even address) and the internal register number you want to write to. Now you send another start sequence (sometimes called a restart) and the I2C address again - this time with the read bit set. You then read as many data bytes as you wish and terminate the transaction with a stop sequence. So to read the compass bearing as a byte from the CMPS03 module:
+1. Send en start sekvencs
+2. Send I2C adressen for den pågældende slave enhed med R/W bit = 0
+3. Send den interne adresse af det ønskede slave register
+4. Send en ny start seqkvens evt. som repeated start sekvens
+5. Send I2C adressen på slave enheden med R/W bit = 1
+6. Læs data byte(s) fra slave enheden
+7. Send Acknowledge for hver modtaget byte - Not Acknowledge for den allersidste byte
+8. Send stop sekvensen
+
+Bit sekvensen kan visualiseres som:
+
+<img alt="" src="./assets/img/i2c.GIF">
+
+Wait a moment
+That's almost it for simple I2C communications, but there is one more complication. When the master is reading from the slave, its the slave that places the data on the SDA line, but its the master that controls the clock. What if the slave is not ready to send the data! With devices such as EEPROMs this is not a problem, but when the slave device is actually a microprocessor with other things to do, it can be a problem. The microprocessor on the slave device will need to go to an interrupt routine, save its working registers, find out what address the master wants to read from, get the data and place it in its transmission register. This can take many uS to happen, meanwhile the master is blissfully sending out clock pulses on the SCL line that the slave cannot respond to. The I2C protocol provides a solution to this: the slave is allowed to hold the SCL line low! This is called clock stretching. When the slave gets the read command from the master it holds the clock line low. The microprocessor then gets the requested data, places it in the transmission register and releases the clock line allowing the pull-up resistor to finally pull it high. From the masters point of view, it will issue the first clock pulse of the read by making SCL high and then check to see if it really has gone high. If its still low then its the slave that holding it low and the master should wait until it goes high before continuing. Luckily the hardware I2C ports on most microprocessors will handle this automatically.
+
+Sometimes however, the master I2C is just a collection of subroutines and there are a few implementations out there that completely ignore clock stretching. They work with things like EEPROM's but not with microprocessor slaves that use clock stretching. The result is that erroneous data is read from the slave. Beware!
+
+<h2>Eksempel: Master kode</h2>
+Følgende eksempler viser hvordan man implementerer software for I2C master, herunder tolerance for clock stretching. Det er skrevet i C for PIC processoren, men skulle kunne tilrettes de fleste processor med mindre ændringer til I/O pin definitionerne. Registrene er baseret på den anvendte kreds PIC18F26K22 i MPLAB med CodeConfigurator.
+
+<pre style="padding: 10px; background-color: #e6ebf6; border-radius: 10px;">
+#define SCL 	TRISCbits.RC3;
+#define SDA 	TRISCbits.RC4;<br/>
+#define SCL_OUT	ANSELCbits.ANSC3;
+#define SDA_OUT	ANSELCbits.ANSC4;
+</pre>
+
+For at initialisere I2C porten sættes output modstandene til 0 og tristate tilstand til 1, som tillader pullup modstandene at trække linierne høj.
+<pre style="padding: 10px; background-color: #e6ebf6; border-radius: 10px;">
+SDA = SCL = 1;
+SCL_OUT = SDA_OUT = 0;
+</pre>
+
+Vi skal også aktivere seriel forbindelsen og fortælle microcontrolleren hastigheden på I2C bussen - se evt. databladet <i>SSPx CONTROL REGISTER 1</i> s. 253-254:
+
+<pre style="padding: 10px; background-color: #e6ebf6; border-radius: 10px;">
+	// bit 5  Synchronous Serial Port Enable bit
+	// bit3-0 bestemmer måden hvorpå clocken defineres
+	//        1000 = I2C Master mode, clock = FOSC / (4 * (SSPxADD+1))
+    SSP1CON1 = 0x28;   //0b00101000;
+</pre>
+
+Pga. CodeConfigurator har vi fået en processor hastighed defineret ved _XTAL_FREQ
+
+Hvis vi laver lidt om på formlen fra før, kan vi sætte hastigheden uanset processorens hastighed og vi resetter kontrolregisteret.
+
+<pre style="padding: 10px; background-color: #e6ebf6; border-radius: 10px;">
+    uint8_t i2c_clock = (_XTAL_FREQ /(4 * 100000)) - 1; // Sætter hastigheden til 100K for I2C bussen
+	SSP1ADD = i2c_clock; // 0x9F ved 16MHz x 4 software pll
+	SSP1CON2 = 0; //Resetter kontrol register SSPxCON2: SSPx CONTROL REGISTER 2
+</pre>
+
+Vi vil gerne sikre os, at bussen ikke er optaget. Dette er ikke strengt nødvendigt.
+
+<pre style="padding: 10px; background-color: #e6ebf6; border-radius: 10px;">
+SSP1STAT
+bit 2 R/W: Read/Write bit information (I2C mode only)
+This bit holds the R/W bit information following the last address match. 
+This bit is only valid from the address match
+to the next Start bit, Stop bit, or not ACK bit.
+
+In I2C Master mode:
+1 = Transmit is in progress
+0 = Transmit is not in progress
+OR-ing this bit with SEN, RSEN, PEN, RCEN or ACKEN will indicate if the MSSPx is in Idle mode.
+
+void i2c_master_wait(void) {
+    while ( (SSP1STAT & 0x04) || (SSP1CON2 & 0x1F) ) {};
+}
+</pre>
+
+Vi skal bruge to funktioner til at sende start og stop tilstand. Læg mærke til, at man sætter tilstanden og venter på at samme bit bliver trukket lav igen som bekræftigelse på at det er gennemført.
+<pre style="padding: 10px; background-color: #e6ebf6; border-radius: 10px;">
+void i2c_master_start(void) {
+    SSP1CON2bits.SEN = 1;
+    while(SSP1CON2bits.SEN == 1){};
+}
+
+void i2c_master_stop(void) {
+    SSP1CON2bits.PEN = 1;
+    while(SSP1CON2bits.PEN == 1){};
+}
+</pre>
+
+Vi skal når vi læser og skriver være i stand til at sende Acknowledge og Not Acknowledge.
+
+Det gør vi med bit 5 og 4 i kontrol registeret:
+<pre style="padding: 10px; background-color: #e6ebf6; border-radius: 10px;">
+bit 5 	ACKDT: Acknowledge Data bit (in I2C mode only)
+		In Receive mode:
+		Value transmitted when the user initiates an Acknowledge sequence at the end of a receive
+		1 = Not Acknowledge
+		0 = Acknowledge
+bit 4 	ACKEN(1): Acknowledge Sequence Enable bit (in I2C Master mode only)
+		In Master Receive mode:
+		1 = Initiate Acknowledge sequence on SDAx and SCLx pins, and transmit ACKDT data bit.
+				Automatically cleared by hardware.
+		0 = Acknowledge sequence idle
+
+void i2c_master_ack(void) {
+    SSP1CON2bits.ACKDT = 0;
+    SSP1CON2bits.ACKEN = 1;
+    while(SSP1CON2bits.ACKEN == 1);
+}
+
+
+void i2c_master_nack(void) {
+    SSP1CON2bits.ACKDT = 1;
+    SSP1CON2bits.ACKEN = 1;
+    while(SSP1CON2bits.ACKEN == 1);
+}
+</pre>
+
+
+Specs på I2C bussen kan findes på Philips websiden: https://www.nxp.com/docs/en/user-guide/UM10204.pdf
+
+og Application Note på websiden: https://www.nxp.com/docs/en/application-note/AN10216.pdf
+
+Eller burde det kunne googles med "i2c bus specification".
+
+Endelig bliver SPI bussen refereret til TWI bus af bla. Atmel pga. Trademark omstændigheder. Standarden er den samme med undtagelse af broadcast og 10 bits adressering. Så man kan godt forvente, at TWI enheder fungerer på en I2C standard.
+
+
+*/

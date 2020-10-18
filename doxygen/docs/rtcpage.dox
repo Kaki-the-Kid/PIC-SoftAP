@@ -1,0 +1,13 @@
+/**
+@page RTC Information om Realtime Clock
+
+@section i2c_files Filer for I2C forbindelser
+- rtc.h
+- rtc.c
+
+<hr/>
+
+<img src="./assets/img/rtc_overview.png" />
+
+
+*/

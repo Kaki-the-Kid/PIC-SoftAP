@@ -1,0 +1,249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PIC SoftAP: PIC SoftAP Project</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">PIC SoftAP
+   &#160;<span id="projectnumber">1.00-development</span>
+   </div>
+   <div id="projectbrief">Styring af ESP01 modul fra PIC kreds - med alle mulighed understøttet</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Genereret af Doxygen 1.8.17 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',false,false,'search.php','Søg');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('index.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">PIC SoftAP Project </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h1><a class="anchor" id="intro_sec"></a>
+Resume</h1>
+<p>I forbindelse med lÃļsning af opgave i Embedded Controller skulle <br  />
+ vi lave en styring af ESP01 fra PIC kreds. Opgaven var, at vise en <br  />
+ webside med data fra PIC kredsen og datalogger, som var opbygget i <br  />
+ tidligere fag. Derfra kom ideen til, at lave en fuldt understÃļttelse af alle funktioner som ESP01 har. <br  />
+</p>
+<p>PIC kreds brugt i udvikling af projektet: PIC18F26K22</p>
+<p>ESP01 er firmware opdateret til [TODO]</p>
+<p>EEPROM henviser til ekstern eeprom</p>
+<p>copyright 2019-2020 Karsten 'Kaki' Reitan SÃļrensen<br  />
+ version 1.00-development</p>
+<ul>
+<li><a class="el" href="_i2_c.html">Information om I2C protokollen</a></li>
+<li><a class="el" href="_l_c_d.html">Information om den anvendte LCD</a></li>
+<li><a class="el" href="_e_e_p_r_o_m.html">Information om anvendte eksterne EEPROM</a></li>
+<li><a class="el" href="_r_t_c.html">Information om Realtime Clock</a></li>
+<li><a class="el" href="_s_p_i.html">Information om anvendte eksterne EEPROM</a></li>
+</ul>
+<hr  />
+<h1><a class="anchor" id="project_goals"></a>
+MÃĨl med projektet</h1>
+<p>[TODO] </p><h4>TCP/IP forbindelse</h4>
+<h4>SoftAP funktionen</h4>
+<h4>HTML side</h4>
+<h4>HÃĨndtering af GET request</h4>
+<ul>
+<li>TÃĶnde og slukke lysdiode pÃĨ IO pin</li>
+</ul>
+<hr  />
+<h1><a class="anchor" id="project_structure"></a>
+Projekt struktur</h1>
+<ul>
+<li>Header Files<ul>
+<li>MCC Generated Files<ul>
+<li><a class="el" href="device__config_8h.html">device_config.h</a></li>
+<li><a class="el" href="eusart1_8h.html">eusart1.h</a></li>
+<li><a class="el" href="eusart2_8h.html">eusart2.h</a></li>
+<li><a class="el" href="interrupt__manager_8h.html">interrupt_manager.h</a></li>
+<li><a class="el" href="mcc_8h.html">mcc.h</a></li>
+<li><a class="el" href="pin__manager_8h.html">pin_manager.h</a></li>
+<li><a class="el" href="tmr2_8h.html">tmr2.h</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Important Files<ul>
+<li>Makefile</li>
+<li>MyConfig.mc3</li>
+</ul>
+</li>
+<li>lib_eeprom<ul>
+<li><a class="el" href="eeprom_8c.html">eeprom.c</a></li>
+<li><a class="el" href="eeprom_8h.html" title=": EEPROM styring">eeprom.h</a></li>
+<li>eeprom_template.html</li>
+</ul>
+</li>
+<li>lib_esp<ul>
+<li><a class="el" href="esp8266_8c.html">esp8266.c</a></li>
+<li><a class="el" href="esp8266_8h.html">esp8266.h</a></li>
+<li><a class="el" href="esptouch_8h.html">esptouch.h</a></li>
+<li><a class="el" href="tcpip_8c.html">tcpip.c</a></li>
+<li><a class="el" href="tcpip_8h.html">tcpip.h</a></li>
+<li><a class="el" href="wps_8h.html">wps.h</a></li>
+</ul>
+</li>
+<li>lib_i2c<ul>
+<li><a class="el" href="i2c_8c.html">i2c.c</a></li>
+<li><a class="el" href="i2c_8h.html">i2c.h</a></li>
+</ul>
+</li>
+<li>lib_lcd<ul>
+<li><a class="el" href="lcd_8c.html">lcd.c</a></li>
+<li><a class="el" href="lcd_8h.html">lcd.h</a></li>
+</ul>
+</li>
+<li>lib_rtc<ul>
+<li><a class="el" href="rtc_8c.html">rtc.c</a></li>
+<li><a class="el" href="rtc_8h.html">rtc.h</a></li>
+</ul>
+</li>
+<li>lib_spi<ul>
+<li><a class="el" href="spi_8c.html">spi.c</a></li>
+<li><a class="el" href="spi_8h.html">spi.h</a></li>
+</ul>
+</li>
+<li>Linker Files</li>
+<li>Source Files<ul>
+<li><a class="el" href="main_8c.html">main.c</a></li>
+<li>MCC Generated Files<ul>
+<li><a class="el" href="device__config_8c.html">device_config.c</a></li>
+<li><a class="el" href="eusart1_8c.html">eusart1.c</a></li>
+<li><a class="el" href="eusart2_8c.html">eusart2.c</a></li>
+<li><a class="el" href="interrupt__manager_8c.html">interrupt_manager.c</a></li>
+<li><a class="el" href="mcc_8c.html">mcc.c</a></li>
+<li><a class="el" href="pin__manager_8c.html">pin_manager.c</a></li>
+<li><a class="el" href="tmr2_8c.html">tmr2.c</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr  />
+<h1><a class="anchor" id="file_structure"></a>
+Fil struktur</h1>
+<ul>
+<li><em>build</em><br  />
+ FIler genereret af compiler</li>
+<li><em>datablade</em><br  />
+ Datablade for den anvendte PIC kreds, ESP01 og andre mere eller mindre relevante dokumenter<br  />
+ <em>ESP01</em> - <br  />
+ <em>MRF89XAM8A</em> - mappe til fremtidig udvidelse til LORA modul</li>
+<li><em>debug</em><br  />
+ Filer genereret af compiler</li>
+<li><em>dist</em><br  />
+ Filer generet af compiler</li>
+<li><em>docs</em><br  />
+ <em><a class="el" href="mainpage_8dox.html">mainpage.dox</a></em> bliver brugt af Doxygen til at generere forsiden pÃĨ projektet</li>
+<li><em>doxygen</em><br  />
+ Indeholder den overordnede dokumentation af projektet i HTML version. Genreret med Doxygen</li>
+<li><em>mcc_generated_files</em><br  />
+ Filer genereret af CodeConfigurator</li>
+<li><em>nbproject</em><br  />
+ Filer genereret af compiler</li>
+<li><em>powerpoints</em><br  />
+ Mappe lavet til at holde produceret undervisnings materiale</li>
+</ul>
+<hr  />
+<h1><a class="anchor" id="project_hardware"></a>
+Hardware</h1>
+<p>Diagram over anvendt system</p>
+<p><img src="./assets/img/schematic.png" alt="" class="inline"/></p>
+<hr  />
+<h1><a class="anchor" id="project_tools"></a>
+VÃĶrktÃļjer</h1>
+<ul>
+<li>MPLAB X IDE v5.25<br  />
+ IDE fra Microchips baseret pÃĨ Netbeans. Indeholder alle biblioteker til de forskellige PIC kredse.<br  />
+ Webside: <a href="https://www.microchip.com/mplab/mplab-x-ide">https://www.microchip.com/mplab/mplab-x-ide</a></li>
+<li>Microchip Code Configurator<br  />
+ HjÃĶlpevÃĶrktÃļj til MPLABS IDE, som gÃļr det nemmere, at konfigurerer de forskellige dele af PIC kredsens opsÃĶtning.</li>
+<li>Microchip XC8 compiler v2.10<br  />
+ Webside: <a href="https://www.microchip.com/mplab/compilers">https://www.microchip.com/mplab/compilers</a></li>
+<li>Doxygen v1.8.17<br  />
+ Kan implementeres som plugin i MPLabs / NetBeans IDE.<br  />
+ Fordi jeg har skrevet stÃļrstedelen af kommentarer pÃĨ dansk skal DoxyWizard instilles til <em>Windows-1252</em> formattering af teksten. I IDE kan man bruge UTF-8 som normalt.<br  />
+ DoxÃ―gen dokumentation: <a href="https://http://www.doxygen.nl/index.html">https://http://www.doxygen.nl/index.html</a></li>
+</ul>
+<hr  />
+<h1><a class="anchor" id="project_other_text"></a>
+Kilder, inspiration og lÃĶring</h1>
+<ul>
+<li>Deepblue: UART | Serial Communication With PIC Microcontrollers Tutorial<br  />
+ Side som indeholder et vÃĶld af information om seriel kommunikation.<br  />
+ Webside: <a href="https://deepbluembedded.com/uart-pic-microcontroller-tutorial/">https://deepbluembedded.com/uart-pic-microcontroller-tutorial/</a></li>
+</ul>
+<hr  />
+<h1><a class="anchor" id="project_license"></a>
+Licens</h1>
+<p>This program is free software; you can redistribute it and/or modify<br  />
+ it under the terms of the GNU General Public License as published by<br  />
+ the Free Software Foundation; either version 2 of the License, or<br  />
+ (at your option) any later version.</p>
+<p>This program is distributed in the hope that it will be useful,<br  />
+ but WITHOUT ANY WARRANTY; without even the implied warranty of<br  />
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the<br  />
+ GNU General Public License for more details.</p>
+<p>You should have received a copy of the GNU General Public License<br  />
+ along with this program; if not, write to the Free Software<br  />
+ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA. </p>
+</div></div><!-- PageDoc -->
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Genereret af
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

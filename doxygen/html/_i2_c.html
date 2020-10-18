@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PIC SoftAP: Information om I2C protokollen</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">PIC SoftAP
+   &#160;<span id="projectnumber">1.00-development</span>
+   </div>
+   <div id="projectbrief">Styring af ESP01 modul fra PIC kreds - med alle mulighed understøttet</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Genereret af Doxygen 1.8.17 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',false,false,'search.php','Søg');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('_i2_c.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">Information om I2C protokollen </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h1><a class="anchor" id="i2c_files"></a>
+Filer for I2C forbindelser</h1>
+<ul>
+<li><a class="el" href="i2c_8h.html">i2c.h</a></li>
+<li><a class="el" href="i2c_8c.html">i2c.c</a></li>
+</ul>
+<hr  />
+<p>Det kan vÃĶre lidt svÃĶrt, at komme igang med at bruge I2C busssen fÃļrste gang. Jeg vil her prÃļve, at komme med lidt mere uddybende forklaringer pÃĨ hvordan bussen fungerer, med kode eksempler.</p>
+<p>Lad os fÃļrst kigge overordnet pÃĨ I2C bussen og prÃļve at afmystificere den.</p>
+<h2>Den fysiske del af I2C bussen</h2>
+<p>Der er kun 2 forbindelser kaldet <b>S</b>erial <b>CL</b>ock og <b>S</b>erial <b>DA</b>ta. SCL er clock linien som synkronisrer alt data der overfÃļres over the I2C bussen. SDA er selve data linien, hvor data overfÃļres.</p>
+<p>De to linier er de samme for hele opstillingen og forbundet til alle enhder pÃĨ I2C bussen.</p>
+<p>Derudover forbindes til stel eller 0 volt og enhederne skal forbindes 5 volt som ikke behÃļver, at komme fra samme spÃĶndingskilde.</p>
+<p>Visse enheder arbejder pÃĨ 3,3 Volt, sÃĨ man skal vÃĶre opmÃĶrksom pÃĨ at have det samme spÃĶndingsniveau pÃĨ de logiske linier uanset hvad forsyningssyningen til enheden er. Det kan vÃĶre nÃļdvendigt, at bruge en 2-vejs niveau skifter.</p>
+<p>BÃĨde SCL og SDA er "open drain". Det betyder, at chippen kan drive dens out lav, men den kan ikke drive den hÃļj. For at linien skal kunne drives hÃļj er det nÃļdvendigt at indsÃĶtte pullup modstande pÃĨ 5v spÃĶndingsforsyningen. Der skal vÃĶre en modstand forbundet fra SCL til 5v og en anden fra SDA til 5V. Der skal kun bruges et sÃĶt modstande for hele opstillingen og altsÃĨ ikke for hver enhed.</p>
+<p><img src="./assets/img/i2ca.GIF" alt="" class="inline"/></p>
+<p>VÃĶrdien pÃĨ modstandene er ikke sÃĨ kritisk. Man ser alt fra 1,8Kohm til 47KOhm. 1,8KOhm, 4,7KOhm og 10KOhm er almindeligt brugt, men alt indenfor det spand skulle virke OK. Man kan referere til databladet for den microcontroller man bruger og det afhÃĶnger ogsÃĨ af hastigheden pÃĨ bussen. Hvis modstandene ikke sÃĶttes pÃĨ vil linierne altid vÃĶre lav - nÃĶr 0 volt - og I2C bussen vil ikke virke.</p>
+<h2>Hastighed pÃĨ bussen</h2>
+<p>Standard clock (SCL) hastighed for I2C er op til 100KHz. Philips definerer hÃļjere hastigheder: <em>Fast mode</em>, som er op til 400KHz og <em>High Speed mode</em> som er op til 3.4MHz.</p>
+<p>NÃĨr man laver en opstilling kan man starte med de 100KHz og nÃĨr det virker kan prÃļve med en hÃļjere hastighed. Der er dog som regel ikke brug for hÃļjere hastigheder end standarden, eftersom de fleste delays er internt i enhederne pÃĨ I2C busssen, sÃĨ 100KHz er nok til langt de fleste projekter.</p>
+<h2>Master og Slave enheder</h2>
+<p>Enheder pÃĨ I2C bussen har roller som enten master eller slave. Master enheden er den som driver SCL clock. Slave enheder responderer til Master. En slave enhed kan ikke igangsÃĶtte overfÃļrsler over bussen, det er kun muligt for en Master. Der kan vÃĶre, og det der som regel, flere slave enheder i en opstilling. Men der som regel kun en master enhed. Det er muligt, at have flere Master enheder, men det er udsÃĶdvanligt og ikke noget vi kigger pÃĨ her. Sagt pÃĨ anden mÃĨde kan bÃĨde Master og Slave sende data over I2C bussen, men det er altid kontrolleret af Master enhenden alene.</p>
+<h2>I2C fysisk protokol</h2>
+<p>NÃĨr controlleren som Master skal komminikerer med en slave enhed begynder den en start sekvens pÃĨ I2C bussen. En start sekvens er en af de to specielle sekvenser pÃĨ I2C den anden er logisk nok en stop sekvens. Start og stop sekvenserne er specielle i det de er de eneste hvor Datalinien er tilladt at skifte mens SCL (clock linien) er hÃļj.</p>
+<p>NÃĨr data sendes skal SDA holdes stabil og ikke skifte mens SCL er hÃļj. Start og stop sekvenserne markerer begundelsen og slutningen af en transaktion med slave enheden.</p>
+<p><img src="./assets/img/i2cb.GIF" alt="" class="inline"/></p>
+<p>Data is transferred in sequences of 8 bits. The bits are placed on the SDA line starting with the MSB (Most Significant Bit). The SCL line is then pulsed high, then low. Remember that the chip cannot really drive the line high, it simply "lets go" of it and the resistor actually pulls it high. For every 8 bits transferred, the device receiving the data sends back an acknowledge bit, so there are actually 9 SCL clock pulses to transfer each 8 bit byte of data. If the receiving device sends back a low ACK bit, then it has received the data and is ready to accept another byte. If it sends back a high then it is indicating it cannot accept any further data and the master should terminate the transfer by sending a stop sequence.</p>
+<p><img src="./assets/img/i2cc.GIF" alt="" class="inline"/></p>
+<h2>I2C adressering</h2>
+<p>Alle I2C adresser er enten 7 eller 10 bits. Brugen af 10 bit adressering er sjÃĶlden og ikke beskrevet her. En begrÃĶnsning pÃĨ 7 bit giver mulighed for 128 enheder pÃĨ I2C bussen (vÃĶrdier fra 0-127). Afsendelse af data sker i bytes og den sidste bit bliver brugt til at indikere om Master enheden Ãļnsker, at lÃĶse fra eller skrive til slave enheden.</p><ul>
+<li>BitvÃĶrdi pÃĨ 0, Masteren Ãļnsker at skrive til slave enheden.</li>
+<li>BitvÃĶrdi pÃĨ 1, Masteren Ãļnsker at lÃĶse fra slave enheden.</li>
+</ul>
+<p>7 bit adressen placeres Ãļverst i byten og Read/Write (R/W) bit er i LSB (Least Significant Bit).</p>
+<p><img src="./assets/img/i2cd.GIF" alt="" class="inline"/></p>
+<p>Placeringen af 7 bit adressen i de Ãļvre 7 bits af byten kan vÃĶre en kilde til forvirring for nybegynderen. Det betyder, at nÃĨr man skriver til adresse 21, sender man faktisk vÃĶrdien 42 - 21 flyttet 1 bit til venstre. Det giver lidt mere mening, nÃĨr man kigger pÃĨ de enkelte bits inden byte vÃĶrdien.</p>
+<p>Lad os tage de to tilstande for adresse 21:</p>
+<p>Decimal vÃĶrdi: 21 = hex vÃĶrdi: 0x15 = binÃĶr vÃĶrdi: 0010101âŽb</p>
+<p>Vi flytter vÃĶrdien 1 bit mod venstre: 00101010âŽb = hex: 0x2AâŽ = decimal: 42</p>
+<p>SÃĨ kan man plusser vÃĶrdierne passende for den Ãļsnskede retning. I kode vil det bliver</p>
+<p><code style="padding: 10px; background-color: #e6ebf6;"> uint8_t eeprom_addr = 0b1010000; // Adresse 0x15 <br  />
+ Read from eeprom slave unit uint8_t read_start_byte = (eeprom_addr &lt;&lt; 1) + 1 // Start Byte: 0b00101011âŽ = 0x2B = 43</code></p>
+<p><code style="padding: 10px; background-color: #e6ebf6;">Write to eeprom uint8_t write_start_byte = (eeprom_addr &lt;&lt; 1) + 0 // Start Byte: 0b00101010âŽ = 0x2A = 42 </code></p>
+<h2>I2C software protokol</h2>
+<p>Den fÃļrste ting en Master gÃļr, er at sende en start sekvens. Det gÃļr alle slave enheder pÃĨ bus opmÃĶrksomme pÃĨ at der er startet en transaktion og at de skal lytte efter om den er til dem. DernÃĶst sender Master adressen pÃĨ den Ãļnskede enhed, sammen med lÃĶse/skrive tilstanden. Slave som matcher adressen vil fortsÃĶtte med transaktionen, alle andre vil ignorere resten af denne transaktion og vente pÃĨ den nÃĶste. Alt efter slavens interne opbygning, skal Master enheden sende den interne adresse, eller et register nummer i slaven, som der Ãļnskes at skrive til. Nogle enheder sender bare vÃĶrdier ud og andre skal pinges for at sÃĶtte f.eks. en mÃĨling igang. Du kan lÃĶse den information i databladet for den givne enhed.</p>
+<p>Efter at have sendt I2C adressen og Slavens interne register adresse, kan Master enheden nu sende data bytes. Master enheden kan fortsÃĶtte med at sende data bytes til Slaven og de bliver normalt placeret fortlÃļbende fra det angivne registers fordi slaven oftest selv vil forÃļge den interne register adresse efter hver byte. NÃĨr master er fÃĶrdig med at skrive data til slaven, sender den en stop sekvens som afslutter transaktionen. NÃĨr Master skriver en byte venter den pÃĨ Acnowledge fra Slave enheden.</p>
+<p>SÃĨ for at skrive til en slave enhed:</p>
+<ol type="1">
+<li>Send en start sekvens</li>
+<li>Send I2C adressen pÃĨ slaven med R/W bit = 0</li>
+<li>Send evt, det interne register som du Ãļnsker, at skrive til</li>
+<li>Send data byte(s)</li>
+<li>Vent pÃĨ Acknowledge for modtaget data til slaven</li>
+<li>Send stop sekvensen.</li>
+</ol>
+<p>LÃĶse fra Slave enheden Er en lille smule mere kompliceret, men ikke meget. FÃļr du lÃĶser skal du fortÃĶlle slaven, fra hvilket af dets interne adresser du Ãļnsker at lÃĶse fra. SÃĨ en lÃĶsning starter faktisk ofte med en skrivning. This is the same as when you want to write to it: You send the start sequence, the I2C address of the slave with the R/W bit low (even address) and the internal register number you want to write to. Now you send another start sequence (sometimes called a restart) and the I2C address again - this time with the read bit set. You then read as many data bytes as you wish and terminate the transaction with a stop sequence. So to read the compass bearing as a byte from the CMPS03 module:</p><ol type="1">
+<li>Send en start sekvencs</li>
+<li>Send I2C adressen for den pÃĨgÃĶldende slave enhed med R/W bit = 0</li>
+<li>Send den interne adresse af det Ãļnskede slave register</li>
+<li>Send en ny start seqkvens evt. som repeated start sekvens</li>
+<li>Send I2C adressen pÃĨ slave enheden med R/W bit = 1</li>
+<li>LÃĶs data byte(s) fra slave enheden</li>
+<li>Send Acknowledge for hver modtaget byte - Not Acknowledge for den allersidste byte</li>
+<li>Send stop sekvensen</li>
+</ol>
+<p>Bit sekvensen kan visualiseres som:</p>
+<p><img src="./assets/img/i2c.GIF" alt="" class="inline"/></p>
+<p>Wait a moment That's almost it for simple I2C communications, but there is one more complication. When the master is reading from the slave, its the slave that places the data on the SDA line, but its the master that controls the clock. What if the slave is not ready to send the data! With devices such as EEPROMs this is not a problem, but when the slave device is actually a microprocessor with other things to do, it can be a problem. The microprocessor on the slave device will need to go to an interrupt routine, save its working registers, find out what address the master wants to read from, get the data and place it in its transmission register. This can take many uS to happen, meanwhile the master is blissfully sending out clock pulses on the SCL line that the slave cannot respond to. The I2C protocol provides a solution to this: the slave is allowed to hold the SCL line low! This is called clock stretching. When the slave gets the read command from the master it holds the clock line low. The microprocessor then gets the requested data, places it in the transmission register and releases the clock line allowing the pull-up resistor to finally pull it high. From the masters point of view, it will issue the first clock pulse of the read by making SCL high and then check to see if it really has gone high. If its still low then its the slave that holding it low and the master should wait until it goes high before continuing. Luckily the hardware I2C ports on most microprocessors will handle this automatically.</p>
+<p>Sometimes however, the master I2C is just a collection of subroutines and there are a few implementations out there that completely ignore clock stretching. They work with things like EEPROM's but not with microprocessor slaves that use clock stretching. The result is that erroneous data is read from the slave. Beware!</p>
+<h2>Eksempel: Master kode</h2>
+<p>FÃļlgende eksempler viser hvordan man implementerer software for I2C master, herunder tolerance for clock stretching. Det er skrevet i C for PIC processoren, men skulle kunne tilrettes de fleste processor med mindre ÃĶndringer til I/O pin definitionerne. Registrene er baseret pÃĨ den anvendte kreds PIC18F26K22 i MPLAB med CodeConfigurator.</p>
+<pre style="padding: 10px; background-color: #e6ebf6; border-radius: 10px;">
+#define SCL     TRISCbits.RC3;
+#define SDA     TRISCbits.RC4;<br  />
+
+#define SCL_OUT ANSELCbits.ANSC3;
+#define SDA_OUT ANSELCbits.ANSC4;
+</pre><p>For at initialisere I2C porten sÃĶttes output modstandene til 0 og tristate tilstand til 1, som tillader pullup modstandene at trÃĶkke linierne hÃļj. </p><pre style="padding: 10px; background-color: #e6ebf6; border-radius: 10px;">
+SDA = SCL = 1;
+SCL_OUT = SDA_OUT = 0;
+</pre><p>Vi skal ogsÃĨ aktivere seriel forbindelsen og fortÃĶlle microcontrolleren hastigheden pÃĨ I2C bussen - se evt. databladet <em>SSPx CONTROL REGISTER 1</em> s. 253-254:</p>
+<pre style="padding: 10px; background-color: #e6ebf6; border-radius: 10px;">
+bit 5  Synchronous Serial Port Enable bit
+bit3-0 bestemmer mÃĨden hvorpÃĨ clocken defineres
+1000 = I2C Master mode, clock = FOSC / (4 * (SSPxADD+1))
+    SSP1CON1 = 0x28;   //0b00101000;
+</pre><p>Pga. CodeConfigurator har vi fÃĨet en processor hastighed defineret ved _XTAL_FREQ</p>
+<p>Hvis vi laver lidt om pÃĨ formlen fra fÃļr, kan vi sÃĶtte hastigheden uanset processorens hastighed og vi resetter kontrolregisteret.</p>
+<pre style="padding: 10px; background-color: #e6ebf6; border-radius: 10px;">
+    uint8_t i2c_clock = (_XTAL_FREQ /(4 * 100000)) - 1; // SÃĶtter hastigheden til 100K for I2C bussen
+    SSP1ADD = i2c_clock; // 0x9F ved 16MHz x 4 software pll
+    SSP1CON2 = 0; //Resetter kontrol register SSPxCON2: SSPx CONTROL REGISTER 2
+</pre><p>Vi vil gerne sikre os, at bussen ikke er optaget. Dette er ikke strengt nÃļdvendigt.</p>
+<pre style="padding: 10px; background-color: #e6ebf6; border-radius: 10px;">
+SSP1STAT
+bit 2 R/W: Read/Write bit information (I2C mode only)
+This bit holds the R/W bit information following the last address match. 
+This bit is only valid from the address match
+to the next Start bit, Stop bit, or not ACK bit.</pre><pre style="padding: 10px; background-color: #e6ebf6; border-radius: 10px;">In I2C Master mode:
+1 = Transmit is in progress
+0 = Transmit is not in progress
+OR-ing this bit with SEN, RSEN, PEN, RCEN or ACKEN will indicate if the MSSPx is in Idle mode.</pre><pre style="padding: 10px; background-color: #e6ebf6; border-radius: 10px;">void <a class="el" href="i2c_8h.html#adb646b67ce754741a06e63ea28d05259">i2c_master_wait(void)</a> {
+    while ( (SSP1STAT &amp; 0x04) || (SSP1CON2 &amp; 0x1F) ) {};
+}
+</pre><p>Vi skal bruge to funktioner til at sende start og stop tilstand. LÃĶg mÃĶrke til, at man sÃĶtter tilstanden og venter pÃĨ at samme bit bliver trukket lav igen som bekrÃĶftigelse pÃĨ at det er gennemfÃļrt. </p><pre style="padding: 10px; background-color: #e6ebf6; border-radius: 10px;">
+void <a class="el" href="i2c_8h.html#a02d93c2bcdbbee7a791b77b0cf12467f">i2c_master_start(void)</a> {
+    SSP1CON2bits.SEN = 1;
+    while(SSP1CON2bits.SEN == 1){};
+}</pre><pre style="padding: 10px; background-color: #e6ebf6; border-radius: 10px;">void <a class="el" href="i2c_8h.html#a4524baa32fdd90e664342c610dc1d177">i2c_master_stop(void)</a> {
+    SSP1CON2bits.PEN = 1;
+    while(SSP1CON2bits.PEN == 1){};
+}
+</pre><p>Vi skal nÃĨr vi lÃĶser og skriver vÃĶre i stand til at sende Acknowledge og Not Acknowledge.</p>
+<p>Det gÃļr vi med bit 5 og 4 i kontrol registeret: </p><pre style="padding: 10px; background-color: #e6ebf6; border-radius: 10px;">
+bit 5   ACKDT: Acknowledge Data bit (in I2C mode only)
+        In Receive mode:
+        Value transmitted when the user initiates an Acknowledge sequence at the end of a receive
+        1 = Not Acknowledge
+        0 = Acknowledge
+bit 4   ACKEN(1): Acknowledge Sequence Enable bit (in I2C Master mode only)
+        In Master Receive mode:
+        1 = Initiate Acknowledge sequence on SDAx and SCLx pins, and transmit ACKDT data bit.
+                Automatically cleared by hardware.
+        0 = Acknowledge sequence idle</pre><pre style="padding: 10px; background-color: #e6ebf6; border-radius: 10px;">void <a class="el" href="i2c_8h.html#a6caad88441987f83268d336d4322d07d">i2c_master_ack(void)</a> {
+    SSP1CON2bits.ACKDT = 0;
+    SSP1CON2bits.ACKEN = 1;
+    while(SSP1CON2bits.ACKEN == 1);
+}</pre><pre style="padding: 10px; background-color: #e6ebf6; border-radius: 10px;">void <a class="el" href="i2c_8h.html#ae60d3dfb3e2bcfacd1bbca9debd6e35c">i2c_master_nack(void)</a> {
+    SSP1CON2bits.ACKDT = 1;
+    SSP1CON2bits.ACKEN = 1;
+    while(SSP1CON2bits.ACKEN == 1);
+}
+</pre><p>Specs pÃĨ I2C bussen kan findes pÃĨ Philips websiden: <a href="https://www.nxp.com/docs/en/user-guide/UM10204.pdf">https://www.nxp.com/docs/en/user-guide/UM10204.pdf</a></p>
+<p>og Application Note pÃĨ websiden: <a href="https://www.nxp.com/docs/en/application-note/AN10216.pdf">https://www.nxp.com/docs/en/application-note/AN10216.pdf</a></p>
+<p>Eller burde det kunne googles med "i2c bus specification".</p>
+<p>Endelig bliver SPI bussen refereret til TWI bus af bla. Atmel pga. Trademark omstÃĶndigheder. Standarden er den samme med undtagelse af broadcast og 10 bits adressering. SÃĨ man kan godt forvente, at TWI enheder fungerer pÃĨ en I2C standard. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="index.html">PIC SoftAP Project</a></li>
+    <li class="footer">Genereret af
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

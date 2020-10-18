@@ -1,0 +1,168 @@
+/**
+@mainpage PIC SoftAP Project
+@section intro_sec Resume
+I forbindelse med løsning af opgave i Embedded  Controller skulle    
+vi lave en styring af ESP01 fra PIC kreds. Opgaven var, at vise en   
+webside med data fra PIC kredsen og datalogger, som var opbygget i   
+tidligere fag. Derfra kom ideen til, at lave en fuldt understøttelse 
+af alle funktioner som ESP01 har.                                    
+
+PIC kreds brugt i udvikling af projektet: PIC18F26K22
+
+ESP01 er firmware opdateret til [TODO]
+
+EEPROM henviser til ekstern eeprom
+
+copyright 2019-2020 Karsten 'Kaki' Reitan Sørensen<br/>
+version 1.00-development
+
+- @subpage I2C
+- @subpage LCD
+- @subpage EEPROM
+- @subpage RTC
+- @subpage SPI
+
+<hr/>
+
+@section project_goals Mål med projektet
+[TODO]
+<h4>TCP/IP forbindelse</h4>
+<h4>SoftAP funktionen</h4>
+<h4>HTML side</h4>
+<h4>Håndtering af GET request</h4>
+- Tænde og slukke lysdiode på IO pin
+
+<hr/>
+
+@section project_structure Projekt struktur
+- Header Files
+*- MCC Generated Files
+* - device_config.h
+* - eusart1.h
+* - eusart2.h
+* - interrupt_manager.h
+* - mcc.h
+* - pin_manager.h
+* - tmr2.h
+
+- Important Files
+*- Makefile
+*- MyConfig.mc3
+
+- lib_eeprom
+*- eeprom.c
+*- eeprom.h
+*- eeprom_template.html
+
+- lib_esp
+*- esp8266.c
+*- esp8266.h
+*- esptouch.h
+*- tcpip.c
+*- tcpip.h
+*- wps.h
+
+- lib_i2c
+*- i2c.c
+*- i2c.h
+
+- lib_lcd
+*- lcd.c
+*- lcd.h
+
+- lib_rtc
+*- rtc.c
+*- rtc.h
+
+- lib_spi
+*- spi.c
+*- spi.h
+
+- Linker Files
+
+- Source Files
+*- main.c
+*- MCC Generated Files
+**- device_config.c
+**- eusart1.c
+**- eusart2.c
+**- interrupt_manager.c
+**- mcc.c
+**- pin_manager.c
+**- tmr2.c
+
+<hr/>
+
+@section file_structure Fil struktur
+- <i>build</i><br/>
+FIler genereret af compiler
+- <i>datablade</i><br/>
+Datablade for den anvendte PIC kreds, ESP01 og andre mere eller mindre relevante dokumenter<br/>
+<i>ESP01</i> - <br/>
+<i>MRF89XAM8A</i> - mappe til fremtidig udvidelse til LORA modul
+- <i>debug</i><br/>
+Filer genereret af compiler
+- <i>dist</i><br/>
+Filer generet af compiler
+- <i>docs</i><br/>
+<i>mainpage.dox</i> bliver brugt af Doxygen til at generere forsiden på projektet
+- <i>doxygen</i><br/>
+Indeholder den overordnede dokumentation af projektet i HTML version. Genreret med Doxygen
+- <i>mcc_generated_files</i><br/>
+Filer genereret af CodeConfigurator
+-  <i>nbproject</i><br/>
+Filer genereret af compiler
+- <i>powerpoints</i><br/>
+Mappe lavet til at holde produceret undervisnings materiale
+
+<hr/>
+
+@section project_hardware Hardware
+Diagram over anvendt system
+
+<img src="./assets/img/schematic.png" />
+
+<hr/>
+
+@section project_tools Værktøjer
+- MPLAB X IDE v5.25<br/>
+IDE fra Microchips baseret på Netbeans. Indeholder alle biblioteker til de forskellige
+PIC kredse.<br/>
+Webside: https://www.microchip.com/mplab/mplab-x-ide
+- Microchip Code Configurator<br/>
+Hjælpeværktøj til MPLABS IDE, som gør det nemmere, at konfigurerer de forskellige dele
+af PIC kredsens opsætning.
+- Microchip XC8 compiler v2.10<br/>
+Webside: https://www.microchip.com/mplab/compilers
+- Doxygen v1.8.17<br/>
+Kan implementeres som plugin i MPLabs / NetBeans IDE.<br/>
+Fordi jeg har skrevet størstedelen af kommentarer på dansk skal DoxyWizard instilles til 
+<i>Windows-1252</i> formattering af teksten. I IDE kan man bruge UTF-8 som normalt.<br/>
+Doxýgen dokumentation: https://http://www.doxygen.nl/index.html
+
+<hr/>
+
+@section project_other_text Kilder, inspiration og læring
+- Deepblue: UART | Serial Communication With PIC Microcontrollers Tutorial<br/>
+Side som indeholder et væld af information om seriel kommunikation.<br/>
+Webside: https://deepbluembedded.com/uart-pic-microcontroller-tutorial/
+
+<hr/>
+
+@section project_license Licens
+This program is free software; you can redistribute it and/or modify<br/>
+it under the terms of the GNU General Public License as published by<br/>
+the Free Software Foundation; either version 2 of the License, or<br/>
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,<br/>
+but WITHOUT ANY WARRANTY; without even the implied warranty of<br/>
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the<br/>
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License<br/>
+along with this program; if not, write to the Free Software<br/>
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+
+\example main.c
+*/

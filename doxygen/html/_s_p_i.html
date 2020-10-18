@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PIC SoftAP: Information om anvendte eksterne EEPROM</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">PIC SoftAP
+   &#160;<span id="projectnumber">1.00-development</span>
+   </div>
+   <div id="projectbrief">Styring af ESP01 modul fra PIC kreds - med alle mulighed understøttet</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Genereret af Doxygen 1.8.17 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',false,false,'search.php','Søg');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('_s_p_i.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">Information om anvendte eksterne EEPROM </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h1><a class="anchor" id="spi_files"></a>
+Filer for SPI forbindelse</h1>
+<ul>
+<li><a class="el" href="spi_8h.html">spi.h</a></li>
+<li><a class="el" href="spi_8c.html">spi.c</a></li>
+</ul>
+<hr  />
+<p>SPI is a synchronous serial connection implemented by one clock line, one data line in each direction and an optional chip- select signal. In its most simple form, only one data line (either input or output) is present. Unlike the I2C bus, SPI is based on push/pull technology which allows running at much higher speeds than I2C. An SPI interface is not exactly a bus since there is no way to address different devices by an address. Data is sent synchronized by the clock line which is driven by the master. Using a different chip-select line for each device it is, however, possible to share wires between components. Speed and simplicity are the advantages of SPI and therefore, it is popular for applications like EEPROM/Flash programming, display control, sensor data acquisition etc.</p>
+<p>SPI Overview What is SPI? Serial Peripheral Interface (SPI) is a 4-wire full-duplex synchronous serial data link: â SCLK: Serial Clock â MOSI: Master Out Slave In - Data from Master to Slave â MISO: Master In Slave Out - Data from Slave to Master â SS: Slave Select Originally developed by Motorola Used for connecting peripherals to each other and to microprocessors Shift register that serially transmits data to other SPI devices Actually a â3 + nâ wire interface with n = number of devices Only one master active at a time Various Speed transfers (function of the system clock)</p>
+<p>The Serial Peripheral Interface (SPI) circuit is a synchronous serial data link that is standard across many Motorola microprocessors and other peripheral chips. It provides support for a high bandwidth (1 mega baud) network connection amongst CPUs and other devices supporting the SPI.</p>
+<p>SPI - How are the connected devices recognized?</p>
+<p>Simple transfer scheme, 8 or 16 bits Allows many devices to use SPI through the addition of a shift register Full duplex communications Number of wires proportional to the number of devices in the bus</p>
+<p>The SPI is essentially a âthree-wire plus slave selectsâ serial bus for eight or sixteen bit data transfer applications. The three wires carry information between devices connected to the bus. Each device on the bus acts simultaneously as a transmitter and receiver. Two of the three lines transfer data (one line for each direction) and the third is a serial clock. Some devices may be only transmitters while others only receivers. Generally, a device that transmits usually possesses the capability to receive data also. An SPI display is an example of a receive-only device while EEPROM is a receiver and transmit device. The devices connected to the SPI bus may be classified as Master or Slave devices. A master device initiates an information transfer on the bus and generates clock and control signals. A slave device is controlled by the master through a slave select (chip enable) line and is active only when selected. Generally, a dedicated select line is required for each slave device. The same device can possess the functionality of a master and a slave but at any point of time, only one master can control the bus in a multi-master mode configuration. Any slave device that is not selected must release (make it high impedance) the slave output line. The SPI bus employs a simple shift register data transfer scheme: Data is clocked out of and into the active devices in a first-in, first-out fashion. It is in this manner that SPI devices transmit and receive in full duplex mode. All lines on the SPI bus are unidirectional: The signal on the clock line (SCLK) is generated by the master and is primarily used to synchronize data transfer. The master-out, slave-in (MOSI) line carries data from the master to the slave and the master-in, slave-out (MISO) line carries data from the slave to the master. Each slave device is selected by the master via individual select lines. Information on the SPI bus can be transferred at a rate of near zero bits per second to 1 Mbits per second. Data transfer is usually performed in eight/sixteen bit blocks. All data transfer is</p>
+<p>synchronized by the serial clock (SCLK). One bit of data is transferred for each clock cycle. Four clock modes are defined for the SPI bus by the value of the clock polarity and the clock phase bits. The clock polarity determines the level of the clock idle state and the clock phase determines which clock edge places new data on the bus. Any hardware device capable of operation in more than one mode will have some method of selecting the value of these bits.</p>
+<p>There is no official specification for the SPI bus. It is necessary to consult the data sheets of the devices. Use to connect integrated circuits on a circuit board. Important parameters are the permitted clock frequencies and the type of valid transitions. Master - Slave ( 1 or more slaves) configuration. The master is usually a microprocessor.</p>
+<p>SPI keeps the number of signal connections to a minimum and so reduces circuit board complexity. Many diff peripheral device types available. Many diff manufacturers of SPI devices (originally Motorola) - multiple sources Not all manufacturers products are directly compatible! - small variations but can usually be worked around. Typical SPI devices are :- Flash EEPROM, ADC, DAG, temperature sensor, digital 10,RTC digital potentiometer etc.</p>
+<p>The SPI bus specifies four logic signals.</p>
+<p>SCLK - Serial Clock (output from master) MOSI - Master Output, Slave Input (output from master) MISO - Master Input, Slave Output (output from slave) SS - Slave Select (active low; output from master)</p>
+<p>Alternative naming conventions</p>
+<p>D SCK, CLK - Serial Clock (output from master)</p>
+<p>SDI, DI, SI - Serial Data In SDO, DO, SO - Serial Data Out D SSEL - Slave Select</p>
+<h2>Typical SPI Configuration</h2>
+<p>1 . The master pulls the slave select low and then issues clock cycles.</p><ol type="1">
+<li>The clock frequency is not specified in the SPI protocol and can be anything from 0 up to 70MHz depending on the characteristics of the slave device.</li>
+<li>The data transfer then takes place.</li>
+<li>The master then de-selects the slave.</li>
+</ol>
+<p>Simple master slave implementation During each SPI clock cycle, a full duplex data transmission occurs: o the master sends a bit on the MOSI line; the slave reads it from that same line o the slave sends a bit on the MISO line; the master reads it from that same line Not all transmissions require all four of these operations to be meaningful but they do happen. The number of bits transferred is not fixed but is usually a multiple of 8-bits. 6</p>
+<p>Basic serial data transfer</p>
+<p><img src="spib.png" alt="" class="inline"/></p>
+<p>The registers within the master and slave act like shift registers shifting one bit on every cycle of the SCLK.</p>
+<p>Data transfer details Most SPI interfaces have two configuration bits, called clock polarity (CPOL) and clock phase (CPHA). CPOL determines whether the shift clock's idle state is low (CPOL=O) or high (CPOL=1 ) . CPHA determines on which clock edges data is shifted in and out (for CPHA=O, MOSI data is shifted out on falling edge, M ISO data is shifted in on rising edge). As each bit has two states, this allows for four different combinations, all of which are incompatible with each other. For two SPI devices to talk to each other, they need to be set to use the same clock polarity and phase settings.</p>
+<p>SPI Data Transfer Modes These four modes are the combinations of CPOL and CPHA. Modes 0 and 3 are the most common. With SPI modes 0 and 3, data is always latched in on the rising edge of SCK and always output on the falling edge of SCK .</p><ul>
+<li><img src="spic.png" alt="" class="inline"/> <img src="spid.png" alt="" class="inline"/></li>
+</ul>
+<p>Multiple Slaves I f multiple slave devices exist, the master normally generates a separate slave select signal for each slave. - Star connection.</p>
+<p><img src="spie.png" alt="" class="inline"/> <img src="spif.png" alt="" class="inline"/></p>
+<p>SPI Bus characteristics I t is up to the master and slave devices to know whether a received byte is meaningful or not. So a device must discard the received byte in a ''transmit only'' frame or generate a dummy byte for a ''receive only'' frame. No Acknowledgement Master doesn't even know if slave is present! Slaves can be thought of as 10 devices of the master.</p>
+<pre style="padding: 10px; background-color: #e6ebf6; border-radius: 10px;">
+/*Initialise SSP in SPI mode 
+</pre></div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="index.html">PIC SoftAP Project</a></li>
+    <li class="footer">Genereret af
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

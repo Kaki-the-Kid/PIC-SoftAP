@@ -1,0 +1,212 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PIC SoftAP: C:/Users/karst/OneDrive - AARHUS TECH/Dokumenter/Workspace/MPLABXProjects/Embedded Controller 3/SoftAP_webserver.X/main.c filreference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">PIC SoftAP
+   &#160;<span id="projectnumber">1.00-development</span>
+   </div>
+   <div id="projectbrief">Styring af ESP01 modul fra PIC kreds - med alle mulighed understøttet</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Genereret af Doxygen 1.8.17 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',false,false,'search.php','Søg');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('main_8c.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funktioner</a>  </div>
+  <div class="headertitle">
+<div class="title">C:/Users/karst/OneDrive - AARHUS TECH/Dokumenter/Workspace/MPLABXProjects/Embedded Controller 3/SoftAP_webserver.X/main.c filreference</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="">mcc_generated_files/mcc.h</a>&quot;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;xc.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="">esp8266.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="">i2c.h</a>&quot;</code><br />
+</div>
+<p><a href="">Hop til denne fils kildekode.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funktioner</h2></td></tr>
+<tr class="memitem:a6288eba0f8e8ad3ab1544ad731eb7667"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667">main</a> (void)</td></tr>
+<tr class="memdesc:a6288eba0f8e8ad3ab1544ad731eb7667"><td class="mdescLeft">&#160;</td><td class="mdescRight">PIC SoftAP Projekt *.  <a href="main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667">Mere...</a><br /></td></tr>
+<tr class="separator:a6288eba0f8e8ad3ab1544ad731eb7667"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Funktions-dokumentation</h2>
+<a id="a6288eba0f8e8ad3ab1544ad731eb7667"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6288eba0f8e8ad3ab1544ad731eb7667">&#9670;&nbsp;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void main </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>PIC SoftAP Projekt *. </p>
+<p>Copyright : Đ 2020 Karsten 'Kaki' Reitan Sørensen * Device : PIC18F26K22 * Driver Version : 1.00-development *</p>
+<p>I forbindelse med løsning af opgave i Embedded Controller skulle * vi lave en styring af ESP01 fra PIC kreds. Opgaven var, at vise en * webside med data fra PIC kredsen og datalogger, som var opbygget i * tidligere fag. Derfra kom ideen til, at lave en fuldt understøttelse * af alle funktioner som ESP01 har. * <a class="el" href="mcc_8h.html">mcc.h</a> inckluderer følgende filer: *</p>
+<p>#include &lt;xc.h&gt; * #include "device_config.h" * #include "pin_manager.h" * #include &lt;stdint.h&gt; * #include &lt;stdbool.h&gt; * #include "interrupt_manager.h" * #include "tmr2.h" * #include "eusart1.h" * #include "eusart2.h" * Main application *</p>
+<p>: Hoved funktion for programmet * </p><dl class="params"><dt>Parametre</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"></td><td>none * </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;{</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="comment">// Initialize the device</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <a class="code" href="mcc_8c.html#a5e8391114a0cf91ac20002be25e3d352">SYSTEM_Initialize</a>();</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="interrupt__manager_8h.html#ab801e88ce18e2d200429ffbaa67dbf2b">INTERRUPT_GlobalInterruptEnable</a>();</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="comment">//INTCONbits.GIE = 1;</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <a class="code" href="interrupt__manager_8h.html#a35865b73bdecc073d43ad4e0c62187ea">INTERRUPT_PeripheralInterruptEnable</a>();</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="comment">//INTCONbits.PEIE = 1;</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="comment">// Setting up Serial Connection</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="eusart1_8c.html#a17236c1d3fc2264f13ed077b4fc6973e">EUSART1_Initialize</a>();</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="comment">// Opsætter timer2, til at vise flag på ledbar</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <a class="code" href="tmr2_8c.html#a46c13c9255379e99c10240229a145d37">TMR2_Initialize</a>();</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <a class="code" href="tmr2_8c.html#a96213f388ab9dc5b3cd3ff3b06732b59">TMR2_SetInterruptHandler</a>(<a class="code" href="esp8266_8c.html#a27b33a4a37a028e508bf0af4f1e8cbf8">esp_adjustLeds</a>);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="comment">// Opsætter timer4, til at læse data og putte dem i eeprom</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="comment">//TMR4_Initialize();</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="comment">//TMR4_SetInterruptHandler(i2c_logData);</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="comment">// Opstart og konfiguration af I2C bussen til LCD og EEPROM</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <a class="code" href="i2c_8c.html#a5730d9445429351b9f750084c5cb5aae">i2c_init</a>();</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <a class="code" href="lcd_8c.html#ada897427870351cc36fe4d710ed4e5bd">lcd_displayInit</a>();</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="comment">//rtc_getTimeAll();</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="comment">//i2c_temp_testTempSensor();</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="comment">//i2c_eeprom_initEeprom();</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="comment">// Opætning og konfiguration af ESP01 modulet</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <a class="code" href="esp8266_8h.html#ae6667b87a2509a0b2ab9234692967c20">esp_statesInit</a>(); <span class="comment">// Slet alle flag</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <a class="code" href="tcpip_8h.html#a41d46cd76c6df3172ba689fcc762741d">esp_serverInit</a>(); <span class="comment">// Slet flag for server</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="comment">//esp_getVersion();</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;   </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="comment">// Set tilstand for vores klienter og servere</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <a class="code" href="esp8266_8h.html#a422ce84e6a2661494abe432b25396af4">esp_echoOff</a>(); <span class="comment">// Skriv AT kommandoer: esp_echoOn() eller ej esp_echoOff()</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <a class="code" href="tcpip_8h.html#a589e4f516d0f2129018cd6260892be0f">server</a>.<a class="code" href="struct_s_e_r_v_e_r.html#a33e19a89fcfed254e6314e12aa0b2193">wifiMode</a> = 3; <span class="comment">// Senere switch</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <a class="code" href="wifi_8c.html#a4d05523a4c1e07d0f467d8c1decf1585">wifi_setWifiMode</a>(<a class="code" href="tcpip_8h.html#a589e4f516d0f2129018cd6260892be0f">server</a>.<a class="code" href="struct_s_e_r_v_e_r.html#a33e19a89fcfed254e6314e12aa0b2193">wifiMode</a>);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <a class="code" href="tcpip_8c.html#ac600dd97f36d0ce342b0816a08b1a29f">tcpip_setConnectionType</a>(1);<span class="comment">// Enable/disable multiple connections.</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <a class="code" href="tcpip_8c.html#a5c935f038d92967075a455b0cce33dae">tcpip_setTCPReceiveMode</a>(1); <span class="comment">// Passive mode, bruger UART buffer</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordflow">switch</span> (<a class="code" href="tcpip_8h.html#a589e4f516d0f2129018cd6260892be0f">server</a>.<a class="code" href="struct_s_e_r_v_e_r.html#a33e19a89fcfed254e6314e12aa0b2193">wifiMode</a>){</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keywordflow">case</span> 1: <span class="comment">//Station mode</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            <a class="code" href="wifi_8c.html#a473566593d85913f5f5a103164881339">wifi_connectToAP</a>();</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            <a class="code" href="tcpip_8c.html#ad9ffe2d28fa87002b5a38152c2eaf9ef">tcpip_serverSetup</a>();</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keywordflow">case</span> 2: <span class="comment">//SoftAP Mode</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            <a class="code" href="softap_8c.html#a311d79069edb10c1fb468b4033697639">softap_SoftAPInit</a>();</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            <a class="code" href="tcpip_8c.html#ad9ffe2d28fa87002b5a38152c2eaf9ef">tcpip_serverSetup</a>();</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <span class="keywordflow">case</span> 3: <span class="comment">//SoftAP+Station mode</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            <a class="code" href="wifi_8c.html#a473566593d85913f5f5a103164881339">wifi_connectToAP</a>();</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            <a class="code" href="softap_8c.html#a311d79069edb10c1fb468b4033697639">softap_SoftAPInit</a>();</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            <a class="code" href="tcpip_8c.html#ad9ffe2d28fa87002b5a38152c2eaf9ef">tcpip_serverSetup</a>();</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    }</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keywordflow">while</span> (1) {</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <a class="code" href="esp8266_8h.html#a987219a0eccd68b289e00d7fb82f76a7">esp_uartReceive</a>(0); </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    }</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Indeholder referencer til <a class="el" href="#l00460">esp_adjustLeds()</a>, <a class="el" href="esp8266_8h.html#a422ce84e6a2661494abe432b25396af4">esp_echoOff()</a>, <a class="el" href="#l00038">esp_serverInit</a>, <a class="el" href="#l00095">esp_statesInit</a>, <a class="el" href="esp8266_8h.html#a987219a0eccd68b289e00d7fb82f76a7">esp_uartReceive()</a>, <a class="el" href="#l00088">EUSART1_Initialize()</a>, <a class="el" href="#l00018">i2c_init()</a>, <a class="el" href="#l00063">INTERRUPT_GlobalInterruptEnable</a>, <a class="el" href="#l00086">INTERRUPT_PeripheralInterruptEnable</a>, <a class="el" href="#l00014">lcd_displayInit()</a>, <a class="el" href="#l00043">server</a>, <a class="el" href="#l00097">softap_SoftAPInit()</a>, <a class="el" href="#l00050">SYSTEM_Initialize()</a>, <a class="el" href="#l00038">tcpip_serverSetup()</a>, <a class="el" href="#l00139">tcpip_setConnectionType()</a>, <a class="el" href="#l00300">tcpip_setTCPReceiveMode()</a>, <a class="el" href="#l00064">TMR2_Initialize()</a>, <a class="el" href="#l00147">TMR2_SetInterruptHandler()</a>, <a class="el" href="#l00186">wifi_connectToAP()</a>, <a class="el" href="#l00021">wifi_setWifiMode()</a> og <a class="el" href="#l00024">SERVER::wifiMode</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="amcc_8c_html_a5e8391114a0cf91ac20002be25e3d352"><div class="ttname"><a href="mcc_8c.html#a5e8391114a0cf91ac20002be25e3d352">SYSTEM_Initialize</a></div><div class="ttdeci">void SYSTEM_Initialize(void)</div><div class="ttdoc">@Generated PIC10 / PIC12 / PIC16 / PIC18 MCUs Source File</div><div class="ttdef"><b>Definition:</b> mcc.c:50</div></div>
+<div class="ttc" id="ainterrupt__manager_8h_html_a35865b73bdecc073d43ad4e0c62187ea"><div class="ttname"><a href="interrupt__manager_8h.html#a35865b73bdecc073d43ad4e0c62187ea">INTERRUPT_PeripheralInterruptEnable</a></div><div class="ttdeci">#define INTERRUPT_PeripheralInterruptEnable()</div><div class="ttdoc">@Param none @Returns none @Description This macro will enable peripheral interrupts.</div><div class="ttdef"><b>Definition:</b> interrupt_manager.h:86</div></div>
+<div class="ttc" id="atcpip_8c_html_ac600dd97f36d0ce342b0816a08b1a29f"><div class="ttname"><a href="tcpip_8c.html#ac600dd97f36d0ce342b0816a08b1a29f">tcpip_setConnectionType</a></div><div class="ttdeci">void tcpip_setConnectionType(uint8_t multibleConnections)</div><div class="ttdef"><b>Definition:</b> tcpip.c:139</div></div>
+<div class="ttc" id="atcpip_8c_html_a5c935f038d92967075a455b0cce33dae"><div class="ttname"><a href="tcpip_8c.html#a5c935f038d92967075a455b0cce33dae">tcpip_setTCPReceiveMode</a></div><div class="ttdeci">void tcpip_setTCPReceiveMode(uint8_t mode)</div><div class="ttdef"><b>Definition:</b> tcpip.c:300</div></div>
+<div class="ttc" id="atcpip_8c_html_ad9ffe2d28fa87002b5a38152c2eaf9ef"><div class="ttname"><a href="tcpip_8c.html#ad9ffe2d28fa87002b5a38152c2eaf9ef">tcpip_serverSetup</a></div><div class="ttdeci">void tcpip_serverSetup(void)</div><div class="ttdoc">TCP/IP Server - single connection.</div><div class="ttdef"><b>Definition:</b> tcpip.c:38</div></div>
+<div class="ttc" id="atcpip_8h_html_a589e4f516d0f2129018cd6260892be0f"><div class="ttname"><a href="tcpip_8h.html#a589e4f516d0f2129018cd6260892be0f">server</a></div><div class="ttdeci">server_t server</div><div class="ttdef"><b>Definition:</b> tcpip.h:43</div></div>
+<div class="ttc" id="aesp8266_8h_html_a422ce84e6a2661494abe432b25396af4"><div class="ttname"><a href="esp8266_8h.html#a422ce84e6a2661494abe432b25396af4">esp_echoOff</a></div><div class="ttdeci">void esp_echoOff(void)</div></div>
+<div class="ttc" id="awifi_8c_html_a473566593d85913f5f5a103164881339"><div class="ttname"><a href="wifi_8c.html#a473566593d85913f5f5a103164881339">wifi_connectToAP</a></div><div class="ttdeci">void wifi_connectToAP(void)</div><div class="ttdef"><b>Definition:</b> wifi.c:186</div></div>
+<div class="ttc" id="alcd_8c_html_ada897427870351cc36fe4d710ed4e5bd"><div class="ttname"><a href="lcd_8c.html#ada897427870351cc36fe4d710ed4e5bd">lcd_displayInit</a></div><div class="ttdeci">void lcd_displayInit(void)</div><div class="ttdoc">LCD generelle kommandoer.</div><div class="ttdef"><b>Definition:</b> lcd.c:14</div></div>
+<div class="ttc" id="ai2c_8c_html_a5730d9445429351b9f750084c5cb5aae"><div class="ttname"><a href="i2c_8c.html#a5730d9445429351b9f750084c5cb5aae">i2c_init</a></div><div class="ttdeci">void i2c_init(void)</div><div class="ttdoc">I2C generelle kommandoer.</div><div class="ttdef"><b>Definition:</b> i2c.c:18</div></div>
+<div class="ttc" id="atcpip_8h_html_a41d46cd76c6df3172ba689fcc762741d"><div class="ttname"><a href="tcpip_8h.html#a41d46cd76c6df3172ba689fcc762741d">esp_serverInit</a></div><div class="ttdeci">#define esp_serverInit()</div><div class="ttdef"><b>Definition:</b> tcpip.h:38</div></div>
+<div class="ttc" id="ainterrupt__manager_8h_html_ab801e88ce18e2d200429ffbaa67dbf2b"><div class="ttname"><a href="interrupt__manager_8h.html#ab801e88ce18e2d200429ffbaa67dbf2b">INTERRUPT_GlobalInterruptEnable</a></div><div class="ttdeci">#define INTERRUPT_GlobalInterruptEnable()</div><div class="ttdoc">Generated Interrupt Manager Header File.</div><div class="ttdef"><b>Definition:</b> interrupt_manager.h:63</div></div>
+<div class="ttc" id="asoftap_8c_html_a311d79069edb10c1fb468b4033697639"><div class="ttname"><a href="softap_8c.html#a311d79069edb10c1fb468b4033697639">softap_SoftAPInit</a></div><div class="ttdeci">void softap_SoftAPInit(void)</div><div class="ttdoc">SoftAP *.</div><div class="ttdef"><b>Definition:</b> softap.c:97</div></div>
+<div class="ttc" id="atmr2_8c_html_a96213f388ab9dc5b3cd3ff3b06732b59"><div class="ttname"><a href="tmr2_8c.html#a96213f388ab9dc5b3cd3ff3b06732b59">TMR2_SetInterruptHandler</a></div><div class="ttdeci">void TMR2_SetInterruptHandler(void(*InterruptHandler)(void))</div><div class="ttdoc">@Summary Set Timer Interrupt Handler</div><div class="ttdef"><b>Definition:</b> tmr2.c:147</div></div>
+<div class="ttc" id="aesp8266_8c_html_a27b33a4a37a028e508bf0af4f1e8cbf8"><div class="ttname"><a href="esp8266_8c.html#a27b33a4a37a028e508bf0af4f1e8cbf8">esp_adjustLeds</a></div><div class="ttdeci">void esp_adjustLeds(void)</div><div class="ttdef"><b>Definition:</b> esp8266.c:460</div></div>
+<div class="ttc" id="atmr2_8c_html_a46c13c9255379e99c10240229a145d37"><div class="ttname"><a href="tmr2_8c.html#a46c13c9255379e99c10240229a145d37">TMR2_Initialize</a></div><div class="ttdeci">void TMR2_Initialize(void)</div><div class="ttdoc">Section: TMR2 APIs.</div><div class="ttdef"><b>Definition:</b> tmr2.c:64</div></div>
+<div class="ttc" id="aesp8266_8h_html_ae6667b87a2509a0b2ab9234692967c20"><div class="ttname"><a href="esp8266_8h.html#ae6667b87a2509a0b2ab9234692967c20">esp_statesInit</a></div><div class="ttdeci">#define esp_statesInit()</div><div class="ttdef"><b>Definition:</b> esp8266.h:95</div></div>
+<div class="ttc" id="aeusart1_8c_html_a17236c1d3fc2264f13ed077b4fc6973e"><div class="ttname"><a href="eusart1_8c.html#a17236c1d3fc2264f13ed077b4fc6973e">EUSART1_Initialize</a></div><div class="ttdeci">void EUSART1_Initialize(void)</div><div class="ttdoc">@Summary Initialization routine that takes inputs from the EUSART1 GUI.</div><div class="ttdef"><b>Definition:</b> eusart1.c:88</div></div>
+<div class="ttc" id="aesp8266_8h_html_a987219a0eccd68b289e00d7fb82f76a7"><div class="ttname"><a href="esp8266_8h.html#a987219a0eccd68b289e00d7fb82f76a7">esp_uartReceive</a></div><div class="ttdeci">uint8_t esp_uartReceive(char *)</div></div>
+<div class="ttc" id="awifi_8c_html_a4d05523a4c1e07d0f467d8c1decf1585"><div class="ttname"><a href="wifi_8c.html#a4d05523a4c1e07d0f467d8c1decf1585">wifi_setWifiMode</a></div><div class="ttdeci">void wifi_setWifiMode(uint8_t mode)</div><div class="ttdoc">WIFI kommandoer.</div><div class="ttdef"><b>Definition:</b> wifi.c:21</div></div>
+<div class="ttc" id="astruct_s_e_r_v_e_r_html_a33e19a89fcfed254e6314e12aa0b2193"><div class="ttname"><a href="struct_s_e_r_v_e_r.html#a33e19a89fcfed254e6314e12aa0b2193">SERVER::wifiMode</a></div><div class="ttdeci">uint8_t wifiMode</div><div class="ttdef"><b>Definition:</b> tcpip.h:24</div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="main_8c.html">main.c</a></li>
+    <li class="footer">Genereret af
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

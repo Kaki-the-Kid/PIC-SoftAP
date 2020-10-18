@@ -1,0 +1,13 @@
+/**
+@page EEPROM Information om anvendte eksterne EEPROM
+
+@section eeprom_files Filer for EEPROM
+- eeprom.h
+- eeprom.c
+- eeprom_template.h
+
+<hr/>
+
+[TODO]
+
+*/

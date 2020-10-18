@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="34cm" height="25cm" viewBox="20 419 678 481" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <polygon style="fill: #ff0000" points="544.513,580 561.994,580 553.254,520 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2.35099e-037; stroke: #ff0000" points="544.513,580 561.994,580 553.254,520 "/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="553.254" y="569.8">
+      <tspan x="553.254" y="569.8"></tspan>
+    </text>
+  </g>
+  <g>
+    <polygon style="fill: #0000ff" points="209.917,720 226.917,720 218.417,800 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2.35099e-037; stroke: #0000ff" points="209.917,720 226.917,720 218.417,800 "/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="218.417" y="744.8">
+      <tspan x="218.417" y="744.8"></tspan>
+    </text>
+  </g>
+  <g>
+    <polygon style="fill: #0000ff" points="312.683,800 329.683,800 321.183,720 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2.35099e-037; stroke: #0000ff" points="312.683,800 329.683,800 321.183,720 "/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="321.183" y="784.8">
+      <tspan x="321.183" y="784.8"></tspan>
+    </text>
+  </g>
+  <g>
+    <rect style="fill: #ffa500" x="100" y="660" width="580" height="24.445"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2.35099e-037; stroke: #ffa500" x="100" y="660" width="580" height="24.445"/>
+    <text font-size="3.556" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="390" y="673.55">
+      <tspan x="390" y="673.55"></tspan>
+    </text>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="20" y="680">
+    <tspan x="20" y="680">3,3 V fra LDO</tspan>
+  </text>
+  <g>
+    <rect style="fill: #0000ff" x="100" y="700" width="580" height="24.7272"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2.35099e-037; stroke: #0000ff" x="100" y="700" width="580" height="24.7272"/>
+    <text font-size="3.78178" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="390" y="713.8">
+      <tspan x="390" y="713.8"></tspan>
+    </text>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="20" y="720">
+    <tspan x="20" y="720">5 V fra COM</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="200" y="800" width="71" height="99"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="200" y="800" width="71" height="99"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="235.5" y="854.3">
+      <tspan x="235.5" y="854.3">LDO</tspan>
+    </text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="100" y="800" width="71" height="99"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="100" y="800" width="71" height="99"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="135.5" y="854.3">
+      <tspan x="135.5" y="854.3">PICKit</tspan>
+    </text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="100" y="420" width="71" height="99"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="100" y="420" width="71" height="99"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="135.5" y="474.3">
+      <tspan x="135.5" y="474.3">PIC</tspan>
+    </text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="200" y="420" width="71" height="99"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="200" y="420" width="71" height="99"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="235.5" y="458.3">
+      <tspan x="235.5" y="458.3">AdaFruit</tspan>
+      <tspan x="235.5" y="474.3">Temp</tspan>
+      <tspan x="235.5" y="490.3">Sensor</tspan>
+    </text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="300" y="420" width="71" height="99"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="300" y="420" width="71" height="99"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="335.5" y="474.3">
+      <tspan x="335.5" y="474.3">EEPROM</tspan>
+    </text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="400" y="420" width="71" height="99"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="400" y="420" width="71" height="99"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="435.5" y="474.3">
+      <tspan x="435.5" y="474.3">ESP01</tspan>
+    </text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="500" y="420" width="71" height="99"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="500" y="420" width="71" height="99"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="535.5" y="474.3">
+      <tspan x="535.5" y="474.3">Display</tspan>
+    </text>
+  </g>
+  <g>
+    <rect style="fill: #00ff00" x="100" y="620" width="580" height="23.6689"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2.35099e-037; stroke: #ffffff" x="100" y="620" width="580" height="23.6689"/>
+    <text font-size="2.93511" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="390" y="632.95">
+      <tspan x="390" y="632.95"></tspan>
+    </text>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="20" y="640">
+    <tspan x="20" y="640">3,3 V Seriel</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ff0000" x="100" y="580" width="580" height="24.9389"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2.35099e-037; stroke: #ff0000" x="100" y="580" width="580" height="24.9389"/>
+    <text font-size="3.95111" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="390" y="593.95">
+      <tspan x="390" y="593.95"></tspan>
+    </text>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="20" y="600">
+    <tspan x="20" y="600">3,3 V I2C</tspan>
+  </text>
+  <g>
+    <polygon style="fill: #ffa500" points="109.046,659.796 126.528,659.796 117.787,520 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2.35099e-037; stroke: #ffa500" points="109.046,659.796 126.528,659.796 117.787,520 "/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="117.787" y="629.647">
+      <tspan x="117.787" y="629.647"></tspan>
+    </text>
+  </g>
+  <g>
+    <polygon style="fill: #ffa500" points="209.019,659.796 226.501,659.796 217.76,520 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2.35099e-037; stroke: #ffa500" points="209.019,659.796 226.501,659.796 217.76,520 "/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="217.76" y="629.647">
+      <tspan x="217.76" y="629.647"></tspan>
+    </text>
+  </g>
+  <g>
+    <polygon style="fill: #ffa500" points="309.012,659.796 326.493,659.796 317.752,520 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2.35099e-037; stroke: #ffa500" points="309.012,659.796 326.493,659.796 317.752,520 "/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="317.752" y="629.647">
+      <tspan x="317.752" y="629.647"></tspan>
+    </text>
+  </g>
+  <g>
+    <polygon style="fill: #ffa500" points="408.99,659.796 426.471,659.796 417.73,520 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2.35099e-037; stroke: #ffa500" points="408.99,659.796 426.471,659.796 417.73,520 "/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="417.73" y="629.647">
+      <tspan x="417.73" y="629.647"></tspan>
+    </text>
+  </g>
+  <g>
+    <polygon style="fill: #0000ff" points="508.997,699.796 526.478,699.796 517.738,520 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2.35099e-037; stroke: #0000ff" points="508.997,699.796 526.478,699.796 517.738,520 "/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="517.738" y="659.647">
+      <tspan x="517.738" y="659.647"></tspan>
+    </text>
+  </g>
+  <g>
+    <polygon style="fill: #ff0000" points="126.776,520 144.258,520 135.517,580 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2.35099e-037; stroke: #ff0000" points="126.776,520 144.258,520 135.517,580 "/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="135.517" y="539.8">
+      <tspan x="135.517" y="539.8"></tspan>
+    </text>
+  </g>
+  <g>
+    <polygon style="fill: #ff0000" points="344.497,580 361.979,580 353.238,520 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2.35099e-037; stroke: #ff0000" points="344.497,580 361.979,580 353.238,520 "/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="353.238" y="569.8">
+      <tspan x="353.238" y="569.8"></tspan>
+    </text>
+  </g>
+  <g>
+    <polygon style="fill: #ff0000" points="244.515,580 261.997,580 253.256,520 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2.35099e-037; stroke: #ff0000" points="244.515,580 261.997,580 253.256,520 "/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="253.256" y="569.8">
+      <tspan x="253.256" y="569.8"></tspan>
+    </text>
+  </g>
+  <g>
+    <polygon style="fill: #00ff00" points="148.184,520 165.666,520 156.925,620 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2.35099e-037; stroke: #00ff00" points="148.184,520 165.666,520 156.925,620 "/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="156.925" y="549.8">
+      <tspan x="156.925" y="549.8"></tspan>
+    </text>
+  </g>
+  <g>
+    <polygon style="fill: #00ff00" points="444.551,620 462.033,620 453.292,520 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2.35099e-037; stroke: #00ff00" points="444.551,620 462.033,620 453.292,520 "/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="453.292" y="599.8">
+      <tspan x="453.292" y="599.8"></tspan>
+    </text>
+  </g>
+  <g>
+    <polygon style="fill: #ffa500" points="240,799.796 257.481,799.796 248.741,680 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2.35099e-037; stroke: #ffa500" points="240,799.796 257.481,799.796 248.741,680 "/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="248.741" y="774.647">
+      <tspan x="248.741" y="774.647"></tspan>
+    </text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="600" y="420" width="71" height="99"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="600" y="420" width="71" height="99"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="635.5" y="450.3">
+      <tspan x="635.5" y="450.3">RTC</tspan>
+      <tspan x="635.5" y="466.3">Real</tspan>
+      <tspan x="635.5" y="482.3">Time</tspan>
+      <tspan x="635.5" y="498.3">Clock</tspan>
+    </text>
+  </g>
+  <g>
+    <polygon style="fill: #ffa500" points="608.915,659.796 626.396,659.796 617.656,520 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2.35099e-037; stroke: #ffa500" points="608.915,659.796 626.396,659.796 617.656,520 "/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="617.656" y="629.647">
+      <tspan x="617.656" y="629.647"></tspan>
+    </text>
+  </g>
+  <g>
+    <polygon style="fill: #ff0000" points="644.749,580 662.231,580 653.49,520 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2.35099e-037; stroke: #ff0000" points="644.749,580 662.231,580 653.49,520 "/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="653.49" y="569.8">
+      <tspan x="653.49" y="569.8"></tspan>
+    </text>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="396.75" y="758.917">
+    <tspan x="396.75" y="758.917">I2C og seriel forbindelser er 2-vejs</tspan>
+    <tspan x="396.75" y="774.917"></tspan>
+    <tspan x="396.75" y="790.917">I2C er med 2,2 KOhm pullup</tspan>
+    <tspan x="396.75" y="806.917"></tspan>
+    <tspan x="396.75" y="822.917">COM port modulet får strøm fra USB porten,  men </tspan>
+    <tspan x="396.75" y="838.917">er ellers ikke strømmæssigt forbundet. Det er derfor </tspan>
+    <tspan x="396.75" y="854.917">meget vigtigt, at den er forbundet til stel.</tspan>
+    <tspan x="396.75" y="870.917"></tspan>
+    <tspan x="396.75" y="886.917">Power på PICKit slået fra</tspan>
+  </text>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="135.5" y="849.5">
+    <tspan x="135.5" y="849.5"></tspan>
+  </text>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:normal" x="80" y="860">
+    <tspan x="80" y="860"></tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="300" y="800" width="71" height="99"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="300" y="800" width="71" height="99"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="335.5" y="854.3">
+      <tspan x="335.5" y="854.3">COM</tspan>
+    </text>
+  </g>
+  <g>
+    <polygon style="fill: #00ff00" points="345.416,640 362.898,640 354.157,800 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2.35099e-037; stroke: #00ff00" points="345.416,640 362.898,640 354.157,800 "/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="354.157" y="684.8">
+      <tspan x="354.157" y="684.8"></tspan>
+    </text>
+  </g>
+  <g>
+    <path style="fill: #ffffff" d="M 100 748 L 172,748 L 157.6,770 L 114.4,770 L 100,748z"/>
+    <path style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" d="M 100 748 L 172,748 L 157.6,770 L 114.4,770 L 100,748"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:normal" x="136" y="764">
+      <tspan x="136" y="764">PIC</tspan>
+    </text>
+  </g>
+  <g>
+    <polygon style="fill: #ffffff" points="130.478,796 130.478,785 124.978,785 135.978,774 146.978,785 141.478,785 141.478,796 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="130.478,796 130.478,785 124.978,785 135.978,774 146.978,785 141.478,785 141.478,796 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="130.478,796 130.478,785 124.978,785 135.978,774 146.978,785 141.478,785 141.478,796 "/>
+  </g>
+</svg>
