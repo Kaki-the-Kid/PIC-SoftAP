@@ -13,7 +13,7 @@ ESP01 er firmware opdateret til [TODO]
 
 EEPROM henviser til ekstern eeprom
 
-copyright 2019-2020 Karsten 'Kaki' Reitan Sørensen<br/>
+Copyright 2019-2020 Karsten 'Kaki' Reitan Sørensen<br/>
 version 1.00-development
 
 - @subpage I2C
