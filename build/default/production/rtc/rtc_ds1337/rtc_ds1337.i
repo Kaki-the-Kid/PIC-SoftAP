@@ -9828,7 +9828,7 @@ void rtc_ds_1337_setTimeAll(uint8_t hours, uint8_t mins, uint8_t secs, uint8_t d
     _Bool century = (years>1999 || (years>=0 && years <=99) )?1:0;
 
 
-    char rtc_date[] = {
+    uint8_t rtc_date[] = {
         convertByte2BCD(secs),
         convertByte2BCD(mins),
         convertByte2BCD(hours),
@@ -9859,8 +9859,8 @@ uint8_t rtc_ds_1337_getSeconds(void)
 
 void rtc_ds_1337_setSeconds(void)
 {
-    char data = convertByte2BCD(time.seconds);
-    char rtcRegister[] = { 0x00, data};
+    uint8_t data = convertByte2BCD(time.seconds);
+    uint8_t rtcRegister[] = { 0x00, data};
     i2c_write_serial(0b1101000, rtcRegister, 2);
 }
 
@@ -9872,7 +9872,7 @@ uint8_t rtc_ds_1337_getMinutes(void)
 {
     uint8_t data[1];
 
-    i2c_write_serial(0b1101000, 0x01, 1);
+    i2c_write_serial(0b1101000, *0x01, 1);
     i2c_read_serial(0b1101000, data , 1);
     time.minutes = convertBCD2Bytes(data);
 
@@ -9882,7 +9882,7 @@ uint8_t rtc_ds_1337_getMinutes(void)
 void rtc_ds_1337_setMinutes(void)
 {
     uint8_t data = convertByte2BCD(time.minutes);
-    char rtcRegister[] = { 0x01, data};
+    uint8_t rtcRegister[] = { 0x01, data};
     i2c_write_serial(0b1101000, rtcRegister, 2);
 }
 
@@ -9894,17 +9894,17 @@ uint8_t rtc_ds_1337_getHour(void)
 {
     uint8_t data[1];
 
-    i2c_write_serial(0b1101000, 0x02, 1);
+    i2c_write_serial(0b1101000, *0x02, 1);
     i2c_read_serial(0b1101000, data , 1);
-    time.hours = (uint8_t) convertBCD2Bytes(data);
+    time.hours = convertBCD2Bytes(data);
 
     return time.hours;
 }
 
 void rtc_ds_1337_setHour(void)
 {
-    char data = convertByte2BCD(time.hours);
-    char rtcRegister[] = { 0x02, data};
+    uint8_t data = convertByte2BCD(time.hours);
+    uint8_t rtcRegister[] = { 0x02, data};
     i2c_write_serial(0b1101000, rtcRegister, 2);
 }
 
@@ -9927,16 +9927,16 @@ uint8_t rtc_ds_1337_getDay(void)
 {
     uint8_t data[1];
 
-    i2c_write_serial(0b1101000, 0x03, 1);
+    i2c_write_serial(0b1101000, *0x03, 1);
     i2c_read_serial(0b1101000, data , 1);
-    time.day = (uint8_t) convertBCD2Bytes(*data);
+    time.day = convertBCD2Bytes(*data);
 
     return time.day;
 }
 
 void rtc_ds_1337_setDay(void)
 {
-    char rtcRegister[] = { 0x03, convertByte2BCD(time.day) };
+    uint8_t rtcRegister[] = { 0x03, convertByte2BCD(time.day) };
     i2c_write_serial(0b1101000, rtcRegister, 2);
 }
 
@@ -9960,8 +9960,8 @@ void rtc_ds_1337_setMonth(void)
 uint8_t rtc_ds_1337_getYear(void) { return 0; }
 void rtc_ds_1337_setYear(void)
 {
-    char data = convertByte2BCD(time.year);
-    char rtcRegister[] = { 0x06, data };
+    uint8_t data = convertByte2BCD(time.year);
+    uint8_t rtcRegister[] = { 0x06, data };
     i2c_write_serial(0b1101000, rtcRegister, 2);
 }
 # 417 "rtc/rtc_ds1337/rtc_ds1337.c"

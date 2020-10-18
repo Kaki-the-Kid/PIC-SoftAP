@@ -8,7 +8,7 @@
 # 2 "<built-in>" 2
 # 1 "main.c" 2
 # 29 "main.c"
-#pragma warning (disable: 520)
+#pragma warning disable 520
 # 40 "main.c"
 # 1 "./mcc_generated_files/mcc.h" 1
 # 49 "./mcc_generated_files/mcc.h"
@@ -9639,7 +9639,7 @@ typedef struct WIFIMode WIFIMode_t;
 WIFIMode_t wifi;
 
 
-typedef struct item_t { const char *ssid; const char *password; const char *encryption; } item_t;
+typedef struct item_t { char *ssid; char *password; char *encryption; } item_t;
 item_t network_table[] = {
     { "SSID-JRzcM4", "frbPCwvRKq", "WPA2 AES" },
     { "WuggaNet", "fredagsbanan", "WPA2 AES" },

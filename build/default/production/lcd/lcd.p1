@@ -817,20 +817,20 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _lcd_displayInit ]
 [f ]
 "18
-[; ;lcd/lcd.c: 18:     i2c_write_serial(display_addr, (char*) display_init, 10);
-[e ( _i2c_write_serial (3 , , _display_addr -> -> &U _display_init `*uc `*uc -> -> 10 `i `uc ]
+[; ;lcd/lcd.c: 18:     i2c_write_serial(display_addr, display_init, 10);
+[e ( _i2c_write_serial (3 , , _display_addr -> &U _display_init `*uc -> -> 10 `i `uc ]
 "19
-[; ;lcd/lcd.c: 19:     i2c_write_serial(display_addr, (char*) first_line, 2);
-[e ( _i2c_write_serial (3 , , _display_addr -> -> &U _first_line `*uc `*uc -> -> 2 `i `uc ]
+[; ;lcd/lcd.c: 19:     i2c_write_serial(display_addr, first_line, 2);
+[e ( _i2c_write_serial (3 , , _display_addr -> &U _first_line `*uc -> -> 2 `i `uc ]
 "20
-[; ;lcd/lcd.c: 20:     i2c_write_serial(display_addr, (char*) empty_line, 16);
-[e ( _i2c_write_serial (3 , , _display_addr -> -> &U _empty_line `*uc `*uc -> -> 16 `i `uc ]
+[; ;lcd/lcd.c: 20:     i2c_write_serial(display_addr, empty_line, 16);
+[e ( _i2c_write_serial (3 , , _display_addr -> &U _empty_line `*uc -> -> 16 `i `uc ]
 "22
-[; ;lcd/lcd.c: 22:     i2c_write_serial(display_addr, (char*) shift_line, 2);
-[e ( _i2c_write_serial (3 , , _display_addr -> -> &U _shift_line `*uc `*uc -> -> 2 `i `uc ]
+[; ;lcd/lcd.c: 22:     i2c_write_serial(display_addr, shift_line, 2);
+[e ( _i2c_write_serial (3 , , _display_addr -> &U _shift_line `*uc -> -> 2 `i `uc ]
 "23
-[; ;lcd/lcd.c: 23:     i2c_write_serial(display_addr, (char*) empty_line, 16);
-[e ( _i2c_write_serial (3 , , _display_addr -> -> &U _empty_line `*uc `*uc -> -> 16 `i `uc ]
+[; ;lcd/lcd.c: 23:     i2c_write_serial(display_addr, empty_line, 16);
+[e ( _i2c_write_serial (3 , , _display_addr -> &U _empty_line `*uc -> -> 16 `i `uc ]
 "24
 [; ;lcd/lcd.c: 24: }
 [e :UE 834 ]
@@ -866,10 +866,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;lcd/lcd.c: 35:     strcpy(msg, tmpmsg);
 [e ( _strcpy (2 , &U _msg -> _tmpmsg `*Cuc ]
 "37
-[; ;lcd/lcd.c: 37:     i2c_write_serial(display_addr, (char*) posLcd, 2);
-[e ( _i2c_write_serial (3 , , _display_addr -> -> &U _posLcd `*uc `*uc -> -> 2 `i `uc ]
+[; ;lcd/lcd.c: 37:     i2c_write_serial(display_addr, posLcd, 2);
+[e ( _i2c_write_serial (3 , , _display_addr &U _posLcd -> -> 2 `i `uc ]
 "38
-[; ;lcd/lcd.c: 38:     i2c_write_serial(display_addr, (char*) tmpmsg, 16 );
+[; ;lcd/lcd.c: 38:     i2c_write_serial(display_addr, tmpmsg, 16 );
 [e ( _i2c_write_serial (3 , , _display_addr -> _tmpmsg `*uc -> -> 16 `i `uc ]
 "39
 [; ;lcd/lcd.c: 39: }

@@ -341,7 +341,7 @@ void tcpip_PassiveReceive(void) {
     uint16_t count      = 0;
     uint16_t bufferSize = 0;
     uint16_t actualSize = 0;
-    uint8_t line[80]; // Kan måske være mindre
+    uint8_t  line[80]; // Kan måske være mindre
     
     // Hent buffer størrelse fra ESP modulet
     // resolve
@@ -355,7 +355,7 @@ void tcpip_PassiveReceive(void) {
         printf("AT+CIPRECVDATA=64\r\n"); // Get data for single connection mode
         
         do {
-            /*uint8_t index = 0;
+            uint8_t index = 0;
 
             while(index <= 64) {
                 if(count <= actualSize)
@@ -370,7 +370,7 @@ void tcpip_PassiveReceive(void) {
                         buffer[index] = tmp;
                         index++;
                         buffer[index] = 0x00;
-                        if (index >= sizeof(a)) {
+                        if (index >= sizeof(actualSize)) {
                             index--;
                         }
                     }
@@ -379,12 +379,12 @@ void tcpip_PassiveReceive(void) {
                         index = 0;
 
                         // Compare the string for commands
-                        esp_resolveUartLine();
+                        //esp_resolveUartLine();
                     }
                 }
                 index++;
                 count++;
-            }*/
+            }
         } while (count <= actualSize);
         
     } else if ( server.multibleConnections ) {

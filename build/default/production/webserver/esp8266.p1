@@ -8,8 +8,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [s S835 `uc 1 `uc 1 `uc 1 ]
 [n S835 WIFIMode stationMode softAPMode multibleConnections ]
 "53
-[; ;webserver/wifi.h: 53: typedef struct item_t { const char *ssid; const char *password; const char *encryption; } item_t;
-[s S836 `*Cuc 1 `*Cuc 1 `*Cuc 1 ]
+[; ;webserver/wifi.h: 53: typedef struct item_t { char *ssid; char *password; char *encryption; } item_t;
+[s S836 `*uc 1 `*uc 1 `*uc 1 ]
 [n S836 item_t ssid password encryption ]
 "71 webserver/esp8266.h
 [; ;webserver/esp8266.h: 71: struct ESPUART {

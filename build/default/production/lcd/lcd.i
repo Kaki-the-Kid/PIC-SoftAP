@@ -9599,12 +9599,12 @@ void lcd_displayInit(void) {
 
 
 
-    i2c_write_serial(display_addr, (char*) display_init, 10);
-    i2c_write_serial(display_addr, (char*) first_line, 2);
-    i2c_write_serial(display_addr, (char*) empty_line, 16);
+    i2c_write_serial(display_addr, display_init, 10);
+    i2c_write_serial(display_addr, first_line, 2);
+    i2c_write_serial(display_addr, empty_line, 16);
 
-    i2c_write_serial(display_addr, (char*) shift_line, 2);
-    i2c_write_serial(display_addr, (char*) empty_line, 16);
+    i2c_write_serial(display_addr, shift_line, 2);
+    i2c_write_serial(display_addr, empty_line, 16);
 }
 
 
@@ -9618,8 +9618,8 @@ void lcd_write(char *tmpmsg, uint8_t line, uint8_t pos) {
     strcpy(msg, empty_line);
     strcpy(msg, tmpmsg);
 
-    i2c_write_serial(display_addr, (char*) posLcd, 2);
-    i2c_write_serial(display_addr, (char*) tmpmsg, 16 );
+    i2c_write_serial(display_addr, posLcd, 2);
+    i2c_write_serial(display_addr, tmpmsg, 16 );
 }
 
 void lcd_outputPosXY(char *string, uint8_t posX, uint8_t posY) {

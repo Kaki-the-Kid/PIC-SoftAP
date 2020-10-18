@@ -8,8 +8,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [s S834 `uc 1 `uc 1 `uc 1 ]
 [n S834 WIFIMode stationMode softAPMode multibleConnections ]
 "53
-[; ;webserver/wifi.h: 53: typedef struct item_t { const char *ssid; const char *password; const char *encryption; } item_t;
-[s S835 `*Cuc 1 `*Cuc 1 `*Cuc 1 ]
+[; ;webserver/wifi.h: 53: typedef struct item_t { char *ssid; char *password; char *encryption; } item_t;
+[s S835 `*uc 1 `*uc 1 `*uc 1 ]
 [n S835 item_t ssid password encryption ]
 "71 webserver/esp8266.h
 [; ;webserver/esp8266.h: 71: struct ESPUART {
@@ -1609,17 +1609,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "161
 [; ;webserver/wifi.c: 161:         if (strcmp(p->ssid, ssid_name) == 0) {
-[e $ ! == ( _strcmp (2 , . *U _p 0 _ssid_name -> 0 `i 865  ]
+[e $ ! == ( _strcmp (2 , -> . *U _p 0 `*Cuc _ssid_name -> 0 `i 865  ]
 {
 "162
 [; ;webserver/wifi.c: 162:             strcpy((char*)server.ssid, p->ssid);
-[e ( _strcpy (2 , -> &U . _server 4 `*uc . *U _p 0 ]
+[e ( _strcpy (2 , -> &U . _server 4 `*uc -> . *U _p 0 `*Cuc ]
 "163
 [; ;webserver/wifi.c: 163:             strcpy((char*)server.password, p->password);
-[e ( _strcpy (2 , -> &U . _server 5 `*uc . *U _p 1 ]
+[e ( _strcpy (2 , -> &U . _server 5 `*uc -> . *U _p 1 `*Cuc ]
 "164
 [; ;webserver/wifi.c: 164:             strcpy((char*)server.encryption, p->encryption);
-[e ( _strcpy (2 , -> &U . _server 6 `*uc . *U _p 2 ]
+[e ( _strcpy (2 , -> &U . _server 6 `*uc -> . *U _p 2 `*Cuc ]
 "165
 [; ;webserver/wifi.c: 165:             return 1;
 [e ) -> -> 1 `i `a ]
@@ -1633,7 +1633,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e =+ _p * -> -> 1 `i `x -> -> # *U _p `i `x ]
 [e :U 864 ]
-[e $ != . *U _p 0 -> -> -> 0 `i `*v `*Cuc 861  ]
+[e $ != . *U _p 0 -> -> -> 0 `i `*v `*uc 861  ]
 [e :U 862 ]
 }
 "169

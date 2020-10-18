@@ -9579,7 +9579,7 @@ typedef struct WIFIMode WIFIMode_t;
 WIFIMode_t wifi;
 
 
-typedef struct item_t { const char *ssid; const char *password; const char *encryption; } item_t;
+typedef struct item_t { char *ssid; char *password; char *encryption; } item_t;
 item_t network_table[] = {
     { "SSID-JRzcM4", "frbPCwvRKq", "WPA2 AES" },
     { "WuggaNet", "fredagsbanan", "WPA2 AES" },
@@ -9917,7 +9917,36 @@ void tcpip_PassiveReceive(void) {
         printf("AT+CIPRECVDATA=64\r\n");
 
         do {
-# 388 "webserver/tcpip.c"
+            uint8_t index = 0;
+
+            while(index <= 64) {
+                if(count <= actualSize)
+                    break;
+
+
+                if (EUSART1_is_rx_ready()) {
+                    char tmp = EUSART1_Read();
+                    EUSART1_Write(tmp);
+
+                    if (isprint(tmp)) {
+                        buffer[index] = tmp;
+                        index++;
+                        buffer[index] = 0x00;
+                        if (index >= sizeof(actualSize)) {
+                            index--;
+                        }
+                    }
+
+                    if (tmp == '\n' || tmp == '\r') {
+                        index = 0;
+
+
+
+                    }
+                }
+                index++;
+                count++;
+            }
         } while (count <= actualSize);
 
     } else if ( server.multibleConnections ) {

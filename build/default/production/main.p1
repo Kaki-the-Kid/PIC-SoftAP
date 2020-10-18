@@ -1,76 +1,99 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"21 webserver/tcpip.h
-[; ;webserver/tcpip.h: 21: struct SERVER {
-[s S833 `a 1 `uc 1 `a 1 `uc 1 `*uc -> 20 `i `*uc -> 20 `i `*uc -> 20 `i `a 1 `a 1 `a 1 `uc -> 20 `i `uc -> 15 `i `uc 1 `a 1 `a 1 ]
-[n S833 SERVER busy wifiMode multibleConnections maxConnections ssid password encryption wificonnected wifigotip internet remote_ip local_ip running clientConnected clientAvailable ]
-"42 webserver/wifi.h
-[; ;webserver/wifi.h: 42: struct WIFIMode {
-[s S834 `uc 1 `uc 1 `uc 1 ]
-[n S834 WIFIMode stationMode softAPMode multibleConnections ]
+"21 ./webserver/tcpip.h
+[; ;./webserver/tcpip.h: 21: struct SERVER {
+[s S834 `a 1 `uc 1 `a 1 `uc 1 `*uc -> 20 `i `*uc -> 20 `i `*uc -> 20 `i `a 1 `a 1 `a 1 `uc -> 20 `i `uc -> 15 `i `uc 1 `a 1 `a 1 ]
+[n S834 SERVER busy wifiMode multibleConnections maxConnections ssid password encryption wificonnected wifigotip internet remote_ip local_ip running clientConnected clientAvailable ]
+"42 ./webserver/wifi.h
+[; ;./webserver/wifi.h: 42: struct WIFIMode {
+[s S835 `uc 1 `uc 1 `uc 1 ]
+[n S835 WIFIMode stationMode softAPMode multibleConnections ]
 "53
-[; ;webserver/wifi.h: 53: typedef struct item_t { char *ssid; char *password; char *encryption; } item_t;
-[s S835 `*uc 1 `*uc 1 `*uc 1 ]
-[n S835 item_t ssid password encryption ]
-"71 webserver/esp8266.h
-[; ;webserver/esp8266.h: 71: struct ESPUART {
+[; ;./webserver/wifi.h: 53: typedef struct item_t { char *ssid; char *password; char *encryption; } item_t;
+[s S836 `*uc 1 `*uc 1 `*uc 1 ]
+[n S836 item_t ssid password encryption ]
+"71 ./webserver/esp8266.h
+[; ;./webserver/esp8266.h: 71: struct ESPUART {
 [s S837 `l 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
 [n S837 ESPUART baudrate databits stopbits parity flowcontrol ]
 "80
-[; ;webserver/esp8266.h: 80: struct ESPFirmWare {
+[; ;./webserver/esp8266.h: 80: struct ESPFirmWare {
 [s S838 `*uc 1 `*uc 1 `*uc 1 `uc 1 ]
 [n S838 ESPFirmWare ATVersion SDKVersion BinVersion updated ]
 "90
-[; ;webserver/esp8266.h: 90: struct States {
+[; ;./webserver/esp8266.h: 90: struct States {
 [s S839 `a 1 `a 1 `a 1 ]
 [n S839 States ok error ready ]
-"113 C:\Program Files\Microchip\xc8\v2.30\pic\include\c99\stdio.h
-[v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
-"34 webserver/../lcd/lcd.h
-[; ;webserver/../lcd/lcd.h: 34: void lcd_write(char *, uint8_t, uint8_t);
-[v _lcd_write `(v ~T0 @X0 0 ef3`*uc`uc`uc ]
-"52 webserver/tcpip.h
-[; ;webserver/tcpip.h: 52: _Bool tcpip_setMaxConnections(uint8_t conn);
-[v _tcpip_setMaxConnections `(a ~T0 @X0 0 ef1`uc ]
-"62
-[; ;webserver/tcpip.h: 62: void tcpip_showIPDRemoteIP(uint8_t);
-[v _tcpip_showIPDRemoteIP `(v ~T0 @X0 0 ef1`uc ]
-"54
-[; ;webserver/tcpip.h: 54: _Bool tcpip_serverTCPIPBegin(uint16_t port);
-[v _tcpip_serverTCPIPBegin `(a ~T0 @X0 0 ef1`us ]
-"114 webserver/esp8266.h
-[; ;webserver/esp8266.h: 114: _Bool esp_waitForOK(void);
-[v _esp_waitForOK `(a ~T0 @X0 0 ef ]
-"111 C:\Program Files\Microchip\xc8\v2.30\pic\include\c99\stdio.h
-[v _printf `(i ~T0 @X0 0 ev`*Cuc ]
-"214 webserver/../mcc_generated_files/eusart1.h
-[; ;webserver/../mcc_generated_files/eusart1.h: 214: _Bool EUSART1_is_rx_ready(void);
-[v _EUSART1_is_rx_ready `(a ~T0 @X0 0 ef ]
-"329
-[; ;webserver/../mcc_generated_files/eusart1.h: 329: uint8_t EUSART1_Read(void);
-[v _EUSART1_Read `(uc ~T0 @X0 0 ef ]
-"349
-[; ;webserver/../mcc_generated_files/eusart1.h: 349: void EUSART1_Write(uint8_t txData);
-[v _EUSART1_Write `(v ~T0 @X0 0 ef1`uc ]
-"369 webserver/tcpip.c
-[; ;webserver/tcpip.c: 369:                     if (isprint(tmp)) {
-[v _isprint `(i ~T0 @X0 0 e? ]
-"81 webserver/tcpip.h
-[; ;webserver/tcpip.h: 81: void tcpip_sendHTTPHeader(void);
-[v _tcpip_sendHTTPHeader `(v ~T0 @X0 0 ef ]
-"82
-[; ;webserver/tcpip.h: 82: void tcpip_sendHTTPPage(void);
-[v _tcpip_sendHTTPPage `(v ~T0 @X0 0 ef ]
-"54 C:\Program Files\Microchip\xc8\v2.30\pic\include\c99\string.h
-[; ;C:\Program Files\Microchip\xc8\v2.30\pic\include\c99\string.h: 54: size_t strlen (const char *);
-[v _strlen `(ui ~T0 @X0 0 ef1`*Cuc ]
-[v F5708 `(v ~T0 @X0 1 tf1`ul ]
-"203 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\pic18.h
-[v __delay `JF5708 ~T0 @X0 0 e ]
-[p i __delay ]
-"983 webserver/tcpip.c
-[; ;webserver/tcpip.c: 983: struct GPIOState {
-[s S905 `uc 1 `uc 1 ]
-[n S905 GPIOState output4State output5State ]
+[p mainexit ]
+"72 ./mcc_generated_files/mcc.h
+[; ;./mcc_generated_files/mcc.h: 72: void SYSTEM_Initialize(void);
+[v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
+"16135 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k22.h
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k22.h: 16135:     struct {
+[s S801 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S801 . RBIF INT0IF TMR0IF RBIE INT0IE TMR0IE PEIE_GIEL GIE_GIEH ]
+"16145
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k22.h: 16145:     struct {
+[s S802 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S802 . . INT0F T0IF . INT0E T0IE PEIE GIE ]
+"16155
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k22.h: 16155:     struct {
+[s S803 :6 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S803 . . GIEL GIEH ]
+"16134
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k22.h: 16134: typedef union {
+[u S800 `S801 1 `S802 1 `S803 1 ]
+[n S800 . . . . ]
+"16161
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k22.h: 16161: extern volatile INTCONbits_t INTCONbits __attribute__((address(0xFF2)));
+[v _INTCONbits `VS800 ~T0 @X0 0 e@4082 ]
+"118 ./mcc_generated_files/eusart1.h
+[; ;./mcc_generated_files/eusart1.h: 118: void EUSART1_Initialize(void);
+[v _EUSART1_Initialize `(v ~T0 @X0 0 ef ]
+"104 ./mcc_generated_files/tmr2.h
+[; ;./mcc_generated_files/tmr2.h: 104: void TMR2_Initialize(void);
+[v _TMR2_Initialize `(v ~T0 @X0 0 ef ]
+[v F5762 `(v ~T0 @X0 0 tf ]
+"344
+[; ;./mcc_generated_files/tmr2.h: 344:  void TMR2_SetInterruptHandler(void (* InterruptHandler)(void));
+[v _TMR2_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F5762 ]
+"119 ./webserver/esp8266.h
+[; ;./webserver/esp8266.h: 119: void esp_adjustLeds(void);
+[v _esp_adjustLeds `(v ~T0 @X0 0 ef ]
+"34 ./webserver/../i2c/i2c.h
+[; ;./webserver/../i2c/i2c.h: 34: void i2c_init(void);
+[v _i2c_init `(v ~T0 @X0 0 ef ]
+"33 ./webserver/../lcd/lcd.h
+[; ;./webserver/../lcd/lcd.h: 33: void lcd_displayInit(void);
+[v _lcd_displayInit `(v ~T0 @X0 0 ef ]
+"33 C:\Program Files\Microchip\xc8\v2.30\pic\include\c99\string.h
+[; ;C:\Program Files\Microchip\xc8\v2.30\pic\include\c99\string.h: 33: char *strcpy (char *restrict, const char *restrict);
+[v _strcpy `(*uc ~T0 @X0 0 ef2`*uc`*Cuc ]
+"108 ./webserver/esp8266.h
+[; ;./webserver/esp8266.h: 108: void esp_echoOff(void);
+[v _esp_echoOff `(v ~T0 @X0 0 ef ]
+"32 ./webserver/wifi.h
+[; ;./webserver/wifi.h: 32: void wifi_setWifiMode(uint8_t);
+[v _wifi_setWifiMode `(v ~T0 @X0 0 ef1`uc ]
+"51 ./webserver/tcpip.h
+[; ;./webserver/tcpip.h: 51: void tcpip_setConnectionType(uint8_t);
+[v _tcpip_setConnectionType `(v ~T0 @X0 0 ef1`uc ]
+"60
+[; ;./webserver/tcpip.h: 60: void tcpip_setTCPReceiveMode(uint8_t);
+[v _tcpip_setTCPReceiveMode `(v ~T0 @X0 0 ef1`uc ]
+"37 ./webserver/wifi.h
+[; ;./webserver/wifi.h: 37: void wifi_connectToAP(void);
+[v _wifi_connectToAP `(v ~T0 @X0 0 ef ]
+"49 ./webserver/tcpip.h
+[; ;./webserver/tcpip.h: 49: void tcpip_serverSetup(void);
+[v _tcpip_serverSetup `(v ~T0 @X0 0 ef ]
+"34 ./webserver/softap.h
+[; ;./webserver/softap.h: 34: void softap_SoftAPInit(void);
+[v _softap_SoftAPInit `(v ~T0 @X0 0 ef ]
+"111 ./webserver/esp8266.h
+[; ;./webserver/esp8266.h: 111: uint8_t esp_uartReceive(char *);
+[v _esp_uartReceive `(uc ~T0 @X0 0 ef1`*uc ]
+"29 main.c
+[p n 520 ]
 "54 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k22.h
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k22.h: 54: __asm("ANSELA equ 0F38h");
 [; <" ANSELA equ 0F38h ;# ">
@@ -806,11 +829,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 "16609
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k22.h: 16609: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"42 webserver/tcpip.h
-[; ;webserver/tcpip.h: 42: server_t server;
-[v _server `S833 ~T0 @X0 1 e ]
+"42 ./webserver/tcpip.h
+[; ;./webserver/tcpip.h: 42: server_t server;
+[v _server `S834 ~T0 @X0 1 e ]
 "92
-[; ;webserver/tcpip.h: 92: const char htmlMsgPart1[] = "<!DOCTYPE html><html xmlns=\"http://www.w3.org/1999/xhtml\"><head><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><link rel=\"icon\" href=\"data:,\"><style>html { font-family: Helvetica; display: inline-block; margin: 0px auto; text-align: center;} .button { background-color: #195B6A; border: none; color: white; padding: 16px 40px; text-decoration: none; font-size: 30px; margin: 2px; cursor: pointer;} .button2 {background-color: #77878A;}</style></head><body><h1>ESP8266 Web Server</h1>";
+[; ;./webserver/tcpip.h: 92: const char htmlMsgPart1[] = "<!DOCTYPE html><html xmlns=\"http://www.w3.org/1999/xhtml\"><head><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><link rel=\"icon\" href=\"data:,\"><style>html { font-family: Helvetica; display: inline-block; margin: 0px auto; text-align: center;} .button { background-color: #195B6A; border: none; color: white; padding: 16px 40px; text-decoration: none; font-size: 30px; margin: 2px; cursor: pointer;} .button2 {background-color: #77878A;}</style></head><body><h1>ESP8266 Web Server</h1>";
 [v _htmlMsgPart1 `Cuc ~T0 @X0 -> 505 `i e ]
 [i _htmlMsgPart1
 :U ..
@@ -1321,12 +1344,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-"50 webserver/wifi.h
-[; ;webserver/wifi.h: 50: WIFIMode_t wifi;
-[v _wifi `S834 ~T0 @X0 1 e ]
+"50 ./webserver/wifi.h
+[; ;./webserver/wifi.h: 50: WIFIMode_t wifi;
+[v _wifi `S835 ~T0 @X0 1 e ]
 "54
-[; ;webserver/wifi.h: 54: item_t network_table[] = {
-[v _network_table `S835 ~T0 @X0 -> 5 `i e ]
+[; ;./webserver/wifi.h: 54: item_t network_table[] = {
+[v _network_table `S836 ~T0 @X0 -> 5 `i e ]
 [i _network_table
 :U ..
 :U ..
@@ -1356,53 +1379,53 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ..
 ]
-"25 webserver/softap.h
-[; ;webserver/softap.h: 25: const char* SOFTAP_SSIDNAME = "KRS_PIC_AP";
+"25 ./webserver/softap.h
+[; ;./webserver/softap.h: 25: const char* SOFTAP_SSIDNAME = "KRS_PIC_AP";
 [v _SOFTAP_SSIDNAME `*Cuc ~T0 @X0 1 e ]
 [i _SOFTAP_SSIDNAME
 :s 16C
 ]
 "26
-[; ;webserver/softap.h: 26: const char* SOFTAP_PASSWORD = "1234567890";
+[; ;./webserver/softap.h: 26: const char* SOFTAP_PASSWORD = "1234567890";
 [v _SOFTAP_PASSWORD `*Cuc ~T0 @X0 1 e ]
 [i _SOFTAP_PASSWORD
 :s 17C
 ]
 "27
-[; ;webserver/softap.h: 27: const uint8_t SOFTAP_CHANNELID = 3;
+[; ;./webserver/softap.h: 27: const uint8_t SOFTAP_CHANNELID = 3;
 [v _SOFTAP_CHANNELID `Cuc ~T0 @X0 1 e ]
 [i _SOFTAP_CHANNELID
 -> -> 3 `i `uc
 ]
 "28
-[; ;webserver/softap.h: 28: const uint8_t SOFTAP_ECN = 4;
+[; ;./webserver/softap.h: 28: const uint8_t SOFTAP_ECN = 4;
 [v _SOFTAP_ECN `Cuc ~T0 @X0 1 e ]
 [i _SOFTAP_ECN
 -> -> 4 `i `uc
 ]
 "29
-[; ;webserver/softap.h: 29: const uint8_t SOFTAP_MAXCONN = 1;
+[; ;./webserver/softap.h: 29: const uint8_t SOFTAP_MAXCONN = 1;
 [v _SOFTAP_MAXCONN `Cuc ~T0 @X0 1 e ]
 [i _SOFTAP_MAXCONN
 -> -> 1 `i `uc
 ]
 "30
-[; ;webserver/softap.h: 30: const uint8_t SOFTAP_HIDDEN = 0;
+[; ;./webserver/softap.h: 30: const uint8_t SOFTAP_HIDDEN = 0;
 [v _SOFTAP_HIDDEN `Cuc ~T0 @X0 1 e ]
 [i _SOFTAP_HIDDEN
 -> -> 0 `i `uc
 ]
-"32 webserver/../i2c/i2c.h
-[; ;webserver/../i2c/i2c.h: 32: uint8_t data_out[4];
+"32 ./webserver/../i2c/i2c.h
+[; ;./webserver/../i2c/i2c.h: 32: uint8_t data_out[4];
 [v _data_out `uc ~T0 @X0 -> 4 `i e ]
-"24 webserver/../lcd/lcd.h
-[; ;webserver/../lcd/lcd.h: 24: const uint8_t display_addr = 0b0111100;
+"24 ./webserver/../lcd/lcd.h
+[; ;./webserver/../lcd/lcd.h: 24: const uint8_t display_addr = 0b0111100;
 [v _display_addr `Cuc ~T0 @X0 1 e ]
 [i _display_addr
 -> -> 60 `i `uc
 ]
 "25
-[; ;webserver/../lcd/lcd.h: 25: const char display_init[] = {0x00, 0x38, 0x0C, 0x06};
+[; ;./webserver/../lcd/lcd.h: 25: const char display_init[] = {0x00, 0x38, 0x0C, 0x06};
 [v _display_init `Cuc ~T0 @X0 -> 4 `i e ]
 [i _display_init
 :U ..
@@ -1413,7 +1436,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 "26
-[; ;webserver/../lcd/lcd.h: 26: const char first_line[] = {0x00, 0x80};
+[; ;./webserver/../lcd/lcd.h: 26: const char first_line[] = {0x00, 0x80};
 [v _first_line `Cuc ~T0 @X0 -> 2 `i e ]
 [i _first_line
 :U ..
@@ -1422,7 +1445,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 "27
-[; ;webserver/../lcd/lcd.h: 27: const char shift_line[] = {0x00, 0xC0};
+[; ;./webserver/../lcd/lcd.h: 27: const char shift_line[] = {0x00, 0xC0};
 [v _shift_line `Cuc ~T0 @X0 -> 2 `i e ]
 [i _shift_line
 :U ..
@@ -1431,7 +1454,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 "28
-[; ;webserver/../lcd/lcd.h: 28: const char empty_line[] = "                ";
+[; ;./webserver/../lcd/lcd.h: 28: const char empty_line[] = "                ";
 [v _empty_line `Cuc ~T0 @X0 -> 17 `i e ]
 [i _empty_line
 :U ..
@@ -1455,1010 +1478,173 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 "29
-[; ;webserver/../lcd/lcd.h: 29: char text[50] = "";
+[; ;./webserver/../lcd/lcd.h: 29: char text[50] = "";
 [v _text `uc ~T0 @X0 -> 50 `i e ]
 [i _text
 :U ..
 -> 0 `c
 ..
 ]
-"68 webserver/esp8266.h
-[; ;webserver/esp8266.h: 68: uint8_t uartInput[128];
+"68 ./webserver/esp8266.h
+[; ;./webserver/esp8266.h: 68: uint8_t uartInput[128];
 [v _uartInput `uc ~T0 @X0 -> 128 `i e ]
 "78
-[; ;webserver/esp8266.h: 78: struct ESPUART uart;
+[; ;./webserver/esp8266.h: 78: struct ESPUART uart;
 [v _uart `S837 ~T0 @X0 1 e ]
 "88
-[; ;webserver/esp8266.h: 88: espfirmware_t firmware;
+[; ;./webserver/esp8266.h: 88: espfirmware_t firmware;
 [v _firmware `S838 ~T0 @X0 1 e ]
 "98
-[; ;webserver/esp8266.h: 98: states_t states;
+[; ;./webserver/esp8266.h: 98: states_t states;
 [v _states `S839 ~T0 @X0 1 e ]
-"38 webserver/tcpip.c
-[; ;webserver/tcpip.c: 38: void tcpip_serverSetup(void) {
-[v _tcpip_serverSetup `(v ~T0 @X0 1 ef ]
-{
-[e :U _tcpip_serverSetup ]
-[f ]
-[v F6484 `uc ~T0 @X0 -> 50 `i s ]
-[i F6484
-:U ..
-"39
-[; ;webserver/tcpip.c: 39:     char buffer[50] = "";
--> 0 `c
-..
-]
-[v _buffer `uc ~T0 @X0 -> 50 `i a ]
-[e = _buffer F6484 ]
-"41
-[; ;webserver/tcpip.c: 41:     sprintf(buffer, "@Connecting to:  ");
-[e ( _sprintf (1 , &U _buffer :s 18C ]
-"42
-[; ;webserver/tcpip.c: 42:     lcd_write(buffer, 1, 0);
-[e ( _lcd_write (3 , , &U _buffer -> -> 1 `i `uc -> -> 0 `i `uc ]
-"43
-[; ;webserver/tcpip.c: 43:     sprintf(buffer, "@%s", server.ssid);
-[e ( _sprintf (1 , (. , &U _buffer :s 19C &U . _server 4 ]
-"44
-[; ;webserver/tcpip.c: 44:     lcd_write(buffer, 2, 0);
-[e ( _lcd_write (3 , , &U _buffer -> -> 2 `i `uc -> -> 0 `i `uc ]
-"51
-[; ;webserver/tcpip.c: 51:     tcpip_setMaxConnections(1);
-[e ( _tcpip_setMaxConnections (1 -> -> 1 `i `uc ]
-"54
-[; ;webserver/tcpip.c: 54:     tcpip_showIPDRemoteIP(0);
-[e ( _tcpip_showIPDRemoteIP (1 -> -> 0 `i `uc ]
-"59
-[; ;webserver/tcpip.c: 59:     tcpip_serverTCPIPBegin(80);
-[e ( _tcpip_serverTCPIPBegin (1 -> -> 80 `i `us ]
-"60
-[; ;webserver/tcpip.c: 60:     if( esp_waitForOK() )
-[e $ ! != -> ( _esp_waitForOK ..  `i -> 0 `i 841  ]
-"61
-[; ;webserver/tcpip.c: 61:         server.running = 1;
-[e = . _server 12 -> -> 1 `i `uc ]
-[e $U 842  ]
-"62
-[; ;webserver/tcpip.c: 62:     else
-[e :U 841 ]
-"63
-[; ;webserver/tcpip.c: 63:         server.running = 0;
-[e = . _server 12 -> -> 0 `i `uc ]
-[e :U 842 ]
+[v $root$_main `(v ~T0 @X0 0 e ]
+"63 main.c
+[; ;main.c: 63: void main(void)
+[v _main `(v ~T0 @X0 1 ef ]
 "64
-[; ;webserver/tcpip.c: 64: }
-[e :UE 840 ]
-}
-"91
-[; ;webserver/tcpip.c: 91: _Bool tcpip_serverTCPIPBegin(uint16_t port) {
-[v _tcpip_serverTCPIPBegin `(a ~T0 @X0 1 ef1`us ]
+[; ;main.c: 64: {
 {
-[e :U _tcpip_serverTCPIPBegin ]
-[v _port `us ~T0 @X0 1 r1 ]
+[e :U _main ]
 [f ]
+"66
+[; ;main.c: 66:     SYSTEM_Initialize();
+[e ( _SYSTEM_Initialize ..  ]
+"67
+[; ;main.c: 67:     (INTCONbits.GIE = 1);
+[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
+"69
+[; ;main.c: 69:     (INTCONbits.PEIE = 1);
+[e = . . _INTCONbits 1 6 -> -> 1 `i `uc ]
+"73
+[; ;main.c: 73:     EUSART1_Initialize();
+[e ( _EUSART1_Initialize ..  ]
+"76
+[; ;main.c: 76:     TMR2_Initialize();
+[e ( _TMR2_Initialize ..  ]
+"77
+[; ;main.c: 77:     TMR2_SetInterruptHandler(esp_adjustLeds);
+[e ( _TMR2_SetInterruptHandler (1 &U _esp_adjustLeds ]
+"84
+[; ;main.c: 84:     i2c_init();
+[e ( _i2c_init ..  ]
+"85
+[; ;main.c: 85:     lcd_displayInit();
+[e ( _lcd_displayInit ..  ]
+"91
+[; ;main.c: 91:     do { states.ok = 0; states.error = 0; states.ready = 0; } while (0);;
+[e :U 843 ]
+{
+[e = . _states 0 -> -> 0 `i `a ]
+[e = . _states 1 -> -> 0 `i `a ]
+[e = . _states 2 -> -> 0 `i `a ]
+}
+[e :U 842 ]
 "92
-[; ;webserver/tcpip.c: 92:     if (port==80 || port==333) {
-[e $ ! || == -> _port `ui -> -> 80 `i `ui == -> _port `ui -> -> 333 `i `ui 844  ]
-{
-"93
-[; ;webserver/tcpip.c: 93:         printf("AT+CIPSERVER=1,%d\r\n", port);
-[e ( _printf , (. :s 20C -> _port `ui ]
-"94
-[; ;webserver/tcpip.c: 94:         if( esp_waitForOK() ) {
-[e $ ! != -> ( _esp_waitForOK ..  `i -> 0 `i 845  ]
-{
-"95
-[; ;webserver/tcpip.c: 95:             return 1;
-[e ) -> -> 1 `i `a ]
-[e $UE 843  ]
-"96
-[; ;webserver/tcpip.c: 96:         } else {
-}
-[e $U 846  ]
-[e :U 845 ]
-{
-"97
-[; ;webserver/tcpip.c: 97:             return 0;
-[e ) -> -> 0 `i `a ]
-[e $UE 843  ]
-"98
-[; ;webserver/tcpip.c: 98:         }
-}
+[; ;main.c: 92:     do { strcpy((char*)server.ssid, ""); server.wifiMode = 1; server.multibleConnections = 1; server.maxConnections = 1; server.wificonnected = 0; server.wifigotip = 0; server.internet = 0; server.running = 0;} while (0);;
 [e :U 846 ]
+{
+[e ( _strcpy (2 , -> &U . _server 4 `*uc :s 18C ]
+[e = . _server 1 -> -> 1 `i `uc ]
+[e = . _server 2 -> -> 1 `i `a ]
+[e = . _server 3 -> -> 1 `i `uc ]
+[e = . _server 7 -> -> 0 `i `a ]
+[e = . _server 8 -> -> 0 `i `a ]
+[e = . _server 9 -> -> 0 `i `a ]
+[e = . _server 12 -> -> 0 `i `uc ]
+}
+[e :U 845 ]
+"96
+[; ;main.c: 96:     esp_echoOff();
+[e ( _esp_echoOff ..  ]
 "99
-[; ;webserver/tcpip.c: 99:     } else {
+[; ;main.c: 99:     server.wifiMode = 3;
+[e = . _server 1 -> -> 3 `i `uc ]
+"100
+[; ;main.c: 100:     wifi_setWifiMode(server.wifiMode);
+[e ( _wifi_setWifiMode (1 . _server 1 ]
+"101
+[; ;main.c: 101:     tcpip_setConnectionType(1);
+[e ( _tcpip_setConnectionType (1 -> -> 1 `i `uc ]
+"102
+[; ;main.c: 102:     tcpip_setTCPReceiveMode(1);
+[e ( _tcpip_setTCPReceiveMode (1 -> -> 1 `i `uc ]
+"105
+[; ;main.c: 105:     switch (server.wifiMode){
+[e $U 848  ]
+{
+"106
+[; ;main.c: 106:         case 1:
+[e :U 849 ]
+"107
+[; ;main.c: 107:             wifi_connectToAP();
+[e ( _wifi_connectToAP ..  ]
+"108
+[; ;main.c: 108:             tcpip_serverSetup();
+[e ( _tcpip_serverSetup ..  ]
+"109
+[; ;main.c: 109:             break;
+[e $U 847  ]
+"110
+[; ;main.c: 110:         case 2:
+[e :U 850 ]
+"111
+[; ;main.c: 111:             softap_SoftAPInit();
+[e ( _softap_SoftAPInit ..  ]
+"112
+[; ;main.c: 112:             tcpip_serverSetup();
+[e ( _tcpip_serverSetup ..  ]
+"113
+[; ;main.c: 113:             break;
+[e $U 847  ]
+"114
+[; ;main.c: 114:         case 3:
+[e :U 851 ]
+"115
+[; ;main.c: 115:             wifi_connectToAP();
+[e ( _wifi_connectToAP ..  ]
+"116
+[; ;main.c: 116:             softap_SoftAPInit();
+[e ( _softap_SoftAPInit ..  ]
+"117
+[; ;main.c: 117:             tcpip_serverSetup();
+[e ( _tcpip_serverSetup ..  ]
+"118
+[; ;main.c: 118:             break;
+[e $U 847  ]
+"119
+[; ;main.c: 119:         default:
+[e :U 852 ]
+"120
+[; ;main.c: 120:             break;
+[e $U 847  ]
+"121
+[; ;main.c: 121:     }
 }
 [e $U 847  ]
-[e :U 844 ]
-{
-"100
-[; ;webserver/tcpip.c: 100:         return 0;
-[e ) -> -> 0 `i `a ]
-[e $UE 843  ]
-"101
-[; ;webserver/tcpip.c: 101:     }
-}
+[e :U 848 ]
+[e [\ -> . _server 1 `i , $ -> 1 `i 849
+ , $ -> 2 `i 850
+ , $ -> 3 `i 851
+ 852 ]
 [e :U 847 ]
-"102
-[; ;webserver/tcpip.c: 102: }
-[e :UE 843 ]
-}
-"105
-[; ;webserver/tcpip.c: 105: void tcpip_serverTCPIPStop(void) {
-[v _tcpip_serverTCPIPStop `(v ~T0 @X0 1 ef ]
-{
-[e :U _tcpip_serverTCPIPStop ]
-[f ]
-"106
-[; ;webserver/tcpip.c: 106:     printf("AT+CIPSERVER=0\r\n");
-[e ( _printf :s 21C ]
-"107
-[; ;webserver/tcpip.c: 107:     esp_waitForOK();
-[e ( _esp_waitForOK ..  ]
-"108
-[; ;webserver/tcpip.c: 108: }
-[e :UE 848 ]
-}
-"139
-[; ;webserver/tcpip.c: 139: void tcpip_setConnectionType(uint8_t multibleConnections) {
-[v _tcpip_setConnectionType `(v ~T0 @X0 1 ef1`uc ]
-{
-[e :U _tcpip_setConnectionType ]
-[v _multibleConnections `uc ~T0 @X0 1 r1 ]
-[f ]
-"140
-[; ;webserver/tcpip.c: 140:     server.multibleConnections = multibleConnections;
-[e = . _server 2 -> _multibleConnections `a ]
-"142
-[; ;webserver/tcpip.c: 142:     printf("AT+CIPMUX=%d\r\n", multibleConnections);
-[e ( _printf , (. :s 22C -> _multibleConnections `i ]
-"143
-[; ;webserver/tcpip.c: 143:     do { esp_waitForOK(); } while( server.busy );
-[e :U 852 ]
-{
-[e ( _esp_waitForOK ..  ]
-}
-[e $ != -> . _server 0 `i -> 0 `i 852  ]
-[e :U 851 ]
-"144
-[; ;webserver/tcpip.c: 144: }
-[e :UE 849 ]
-}
-"172
-[; ;webserver/tcpip.c: 172: _Bool tcpip_setMaxConnections(uint8_t conn) {
-[v _tcpip_setMaxConnections `(a ~T0 @X0 1 ef1`uc ]
-{
-[e :U _tcpip_setMaxConnections ]
-[v _conn `uc ~T0 @X0 1 r1 ]
-[f ]
-"173
-[; ;webserver/tcpip.c: 173:     if (conn>=1 && conn <=5 ) {
-[e $ ! && >= -> _conn `i -> 1 `i <= -> _conn `i -> 5 `i 854  ]
-{
-"174
-[; ;webserver/tcpip.c: 174:         printf("AT+CIPSERVERMAXCONN=%d\r\n", conn);
-[e ( _printf , (. :s 23C -> _conn `i ]
-"175
-[; ;webserver/tcpip.c: 175:         if( esp_waitForOK() )
-[e $ ! != -> ( _esp_waitForOK ..  `i -> 0 `i 855  ]
-"176
-[; ;webserver/tcpip.c: 176:             return 1;
-[e ) -> -> 1 `i `a ]
-[e $UE 853  ]
-[e $U 856  ]
-"177
-[; ;webserver/tcpip.c: 177:         else
-[e :U 855 ]
-"178
-[; ;webserver/tcpip.c: 178:             return 0;
-[e ) -> -> 0 `i `a ]
-[e $UE 853  ]
-[e :U 856 ]
-"179
-[; ;webserver/tcpip.c: 179:     } else {
-}
-[e $U 857  ]
+"124
+[; ;main.c: 124:     while (1) {
 [e :U 854 ]
 {
-"180
-[; ;webserver/tcpip.c: 180:         return 0;
-[e ) -> -> 0 `i `a ]
-[e $UE 853  ]
-"181
-[; ;webserver/tcpip.c: 181:     }
+"125
+[; ;main.c: 125:         esp_uartReceive(0);
+[e ( _esp_uartReceive (1 -> -> 0 `i `*uc ]
+"126
+[; ;main.c: 126:     }
 }
-[e :U 857 ]
-"182
-[; ;webserver/tcpip.c: 182: }
-[e :UE 853 ]
+[e :U 853 ]
+[e $U 854  ]
+[e :U 855 ]
+"127
+[; ;main.c: 127: }
+[e :UE 840 ]
 }
-"202
-[; ;webserver/tcpip.c: 202: uint8_t dataLengthCon1 = 0;
-[v _dataLengthCon1 `uc ~T0 @X0 1 e ]
-[i _dataLengthCon1
--> -> 0 `i `uc
-]
-"203
-[; ;webserver/tcpip.c: 203: uint8_t dataLengthCon2 = 0;
-[v _dataLengthCon2 `uc ~T0 @X0 1 e ]
-[i _dataLengthCon2
--> -> 0 `i `uc
-]
-"204
-[; ;webserver/tcpip.c: 204: uint8_t dataLengthCon3 = 0;
-[v _dataLengthCon3 `uc ~T0 @X0 1 e ]
-[i _dataLengthCon3
--> -> 0 `i `uc
-]
-"205
-[; ;webserver/tcpip.c: 205: uint8_t dataLengthCon4 = 0;
-[v _dataLengthCon4 `uc ~T0 @X0 1 e ]
-[i _dataLengthCon4
--> -> 0 `i `uc
-]
-"206
-[; ;webserver/tcpip.c: 206: uint8_t dataLengthCon5 = 0;
-[v _dataLengthCon5 `uc ~T0 @X0 1 e ]
-[i _dataLengthCon5
--> -> 0 `i `uc
-]
-"208
-[; ;webserver/tcpip.c: 208: void tcpip_getDataLength(void) {
-[v _tcpip_getDataLength `(v ~T0 @X0 1 ef ]
-{
-[e :U _tcpip_getDataLength ]
-[f ]
-"211
-[; ;webserver/tcpip.c: 211:     printf("AT+CIPRECVLEN?\r\n");
-[e ( _printf :s 24C ]
-"213
-[; ;webserver/tcpip.c: 213: }
-[e :UE 858 ]
-}
-"242
-[; ;webserver/tcpip.c: 242: void tcpip_closeTCPIPMode(void) {
-[v _tcpip_closeTCPIPMode `(v ~T0 @X0 1 ef ]
-{
-[e :U _tcpip_closeTCPIPMode ]
-[f ]
-"244
-[; ;webserver/tcpip.c: 244: }
-[e :UE 859 ]
-}
-"264
-[; ;webserver/tcpip.c: 264: void tcpip_closeTCPIPConnection(void) {
-[v _tcpip_closeTCPIPConnection `(v ~T0 @X0 1 ef ]
-{
-[e :U _tcpip_closeTCPIPConnection ]
-[f ]
-"265
-[; ;webserver/tcpip.c: 265: }
-[e :UE 860 ]
-}
-"300
-[; ;webserver/tcpip.c: 300: void tcpip_setTCPReceiveMode(uint8_t mode) {
-[v _tcpip_setTCPReceiveMode `(v ~T0 @X0 1 ef1`uc ]
-{
-[e :U _tcpip_setTCPReceiveMode ]
-[v _mode `uc ~T0 @X0 1 r1 ]
-[f ]
-"301
-[; ;webserver/tcpip.c: 301:     if(mode == 0 || mode == 1) {
-[e $ ! || == -> _mode `i -> 0 `i == -> _mode `i -> 1 `i 862  ]
-{
-"302
-[; ;webserver/tcpip.c: 302:         printf("AT+CIPRECVMODE=%d\r\n", mode);
-[e ( _printf , (. :s 25C -> _mode `i ]
-"303
-[; ;webserver/tcpip.c: 303:     }
-}
-[e :U 862 ]
-"304
-[; ;webserver/tcpip.c: 304:     do { esp_waitForOK(); }while( server.busy );
-[e :U 865 ]
-{
-[e ( _esp_waitForOK ..  ]
-}
-[e $ != -> . _server 0 `i -> 0 `i 865  ]
-[e :U 864 ]
-"305
-[; ;webserver/tcpip.c: 305: }
-[e :UE 861 ]
-}
-"338
-[; ;webserver/tcpip.c: 338: void tcpip_PassiveReceive(void) {
-[v _tcpip_PassiveReceive `(v ~T0 @X0 1 ef ]
-{
-[e :U _tcpip_PassiveReceive ]
-[f ]
-"340
-[; ;webserver/tcpip.c: 340:     char buffer[64];
-[v _buffer `uc ~T0 @X0 -> 64 `i a ]
-"341
-[; ;webserver/tcpip.c: 341:     uint16_t count = 0;
-[v _count `us ~T0 @X0 1 a ]
-[e = _count -> -> 0 `i `us ]
-"342
-[; ;webserver/tcpip.c: 342:     uint16_t bufferSize = 0;
-[v _bufferSize `us ~T0 @X0 1 a ]
-[e = _bufferSize -> -> 0 `i `us ]
-"343
-[; ;webserver/tcpip.c: 343:     uint16_t actualSize = 0;
-[v _actualSize `us ~T0 @X0 1 a ]
-[e = _actualSize -> -> 0 `i `us ]
-"344
-[; ;webserver/tcpip.c: 344:     uint8_t line[80];
-[v _line `uc ~T0 @X0 -> 80 `i a ]
-"353
-[; ;webserver/tcpip.c: 353:     if(server.clientConnected){
-[e $ ! != -> . _server 13 `i -> 0 `i 867  ]
-{
-"355
-[; ;webserver/tcpip.c: 355:         printf("AT+CIPRECVDATA=64\r\n");
-[e ( _printf :s 26C ]
-"357
-[; ;webserver/tcpip.c: 357:         do {
-[e :U 870 ]
-{
-"358
-[; ;webserver/tcpip.c: 358:             uint8_t index = 0;
-[v _index `uc ~T0 @X0 1 a ]
-[e = _index -> -> 0 `i `uc ]
-"360
-[; ;webserver/tcpip.c: 360:             while(index <= 64) {
-[e $U 871  ]
-[e :U 872 ]
-{
-"361
-[; ;webserver/tcpip.c: 361:                 if(count <= actualSize)
-[e $ ! <= -> _count `ui -> _actualSize `ui 874  ]
-"362
-[; ;webserver/tcpip.c: 362:                     break;
-[e $U 873  ]
-[e :U 874 ]
-"365
-[; ;webserver/tcpip.c: 365:                 if (EUSART1_is_rx_ready()) {
-[e $ ! != -> ( _EUSART1_is_rx_ready ..  `i -> 0 `i 875  ]
-{
-"366
-[; ;webserver/tcpip.c: 366:                     char tmp = EUSART1_Read();
-[v _tmp `uc ~T0 @X0 1 a ]
-[e = _tmp -> ( _EUSART1_Read ..  `uc ]
-"367
-[; ;webserver/tcpip.c: 367:                     EUSART1_Write(tmp);
-[e ( _EUSART1_Write (1 -> _tmp `uc ]
-"369
-[; ;webserver/tcpip.c: 369:                     if (isprint(tmp)) {
-[e $ ! != ( _isprint -> _tmp `i -> 0 `i 876  ]
-{
-"370
-[; ;webserver/tcpip.c: 370:                         buffer[index] = tmp;
-[e = *U + &U _buffer * -> _index `ux -> -> # *U &U _buffer `ui `ux _tmp ]
-"371
-[; ;webserver/tcpip.c: 371:                         index++;
-[e ++ _index -> -> 1 `i `uc ]
-"372
-[; ;webserver/tcpip.c: 372:                         buffer[index] = 0x00;
-[e = *U + &U _buffer * -> _index `ux -> -> # *U &U _buffer `ui `ux -> -> 0 `i `uc ]
-"373
-[; ;webserver/tcpip.c: 373:                         if (index >= sizeof(actualSize)) {
-[e $ ! >= -> _index `ui -> # _actualSize `ui 877  ]
-{
-"374
-[; ;webserver/tcpip.c: 374:                             index--;
-[e -- _index -> -> 1 `i `uc ]
-"375
-[; ;webserver/tcpip.c: 375:                         }
-}
-[e :U 877 ]
-"376
-[; ;webserver/tcpip.c: 376:                     }
-}
-[e :U 876 ]
-"378
-[; ;webserver/tcpip.c: 378:                     if (tmp == '\n' || tmp == '\r') {
-[e $ ! || == -> _tmp `ui -> 10 `ui == -> _tmp `ui -> 13 `ui 878  ]
-{
-"379
-[; ;webserver/tcpip.c: 379:                         index = 0;
-[e = _index -> -> 0 `i `uc ]
-"383
-[; ;webserver/tcpip.c: 383:                     }
-}
-[e :U 878 ]
-"384
-[; ;webserver/tcpip.c: 384:                 }
-}
-[e :U 875 ]
-"385
-[; ;webserver/tcpip.c: 385:                 index++;
-[e ++ _index -> -> 1 `i `uc ]
-"386
-[; ;webserver/tcpip.c: 386:                 count++;
-[e ++ _count -> -> 1 `i `us ]
-"387
-[; ;webserver/tcpip.c: 387:             }
-}
-[e :U 871 ]
-"360
-[; ;webserver/tcpip.c: 360:             while(index <= 64) {
-[e $ <= -> _index `i -> 64 `i 872  ]
-[e :U 873 ]
-"388
-[; ;webserver/tcpip.c: 388:         } while (count <= actualSize);
-}
-[e $ <= -> _count `ui -> _actualSize `ui 870  ]
-[e :U 869 ]
-"390
-[; ;webserver/tcpip.c: 390:     } else if ( server.multibleConnections ) {
-}
-[e $U 879  ]
-[e :U 867 ]
-[e $ ! != -> . _server 2 `i -> 0 `i 880  ]
-{
-"391
-[; ;webserver/tcpip.c: 391:         for(uint8_t clients = 1; clients<=5; clients++) {
-{
-[v _clients `uc ~T0 @X0 1 a ]
-[e = _clients -> -> 1 `i `uc ]
-[e $ <= -> _clients `i -> 5 `i 881  ]
-[e $U 882  ]
-[e :U 881 ]
-{
-"393
-[; ;webserver/tcpip.c: 393:         }
-}
-[e ++ _clients -> -> 1 `i `uc ]
-[e $ <= -> _clients `i -> 5 `i 881  ]
-[e :U 882 ]
-}
-"394
-[; ;webserver/tcpip.c: 394:     } else {
-}
-[e $U 884  ]
-[e :U 880 ]
-{
-[v F6513 `uc ~T0 @X0 -> 39 `i s ]
-[i F6513
-:U ..
-"395
-[; ;webserver/tcpip.c: 395:         char msg[] = "Kunne ikke hente data fra ESP buffer\r\n";
--> 75 `c
--> 117 `c
--> 110 `c
--> 110 `c
--> 101 `c
--> 32 `c
--> 105 `c
--> 107 `c
--> 107 `c
--> 101 `c
--> 32 `c
--> 104 `c
--> 101 `c
--> 110 `c
--> 116 `c
--> 101 `c
--> 32 `c
--> 100 `c
--> 97 `c
--> 116 `c
--> 97 `c
--> 32 `c
--> 102 `c
--> 114 `c
--> 97 `c
--> 32 `c
--> 69 `c
--> 83 `c
--> 80 `c
--> 32 `c
--> 98 `c
--> 117 `c
--> 102 `c
--> 102 `c
--> 101 `c
--> 114 `c
--> 13 `c
--> 10 `c
--> 0 `c
-..
-]
-[v _msg `uc ~T0 @X0 -> 39 `i a ]
-[e = _msg F6513 ]
-"397
-[; ;webserver/tcpip.c: 397:     }
-}
-[e :U 884 ]
-[e :U 879 ]
-"398
-[; ;webserver/tcpip.c: 398: }
-[e :UE 866 ]
-}
-"469
-[; ;webserver/tcpip.c: 469: void tcpip_showIPDRemoteIP(uint8_t mode) {
-[v _tcpip_showIPDRemoteIP `(v ~T0 @X0 1 ef1`uc ]
-{
-[e :U _tcpip_showIPDRemoteIP ]
-[v _mode `uc ~T0 @X0 1 r1 ]
-[f ]
-"470
-[; ;webserver/tcpip.c: 470:     printf("AT+CIPDINFO=%d\r\n", mode);
-[e ( _printf , (. :s 27C -> _mode `i ]
-"471
-[; ;webserver/tcpip.c: 471:     do { esp_waitForOK(); } while( server.busy );
-[e :U 888 ]
-{
-[e ( _esp_waitForOK ..  ]
-}
-[e $ != -> . _server 0 `i -> 0 `i 888  ]
-[e :U 887 ]
-"472
-[; ;webserver/tcpip.c: 472: }
-[e :UE 885 ]
-}
-"721
-[; ;webserver/tcpip.c: 721: void tcpip_getLocalIP(void) {
-[v _tcpip_getLocalIP `(v ~T0 @X0 1 ef ]
-{
-[e :U _tcpip_getLocalIP ]
-[f ]
-"722
-[; ;webserver/tcpip.c: 722:     printf("AT+CIFSR\r\n");
-[e ( _printf :s 28C ]
-"724
-[; ;webserver/tcpip.c: 724: }
-[e :UE 889 ]
-}
-"727
-[; ;webserver/tcpip.c: 727: void tcpip_getStationMac(void) {
-[v _tcpip_getStationMac `(v ~T0 @X0 1 ef ]
-{
-[e :U _tcpip_getStationMac ]
-[f ]
-"728
-[; ;webserver/tcpip.c: 728:     printf("AT+CIFSR\r\n");
-[e ( _printf :s 29C ]
-"730
-[; ;webserver/tcpip.c: 730: }
-[e :UE 890 ]
-}
-"733
-[; ;webserver/tcpip.c: 733: void tcpip_getSoftAPIP(void) {
-[v _tcpip_getSoftAPIP `(v ~T0 @X0 1 ef ]
-{
-[e :U _tcpip_getSoftAPIP ]
-[f ]
-"734
-[; ;webserver/tcpip.c: 734:     printf("AT+CIFSR\r\n");
-[e ( _printf :s 30C ]
-"736
-[; ;webserver/tcpip.c: 736: }
-[e :UE 891 ]
-}
-"739
-[; ;webserver/tcpip.c: 739: void tcpip_getSoftAPMac(void) {
-[v _tcpip_getSoftAPMac `(v ~T0 @X0 1 ef ]
-{
-[e :U _tcpip_getSoftAPMac ]
-[f ]
-"740
-[; ;webserver/tcpip.c: 740:     printf("AT+CIFSR\r\n");
-[e ( _printf :s 31C ]
-"742
-[; ;webserver/tcpip.c: 742: }
-[e :UE 892 ]
-}
-"745
-[; ;webserver/tcpip.c: 745: void tcpip_getStationGateway(void) {
-[v _tcpip_getStationGateway `(v ~T0 @X0 1 ef ]
-{
-[e :U _tcpip_getStationGateway ]
-[f ]
-"746
-[; ;webserver/tcpip.c: 746:     printf("AT_CWDHCPS?;");
-[e ( _printf :s 32C ]
-"748
-[; ;webserver/tcpip.c: 748: }
-[e :UE 893 ]
-}
-"751
-[; ;webserver/tcpip.c: 751: void tcpip_getStationNetmask(void) {
-[v _tcpip_getStationNetmask `(v ~T0 @X0 1 ef ]
-{
-[e :U _tcpip_getStationNetmask ]
-[f ]
-"752
-[; ;webserver/tcpip.c: 752:     printf("AT_CWDHCPS?;");
-[e ( _printf :s 33C ]
-"754
-[; ;webserver/tcpip.c: 754: }
-[e :UE 894 ]
-}
-"805
-[; ;webserver/tcpip.c: 805: void tcpip_checkInternet(void) {
-[v _tcpip_checkInternet `(v ~T0 @X0 1 ef ]
-{
-[e :U _tcpip_checkInternet ]
-[f ]
-"806
-[; ;webserver/tcpip.c: 806:     printf("AT+PING=\"https://www.google.com/\"\r\n");
-[e ( _printf :s 34C ]
-"807
-[; ;webserver/tcpip.c: 807:     if( esp_waitForOK() ) {
-[e $ ! != -> ( _esp_waitForOK ..  `i -> 0 `i 896  ]
-{
-"808
-[; ;webserver/tcpip.c: 808:         server.internet = 1;
-[e = . _server 9 -> -> 1 `i `a ]
-"809
-[; ;webserver/tcpip.c: 809:     } else {
-}
-[e $U 897  ]
-[e :U 896 ]
-{
-"810
-[; ;webserver/tcpip.c: 810:         server.internet = 0;
-[e = . _server 9 -> -> 0 `i `a ]
-"811
-[; ;webserver/tcpip.c: 811:     }
-}
-[e :U 897 ]
-"812
-[; ;webserver/tcpip.c: 812: }
-[e :UE 895 ]
-}
-"939
-[; ;webserver/tcpip.c: 939: void tcpip_serverPage(void) {
-[v _tcpip_serverPage `(v ~T0 @X0 1 ef ]
-{
-[e :U _tcpip_serverPage ]
-[f ]
-"940
-[; ;webserver/tcpip.c: 940:     char msg[16];
-[v _msg `uc ~T0 @X0 -> 16 `i a ]
-"942
-[; ;webserver/tcpip.c: 942:     uint8_t client=1;
-[v _client `uc ~T0 @X0 1 a ]
-[e = _client -> -> 1 `i `uc ]
-"944
-[; ;webserver/tcpip.c: 944:     if( server.clientConnected && server.clientAvailable) {
-[e $ ! && != -> . _server 13 `i -> 0 `i != -> . _server 14 `i -> 0 `i 899  ]
-{
-"945
-[; ;webserver/tcpip.c: 945:         lcd_write("@Ny klient", 0, 0);
-[e ( _lcd_write (3 , , :s 35C -> -> 0 `i `uc -> -> 0 `i `uc ]
-"950
-[; ;webserver/tcpip.c: 950:         while ( server.clientConnected ) {
-[e $U 900  ]
-[e :U 901 ]
-{
-"954
-[; ;webserver/tcpip.c: 954:             if ( server.clientAvailable ) {
-[e $ ! != -> . _server 14 `i -> 0 `i 903  ]
-{
-"955
-[; ;webserver/tcpip.c: 955:                 tcpip_sendHTTPHeader();
-[e ( _tcpip_sendHTTPHeader ..  ]
-"957
-[; ;webserver/tcpip.c: 957:                 tcpip_sendHTTPPage();
-[e ( _tcpip_sendHTTPPage ..  ]
-"958
-[; ;webserver/tcpip.c: 958:             }
-}
-[e :U 903 ]
-"961
-[; ;webserver/tcpip.c: 961:             printf("AT+CIPCLOSE=0\r\n");
-[e ( _printf :s 36C ]
-"962
-[; ;webserver/tcpip.c: 962:             break;
-[e $U 902  ]
-"963
-[; ;webserver/tcpip.c: 963:         }
-}
-[e :U 900 ]
-"950
-[; ;webserver/tcpip.c: 950:         while ( server.clientConnected ) {
-[e $ != -> . _server 13 `i -> 0 `i 901  ]
-[e :U 902 ]
-"964
-[; ;webserver/tcpip.c: 964:     }
-}
-[e :U 899 ]
-"966
-[; ;webserver/tcpip.c: 966:     sprintf(msg, "@Klient afbrudt");
-[e ( _sprintf (1 , &U _msg :s 37C ]
-"967
-[; ;webserver/tcpip.c: 967:     lcd_write(msg, 0, 0);
-[e ( _lcd_write (3 , , &U _msg -> -> 0 `i `uc -> -> 0 `i `uc ]
-"968
-[; ;webserver/tcpip.c: 968:     printf("");
-[e ( _printf :s 38C ]
-"969
-[; ;webserver/tcpip.c: 969: }
-[e :UE 898 ]
-}
-"972
-[; ;webserver/tcpip.c: 972: void tcpip_sendHTTPHeader(void) {
-[v _tcpip_sendHTTPHeader `(v ~T0 @X0 1 ef ]
-{
-[e :U _tcpip_sendHTTPHeader ]
-[f ]
-[v F6529 `Cuc ~T0 @X0 -> 59 `i s ]
-[i F6529
-:U ..
-"975
-[; ;webserver/tcpip.c: 975:     const char headerMsg[] = { "HTTP/1.1 200 OK\nContent-type:text/html\nConnection: close\n\n" };
--> 72 `c
--> 84 `c
--> 84 `c
--> 80 `c
--> 47 `c
--> 49 `c
--> 46 `c
--> 49 `c
--> 32 `c
--> 50 `c
--> 48 `c
--> 48 `c
--> 32 `c
--> 79 `c
--> 75 `c
--> 10 `c
--> 67 `c
--> 111 `c
--> 110 `c
--> 116 `c
--> 101 `c
--> 110 `c
--> 116 `c
--> 45 `c
--> 116 `c
--> 121 `c
--> 112 `c
--> 101 `c
--> 58 `c
--> 116 `c
--> 101 `c
--> 120 `c
--> 116 `c
--> 47 `c
--> 104 `c
--> 116 `c
--> 109 `c
--> 108 `c
--> 10 `c
--> 67 `c
--> 111 `c
--> 110 `c
--> 110 `c
--> 101 `c
--> 99 `c
--> 116 `c
--> 105 `c
--> 111 `c
--> 110 `c
--> 58 `c
--> 32 `c
--> 99 `c
--> 108 `c
--> 111 `c
--> 115 `c
--> 101 `c
--> 10 `c
--> 10 `c
--> 0 `c
-..
-]
-[v _headerMsg `Cuc ~T0 @X0 -> 59 `i a ]
-[e = _headerMsg F6529 ]
-"976
-[; ;webserver/tcpip.c: 976:     printf("AT+CIPSEND=0,%d\r\n", strlen(headerMsg) );
-[e ( _printf , (. :s 39C ( _strlen (1 &U _headerMsg ]
-"977
-[; ;webserver/tcpip.c: 977:     _delay((unsigned long)((70)*(64000000/4000.0)));
-[e ( __delay (1 -> * -> -> 70 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
-"978
-[; ;webserver/tcpip.c: 978:     printf(headerMsg);
-[e ( _printf &U _headerMsg ]
-"979
-[; ;webserver/tcpip.c: 979:     _delay((unsigned long)((70)*(64000000/4000.0)));
-[e ( __delay (1 -> * -> -> 70 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
-"980
-[; ;webserver/tcpip.c: 980: }
-[e :UE 904 ]
-}
-"990
-[; ;webserver/tcpip.c: 990: gpiostate_t gpio;
-[v _gpio `S905 ~T0 @X0 1 e ]
-"992
-[; ;webserver/tcpip.c: 992: void tcpip_sendHTTPPage(void) {
-[v _tcpip_sendHTTPPage `(v ~T0 @X0 1 ef ]
-{
-[e :U _tcpip_sendHTTPPage ]
-[f ]
-"993
-[; ;webserver/tcpip.c: 993:     char tmp[60];
-[v _tmp `uc ~T0 @X0 -> 60 `i a ]
-"994
-[; ;webserver/tcpip.c: 994:     unsigned int len = 0;
-[v _len `ui ~T0 @X0 1 a ]
-[e = _len -> -> 0 `i `ui ]
-"996
-[; ;webserver/tcpip.c: 996:     len += strlen(htmlMsgPart1);
-[e =+ _len ( _strlen (1 &U _htmlMsgPart1 ]
-[v F6539 `Cuc ~T0 @X0 -> 17 `i s ]
-[i F6539
-:U ..
-"1025
-[; ;webserver/tcpip.c: 1025:     const char htmlMsgPart2[] = { "</body></html>\n\n" };
--> 60 `c
--> 47 `c
--> 98 `c
--> 111 `c
--> 100 `c
--> 121 `c
--> 62 `c
--> 60 `c
--> 47 `c
--> 104 `c
--> 116 `c
--> 109 `c
--> 108 `c
--> 62 `c
--> 10 `c
--> 10 `c
--> 0 `c
-..
-]
-[v _htmlMsgPart2 `Cuc ~T0 @X0 -> 17 `i a ]
-[e = _htmlMsgPart2 F6539 ]
-"1026
-[; ;webserver/tcpip.c: 1026:     len += strlen(htmlMsgPart2);
-[e =+ _len ( _strlen (1 &U _htmlMsgPart2 ]
-"1028
-[; ;webserver/tcpip.c: 1028:     printf("AT+CIPSEND=0,%d\r\n", len );
-[e ( _printf , (. :s 40C _len ]
-"1029
-[; ;webserver/tcpip.c: 1029:     _delay((unsigned long)((70)*(64000000/4000.0)));
-[e ( __delay (1 -> * -> -> 70 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
-"1030
-[; ;webserver/tcpip.c: 1030:     printf( htmlMsgPart1 );
-[e ( _printf &U _htmlMsgPart1 ]
-"1032
-[; ;webserver/tcpip.c: 1032:     printf( htmlMsgPart2 );
-[e ( _printf &U _htmlMsgPart2 ]
-"1033
-[; ;webserver/tcpip.c: 1033:     _delay((unsigned long)((200)*(64000000/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
-"1034
-[; ;webserver/tcpip.c: 1034: }
-[e :UE 906 ]
-}
-"1037
-[; ;webserver/tcpip.c: 1037: void toogleGPIO(uint8_t ioPin, uint8_t state) {
-[v _toogleGPIO `(v ~T0 @X0 1 ef2`uc`uc ]
-{
-[e :U _toogleGPIO ]
-[v _ioPin `uc ~T0 @X0 1 r1 ]
-[v _state `uc ~T0 @X0 1 r2 ]
-[f ]
-"1039
-[; ;webserver/tcpip.c: 1039: }
-[e :UE 907 ]
-}
-"1102
-[; ;webserver/tcpip.c: 1102: void setDNSServers(void) {
-[v _setDNSServers `(v ~T0 @X0 1 ef ]
-{
-[e :U _setDNSServers ]
-[f ]
-"1103
-[; ;webserver/tcpip.c: 1103: }
-[e :UE 908 ]
-}
-"1125
-[; ;webserver/tcpip.c: 1125: void setDNSDomain(void) {
-[v _setDNSDomain `(v ~T0 @X0 1 ef ]
-{
-[e :U _setDNSDomain ]
-[f ]
-"1126
-[; ;webserver/tcpip.c: 1126:     printf("AT+CIPDOMAIN=\"iot.karsten.esp\"\r\n");
-[e ( _printf :s 41C ]
-"1127
-[; ;webserver/tcpip.c: 1127:     esp_waitForOK();
-[e ( _esp_waitForOK ..  ]
-"1128
-[; ;webserver/tcpip.c: 1128: }
-[e :UE 909 ]
-}
-"1157
-[; ;webserver/tcpip.c: 1157: void wifi_mDNSConfig(void) {
-[v _wifi_mDNSConfig `(v ~T0 @X0 1 ef ]
-{
-[e :U _wifi_mDNSConfig ]
-[f ]
-"1158
-[; ;webserver/tcpip.c: 1158:     printf("AT+MDNS=1,\"espressif\",\"iot\",8080");
-[e ( _printf :s 42C ]
-"1159
-[; ;webserver/tcpip.c: 1159: }
-[e :UE 910 ]
-}
-"1217
-[; ;webserver/tcpip.c: 1217: void setupDHCP(void) {
-[v _setupDHCP `(v ~T0 @X0 1 ef ]
-{
-[e :U _setupDHCP ]
-[f ]
-"1219
-[; ;webserver/tcpip.c: 1219: }
-[e :UE 911 ]
-}
-"1270
-[; ;webserver/tcpip.c: 1270: void esp_setSoftAPDHCPIP(uint8_t *startIP, uint8_t *endIP, uint8_t enable, uint8_t leasetime ) {
-[v _esp_setSoftAPDHCPIP `(v ~T0 @X0 1 ef4`*uc`*uc`uc`uc ]
-{
-[e :U _esp_setSoftAPDHCPIP ]
-[v _startIP `*uc ~T0 @X0 1 r1 ]
-[v _endIP `*uc ~T0 @X0 1 r2 ]
-[v _enable `uc ~T0 @X0 1 r3 ]
-[v _leasetime `uc ~T0 @X0 1 r4 ]
-[f ]
-"1271
-[; ;webserver/tcpip.c: 1271:     printf("AT+CWDHCPS=%d,%d,\"%s\",\"%s\"\r\n", enable, leasetime, startIP, endIP);
-[e ( _printf , , , , (. :s 43C -> _enable `i -> _leasetime `i _startIP _endIP ]
-"1272
-[; ;webserver/tcpip.c: 1272: }
-[e :UE 912 ]
-}
-"1313
-[; ;webserver/tcpip.c: 1313: void sntp_sntpInit(void) {
-[v _sntp_sntpInit `(v ~T0 @X0 1 ef ]
-{
-[e :U _sntp_sntpInit ]
-[f ]
-"1314
-[; ;webserver/tcpip.c: 1314:     printf("AT+CIPSNTPCFG=1,2,\"dk.pool.ntp.org\"\r\n");
-[e ( _printf :s 44C ]
-"1315
-[; ;webserver/tcpip.c: 1315:     esp_waitForOK();
-[e ( _esp_waitForOK ..  ]
-"1316
-[; ;webserver/tcpip.c: 1316: }
-[e :UE 913 ]
-}
-"1338
-[; ;webserver/tcpip.c: 1338: void sntp_checkTime(void) {
-[v _sntp_checkTime `(v ~T0 @X0 1 ef ]
-{
-[e :U _sntp_checkTime ]
-[f ]
-"1339
-[; ;webserver/tcpip.c: 1339:     if( server.internet ) {
-[e $ ! != -> . _server 9 `i -> 0 `i 915  ]
-{
-"1340
-[; ;webserver/tcpip.c: 1340:         printf("AT+CIPSNTPTIME?\r\n");
-[e ( _printf :s 45C ]
-"1341
-[; ;webserver/tcpip.c: 1341:         esp_waitForOK();
-[e ( _esp_waitForOK ..  ]
-"1342
-[; ;webserver/tcpip.c: 1342:     }
-}
-[e :U 915 ]
-"1343
-[; ;webserver/tcpip.c: 1343: }
-[e :UE 914 ]
-}
-[p f _sprintf 8650752 ]
-[p f _printf 9699968 ]
-[a 35C 64 78 121 32 107 108 105 101 110 116 0 ]
 [a 4C 87 117 103 103 97 78 101 116 0 ]
-[a 37C 64 75 108 105 101 110 116 32 97 102 98 114 117 100 116 0 ]
-[a 19C 64 37 115 0 ]
 [a 2C 102 114 98 80 67 119 118 82 75 113 0 ]
 [a 5C 102 114 101 100 97 103 115 98 97 110 97 110 0 ]
 [a 3C 87 80 65 50 32 65 69 83 0 ]
@@ -2466,37 +1652,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 [a 9C 87 80 65 50 32 65 69 83 0 ]
 [a 16C 75 82 83 95 80 73 67 95 65 80 0 ]
 [a 7C 65 83 85 83 95 88 48 48 80 68 0 ]
-[a 32C 65 84 95 67 87 68 72 67 80 83 63 59 0 ]
-[a 33C 65 84 95 67 87 68 72 67 80 83 63 59 0 ]
 [a 8C 48 99 48 100 56 53 57 57 0 ]
 [a 1C 83 83 73 68 45 74 82 122 99 77 52 0 ]
 [a 17C 49 50 51 52 53 54 55 56 57 48 0 ]
-[a 42C 65 84 43 77 68 78 83 61 49 44 34 101 115 112 114 101 115 115 105 102 34 44 34 105 111 116 34 44 56 48 56 48 0 ]
-[a 18C 64 67 111 110 110 101 99 116 105 110 103 32 116 111 58 32 32 0 ]
-[a 22C 65 84 43 67 73 80 77 85 88 61 37 100 13 10 0 ]
-[a 27C 65 84 43 67 73 80 68 73 78 70 79 61 37 100 13 10 0 ]
-[a 23C 65 84 43 67 73 80 83 69 82 86 69 82 77 65 88 67 79 78 78 61 37 100 13 10 0 ]
-[a 25C 65 84 43 67 73 80 82 69 67 86 77 79 68 69 61 37 100 13 10 0 ]
-[a 20C 65 84 43 67 73 80 83 69 82 86 69 82 61 49 44 37 100 13 10 0 ]
-[a 39C 65 84 43 67 73 80 83 69 78 68 61 48 44 37 100 13 10 0 ]
-[a 40C 65 84 43 67 73 80 83 69 78 68 61 48 44 37 100 13 10 0 ]
-[a 28C 65 84 43 67 73 70 83 82 13 10 0 ]
-[a 29C 65 84 43 67 73 70 83 82 13 10 0 ]
-[a 30C 65 84 43 67 73 70 83 82 13 10 0 ]
-[a 31C 65 84 43 67 73 70 83 82 13 10 0 ]
-[a 24C 65 84 43 67 73 80 82 69 67 86 76 69 78 63 13 10 0 ]
-[a 45C 65 84 43 67 73 80 83 78 84 80 84 73 77 69 63 13 10 0 ]
-[a 26C 65 84 43 67 73 80 82 69 67 86 68 65 84 65 61 54 52 13 10 0 ]
-[a 21C 65 84 43 67 73 80 83 69 82 86 69 82 61 48 13 10 0 ]
-[a 36C 65 84 43 67 73 80 67 76 79 83 69 61 48 13 10 0 ]
-[a 43C 65 84 43 67 87 68 72 67 80 83 61 37 100 44 37 100 44 34 37 115 34 44 34 37 115 34 13 10 0 ]
-[a 41C 65 84 43 67 73 80 68 79 77 65 73 78 61 34 105 111 116 46 107 97 114 115 116 101 110 46 101 115 112 34 13 10 0 ]
-[a 44C 65 84 43 67 73 80 83 78 84 80 67 70 71 61 49 44 50 44 34 100 107 46 112 111 111 108 46 110 116 112 46 111 114 103 34 13 10 0 ]
-[a 34C 65 84 43 80 73 78 71 61 34 104 116 116 112 115 58 47 47 119 119 119 46 103 111 111 103 108 101 46 99 111 109 47 34 13 10 0 ]
 [a 10C 0 ]
 [a 11C 0 ]
 [a 12C 0 ]
 [a 13C 0 ]
 [a 14C 0 ]
 [a 15C 0 ]
-[a 38C 0 ]
+[a 18C 0 ]

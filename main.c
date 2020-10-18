@@ -26,7 +26,7 @@
  * #include "eusart2.h"                                                 *
  ************************************************************************/
 
-#pragma warning (disable: 520)
+#pragma warning disable 520
 //#pragma warning disable 362
 //#pragma warning disable 520 remove never called warnings
 //#pragma warning disable 1498
