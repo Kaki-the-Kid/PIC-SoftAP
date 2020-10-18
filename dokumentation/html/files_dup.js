@@ -1,6 +1,6 @@
 var files_dup =
 [
-    [ "docs", "dir_ef3d530a53ae45c9f79f36fdb1d8a14e.html", null ],
+    [ "doxygen-pages", "dir_f50d74892f1a84ec93cd6940d7a55324.html", null ],
     [ "eeprom", "dir_fa753a09c1860d819d579f23f194701b.html", "dir_fa753a09c1860d819d579f23f194701b" ],
     [ "i2c", "dir_4c25b4c2861b8c1e9e0cda0ff69bb2a5.html", "dir_4c25b4c2861b8c1e9e0cda0ff69bb2a5" ],
     [ "lcd", "dir_7539740a674fe554df3e16c8629ce56f.html", "dir_7539740a674fe554df3e16c8629ce56f" ],
