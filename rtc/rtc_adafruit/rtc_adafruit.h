@@ -41,8 +41,6 @@
  */
 
 const uint8_t rtc_addr           = 0b1101000; // 7-bit adresse på Real-time clock
-uint8_t       rtcData[16];
-uint8_t       _clockDataString[] = {"hh:mm:ss - dd-mm-yyyy"};
 
 //
 #define secondsAddr         0x00
