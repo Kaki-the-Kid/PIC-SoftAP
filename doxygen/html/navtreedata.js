@@ -24,6 +24,7 @@ var NAVTREE =
 [
   [ "PIC SoftAP", "index.html", [
     [ "PIC SoftAP Project", "index.html", "index" ],
+    [ ":<em>Users_karst_OneDrive</em>-_AARHUS_TECH_Dokumenter_Workspace_MPLABXProjects_Embedded_Controller_3_SoftAP_webserver.X_README PIC-SoftAP", "md__c.html", null ],
     [ "Datastrukturer", "annotated.html", [
       [ "Datastrukturer", "annotated.html", "annotated_dup" ],
       [ "Indeks over datastrukturer", "classes.html", null ],
@@ -50,8 +51,8 @@ var NAVTREEINDEX =
 [
 ".html",
 "globals_func_r.html",
-"rtc_8c.html#a9953dcbaf8240f4a884194fce6346fed",
-"tcpip_8c.html#a4eefdf6d4b6803d50d7913eb3b60a1c2"
+"rtc_8c.html#a97f1febfde610df12b0a464ba3d8ca41",
+"tcpip_8c.html#a49465dfef55aa093dca3d0a7bf4cfb4d"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

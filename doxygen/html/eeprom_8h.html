@@ -70,7 +70,7 @@ $(document).ready(function(){initNavTree('eeprom_8h.html',''); initResizable(); 
 
 <p>: EEPROM styring  
 <a href="#details">Mere...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="">mcc_generated_files/mcc.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="">../mcc_generated_files/mcc.h</a>&quot;</code><br />
 <code>#include &lt;string.h&gt;</code><br />
 <code>#include &lt;ctype.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="">i2c.h</a>&quot;</code><br />
@@ -80,7 +80,7 @@ $(document).ready(function(){initNavTree('eeprom_8h.html',''); initResizable(); 
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Funktioner</h2></td></tr>
 <tr class="memitem:a3af89e4418fc56e2b435ae02f4dd7dd8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eeprom_8h.html#a3af89e4418fc56e2b435ae02f4dd7dd8">eeprom_testData</a> (void)</td></tr>
-<tr class="memdesc:a3af89e4418fc56e2b435ae02f4dd7dd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">File: eeprom.cc Author: Karsten 'Kaki' Reitan Sørensen Created on September 8, 2019, 10:02 PM.  <a href="eeprom_8h.html#a3af89e4418fc56e2b435ae02f4dd7dd8">Mere...</a><br /></td></tr>
+<tr class="memdesc:a3af89e4418fc56e2b435ae02f4dd7dd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">File: eeprom.cc Author: Karsten 'Kaki' Reitan Sïŋ―rensen Created on September 8, 2019, 10:02 PM.  <a href="eeprom_8h.html#a3af89e4418fc56e2b435ae02f4dd7dd8">Mere...</a><br /></td></tr>
 <tr class="separator:a3af89e4418fc56e2b435ae02f4dd7dd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada42121a8af0be6bbe25de6ab07d0867"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eeprom_8h.html#ada42121a8af0be6bbe25de6ab07d0867">eeprom_logData</a> (void)</td></tr>
 <tr class="separator:ada42121a8af0be6bbe25de6ab07d0867"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -116,7 +116,7 @@ Variable</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detaljeret beskrivelse</h2>
 <div class="textblock"><p>: EEPROM styring </p>
-<dl class="section author"><dt>Forfatter</dt><dd>: Karsten 'Kaki' Reitan Sørensen @created: September 8, 2019, 10:02 PM </dd></dl>
+<dl class="section author"><dt>Forfatter</dt><dd>: Karsten 'Kaki' Reitan Sïŋ―rensen @created: September 8, 2019, 10:02 PM </dd></dl>
 
 <p class="definition">Defineret i filen <a class="el" href="">eeprom.h</a>.</p>
 </div><h2 class="groupheader">Funktions-dokumentation</h2>
@@ -136,11 +136,11 @@ Variable</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <div class="fragment"><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                              {</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="comment">// Læs adresse i resister 0</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="comment">// Lïŋ―s adresse i resister 0</span></div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="comment">// Hvis adressen er forskellig fra 0x0000</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="comment">// eller er der oåtrådt en fejl</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="comment">// eller er der oïŋ―trïŋ―dt en fejl</span></div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="comment">// Udlæs data udfra skabelon</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="comment">// Udlïŋ―s data udfra skabelon</span></div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    </div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    uint8_t  i = 0;</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    uint32_t i_max = 0xFFFF;</div>
@@ -177,7 +177,7 @@ Variable</h2></td></tr>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            tmp_temp -= 4000;</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            sprintf((<span class="keywordtype">char</span>*) tmp, (<span class="keyword">const</span> <span class="keywordtype">char</span>*) <a class="code" href="eeprom_8h.html#a5cb2b1b2dba3044efebcaa10d3c1d822">eeprom_template</a>, tmp_humid, tmp_temp ); <span class="comment">// Lav linie fra skabelon</span></div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            strcat(msg, tmp); <span class="comment">// læg den til besked</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            strcat(msg, tmp); <span class="comment">// lïŋ―g den til besked</span></div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        }</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        </div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        printf( <span class="stringliteral">&quot;AT+CIPSEND=0,%d\r\n&quot;</span>, (<span class="keyword">const</span> <span class="keywordtype">char</span>*) strlen(msg) ); <span class="comment">// Starter sending</span></div>
@@ -189,7 +189,7 @@ Variable</h2></td></tr>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    i += j;</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Indeholder referencer til <a class="el" href="#l00022">eeprom_addr</a>, <a class="el" href="#l00026">eeprom_buffer</a>, <a class="el" href="#l00055">eeprom_initEeprom()</a>, <a class="el" href="#l00034">eeprom_template</a> og <a class="el" href="#l00117">i2c_read_serial()</a>.</p>
+<p class="reference">Indeholder referencer til <a class="el" href="#l00023">eeprom_addr</a>, <a class="el" href="#l00027">eeprom_buffer</a>, <a class="el" href="#l00055">eeprom_initEeprom()</a>, <a class="el" href="#l00035">eeprom_template</a> og <a class="el" href="#l00112">i2c_read_serial()</a>.</p>
 
 </div>
 </div>
@@ -214,7 +214,7 @@ Variable</h2></td></tr>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="i2c_8c.html#a2afd8da70c8c74e56659da3dd6f60dd0">i2c_write_serial</a>(<a class="code" href="eeprom_8h.html#a40bea318237f8ef4c61e6e4cf8dfcdb1">eeprom_addr</a>, (<span class="keywordtype">char</span>*) <a class="code" href="eeprom_8h.html#a71ae249f4d73448170e448c34e5d7ac4">eeprom_pointer</a>, 2); <span class="comment">//0x00, 0x00</span></div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Indeholder referencer til <a class="el" href="#l00022">eeprom_addr</a>, <a class="el" href="#l00024">eeprom_init</a>, <a class="el" href="#l00025">eeprom_pointer</a> og <a class="el" href="#l00046">i2c_write_serial()</a>.</p>
+<p class="reference">Indeholder referencer til <a class="el" href="#l00023">eeprom_addr</a>, <a class="el" href="#l00025">eeprom_init</a>, <a class="el" href="#l00026">eeprom_pointer</a> og <a class="el" href="#l00046">i2c_write_serial()</a>.</p>
 
 <p class="reference">Refereret til af <a class="el" href="#l00062">eeprom_dumpLogData()</a>.</p>
 
@@ -236,22 +236,22 @@ Variable</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <div class="fragment"><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                          {</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="comment">// Læs sidste adresse på EEPROM i register 0 og register 1</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="comment">// LÃĶs sidste adresse pïŋ― EEPROM i register 0 og register 1</span></div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="i2c_8c.html#a2afd8da70c8c74e56659da3dd6f60dd0">i2c_write_serial</a>(<a class="code" href="eeprom_8h.html#a40bea318237f8ef4c61e6e4cf8dfcdb1">eeprom_addr</a>, (<span class="keywordtype">char</span>*) <a class="code" href="eeprom_8h.html#a71ae249f4d73448170e448c34e5d7ac4">eeprom_pointer</a>, 2); <span class="comment">//0x00, 0x00</span></div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="i2c_8c.html#abeb4d291e6ada6f8ad8cdfde914e92ab">i2c_read_serial</a>(<a class="code" href="eeprom_8h.html#a40bea318237f8ef4c61e6e4cf8dfcdb1">eeprom_addr</a>, <a class="code" href="eeprom_8h.html#a6c08150b4246c98a4eca674fe133a4ff">eeprom_buffer</a>, 4);</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="comment">// Hvis register 0 er 0x0000 og register 1 er 0x0004</span></div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="comment">// er det en start på måling</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="comment">// er det en start pÃĨ mÃĨling</span></div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="comment">// eller hvis register 1 er forskellig fra 4 er der sket en fejl</span></div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="comment">// Flut adresse til register 1</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="comment">// Skriv 0 på register 0</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="comment">// Læs fra sensor</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="comment">// Skriv data på eeprom</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="comment">// Læg ny adresse på register 0</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="comment">// Skriv 0 pÃĨ register 0</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="comment">// LÃĶs fra sensor</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="comment">// Skriv data pÃĨ eeprom</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="comment">// LÃĶg ny adresse pÃĨ register 0</span></div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Indeholder referencer til <a class="el" href="#l00022">eeprom_addr</a>, <a class="el" href="#l00026">eeprom_buffer</a>, <a class="el" href="#l00025">eeprom_pointer</a>, <a class="el" href="#l00117">i2c_read_serial()</a> og <a class="el" href="#l00046">i2c_write_serial()</a>.</p>
+<p class="reference">Indeholder referencer til <a class="el" href="#l00023">eeprom_addr</a>, <a class="el" href="#l00027">eeprom_buffer</a>, <a class="el" href="#l00026">eeprom_pointer</a>, <a class="el" href="#l00112">i2c_read_serial()</a> og <a class="el" href="#l00046">i2c_write_serial()</a>.</p>
 
 </div>
 </div>
@@ -271,7 +271,7 @@ Variable</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>File: eeprom.cc Author: Karsten 'Kaki' Reitan Sørensen Created on September 8, 2019, 10:02 PM. </p>
+<p>File: eeprom.cc Author: Karsten 'Kaki' Reitan Sïŋ―rensen Created on September 8, 2019, 10:02 PM. </p>
 <p>: EEPROM styring </p>
 <div class="fragment"><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;                           {</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    printf(<span class="stringliteral">&quot;\r\nSkriv tegn til EEPROM\r\n&quot;</span>);</div>
@@ -292,7 +292,7 @@ Variable</h2></td></tr>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    }</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Indeholder referencer til <a class="el" href="#l00022">eeprom_addr</a>, <a class="el" href="#l00026">eeprom_buffer</a>, <a class="el" href="#l00025">eeprom_pointer</a>, <a class="el" href="#l00023">eeprom_test</a>, <a class="el" href="#l00117">i2c_read_serial()</a> og <a class="el" href="#l00046">i2c_write_serial()</a>.</p>
+<p class="reference">Indeholder referencer til <a class="el" href="#l00023">eeprom_addr</a>, <a class="el" href="#l00027">eeprom_buffer</a>, <a class="el" href="#l00026">eeprom_pointer</a>, <a class="el" href="#l00024">eeprom_test</a>, <a class="el" href="#l00112">i2c_read_serial()</a> og <a class="el" href="#l00046">i2c_write_serial()</a>.</p>
 
 </div>
 </div>
@@ -465,15 +465,15 @@ Variable</h2></td></tr>
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="ai2c_8c_html_abeb4d291e6ada6f8ad8cdfde914e92ab"><div class="ttname"><a href="i2c_8c.html#abeb4d291e6ada6f8ad8cdfde914e92ab">i2c_read_serial</a></div><div class="ttdeci">void i2c_read_serial(uint8_t addr, uint8_t *data_out, uint8_t length)</div><div class="ttdef"><b>Definition:</b> i2c.c:117</div></div>
-<div class="ttc" id="aeeprom_8h_html_a40bea318237f8ef4c61e6e4cf8dfcdb1"><div class="ttname"><a href="eeprom_8h.html#a40bea318237f8ef4c61e6e4cf8dfcdb1">eeprom_addr</a></div><div class="ttdeci">const uint8_t eeprom_addr</div><div class="ttdef"><b>Definition:</b> eeprom.h:22</div></div>
-<div class="ttc" id="aeeprom_8h_html_a71ae249f4d73448170e448c34e5d7ac4"><div class="ttname"><a href="eeprom_8h.html#a71ae249f4d73448170e448c34e5d7ac4">eeprom_pointer</a></div><div class="ttdeci">const char eeprom_pointer[]</div><div class="ttdef"><b>Definition:</b> eeprom.h:25</div></div>
-<div class="ttc" id="aeeprom_8h_html_ab33acfe5e102c73df9fd842d9a9757ef"><div class="ttname"><a href="eeprom_8h.html#ab33acfe5e102c73df9fd842d9a9757ef">eeprom_init</a></div><div class="ttdeci">const char eeprom_init[]</div><div class="ttdef"><b>Definition:</b> eeprom.h:24</div></div>
-<div class="ttc" id="aeeprom_8h_html_a5cb2b1b2dba3044efebcaa10d3c1d822"><div class="ttname"><a href="eeprom_8h.html#a5cb2b1b2dba3044efebcaa10d3c1d822">eeprom_template</a></div><div class="ttdeci">const char eeprom_template[]</div><div class="ttdef"><b>Definition:</b> eeprom.h:34</div></div>
+<div class="ttc" id="ai2c_8c_html_abeb4d291e6ada6f8ad8cdfde914e92ab"><div class="ttname"><a href="i2c_8c.html#abeb4d291e6ada6f8ad8cdfde914e92ab">i2c_read_serial</a></div><div class="ttdeci">void i2c_read_serial(uint8_t addr, uint8_t *data_out, uint8_t length)</div><div class="ttdef"><b>Definition:</b> i2c.c:112</div></div>
+<div class="ttc" id="aeeprom_8h_html_a40bea318237f8ef4c61e6e4cf8dfcdb1"><div class="ttname"><a href="eeprom_8h.html#a40bea318237f8ef4c61e6e4cf8dfcdb1">eeprom_addr</a></div><div class="ttdeci">const uint8_t eeprom_addr</div><div class="ttdef"><b>Definition:</b> eeprom.h:23</div></div>
+<div class="ttc" id="aeeprom_8h_html_a71ae249f4d73448170e448c34e5d7ac4"><div class="ttname"><a href="eeprom_8h.html#a71ae249f4d73448170e448c34e5d7ac4">eeprom_pointer</a></div><div class="ttdeci">const char eeprom_pointer[]</div><div class="ttdef"><b>Definition:</b> eeprom.h:26</div></div>
+<div class="ttc" id="aeeprom_8h_html_ab33acfe5e102c73df9fd842d9a9757ef"><div class="ttname"><a href="eeprom_8h.html#ab33acfe5e102c73df9fd842d9a9757ef">eeprom_init</a></div><div class="ttdeci">const char eeprom_init[]</div><div class="ttdef"><b>Definition:</b> eeprom.h:25</div></div>
+<div class="ttc" id="aeeprom_8h_html_a5cb2b1b2dba3044efebcaa10d3c1d822"><div class="ttname"><a href="eeprom_8h.html#a5cb2b1b2dba3044efebcaa10d3c1d822">eeprom_template</a></div><div class="ttdeci">const char eeprom_template[]</div><div class="ttdef"><b>Definition:</b> eeprom.h:35</div></div>
 <div class="ttc" id="aeeprom_8c_html_a6f2a4555ed864aace393eb03dee81a93"><div class="ttname"><a href="eeprom_8c.html#a6f2a4555ed864aace393eb03dee81a93">eeprom_initEeprom</a></div><div class="ttdeci">void eeprom_initEeprom(void)</div><div class="ttdef"><b>Definition:</b> eeprom.c:55</div></div>
 <div class="ttc" id="ai2c_8c_html_a2afd8da70c8c74e56659da3dd6f60dd0"><div class="ttname"><a href="i2c_8c.html#a2afd8da70c8c74e56659da3dd6f60dd0">i2c_write_serial</a></div><div class="ttdeci">void i2c_write_serial(uint8_t addr, char *data, uint8_t length)</div><div class="ttdef"><b>Definition:</b> i2c.c:46</div></div>
-<div class="ttc" id="aeeprom_8h_html_a6c08150b4246c98a4eca674fe133a4ff"><div class="ttname"><a href="eeprom_8h.html#a6c08150b4246c98a4eca674fe133a4ff">eeprom_buffer</a></div><div class="ttdeci">uint8_t eeprom_buffer[128]</div><div class="ttdef"><b>Definition:</b> eeprom.h:26</div></div>
-<div class="ttc" id="aeeprom_8h_html_a7fef1b6528dcbfcb92dee4a44d0559f3"><div class="ttname"><a href="eeprom_8h.html#a7fef1b6528dcbfcb92dee4a44d0559f3">eeprom_test</a></div><div class="ttdeci">const char eeprom_test[]</div><div class="ttdef"><b>Definition:</b> eeprom.h:23</div></div>
+<div class="ttc" id="aeeprom_8h_html_a6c08150b4246c98a4eca674fe133a4ff"><div class="ttname"><a href="eeprom_8h.html#a6c08150b4246c98a4eca674fe133a4ff">eeprom_buffer</a></div><div class="ttdeci">uint8_t eeprom_buffer[128]</div><div class="ttdef"><b>Definition:</b> eeprom.h:27</div></div>
+<div class="ttc" id="aeeprom_8h_html_a7fef1b6528dcbfcb92dee4a44d0559f3"><div class="ttname"><a href="eeprom_8h.html#a7fef1b6528dcbfcb92dee4a44d0559f3">eeprom_test</a></div><div class="ttdeci">const char eeprom_test[]</div><div class="ttdef"><b>Definition:</b> eeprom.h:24</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

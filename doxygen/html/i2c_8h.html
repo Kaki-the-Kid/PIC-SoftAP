@@ -68,7 +68,7 @@ $(document).ready(function(){initNavTree('i2c_8h.html',''); initResizable(); });
 <div class="title">i2c.h filreference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="">mcc_generated_files/mcc.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="">./mcc_generated_files/mcc.h</a>&quot;</code><br />
 </div>
 <p><a href="">Hop til denne fils kildekode.</a></p>
 <table class="memberdecls">
@@ -190,25 +190,25 @@ Variable</h2></td></tr>
 <p>I2C generelle kommandoer. </p>
 <div class="fragment"><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;                    {</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#ifdef debug</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="esp8266_8c.html#aa5e1cb340835d3ac9cb4c407ca03c1a2">esp_terminalTransmit</a>(<span class="stringliteral">&quot;Initialiserer I2C bussen\r\n&quot;</span>);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    printf(<span class="stringliteral">&quot;Initialiserer I2C bussen\r\n&quot;</span>);</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="i2c_8h.html#ab5ffc4751921608954bb7a5687566b2d">SCL</a> = <a class="code" href="i2c_8h.html#a6890442e1cc24a0d61597a13576b8727">SDA</a> = 1;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="i2c_8h.html#ae3bb1645bd52518d362f3a02a2c66700">SCL_IO</a> = 0;</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="i2c_8h.html#accdabacb169a59828fa37ff89d8240d3">SDA_IO</a> = 0;</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    </div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="comment">// bit 5  Synchronous Serial Port Enable bit</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="comment">// bit3-0 bestemmer måden hvorpå clocken defineres</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="comment">// bit3-0 bestemmer mÃĨden hvorpÃĨ clocken defineres</span></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="comment">// 1000 = I2C Master mode, clock = FOSC / (4 * (SSPxADD+1))</span></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    </div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    SSP1CON1 = 0x28;<span class="comment">//0b00101000; // 0x28</span></div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    uint8_t i2c_clock = (<a class="code" href="device__config_8h.html#a024148e99a7143db044a48216664d03d">_XTAL_FREQ</a> /(4 * 100000)) - 1; <span class="comment">// Sætter hastigheden til 100K for I2C bussen</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    uint8_t i2c_clock = (<a class="code" href="device__config_8h.html#a024148e99a7143db044a48216664d03d">_XTAL_FREQ</a> /(4 * 100000)) - 1; <span class="comment">// SÃĶtter hastigheden til 100K for I2C bussen</span></div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    SSP1ADD  = i2c_clock; <span class="comment">// 0x9F ved 16MHz x 4 software pll</span></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    </div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    SSP1CON2 = 0; <span class="comment">//Resetter kontrol register SSPxCON2: SSPx CONTROL REGISTER 2</span></div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Indeholder referencer til <a class="el" href="#l00050">_XTAL_FREQ</a>, <a class="el" href="#l00453">esp_terminalTransmit()</a>, <a class="el" href="#l00025">SCL</a>, <a class="el" href="#l00027">SCL_IO</a>, <a class="el" href="#l00026">SDA</a> og <a class="el" href="#l00028">SDA_IO</a>.</p>
+<p class="reference">Indeholder referencer til <a class="el" href="#l00050">_XTAL_FREQ</a>, <a class="el" href="#l00025">SCL</a>, <a class="el" href="#l00027">SCL_IO</a>, <a class="el" href="#l00026">SDA</a> og <a class="el" href="#l00028">SDA_IO</a>.</p>
 
 <p class="reference">Refereret til af <a class="el" href="#l00062">main()</a>.</p>
 
@@ -229,13 +229,13 @@ Variable</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;                          {</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    SSP1CON2bits.ACKDT = 0;</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    SSP1CON2bits.ACKEN = 1;</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="keywordflow">while</span>(SSP1CON2bits.ACKEN == 1){};</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;                          {</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    SSP1CON2bits.ACKDT = 0;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    SSP1CON2bits.ACKEN = 1;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="keywordflow">while</span>(SSP1CON2bits.ACKEN == 1){};</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Refereret til af <a class="el" href="#l00117">i2c_read_serial()</a>.</p>
+<p class="reference">Refereret til af <a class="el" href="#l00112">i2c_read_serial()</a>.</p>
 
 </div>
 </div>
@@ -254,13 +254,13 @@ Variable</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;                           {</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    SSP1CON2bits.ACKDT = 1;</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    SSP1CON2bits.ACKEN = 1;</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <span class="keywordflow">while</span>(SSP1CON2bits.ACKEN == 1){};</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;                           {</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    SSP1CON2bits.ACKDT = 1;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    SSP1CON2bits.ACKEN = 1;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="keywordflow">while</span>(SSP1CON2bits.ACKEN == 1){};</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Refereret til af <a class="el" href="#l00117">i2c_read_serial()</a>.</p>
+<p class="reference">Refereret til af <a class="el" href="#l00112">i2c_read_serial()</a>.</p>
 
 </div>
 </div>
@@ -279,12 +279,12 @@ Variable</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;                            {</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    SSP1CON2bits.SEN = 1;</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <span class="keywordflow">while</span>(SSP1CON2bits.SEN == 1){};</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;                            {</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    SSP1CON2bits.SEN = 1;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="keywordflow">while</span>(SSP1CON2bits.SEN == 1){};</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Refereret til af <a class="el" href="#l00117">i2c_read_serial()</a> og <a class="el" href="#l00046">i2c_write_serial()</a>.</p>
+<p class="reference">Refereret til af <a class="el" href="#l00112">i2c_read_serial()</a> og <a class="el" href="#l00046">i2c_write_serial()</a>.</p>
 
 </div>
 </div>
@@ -303,12 +303,12 @@ Variable</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;                           {</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    SSP1CON2bits.PEN = 1;</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="keywordflow">while</span>(SSP1CON2bits.PEN == 1){};</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;                           {</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    SSP1CON2bits.PEN = 1;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <span class="keywordflow">while</span>(SSP1CON2bits.PEN == 1){};</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Refereret til af <a class="el" href="#l00117">i2c_read_serial()</a> og <a class="el" href="#l00046">i2c_write_serial()</a>.</p>
+<p class="reference">Refereret til af <a class="el" href="#l00112">i2c_read_serial()</a> og <a class="el" href="#l00046">i2c_write_serial()</a>.</p>
 
 </div>
 </div>
@@ -327,11 +327,11 @@ Variable</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;                           {</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <span class="keywordflow">while</span> ( (SSP1STAT &amp; 0x04) || (SSP1CON2 &amp; 0x1F) ) {};</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;                           {</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="keywordflow">while</span> ( (SSP1STAT &amp; 0x04) || (SSP1CON2 &amp; 0x1F) ) {};</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Refereret til af <a class="el" href="#l00117">i2c_read_serial()</a> og <a class="el" href="#l00046">i2c_write_serial()</a>.</p>
+<p class="reference">Refereret til af <a class="el" href="#l00112">i2c_read_serial()</a> og <a class="el" href="#l00046">i2c_write_serial()</a>.</p>
 
 </div>
 </div>
@@ -392,54 +392,52 @@ Variable</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                                                                      {</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordtype">char</span> msg[50];</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    uint8_t targetAddr = (addr&lt;&lt;1)+1; <span class="comment">// Laver addressen om til 8 bit med READ condition</span></div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    </div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <a class="code" href="i2c_8c.html#adb646b67ce754741a06e63ea28d05259">i2c_master_wait</a>();</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <a class="code" href="i2c_8c.html#a02d93c2bcdbbee7a791b77b0cf12467f">i2c_master_start</a>();</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    </div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    SSP1BUF = targetAddr; <span class="comment">// Skriver sdressen</span></div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keywordflow">while</span>(SSP1STATbits.R_nW) {};</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    </div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordflow">if</span>(SSP1CON2bits.ACKSTAT == 0) {</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="keywordflow">for</span> (uint8_t i=0; i &lt; <a class="code" href="esp8266_8c.html#af9d495c1655d813d553030485d00fea7">length</a> ; i++) {</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            SSP1CON2bits.RCEN = 1;</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            <span class="keywordflow">while</span>(SSP1CON2bits.RCEN) {};</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            </div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;            <a class="code" href="i2c_8h.html#a8eac694cd48788e914ae973b41d1b8ec">data_out</a>[i] = SSP1BUF;</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;            </div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;            <span class="comment">// Sender ACK eller NACK til sidst</span></div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;            <span class="keywordflow">if</span>( i != <a class="code" href="esp8266_8c.html#af9d495c1655d813d553030485d00fea7">length</a> -1)<span class="comment">// Sender ACK eller NACK til sidst</span></div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;                <a class="code" href="i2c_8c.html#a6caad88441987f83268d336d4322d07d">i2c_master_ack</a>();</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;            <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                <a class="code" href="i2c_8c.html#ae60d3dfb3e2bcfacd1bbca9debd6e35c">i2c_master_nack</a>();</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;           </div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;            SSP1CON2bits.ACKEN = 1;</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;            <span class="keywordflow">while</span>(SSP1CON2bits.ACKEN == 1)</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;                ;</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;            </div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="preprocessor">            #ifdef debug</span></div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;                sprintf(msg, <span class="stringliteral">&quot;Laeste: 0x%02X %c\n\r&quot;</span>, <a class="code" href="i2c_8h.html#a8eac694cd48788e914ae973b41d1b8ec">data_out</a>[i], <a class="code" href="i2c_8h.html#a8eac694cd48788e914ae973b41d1b8ec">data_out</a>[i]);</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;                <a class="code" href="esp8266_8c.html#aa5e1cb340835d3ac9cb4c407ca03c1a2">esp_terminalTransmit</a>(msg);</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="preprocessor">            #endif</span></div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        }</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        </div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <span class="comment">// Sender NACK</span></div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <a class="code" href="i2c_8c.html#ae60d3dfb3e2bcfacd1bbca9debd6e35c">i2c_master_nack</a>();</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <a class="code" href="i2c_8c.html#a4524baa32fdd90e664342c610dc1d177">i2c_master_stop</a>();</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<span class="preprocessor">        #ifdef debug</span></div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            <a class="code" href="esp8266_8c.html#aa5e1cb340835d3ac9cb4c407ca03c1a2">esp_terminalTransmit</a>(<span class="stringliteral">&quot;Kunne ikke finde enhed\r\n&quot;</span>);</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="preprocessor">        #endif</span></div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    }</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="preprocessor">    #ifdef debug</span></div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        <a class="code" href="esp8266_8c.html#aa5e1cb340835d3ac9cb4c407ca03c1a2">esp_terminalTransmit</a>(<span class="stringliteral">&quot;********************************\r\n&quot;</span>);</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="preprocessor">    #endif</span></div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                                                                      {</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordtype">char</span> msg[50];</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    uint8_t targetAddr = (addr&lt;&lt;1)+1; <span class="comment">// Laver addressen om til 8 bit med READ condition</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <a class="code" href="i2c_8c.html#adb646b67ce754741a06e63ea28d05259">i2c_master_wait</a>();</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <a class="code" href="i2c_8c.html#a02d93c2bcdbbee7a791b77b0cf12467f">i2c_master_start</a>();</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    </div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    SSP1BUF = targetAddr; <span class="comment">// Skriver sdressen</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordflow">while</span>(SSP1STATbits.R_nW) {};</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    </div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keywordflow">if</span>(SSP1CON2bits.ACKSTAT == 0) {</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="keywordflow">for</span> (uint8_t i=0; i &lt; <a class="code" href="esp8266_8c.html#af9d495c1655d813d553030485d00fea7">length</a> ; i++) {</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            SSP1CON2bits.RCEN = 1;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            <span class="keywordflow">while</span>(SSP1CON2bits.RCEN) {};</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            </div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            <a class="code" href="i2c_8h.html#a8eac694cd48788e914ae973b41d1b8ec">data_out</a>[i] = SSP1BUF;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            </div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            <span class="comment">// Sender ACK eller NACK til sidst</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            <span class="keywordflow">if</span>( i != <a class="code" href="esp8266_8c.html#af9d495c1655d813d553030485d00fea7">length</a> -1)<span class="comment">// Sender ACK eller NACK til sidst</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;                <a class="code" href="i2c_8c.html#a6caad88441987f83268d336d4322d07d">i2c_master_ack</a>();</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                <a class="code" href="i2c_8c.html#ae60d3dfb3e2bcfacd1bbca9debd6e35c">i2c_master_nack</a>();</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;           </div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;            SSP1CON2bits.ACKEN = 1;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;            <span class="keywordflow">while</span>(SSP1CON2bits.ACKEN == 1){};</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;            </div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="preprocessor">            #ifdef debug</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;                printf(<span class="stringliteral">&quot;Laeste: 0x%02X %c\n\r&quot;</span>, <a class="code" href="i2c_8h.html#a8eac694cd48788e914ae973b41d1b8ec">data_out</a>[i], <a class="code" href="i2c_8h.html#a8eac694cd48788e914ae973b41d1b8ec">data_out</a>[i]);</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="preprocessor">            #endif</span></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        }</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        </div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        <span class="comment">// Sender NACK</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        <a class="code" href="i2c_8c.html#ae60d3dfb3e2bcfacd1bbca9debd6e35c">i2c_master_nack</a>();</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <a class="code" href="i2c_8c.html#a4524baa32fdd90e664342c610dc1d177">i2c_master_stop</a>();</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="preprocessor">        #ifdef debug</span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;            <a class="code" href="esp8266_8c.html#aa5e1cb340835d3ac9cb4c407ca03c1a2">esp_terminalTransmit</a>(<span class="stringliteral">&quot;Kunne ikke finde enhed\r\n&quot;</span>);</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="preprocessor">        #endif</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    }</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="preprocessor">    #ifdef debug</span></div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        <a class="code" href="esp8266_8c.html#aa5e1cb340835d3ac9cb4c407ca03c1a2">esp_terminalTransmit</a>(<span class="stringliteral">&quot;********************************\r\n&quot;</span>);</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="preprocessor">    #endif</span></div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Indeholder referencer til <a class="el" href="#l00032">data_out</a>, <a class="el" href="#l00453">esp_terminalTransmit()</a>, <a class="el" href="#l00194">i2c_master_ack()</a>, <a class="el" href="#l00201">i2c_master_nack()</a>, <a class="el" href="#l00182">i2c_master_start()</a>, <a class="el" href="#l00188">i2c_master_stop()</a>, <a class="el" href="#l00177">i2c_master_wait()</a> og <a class="el" href="#l00315">length</a>.</p>
+<p class="reference">Indeholder referencer til <a class="el" href="#l00032">data_out</a>, <a class="el" href="#l00453">esp_terminalTransmit()</a>, <a class="el" href="#l00187">i2c_master_ack()</a>, <a class="el" href="#l00194">i2c_master_nack()</a>, <a class="el" href="#l00175">i2c_master_start()</a>, <a class="el" href="#l00181">i2c_master_stop()</a>, <a class="el" href="#l00170">i2c_master_wait()</a> og <a class="el" href="#l00315">length</a>.</p>
 
 <p class="reference">Refereret til af <a class="el" href="#l00062">eeprom_dumpLogData()</a>, <a class="el" href="#l00038">eeprom_logData()</a>, <a class="el" href="#l00018">eeprom_testData()</a>, <a class="el" href="#l00355">getDay()</a>, <a class="el" href="#l00322">getHour()</a>, <a class="el" href="#l00300">getMinutes()</a>, <a class="el" href="#l00278">getSeconds()</a>, <a class="el" href="#l00022">rtc_getTimeAll()</a>, <a class="el" href="#l00016">sensor_getReading()</a> og <a class="el" href="#l00010">sensor_testTempSensor()</a>.</p>
 
@@ -481,7 +479,7 @@ Variable</h2></td></tr>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    </div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    uint8_t targetAddr = addr&lt;&lt;1; <span class="comment">// Laver addressen om til 8 bit med WRITE condition</span></div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">    #ifdef debug</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <a class="code" href="esp8266_8c.html#aa5e1cb340835d3ac9cb4c407ca03c1a2">esp_terminalTransmit</a>(<span class="stringliteral">&quot;\r\n***********WRITE****************\r\n&quot;</span>);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        printf(<span class="stringliteral">&quot;\r\n***********WRITE****************\r\n&quot;</span>);</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">    #endif</span></div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    </div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="i2c_8c.html#adb646b67ce754741a06e63ea28d05259">i2c_master_wait</a>();</div>
@@ -492,61 +490,56 @@ Variable</h2></td></tr>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">if</span>( SSP1CON2bits.ACKSTAT == 0 ) {</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">        #ifdef debug</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            sprintf(msg, <span class="stringliteral">&quot;ACK - Skrev adresse: 0x%02X\r\n&quot;</span>, targetAddr);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <a class="code" href="esp8266_8c.html#aa5e1cb340835d3ac9cb4c407ca03c1a2">esp_terminalTransmit</a>(msg);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">        #endif</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordflow">for</span> (uint8_t i=0; i &lt; <a class="code" href="esp8266_8c.html#af9d495c1655d813d553030485d00fea7">length</a> ; i++) {</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">            #ifdef debug</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                sprintf(msg, <span class="stringliteral">&quot;Data: 0x%02X\r\n&quot;</span>, data[i]);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                <a class="code" href="esp8266_8c.html#aa5e1cb340835d3ac9cb4c407ca03c1a2">esp_terminalTransmit</a>(msg);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">            #endif</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            SSP1BUF = (uint8_t) data[i];</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <span class="keywordflow">while</span>(SSP1STATbits.R_nW);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <span class="keywordflow">if</span>( SSP1CON2bits.ACKSTAT == 0 ) { <span class="comment">// Hvis vi får en Acknowledge</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">                #ifdef debug</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                    sprintf(msg, <span class="stringliteral">&quot;ACK - Skrev data: 0x%02X - %c\r\n&quot;</span>, data[i], data[i]);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                    <a class="code" href="esp8266_8c.html#aa5e1cb340835d3ac9cb4c407ca03c1a2">esp_terminalTransmit</a>(msg);</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor">                #endif</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="preprocessor">                #ifdef debug</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                    <a class="code" href="esp8266_8c.html#aa5e1cb340835d3ac9cb4c407ca03c1a2">esp_terminalTransmit</a>(<span class="stringliteral">&quot;NACK - gensender\r\n&quot;</span>);</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor">                #endif</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                SSP1CON2bits.RCEN=1;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                <span class="keywordflow">while</span>(SSP1CON2bits.RCEN==1);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            printf(<span class="stringliteral">&quot;ACK - Skrev adresse: 0x%02X\r\n&quot;</span>, targetAddr);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">        #endif</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordflow">for</span> (uint8_t i=0; i &lt; <a class="code" href="esp8266_8c.html#af9d495c1655d813d553030485d00fea7">length</a> ; i++) {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">            #ifdef debug</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                printf(<span class="stringliteral">&quot;Data: 0x%02X\r\n&quot;</span>, data[i]);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">            #endif</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            SSP1BUF = (uint8_t) data[i];</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <span class="keywordflow">while</span>(SSP1STATbits.R_nW);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <span class="keywordflow">if</span>( SSP1CON2bits.ACKSTAT == 0 ) { <span class="comment">// Hvis vi fÃĨr en Acknowledge</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">                #ifdef debug</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                    printf(<span class="stringliteral">&quot;ACK - Skrev data: 0x%02X - %c\r\n&quot;</span>, data[i], data[i]);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">                #endif</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor">                #ifdef debug</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                    printf(<span class="stringliteral">&quot;NACK - gensender\r\n&quot;</span>);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="preprocessor">                #endif</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                SSP1CON2bits.RCEN=1;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                <span class="keywordflow">while</span>(SSP1CON2bits.RCEN==1);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                SSP1BUF = (uint8_t) data[i];</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                <span class="keywordflow">while</span>(SSP1STATbits.R_nW);</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                SSP1BUF = (uint8_t) data[i];</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                <span class="keywordflow">while</span>(SSP1STATbits.R_nW);</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                <span class="keywordflow">if</span>(SSP1CON2bits.ACKSTAT == 0) {</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="preprocessor">                    #ifdef debug</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                        sprintf(msg, <span class="stringliteral">&quot;ACK - Skrev data: 0x%02X - %c\r\n&quot;</span>, data[i], data[i]);</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                        <a class="code" href="esp8266_8c.html#aa5e1cb340835d3ac9cb4c407ca03c1a2">esp_terminalTransmit</a>(msg);</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="preprocessor">                    #endif</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="preprocessor">                    #ifdef debug</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                        <a class="code" href="esp8266_8h.html#a4952c1b7f3ed488d08e34f466ba70db8">states</a>.<a class="code" href="struct_states.html#a7a3172cc98e93d8eadfb9ab30373799e">error</a> = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                        <a class="code" href="esp8266_8c.html#aa5e1cb340835d3ac9cb4c407ca03c1a2">esp_terminalTransmit</a>(<span class="stringliteral">&quot;NACK - Fejl i skrivning af data\r\n&quot;</span>);</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="preprocessor">                    #endif</span></div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                }</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            }</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        }</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        </div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <a class="code" href="i2c_8c.html#a4524baa32fdd90e664342c610dc1d177">i2c_master_stop</a>();</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="preprocessor">        #ifdef debug</span></div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            sprintf(msg, <span class="stringliteral">&quot;Kunne ikke finde enhed p&amp;#230; adresse: 0x%02X %u\r\n&quot;</span>, targetAddr, targetAddr);</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            <a class="code" href="esp8266_8c.html#aa5e1cb340835d3ac9cb4c407ca03c1a2">esp_terminalTransmit</a>(msg);</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="preprocessor">        #endif</span></div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    }</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="preprocessor">    #ifdef debug</span></div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <a class="code" href="esp8266_8c.html#aa5e1cb340835d3ac9cb4c407ca03c1a2">esp_terminalTransmit</a>(<span class="stringliteral">&quot;********************************\r\n&quot;</span>);</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="preprocessor">    #endif</span></div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;}</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                <span class="keywordflow">if</span>(SSP1CON2bits.ACKSTAT == 0) {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="preprocessor">                    #ifdef debug</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                        printf(<span class="stringliteral">&quot;ACK - Skrev data: 0x%02X - %c\r\n&quot;</span>, data[i], data[i]);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="preprocessor">                    #endif</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">                    #ifdef debug</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                        <a class="code" href="esp8266_8h.html#a4952c1b7f3ed488d08e34f466ba70db8">states</a>.<a class="code" href="struct_states.html#a7a3172cc98e93d8eadfb9ab30373799e">error</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                        printf(<span class="stringliteral">&quot;NACK - Fejl i skrivning af data\r\n&quot;</span>);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">                    #endif</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                }</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            }</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        }</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <a class="code" href="i2c_8c.html#a4524baa32fdd90e664342c610dc1d177">i2c_master_stop</a>();</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="preprocessor">        #ifdef debug</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            printf(<span class="stringliteral">&quot;Kunne ikke finde enhed p&amp;#230; adresse: 0x%02X %u\r\n&quot;</span>, targetAddr, targetAddr);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="preprocessor">        #endif</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    }</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="preprocessor">    #ifdef debug</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        printf(<span class="stringliteral">&quot;********************************\r\n&quot;</span>);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="preprocessor">    #endif</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Indeholder referencer til <a class="el" href="#l00093">States::error</a>, <a class="el" href="#l00453">esp_terminalTransmit()</a>, <a class="el" href="#l00182">i2c_master_start()</a>, <a class="el" href="#l00188">i2c_master_stop()</a>, <a class="el" href="#l00177">i2c_master_wait()</a>, <a class="el" href="#l00315">length</a> og <a class="el" href="#l00099">states</a>.</p>
+<p class="reference">Indeholder referencer til <a class="el" href="#l00093">States::error</a>, <a class="el" href="#l00175">i2c_master_start()</a>, <a class="el" href="#l00181">i2c_master_stop()</a>, <a class="el" href="#l00170">i2c_master_wait()</a>, <a class="el" href="#l00315">length</a> og <a class="el" href="#l00099">states</a>.</p>
 
 <p class="reference">Refereret til af <a class="el" href="#l00055">eeprom_initEeprom()</a>, <a class="el" href="#l00038">eeprom_logData()</a>, <a class="el" href="#l00018">eeprom_testData()</a>, <a class="el" href="#l00355">getDay()</a>, <a class="el" href="#l00322">getHour()</a>, <a class="el" href="#l00300">getMinutes()</a>, <a class="el" href="#l00278">getSeconds()</a>, <a class="el" href="#l00038">i2c_portScan()</a>, <a class="el" href="#l00014">lcd_displayInit()</a>, <a class="el" href="#l00031">lcd_write()</a>, <a class="el" href="#l00022">rtc_getTimeAll()</a>, <a class="el" href="#l00224">rtc_setTimeAll()</a>, <a class="el" href="#l00016">sensor_getReading()</a>, <a class="el" href="#l00010">sensor_testTempSensor()</a>, <a class="el" href="#l00112">sensor_updateHumidity()</a>, <a class="el" href="#l00096">sensor_updateTemperature()</a>, <a class="el" href="#l00471">setAlarm1Minutes()</a>, <a class="el" href="#l00366">setDay()</a>, <a class="el" href="#l00333">setHour()</a>, <a class="el" href="#l00311">setMinutes()</a>, <a class="el" href="#l00380">setMonth()</a>, <a class="el" href="#l00289">setSeconds()</a> og <a class="el" href="#l00388">setYear()</a>.</p>
 
@@ -565,28 +558,28 @@ Variable</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">Refereret til af <a class="el" href="#l00117">i2c_read_serial()</a>, <a class="el" href="#l00016">sensor_getReading()</a> og <a class="el" href="#l00010">sensor_testTempSensor()</a>.</p>
+<p class="reference">Refereret til af <a class="el" href="#l00112">i2c_read_serial()</a>, <a class="el" href="#l00016">sensor_getReading()</a> og <a class="el" href="#l00010">sensor_testTempSensor()</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="ai2c_8h_html_a8eac694cd48788e914ae973b41d1b8ec"><div class="ttname"><a href="i2c_8h.html#a8eac694cd48788e914ae973b41d1b8ec">data_out</a></div><div class="ttdeci">uint8_t data_out[4]</div><div class="ttdef"><b>Definition:</b> i2c.h:32</div></div>
-<div class="ttc" id="ai2c_8c_html_a6caad88441987f83268d336d4322d07d"><div class="ttname"><a href="i2c_8c.html#a6caad88441987f83268d336d4322d07d">i2c_master_ack</a></div><div class="ttdeci">void i2c_master_ack(void)</div><div class="ttdef"><b>Definition:</b> i2c.c:194</div></div>
+<div class="ttc" id="ai2c_8c_html_a6caad88441987f83268d336d4322d07d"><div class="ttname"><a href="i2c_8c.html#a6caad88441987f83268d336d4322d07d">i2c_master_ack</a></div><div class="ttdeci">void i2c_master_ack(void)</div><div class="ttdef"><b>Definition:</b> i2c.c:187</div></div>
 <div class="ttc" id="ai2c_8h_html_ae3bb1645bd52518d362f3a02a2c66700"><div class="ttname"><a href="i2c_8h.html#ae3bb1645bd52518d362f3a02a2c66700">SCL_IO</a></div><div class="ttdeci">#define SCL_IO</div><div class="ttdef"><b>Definition:</b> i2c.h:27</div></div>
 <div class="ttc" id="aesp8266_8h_html_a4952c1b7f3ed488d08e34f466ba70db8"><div class="ttname"><a href="esp8266_8h.html#a4952c1b7f3ed488d08e34f466ba70db8">states</a></div><div class="ttdeci">states_t states</div><div class="ttdef"><b>Definition:</b> esp8266.h:99</div></div>
 <div class="ttc" id="aesp8266_8c_html_aa5e1cb340835d3ac9cb4c407ca03c1a2"><div class="ttname"><a href="esp8266_8c.html#aa5e1cb340835d3ac9cb4c407ca03c1a2">esp_terminalTransmit</a></div><div class="ttdeci">void esp_terminalTransmit(char *sendmsg)</div><div class="ttdef"><b>Definition:</b> esp8266.c:453</div></div>
-<div class="ttc" id="ai2c_8c_html_a02d93c2bcdbbee7a791b77b0cf12467f"><div class="ttname"><a href="i2c_8c.html#a02d93c2bcdbbee7a791b77b0cf12467f">i2c_master_start</a></div><div class="ttdeci">void i2c_master_start(void)</div><div class="ttdef"><b>Definition:</b> i2c.c:182</div></div>
-<div class="ttc" id="ai2c_8c_html_adb646b67ce754741a06e63ea28d05259"><div class="ttname"><a href="i2c_8c.html#adb646b67ce754741a06e63ea28d05259">i2c_master_wait</a></div><div class="ttdeci">void i2c_master_wait(void)</div><div class="ttdef"><b>Definition:</b> i2c.c:177</div></div>
+<div class="ttc" id="ai2c_8c_html_a02d93c2bcdbbee7a791b77b0cf12467f"><div class="ttname"><a href="i2c_8c.html#a02d93c2bcdbbee7a791b77b0cf12467f">i2c_master_start</a></div><div class="ttdeci">void i2c_master_start(void)</div><div class="ttdef"><b>Definition:</b> i2c.c:175</div></div>
+<div class="ttc" id="ai2c_8c_html_adb646b67ce754741a06e63ea28d05259"><div class="ttname"><a href="i2c_8c.html#adb646b67ce754741a06e63ea28d05259">i2c_master_wait</a></div><div class="ttdeci">void i2c_master_wait(void)</div><div class="ttdef"><b>Definition:</b> i2c.c:170</div></div>
 <div class="ttc" id="astruct_states_html_a7a3172cc98e93d8eadfb9ab30373799e"><div class="ttname"><a href="struct_states.html#a7a3172cc98e93d8eadfb9ab30373799e">States::error</a></div><div class="ttdeci">bool error</div><div class="ttdef"><b>Definition:</b> esp8266.h:93</div></div>
 <div class="ttc" id="aesp8266_8c_html_af9d495c1655d813d553030485d00fea7"><div class="ttname"><a href="esp8266_8c.html#af9d495c1655d813d553030485d00fea7">length</a></div><div class="ttdeci">length</div><div class="ttdoc">UART kommandoer.</div><div class="ttdef"><b>Definition:</b> esp8266.c:315</div></div>
 <div class="ttc" id="adevice__config_8h_html_a024148e99a7143db044a48216664d03d"><div class="ttname"><a href="device__config_8h.html#a024148e99a7143db044a48216664d03d">_XTAL_FREQ</a></div><div class="ttdeci">#define _XTAL_FREQ</div><div class="ttdoc">@Generated PIC10 / PIC12 / PIC16 / PIC18 MCUs Header File</div><div class="ttdef"><b>Definition:</b> device_config.h:50</div></div>
-<div class="ttc" id="ai2c_8c_html_a4524baa32fdd90e664342c610dc1d177"><div class="ttname"><a href="i2c_8c.html#a4524baa32fdd90e664342c610dc1d177">i2c_master_stop</a></div><div class="ttdeci">void i2c_master_stop(void)</div><div class="ttdef"><b>Definition:</b> i2c.c:188</div></div>
+<div class="ttc" id="ai2c_8c_html_a4524baa32fdd90e664342c610dc1d177"><div class="ttname"><a href="i2c_8c.html#a4524baa32fdd90e664342c610dc1d177">i2c_master_stop</a></div><div class="ttdeci">void i2c_master_stop(void)</div><div class="ttdef"><b>Definition:</b> i2c.c:181</div></div>
 <div class="ttc" id="ai2c_8h_html_a6890442e1cc24a0d61597a13576b8727"><div class="ttname"><a href="i2c_8h.html#a6890442e1cc24a0d61597a13576b8727">SDA</a></div><div class="ttdeci">#define SDA</div><div class="ttdef"><b>Definition:</b> i2c.h:26</div></div>
 <div class="ttc" id="ai2c_8h_html_ab5ffc4751921608954bb7a5687566b2d"><div class="ttname"><a href="i2c_8h.html#ab5ffc4751921608954bb7a5687566b2d">SCL</a></div><div class="ttdeci">#define SCL</div><div class="ttdoc">I2C generelle kommandoer.</div><div class="ttdef"><b>Definition:</b> i2c.h:25</div></div>
 <div class="ttc" id="ai2c_8h_html_accdabacb169a59828fa37ff89d8240d3"><div class="ttname"><a href="i2c_8h.html#accdabacb169a59828fa37ff89d8240d3">SDA_IO</a></div><div class="ttdeci">#define SDA_IO</div><div class="ttdef"><b>Definition:</b> i2c.h:28</div></div>
 <div class="ttc" id="ai2c_8c_html_a2afd8da70c8c74e56659da3dd6f60dd0"><div class="ttname"><a href="i2c_8c.html#a2afd8da70c8c74e56659da3dd6f60dd0">i2c_write_serial</a></div><div class="ttdeci">void i2c_write_serial(uint8_t addr, char *data, uint8_t length)</div><div class="ttdef"><b>Definition:</b> i2c.c:46</div></div>
-<div class="ttc" id="ai2c_8c_html_ae60d3dfb3e2bcfacd1bbca9debd6e35c"><div class="ttname"><a href="i2c_8c.html#ae60d3dfb3e2bcfacd1bbca9debd6e35c">i2c_master_nack</a></div><div class="ttdeci">void i2c_master_nack(void)</div><div class="ttdef"><b>Definition:</b> i2c.c:201</div></div>
+<div class="ttc" id="ai2c_8c_html_ae60d3dfb3e2bcfacd1bbca9debd6e35c"><div class="ttname"><a href="i2c_8c.html#ae60d3dfb3e2bcfacd1bbca9debd6e35c">i2c_master_nack</a></div><div class="ttdeci">void i2c_master_nack(void)</div><div class="ttdef"><b>Definition:</b> i2c.c:194</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

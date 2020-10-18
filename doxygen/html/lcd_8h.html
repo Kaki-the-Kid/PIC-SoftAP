@@ -67,7 +67,7 @@ $(document).ready(function(){initNavTree('lcd_8h.html',''); initResizable(); });
 <div class="title">lcd.h filreference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="">mcc_generated_files/mcc.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="">../mcc_generated_files/mcc.h</a>&quot;</code><br />
 <code>#include &lt;string.h&gt;</code><br />
 </div>
 <p><a href="">Hop til denne fils kildekode.</a></p>
@@ -128,7 +128,7 @@ Variable</h2></td></tr>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="i2c_8c.html#a2afd8da70c8c74e56659da3dd6f60dd0">i2c_write_serial</a>(<a class="code" href="lcd_8h.html#a8683f936ecb5cd7b43c33a01a435a7ba">display_addr</a>, (<span class="keywordtype">char</span>*) <a class="code" href="lcd_8h.html#a47c73631070ab0c6b9e7574163b90d87">empty_line</a>, 16);</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Indeholder referencer til <a class="el" href="#l00022">display_addr</a>, <a class="el" href="#l00023">display_init</a>, <a class="el" href="#l00026">empty_line</a>, <a class="el" href="#l00453">esp_terminalTransmit()</a>, <a class="el" href="#l00024">first_line</a>, <a class="el" href="#l00046">i2c_write_serial()</a> og <a class="el" href="#l00025">shift_line</a>.</p>
+<p class="reference">Indeholder referencer til <a class="el" href="#l00023">display_addr</a>, <a class="el" href="#l00024">display_init</a>, <a class="el" href="#l00027">empty_line</a>, <a class="el" href="#l00453">esp_terminalTransmit()</a>, <a class="el" href="#l00025">first_line</a>, <a class="el" href="#l00046">i2c_write_serial()</a> og <a class="el" href="#l00026">shift_line</a>.</p>
 
 <p class="reference">Refereret til af <a class="el" href="#l00062">main()</a>.</p>
 
@@ -167,7 +167,7 @@ Variable</h2></td></tr>
 </div><div class="memdoc">
 <div class="fragment"><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                                                               {</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="comment">//[TODO] Lav en funktion som håndterer output til LCD display</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="comment">//[TODO] Lav en funktion som hïŋ―ndterer output til LCD display</span></div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
@@ -213,7 +213,7 @@ Variable</h2></td></tr>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="i2c_8c.html#a2afd8da70c8c74e56659da3dd6f60dd0">i2c_write_serial</a>(<a class="code" href="lcd_8h.html#a8683f936ecb5cd7b43c33a01a435a7ba">display_addr</a>, (<span class="keywordtype">char</span>*) tmpmsg, 16 ); <span class="comment">// og skriv besked</span></div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Indeholder referencer til <a class="el" href="#l00022">display_addr</a>, <a class="el" href="#l00026">empty_line</a> og <a class="el" href="#l00046">i2c_write_serial()</a>.</p>
+<p class="reference">Indeholder referencer til <a class="el" href="#l00023">display_addr</a>, <a class="el" href="#l00027">empty_line</a> og <a class="el" href="#l00046">i2c_write_serial()</a>.</p>
 
 <p class="reference">Refereret til af <a class="el" href="#l00939">tcpip_serverPage()</a>, <a class="el" href="#l00038">tcpip_serverSetup()</a>, <a class="el" href="#l00186">wifi_connectToAP()</a> og <a class="el" href="#l00021">wifi_setWifiMode()</a>.</p>
 
@@ -319,12 +319,12 @@ Variable</h2></td></tr>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aesp8266_8c_html_aa5e1cb340835d3ac9cb4c407ca03c1a2"><div class="ttname"><a href="esp8266_8c.html#aa5e1cb340835d3ac9cb4c407ca03c1a2">esp_terminalTransmit</a></div><div class="ttdeci">void esp_terminalTransmit(char *sendmsg)</div><div class="ttdef"><b>Definition:</b> esp8266.c:453</div></div>
-<div class="ttc" id="alcd_8h_html_a2190e3cca1f36422ffbff3de09bccbec"><div class="ttname"><a href="lcd_8h.html#a2190e3cca1f36422ffbff3de09bccbec">first_line</a></div><div class="ttdeci">const char first_line[]</div><div class="ttdef"><b>Definition:</b> lcd.h:24</div></div>
-<div class="ttc" id="alcd_8h_html_a8683f936ecb5cd7b43c33a01a435a7ba"><div class="ttname"><a href="lcd_8h.html#a8683f936ecb5cd7b43c33a01a435a7ba">display_addr</a></div><div class="ttdeci">const uint8_t display_addr</div><div class="ttdoc">LCD generelle kommandoer.</div><div class="ttdef"><b>Definition:</b> lcd.h:22</div></div>
-<div class="ttc" id="alcd_8h_html_a47c73631070ab0c6b9e7574163b90d87"><div class="ttname"><a href="lcd_8h.html#a47c73631070ab0c6b9e7574163b90d87">empty_line</a></div><div class="ttdeci">const char empty_line[]</div><div class="ttdef"><b>Definition:</b> lcd.h:26</div></div>
+<div class="ttc" id="alcd_8h_html_a2190e3cca1f36422ffbff3de09bccbec"><div class="ttname"><a href="lcd_8h.html#a2190e3cca1f36422ffbff3de09bccbec">first_line</a></div><div class="ttdeci">const char first_line[]</div><div class="ttdef"><b>Definition:</b> lcd.h:25</div></div>
+<div class="ttc" id="alcd_8h_html_a8683f936ecb5cd7b43c33a01a435a7ba"><div class="ttname"><a href="lcd_8h.html#a8683f936ecb5cd7b43c33a01a435a7ba">display_addr</a></div><div class="ttdeci">const uint8_t display_addr</div><div class="ttdoc">LCD generelle kommandoer.</div><div class="ttdef"><b>Definition:</b> lcd.h:23</div></div>
+<div class="ttc" id="alcd_8h_html_a47c73631070ab0c6b9e7574163b90d87"><div class="ttname"><a href="lcd_8h.html#a47c73631070ab0c6b9e7574163b90d87">empty_line</a></div><div class="ttdeci">const char empty_line[]</div><div class="ttdef"><b>Definition:</b> lcd.h:27</div></div>
 <div class="ttc" id="ai2c_8c_html_a2afd8da70c8c74e56659da3dd6f60dd0"><div class="ttname"><a href="i2c_8c.html#a2afd8da70c8c74e56659da3dd6f60dd0">i2c_write_serial</a></div><div class="ttdeci">void i2c_write_serial(uint8_t addr, char *data, uint8_t length)</div><div class="ttdef"><b>Definition:</b> i2c.c:46</div></div>
-<div class="ttc" id="alcd_8h_html_aac625d7a605ca9aca6a1775119fc307d"><div class="ttname"><a href="lcd_8h.html#aac625d7a605ca9aca6a1775119fc307d">display_init</a></div><div class="ttdeci">const char display_init[]</div><div class="ttdef"><b>Definition:</b> lcd.h:23</div></div>
-<div class="ttc" id="alcd_8h_html_a7c8aec3447e717abf7f853bd11b8a5ec"><div class="ttname"><a href="lcd_8h.html#a7c8aec3447e717abf7f853bd11b8a5ec">shift_line</a></div><div class="ttdeci">const char shift_line[]</div><div class="ttdef"><b>Definition:</b> lcd.h:25</div></div>
+<div class="ttc" id="alcd_8h_html_aac625d7a605ca9aca6a1775119fc307d"><div class="ttname"><a href="lcd_8h.html#aac625d7a605ca9aca6a1775119fc307d">display_init</a></div><div class="ttdeci">const char display_init[]</div><div class="ttdef"><b>Definition:</b> lcd.h:24</div></div>
+<div class="ttc" id="alcd_8h_html_a7c8aec3447e717abf7f853bd11b8a5ec"><div class="ttname"><a href="lcd_8h.html#a7c8aec3447e717abf7f853bd11b8a5ec">shift_line</a></div><div class="ttdeci">const char shift_line[]</div><div class="ttdef"><b>Definition:</b> lcd.h:26</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
