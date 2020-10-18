@@ -1,8 +1,8 @@
 Version 4.0 HI-TECH Software Intermediate Code
 "38 rtc/rtc.h
 [; ;rtc/rtc.h: 38: typedef struct TIME {
-[s S834 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `uc 1 `uc 1 `uc 1 `uc 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 ]
-[n S834 TIME seconds minutes hours day date month year time12_n24 timePM_nAM century A1M1 A1M2 A1M3 A1M4 alarm1Seconds alarm1Minutes alarm1Hour alarm1Day alarm1Date alarm112n24 alarm1PMnAM alarm1DYnDT A2M2 A2M3 A2M4 alarm2Minutes alarm2Hours alarm2Day alarm2Date alarm212n24 alarm2PMnAM alarm2DYnDT EOSC RS2 RS1 INTCN A2IE A1IE OSF A2F A1F ]
+[s S833 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `uc 1 `uc 1 `uc 1 `uc 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 ]
+[n S833 TIME seconds minutes hours day date month year time12_n24 timePM_nAM century A1M1 A1M2 A1M3 A1M4 alarm1Seconds alarm1Minutes alarm1Hour alarm1Day alarm1Date alarm112n24 alarm1PMnAM alarm1DYnDT A2M2 A2M3 A2M4 alarm2Minutes alarm2Hours alarm2Day alarm2Date alarm212n24 alarm2PMnAM alarm2DYnDT EOSC RS2 RS1 INTCN A2IE A1IE OSF A2F A1F ]
 "54 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k22.h
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k22.h: 54: __asm("ANSELA equ 0F38h");
 [; <" ANSELA equ 0F38h ;# ">
@@ -739,17 +739,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k22.h: 16609: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
 "16 rtc/rtc.h
-[; ;rtc/rtc.h: 16: uint8_t rtc_address;
-[v _rtc_address `uc ~T0 @X0 1 e ]
+[; ;rtc/rtc.h: 16: uint8_t rtc_addr;
+[v _rtc_addr `uc ~T0 @X0 1 e ]
 "32 rtc/rtc_ds1337/../../i2c/i2c.h
 [; ;rtc/rtc_ds1337/../../i2c/i2c.h: 32: uint8_t data_out[4];
 [v _data_out `uc ~T0 @X0 -> 4 `i e ]
-"50 rtc/rtc_ds1337/rtc_ds1337.h
-[; ;rtc/rtc_ds1337/rtc_ds1337.h: 50: uint8_t rtc_addr = 0b1101000;
-[v _rtc_addr `uc ~T0 @X0 1 e ]
-[i _rtc_addr
--> -> 104 `i `uc
-]
 "28 rtc/rtc.h
 [; ;rtc/rtc.h: 28: const char rtc_htmlTemplate[] = "<h1>Server tid</h1><div id ='clock' onload='startTime()'></div>";
 [v _rtc_htmlTemplate `Cuc ~T0 @X0 -> 64 `i e ]
@@ -1459,4 +1453,66 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _rtcData `uc ~T0 @X0 -> 16 `i e ]
 "85
 [; ;rtc/rtc.h: 85: time_t time;
-[v _time `S834 ~T0 @X0 1 e ]
+[v _time `S833 ~T0 @X0 1 e ]
+"31 rtc/rtc.c
+[; ;rtc/rtc.c: 31: uint8_t convertBCD2Bytes(uint8_t bcdByte)
+[v _convertBCD2Bytes `(uc ~T0 @X0 1 ef1`uc ]
+"32
+[; ;rtc/rtc.c: 32: {
+{
+[e :U _convertBCD2Bytes ]
+"31
+[; ;rtc/rtc.c: 31: uint8_t convertBCD2Bytes(uint8_t bcdByte)
+[v _bcdByte `uc ~T0 @X0 1 r1 ]
+"32
+[; ;rtc/rtc.c: 32: {
+[f ]
+"33
+[; ;rtc/rtc.c: 33:     uint8_t result = 0;
+[v _result `uc ~T0 @X0 1 a ]
+[e = _result -> -> 0 `i `uc ]
+"35
+[; ;rtc/rtc.c: 35:     result += (bcdByte & 0x00001111);
+[e =+ _result -> & -> _bcdByte `i -> 4369 `i `uc ]
+"36
+[; ;rtc/rtc.c: 36:     result += ((bcdByte & 0x11110000) << 4);
+[e =+ _result -> << & -> _bcdByte `l -> 286326784 `l -> 4 `i `uc ]
+"38
+[; ;rtc/rtc.c: 38:     return result;
+[e ) _result ]
+[e $UE 834  ]
+"39
+[; ;rtc/rtc.c: 39: }
+[e :UE 834 ]
+}
+"44
+[; ;rtc/rtc.c: 44: uint8_t convertByte2BCD(uint8_t byte)
+[v _convertByte2BCD `(uc ~T0 @X0 1 ef1`uc ]
+"45
+[; ;rtc/rtc.c: 45: {
+{
+[e :U _convertByte2BCD ]
+"44
+[; ;rtc/rtc.c: 44: uint8_t convertByte2BCD(uint8_t byte)
+[v _byte `uc ~T0 @X0 1 r1 ]
+"45
+[; ;rtc/rtc.c: 45: {
+[f ]
+"46
+[; ;rtc/rtc.c: 46:     uint8_t result = 0;
+[v _result `uc ~T0 @X0 1 a ]
+[e = _result -> -> 0 `i `uc ]
+"49
+[; ;rtc/rtc.c: 49:     result = ((uint8_t)( byte / 10 ) << 4);
+[e = _result -> << -> -> / -> _byte `i -> 10 `i `uc `i -> 4 `i `uc ]
+"50
+[; ;rtc/rtc.c: 50:     result += byte % 10;
+[e =+ _result -> % -> _byte `i -> 10 `i `uc ]
+"52
+[; ;rtc/rtc.c: 52:     return result;
+[e ) _result ]
+[e $UE 835  ]
+"53
+[; ;rtc/rtc.c: 53: }
+[e :UE 835 ]
+}

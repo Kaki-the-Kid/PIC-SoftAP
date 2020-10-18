@@ -88,22 +88,22 @@ void sensor_getReading(void) {
     tmp_string[length++] = 0x06;
     tmp_string[length++] = 0x07;*/
 
-    i2c_write_serial(display_addr, (char*) temp_pos, 2);
+    i2c_write_serial(display_addr, temp_pos, 2);
     i2c_write_serial(display_addr, tmp_string, length);
 }
 
 
 void sensor_updateTemperature(int8_t temp) {
     if(temp < 0) {
-        i2c_write_serial(display_addr, (char*) temp_pos, 2);
-        i2c_write_serial(display_addr, (char*) minus, 2);
+        i2c_write_serial(display_addr, temp_pos, 2);
+        i2c_write_serial(display_addr, minus, 2);
         temp *= -1;
     } else if (temp > 9) {
         uint8_t tens = (uint8_t) (temp / 10) | 0b00110000;
         uint8_t ones = (uint8_t) (temp % 10) | 0b00110000;        
         char    output[] = {0x40, tens , ones, 3};
         
-        i2c_write_serial(display_addr, (char*) temp_pos, 2);
+        i2c_write_serial(display_addr, temp_pos, 2);
         i2c_write_serial(display_addr, output, 3);
     }
 }
@@ -130,7 +130,7 @@ void sensor_updateHumidity(uint8_t moist) {
         output[3] = moist | 0b00110000;
     }
 
-    i2c_write_serial(display_addr, (char*) moist_pos, 2);
+    i2c_write_serial(display_addr, (uint8_t*) moist_pos, 2);
     i2c_write_serial(display_addr, output, 4);
 }
 

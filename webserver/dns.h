@@ -7,6 +7,7 @@
  *
  * Created on March 8, 2020, 11:05 PM
  */
+#pragma once
 
 #ifndef DNS_H
 #define	DNS_H

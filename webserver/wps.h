@@ -4,6 +4,7 @@
  *
  * Created on August 31, 2019, 10:24 PM
  */
+#pragma once
 
 #ifndef WPS_H
 #define	WPS_H

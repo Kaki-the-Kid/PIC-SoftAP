@@ -37,7 +37,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "111 C:\Program Files\Microchip\xc8\v2.30\pic\include\c99\stdio.h
 [v _printf `(i ~T0 @X0 0 ev`*Cuc ]
 "36 i2c/i2c.h
-[; ;i2c/i2c.h: 36: void i2c_write_serial(uint8_t, char*, uint8_t);
+[; ;i2c/i2c.h: 36: void i2c_write_serial(uint8_t, uint8_t*, uint8_t);
 [v _i2c_write_serial `(v ~T0 @X0 0 ef3`uc`*uc`uc ]
 "39
 [; ;i2c/i2c.h: 39: void i2c_master_wait(void);
@@ -957,7 +957,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :UE 834 ]
 }
 "46
-[; ;i2c/i2c.c: 46: void i2c_write_serial(uint8_t addr, char* data, uint8_t length) {
+[; ;i2c/i2c.c: 46: void i2c_write_serial(uint8_t addr, uint8_t* data, uint8_t length) {
 [v _i2c_write_serial `(v ~T0 @X0 1 ef3`uc`*uc`uc ]
 {
 [e :U _i2c_write_serial ]
@@ -1002,7 +1002,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "69
 [; ;i2c/i2c.c: 69:             SSP1BUF = (uint8_t) data[i];
-[e = _SSP1BUF -> *U + _data * -> _i `ux -> -> # *U _data `ui `ux `uc ]
+[e = _SSP1BUF *U + _data * -> _i `ux -> -> # *U _data `ui `ux ]
 "70
 [; ;i2c/i2c.c: 70:             while(SSP1STATbits.R_nW);
 [e $U 847  ]
@@ -1032,7 +1032,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 854 ]
 "83
 [; ;i2c/i2c.c: 83:                 SSP1BUF = (uint8_t) data[i];
-[e = _SSP1BUF -> *U + _data * -> _i `ux -> -> # *U _data `ui `ux `uc ]
+[e = _SSP1BUF *U + _data * -> _i `ux -> -> # *U _data `ui `ux ]
 "84
 [; ;i2c/i2c.c: 84:                 while(SSP1STATbits.R_nW);
 [e $U 855  ]

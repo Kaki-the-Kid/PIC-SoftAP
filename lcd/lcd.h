@@ -7,6 +7,7 @@
  *
  * Created on September 1, 2019, 8:49 PM
  */
+#pragma once
 
 #ifndef MCC_H
 #include "../mcc_generated_files/mcc.h"

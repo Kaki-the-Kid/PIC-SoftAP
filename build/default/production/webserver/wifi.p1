@@ -1,35 +1,35 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"20 webserver/tcpip.h
-[; ;webserver/tcpip.h: 20: struct SERVER {
-[s S834 `a 1 `uc 1 `a 1 `uc 1 `*uc -> 20 `i `*uc -> 20 `i `*uc -> 20 `i `a 1 `a 1 `a 1 `uc -> 20 `i `uc -> 15 `i `uc 1 `a 1 `a 1 ]
-[n S834 SERVER busy wifiMode multibleConnections maxConnections ssid password encryption wificonnected wifigotip internet remote_ip local_ip running clientConnected clientAvailable ]
-"41 webserver/wifi.h
-[; ;webserver/wifi.h: 41: struct WIFIMode {
-[s S835 `uc 1 `uc 1 `uc 1 ]
-[n S835 WIFIMode stationMode softAPMode multibleConnections ]
-"52
-[; ;webserver/wifi.h: 52: typedef struct item_t { const char *ssid; const char *password; const char *encryption; } item_t;
-[s S836 `*Cuc 1 `*Cuc 1 `*Cuc 1 ]
-[n S836 item_t ssid password encryption ]
-"72 webserver/esp8266.h
-[; ;webserver/esp8266.h: 72: struct ESPUART {
+"21 webserver/tcpip.h
+[; ;webserver/tcpip.h: 21: struct SERVER {
+[s S833 `a 1 `uc 1 `a 1 `uc 1 `*uc -> 20 `i `*uc -> 20 `i `*uc -> 20 `i `a 1 `a 1 `a 1 `uc -> 20 `i `uc -> 15 `i `uc 1 `a 1 `a 1 ]
+[n S833 SERVER busy wifiMode multibleConnections maxConnections ssid password encryption wificonnected wifigotip internet remote_ip local_ip running clientConnected clientAvailable ]
+"42 webserver/wifi.h
+[; ;webserver/wifi.h: 42: struct WIFIMode {
+[s S834 `uc 1 `uc 1 `uc 1 ]
+[n S834 WIFIMode stationMode softAPMode multibleConnections ]
+"53
+[; ;webserver/wifi.h: 53: typedef struct item_t { const char *ssid; const char *password; const char *encryption; } item_t;
+[s S835 `*Cuc 1 `*Cuc 1 `*Cuc 1 ]
+[n S835 item_t ssid password encryption ]
+"71 webserver/esp8266.h
+[; ;webserver/esp8266.h: 71: struct ESPUART {
 [s S837 `l 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
 [n S837 ESPUART baudrate databits stopbits parity flowcontrol ]
-"81
-[; ;webserver/esp8266.h: 81: struct ESPFirmWare {
+"80
+[; ;webserver/esp8266.h: 80: struct ESPFirmWare {
 [s S838 `*uc 1 `*uc 1 `*uc 1 `uc 1 ]
 [n S838 ESPFirmWare ATVersion SDKVersion BinVersion updated ]
-"91
-[; ;webserver/esp8266.h: 91: struct States {
+"90
+[; ;webserver/esp8266.h: 90: struct States {
 [s S839 `a 1 `a 1 `a 1 ]
 [n S839 States ok error ready ]
-"33 webserver/../lcd/lcd.h
-[; ;webserver/../lcd/lcd.h: 33: void lcd_write(char *, uint8_t, uint8_t);
+"34 webserver/../lcd/lcd.h
+[; ;webserver/../lcd/lcd.h: 34: void lcd_write(char *, uint8_t, uint8_t);
 [v _lcd_write `(v ~T0 @X0 0 ef3`*uc`uc`uc ]
 "111 C:\Program Files\Microchip\xc8\v2.30\pic\include\c99\stdio.h
 [v _printf `(i ~T0 @X0 0 ev`*Cuc ]
-"115 webserver/esp8266.h
-[; ;webserver/esp8266.h: 115: _Bool esp_waitForOK(void);
+"114 webserver/esp8266.h
+[; ;webserver/esp8266.h: 114: _Bool esp_waitForOK(void);
 [v _esp_waitForOK `(a ~T0 @X0 0 ef ]
 "113 C:\Program Files\Microchip\xc8\v2.30\pic\include\c99\stdio.h
 [v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
@@ -39,8 +39,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "33
 [; ;C:\Program Files\Microchip\xc8\v2.30\pic\include\c99\string.h: 33: char *strcpy (char *restrict, const char *restrict);
 [v _strcpy `(*uc ~T0 @X0 0 ef2`*uc`*Cuc ]
-"112 webserver/esp8266.h
-[; ;webserver/esp8266.h: 112: uint8_t esp_uartReceive(char *);
+"111 webserver/esp8266.h
+[; ;webserver/esp8266.h: 111: uint8_t esp_uartReceive(char *);
 [v _esp_uartReceive `(uc ~T0 @X0 0 ef1`*uc ]
 "54 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k22.h
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k22.h: 54: __asm("ANSELA equ 0F38h");
@@ -777,11 +777,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 "16609
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k22.h: 16609: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"41 webserver/tcpip.h
-[; ;webserver/tcpip.h: 41: server_t server;
-[v _server `S834 ~T0 @X0 1 e ]
-"91
-[; ;webserver/tcpip.h: 91: const char htmlMsgPart1[] = "<!DOCTYPE html><html xmlns=\"http://www.w3.org/1999/xhtml\"><head><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><link rel=\"icon\" href=\"data:,\"><style>html { font-family: Helvetica; display: inline-block; margin: 0px auto; text-align: center;} .button { background-color: #195B6A; border: none; color: white; padding: 16px 40px; text-decoration: none; font-size: 30px; margin: 2px; cursor: pointer;} .button2 {background-color: #77878A;}</style></head><body><h1>ESP8266 Web Server</h1>";
+"42 webserver/tcpip.h
+[; ;webserver/tcpip.h: 42: server_t server;
+[v _server `S833 ~T0 @X0 1 e ]
+"92
+[; ;webserver/tcpip.h: 92: const char htmlMsgPart1[] = "<!DOCTYPE html><html xmlns=\"http://www.w3.org/1999/xhtml\"><head><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><link rel=\"icon\" href=\"data:,\"><style>html { font-family: Helvetica; display: inline-block; margin: 0px auto; text-align: center;} .button { background-color: #195B6A; border: none; color: white; padding: 16px 40px; text-decoration: none; font-size: 30px; margin: 2px; cursor: pointer;} .button2 {background-color: #77878A;}</style></head><body><h1>ESP8266 Web Server</h1>";
 [v _htmlMsgPart1 `Cuc ~T0 @X0 -> 505 `i e ]
 [i _htmlMsgPart1
 :U ..
@@ -1292,13 +1292,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-"49 webserver/wifi.h
-[; ;webserver/wifi.h: 49: WIFIMode_t wifi;
-[v _wifi `S835 ~T0 @X0 1 e ]
-"53
-[; ;webserver/wifi.h: 53: item_t table[] = {
-[v _table `S836 ~T0 @X0 -> 5 `i e ]
-[i _table
+"50 webserver/wifi.h
+[; ;webserver/wifi.h: 50: WIFIMode_t wifi;
+[v _wifi `S834 ~T0 @X0 1 e ]
+"54
+[; ;webserver/wifi.h: 54: item_t network_table[] = {
+[v _network_table `S835 ~T0 @X0 -> 5 `i e ]
+[i _network_table
 :U ..
 :U ..
 :s 1C
@@ -1327,38 +1327,38 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ..
 ]
-"24 webserver/softap.h
-[; ;webserver/softap.h: 24: const char *SOFTAP_SSIDNAME = "KRS_PIC_AP";
+"25 webserver/softap.h
+[; ;webserver/softap.h: 25: const char* SOFTAP_SSIDNAME = "KRS_PIC_AP";
 [v _SOFTAP_SSIDNAME `*Cuc ~T0 @X0 1 e ]
 [i _SOFTAP_SSIDNAME
 :s 16C
 ]
-"25
-[; ;webserver/softap.h: 25: const char *SOFTAP_PASSWORD = "1234567890";
+"26
+[; ;webserver/softap.h: 26: const char* SOFTAP_PASSWORD = "1234567890";
 [v _SOFTAP_PASSWORD `*Cuc ~T0 @X0 1 e ]
 [i _SOFTAP_PASSWORD
 :s 17C
 ]
-"26
-[; ;webserver/softap.h: 26: const uint8_t SOFTAP_CHANNELID = 3;
+"27
+[; ;webserver/softap.h: 27: const uint8_t SOFTAP_CHANNELID = 3;
 [v _SOFTAP_CHANNELID `Cuc ~T0 @X0 1 e ]
 [i _SOFTAP_CHANNELID
 -> -> 3 `i `uc
 ]
-"27
-[; ;webserver/softap.h: 27: const uint8_t SOFTAP_ECN = 4;
+"28
+[; ;webserver/softap.h: 28: const uint8_t SOFTAP_ECN = 4;
 [v _SOFTAP_ECN `Cuc ~T0 @X0 1 e ]
 [i _SOFTAP_ECN
 -> -> 4 `i `uc
 ]
-"28
-[; ;webserver/softap.h: 28: const uint8_t SOFTAP_MAXCONN = 1;
+"29
+[; ;webserver/softap.h: 29: const uint8_t SOFTAP_MAXCONN = 1;
 [v _SOFTAP_MAXCONN `Cuc ~T0 @X0 1 e ]
 [i _SOFTAP_MAXCONN
 -> -> 1 `i `uc
 ]
-"29
-[; ;webserver/softap.h: 29: const uint8_t SOFTAP_HIDDEN = 0;
+"30
+[; ;webserver/softap.h: 30: const uint8_t SOFTAP_HIDDEN = 0;
 [v _SOFTAP_HIDDEN `Cuc ~T0 @X0 1 e ]
 [i _SOFTAP_HIDDEN
 -> -> 0 `i `uc
@@ -1366,14 +1366,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 "32 webserver/../i2c/i2c.h
 [; ;webserver/../i2c/i2c.h: 32: uint8_t data_out[4];
 [v _data_out `uc ~T0 @X0 -> 4 `i e ]
-"23 webserver/../lcd/lcd.h
-[; ;webserver/../lcd/lcd.h: 23: const uint8_t display_addr = 0b0111100;
+"24 webserver/../lcd/lcd.h
+[; ;webserver/../lcd/lcd.h: 24: const uint8_t display_addr = 0b0111100;
 [v _display_addr `Cuc ~T0 @X0 1 e ]
 [i _display_addr
 -> -> 60 `i `uc
 ]
-"24
-[; ;webserver/../lcd/lcd.h: 24: const char display_init[] = {0x00, 0x38, 0x0C, 0x06};
+"25
+[; ;webserver/../lcd/lcd.h: 25: const char display_init[] = {0x00, 0x38, 0x0C, 0x06};
 [v _display_init `Cuc ~T0 @X0 -> 4 `i e ]
 [i _display_init
 :U ..
@@ -1383,8 +1383,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 6 `i `uc
 ..
 ]
-"25
-[; ;webserver/../lcd/lcd.h: 25: const char first_line[] = {0x00, 0x80};
+"26
+[; ;webserver/../lcd/lcd.h: 26: const char first_line[] = {0x00, 0x80};
 [v _first_line `Cuc ~T0 @X0 -> 2 `i e ]
 [i _first_line
 :U ..
@@ -1392,8 +1392,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 128 `i `uc
 ..
 ]
-"26
-[; ;webserver/../lcd/lcd.h: 26: const char shift_line[] = {0x00, 0xC0};
+"27
+[; ;webserver/../lcd/lcd.h: 27: const char shift_line[] = {0x00, 0xC0};
 [v _shift_line `Cuc ~T0 @X0 -> 2 `i e ]
 [i _shift_line
 :U ..
@@ -1401,8 +1401,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 192 `i `uc
 ..
 ]
-"27
-[; ;webserver/../lcd/lcd.h: 27: const char empty_line[] = "                ";
+"28
+[; ;webserver/../lcd/lcd.h: 28: const char empty_line[] = "                ";
 [v _empty_line `Cuc ~T0 @X0 -> 17 `i e ]
 [i _empty_line
 :U ..
@@ -1425,25 +1425,25 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-"28
-[; ;webserver/../lcd/lcd.h: 28: char text[50] = "";
+"29
+[; ;webserver/../lcd/lcd.h: 29: char text[50] = "";
 [v _text `uc ~T0 @X0 -> 50 `i e ]
 [i _text
 :U ..
 -> 0 `c
 ..
 ]
-"69 webserver/esp8266.h
-[; ;webserver/esp8266.h: 69: uint8_t uartInput[128];
+"68 webserver/esp8266.h
+[; ;webserver/esp8266.h: 68: uint8_t uartInput[128];
 [v _uartInput `uc ~T0 @X0 -> 128 `i e ]
-"79
-[; ;webserver/esp8266.h: 79: struct ESPUART uart;
+"78
+[; ;webserver/esp8266.h: 78: struct ESPUART uart;
 [v _uart `S837 ~T0 @X0 1 e ]
-"89
-[; ;webserver/esp8266.h: 89: espfirmware_t firmware;
+"88
+[; ;webserver/esp8266.h: 88: espfirmware_t firmware;
 [v _firmware `S838 ~T0 @X0 1 e ]
-"99
-[; ;webserver/esp8266.h: 99: states_t states;
+"98
+[; ;webserver/esp8266.h: 98: states_t states;
 [v _states `S839 ~T0 @X0 1 e ]
 "21 webserver/wifi.c
 [; ;webserver/wifi.c: 21: void wifi_setWifiMode(uint8_t mode) {
@@ -1600,10 +1600,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _ssid_name `*Cuc ~T0 @X0 1 r1 ]
 [f ]
 "160
-[; ;webserver/wifi.c: 160:     for (item_t *p = table; p->ssid != ((void*)0); ++p) {
+[; ;webserver/wifi.c: 160:     for (item_t *p = network_table; p->ssid != ((void*)0); ++p) {
 {
-[v _p `*S836 ~T0 @X0 1 a ]
-[e = _p &U _table ]
+[v _p `*S835 ~T0 @X0 1 a ]
+[e = _p &U _network_table ]
 [e $U 864  ]
 [e :U 861 ]
 {

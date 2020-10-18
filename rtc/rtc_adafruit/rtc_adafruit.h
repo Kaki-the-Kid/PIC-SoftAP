@@ -44,7 +44,7 @@
    0FH: |    OSF    | 0 | 0 | 0 | 0 | 0 | A2F | A1F |                      Funtion: Status
  */
 
-rtc_address = 0b1101000; // 7-bit adresse på Real-time clock
+#define rtc_address         0x68; // 7-bit adresse på Real-time clock
 
 //
 #define secondsAddr         0x00
@@ -81,8 +81,8 @@ rtc_address = 0b1101000; // 7-bit adresse på Real-time clock
  * Realtiome Clock function prototypes
  **************************************************************/
 
-void    rtc_getTimeAll(void);
-void    rtc_setTimeAll(uint8_t, uint8_t, uint8_t, uint8_t, uint8_t, uint8_t, int16_t);
+void    rtc_adafruit_getTimeAll(void);
+void    rtc_adafruit_setTimeAll(uint8_t, uint8_t, uint8_t, uint8_t, uint8_t, uint8_t, int16_t);
 uint8_t convertBCD2Bytes(uint8_t);
 uint8_t convertByte2BCD(uint8_t);
 
@@ -92,25 +92,25 @@ uint8_t convertByte2BCD(uint8_t);
  **************************************************************/
 
 uint8_t getSeconds(void);
-void    setSeconds(void);
+void    rtc_adafruit_setSeconds(void);
 
-uint8_t getMinutes(void);
-void    setMinutes(void);
+uint8_t rtc_adafruit_getMinutes(void);
+void    rtc_adafruit_setMinutes(void);
 
-uint8_t getHour(void);
-void    setHour(void);
+uint8_t rtc_adafruit_getHour(void);
+void    rtc_adafruit_setHour(void);
 
-uint8_t getAMPM(void);
-void    setAMPM(void);
+uint8_t rtc_adafruit_getAMPM(void);
+void    rtc_adafruit_setAMPM(void);
 
 uint8_t getDay(void);
-void    setDay(void);
+void    rtc_adafruit_setDay(void);
 
-uint8_t getMonth(void);
-void    setMonth(void);
+uint8_t rtc_adafruit_getMonth(void);
+void    rtc_adafruit_setMonth(void);
 
-uint8_t getYear(void);
-void    setYear(void);
+uint8_t rtc_adafruit_getYear(void);
+void    rtc_adafruit_setYear(void);
 
 
 
@@ -121,51 +121,51 @@ void    setYear(void);
 
 void    setAlarm1(void);
 
-uint8_t getAlarm1Seconds(void);
+uint8_t rtc_adafruit_getAlarm1Seconds(void);
 void    setAlarm1Seconds(void);
 
-uint8_t getAlarm1Minutes(void);
+uint8_t rtc_adafruit_getAlarm1Minutes(void);
 void    setAlarm1Minutes(void);
 
-uint8_t getAlarm1Hours(void);
-void    setAlarm1Hours(void);
+uint8_t rtc_adafruit_getAlarm1Hours(void);
+void    rtc_adafruit_setAlarm1Hours(void);
 
 uint8_t getAlarm1Date(void);
-void    setAlarm1Date(void);
+void    rtc_adafruit_setAlarm1Date(void);
 
 uint8_t getAlarm1AMPM(void);
-void    setAlarm1AMPM(void);
+void    rtc_adafruit_setAlarm1AMPM(void);
 
-void    setAlarm1A1M4(void);
-void    setAlarm1A1M2(void);
-void    setAlarm1A1M3(void);
-void    setAlarm1A1M1(void);
+void    rtc_adafruit_setAlarm1A1M1(void);
+void    rtc_adafruit_setAlarm1A1M2(void);
+void    rtc_adafruit_setAlarm1A1M3(void);
+void    rtc_adafruit_setAlarm1A1M4(void);
 
 
 /**************************************************************
  * Alarm 2 indstillinger registre 0x0B-0x0D
  **************************************************************/
 
-void    setAlarm2Type(uint8_t);
+void    rtc_adafruit_setAlarm2Type(uint8_t);
 
 uint8_t getAlarm2Seconds(void);
-void    setAlarm2Seconds(void);
+void    rtc_adafruit_setAlarm2Seconds(void);
 
 uint8_t getAlarm2Minutes(void);
-void    setAlarm2Minutes(void);
+void    rtc_adafruit_setAlarm2Minutes(void);
 
 uint8_t getAlarm2Hours(void);
-void    setAlarm2Hours(void);
+void    rtc_adafruit_setAlarm2Hours(void);
 
-uint8_t getAlarm2Date(void);
+uint8_t rtc_adafruit_getAlarm2Date(void);
 void    setAlarm2Date(void);
 
-bool    getAlarm2AMPM(void);
-void    setAlarm2AMPM(void);
+bool    rtc_adafruit_getAlarm2AMPM(void);
+void    rtc_adafruit_setAlarm2AMPM(void);
+void    rtc_adafruit_setAlarm2A2M4(void);
 
-void    setAlarm2A2M4(void);
-void    setAlarm2A2M3(void);
-void    setAlarm2A2M2(void);
+void    rtc_adafruit_setAlarm2A2M3(void);
+void    rtc_adafruit_setAlarm2A2M2(void);
 
 
 /**************************************************************
@@ -173,7 +173,7 @@ void    setAlarm2A2M2(void);
  **************************************************************/
 
 bool getEnableOscillator(void);
-void setEnableOscillator(bool);
+void rtc_adafruit_setEnableOscillator(bool);
 
 
 

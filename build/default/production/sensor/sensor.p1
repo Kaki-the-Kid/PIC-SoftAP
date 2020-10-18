@@ -1,12 +1,12 @@
 Version 4.0 HI-TECH Software Intermediate Code
 "36 sensor/../i2c/i2c.h
-[; ;sensor/../i2c/i2c.h: 36: void i2c_write_serial(uint8_t, char*, uint8_t);
+[; ;sensor/../i2c/i2c.h: 36: void i2c_write_serial(uint8_t, uint8_t*, uint8_t);
 [v _i2c_write_serial `(v ~T0 @X0 0 ef3`uc`*uc`uc ]
 "37
 [; ;sensor/../i2c/i2c.h: 37: void i2c_read_serial(uint8_t, uint8_t *, uint8_t);
 [v _i2c_read_serial `(v ~T0 @X0 0 ef3`uc`*uc`uc ]
-"39 sensor/sensor.h
-[; ;sensor/sensor.h: 39: void sensor_updateHumidity(uint8_t);
+"40 sensor/sensor.h
+[; ;sensor/sensor.h: 40: void sensor_updateHumidity(uint8_t);
 [v _sensor_updateHumidity `(v ~T0 @X0 0 ef1`uc ]
 "54 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k22.h
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k22.h: 54: __asm("ANSELA equ 0F38h");
@@ -746,14 +746,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 "32 sensor/../i2c/i2c.h
 [; ;sensor/../i2c/i2c.h: 32: uint8_t data_out[4];
 [v _data_out `uc ~T0 @X0 -> 4 `i e ]
-"23 sensor/../lcd/lcd.h
-[; ;sensor/../lcd/lcd.h: 23: const uint8_t display_addr = 0b0111100;
+"24 sensor/../lcd/lcd.h
+[; ;sensor/../lcd/lcd.h: 24: const uint8_t display_addr = 0b0111100;
 [v _display_addr `Cuc ~T0 @X0 1 e ]
 [i _display_addr
 -> -> 60 `i `uc
 ]
-"24
-[; ;sensor/../lcd/lcd.h: 24: const char display_init[] = {0x00, 0x38, 0x0C, 0x06};
+"25
+[; ;sensor/../lcd/lcd.h: 25: const char display_init[] = {0x00, 0x38, 0x0C, 0x06};
 [v _display_init `Cuc ~T0 @X0 -> 4 `i e ]
 [i _display_init
 :U ..
@@ -763,8 +763,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 6 `i `uc
 ..
 ]
-"25
-[; ;sensor/../lcd/lcd.h: 25: const char first_line[] = {0x00, 0x80};
+"26
+[; ;sensor/../lcd/lcd.h: 26: const char first_line[] = {0x00, 0x80};
 [v _first_line `Cuc ~T0 @X0 -> 2 `i e ]
 [i _first_line
 :U ..
@@ -772,8 +772,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 128 `i `uc
 ..
 ]
-"26
-[; ;sensor/../lcd/lcd.h: 26: const char shift_line[] = {0x00, 0xC0};
+"27
+[; ;sensor/../lcd/lcd.h: 27: const char shift_line[] = {0x00, 0xC0};
 [v _shift_line `Cuc ~T0 @X0 -> 2 `i e ]
 [i _shift_line
 :U ..
@@ -781,8 +781,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 192 `i `uc
 ..
 ]
-"27
-[; ;sensor/../lcd/lcd.h: 27: const char empty_line[] = "                ";
+"28
+[; ;sensor/../lcd/lcd.h: 28: const char empty_line[] = "                ";
 [v _empty_line `Cuc ~T0 @X0 -> 17 `i e ]
 [i _empty_line
 :U ..
@@ -805,22 +805,22 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-"28
-[; ;sensor/../lcd/lcd.h: 28: char text[50] = "";
+"29
+[; ;sensor/../lcd/lcd.h: 29: char text[50] = "";
 [v _text `uc ~T0 @X0 -> 50 `i e ]
 [i _text
 :U ..
 -> 0 `c
 ..
 ]
-"26 sensor/sensor.h
-[; ;sensor/sensor.h: 26: const uint8_t temperature_addr = 0b0100111;
+"27 sensor/sensor.h
+[; ;sensor/sensor.h: 27: const uint8_t temperature_addr = 0b0100111;
 [v _temperature_addr `Cuc ~T0 @X0 1 e ]
 [i _temperature_addr
 -> -> 39 `i `uc
 ]
-"27
-[; ;sensor/sensor.h: 27: const char temp_string[] = "@Temp: xx,xo     ";
+"28
+[; ;sensor/sensor.h: 28: const uint8_t temp_string[] = "@Temp: xx,xo     ";
 [v _temp_string `Cuc ~T0 @X0 -> 18 `i e ]
 [i _temp_string
 :U ..
@@ -844,8 +844,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-"28
-[; ;sensor/sensor.h: 28: const char moist_string[] = "@Humidity: xxx%  ";
+"29
+[; ;sensor/sensor.h: 29: const uint8_t moist_string[] = "@Humidity: xxx%  ";
 [v _moist_string `Cuc ~T0 @X0 -> 18 `i e ]
 [i _moist_string
 :U ..
@@ -869,8 +869,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-"29
-[; ;sensor/sensor.h: 29: const char minus[] = {0x40, 0b00101101};
+"30
+[; ;sensor/sensor.h: 30: const uint8_t minus[] = {0x40, 0b00101101};
 [v _minus `Cuc ~T0 @X0 -> 2 `i e ]
 [i _minus
 :U ..
@@ -878,8 +878,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 45 `i `uc
 ..
 ]
-"30
-[; ;sensor/sensor.h: 30: const char degree_pos[] = {0x00, 0x8A};
+"31
+[; ;sensor/sensor.h: 31: const uint8_t degree_pos[] = {0x00, 0x8A};
 [v _degree_pos `Cuc ~T0 @X0 -> 2 `i e ]
 [i _degree_pos
 :U ..
@@ -887,8 +887,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 138 `i `uc
 ..
 ]
-"31
-[; ;sensor/sensor.h: 31: const char temp_pos[] = {0x00, 0x84};
+"32
+[; ;sensor/sensor.h: 32: const uint8_t temp_pos[] = {0x00, 0x84};
 [v _temp_pos `Cuc ~T0 @X0 -> 2 `i e ]
 [i _temp_pos
 :U ..
@@ -896,8 +896,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 132 `i `uc
 ..
 ]
-"32
-[; ;sensor/sensor.h: 32: const char moist_pos[] = {0x00, 0xC6};
+"33
+[; ;sensor/sensor.h: 33: const uint8_t moist_pos[] = {0x00, 0xC6};
 [v _moist_pos `Cuc ~T0 @X0 -> 2 `i e ]
 [i _moist_pos
 :U ..
@@ -905,8 +905,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 198 `i `uc
 ..
 ]
-"33
-[; ;sensor/sensor.h: 33: const char custom_char0[] = {0x80, 0x40, 0x40, 0b01100, 0b10010, 0b10010, 0b01100, 0b00000, 0b00000, 0b00000, 0b00000};
+"34
+[; ;sensor/sensor.h: 34: const uint8_t custom_char0[] = {0x80, 0x40, 0x40, 0b01100, 0b10010, 0b10010, 0b01100, 0b00000, 0b00000, 0b00000, 0b00000};
 [v _custom_char0 `Cuc ~T0 @X0 -> 11 `i e ]
 [i _custom_char0
 :U ..
@@ -923,8 +923,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `i `uc
 ..
 ]
-"34
-[; ;sensor/sensor.h: 34: char tmp_string[0x0F];
+"35
+[; ;sensor/sensor.h: 35: uint8_t tmp_string[0x0F];
 [v _tmp_string `uc ~T0 @X0 -> 15 `i e ]
 "10 sensor/sensor.c
 [; ;sensor/sensor.c: 10: void sensor_testTempSensor(void) {
@@ -1088,7 +1088,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;sensor/sensor.c: 82:     tmp_string[length++] = 0x00;
 [e = *U + &U _tmp_string * -> ++ _length -> -> 1 `i `uc `ux -> -> # *U &U _tmp_string `ui `ux -> -> 0 `i `uc ]
 "91
-[; ;sensor/sensor.c: 91:     i2c_write_serial(display_addr, (char*) temp_pos, 2);
+[; ;sensor/sensor.c: 91:     i2c_write_serial(display_addr, temp_pos, 2);
 [e ( _i2c_write_serial (3 , , _display_addr -> &U _temp_pos `*uc -> -> 2 `i `uc ]
 "92
 [; ;sensor/sensor.c: 92:     i2c_write_serial(display_addr, tmp_string, length);
@@ -1109,10 +1109,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ ! < -> _temp `i -> 0 `i 841  ]
 {
 "98
-[; ;sensor/sensor.c: 98:         i2c_write_serial(display_addr, (char*) temp_pos, 2);
+[; ;sensor/sensor.c: 98:         i2c_write_serial(display_addr, temp_pos, 2);
 [e ( _i2c_write_serial (3 , , _display_addr -> &U _temp_pos `*uc -> -> 2 `i `uc ]
 "99
-[; ;sensor/sensor.c: 99:         i2c_write_serial(display_addr, (char*) minus, 2);
+[; ;sensor/sensor.c: 99:         i2c_write_serial(display_addr, minus, 2);
 [e ( _i2c_write_serial (3 , , _display_addr -> &U _minus `*uc -> -> 2 `i `uc ]
 "100
 [; ;sensor/sensor.c: 100:         temp *= -1;
@@ -1147,11 +1147,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _output F6451 ]
 [e ; = *U + &U _output * -> -> -> 0 `i `ui `ux -> -> # *U &U _output `ui `ux -> -> 64 `i `uc ; = *U + &U _output * -> -> -> 1 `i `ui `ux -> -> # *U &U _output `ui `ux -> _tens `uc ; = *U + &U _output * -> -> -> 2 `i `ui `ux -> -> # *U &U _output `ui `ux -> _ones `uc = *U + &U _output * -> -> -> 3 `i `ui `ux -> -> # *U &U _output `ui `ux -> -> 3 `i `uc ]
 "106
-[; ;sensor/sensor.c: 106:         i2c_write_serial(display_addr, (char*) temp_pos, 2);
+[; ;sensor/sensor.c: 106:         i2c_write_serial(display_addr, temp_pos, 2);
 [e ( _i2c_write_serial (3 , , _display_addr -> &U _temp_pos `*uc -> -> 2 `i `uc ]
 "107
 [; ;sensor/sensor.c: 107:         i2c_write_serial(display_addr, output, 3);
-[e ( _i2c_write_serial (3 , , _display_addr &U _output -> -> 3 `i `uc ]
+[e ( _i2c_write_serial (3 , , _display_addr -> &U _output `*uc -> -> 3 `i `uc ]
 "108
 [; ;sensor/sensor.c: 108:     }
 }
@@ -1230,11 +1230,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e :U 848 ]
 "133
-[; ;sensor/sensor.c: 133:     i2c_write_serial(display_addr, (char*) moist_pos, 2);
+[; ;sensor/sensor.c: 133:     i2c_write_serial(display_addr, (uint8_t*) moist_pos, 2);
 [e ( _i2c_write_serial (3 , , _display_addr -> &U _moist_pos `*uc -> -> 2 `i `uc ]
 "134
 [; ;sensor/sensor.c: 134:     i2c_write_serial(display_addr, output, 4);
-[e ( _i2c_write_serial (3 , , _display_addr &U _output -> -> 4 `i `uc ]
+[e ( _i2c_write_serial (3 , , _display_addr -> &U _output `*uc -> -> 4 `i `uc ]
 "135
 [; ;sensor/sensor.c: 135: }
 [e :UE 844 ]

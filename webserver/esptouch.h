@@ -11,6 +11,7 @@
  * Espressif - ESP-Touch
  * https://www.espressif.com/en/products/software/esp-touch/overview
  */
+#pragma once
 
 #ifndef ESPTOUCH_H
 #define	ESPTOUCH_H

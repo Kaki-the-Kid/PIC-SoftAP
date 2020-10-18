@@ -4,6 +4,7 @@
  *
  * Created on 4. marts 2020, 19:22
  */
+#pragma once
 
 #ifndef MCC_H
 #include "mcc_generated_files/mcc.h"
@@ -50,7 +51,7 @@ WIFIMode_t wifi; // Ny instans af wifi
 
 /* Opret forbindelse til Access Point*/
 typedef struct item_t { const char *ssid; const char *password; const char *encryption; } item_t;
-item_t table[] = {
+item_t network_table[] = {
     { "SSID-JRzcM4", "frbPCwvRKq",   "WPA2 AES" },
     { "WuggaNet",    "fredagsbanan", "WPA2 AES" },
     { "ASUS_X00PD",  "0c0d8599",     "WPA2 AES" },

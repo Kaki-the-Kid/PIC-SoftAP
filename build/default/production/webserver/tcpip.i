@@ -9491,7 +9491,7 @@ void OSCILLATOR_Initialize(void);
 
 
 # 1 "webserver/tcpip.h" 1
-# 20 "webserver/tcpip.h"
+# 21 "webserver/tcpip.h"
 struct SERVER {
     _Bool busy;
     uint8_t wifiMode;
@@ -9542,12 +9542,12 @@ void tcpip_getSoftAPMac(void);
 void tcpip_getStationGateway(void);
 void tcpip_getStationNetmask(void);
 void tcpip_checkInternet(void);
-# 79 "webserver/tcpip.h"
+# 80 "webserver/tcpip.h"
 void tcpip_serverPage(void);
 void tcpip_sendHTTPHeader(void);
 void tcpip_sendHTTPPage(void);
 void toogleGPIO(uint8_t, uint8_t);
-# 91 "webserver/tcpip.h"
+# 92 "webserver/tcpip.h"
 const char htmlMsgPart1[] = "<!DOCTYPE html><html xmlns=\"http://www.w3.org/1999/xhtml\"><head><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><link rel=\"icon\" href=\"data:,\"><style>html { font-family: Helvetica; display: inline-block; margin: 0px auto; text-align: center;} .button { background-color: #195B6A; border: none; color: white; padding: 16px 40px; text-decoration: none; font-size: 30px; margin: 2px; cursor: pointer;} .button2 {background-color: #77878A;}</style></head><body><h1>ESP8266 Web Server</h1>";
 # 15 "webserver/tcpip.c" 2
 
@@ -9555,9 +9555,9 @@ const char htmlMsgPart1[] = "<!DOCTYPE html><html xmlns=\"http://www.w3.org/1999
 
 
 # 1 "webserver/esp8266.h" 1
-# 22 "webserver/esp8266.h"
+# 21 "webserver/esp8266.h"
 # 1 "webserver/wifi.h" 1
-# 31 "webserver/wifi.h"
+# 32 "webserver/wifi.h"
 void wifi_setWifiMode(uint8_t);
 void wifi_getWifiMode(void);
 
@@ -9580,56 +9580,56 @@ WIFIMode_t wifi;
 
 
 typedef struct item_t { const char *ssid; const char *password; const char *encryption; } item_t;
-item_t table[] = {
+item_t network_table[] = {
     { "SSID-JRzcM4", "frbPCwvRKq", "WPA2 AES" },
     { "WuggaNet", "fredagsbanan", "WPA2 AES" },
     { "ASUS_X00PD", "0c0d8599", "WPA2 AES" },
     { "", "", "" },
     { "", "", ""}
 };
-# 22 "webserver/esp8266.h" 2
+# 21 "webserver/esp8266.h" 2
 
 
 
 
 # 1 "webserver/dhcp.h" 1
-# 15 "webserver/dhcp.h"
+# 16 "webserver/dhcp.h"
 void setupDHCP(void);
 void esp_setSoftAPDHCPIP(uint8_t *, uint8_t *, uint8_t, uint8_t );
-# 26 "webserver/esp8266.h" 2
+# 25 "webserver/esp8266.h" 2
 
 
 
 
 # 1 "webserver/dns.h" 1
-# 16 "webserver/dns.h"
+# 17 "webserver/dns.h"
 void setDNSServers(void);
 void setDNSDomain(void);
 void wifi_mDNSConfig(void);
-# 30 "webserver/esp8266.h" 2
+# 29 "webserver/esp8266.h" 2
 
 
 
 
 # 1 "webserver/esptouch.h" 1
-# 34 "webserver/esp8266.h" 2
+# 33 "webserver/esp8266.h" 2
 
 
 
 
 # 1 "webserver/sntp.h" 1
-# 16 "webserver/sntp.h"
+# 17 "webserver/sntp.h"
 void sntp_sntpInit(void);
 void sntp_checkTime(void);
-# 38 "webserver/esp8266.h" 2
+# 37 "webserver/esp8266.h" 2
 
 
 
 
 # 1 "webserver/softap.h" 1
-# 24 "webserver/softap.h"
-const char *SOFTAP_SSIDNAME = "KRS_PIC_AP";
-const char *SOFTAP_PASSWORD = "1234567890";
+# 25 "webserver/softap.h"
+const char* SOFTAP_SSIDNAME = "KRS_PIC_AP";
+const char* SOFTAP_PASSWORD = "1234567890";
 const uint8_t SOFTAP_CHANNELID = 3;
 const uint8_t SOFTAP_ECN = 4;
 const uint8_t SOFTAP_MAXCONN = 1;
@@ -9641,19 +9641,19 @@ void softap_SoftAPInit(void);
 void softap_getSoftAPConnectedIPs(void);
 int softap_getSoftAPIP(void);
 void softap_setSoftAPIP(void);
-# 42 "webserver/esp8266.h" 2
+# 41 "webserver/esp8266.h" 2
 
 
 
 
 # 1 "webserver/ssl.h" 1
-# 46 "webserver/esp8266.h" 2
+# 45 "webserver/esp8266.h" 2
 
 
 
 
 # 1 "webserver/wps.h" 1
-# 50 "webserver/esp8266.h" 2
+# 49 "webserver/esp8266.h" 2
 
 
 
@@ -9664,7 +9664,7 @@ uint8_t data_out[4];
 
 void i2c_init(void);
 void i2c_portScan(void);
-void i2c_write_serial(uint8_t, char*, uint8_t);
+void i2c_write_serial(uint8_t, uint8_t*, uint8_t);
 void i2c_read_serial(uint8_t, uint8_t *, uint8_t);
 
 void i2c_master_wait(void);
@@ -9672,13 +9672,13 @@ void i2c_master_start(void);
 void i2c_master_stop(void);
 void i2c_master_ack(void);
 void i2c_master_nack(void);
-# 54 "webserver/esp8266.h" 2
+# 53 "webserver/esp8266.h" 2
 
 
 
 
 # 1 "webserver/../lcd/lcd.h" 1
-# 15 "webserver/../lcd/lcd.h"
+# 16 "webserver/../lcd/lcd.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\string.h" 1 3
 # 25 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\string.h" 3
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\bits/alltypes.h" 1 3
@@ -9734,7 +9734,7 @@ size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
 
 
 void *memccpy (void *restrict, const void *restrict, int, size_t);
-# 15 "webserver/../lcd/lcd.h" 2
+# 16 "webserver/../lcd/lcd.h" 2
 
 
 
@@ -9755,8 +9755,8 @@ char text[50] = "";
 void lcd_displayInit(void);
 void lcd_write(char *, uint8_t, uint8_t);
 void lcd_outputPosXY(char *string, uint8_t posX, uint8_t posY);
-# 58 "webserver/esp8266.h" 2
-# 69 "webserver/esp8266.h"
+# 57 "webserver/esp8266.h" 2
+# 68 "webserver/esp8266.h"
 uint8_t uartInput[128];
 
 

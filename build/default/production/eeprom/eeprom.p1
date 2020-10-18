@@ -2,7 +2,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "111 C:\Program Files\Microchip\xc8\v2.30\pic\include\c99\stdio.h
 [v _printf `(i ~T0 @X0 0 ev`*Cuc ]
 "36 eeprom/../i2c/i2c.h
-[; ;eeprom/../i2c/i2c.h: 36: void i2c_write_serial(uint8_t, char*, uint8_t);
+[; ;eeprom/../i2c/i2c.h: 36: void i2c_write_serial(uint8_t, uint8_t*, uint8_t);
 [v _i2c_write_serial `(v ~T0 @X0 0 ef3`uc`*uc`uc ]
 [v F5708 `(v ~T0 @X0 1 tf1`ul ]
 "203 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\pic18.h
@@ -757,14 +757,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 "32 eeprom/../i2c/i2c.h
 [; ;eeprom/../i2c/i2c.h: 32: uint8_t data_out[4];
 [v _data_out `uc ~T0 @X0 -> 4 `i e ]
-"23 eeprom/eeprom.h
-[; ;eeprom/eeprom.h: 23: const uint8_t eeprom_addr = 0b1010000;
+"24 eeprom/eeprom.h
+[; ;eeprom/eeprom.h: 24: const uint8_t eeprom_addr = 0b1010000;
 [v _eeprom_addr `Cuc ~T0 @X0 1 e ]
 [i _eeprom_addr
 -> -> 80 `i `uc
 ]
-"24
-[; ;eeprom/eeprom.h: 24: const char eeprom_test[] = {0x00, 0x00, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0x0a, 0x0b, 0x0c, 0x0d, 0x0e, 0x0f};
+"25
+[; ;eeprom/eeprom.h: 25: const char eeprom_test[] = {0x00, 0x00, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0x0a, 0x0b, 0x0c, 0x0d, 0x0e, 0x0f};
 [v _eeprom_test `Cuc ~T0 @X0 -> 17 `i e ]
 [i _eeprom_test
 :U ..
@@ -787,8 +787,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 15 `i `uc
 ..
 ]
-"25
-[; ;eeprom/eeprom.h: 25: const char eeprom_init[] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x04};
+"26
+[; ;eeprom/eeprom.h: 26: const char eeprom_init[] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x04};
 [v _eeprom_init `Cuc ~T0 @X0 -> 6 `i e ]
 [i _eeprom_init
 :U ..
@@ -800,8 +800,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 4 `i `uc
 ..
 ]
-"26
-[; ;eeprom/eeprom.h: 26: const char eeprom_pointer[] = {0x00, 0x00};
+"27
+[; ;eeprom/eeprom.h: 27: const char eeprom_pointer[] = {0x00, 0x00};
 [v _eeprom_pointer `Cuc ~T0 @X0 -> 2 `i e ]
 [i _eeprom_pointer
 :U ..
@@ -809,11 +809,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `i `uc
 ..
 ]
-"27
-[; ;eeprom/eeprom.h: 27: uint8_t eeprom_buffer[128];
+"28
+[; ;eeprom/eeprom.h: 28: uint8_t eeprom_buffer[128];
 [v _eeprom_buffer `uc ~T0 @X0 -> 128 `i e ]
-"30
-[; ;eeprom/eeprom.h: 30: const char eeprom_htmlTemplate[] = "<h1>Temperatur og luftfugtighed</h1><div style='width: 100%;'><canvas id='canvas'></canvas></div>";
+"31
+[; ;eeprom/eeprom.h: 31: const char eeprom_htmlTemplate[] = "<h1>Temperatur og luftfugtighed</h1><div style='width: 100%;'><canvas id='canvas'></canvas></div>";
 [v _eeprom_htmlTemplate `Cuc ~T0 @X0 -> 98 `i e ]
 [i _eeprom_htmlTemplate
 :U ..
@@ -917,16 +917,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-"31
-[; ;eeprom/eeprom.h: 31: const char eeprom_fontTemplate[] = "";
+"32
+[; ;eeprom/eeprom.h: 32: const char eeprom_fontTemplate[] = "";
 [v _eeprom_fontTemplate `Cuc ~T0 @X0 -> -> 1 `i `ux e ]
 [i _eeprom_fontTemplate
 :U ..
 -> 0 `c
 ..
 ]
-"32
-[; ;eeprom/eeprom.h: 32: const char eeprom_cssTemplate[] = "<style>canvas {-moz-user-select: none;-webkit-user-select: none;-ms-user-select: none;}</style>";
+"33
+[; ;eeprom/eeprom.h: 33: const char eeprom_cssTemplate[] = "<style>canvas {-moz-user-select: none;-webkit-user-select: none;-ms-user-select: none;}</style>";
 [v _eeprom_cssTemplate `Cuc ~T0 @X0 -> 96 `i e ]
 [i _eeprom_cssTemplate
 :U ..
@@ -1028,8 +1028,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-"33
-[; ;eeprom/eeprom.h: 33: const char eeprom_scriptTemplate[] = "<script src='/node_modules/chart.js/dist/Chart.bundle.js'></script><script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script>var data=[],labels=[],	temperature=[], humidity=[];$.get('GetTestData.php', function(dataGet) {data=JSON.parse(dataGet);data['labels'].forEach(function(singleResult){labels.push(singleResult);});data['temperature'].forEach(function(singleResult){temperature.push(singleResult);});data['humidity'].forEach(function(singleResult){humidity.push(singleResult);});var ctx=document.getElementById('canvas').getContext('2d');window.myLine=new Chart(ctx,config);});var randomScalingFactor=function(){ return Math.round(Math.random()*100); };var randomColorFactor=function(){ return Math.round(Math.random()*255); };var randomColor=function(opacity){return'rgba('+randomColorFactor()+','+randomColorFactor()+','+randomColorFactor()+','+(opacity||'.9')+')'; };varconfig={type:'line',data:{labels:labels,datasets:[{ label:'Temperatur',data:temperature,fill:false },{ data:humidity,fill:false}]},options:{responsive:true,title:{display:true,text:'Temperatur og Luftfugtighed'},tooltips:{mode:'label'},hover:{mode:'dataset'},scales:{xAxes:[{display:true,scaleLabel:{display:true,labelString:'Dato'}}],yAxes:[{display:true,scaleLabel:{display:true,labelString:'V&aelig;rdi'},ticks:{suggestedMin:-20,suggestedMax:250,}}],}}};$.each(config.data.datasets,function(i,dataset){dataset.borderColor=randomColor(1.0);dataset.borderColor=randomColor(1.0);dataset.pointBorderColor=randomColor(1.0);dataset.pointBackgroundColor=randomColor(1.0);dataset.pointBorderWidth=1;});window.onload=function(){var ctx=document.getElementById('canvas').getContext('2d');window.myLine=new Chart(ctx,config);};</script>";
+"34
+[; ;eeprom/eeprom.h: 34: const char eeprom_scriptTemplate[] = "<script src='/node_modules/chart.js/dist/Chart.bundle.js'></script><script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script>var data=[],labels=[],	temperature=[], humidity=[];$.get('GetTestData.php', function(dataGet) {data=JSON.parse(dataGet);data['labels'].forEach(function(singleResult){labels.push(singleResult);});data['temperature'].forEach(function(singleResult){temperature.push(singleResult);});data['humidity'].forEach(function(singleResult){humidity.push(singleResult);});var ctx=document.getElementById('canvas').getContext('2d');window.myLine=new Chart(ctx,config);});var randomScalingFactor=function(){ return Math.round(Math.random()*100); };var randomColorFactor=function(){ return Math.round(Math.random()*255); };var randomColor=function(opacity){return'rgba('+randomColorFactor()+','+randomColorFactor()+','+randomColorFactor()+','+(opacity||'.9')+')'; };varconfig={type:'line',data:{labels:labels,datasets:[{ label:'Temperatur',data:temperature,fill:false },{ data:humidity,fill:false}]},options:{responsive:true,title:{display:true,text:'Temperatur og Luftfugtighed'},tooltips:{mode:'label'},hover:{mode:'dataset'},scales:{xAxes:[{display:true,scaleLabel:{display:true,labelString:'Dato'}}],yAxes:[{display:true,scaleLabel:{display:true,labelString:'V&aelig;rdi'},ticks:{suggestedMin:-20,suggestedMax:250,}}],}}};$.each(config.data.datasets,function(i,dataset){dataset.borderColor=randomColor(1.0);dataset.borderColor=randomColor(1.0);dataset.pointBorderColor=randomColor(1.0);dataset.pointBackgroundColor=randomColor(1.0);dataset.pointBorderWidth=1;});window.onload=function(){var ctx=document.getElementById('canvas').getContext('2d');window.myLine=new Chart(ctx,config);};</script>";
 [v _eeprom_scriptTemplate `Cuc ~T0 @X0 -> 1745 `i e ]
 [i _eeprom_scriptTemplate
 :U ..
@@ -2780,16 +2780,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-"34
-[; ;eeprom/eeprom.h: 34: const char eeprom_json[] = "";
+"35
+[; ;eeprom/eeprom.h: 35: const char eeprom_json[] = "";
 [v _eeprom_json `Cuc ~T0 @X0 -> -> 1 `i `ux e ]
 [i _eeprom_json
 :U ..
 -> 0 `c
 ..
 ]
-"35
-[; ;eeprom/eeprom.h: 35: const char eeprom_template[] = "<p class=\"log_line\"><span class=\"temperature_text\">%2.2f</span><span class=\"moisture_text\">%d%</span></p>\n";
+"36
+[; ;eeprom/eeprom.h: 36: const char eeprom_template[] = "<p class=\"log_line\"><span class=\"temperature_text\">%2.2f</span><span class=\"moisture_text\">%d%</span></p>\n";
 [v _eeprom_template `Cuc ~T0 @X0 -> 107 `i e ]
 [i _eeprom_template
 :U ..
@@ -2913,13 +2913,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _printf :s 1C ]
 "22
 [; ;eeprom/eeprom.c: 22:     i2c_write_serial(eeprom_addr, (char*) eeprom_test, 17);
-[e ( _i2c_write_serial (3 , , _eeprom_addr -> &U _eeprom_test `*uc -> -> 17 `i `uc ]
+[e ( _i2c_write_serial (3 , , _eeprom_addr -> -> &U _eeprom_test `*uc `*uc -> -> 17 `i `uc ]
 "23
 [; ;eeprom/eeprom.c: 23:     printf("Skrivning faerdig\r\n");
 [e ( _printf :s 2C ]
 "25
 [; ;eeprom/eeprom.c: 25:     i2c_write_serial(eeprom_addr, (char*) eeprom_pointer, 2);
-[e ( _i2c_write_serial (3 , , _eeprom_addr -> &U _eeprom_pointer `*uc -> -> 2 `i `uc ]
+[e ( _i2c_write_serial (3 , , _eeprom_addr -> -> &U _eeprom_pointer `*uc `*uc -> -> 2 `i `uc ]
 "26
 [; ;eeprom/eeprom.c: 26:     printf("Laes fra EEPRROM\r\n");
 [e ( _printf :s 3C ]
@@ -2963,7 +2963,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "40
 [; ;eeprom/eeprom.c: 40:     i2c_write_serial(eeprom_addr, (char*) eeprom_pointer, 2);
-[e ( _i2c_write_serial (3 , , _eeprom_addr -> &U _eeprom_pointer `*uc -> -> 2 `i `uc ]
+[e ( _i2c_write_serial (3 , , _eeprom_addr -> -> &U _eeprom_pointer `*uc `*uc -> -> 2 `i `uc ]
 "41
 [; ;eeprom/eeprom.c: 41:     i2c_read_serial(eeprom_addr, eeprom_buffer, 4);
 [e ( _i2c_read_serial (3 , , _eeprom_addr &U _eeprom_buffer -> -> 4 `i `uc ]
@@ -2979,10 +2979,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "57
 [; ;eeprom/eeprom.c: 57:     i2c_write_serial(eeprom_addr, (char*) eeprom_init, 6);
-[e ( _i2c_write_serial (3 , , _eeprom_addr -> &U _eeprom_init `*uc -> -> 6 `i `uc ]
+[e ( _i2c_write_serial (3 , , _eeprom_addr -> -> &U _eeprom_init `*uc `*uc -> -> 6 `i `uc ]
 "58
 [; ;eeprom/eeprom.c: 58:     i2c_write_serial(eeprom_addr, (char*) eeprom_pointer, 2);
-[e ( _i2c_write_serial (3 , , _eeprom_addr -> &U _eeprom_pointer `*uc -> -> 2 `i `uc ]
+[e ( _i2c_write_serial (3 , , _eeprom_addr -> -> &U _eeprom_pointer `*uc `*uc -> -> 2 `i `uc ]
 "59
 [; ;eeprom/eeprom.c: 59: }
 [e :UE 839 ]
@@ -3112,8 +3112,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;eeprom/eeprom.c: 114: }
 [e :UE 840 ]
 }
-[p f _sprintf 552978365 ]
 [p f _printf 11600548 ]
+[p f _sprintf 552978365 ]
 [a 4C 79 103 32 112 114 105 110 116 32 100 101 109 32 117 100 32 105 103 101 110 13 10 0 ]
 [a 2C 83 107 114 105 118 110 105 110 103 32 102 97 101 114 100 105 103 13 10 0 ]
 [a 6C 65 84 43 67 73 80 83 69 78 68 61 48 44 37 100 13 10 0 ]

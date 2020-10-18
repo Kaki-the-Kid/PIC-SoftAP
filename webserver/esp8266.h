@@ -7,11 +7,10 @@
  *
  * Created on August 29, 2019, 8:26 PM
  */
+#pragma once
 
 #ifndef MCC_H
 #include "../mcc_generated_files/mcc.h"
-#include <xc.h>
-#include <string.h>
 #endif
 
 #ifndef TCPIP_H

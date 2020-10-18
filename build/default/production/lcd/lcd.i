@@ -13,7 +13,7 @@
 
 
 # 1 "lcd/lcd.h" 1
-# 12 "lcd/lcd.h"
+# 13 "lcd/lcd.h"
 # 1 "lcd/../mcc_generated_files/mcc.h" 1
 # 49 "lcd/../mcc_generated_files/mcc.h"
 # 1 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\\pic\\include\\xc.h" 1 3
@@ -9491,7 +9491,7 @@ void EUSART1_SetRxInterruptHandler(void (* interruptHandler)(void));
 void SYSTEM_Initialize(void);
 # 85 "lcd/../mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
-# 12 "lcd/lcd.h" 2
+# 13 "lcd/lcd.h" 2
 
 
 
@@ -9550,7 +9550,7 @@ size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
 
 
 void *memccpy (void *restrict, const void *restrict, int, size_t);
-# 15 "lcd/lcd.h" 2
+# 16 "lcd/lcd.h" 2
 
 
 
@@ -9582,7 +9582,7 @@ uint8_t data_out[4];
 
 void i2c_init(void);
 void i2c_portScan(void);
-void i2c_write_serial(uint8_t, char*, uint8_t);
+void i2c_write_serial(uint8_t, uint8_t*, uint8_t);
 void i2c_read_serial(uint8_t, uint8_t *, uint8_t);
 
 void i2c_master_wait(void);

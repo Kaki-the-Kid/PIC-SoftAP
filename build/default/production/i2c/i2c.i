@@ -9498,7 +9498,7 @@ uint8_t data_out[4];
 
 void i2c_init(void);
 void i2c_portScan(void);
-void i2c_write_serial(uint8_t, char*, uint8_t);
+void i2c_write_serial(uint8_t, uint8_t*, uint8_t);
 void i2c_read_serial(uint8_t, uint8_t *, uint8_t);
 
 void i2c_master_wait(void);
@@ -9536,7 +9536,7 @@ void i2c_portScan(void) {
 }
 
 
-void i2c_write_serial(uint8_t addr, char* data, uint8_t length) {
+void i2c_write_serial(uint8_t addr, uint8_t* data, uint8_t length) {
     char msg[50];
 
     uint8_t targetAddr = (addr<<1);

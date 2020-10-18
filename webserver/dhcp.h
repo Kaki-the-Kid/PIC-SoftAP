@@ -4,6 +4,7 @@
  *
  * Created on March 8, 2020, 11:07 PM
  */
+#pragma once
 
 #ifndef DHCP_H
 #define	DHCP_H

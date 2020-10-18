@@ -13,7 +13,7 @@
 
 
 # 1 "sensor/sensor.h" 1
-# 10 "sensor/sensor.h"
+# 11 "sensor/sensor.h"
 # 1 "sensor/../mcc_generated_files/mcc.h" 1
 # 49 "sensor/../mcc_generated_files/mcc.h"
 # 1 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\\pic\\include\\xc.h" 1 3
@@ -9491,7 +9491,7 @@ void EUSART1_SetRxInterruptHandler(void (* interruptHandler)(void));
 void SYSTEM_Initialize(void);
 # 85 "sensor/../mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
-# 10 "sensor/sensor.h" 2
+# 11 "sensor/sensor.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\string.h" 1 3
 # 25 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\string.h" 3
@@ -9548,7 +9548,7 @@ size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
 
 
 void *memccpy (void *restrict, const void *restrict, int, size_t);
-# 11 "sensor/sensor.h" 2
+# 12 "sensor/sensor.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\ctype.h" 1 3
 # 10 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\ctype.h" 3
@@ -9588,7 +9588,7 @@ int toupper_l(int, locale_t);
 
 int isascii(int);
 int toascii(int);
-# 12 "sensor/sensor.h" 2
+# 13 "sensor/sensor.h" 2
 
 
 
@@ -9599,7 +9599,7 @@ uint8_t data_out[4];
 
 void i2c_init(void);
 void i2c_portScan(void);
-void i2c_write_serial(uint8_t, char*, uint8_t);
+void i2c_write_serial(uint8_t, uint8_t*, uint8_t);
 void i2c_read_serial(uint8_t, uint8_t *, uint8_t);
 
 void i2c_master_wait(void);
@@ -9607,13 +9607,13 @@ void i2c_master_start(void);
 void i2c_master_stop(void);
 void i2c_master_ack(void);
 void i2c_master_nack(void);
-# 16 "sensor/sensor.h" 2
+# 17 "sensor/sensor.h" 2
 
 
 
 
 # 1 "sensor/../lcd/lcd.h" 1
-# 23 "sensor/../lcd/lcd.h"
+# 24 "sensor/../lcd/lcd.h"
 const uint8_t display_addr = 0b0111100;
 const char display_init[] = {0x00, 0x38, 0x0C, 0x06};
 const char first_line[] = {0x00, 0x80};
@@ -9626,7 +9626,7 @@ char text[50] = "";
 void lcd_displayInit(void);
 void lcd_write(char *, uint8_t, uint8_t);
 void lcd_outputPosXY(char *string, uint8_t posX, uint8_t posY);
-# 20 "sensor/sensor.h" 2
+# 21 "sensor/sensor.h" 2
 
 
 
@@ -9634,14 +9634,14 @@ void lcd_outputPosXY(char *string, uint8_t posX, uint8_t posY);
 
 
 const uint8_t temperature_addr = 0b0100111;
-const char temp_string[] = "@Temp: xx,xo     ";
-const char moist_string[] = "@Humidity: xxx%  ";
-const char minus[] = {0x40, 0b00101101};
-const char degree_pos[] = {0x00, 0x8A};
-const char temp_pos[] = {0x00, 0x84};
-const char moist_pos[] = {0x00, 0xC6};
-const char custom_char0[] = {0x80, 0x40, 0x40, 0b01100, 0b10010, 0b10010, 0b01100, 0b00000, 0b00000, 0b00000, 0b00000};
-char tmp_string[0x0F];
+const uint8_t temp_string[] = "@Temp: xx,xo     ";
+const uint8_t moist_string[] = "@Humidity: xxx%  ";
+const uint8_t minus[] = {0x40, 0b00101101};
+const uint8_t degree_pos[] = {0x00, 0x8A};
+const uint8_t temp_pos[] = {0x00, 0x84};
+const uint8_t moist_pos[] = {0x00, 0xC6};
+const uint8_t custom_char0[] = {0x80, 0x40, 0x40, 0b01100, 0b10010, 0b10010, 0b01100, 0b00000, 0b00000, 0b00000, 0b00000};
+uint8_t tmp_string[0x0F];
 
 void sensor_testTempSensor(void);
 void sensor_getReading(void);
@@ -9726,22 +9726,22 @@ void sensor_getReading(void) {
 
     tmp_string[length++] = 0x00;
 # 91 "sensor/sensor.c"
-    i2c_write_serial(display_addr, (char*) temp_pos, 2);
+    i2c_write_serial(display_addr, temp_pos, 2);
     i2c_write_serial(display_addr, tmp_string, length);
 }
 
 
 void sensor_updateTemperature(int8_t temp) {
     if(temp < 0) {
-        i2c_write_serial(display_addr, (char*) temp_pos, 2);
-        i2c_write_serial(display_addr, (char*) minus, 2);
+        i2c_write_serial(display_addr, temp_pos, 2);
+        i2c_write_serial(display_addr, minus, 2);
         temp *= -1;
     } else if (temp > 9) {
         uint8_t tens = (uint8_t) (temp / 10) | 0b00110000;
         uint8_t ones = (uint8_t) (temp % 10) | 0b00110000;
         char output[] = {0x40, tens , ones, 3};
 
-        i2c_write_serial(display_addr, (char*) temp_pos, 2);
+        i2c_write_serial(display_addr, temp_pos, 2);
         i2c_write_serial(display_addr, output, 3);
     }
 }
@@ -9768,6 +9768,6 @@ void sensor_updateHumidity(uint8_t moist) {
         output[3] = moist | 0b00110000;
     }
 
-    i2c_write_serial(display_addr, (char*) moist_pos, 2);
+    i2c_write_serial(display_addr, (uint8_t*) moist_pos, 2);
     i2c_write_serial(display_addr, output, 4);
 }

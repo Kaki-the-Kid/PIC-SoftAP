@@ -1,6 +1,6 @@
 Version 4.0 HI-TECH Software Intermediate Code
 "36 lcd/../i2c/i2c.h
-[; ;lcd/../i2c/i2c.h: 36: void i2c_write_serial(uint8_t, char*, uint8_t);
+[; ;lcd/../i2c/i2c.h: 36: void i2c_write_serial(uint8_t, uint8_t*, uint8_t);
 [v _i2c_write_serial `(v ~T0 @X0 0 ef3`uc`*uc`uc ]
 "33 C:\Program Files\Microchip\xc8\v2.30\pic\include\c99\string.h
 [; ;C:\Program Files\Microchip\xc8\v2.30\pic\include\c99\string.h: 33: char *strcpy (char *restrict, const char *restrict);
@@ -740,14 +740,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 "16609
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k22.h: 16609: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"23 lcd/lcd.h
-[; ;lcd/lcd.h: 23: const uint8_t display_addr = 0b0111100;
+"24 lcd/lcd.h
+[; ;lcd/lcd.h: 24: const uint8_t display_addr = 0b0111100;
 [v _display_addr `Cuc ~T0 @X0 1 e ]
 [i _display_addr
 -> -> 60 `i `uc
 ]
-"24
-[; ;lcd/lcd.h: 24: const char display_init[] = {0x00, 0x38, 0x0C, 0x06};
+"25
+[; ;lcd/lcd.h: 25: const char display_init[] = {0x00, 0x38, 0x0C, 0x06};
 [v _display_init `Cuc ~T0 @X0 -> 4 `i e ]
 [i _display_init
 :U ..
@@ -757,8 +757,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 6 `i `uc
 ..
 ]
-"25
-[; ;lcd/lcd.h: 25: const char first_line[] = {0x00, 0x80};
+"26
+[; ;lcd/lcd.h: 26: const char first_line[] = {0x00, 0x80};
 [v _first_line `Cuc ~T0 @X0 -> 2 `i e ]
 [i _first_line
 :U ..
@@ -766,8 +766,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 128 `i `uc
 ..
 ]
-"26
-[; ;lcd/lcd.h: 26: const char shift_line[] = {0x00, 0xC0};
+"27
+[; ;lcd/lcd.h: 27: const char shift_line[] = {0x00, 0xC0};
 [v _shift_line `Cuc ~T0 @X0 -> 2 `i e ]
 [i _shift_line
 :U ..
@@ -775,8 +775,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 192 `i `uc
 ..
 ]
-"27
-[; ;lcd/lcd.h: 27: const char empty_line[] = "                ";
+"28
+[; ;lcd/lcd.h: 28: const char empty_line[] = "                ";
 [v _empty_line `Cuc ~T0 @X0 -> 17 `i e ]
 [i _empty_line
 :U ..
@@ -799,8 +799,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-"28
-[; ;lcd/lcd.h: 28: char text[50] = "";
+"29
+[; ;lcd/lcd.h: 29: char text[50] = "";
 [v _text `uc ~T0 @X0 -> 50 `i e ]
 [i _text
 :U ..
@@ -818,19 +818,19 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "18
 [; ;lcd/lcd.c: 18:     i2c_write_serial(display_addr, (char*) display_init, 10);
-[e ( _i2c_write_serial (3 , , _display_addr -> &U _display_init `*uc -> -> 10 `i `uc ]
+[e ( _i2c_write_serial (3 , , _display_addr -> -> &U _display_init `*uc `*uc -> -> 10 `i `uc ]
 "19
 [; ;lcd/lcd.c: 19:     i2c_write_serial(display_addr, (char*) first_line, 2);
-[e ( _i2c_write_serial (3 , , _display_addr -> &U _first_line `*uc -> -> 2 `i `uc ]
+[e ( _i2c_write_serial (3 , , _display_addr -> -> &U _first_line `*uc `*uc -> -> 2 `i `uc ]
 "20
 [; ;lcd/lcd.c: 20:     i2c_write_serial(display_addr, (char*) empty_line, 16);
-[e ( _i2c_write_serial (3 , , _display_addr -> &U _empty_line `*uc -> -> 16 `i `uc ]
+[e ( _i2c_write_serial (3 , , _display_addr -> -> &U _empty_line `*uc `*uc -> -> 16 `i `uc ]
 "22
 [; ;lcd/lcd.c: 22:     i2c_write_serial(display_addr, (char*) shift_line, 2);
-[e ( _i2c_write_serial (3 , , _display_addr -> &U _shift_line `*uc -> -> 2 `i `uc ]
+[e ( _i2c_write_serial (3 , , _display_addr -> -> &U _shift_line `*uc `*uc -> -> 2 `i `uc ]
 "23
 [; ;lcd/lcd.c: 23:     i2c_write_serial(display_addr, (char*) empty_line, 16);
-[e ( _i2c_write_serial (3 , , _display_addr -> &U _empty_line `*uc -> -> 16 `i `uc ]
+[e ( _i2c_write_serial (3 , , _display_addr -> -> &U _empty_line `*uc `*uc -> -> 16 `i `uc ]
 "24
 [; ;lcd/lcd.c: 24: }
 [e :UE 834 ]
@@ -867,10 +867,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _strcpy (2 , &U _msg -> _tmpmsg `*Cuc ]
 "37
 [; ;lcd/lcd.c: 37:     i2c_write_serial(display_addr, (char*) posLcd, 2);
-[e ( _i2c_write_serial (3 , , _display_addr -> &U _posLcd `*uc -> -> 2 `i `uc ]
+[e ( _i2c_write_serial (3 , , _display_addr -> -> &U _posLcd `*uc `*uc -> -> 2 `i `uc ]
 "38
 [; ;lcd/lcd.c: 38:     i2c_write_serial(display_addr, (char*) tmpmsg, 16 );
-[e ( _i2c_write_serial (3 , , _display_addr _tmpmsg -> -> 16 `i `uc ]
+[e ( _i2c_write_serial (3 , , _display_addr -> _tmpmsg `*uc -> -> 16 `i `uc ]
 "39
 [; ;lcd/lcd.c: 39: }
 [e :UE 835 ]

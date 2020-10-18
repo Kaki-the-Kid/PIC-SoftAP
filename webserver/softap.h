@@ -4,6 +4,7 @@
  *
  * Created on 4. marts 2020, 19:28
  */
+#pragma once
 
 /**************************************************************
                         SoftAP kommandoer 
@@ -21,12 +22,12 @@
 /**************************************************************/                
 
 // SoftAP indstllinger
-const char   *SOFTAP_SSIDNAME  = "KRS_PIC_AP";
-const char   *SOFTAP_PASSWORD  = "1234567890"; //Minimun 8 tegn
-const uint8_t SOFTAP_CHANNELID = 3;
-const uint8_t SOFTAP_ECN       = 4;
-const uint8_t SOFTAP_MAXCONN   = 1;
-const uint8_t SOFTAP_HIDDEN    = 0;
+const char*    SOFTAP_SSIDNAME  = "KRS_PIC_AP";
+const char*    SOFTAP_PASSWORD  = "1234567890"; //Minimun 8 tegn
+const uint8_t  SOFTAP_CHANNELID = 3;
+const uint8_t  SOFTAP_ECN       = 4;
+const uint8_t  SOFTAP_MAXCONN   = 1;
+const uint8_t  SOFTAP_HIDDEN    = 0;
 
 /**************************************************************/                
 

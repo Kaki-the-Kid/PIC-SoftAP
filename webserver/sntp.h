@@ -7,6 +7,7 @@
  *
  * Created on March 8, 2020, 11:04 PM
  */
+#pragma once
 
 #ifndef SNTP_H
 #define	SNTP_H

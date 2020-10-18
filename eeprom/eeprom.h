@@ -4,6 +4,7 @@
  * @created: September 8, 2019, 10:02 PM
  * @brief:   EEPROM styring
  **************************************************************/
+#pragma once
 
 #ifndef MCC_H
     #include "../mcc_generated_files/mcc.h"

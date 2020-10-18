@@ -7,6 +7,7 @@
  *
  * Created on March 8, 2020, 11:08 PM
  */
+#pragma once
 
 #ifndef SSL_H
 #define	SSL_H

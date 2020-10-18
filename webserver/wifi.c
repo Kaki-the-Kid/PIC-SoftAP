@@ -157,7 +157,7 @@ void wifi_network_request(void) {
 
 
 bool wifi_network_lookup(const char *ssid_name) {
-    for (item_t *p = table; p->ssid != NULL; ++p) {
+    for (item_t *p = network_table; p->ssid != NULL; ++p) {
         if (strcmp(p->ssid, ssid_name) == 0) {
             strcpy((char*)server.ssid, p->ssid);
             strcpy((char*)server.password, p->password);

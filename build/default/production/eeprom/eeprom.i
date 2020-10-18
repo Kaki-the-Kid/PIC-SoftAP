@@ -16,14 +16,7 @@
 
 
 # 1 "eeprom/eeprom.h" 1
-
-
-
-
-
-
-
-
+# 10 "eeprom/eeprom.h"
 # 1 "eeprom/../mcc_generated_files/mcc.h" 1
 # 49 "eeprom/../mcc_generated_files/mcc.h"
 # 1 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\\pic\\include\\xc.h" 1 3
@@ -9501,7 +9494,7 @@ void EUSART1_SetRxInterruptHandler(void (* interruptHandler)(void));
 void SYSTEM_Initialize(void);
 # 85 "eeprom/../mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
-# 9 "eeprom/eeprom.h" 2
+# 10 "eeprom/eeprom.h" 2
 
 
 
@@ -9560,7 +9553,7 @@ size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
 
 
 void *memccpy (void *restrict, const void *restrict, int, size_t);
-# 12 "eeprom/eeprom.h" 2
+# 13 "eeprom/eeprom.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\ctype.h" 1 3
 # 10 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\ctype.h" 3
@@ -9600,7 +9593,7 @@ int toupper_l(int, locale_t);
 
 int isascii(int);
 int toascii(int);
-# 13 "eeprom/eeprom.h" 2
+# 14 "eeprom/eeprom.h" 2
 
 
 
@@ -9610,7 +9603,7 @@ uint8_t data_out[4];
 
 void i2c_init(void);
 void i2c_portScan(void);
-void i2c_write_serial(uint8_t, char*, uint8_t);
+void i2c_write_serial(uint8_t, uint8_t*, uint8_t);
 void i2c_read_serial(uint8_t, uint8_t *, uint8_t);
 
 void i2c_master_wait(void);
@@ -9618,7 +9611,7 @@ void i2c_master_start(void);
 void i2c_master_stop(void);
 void i2c_master_ack(void);
 void i2c_master_nack(void);
-# 16 "eeprom/eeprom.h" 2
+# 17 "eeprom/eeprom.h" 2
 
 
 

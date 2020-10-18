@@ -19,7 +19,7 @@
  *
  * @param rtcData	Buffer til at holde de indkomne data fra RTC
  ********************************************************************/
-void rtc_getTimeAll(void) 
+void rtc_ds_1337_getTimeAll(void) 
 {
     // Hent RTC tidsdata ...
     i2c_write_serial(rtc_addr, 0, 1); //rtc register 0x00
@@ -221,7 +221,7 @@ void rtc_getTimeAll(void)
 /**************************************************************
  * Funktion som ..
  **************************************************************/
-void rtc_setTimeAll(uint8_t hours, uint8_t mins, uint8_t secs, uint8_t day, uint8_t date, uint8_t month, int16_t years) 
+void rtc_ds_1337_setTimeAll(uint8_t hours, uint8_t mins, uint8_t secs, uint8_t day, uint8_t date, uint8_t month, int16_t years) 
 {
     bool century = (years>1999 || (years>=0 && years <=99) )?1:0;
     
@@ -240,56 +240,25 @@ void rtc_setTimeAll(uint8_t hours, uint8_t mins, uint8_t secs, uint8_t day, uint
 }
 
 
-/************************************************************************
- * Funktion som konverterer BCD værdi til decial byte værdi
- ************************************************************************
- * @param bcdByte:  byte som skal oversættes, med control og 
- *                  status bits afmasket
- * @return result:  resultat i decimal tal
- ************************************************************************/
-uint8_t convertBCD2Bytes(uint8_t bcdByte) 
-{
-    uint8_t result = 0;    
-
-    result += (bcdByte & 0x00001111);
-    result += ((bcdByte & 0x11110000) << 4);
-    
-    return result;
-}
-
-/**************************************************************
- * Funktion som ..
- **************************************************************/
-uint8_t convertByte2BCD(uint8_t byte) 
-{
-    uint8_t result = 0;
-    
-    //Eks. 12
-    result  = ( byte / 10 ) << 4; // Eks. hi = 1, result = 0b0001 0000
-    result += byte % 10; // Eks. lo = 2 result = 0b0001 0010
-    
-    return result;
-}
-
 /***************************************************************************
  * Funktion som opdaterer den lokale time værdien udfra rtc værdi
  * @return time.day:    opdateret lokal værdi fra rtc
  ***************************************************************************/
-uint8_t getSeconds(void) 
+uint8_t rtc_ds_1337_getSeconds(void) 
 { 
     uint8_t data[1];
     
-    i2c_write_serial(rtc_addr, (char) secondsAddr, 1); 
+    i2c_write_serial(rtc_addr, secondsAddr, 1); 
     i2c_read_serial(rtc_addr, data , 1);
     time.seconds = (uint8_t) convertBCD2Bytes(data);
     
     return time.seconds; 
 }
 
-void setSeconds(void) 
+void rtc_ds_1337_setSeconds(void) 
 {
     char data = convertByte2BCD(time.seconds);
-    char rtcRegister[] = { (char) secondsAddr, data};
+    char rtcRegister[] = { secondsAddr, data};
     i2c_write_serial(rtc_addr, rtcRegister, 2);
 }
 
@@ -297,21 +266,21 @@ void setSeconds(void)
  * Funktion som opdaterer den lokale time værdien udfra rtc værdi
  * @return time.day:    opdateret lokal værdi fra rtc
  ***************************************************************************/
-uint8_t getMinutes(void) 
+uint8_t rtc_ds_1337_getMinutes(void) 
 { 
     uint8_t data[1];
     
-    i2c_write_serial(rtc_addr, (char) minutesAddr, 1); 
-    i2c_read_serial(rtc_addr, (uint8_t) data , 1);
-    time.minutes = (uint8_t) convertBCD2Bytes(data);
+    i2c_write_serial(rtc_addr, minutesAddr, 1); 
+    i2c_read_serial(rtc_addr, data , 1);
+    time.minutes = convertBCD2Bytes(data);
     
     return time.minutes; 
 }
 
-void setMinutes(void) 
+void rtc_ds_1337_setMinutes(void) 
 {
     uint8_t data = convertByte2BCD(time.minutes);
-    char rtcRegister[] = { (char) minutesAddr, data};
+    char rtcRegister[] = { minutesAddr, data};
     i2c_write_serial(rtc_addr, rtcRegister, 2);
 }
 
@@ -319,26 +288,26 @@ void setMinutes(void)
  * Funktion som opdaterer den lokale time værdien udfra rtc værdi
  * @return time.day:    opdateret lokal værdi fra rtc
  ***************************************************************************/
-uint8_t getHour(void) 
+uint8_t rtc_ds_1337_getHour(void) 
 { 
     uint8_t data[1];
     
-    i2c_write_serial(rtc_addr, (char) hoursAddr, 1); 
+    i2c_write_serial(rtc_addr, hoursAddr, 1); 
     i2c_read_serial(rtc_addr, data , 1);
     time.hours = (uint8_t) convertBCD2Bytes(data);
     
     return time.hours; 
 }
 
-void setHour(void) 
+void rtc_ds_1337_setHour(void) 
 {
     char data = convertByte2BCD(time.hours);
-    char rtcRegister[] = { (char) hoursAddr, data};
+    char rtcRegister[] = { hoursAddr, data};
     i2c_write_serial(rtc_addr, rtcRegister, 2);
 }
 
-uint8_t getAMPM(void) { return false; }
-void setAMPM(void) 
+uint8_t rtc_ds_1337_getAMPM(void) { return false; }
+void rtc_ds_1337_setAMPM(void) 
 {
     //time.timePM_nAM = __pm_nam;
     //uint8_t data = convertByte2BCD(__pm_nam, time.  pm_namHi, time.pm_namLo);
@@ -352,20 +321,20 @@ void setAMPM(void)
  * Funktion som opdaterer den lokale time værdien udfra rtc værdi
  * @return time.day:    opdateret lokal værdi fra rtc
  ***************************************************************************/
-uint8_t getDay(void) 
+uint8_t rtc_ds_1337_getDay(void) 
 {
     uint8_t data[1];
     
-    i2c_write_serial(rtc_addr, (char *) dayAddr, 1); 
+    i2c_write_serial(rtc_addr, dayAddr, 1); 
     i2c_read_serial(rtc_addr, data , 1);
     time.day = (uint8_t) convertBCD2Bytes(*data);
     
     return time.day; 
 }
 
-void setDay(void) 
+void rtc_ds_1337_setDay(void) 
 {
-    char rtcRegister[] = { (char) dayAddr, (char) convertByte2BCD(time.day) };
+    char rtcRegister[] = { dayAddr, convertByte2BCD(time.day) };
     i2c_write_serial(rtc_addr, rtcRegister, 2); 
 }
 
@@ -373,22 +342,24 @@ void setDay(void)
  * Funktion som opdaterer den lokale time værdien udfra rtc værdi
  * @return time.day:    opdateret lokal værdi fra rtc
  ***************************************************************************/
-uint8_t getMonth(void) 
+uint8_t rtc_ds_1337_getMonth(void) 
 {
     return false; 
 }
-void setMonth(void) 
+
+
+void rtc_ds_1337_setMonth(void) 
 {
-    char data = convertByte2BCD(time.month);
-    char rtcRegister[] = { (char) monthAddr, data };
+    uint8_t data = convertByte2BCD(time.month);
+    uint8_t rtcRegister[] = { (uint8_t) monthAddr, data };
     i2c_write_serial(rtc_addr, rtcRegister, 2);
 }
 
-uint8_t getYear(void) { return false; }
-void setYear(void) 
+uint8_t rtc_ds_1337_getYear(void) { return false; }
+void rtc_ds_1337_setYear(void) 
 {
     char data = convertByte2BCD(time.year);
-    char rtcRegister[] = { (char) yearAddr, data };
+    char rtcRegister[] = { yearAddr, data };
     i2c_write_serial(rtc_addr, rtcRegister, 2);
 }
 
@@ -443,41 +414,41 @@ void setYear(void)
  * +---+----+----+----+----+---------------------------------------------------+
  * </pre>
  */ 
-void setAlarm1Type(bool DYnDT, uint8_t alarm1Mask) 
+void rtc_ds_1337_setAlarm1Type(bool DYnDT, uint8_t alarm1Mask) 
 {
     time.A1M4 = alarm1Mask & bit3;
     time.A1M3 = alarm1Mask & bit2;
     time.A1M2 = alarm1Mask & bit1;
     time.A1M1 = alarm1Mask & bit0;
 
-    setAlarm1A1M4();
-    setAlarm1A1M2();
-    setAlarm1A1M3();
-    setAlarm1A1M1();
+    rtc_ds_1337_setAlarm1A1M4();
+    rtc_ds_1337_setAlarm1A1M2();
+    rtc_ds_1337_setAlarm1A1M3();
+    rtc_ds_1337_setAlarm1A1M1();
 }
 
-uint8_t getAlarm1Seconds(void) { return false; }
-void setAlarm1Seconds(void) 
+uint8_t rtc_ds_1337_getAlarm1Seconds(void) { return false; }
+void rtc_ds_1337_setAlarm1Seconds(void) 
 {
 }
 
-uint8_t getAlarm1Minutes(void) { return false; }
+uint8_t rtc_ds_1337_getAlarm1Minutes(void) { return false; }
 
 /*****************************************************************************
  * Funktion som sætter minutter værdi for alarm 1
  * @param: none
  * @brief: time.alarm1Minutes og time.A1M2 sættes før funktionen kaldes
  *****************************************************************************/
-void setAlarm1Minutes(void) 
+void rtc_ds_1337_setAlarm1Minutes(void) 
 {
     uint8_t minsReg = time.alarm1Minutes;
     minsReg += time.A1M2<<7;
     
     uint8_t transmit[] = { 0x08, minsReg };
-    i2c_write_serial(rtc_addr, (char*) transmit, 2 );
+    i2c_write_serial(rtc_addr, transmit, 2 );
 }
 
-uint8_t getAlarm1Hours(void) { return false; }
+uint8_t rtc_ds_1337_getAlarm1Hours(void) { return false; }
 
 /*****************************************************************************
  * Funktion som sætter time værdi for alarm 1
@@ -485,7 +456,7 @@ uint8_t getAlarm1Hours(void) { return false; }
  * @brief: time.alarm1Hour, time.A1M3, time.alarm112n24 og time.alarm1PMnAM
  *         sættes før funktionen kaldes
  *****************************************************************************/
-void setAlarm1Hours(void) 
+void rtc_ds_1337_setAlarm1Hours(void) 
 {
     uint8_t hoursReg;
     
@@ -495,47 +466,47 @@ void setAlarm1Hours(void)
     hoursReg += (time.alarm112n24)?time.alarm2PMnAM<<5:0; //kompenser for 12 timers tid
     
     uint8_t transmit[] = { 0x09, hoursReg };
-    i2c_write_serial(rtc_addr, (char*) transmit, 2 );
+    i2c_write_serial(rtc_addr, transmit, 2 );
 }
 
-uint8_t getAlarm1Date(void)
+uint8_t rtc_ds_1337_getAlarm1Date(void)
 {
     return 0;
 }
 
-void setAlarm1Date(void) {}
+void rtc_ds_1337_setAlarm1Date(void) {}
 
-uint8_t getAlarm1AMPM(void) { return false; }
-void setAlarm1AMPM(void) {}
+uint8_t rtc_ds_1337_getAlarm1AMPM(void) { return false; }
+void rtc_ds_1337_setAlarm1AMPM(void) {}
 
 // 0x0A alarm1DateAddr
-void setAlarm1A1M4(void) 
+void rtc_ds_1337_setAlarm1A1M4(void) 
 {
-    uint8_t tmp = getAlarm1Date();
+    uint8_t tmp = rtc_ds_1337_getAlarm1Date();
 }
 
 // 0x09 alarm1HoursAddr
-void setAlarm1A1M3(void) 
+void rtc_ds_1337_setAlarm1A1M3(void) 
 {
-    uint8_t tmp = getAlarm1Hours();
+    uint8_t tmp = rtc_ds_1337_getAlarm1Hours();
 }
 
 // 0x08 alarm1MinutesAddr
-void setAlarm1A1M2(void) 
+void rtc_ds_1337_setAlarm1A1M2(void) 
 {
-    uint8_t minsReg = getAlarm1Minutes(); //read from rtc
+    uint8_t minsReg = rtc_ds_1337_getAlarm1Minutes(); //read from rtc
     time.alarm1Minutes = minsReg & ~bit7; // update local value
     
-    setAlarm1Minutes();
+    rtc_ds_1337_setAlarm1Minutes();
 }
 
 // 0x07 alarm1SecondsAddr
-void setAlarm1A1M1(void) 
+void rtc_ds_1337_setAlarm1A1M1(void) 
 {
-    uint8_t secsReg = getAlarm1Seconds(); // read from rtc
+    uint8_t secsReg = rtc_ds_1337_getAlarm1Seconds(); // read from rtc
     time.alarm1Seconds = secsReg & ~bit7; // update local value
     secsReg = time.alarm1Seconds + (uint8_t)( time.A1M1<<7 );
-    setAlarm1Seconds();
+    rtc_ds_1337_setAlarm1Seconds();
 }
 
 
@@ -563,48 +534,48 @@ void setAlarm1A1M1(void)
  * </pre>
  */
 
-void setAlarm2Type(uint8_t alarm2Mask) 
+void rtc_ds_1337_setAlarm2Type(uint8_t alarm2Mask) 
 {
     time.A2M4 = alarm2Mask & bit2;
-    setAlarm2A2M4();
+    rtc_ds_1337_setAlarm2A2M4();
     
     time.A2M3 = alarm2Mask & bit1;
-    setAlarm2A2M3();
+    rtc_ds_1337_setAlarm2A2M3();
     
     time.A2M2 = alarm2Mask & bit0;
-    setAlarm2A2M2();
+    rtc_ds_1337_setAlarm2A2M2();
 }
 
-uint8_t getAlarm2Seconds(void) { return 0; }
-void setAlarm2Seconds(void) {}
+uint8_t rtc_ds_1337_getAlarm2Seconds(void) { return 0; }
+void rtc_ds_1337_setAlarm2Seconds(void) {}
 
-uint8_t getAlarm2Minutes(void) { return 0; }
-void setAlarm2Minutes(void) {}
+uint8_t rtc_ds_1337_getAlarm2Minutes(void) { return 0; }
+void rtc_ds_1337_setAlarm2Minutes(void) {}
 
-uint8_t getAlarm2Hours(void) { return 0; }
-void setAlarm2Hours(void) {}
+uint8_t rtc_ds_1337_getAlarm2Hours(void) { return 0; }
+void rtc_ds_1337_setAlarm2Hours(void) {}
 
-uint8_t getAlarm2Date(void) { return 0; }
+uint8_t rtc_ds_1337_getAlarm2Date(void) { return 0; }
 
-void setAlarm2Date(void) {}
+void rtc_ds_1337_setAlarm2Date(void) {}
 
-bool getAlarm2AMPM(void) { return 0; }
-void setAlarm2AMPM(void) {}
+bool rtc_ds_1337_getAlarm2AMPM(void) { return 0; }
+void rtc_ds_1337_setAlarm2AMPM(void) {}
 
-void setAlarm2A2M2(void) {}
+void rtc_ds_1337_setAlarm2A2M2(void) {}
 
-void setAlarm2A2M3(void) 
+void rtc_ds_1337_setAlarm2A2M3(void) 
 {
-    getAlarm2Hours();
+    rtc_ds_1337_getAlarm2Hours();
 }
 
-void setAlarm2A2M4(void) 
+void rtc_ds_1337_setAlarm2A2M4(void) 
 {
-    getAlarm2Date();
+    rtc_ds_1337_getAlarm2Date();
 }
 
-bool getEnableOscillator(void) { return 0;}
-void setEnableOscillator(bool EOSC) {}
+bool rtc_ds_1337_getEnableOscillator(void) { return 0;}
+void rtc_ds_1337_setEnableOscillator(bool EOSC) {}
 
 
 /**************************************************************/

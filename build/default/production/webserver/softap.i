@@ -9,7 +9,7 @@
 # 1 "webserver/softap.c" 2
 # 46 "webserver/softap.c"
 # 1 "webserver/esp8266.h" 1
-# 12 "webserver/esp8266.h"
+# 13 "webserver/esp8266.h"
 # 1 "webserver/../mcc_generated_files/mcc.h" 1
 # 49 "webserver/../mcc_generated_files/mcc.h"
 # 1 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\\pic\\include\\xc.h" 1 3
@@ -9487,9 +9487,198 @@ void EUSART1_SetRxInterruptHandler(void (* interruptHandler)(void));
 void SYSTEM_Initialize(void);
 # 85 "webserver/../mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
-# 12 "webserver/esp8266.h" 2
+# 13 "webserver/esp8266.h" 2
 
 
+
+
+# 1 "webserver/tcpip.h" 1
+# 21 "webserver/tcpip.h"
+struct SERVER {
+    _Bool busy;
+    uint8_t wifiMode;
+    _Bool multibleConnections;
+    uint8_t maxConnections;
+    char* ssid[20];
+    char* password[20];
+    char* encryption[20];
+    _Bool wificonnected;
+    _Bool wifigotip;
+    _Bool internet;
+    char remote_ip[20];
+    char local_ip[15];
+    uint8_t running;
+    _Bool clientConnected;
+    _Bool clientAvailable;
+
+};
+
+typedef struct SERVER server_t;
+
+server_t server;
+
+
+
+
+
+
+void tcpip_serverSetup(void);
+uint8_t tcpip_getConnectionType(uint8_t *);
+void tcpip_setConnectionType(uint8_t);
+_Bool tcpip_setMaxConnections(uint8_t conn);
+
+_Bool tcpip_serverTCPIPBegin(uint16_t port);
+void tcpip_serverTCPIPStop(void);
+
+void tcpip_getDataLength(void);
+void tcpip_closeTCPIPMode(void);
+void tcpip_closeTCPIPConnection(void);
+void tcpip_setTCPReceiveMode(uint8_t);
+void tcpip_PassiveReceive(void);
+void tcpip_showIPDRemoteIP(uint8_t);
+void tcpip_getLocalIP(void);
+void tcpip_getStationMac(void);
+
+void tcpip_getSoftAPIP(void);
+void tcpip_getSoftAPMac(void);
+void tcpip_getStationGateway(void);
+void tcpip_getStationNetmask(void);
+void tcpip_checkInternet(void);
+# 80 "webserver/tcpip.h"
+void tcpip_serverPage(void);
+void tcpip_sendHTTPHeader(void);
+void tcpip_sendHTTPPage(void);
+void toogleGPIO(uint8_t, uint8_t);
+# 92 "webserver/tcpip.h"
+const char htmlMsgPart1[] = "<!DOCTYPE html><html xmlns=\"http://www.w3.org/1999/xhtml\"><head><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><link rel=\"icon\" href=\"data:,\"><style>html { font-family: Helvetica; display: inline-block; margin: 0px auto; text-align: center;} .button { background-color: #195B6A; border: none; color: white; padding: 16px 40px; text-decoration: none; font-size: 30px; margin: 2px; cursor: pointer;} .button2 {background-color: #77878A;}</style></head><body><h1>ESP8266 Web Server</h1>";
+# 17 "webserver/esp8266.h" 2
+
+
+
+
+# 1 "webserver/wifi.h" 1
+# 32 "webserver/wifi.h"
+void wifi_setWifiMode(uint8_t);
+void wifi_getWifiMode(void);
+
+void wifi_network_request(void);
+_Bool wifi_network_lookup(const char *ssid_name);
+void wifi_connectToAP(void);
+void wifi_disconnectFromAP(void);
+
+void wifi_SetTransmissionMode(uint8_t);
+
+struct WIFIMode {
+    uint8_t stationMode;
+    uint8_t softAPMode;
+    uint8_t multibleConnections;
+};
+
+typedef struct WIFIMode WIFIMode_t;
+
+WIFIMode_t wifi;
+
+
+typedef struct item_t { const char *ssid; const char *password; const char *encryption; } item_t;
+item_t network_table[] = {
+    { "SSID-JRzcM4", "frbPCwvRKq", "WPA2 AES" },
+    { "WuggaNet", "fredagsbanan", "WPA2 AES" },
+    { "ASUS_X00PD", "0c0d8599", "WPA2 AES" },
+    { "", "", "" },
+    { "", "", ""}
+};
+# 21 "webserver/esp8266.h" 2
+
+
+
+
+# 1 "webserver/dhcp.h" 1
+# 16 "webserver/dhcp.h"
+void setupDHCP(void);
+void esp_setSoftAPDHCPIP(uint8_t *, uint8_t *, uint8_t, uint8_t );
+# 25 "webserver/esp8266.h" 2
+
+
+
+
+# 1 "webserver/dns.h" 1
+# 17 "webserver/dns.h"
+void setDNSServers(void);
+void setDNSDomain(void);
+void wifi_mDNSConfig(void);
+# 29 "webserver/esp8266.h" 2
+
+
+
+
+# 1 "webserver/esptouch.h" 1
+# 33 "webserver/esp8266.h" 2
+
+
+
+
+# 1 "webserver/sntp.h" 1
+# 17 "webserver/sntp.h"
+void sntp_sntpInit(void);
+void sntp_checkTime(void);
+# 37 "webserver/esp8266.h" 2
+
+
+
+
+# 1 "webserver/softap.h" 1
+# 25 "webserver/softap.h"
+const char* SOFTAP_SSIDNAME = "KRS_PIC_AP";
+const char* SOFTAP_PASSWORD = "1234567890";
+const uint8_t SOFTAP_CHANNELID = 3;
+const uint8_t SOFTAP_ECN = 4;
+const uint8_t SOFTAP_MAXCONN = 1;
+const uint8_t SOFTAP_HIDDEN = 0;
+
+
+
+void softap_SoftAPInit(void);
+void softap_getSoftAPConnectedIPs(void);
+int softap_getSoftAPIP(void);
+void softap_setSoftAPIP(void);
+# 41 "webserver/esp8266.h" 2
+
+
+
+
+# 1 "webserver/ssl.h" 1
+# 45 "webserver/esp8266.h" 2
+
+
+
+
+# 1 "webserver/wps.h" 1
+# 49 "webserver/esp8266.h" 2
+
+
+
+
+# 1 "webserver/../i2c/i2c.h" 1
+# 32 "webserver/../i2c/i2c.h"
+uint8_t data_out[4];
+
+void i2c_init(void);
+void i2c_portScan(void);
+void i2c_write_serial(uint8_t, uint8_t*, uint8_t);
+void i2c_read_serial(uint8_t, uint8_t *, uint8_t);
+
+void i2c_master_wait(void);
+void i2c_master_start(void);
+void i2c_master_stop(void);
+void i2c_master_ack(void);
+void i2c_master_nack(void);
+# 53 "webserver/esp8266.h" 2
+
+
+
+
+# 1 "webserver/../lcd/lcd.h" 1
+# 16 "webserver/../lcd/lcd.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\string.h" 1 3
 # 25 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\string.h" 3
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c99\\bits/alltypes.h" 1 3
@@ -9545,198 +9734,15 @@ size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
 
 
 void *memccpy (void *restrict, const void *restrict, int, size_t);
-# 14 "webserver/esp8266.h" 2
+# 16 "webserver/../lcd/lcd.h" 2
 
 
 
 
-# 1 "webserver/tcpip.h" 1
-# 20 "webserver/tcpip.h"
-struct SERVER {
-    _Bool busy;
-    uint8_t wifiMode;
-    _Bool multibleConnections;
-    uint8_t maxConnections;
-    char* ssid[20];
-    char* password[20];
-    char* encryption[20];
-    _Bool wificonnected;
-    _Bool wifigotip;
-    _Bool internet;
-    char remote_ip[20];
-    char local_ip[15];
-    uint8_t running;
-    _Bool clientConnected;
-    _Bool clientAvailable;
 
-};
 
-typedef struct SERVER server_t;
 
-server_t server;
 
-
-
-
-
-
-void tcpip_serverSetup(void);
-uint8_t tcpip_getConnectionType(uint8_t *);
-void tcpip_setConnectionType(uint8_t);
-_Bool tcpip_setMaxConnections(uint8_t conn);
-
-_Bool tcpip_serverTCPIPBegin(uint16_t port);
-void tcpip_serverTCPIPStop(void);
-
-void tcpip_getDataLength(void);
-void tcpip_closeTCPIPMode(void);
-void tcpip_closeTCPIPConnection(void);
-void tcpip_setTCPReceiveMode(uint8_t);
-void tcpip_PassiveReceive(void);
-void tcpip_showIPDRemoteIP(uint8_t);
-void tcpip_getLocalIP(void);
-void tcpip_getStationMac(void);
-
-void tcpip_getSoftAPIP(void);
-void tcpip_getSoftAPMac(void);
-void tcpip_getStationGateway(void);
-void tcpip_getStationNetmask(void);
-void tcpip_checkInternet(void);
-# 79 "webserver/tcpip.h"
-void tcpip_serverPage(void);
-void tcpip_sendHTTPHeader(void);
-void tcpip_sendHTTPPage(void);
-void toogleGPIO(uint8_t, uint8_t);
-# 91 "webserver/tcpip.h"
-const char htmlMsgPart1[] = "<!DOCTYPE html><html xmlns=\"http://www.w3.org/1999/xhtml\"><head><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><link rel=\"icon\" href=\"data:,\"><style>html { font-family: Helvetica; display: inline-block; margin: 0px auto; text-align: center;} .button { background-color: #195B6A; border: none; color: white; padding: 16px 40px; text-decoration: none; font-size: 30px; margin: 2px; cursor: pointer;} .button2 {background-color: #77878A;}</style></head><body><h1>ESP8266 Web Server</h1>";
-# 18 "webserver/esp8266.h" 2
-
-
-
-
-# 1 "webserver/wifi.h" 1
-# 31 "webserver/wifi.h"
-void wifi_setWifiMode(uint8_t);
-void wifi_getWifiMode(void);
-
-void wifi_network_request(void);
-_Bool wifi_network_lookup(const char *ssid_name);
-void wifi_connectToAP(void);
-void wifi_disconnectFromAP(void);
-
-void wifi_SetTransmissionMode(uint8_t);
-
-struct WIFIMode {
-    uint8_t stationMode;
-    uint8_t softAPMode;
-    uint8_t multibleConnections;
-};
-
-typedef struct WIFIMode WIFIMode_t;
-
-WIFIMode_t wifi;
-
-
-typedef struct item_t { const char *ssid; const char *password; const char *encryption; } item_t;
-item_t table[] = {
-    { "SSID-JRzcM4", "frbPCwvRKq", "WPA2 AES" },
-    { "WuggaNet", "fredagsbanan", "WPA2 AES" },
-    { "ASUS_X00PD", "0c0d8599", "WPA2 AES" },
-    { "", "", "" },
-    { "", "", ""}
-};
-# 22 "webserver/esp8266.h" 2
-
-
-
-
-# 1 "webserver/dhcp.h" 1
-# 15 "webserver/dhcp.h"
-void setupDHCP(void);
-void esp_setSoftAPDHCPIP(uint8_t *, uint8_t *, uint8_t, uint8_t );
-# 26 "webserver/esp8266.h" 2
-
-
-
-
-# 1 "webserver/dns.h" 1
-# 16 "webserver/dns.h"
-void setDNSServers(void);
-void setDNSDomain(void);
-void wifi_mDNSConfig(void);
-# 30 "webserver/esp8266.h" 2
-
-
-
-
-# 1 "webserver/esptouch.h" 1
-# 34 "webserver/esp8266.h" 2
-
-
-
-
-# 1 "webserver/sntp.h" 1
-# 16 "webserver/sntp.h"
-void sntp_sntpInit(void);
-void sntp_checkTime(void);
-# 38 "webserver/esp8266.h" 2
-
-
-
-
-# 1 "webserver/softap.h" 1
-# 24 "webserver/softap.h"
-const char *SOFTAP_SSIDNAME = "KRS_PIC_AP";
-const char *SOFTAP_PASSWORD = "1234567890";
-const uint8_t SOFTAP_CHANNELID = 3;
-const uint8_t SOFTAP_ECN = 4;
-const uint8_t SOFTAP_MAXCONN = 1;
-const uint8_t SOFTAP_HIDDEN = 0;
-
-
-
-void softap_SoftAPInit(void);
-void softap_getSoftAPConnectedIPs(void);
-int softap_getSoftAPIP(void);
-void softap_setSoftAPIP(void);
-# 42 "webserver/esp8266.h" 2
-
-
-
-
-# 1 "webserver/ssl.h" 1
-# 46 "webserver/esp8266.h" 2
-
-
-
-
-# 1 "webserver/wps.h" 1
-# 50 "webserver/esp8266.h" 2
-
-
-
-
-# 1 "webserver/../i2c/i2c.h" 1
-# 32 "webserver/../i2c/i2c.h"
-uint8_t data_out[4];
-
-void i2c_init(void);
-void i2c_portScan(void);
-void i2c_write_serial(uint8_t, char*, uint8_t);
-void i2c_read_serial(uint8_t, uint8_t *, uint8_t);
-
-void i2c_master_wait(void);
-void i2c_master_start(void);
-void i2c_master_stop(void);
-void i2c_master_ack(void);
-void i2c_master_nack(void);
-# 54 "webserver/esp8266.h" 2
-
-
-
-
-# 1 "webserver/../lcd/lcd.h" 1
-# 23 "webserver/../lcd/lcd.h"
 const uint8_t display_addr = 0b0111100;
 const char display_init[] = {0x00, 0x38, 0x0C, 0x06};
 const char first_line[] = {0x00, 0x80};
@@ -9749,8 +9755,8 @@ char text[50] = "";
 void lcd_displayInit(void);
 void lcd_write(char *, uint8_t, uint8_t);
 void lcd_outputPosXY(char *string, uint8_t posX, uint8_t posY);
-# 58 "webserver/esp8266.h" 2
-# 69 "webserver/esp8266.h"
+# 57 "webserver/esp8266.h" 2
+# 68 "webserver/esp8266.h"
 uint8_t uartInput[128];
 
 

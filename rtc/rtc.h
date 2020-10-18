@@ -13,7 +13,7 @@
 #ifndef RTC_H
 #define	RTC_H
 
-uint8_t rtc_address;
+uint8_t rtc_addr;
 #define rtc_type        0x00 // Brug denne til at vælge i mellem de forskellige RTC moduler
                              //    Type 0: DS1337
                              //    Type 1: Adafruit RTC
@@ -84,6 +84,8 @@ typedef struct TIME { // Registre i Real-time clock
 
 time_t time;
 
+uint8_t convertBCD2Bytes(uint8_t);
+uint8_t convertByte2BCD(uint8_t);
 
 #ifdef	__cplusplus
 extern "C" {

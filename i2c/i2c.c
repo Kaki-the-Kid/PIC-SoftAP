@@ -43,7 +43,7 @@ void i2c_portScan(void) {
 }
 
 
-void i2c_write_serial(uint8_t addr, char* data, uint8_t length) {
+void i2c_write_serial(uint8_t addr, uint8_t* data, uint8_t length) {
     char msg[50];
     
     uint8_t targetAddr = (addr<<1); // Laver addressen om til 8 bit med WRITE condition

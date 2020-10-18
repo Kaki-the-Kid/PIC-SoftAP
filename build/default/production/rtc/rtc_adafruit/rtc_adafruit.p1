@@ -1,41 +1,39 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"38 rtc/rtc_ds1337/../rtc.h
-[; ;rtc/rtc_ds1337/../rtc.h: 38: typedef struct TIME {
+"38 rtc/rtc_adafruit/../rtc.h
+[; ;rtc/rtc_adafruit/../rtc.h: 38: typedef struct TIME {
 [s S833 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `uc 1 `uc 1 `uc 1 `uc 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 ]
 [n S833 TIME seconds minutes hours day date month year time12_n24 timePM_nAM century A1M1 A1M2 A1M3 A1M4 alarm1Seconds alarm1Minutes alarm1Hour alarm1Day alarm1Date alarm112n24 alarm1PMnAM alarm1DYnDT A2M2 A2M3 A2M4 alarm2Minutes alarm2Hours alarm2Day alarm2Date alarm212n24 alarm2PMnAM alarm2DYnDT EOSC RS2 RS1 INTCN A2IE A1IE OSF A2F A1F ]
-"36 rtc/rtc_ds1337/../../i2c/i2c.h
-[; ;rtc/rtc_ds1337/../../i2c/i2c.h: 36: void i2c_write_serial(uint8_t, uint8_t*, uint8_t);
+"36 rtc/rtc_adafruit/../../i2c/i2c.h
 [v _i2c_write_serial `(v ~T0 @X0 0 ef3`uc`*uc`uc ]
 "37
-[; ;rtc/rtc_ds1337/../../i2c/i2c.h: 37: void i2c_read_serial(uint8_t, uint8_t *, uint8_t);
 [v _i2c_read_serial `(v ~T0 @X0 0 ef3`uc`*uc`uc ]
-"87 rtc/rtc_ds1337/../rtc.h
-[; ;rtc/rtc_ds1337/../rtc.h: 87: uint8_t convertBCD2Bytes(uint8_t);
+"86 rtc/rtc_adafruit/rtc_adafruit.h
+[; ;rtc/rtc_adafruit/rtc_adafruit.h: 86: uint8_t convertBCD2Bytes(uint8_t);
 [v _convertBCD2Bytes `(uc ~T0 @X0 0 ef1`uc ]
-"88
-[; ;rtc/rtc_ds1337/../rtc.h: 88: uint8_t convertByte2BCD(uint8_t);
+"87
+[; ;rtc/rtc_adafruit/rtc_adafruit.h: 87: uint8_t convertByte2BCD(uint8_t);
 [v _convertByte2BCD `(uc ~T0 @X0 0 ef1`uc ]
-"138 rtc/rtc_ds1337/../rtc_ds1337/rtc_ds1337.h
-[; ;rtc/rtc_ds1337/../rtc_ds1337/rtc_ds1337.h: 138: void rtc_ds_1337_setAlarm1A1M4(void);
-[v _rtc_ds_1337_setAlarm1A1M4 `(v ~T0 @X0 0 ef ]
-"139
-[; ;rtc/rtc_ds1337/../rtc_ds1337/rtc_ds1337.h: 139: void rtc_ds_1337_setAlarm1A1M2(void);
-[v _rtc_ds_1337_setAlarm1A1M2 `(v ~T0 @X0 0 ef ]
+"142
+[; ;rtc/rtc_adafruit/rtc_adafruit.h: 142: void rtc_adafruit_setAlarm1A1M4(void);
+[v _rtc_adafruit_setAlarm1A1M4 `(v ~T0 @X0 0 ef ]
 "140
-[; ;rtc/rtc_ds1337/../rtc_ds1337/rtc_ds1337.h: 140: void rtc_ds_1337_setAlarm1A1M3(void);
-[v _rtc_ds_1337_setAlarm1A1M3 `(v ~T0 @X0 0 ef ]
+[; ;rtc/rtc_adafruit/rtc_adafruit.h: 140: void rtc_adafruit_setAlarm1A1M2(void);
+[v _rtc_adafruit_setAlarm1A1M2 `(v ~T0 @X0 0 ef ]
 "141
-[; ;rtc/rtc_ds1337/../rtc_ds1337/rtc_ds1337.h: 141: void rtc_ds_1337_setAlarm1A1M1(void);
-[v _rtc_ds_1337_setAlarm1A1M1 `(v ~T0 @X0 0 ef ]
+[; ;rtc/rtc_adafruit/rtc_adafruit.h: 141: void rtc_adafruit_setAlarm1A1M3(void);
+[v _rtc_adafruit_setAlarm1A1M3 `(v ~T0 @X0 0 ef ]
+"139
+[; ;rtc/rtc_adafruit/rtc_adafruit.h: 139: void rtc_adafruit_setAlarm1A1M1(void);
+[v _rtc_adafruit_setAlarm1A1M1 `(v ~T0 @X0 0 ef ]
 "165
-[; ;rtc/rtc_ds1337/../rtc_ds1337/rtc_ds1337.h: 165: void rtc_ds_1337_setAlarm2A2M4(void);
-[v _rtc_ds_1337_setAlarm2A2M4 `(v ~T0 @X0 0 ef ]
-"166
-[; ;rtc/rtc_ds1337/../rtc_ds1337/rtc_ds1337.h: 166: void rtc_ds_1337_setAlarm2A2M3(void);
-[v _rtc_ds_1337_setAlarm2A2M3 `(v ~T0 @X0 0 ef ]
+[; ;rtc/rtc_adafruit/rtc_adafruit.h: 165: void rtc_adafruit_setAlarm2A2M4(void);
+[v _rtc_adafruit_setAlarm2A2M4 `(v ~T0 @X0 0 ef ]
 "167
-[; ;rtc/rtc_ds1337/../rtc_ds1337/rtc_ds1337.h: 167: void rtc_ds_1337_setAlarm2A2M2(void);
-[v _rtc_ds_1337_setAlarm2A2M2 `(v ~T0 @X0 0 ef ]
+[; ;rtc/rtc_adafruit/rtc_adafruit.h: 167: void rtc_adafruit_setAlarm2A2M3(void);
+[v _rtc_adafruit_setAlarm2A2M3 `(v ~T0 @X0 0 ef ]
+"168
+[; ;rtc/rtc_adafruit/rtc_adafruit.h: 168: void rtc_adafruit_setAlarm2A2M2(void);
+[v _rtc_adafruit_setAlarm2A2M2 `(v ~T0 @X0 0 ef ]
 "54 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k22.h
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k22.h: 54: __asm("ANSELA equ 0F38h");
 [; <" ANSELA equ 0F38h ;# ">
@@ -771,11 +769,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 "16609
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k22.h: 16609: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"16 rtc/rtc_ds1337/../rtc.h
-[; ;rtc/rtc_ds1337/../rtc.h: 16: uint8_t rtc_addr;
+"16 rtc/rtc_adafruit/../rtc.h
+[; ;rtc/rtc_adafruit/../rtc.h: 16: uint8_t rtc_addr;
 [v _rtc_addr `uc ~T0 @X0 1 e ]
-"28
-[; ;rtc/rtc_ds1337/../rtc.h: 28: const char rtc_htmlTemplate[] = "<h1>Server tid</h1><div id ='clock' onload='startTime()'></div>";
+"32 rtc/rtc_adafruit/../../i2c/i2c.h
+[v _data_out `uc ~T0 @X0 -> 4 `i e ]
+"28 rtc/rtc_adafruit/../rtc.h
+[; ;rtc/rtc_adafruit/../rtc.h: 28: const char rtc_htmlTemplate[] = "<h1>Server tid</h1><div id ='clock' onload='startTime()'></div>";
 [v _rtc_htmlTemplate `Cuc ~T0 @X0 -> 64 `i e ]
 [i _rtc_htmlTemplate
 :U ..
@@ -846,7 +846,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 "29
-[; ;rtc/rtc_ds1337/../rtc.h: 29: const char rtc_fontTemplate[] = "<link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>";
+[; ;rtc/rtc_adafruit/../rtc.h: 29: const char rtc_fontTemplate[] = "<link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>";
 [v _rtc_fontTemplate `Cuc ~T0 @X0 -> 96 `i e ]
 [i _rtc_fontTemplate
 :U ..
@@ -949,7 +949,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 "30
-[; ;rtc/rtc_ds1337/../rtc.h: 30: const char rtc_cssTemplate[] = "body{background:black;}#clock{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#FFFF00;font-family:Orbitron;letter-spacing:7px;font-weight:bold;font-size:10em;}";
+[; ;rtc/rtc_adafruit/../rtc.h: 30: const char rtc_cssTemplate[] = "body{background:black;}#clock{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#FFFF00;font-family:Orbitron;letter-spacing:7px;font-weight:bold;font-size:10em;}";
 [v _rtc_cssTemplate `Cuc ~T0 @X0 -> 184 `i e ]
 [i _rtc_cssTemplate
 :U ..
@@ -1140,7 +1140,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 "31
-[; ;rtc/rtc_ds1337/../rtc.h: 31: const char rtc_scriptTemplate[] = "<script>function startTime(){var today=new Date();var h=today.getHours();var m=today.getMinutes();var s=today.getSeconds();m=checkTime(m);s=checkTime(s);document.getElementById('clock').innerHTML=h+':'+m+':'+s;var t=setTimeout(startTime,500);}function checkTime(i){if(i<10){i='0'+i};return i;}</script>";
+[; ;rtc/rtc_adafruit/../rtc.h: 31: const char rtc_scriptTemplate[] = "<script>function startTime(){var today=new Date();var h=today.getHours();var m=today.getMinutes();var s=today.getSeconds();m=checkTime(m);s=checkTime(s);document.getElementById('clock').innerHTML=h+':'+m+':'+s;var t=setTimeout(startTime,500);}function checkTime(i){if(i<10){i='0'+i};return i;}</script>";
 [v _rtc_scriptTemplate `Cuc ~T0 @X0 -> 303 `i e ]
 [i _rtc_scriptTemplate
 :U ..
@@ -1450,7 +1450,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 "33
-[; ;rtc/rtc_ds1337/../rtc.h: 33: uint8_t _clockDataString[] = {"hh:mm:ss - dd-mm-yyyy"};
+[; ;rtc/rtc_adafruit/../rtc.h: 33: uint8_t _clockDataString[] = {"hh:mm:ss - dd-mm-yyyy"};
 [v __clockDataString `uc ~T0 @X0 -> 22 `i e ]
 [i __clockDataString
 :U ..
@@ -1479,294 +1479,291 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 "34
-[; ;rtc/rtc_ds1337/../rtc.h: 34: uint8_t rtcData[16];
+[; ;rtc/rtc_adafruit/../rtc.h: 34: uint8_t rtcData[16];
 [v _rtcData `uc ~T0 @X0 -> 16 `i e ]
 "85
-[; ;rtc/rtc_ds1337/../rtc.h: 85: time_t time;
+[; ;rtc/rtc_adafruit/../rtc.h: 85: time_t time;
 [v _time `S833 ~T0 @X0 1 e ]
-"32 rtc/rtc_ds1337/../../i2c/i2c.h
-[; ;rtc/rtc_ds1337/../../i2c/i2c.h: 32: uint8_t data_out[4];
-[v _data_out `uc ~T0 @X0 -> 4 `i e ]
-"22 rtc/rtc_ds1337/rtc_ds1337.c
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 22: void rtc_ds_1337_getTimeAll(void)
-[v _rtc_ds_1337_getTimeAll `(v ~T0 @X0 1 ef ]
-"23
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 23: {
+"34 rtc/rtc_adafruit/rtc_adafruit.c
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 34: void rtc_adafruit_getTimeAll(void)
+[v _rtc_adafruit_getTimeAll `(v ~T0 @X0 1 ef ]
+"35
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 35: {
 {
-[e :U _rtc_ds_1337_getTimeAll ]
+[e :U _rtc_adafruit_getTimeAll ]
 [f ]
-"25
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 25:     i2c_write_serial(0b1101000, 0, 1);
-[e ( _i2c_write_serial (3 , , -> -> 104 `i `uc -> -> 0 `i `*uc -> -> 1 `i `uc ]
-"26
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 26:     i2c_read_serial(0b1101000, rtcData, 16);
-[e ( _i2c_read_serial (3 , , -> -> 104 `i `uc &U _rtcData -> -> 16 `i `uc ]
-"31
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 31:     time.seconds = convertBCD2Bytes(rtcData[0x00]);
-[e = . _time 0 ( _convertBCD2Bytes (1 *U + &U _rtcData * -> -> -> 0 `i `ui `ux -> -> # *U &U _rtcData `ui `ux ]
-"34
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 34:     time.minutes = convertBCD2Bytes(rtcData[0x01]);
-[e = . _time 1 ( _convertBCD2Bytes (1 *U + &U _rtcData * -> -> -> 1 `i `ui `ux -> -> # *U &U _rtcData `ui `ux ]
 "37
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 37:     time.time12_n24 = rtcData[0x02] & 0b01000000;
-[e = . _time 7 -> & -> *U + &U _rtcData * -> -> -> 2 `i `ui `ux -> -> # *U &U _rtcData `ui `ux `i -> 64 `i `a ]
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 37:     i2c_write_serial(0b1101000, 0, 1);
+[e ( _i2c_write_serial (3 , , -> -> 104 `i `uc -> -> 0 `i `*uc -> -> 1 `i `uc ]
 "38
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 38:     rtcData[0x02] &= ~0b01000000;
-[e =& *U + &U _rtcData * -> -> -> 2 `i `ui `ux -> -> # *U &U _rtcData `ui `ux -> ~ -> 64 `i `uc ]
-"40
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 40:     if ( time.time12_n24 )
-[e $ ! != -> . _time 7 `i -> 0 `i 835  ]
-"41
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 41:     {
-{
-"42
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 42:         time.timePM_nAM = rtcData[0x02] & 0b00100000;
-[e = . _time 8 -> & -> *U + &U _rtcData * -> -> -> 2 `i `ui `ux -> -> # *U &U _rtcData `ui `ux `i -> 32 `i `a ]
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 38:     i2c_read_serial(0b1101000, rtcData, 16);
+[e ( _i2c_read_serial (3 , , -> -> 104 `i `uc &U _rtcData -> -> 16 `i `uc ]
 "43
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 43:         rtcData[0x02] &= 0b11011111;
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 43:     time.seconds = convertBCD2Bytes(rtcData[0x00]);
+[e = . _time 0 ( _convertBCD2Bytes (1 *U + &U _rtcData * -> -> -> 0 `i `ui `ux -> -> # *U &U _rtcData `ui `ux ]
+"46
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 46:     time.minutes = convertBCD2Bytes(rtcData[0x01]);
+[e = . _time 1 ( _convertBCD2Bytes (1 *U + &U _rtcData * -> -> -> 1 `i `ui `ux -> -> # *U &U _rtcData `ui `ux ]
+"49
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 49:     time.time12_n24 = rtcData[0x02] & 0b01000000;
+[e = . _time 7 -> & -> *U + &U _rtcData * -> -> -> 2 `i `ui `ux -> -> # *U &U _rtcData `ui `ux `i -> 64 `i `a ]
+"50
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 50:     rtcData[0x02] &= ~0b01000000;
+[e =& *U + &U _rtcData * -> -> -> 2 `i `ui `ux -> -> # *U &U _rtcData `ui `ux -> ~ -> 64 `i `uc ]
+"52
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 52:     if ( time.time12_n24 )
+[e $ ! != -> . _time 7 `i -> 0 `i 835  ]
+"53
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 53:     {
+{
+"54
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 54:         time.timePM_nAM = rtcData[0x02] & 0b00100000;
+[e = . _time 8 -> & -> *U + &U _rtcData * -> -> -> 2 `i `ui `ux -> -> # *U &U _rtcData `ui `ux `i -> 32 `i `a ]
+"55
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 55:         rtcData[0x02] &= 0b11011111;
 [e =& *U + &U _rtcData * -> -> -> 2 `i `ui `ux -> -> # *U &U _rtcData `ui `ux -> -> 223 `i `uc ]
-"44
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 44:     }
+"56
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 56:     }
 }
 [e :U 835 ]
-"45
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 45:     time.hours = convertBCD2Bytes(rtcData[0x02]);
+"57
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 57:     time.hours = convertBCD2Bytes(rtcData[0x02]);
 [e = . _time 2 ( _convertBCD2Bytes (1 *U + &U _rtcData * -> -> -> 2 `i `ui `ux -> -> # *U &U _rtcData `ui `ux ]
-"48
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 48:     time.day = rtcData[0x03];
+"60
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 60:     time.day = rtcData[0x03];
 [e = . _time 3 *U + &U _rtcData * -> -> -> 3 `i `ui `ux -> -> # *U &U _rtcData `ui `ux ]
-"51
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 51:     time.date = convertBCD2Bytes(rtcData[0x04]);
-[e = . _time 4 ( _convertBCD2Bytes (1 *U + &U _rtcData * -> -> -> 4 `i `ui `ux -> -> # *U &U _rtcData `ui `ux ]
-"54
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 54:     time.century = rtcData[0x05] & 0b10000000;
-[e = . _time 9 -> & -> *U + &U _rtcData * -> -> -> 5 `i `ui `ux -> -> # *U &U _rtcData `ui `ux `i -> 128 `i `a ]
-"55
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 55:     rtcData[0x05] &= 0b01111111;
-[e =& *U + &U _rtcData * -> -> -> 5 `i `ui `ux -> -> # *U &U _rtcData `ui `ux -> -> 127 `i `uc ]
-"56
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 56:     time.month = convertBCD2Bytes(rtcData[0x05]);
-[e = . _time 5 ( _convertBCD2Bytes (1 *U + &U _rtcData * -> -> -> 5 `i `ui `ux -> -> # *U &U _rtcData `ui `ux ]
-"59
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 59:     time.year = convertBCD2Bytes(rtcData[0x06]);
-[e = . _time 6 ( _convertBCD2Bytes (1 *U + &U _rtcData * -> -> -> 6 `i `ui `ux -> -> # *U &U _rtcData `ui `ux ]
-"62
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 62:     time.A1M1 = rtcData[0x07] & 0b10000000;
-[e = . _time 10 -> & -> *U + &U _rtcData * -> -> -> 7 `i `ui `ux -> -> # *U &U _rtcData `ui `ux `i -> 128 `i `a ]
 "63
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 63:     rtcData[0x07] &= ~0b10000000;
-[e =& *U + &U _rtcData * -> -> -> 7 `i `ui `ux -> -> # *U &U _rtcData `ui `ux -> ~ -> 128 `i `uc ]
-"64
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 64:     time.alarm1Seconds = convertBCD2Bytes(rtcData[0x07]);
-[e = . _time 14 ( _convertBCD2Bytes (1 *U + &U _rtcData * -> -> -> 7 `i `ui `ux -> -> # *U &U _rtcData `ui `ux ]
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 63:     time.date = convertBCD2Bytes(rtcData[0x04]);
+[e = . _time 4 ( _convertBCD2Bytes (1 *U + &U _rtcData * -> -> -> 4 `i `ui `ux -> -> # *U &U _rtcData `ui `ux ]
+"66
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 66:     time.century = rtcData[0x05] & 0b10000000;
+[e = . _time 9 -> & -> *U + &U _rtcData * -> -> -> 5 `i `ui `ux -> -> # *U &U _rtcData `ui `ux `i -> 128 `i `a ]
 "67
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 67:     time.A1M2 = rtcData[0x08] & 0b10000000;
-[e = . _time 11 -> & -> *U + &U _rtcData * -> -> -> 8 `i `ui `ux -> -> # *U &U _rtcData `ui `ux `i -> 128 `i `a ]
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 67:     rtcData[0x05] &= 0b01111111;
+[e =& *U + &U _rtcData * -> -> -> 5 `i `ui `ux -> -> # *U &U _rtcData `ui `ux -> -> 127 `i `uc ]
 "68
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 68:     rtcData[0x08] &= ~0b10000000;
-[e =& *U + &U _rtcData * -> -> -> 8 `i `ui `ux -> -> # *U &U _rtcData `ui `ux -> ~ -> 128 `i `uc ]
-"69
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 69:     time.alarm1Minutes = convertBCD2Bytes(rtcData[0x08]);
-[e = . _time 15 ( _convertBCD2Bytes (1 *U + &U _rtcData * -> -> -> 8 `i `ui `ux -> -> # *U &U _rtcData `ui `ux ]
-"72
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 72:     time.A1M2 = rtcData[0x09] & 0b10000000;
-[e = . _time 11 -> & -> *U + &U _rtcData * -> -> -> 9 `i `ui `ux -> -> # *U &U _rtcData `ui `ux `i -> 128 `i `a ]
-"73
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 73:     rtcData[0x09] &= ~0b10000000;
-[e =& *U + &U _rtcData * -> -> -> 9 `i `ui `ux -> -> # *U &U _rtcData `ui `ux -> ~ -> 128 `i `uc ]
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 68:     time.month = convertBCD2Bytes(rtcData[0x05]);
+[e = . _time 5 ( _convertBCD2Bytes (1 *U + &U _rtcData * -> -> -> 5 `i `ui `ux -> -> # *U &U _rtcData `ui `ux ]
+"71
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 71:     time.year = convertBCD2Bytes(rtcData[0x06]);
+[e = . _time 6 ( _convertBCD2Bytes (1 *U + &U _rtcData * -> -> -> 6 `i `ui `ux -> -> # *U &U _rtcData `ui `ux ]
 "74
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 74:     time.alarm112n24 = rtcData[0x09] & 0b01000000;
-[e = . _time 19 -> & -> *U + &U _rtcData * -> -> -> 9 `i `ui `ux -> -> # *U &U _rtcData `ui `ux `i -> 64 `i `a ]
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 74:     time.A1M1 = rtcData[0x07] & 0b10000000;
+[e = . _time 10 -> & -> *U + &U _rtcData * -> -> -> 7 `i `ui `ux -> -> # *U &U _rtcData `ui `ux `i -> 128 `i `a ]
 "75
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 75:     rtcData[0x09] &= ~0b01000000;
-[e =& *U + &U _rtcData * -> -> -> 9 `i `ui `ux -> -> # *U &U _rtcData `ui `ux -> ~ -> 64 `i `uc ]
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 75:     rtcData[0x07] &= ~0b10000000;
+[e =& *U + &U _rtcData * -> -> -> 7 `i `ui `ux -> -> # *U &U _rtcData `ui `ux -> ~ -> 128 `i `uc ]
 "76
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 76:     if ( time.alarm112n24 )
-[e $ ! != -> . _time 19 `i -> 0 `i 836  ]
-"77
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 77:     {
-{
-"78
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 78:         time.alarm1PMnAM = rtcData[0x09] & 0b00100000;
-[e = . _time 20 -> & -> *U + &U _rtcData * -> -> -> 9 `i `ui `ux -> -> # *U &U _rtcData `ui `ux `i -> 32 `i `a ]
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 76:     time.alarm1Seconds = convertBCD2Bytes(rtcData[0x07]);
+[e = . _time 14 ( _convertBCD2Bytes (1 *U + &U _rtcData * -> -> -> 7 `i `ui `ux -> -> # *U &U _rtcData `ui `ux ]
 "79
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 79:         rtcData[0x09] &= 0b11011111;
-[e =& *U + &U _rtcData * -> -> -> 9 `i `ui `ux -> -> # *U &U _rtcData `ui `ux -> -> 223 `i `uc ]
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 79:     time.A1M2 = rtcData[0x08] & 0b10000000;
+[e = . _time 11 -> & -> *U + &U _rtcData * -> -> -> 8 `i `ui `ux -> -> # *U &U _rtcData `ui `ux `i -> 128 `i `a ]
 "80
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 80:     }
-}
-[e :U 836 ]
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 80:     rtcData[0x08] &= ~0b10000000;
+[e =& *U + &U _rtcData * -> -> -> 8 `i `ui `ux -> -> # *U &U _rtcData `ui `ux -> ~ -> 128 `i `uc ]
 "81
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 81:     time.alarm1Hour = convertBCD2Bytes(rtcData[0x09]);
-[e = . _time 16 ( _convertBCD2Bytes (1 *U + &U _rtcData * -> -> -> 9 `i `ui `ux -> -> # *U &U _rtcData `ui `ux ]
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 81:     time.alarm1Minutes = convertBCD2Bytes(rtcData[0x08]);
+[e = . _time 15 ( _convertBCD2Bytes (1 *U + &U _rtcData * -> -> -> 8 `i `ui `ux -> -> # *U &U _rtcData `ui `ux ]
 "84
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 84:     time.A1M4 = rtcData[0x0A] & 0b10000000;
-[e = . _time 13 -> & -> *U + &U _rtcData * -> -> -> 10 `i `ui `ux -> -> # *U &U _rtcData `ui `ux `i -> 128 `i `a ]
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 84:     time.A1M2 = rtcData[0x09] & 0b10000000;
+[e = . _time 11 -> & -> *U + &U _rtcData * -> -> -> 9 `i `ui `ux -> -> # *U &U _rtcData `ui `ux `i -> 128 `i `a ]
 "85
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 85:     rtcData[0x0A] &= ~0b10000000;
-[e =& *U + &U _rtcData * -> -> -> 10 `i `ui `ux -> -> # *U &U _rtcData `ui `ux -> ~ -> 128 `i `uc ]
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 85:     rtcData[0x09] &= ~0b10000000;
+[e =& *U + &U _rtcData * -> -> -> 9 `i `ui `ux -> -> # *U &U _rtcData `ui `ux -> ~ -> 128 `i `uc ]
 "86
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 86:     time.alarm1DYnDT = rtcData[0x0A] & 0b01000000;
-[e = . _time 21 -> & -> *U + &U _rtcData * -> -> -> 10 `i `ui `ux -> -> # *U &U _rtcData `ui `ux `i -> 64 `i `a ]
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 86:     time.alarm112n24 = rtcData[0x09] & 0b01000000;
+[e = . _time 19 -> & -> *U + &U _rtcData * -> -> -> 9 `i `ui `ux -> -> # *U &U _rtcData `ui `ux `i -> 64 `i `a ]
 "87
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 87:     rtcData[0x0A] &= ~0b01000000;
-[e =& *U + &U _rtcData * -> -> -> 10 `i `ui `ux -> -> # *U &U _rtcData `ui `ux -> ~ -> 64 `i `uc ]
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 87:     rtcData[0x09] &= ~0b01000000;
+[e =& *U + &U _rtcData * -> -> -> 9 `i `ui `ux -> -> # *U &U _rtcData `ui `ux -> ~ -> 64 `i `uc ]
 "88
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 88:     if(time.alarm1DYnDT)
-[e $ ! != -> . _time 21 `i -> 0 `i 837  ]
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 88:     if ( time.alarm112n24 )
+[e $ ! != -> . _time 19 `i -> 0 `i 836  ]
 "89
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 89:     {
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 89:     {
 {
 "90
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 90:         time.alarm1Day = convertBCD2Bytes(rtcData[0x0A]);
-[e = . _time 17 ( _convertBCD2Bytes (1 *U + &U _rtcData * -> -> -> 10 `i `ui `ux -> -> # *U &U _rtcData `ui `ux ]
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 90:         time.alarm1PMnAM = rtcData[0x09] & 0b00100000;
+[e = . _time 20 -> & -> *U + &U _rtcData * -> -> -> 9 `i `ui `ux -> -> # *U &U _rtcData `ui `ux `i -> 32 `i `a ]
 "91
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 91:         time.alarm1Date = 0;
-[e = . _time 18 -> -> 0 `i `uc ]
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 91:         rtcData[0x09] &= 0b11011111;
+[e =& *U + &U _rtcData * -> -> -> 9 `i `ui `ux -> -> # *U &U _rtcData `ui `ux -> -> 223 `i `uc ]
 "92
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 92:     }
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 92:     }
+}
+[e :U 836 ]
+"93
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 93:     time.alarm1Hour = convertBCD2Bytes(rtcData[0x09]);
+[e = . _time 16 ( _convertBCD2Bytes (1 *U + &U _rtcData * -> -> -> 9 `i `ui `ux -> -> # *U &U _rtcData `ui `ux ]
+"96
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 96:     time.A1M4 = rtcData[0x0A] & 0b10000000;
+[e = . _time 13 -> & -> *U + &U _rtcData * -> -> -> 10 `i `ui `ux -> -> # *U &U _rtcData `ui `ux `i -> 128 `i `a ]
+"97
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 97:     rtcData[0x0A] &= ~0b10000000;
+[e =& *U + &U _rtcData * -> -> -> 10 `i `ui `ux -> -> # *U &U _rtcData `ui `ux -> ~ -> 128 `i `uc ]
+"98
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 98:     time.alarm1DYnDT = rtcData[0x0A] & 0b01000000;
+[e = . _time 21 -> & -> *U + &U _rtcData * -> -> -> 10 `i `ui `ux -> -> # *U &U _rtcData `ui `ux `i -> 64 `i `a ]
+"99
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 99:     rtcData[0x0A] &= ~0b01000000;
+[e =& *U + &U _rtcData * -> -> -> 10 `i `ui `ux -> -> # *U &U _rtcData `ui `ux -> ~ -> 64 `i `uc ]
+"100
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 100:     if(time.alarm1DYnDT)
+[e $ ! != -> . _time 21 `i -> 0 `i 837  ]
+"101
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 101:     {
+{
+"102
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 102:         time.alarm1Day = convertBCD2Bytes(rtcData[0x0A]);
+[e = . _time 17 ( _convertBCD2Bytes (1 *U + &U _rtcData * -> -> -> 10 `i `ui `ux -> -> # *U &U _rtcData `ui `ux ]
+"103
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 103:         time.alarm1Date = 0;
+[e = . _time 18 -> -> 0 `i `uc ]
+"104
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 104:     }
 }
 [e $U 838  ]
-"93
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 93:     else
+"105
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 105:     else
 [e :U 837 ]
-"94
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 94:     {
+"106
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 106:     {
 {
-"95
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 95:         time.alarm1Date = convertBCD2Bytes(rtcData[0x0A]);
+"107
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 107:         time.alarm1Date = convertBCD2Bytes(rtcData[0x0A]);
 [e = . _time 18 ( _convertBCD2Bytes (1 *U + &U _rtcData * -> -> -> 10 `i `ui `ux -> -> # *U &U _rtcData `ui `ux ]
-"96
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 96:         time.alarm1Day = 0;
+"108
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 108:         time.alarm1Day = 0;
 [e = . _time 17 -> -> 0 `i `uc ]
-"97
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 97:     }
+"109
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 109:     }
 }
 [e :U 838 ]
-"100
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 100:     time.A2M2 = rtcData[0x0B] & 0b10000000;
-[e = . _time 22 -> & -> *U + &U _rtcData * -> -> -> 11 `i `ui `ux -> -> # *U &U _rtcData `ui `ux `i -> 128 `i `a ]
-"101
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 101:     rtcData[0x0B] &= 0b01111111;
-[e =& *U + &U _rtcData * -> -> -> 11 `i `ui `ux -> -> # *U &U _rtcData `ui `ux -> -> 127 `i `uc ]
-"102
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 102:     time.alarm2Minutes = convertBCD2Bytes(rtcData[0x0B]);
-[e = . _time 25 ( _convertBCD2Bytes (1 *U + &U _rtcData * -> -> -> 11 `i `ui `ux -> -> # *U &U _rtcData `ui `ux ]
-"105
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 105:     time.A2M3 = rtcData[0x0C] & 0b10000000;
-[e = . _time 23 -> & -> *U + &U _rtcData * -> -> -> 12 `i `ui `ux -> -> # *U &U _rtcData `ui `ux `i -> 128 `i `a ]
-"106
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 106:     rtcData[0x0C] &= 0b01111111;
-[e =& *U + &U _rtcData * -> -> -> 12 `i `ui `ux -> -> # *U &U _rtcData `ui `ux -> -> 127 `i `uc ]
-"107
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 107:     time.alarm212n24 = rtcData[0x0C] & 0b01000000;
-[e = . _time 29 -> & -> *U + &U _rtcData * -> -> -> 12 `i `ui `ux -> -> # *U &U _rtcData `ui `ux `i -> 64 `i `a ]
-"108
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 108:     rtcData[0x0C] &= ~0b01000000;
-[e =& *U + &U _rtcData * -> -> -> 12 `i `ui `ux -> -> # *U &U _rtcData `ui `ux -> ~ -> 64 `i `uc ]
-"109
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 109:     if(time.alarm212n24)
-[e $ ! != -> . _time 29 `i -> 0 `i 839  ]
-"110
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 110:     {
-{
-"111
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 111:         time.alarm2PMnAM = rtcData[0x0C] & 0b00100000;
-[e = . _time 30 -> & -> *U + &U _rtcData * -> -> -> 12 `i `ui `ux -> -> # *U &U _rtcData `ui `ux `i -> 32 `i `a ]
 "112
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 112:         rtcData[0x09] &= 0b11011111;
-[e =& *U + &U _rtcData * -> -> -> 9 `i `ui `ux -> -> # *U &U _rtcData `ui `ux -> -> 223 `i `uc ]
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 112:     time.A2M2 = rtcData[0x0B] & 0b10000000;
+[e = . _time 22 -> & -> *U + &U _rtcData * -> -> -> 11 `i `ui `ux -> -> # *U &U _rtcData `ui `ux `i -> 128 `i `a ]
 "113
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 113:     }
-}
-[e :U 839 ]
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 113:     rtcData[0x0B] &= 0b01111111;
+[e =& *U + &U _rtcData * -> -> -> 11 `i `ui `ux -> -> # *U &U _rtcData `ui `ux -> -> 127 `i `uc ]
 "114
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 114:     time.alarm2Hours = convertBCD2Bytes(rtcData[0x0C]);
-[e = . _time 26 ( _convertBCD2Bytes (1 *U + &U _rtcData * -> -> -> 12 `i `ui `ux -> -> # *U &U _rtcData `ui `ux ]
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 114:     time.alarm2Minutes = convertBCD2Bytes(rtcData[0x0B]);
+[e = . _time 25 ( _convertBCD2Bytes (1 *U + &U _rtcData * -> -> -> 11 `i `ui `ux -> -> # *U &U _rtcData `ui `ux ]
 "117
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 117:     time.A2M4 = rtcData[0x0D] & 0b10000000;
-[e = . _time 24 -> & -> *U + &U _rtcData * -> -> -> 13 `i `ui `ux -> -> # *U &U _rtcData `ui `ux `i -> 128 `i `a ]
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 117:     time.A2M3 = rtcData[0x0C] & 0b10000000;
+[e = . _time 23 -> & -> *U + &U _rtcData * -> -> -> 12 `i `ui `ux -> -> # *U &U _rtcData `ui `ux `i -> 128 `i `a ]
 "118
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 118:     rtcData[0x0D] &= 0b01111111;
-[e =& *U + &U _rtcData * -> -> -> 13 `i `ui `ux -> -> # *U &U _rtcData `ui `ux -> -> 127 `i `uc ]
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 118:     rtcData[0x0C] &= 0b01111111;
+[e =& *U + &U _rtcData * -> -> -> 12 `i `ui `ux -> -> # *U &U _rtcData `ui `ux -> -> 127 `i `uc ]
 "119
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 119:     time.alarm1DYnDT = rtcData[0x0D] & 0b01000000;
-[e = . _time 21 -> & -> *U + &U _rtcData * -> -> -> 13 `i `ui `ux -> -> # *U &U _rtcData `ui `ux `i -> 64 `i `a ]
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 119:     time.alarm212n24 = rtcData[0x0C] & 0b01000000;
+[e = . _time 29 -> & -> *U + &U _rtcData * -> -> -> 12 `i `ui `ux -> -> # *U &U _rtcData `ui `ux `i -> 64 `i `a ]
 "120
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 120:     rtcData[0x0D] &= ~0b01000000;
-[e =& *U + &U _rtcData * -> -> -> 13 `i `ui `ux -> -> # *U &U _rtcData `ui `ux -> ~ -> 64 `i `uc ]
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 120:     rtcData[0x0C] &= ~0b01000000;
+[e =& *U + &U _rtcData * -> -> -> 12 `i `ui `ux -> -> # *U &U _rtcData `ui `ux -> ~ -> 64 `i `uc ]
 "121
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 121:     if(time.alarm1DYnDT)
-[e $ ! != -> . _time 21 `i -> 0 `i 840  ]
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 121:     if(time.alarm212n24)
+[e $ ! != -> . _time 29 `i -> 0 `i 839  ]
 "122
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 122:     {
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 122:     {
 {
 "123
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 123:         time.alarm2Day = convertBCD2Bytes(rtcData[0x0A]);
-[e = . _time 27 ( _convertBCD2Bytes (1 *U + &U _rtcData * -> -> -> 10 `i `ui `ux -> -> # *U &U _rtcData `ui `ux ]
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 123:         time.alarm2PMnAM = rtcData[0x0C] & 0b00100000;
+[e = . _time 30 -> & -> *U + &U _rtcData * -> -> -> 12 `i `ui `ux -> -> # *U &U _rtcData `ui `ux `i -> 32 `i `a ]
 "124
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 124:         time.alarm2Date = 0;
-[e = . _time 28 -> -> 0 `i `uc ]
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 124:         rtcData[0x09] &= 0b11011111;
+[e =& *U + &U _rtcData * -> -> -> 9 `i `ui `ux -> -> # *U &U _rtcData `ui `ux -> -> 223 `i `uc ]
 "125
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 125:     }
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 125:     }
+}
+[e :U 839 ]
+"126
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 126:     time.alarm2Hours = convertBCD2Bytes(rtcData[0x0C]);
+[e = . _time 26 ( _convertBCD2Bytes (1 *U + &U _rtcData * -> -> -> 12 `i `ui `ux -> -> # *U &U _rtcData `ui `ux ]
+"129
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 129:     time.A2M4 = rtcData[0x0D] & 0b10000000;
+[e = . _time 24 -> & -> *U + &U _rtcData * -> -> -> 13 `i `ui `ux -> -> # *U &U _rtcData `ui `ux `i -> 128 `i `a ]
+"130
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 130:     rtcData[0x0D] &= 0b01111111;
+[e =& *U + &U _rtcData * -> -> -> 13 `i `ui `ux -> -> # *U &U _rtcData `ui `ux -> -> 127 `i `uc ]
+"131
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 131:     time.alarm1DYnDT = rtcData[0x0D] & 0b01000000;
+[e = . _time 21 -> & -> *U + &U _rtcData * -> -> -> 13 `i `ui `ux -> -> # *U &U _rtcData `ui `ux `i -> 64 `i `a ]
+"132
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 132:     rtcData[0x0D] &= ~0b01000000;
+[e =& *U + &U _rtcData * -> -> -> 13 `i `ui `ux -> -> # *U &U _rtcData `ui `ux -> ~ -> 64 `i `uc ]
+"133
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 133:     if(time.alarm1DYnDT)
+[e $ ! != -> . _time 21 `i -> 0 `i 840  ]
+"134
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 134:     {
+{
+"135
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 135:         time.alarm2Day = convertBCD2Bytes(rtcData[0x0A]);
+[e = . _time 27 ( _convertBCD2Bytes (1 *U + &U _rtcData * -> -> -> 10 `i `ui `ux -> -> # *U &U _rtcData `ui `ux ]
+"136
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 136:         time.alarm2Date = 0;
+[e = . _time 28 -> -> 0 `i `uc ]
+"137
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 137:     }
 }
 [e $U 841  ]
-"126
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 126:     else
+"138
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 138:     else
 [e :U 840 ]
-"127
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 127:     {
+"139
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 139:     {
 {
-"128
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 128:         time.alarm1Date = convertBCD2Bytes(rtcData[0x0A]);
+"140
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 140:         time.alarm1Date = convertBCD2Bytes(rtcData[0x0A]);
 [e = . _time 18 ( _convertBCD2Bytes (1 *U + &U _rtcData * -> -> -> 10 `i `ui `ux -> -> # *U &U _rtcData `ui `ux ]
-"129
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 129:         time.alarm1Day = 0;
+"141
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 141:         time.alarm1Day = 0;
 [e = . _time 17 -> -> 0 `i `uc ]
-"130
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 130:     }
+"142
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 142:     }
 }
 [e :U 841 ]
-"137
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 137:     time.EOSC = rtcData[0x0E] & 0b10000000;
+"149
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 149:     time.EOSC = rtcData[0x0E] & 0b10000000;
 [e = . _time 32 -> & -> *U + &U _rtcData * -> -> -> 14 `i `ui `ux -> -> # *U &U _rtcData `ui `ux `i -> 128 `i `a ]
-"154
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 154:     time.RS2 = rtcData[0x0E] & 0b00010000;
+"166
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 166:     time.RS2 = rtcData[0x0E] & 0b00010000;
 [e = . _time 33 -> & -> *U + &U _rtcData * -> -> -> 14 `i `ui `ux -> -> # *U &U _rtcData `ui `ux `i -> 16 `i `a ]
-"155
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 155:     time.RS1 = rtcData[0x0E] & 0b00001000;
-[e = . _time 34 -> & -> *U + &U _rtcData * -> -> -> 14 `i `ui `ux -> -> # *U &U _rtcData `ui `ux `i -> 8 `i `a ]
 "167
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 167:     time.INTCN = rtcData[0x0E] & 0b00000100;
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 167:     time.RS1 = rtcData[0x0E] & 0b00001000;
+[e = . _time 34 -> & -> *U + &U _rtcData * -> -> -> 14 `i `ui `ux -> -> # *U &U _rtcData `ui `ux `i -> 8 `i `a ]
+"179
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 179:     time.INTCN = rtcData[0x0E] & 0b00000100;
 [e = . _time 35 -> & -> *U + &U _rtcData * -> -> -> 14 `i `ui `ux -> -> # *U &U _rtcData `ui `ux `i -> 4 `i `a ]
-"175
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 175:     time.A2IE = rtcData[0x0E] & 0b00000010;
+"187
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 187:     time.A2IE = rtcData[0x0E] & 0b00000010;
 [e = . _time 36 -> & -> *U + &U _rtcData * -> -> -> 14 `i `ui `ux -> -> # *U &U _rtcData `ui `ux `i -> 2 `i `a ]
-"182
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 182:     time.A1IE = rtcData[0x0E] & 0b00100001;
+"194
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 194:     time.A1IE = rtcData[0x0E] & 0b00100001;
 [e = . _time 37 -> & -> *U + &U _rtcData * -> -> -> 14 `i `ui `ux -> -> # *U &U _rtcData `ui `ux `i -> 33 `i `a ]
-"198
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 198:     time.OSF = rtcData[0x0F] & 0b10000000;
-[e = . _time 38 -> & -> *U + &U _rtcData * -> -> -> 15 `i `ui `ux -> -> # *U &U _rtcData `ui `ux `i -> 128 `i `a ]
 "210
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 210:     time.A2F = rtcData[0x0F] & 0b00000010;
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 210:     time.OSF = rtcData[0x0F] & 0b10000000;
+[e = . _time 38 -> & -> *U + &U _rtcData * -> -> -> 15 `i `ui `ux -> -> # *U &U _rtcData `ui `ux `i -> 128 `i `a ]
+"222
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 222:     time.A2F = rtcData[0x0F] & 0b00000010;
 [e = . _time 39 -> & -> *U + &U _rtcData * -> -> -> 15 `i `ui `ux -> -> # *U &U _rtcData `ui `ux `i -> 2 `i `a ]
-"217
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 217:     time.A1F = rtcData[0x0F] & 0b00100001;
+"229
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 229:     time.A1F = rtcData[0x0F] & 0b00100001;
 [e = . _time 40 -> & -> *U + &U _rtcData * -> -> -> 15 `i `ui `ux -> -> # *U &U _rtcData `ui `ux `i -> 33 `i `a ]
-"218
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 218: }
+"230
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 230: }
 [e :UE 834 ]
 }
-"224
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 224: void rtc_ds_1337_setTimeAll(uint8_t hours, uint8_t mins, uint8_t secs, uint8_t day, uint8_t date, uint8_t month, int16_t years)
-[v _rtc_ds_1337_setTimeAll `(v ~T0 @X0 1 ef7`uc`uc`uc`uc`uc`uc`s ]
-"225
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 225: {
+"236
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 236: void rtc_adafruit_setTimeAll(uint8_t hours, uint8_t mins, uint8_t secs, uint8_t day, uint8_t date, uint8_t month, int16_t years)
+[v _rtc_adafruit_setTimeAll `(v ~T0 @X0 1 ef7`uc`uc`uc`uc`uc`uc`s ]
+"237
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 237: {
 {
-[e :U _rtc_ds_1337_setTimeAll ]
-"224
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 224: void rtc_ds_1337_setTimeAll(uint8_t hours, uint8_t mins, uint8_t secs, uint8_t day, uint8_t date, uint8_t month, int16_t years)
+[e :U _rtc_adafruit_setTimeAll ]
+"236
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 236: void rtc_adafruit_setTimeAll(uint8_t hours, uint8_t mins, uint8_t secs, uint8_t day, uint8_t date, uint8_t month, int16_t years)
 [v _hours `uc ~T0 @X0 1 r1 ]
 [v _mins `uc ~T0 @X0 1 r2 ]
 [v _secs `uc ~T0 @X0 1 r3 ]
@@ -1774,18 +1771,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _date `uc ~T0 @X0 1 r5 ]
 [v _month `uc ~T0 @X0 1 r6 ]
 [v _years `s ~T0 @X0 1 r7 ]
-"225
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 225: {
+"237
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 237: {
 [f ]
-"226
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 226:     _Bool century = (years>1999 || (years>=0 && years <=99) )?1:0;
+"238
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 238:     _Bool century = (years>1999 || (years>=0 && years <=99) )?1:0;
 [v _century `a ~T0 @X0 1 a ]
 [e = _century -> ? || > -> _years `i -> 1999 `i && >= -> _years `i -> 0 `i <= -> _years `i -> 99 `i : -> 1 `i -> 0 `i `a ]
-[v F6288 `uc ~T0 @X0 -> 7 `i s ]
-[i F6288
+[v F6348 `uc ~T0 @X0 -> 7 `i s ]
+[i F6348
 :U ..
-"229
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 229:     char rtc_date[] = {
+"241
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 241:     uint8_t rtc_date[] = {
 -> -> 0 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
@@ -1796,816 +1793,816 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v _rtc_date `uc ~T0 @X0 -> 7 `i a ]
-[e = _rtc_date F6288 ]
-[e ; = *U + &U _rtc_date * -> -> -> 0 `i `ui `ux -> -> # *U &U _rtc_date `ui `ux -> ( _convertByte2BCD (1 _secs `uc ; = *U + &U _rtc_date * -> -> -> 1 `i `ui `ux -> -> # *U &U _rtc_date `ui `ux -> ( _convertByte2BCD (1 _mins `uc ; = *U + &U _rtc_date * -> -> -> 2 `i `ui `ux -> -> # *U &U _rtc_date `ui `ux -> ( _convertByte2BCD (1 _hours `uc ; = *U + &U _rtc_date * -> -> -> 3 `i `ui `ux -> -> # *U &U _rtc_date `ui `ux -> ( _convertByte2BCD (1 _day `uc ; = *U + &U _rtc_date * -> -> -> 4 `i `ui `ux -> -> # *U &U _rtc_date `ui `ux -> ( _convertByte2BCD (1 _date `uc ; = *U + &U _rtc_date * -> -> -> 5 `i `ui `ux -> -> # *U &U _rtc_date `ui `ux -> ? != -> _century `i -> 0 `i : & -> ( _convertByte2BCD (1 _month `i -> 128 `i -> ( _convertByte2BCD (1 _month `i `uc = *U + &U _rtc_date * -> -> -> 6 `i `ui `ux -> -> # *U &U _rtc_date `ui `ux -> ( _convertByte2BCD (1 -> _years `uc `uc ]
-"239
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 239:     i2c_write_serial(0b1101000, rtc_date, 7);
-[e ( _i2c_write_serial (3 , , -> -> 104 `i `uc -> &U _rtc_date `*uc -> -> 7 `i `uc ]
-"240
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 240: }
+[e = _rtc_date F6348 ]
+[e ; = *U + &U _rtc_date * -> -> -> 0 `i `ui `ux -> -> # *U &U _rtc_date `ui `ux ( _convertByte2BCD (1 _secs ; = *U + &U _rtc_date * -> -> -> 1 `i `ui `ux -> -> # *U &U _rtc_date `ui `ux ( _convertByte2BCD (1 _mins ; = *U + &U _rtc_date * -> -> -> 2 `i `ui `ux -> -> # *U &U _rtc_date `ui `ux ( _convertByte2BCD (1 _hours ; = *U + &U _rtc_date * -> -> -> 3 `i `ui `ux -> -> # *U &U _rtc_date `ui `ux ( _convertByte2BCD (1 _day ; = *U + &U _rtc_date * -> -> -> 4 `i `ui `ux -> -> # *U &U _rtc_date `ui `ux ( _convertByte2BCD (1 _date ; = *U + &U _rtc_date * -> -> -> 5 `i `ui `ux -> -> # *U &U _rtc_date `ui `ux -> ? != -> _century `i -> 0 `i : & -> ( _convertByte2BCD (1 _month `i -> 128 `i -> ( _convertByte2BCD (1 _month `i `uc = *U + &U _rtc_date * -> -> -> 6 `i `ui `ux -> -> # *U &U _rtc_date `ui `ux ( _convertByte2BCD (1 -> _years `uc ]
+"251
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 251:     i2c_write_serial(0b1101000, rtc_date, 7);
+[e ( _i2c_write_serial (3 , , -> -> 104 `i `uc &U _rtc_date -> -> 7 `i `uc ]
+"252
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 252: }
 [e :UE 842 ]
 }
-"247
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 247: uint8_t rtc_ds_1337_getSeconds(void)
-[v _rtc_ds_1337_getSeconds `(uc ~T0 @X0 1 ef ]
-"248
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 248: {
+"259
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 259: uint8_t rtc_adafruit_getSeconds(void)
+[v _rtc_adafruit_getSeconds `(uc ~T0 @X0 1 ef ]
+"260
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 260: {
 {
-[e :U _rtc_ds_1337_getSeconds ]
+[e :U _rtc_adafruit_getSeconds ]
 [f ]
-"249
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 249:     uint8_t data[1];
+"261
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 261:     uint8_t data[1];
 [v _data `uc ~T0 @X0 -> -> 1 `i `ux a ]
-"251
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 251:     i2c_write_serial(0b1101000, 0x00, 1);
-[e ( _i2c_write_serial (3 , , -> -> 104 `i `uc -> -> 0 `i `*uc -> -> 1 `i `uc ]
-"252
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 252:     i2c_read_serial(0b1101000, data , 1);
+"263
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 263:     i2c_write_serial(0b1101000, (uint8_t)0x00, 1);
+[e ( _i2c_write_serial (3 , , -> -> 104 `i `uc -> -> -> 0 `i `uc `*uc -> -> 1 `i `uc ]
+"264
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 264:     i2c_read_serial(0b1101000, data , 1);
 [e ( _i2c_read_serial (3 , , -> -> 104 `i `uc &U _data -> -> 1 `i `uc ]
-"253
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 253:     time.seconds = (uint8_t) convertBCD2Bytes(data);
+"265
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 265:     time.seconds = convertBCD2Bytes(data);
 [e = . _time 0 ( _convertBCD2Bytes (1 -> &U _data `uc ]
-"255
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 255:     return time.seconds;
+"267
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 267:     return time.seconds;
 [e ) . _time 0 ]
 [e $UE 843  ]
-"256
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 256: }
+"268
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 268: }
 [e :UE 843 ]
 }
-"258
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 258: void rtc_ds_1337_setSeconds(void)
-[v _rtc_ds_1337_setSeconds `(v ~T0 @X0 1 ef ]
-"259
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 259: {
+"270
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 270: void rtc_adafruit_setSeconds(void)
+[v _rtc_adafruit_setSeconds `(v ~T0 @X0 1 ef ]
+"271
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 271: {
 {
-[e :U _rtc_ds_1337_setSeconds ]
+[e :U _rtc_adafruit_setSeconds ]
 [f ]
-"260
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 260:     char data = convertByte2BCD(time.seconds);
+"272
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 272:     uint8_t data = convertByte2BCD(time.seconds);
 [v _data `uc ~T0 @X0 1 a ]
-[e = _data -> ( _convertByte2BCD (1 . _time 0 `uc ]
-[v F6294 `uc ~T0 @X0 -> 2 `i s ]
-[i F6294
+[e = _data ( _convertByte2BCD (1 . _time 0 ]
+[v F6354 `uc ~T0 @X0 -> 2 `i s ]
+[i F6354
 :U ..
-"261
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 261:     char rtcRegister[] = { 0x00, data};
+"273
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 273:     uint8_t rtcRegister[] = { (char) 0x00, data};
 -> -> 0 `i `uc
 -> -> 0 `i `uc
 ..
 ]
 [v _rtcRegister `uc ~T0 @X0 -> 2 `i a ]
-[e = _rtcRegister F6294 ]
-[e ; = *U + &U _rtcRegister * -> -> -> 0 `i `ui `ux -> -> # *U &U _rtcRegister `ui `ux -> -> 0 `i `uc = *U + &U _rtcRegister * -> -> -> 1 `i `ui `ux -> -> # *U &U _rtcRegister `ui `ux _data ]
-"262
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 262:     i2c_write_serial(0b1101000, rtcRegister, 2);
-[e ( _i2c_write_serial (3 , , -> -> 104 `i `uc -> &U _rtcRegister `*uc -> -> 2 `i `uc ]
-"263
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 263: }
+[e = _rtcRegister F6354 ]
+[e ; = *U + &U _rtcRegister * -> -> -> 0 `i `ui `ux -> -> # *U &U _rtcRegister `ui `ux -> -> -> 0 `i `uc `uc = *U + &U _rtcRegister * -> -> -> 1 `i `ui `ux -> -> # *U &U _rtcRegister `ui `ux _data ]
+"274
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 274:     i2c_write_serial(0b1101000, rtcRegister, 2);
+[e ( _i2c_write_serial (3 , , -> -> 104 `i `uc &U _rtcRegister -> -> 2 `i `uc ]
+"275
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 275: }
 [e :UE 844 ]
 }
-"269
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 269: uint8_t rtc_ds_1337_getMinutes(void)
-[v _rtc_ds_1337_getMinutes `(uc ~T0 @X0 1 ef ]
-"270
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 270: {
+"281
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 281: uint8_t rtc_adafruit_getMinutes(void)
+[v _rtc_adafruit_getMinutes `(uc ~T0 @X0 1 ef ]
+"282
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 282: {
 {
-[e :U _rtc_ds_1337_getMinutes ]
+[e :U _rtc_adafruit_getMinutes ]
 [f ]
-"271
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 271:     uint8_t data[1];
+"283
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 283:     uint8_t data[1];
 [v _data `uc ~T0 @X0 -> -> 1 `i `ux a ]
-"273
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 273:     i2c_write_serial(0b1101000, 0x01, 1);
+"285
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 285:     i2c_write_serial(0b1101000, 0x01, 1);
 [e ( _i2c_write_serial (3 , , -> -> 104 `i `uc -> -> 1 `i `*uc -> -> 1 `i `uc ]
-"274
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 274:     i2c_read_serial(0b1101000, data , 1);
+"286
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 286:     i2c_read_serial(0b1101000, data, 1);
 [e ( _i2c_read_serial (3 , , -> -> 104 `i `uc &U _data -> -> 1 `i `uc ]
-"275
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 275:     time.minutes = convertBCD2Bytes(data);
+"287
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 287:     time.minutes = convertBCD2Bytes(data);
 [e = . _time 1 ( _convertBCD2Bytes (1 -> &U _data `uc ]
-"277
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 277:     return time.minutes;
+"289
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 289:     return time.minutes;
 [e ) . _time 1 ]
 [e $UE 845  ]
-"278
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 278: }
+"290
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 290: }
 [e :UE 845 ]
 }
-"280
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 280: void rtc_ds_1337_setMinutes(void)
-[v _rtc_ds_1337_setMinutes `(v ~T0 @X0 1 ef ]
-"281
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 281: {
+"292
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 292: void rtc_adafruit_setMinutes(void)
+[v _rtc_adafruit_setMinutes `(v ~T0 @X0 1 ef ]
+"293
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 293: {
 {
-[e :U _rtc_ds_1337_setMinutes ]
+[e :U _rtc_adafruit_setMinutes ]
 [f ]
-"282
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 282:     uint8_t data = convertByte2BCD(time.minutes);
+"294
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 294:     uint8_t data = convertByte2BCD(time.minutes);
 [v _data `uc ~T0 @X0 1 a ]
 [e = _data ( _convertByte2BCD (1 . _time 1 ]
-[v F6300 `uc ~T0 @X0 -> 2 `i s ]
-[i F6300
+[v F6360 `uc ~T0 @X0 -> 2 `i s ]
+[i F6360
 :U ..
-"283
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 283:     char rtcRegister[] = { 0x01, data};
+"295
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 295:     uint8_t rtcRegister[] = { 0x01, data};
 -> -> 0 `i `uc
 -> -> 0 `i `uc
 ..
 ]
 [v _rtcRegister `uc ~T0 @X0 -> 2 `i a ]
-[e = _rtcRegister F6300 ]
-[e ; = *U + &U _rtcRegister * -> -> -> 0 `i `ui `ux -> -> # *U &U _rtcRegister `ui `ux -> -> 1 `i `uc = *U + &U _rtcRegister * -> -> -> 1 `i `ui `ux -> -> # *U &U _rtcRegister `ui `ux -> _data `uc ]
-"284
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 284:     i2c_write_serial(0b1101000, rtcRegister, 2);
-[e ( _i2c_write_serial (3 , , -> -> 104 `i `uc -> &U _rtcRegister `*uc -> -> 2 `i `uc ]
-"285
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 285: }
+[e = _rtcRegister F6360 ]
+[e ; = *U + &U _rtcRegister * -> -> -> 0 `i `ui `ux -> -> # *U &U _rtcRegister `ui `ux -> -> 1 `i `uc = *U + &U _rtcRegister * -> -> -> 1 `i `ui `ux -> -> # *U &U _rtcRegister `ui `ux _data ]
+"296
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 296:     i2c_write_serial(0b1101000, rtcRegister, 2);
+[e ( _i2c_write_serial (3 , , -> -> 104 `i `uc &U _rtcRegister -> -> 2 `i `uc ]
+"297
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 297: }
 [e :UE 846 ]
 }
-"291
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 291: uint8_t rtc_ds_1337_getHour(void)
-[v _rtc_ds_1337_getHour `(uc ~T0 @X0 1 ef ]
-"292
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 292: {
+"303
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 303: uint8_t rtc_adafruit_getHour(void)
+[v _rtc_adafruit_getHour `(uc ~T0 @X0 1 ef ]
+"304
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 304: {
 {
-[e :U _rtc_ds_1337_getHour ]
+[e :U _rtc_adafruit_getHour ]
 [f ]
-"293
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 293:     uint8_t data[1];
+"305
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 305:     uint8_t data[1];
 [v _data `uc ~T0 @X0 -> -> 1 `i `ux a ]
-"295
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 295:     i2c_write_serial(0b1101000, 0x02, 1);
+"307
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 307:     i2c_write_serial(0b1101000, 0x02, 1);
 [e ( _i2c_write_serial (3 , , -> -> 104 `i `uc -> -> 2 `i `*uc -> -> 1 `i `uc ]
-"296
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 296:     i2c_read_serial(0b1101000, data , 1);
+"308
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 308:     i2c_read_serial(0b1101000, data , 1);
 [e ( _i2c_read_serial (3 , , -> -> 104 `i `uc &U _data -> -> 1 `i `uc ]
-"297
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 297:     time.hours = (uint8_t) convertBCD2Bytes(data);
+"309
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 309:     time.hours = convertBCD2Bytes(data);
 [e = . _time 2 ( _convertBCD2Bytes (1 -> &U _data `uc ]
-"299
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 299:     return time.hours;
+"311
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 311:     return time.hours;
 [e ) . _time 2 ]
 [e $UE 847  ]
-"300
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 300: }
+"312
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 312: }
 [e :UE 847 ]
 }
-"302
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 302: void rtc_ds_1337_setHour(void)
-[v _rtc_ds_1337_setHour `(v ~T0 @X0 1 ef ]
-"303
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 303: {
+"314
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 314: void rtc_adafruit_setHour(void)
+[v _rtc_adafruit_setHour `(v ~T0 @X0 1 ef ]
+"315
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 315: {
 {
-[e :U _rtc_ds_1337_setHour ]
+[e :U _rtc_adafruit_setHour ]
 [f ]
-"304
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 304:     char data = convertByte2BCD(time.hours);
+"316
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 316:     char data = convertByte2BCD(time.hours);
 [v _data `uc ~T0 @X0 1 a ]
 [e = _data -> ( _convertByte2BCD (1 . _time 2 `uc ]
-[v F6306 `uc ~T0 @X0 -> 2 `i s ]
-[i F6306
+[v F6366 `uc ~T0 @X0 -> 2 `i s ]
+[i F6366
 :U ..
-"305
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 305:     char rtcRegister[] = { 0x02, data};
+"317
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 317:     char rtcRegister[] = { (char) 0x02, data};
 -> -> 0 `i `uc
 -> -> 0 `i `uc
 ..
 ]
 [v _rtcRegister `uc ~T0 @X0 -> 2 `i a ]
-[e = _rtcRegister F6306 ]
+[e = _rtcRegister F6366 ]
 [e ; = *U + &U _rtcRegister * -> -> -> 0 `i `ui `ux -> -> # *U &U _rtcRegister `ui `ux -> -> 2 `i `uc = *U + &U _rtcRegister * -> -> -> 1 `i `ui `ux -> -> # *U &U _rtcRegister `ui `ux _data ]
-"306
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 306:     i2c_write_serial(0b1101000, rtcRegister, 2);
+"318
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 318:     i2c_write_serial(0b1101000, rtcRegister, 2);
 [e ( _i2c_write_serial (3 , , -> -> 104 `i `uc -> &U _rtcRegister `*uc -> -> 2 `i `uc ]
-"307
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 307: }
+"319
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 319: }
 [e :UE 848 ]
 }
-"309
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 309: uint8_t rtc_ds_1337_getAMPM(void) { return 0; }
-[v _rtc_ds_1337_getAMPM `(uc ~T0 @X0 1 ef ]
+"321
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 321: uint8_t rtc_adafruit_getAMPM(void) { return 0; }
+[v _rtc_adafruit_getAMPM `(uc ~T0 @X0 1 ef ]
 {
-[e :U _rtc_ds_1337_getAMPM ]
+[e :U _rtc_adafruit_getAMPM ]
 [f ]
 [e ) -> -> 0 `i `uc ]
 [e $UE 849  ]
 [e :UE 849 ]
 }
-"310
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 310: void rtc_ds_1337_setAMPM(void)
-[v _rtc_ds_1337_setAMPM `(v ~T0 @X0 1 ef ]
-"311
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 311: {
+"322
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 322: void rtc_adafruit_setAMPM(void)
+[v _rtc_adafruit_setAMPM `(v ~T0 @X0 1 ef ]
+"323
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 323: {
 {
-[e :U _rtc_ds_1337_setAMPM ]
+[e :U _rtc_adafruit_setAMPM ]
 [f ]
-"318
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 318: }
+"330
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 330: }
 [e :UE 850 ]
 }
-"324
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 324: uint8_t rtc_ds_1337_getDay(void)
-[v _rtc_ds_1337_getDay `(uc ~T0 @X0 1 ef ]
-"325
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 325: {
+"336
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 336: uint8_t rtc_adafruit_getDay(void)
+[v _rtc_adafruit_getDay `(uc ~T0 @X0 1 ef ]
+"337
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 337: {
 {
-[e :U _rtc_ds_1337_getDay ]
+[e :U _rtc_adafruit_getDay ]
 [f ]
-"326
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 326:     uint8_t data[1];
+"338
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 338:     uint8_t data[1];
 [v _data `uc ~T0 @X0 -> -> 1 `i `ux a ]
-"328
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 328:     i2c_write_serial(0b1101000, 0x03, 1);
-[e ( _i2c_write_serial (3 , , -> -> 104 `i `uc -> -> 3 `i `*uc -> -> 1 `i `uc ]
-"329
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 329:     i2c_read_serial(0b1101000, data , 1);
+"340
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 340:     i2c_write_serial(0b1101000, (char *) 0x03, 1);
+[e ( _i2c_write_serial (3 , , -> -> 104 `i `uc -> -> -> 3 `i `*uc `*uc -> -> 1 `i `uc ]
+"341
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 341:     i2c_read_serial(0b1101000, data , 1);
 [e ( _i2c_read_serial (3 , , -> -> 104 `i `uc &U _data -> -> 1 `i `uc ]
-"330
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 330:     time.day = (uint8_t) convertBCD2Bytes(*data);
+"342
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 342:     time.day = (uint8_t) convertBCD2Bytes(*data);
 [e = . _time 3 ( _convertBCD2Bytes (1 *U &U _data ]
-"332
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 332:     return time.day;
+"344
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 344:     return time.day;
 [e ) . _time 3 ]
 [e $UE 851  ]
-"333
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 333: }
+"345
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 345: }
 [e :UE 851 ]
 }
-"335
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 335: void rtc_ds_1337_setDay(void)
-[v _rtc_ds_1337_setDay `(v ~T0 @X0 1 ef ]
-"336
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 336: {
+"347
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 347: void rtc_adafruit_setDay(void)
+[v _rtc_adafruit_setDay `(v ~T0 @X0 1 ef ]
+"348
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 348: {
 {
-[e :U _rtc_ds_1337_setDay ]
+[e :U _rtc_adafruit_setDay ]
 [f ]
-[v F6313 `uc ~T0 @X0 -> 2 `i s ]
-[i F6313
+[v F6373 `uc ~T0 @X0 -> 2 `i s ]
+[i F6373
 :U ..
-"337
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 337:     char rtcRegister[] = { 0x03, convertByte2BCD(time.day) };
+"349
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 349:     char rtcRegister[] = { (char) 0x03, (char) convertByte2BCD(time.day) };
 -> -> 0 `i `uc
 -> -> 0 `i `uc
 ..
 ]
 [v _rtcRegister `uc ~T0 @X0 -> 2 `i a ]
-[e = _rtcRegister F6313 ]
+[e = _rtcRegister F6373 ]
 [e ; = *U + &U _rtcRegister * -> -> -> 0 `i `ui `ux -> -> # *U &U _rtcRegister `ui `ux -> -> 3 `i `uc = *U + &U _rtcRegister * -> -> -> 1 `i `ui `ux -> -> # *U &U _rtcRegister `ui `ux -> ( _convertByte2BCD (1 . _time 3 `uc ]
-"338
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 338:     i2c_write_serial(0b1101000, rtcRegister, 2);
+"350
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 350:     i2c_write_serial(0b1101000, rtcRegister, 2);
 [e ( _i2c_write_serial (3 , , -> -> 104 `i `uc -> &U _rtcRegister `*uc -> -> 2 `i `uc ]
-"339
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 339: }
+"351
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 351: }
 [e :UE 852 ]
 }
-"345
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 345: uint8_t rtc_ds_1337_getMonth(void)
-[v _rtc_ds_1337_getMonth `(uc ~T0 @X0 1 ef ]
-"346
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 346: {
+"357
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 357: uint8_t rtc_adafruit_getMonth(void)
+[v _rtc_adafruit_getMonth `(uc ~T0 @X0 1 ef ]
+"358
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 358: {
 {
-[e :U _rtc_ds_1337_getMonth ]
+[e :U _rtc_adafruit_getMonth ]
 [f ]
-"347
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 347:     return 0;
+"359
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 359:     return 0;
 [e ) -> -> 0 `i `uc ]
 [e $UE 853  ]
-"348
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 348: }
+"360
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 360: }
 [e :UE 853 ]
 }
-"351
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 351: void rtc_ds_1337_setMonth(void)
-[v _rtc_ds_1337_setMonth `(v ~T0 @X0 1 ef ]
-"352
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 352: {
+"361
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 361: void rtc_adafruit_setMonth(void)
+[v _rtc_adafruit_setMonth `(v ~T0 @X0 1 ef ]
+"362
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 362: {
 {
-[e :U _rtc_ds_1337_setMonth ]
+[e :U _rtc_adafruit_setMonth ]
 [f ]
-"353
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 353:     uint8_t data = convertByte2BCD(time.month);
+"363
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 363:     char data = convertByte2BCD(time.month);
 [v _data `uc ~T0 @X0 1 a ]
-[e = _data ( _convertByte2BCD (1 . _time 5 ]
-[v F6318 `uc ~T0 @X0 -> 2 `i s ]
-[i F6318
+[e = _data -> ( _convertByte2BCD (1 . _time 5 `uc ]
+[v F6378 `uc ~T0 @X0 -> 2 `i s ]
+[i F6378
 :U ..
-"354
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 354:     uint8_t rtcRegister[] = { (uint8_t) 0x05, data };
+"364
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 364:     char rtcRegister[] = { (char) 0x05, data };
 -> -> 0 `i `uc
 -> -> 0 `i `uc
 ..
 ]
 [v _rtcRegister `uc ~T0 @X0 -> 2 `i a ]
-[e = _rtcRegister F6318 ]
+[e = _rtcRegister F6378 ]
 [e ; = *U + &U _rtcRegister * -> -> -> 0 `i `ui `ux -> -> # *U &U _rtcRegister `ui `ux -> -> 5 `i `uc = *U + &U _rtcRegister * -> -> -> 1 `i `ui `ux -> -> # *U &U _rtcRegister `ui `ux _data ]
-"355
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 355:     i2c_write_serial(0b1101000, rtcRegister, 2);
-[e ( _i2c_write_serial (3 , , -> -> 104 `i `uc &U _rtcRegister -> -> 2 `i `uc ]
-"356
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 356: }
+"365
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 365:     i2c_write_serial(0b1101000, rtcRegister, 2);
+[e ( _i2c_write_serial (3 , , -> -> 104 `i `uc -> &U _rtcRegister `*uc -> -> 2 `i `uc ]
+"366
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 366: }
 [e :UE 854 ]
 }
-"358
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 358: uint8_t rtc_ds_1337_getYear(void) { return 0; }
-[v _rtc_ds_1337_getYear `(uc ~T0 @X0 1 ef ]
+"368
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 368: uint8_t rtc_adafruit_getYear(void) { return 0; }
+[v _rtc_adafruit_getYear `(uc ~T0 @X0 1 ef ]
 {
-[e :U _rtc_ds_1337_getYear ]
+[e :U _rtc_adafruit_getYear ]
 [f ]
 [e ) -> -> 0 `i `uc ]
 [e $UE 855  ]
 [e :UE 855 ]
 }
-"359
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 359: void rtc_ds_1337_setYear(void)
-[v _rtc_ds_1337_setYear `(v ~T0 @X0 1 ef ]
-"360
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 360: {
+"369
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 369: void rtc_adafruit_setYear(void)
+[v _rtc_adafruit_setYear `(v ~T0 @X0 1 ef ]
+"370
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 370: {
 {
-[e :U _rtc_ds_1337_setYear ]
+[e :U _rtc_adafruit_setYear ]
 [f ]
-"361
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 361:     char data = convertByte2BCD(time.year);
+"371
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 371:     char data = convertByte2BCD(time.year);
 [v _data `uc ~T0 @X0 1 a ]
 [e = _data -> ( _convertByte2BCD (1 . _time 6 `uc ]
-[v F6323 `uc ~T0 @X0 -> 2 `i s ]
-[i F6323
+[v F6383 `uc ~T0 @X0 -> 2 `i s ]
+[i F6383
 :U ..
-"362
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 362:     char rtcRegister[] = { 0x06, data };
+"372
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 372:     char rtcRegister[] = { 0x06, data };
 -> -> 0 `i `uc
 -> -> 0 `i `uc
 ..
 ]
 [v _rtcRegister `uc ~T0 @X0 -> 2 `i a ]
-[e = _rtcRegister F6323 ]
+[e = _rtcRegister F6383 ]
 [e ; = *U + &U _rtcRegister * -> -> -> 0 `i `ui `ux -> -> # *U &U _rtcRegister `ui `ux -> -> 6 `i `uc = *U + &U _rtcRegister * -> -> -> 1 `i `ui `ux -> -> # *U &U _rtcRegister `ui `ux _data ]
-"363
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 363:     i2c_write_serial(0b1101000, rtcRegister, 2);
+"373
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 373:     i2c_write_serial(0b1101000, rtcRegister, 2);
 [e ( _i2c_write_serial (3 , , -> -> 104 `i `uc -> &U _rtcRegister `*uc -> -> 2 `i `uc ]
-"364
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 364: }
+"374
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 374: }
 [e :UE 856 ]
 }
-"417
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 417: void rtc_ds_1337_setAlarm1Type(_Bool DYnDT, uint8_t alarm1Mask)
-[v _rtc_ds_1337_setAlarm1Type `(v ~T0 @X0 1 ef2`a`uc ]
-"418
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 418: {
+"427
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 427: void rtc_adafruit_setAlarm1Type(_Bool DYnDT, uint8_t alarm1Mask)
+[v _rtc_adafruit_setAlarm1Type `(v ~T0 @X0 1 ef2`a`uc ]
+"428
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 428: {
 {
-[e :U _rtc_ds_1337_setAlarm1Type ]
-"417
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 417: void rtc_ds_1337_setAlarm1Type(_Bool DYnDT, uint8_t alarm1Mask)
+[e :U _rtc_adafruit_setAlarm1Type ]
+"427
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 427: void rtc_adafruit_setAlarm1Type(_Bool DYnDT, uint8_t alarm1Mask)
 [v _DYnDT `a ~T0 @X0 1 r1 ]
 [v _alarm1Mask `uc ~T0 @X0 1 r2 ]
-"418
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 418: {
-[f ]
-"419
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 419:     time.A1M4 = alarm1Mask & 0b00001000;
-[e = . _time 13 -> & -> _alarm1Mask `i -> 8 `i `a ]
-"420
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 420:     time.A1M3 = alarm1Mask & 0b00000100;
-[e = . _time 12 -> & -> _alarm1Mask `i -> 4 `i `a ]
-"421
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 421:     time.A1M2 = alarm1Mask & 0b00000010;
-[e = . _time 11 -> & -> _alarm1Mask `i -> 2 `i `a ]
-"422
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 422:     time.A1M1 = alarm1Mask & 0b00100001;
-[e = . _time 10 -> & -> _alarm1Mask `i -> 33 `i `a ]
-"424
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 424:     rtc_ds_1337_setAlarm1A1M4();
-[e ( _rtc_ds_1337_setAlarm1A1M4 ..  ]
-"425
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 425:     rtc_ds_1337_setAlarm1A1M2();
-[e ( _rtc_ds_1337_setAlarm1A1M2 ..  ]
-"426
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 426:     rtc_ds_1337_setAlarm1A1M3();
-[e ( _rtc_ds_1337_setAlarm1A1M3 ..  ]
-"427
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 427:     rtc_ds_1337_setAlarm1A1M1();
-[e ( _rtc_ds_1337_setAlarm1A1M1 ..  ]
 "428
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 428: }
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 428: {
+[f ]
+"429
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 429:     time.A1M4 = alarm1Mask & 0b00001000;
+[e = . _time 13 -> & -> _alarm1Mask `i -> 8 `i `a ]
+"430
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 430:     time.A1M3 = alarm1Mask & 0b00000100;
+[e = . _time 12 -> & -> _alarm1Mask `i -> 4 `i `a ]
+"431
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 431:     time.A1M2 = alarm1Mask & 0b00000010;
+[e = . _time 11 -> & -> _alarm1Mask `i -> 2 `i `a ]
+"432
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 432:     time.A1M1 = alarm1Mask & 0b00100001;
+[e = . _time 10 -> & -> _alarm1Mask `i -> 33 `i `a ]
+"434
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 434:     rtc_adafruit_setAlarm1A1M4();
+[e ( _rtc_adafruit_setAlarm1A1M4 ..  ]
+"435
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 435:     rtc_adafruit_setAlarm1A1M2();
+[e ( _rtc_adafruit_setAlarm1A1M2 ..  ]
+"436
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 436:     rtc_adafruit_setAlarm1A1M3();
+[e ( _rtc_adafruit_setAlarm1A1M3 ..  ]
+"437
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 437:     rtc_adafruit_setAlarm1A1M1();
+[e ( _rtc_adafruit_setAlarm1A1M1 ..  ]
+"438
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 438: }
 [e :UE 857 ]
 }
-"430
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 430: uint8_t rtc_ds_1337_getAlarm1Seconds(void) { return 0; }
-[v _rtc_ds_1337_getAlarm1Seconds `(uc ~T0 @X0 1 ef ]
+"440
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 440: uint8_t rtc_adafruit_getAlarm1Seconds(void) { return 0; }
+[v _rtc_adafruit_getAlarm1Seconds `(uc ~T0 @X0 1 ef ]
 {
-[e :U _rtc_ds_1337_getAlarm1Seconds ]
+[e :U _rtc_adafruit_getAlarm1Seconds ]
 [f ]
 [e ) -> -> 0 `i `uc ]
 [e $UE 858  ]
 [e :UE 858 ]
 }
-"431
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 431: void rtc_ds_1337_setAlarm1Seconds(void)
-[v _rtc_ds_1337_setAlarm1Seconds `(v ~T0 @X0 1 ef ]
-"432
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 432: {
+"441
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 441: void rtc_adafruit_setAlarm1Seconds(void)
+[v _rtc_adafruit_setAlarm1Seconds `(v ~T0 @X0 1 ef ]
+"442
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 442: {
 {
-[e :U _rtc_ds_1337_setAlarm1Seconds ]
+[e :U _rtc_adafruit_setAlarm1Seconds ]
 [f ]
-"433
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 433: }
+"443
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 443: }
 [e :UE 859 ]
 }
-"435
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 435: uint8_t rtc_ds_1337_getAlarm1Minutes(void) { return 0; }
-[v _rtc_ds_1337_getAlarm1Minutes `(uc ~T0 @X0 1 ef ]
+"445
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 445: uint8_t rtc_adafruit_getAlarm1Minutes(void) { return 0; }
+[v _rtc_adafruit_getAlarm1Minutes `(uc ~T0 @X0 1 ef ]
 {
-[e :U _rtc_ds_1337_getAlarm1Minutes ]
+[e :U _rtc_adafruit_getAlarm1Minutes ]
 [f ]
 [e ) -> -> 0 `i `uc ]
 [e $UE 860  ]
 [e :UE 860 ]
 }
-"442
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 442: void rtc_ds_1337_setAlarm1Minutes(void)
-[v _rtc_ds_1337_setAlarm1Minutes `(v ~T0 @X0 1 ef ]
-"443
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 443: {
+"452
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 452: void rtc_adafruit_setAlarm1Minutes(void)
+[v _rtc_adafruit_setAlarm1Minutes `(v ~T0 @X0 1 ef ]
+"453
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 453: {
 {
-[e :U _rtc_ds_1337_setAlarm1Minutes ]
+[e :U _rtc_adafruit_setAlarm1Minutes ]
 [f ]
-"444
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 444:     uint8_t minsReg = time.alarm1Minutes;
+"454
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 454:     uint8_t minsReg = time.alarm1Minutes;
 [v _minsReg `uc ~T0 @X0 1 a ]
 [e = _minsReg . _time 15 ]
-"445
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 445:     minsReg += time.A1M2<<7;
+"455
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 455:     minsReg += time.A1M2<<7;
 [e =+ _minsReg -> << -> . _time 11 `i -> 7 `i `uc ]
-[v F6333 `uc ~T0 @X0 -> 2 `i s ]
-[i F6333
+[v F6393 `uc ~T0 @X0 -> 2 `i s ]
+[i F6393
 :U ..
-"447
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 447:     uint8_t transmit[] = { 0x08, minsReg };
+"457
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 457:     uint8_t transmit[] = { 0x08, minsReg };
 -> -> 0 `i `uc
 -> -> 0 `i `uc
 ..
 ]
 [v _transmit `uc ~T0 @X0 -> 2 `i a ]
-[e = _transmit F6333 ]
+[e = _transmit F6393 ]
 [e ; = *U + &U _transmit * -> -> -> 0 `i `ui `ux -> -> # *U &U _transmit `ui `ux -> -> 8 `i `uc = *U + &U _transmit * -> -> -> 1 `i `ui `ux -> -> # *U &U _transmit `ui `ux _minsReg ]
-"448
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 448:     i2c_write_serial(0b1101000, transmit, 2 );
+"458
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 458:     i2c_write_serial(0b1101000, transmit, 2 );
 [e ( _i2c_write_serial (3 , , -> -> 104 `i `uc &U _transmit -> -> 2 `i `uc ]
-"449
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 449: }
+"459
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 459: }
 [e :UE 861 ]
 }
-"451
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 451: uint8_t rtc_ds_1337_getAlarm1Hours(void) { return 0; }
-[v _rtc_ds_1337_getAlarm1Hours `(uc ~T0 @X0 1 ef ]
+"461
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 461: uint8_t rtc_adafruit_getAlarm1Hours(void) { return 0; }
+[v _rtc_adafruit_getAlarm1Hours `(uc ~T0 @X0 1 ef ]
 {
-[e :U _rtc_ds_1337_getAlarm1Hours ]
+[e :U _rtc_adafruit_getAlarm1Hours ]
 [f ]
 [e ) -> -> 0 `i `uc ]
 [e $UE 862  ]
 [e :UE 862 ]
 }
-"459
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 459: void rtc_ds_1337_setAlarm1Hours(void)
-[v _rtc_ds_1337_setAlarm1Hours `(v ~T0 @X0 1 ef ]
-"460
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 460: {
+"469
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 469: void rtc_adafruit_setAlarm1Hours(void)
+[v _rtc_adafruit_setAlarm1Hours `(v ~T0 @X0 1 ef ]
+"470
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 470: {
 {
-[e :U _rtc_ds_1337_setAlarm1Hours ]
+[e :U _rtc_adafruit_setAlarm1Hours ]
 [f ]
-"461
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 461:     uint8_t hoursReg;
+"471
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 471:     uint8_t hoursReg;
 [v _hoursReg `uc ~T0 @X0 1 a ]
-"463
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 463:     hoursReg = convertByte2BCD(time.alarm1Hour);
+"473
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 473:     hoursReg = convertByte2BCD(time.alarm1Hour);
 [e = _hoursReg ( _convertByte2BCD (1 . _time 16 ]
-"464
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 464:     hoursReg += time.A1M2<<7;
+"474
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 474:     hoursReg += time.A1M2<<7;
 [e =+ _hoursReg -> << -> . _time 11 `i -> 7 `i `uc ]
-"465
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 465:     hoursReg += time.alarm112n24<<6;
+"475
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 475:     hoursReg += time.alarm112n24<<6;
 [e =+ _hoursReg -> << -> . _time 19 `i -> 6 `i `uc ]
-"466
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 466:     hoursReg += (time.alarm112n24)?time.alarm2PMnAM<<5:0;
+"476
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 476:     hoursReg += (time.alarm112n24)?time.alarm2PMnAM<<5:0;
 [e =+ _hoursReg -> ? != -> . _time 19 `i -> 0 `i : << -> . _time 30 `i -> 5 `i -> 0 `i `uc ]
-[v F6338 `uc ~T0 @X0 -> 2 `i s ]
-[i F6338
+[v F6398 `uc ~T0 @X0 -> 2 `i s ]
+[i F6398
 :U ..
-"468
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 468:     uint8_t transmit[] = { 0x09, hoursReg };
+"478
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 478:     uint8_t transmit[] = { 0x09, hoursReg };
 -> -> 0 `i `uc
 -> -> 0 `i `uc
 ..
 ]
 [v _transmit `uc ~T0 @X0 -> 2 `i a ]
-[e = _transmit F6338 ]
+[e = _transmit F6398 ]
 [e ; = *U + &U _transmit * -> -> -> 0 `i `ui `ux -> -> # *U &U _transmit `ui `ux -> -> 9 `i `uc = *U + &U _transmit * -> -> -> 1 `i `ui `ux -> -> # *U &U _transmit `ui `ux _hoursReg ]
-"469
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 469:     i2c_write_serial(0b1101000, transmit, 2 );
+"479
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 479:     i2c_write_serial(0b1101000, transmit, 2 );
 [e ( _i2c_write_serial (3 , , -> -> 104 `i `uc &U _transmit -> -> 2 `i `uc ]
-"470
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 470: }
+"480
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 480: }
 [e :UE 863 ]
 }
-"472
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 472: uint8_t rtc_ds_1337_getAlarm1Date(void)
-[v _rtc_ds_1337_getAlarm1Date `(uc ~T0 @X0 1 ef ]
-"473
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 473: {
+"482
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 482: uint8_t rtc_adafruit_getAlarm1Date(void)
+[v _rtc_adafruit_getAlarm1Date `(uc ~T0 @X0 1 ef ]
+"483
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 483: {
 {
-[e :U _rtc_ds_1337_getAlarm1Date ]
+[e :U _rtc_adafruit_getAlarm1Date ]
 [f ]
-"474
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 474:     return 0;
+"484
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 484:     return 0;
 [e ) -> -> 0 `i `uc ]
 [e $UE 864  ]
-"475
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 475: }
+"485
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 485: }
 [e :UE 864 ]
 }
-"477
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 477: void rtc_ds_1337_setAlarm1Date(void) {}
-[v _rtc_ds_1337_setAlarm1Date `(v ~T0 @X0 1 ef ]
+"487
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 487: void rtc_adafruit_setAlarm1Date(void) {}
+[v _rtc_adafruit_setAlarm1Date `(v ~T0 @X0 1 ef ]
 {
-[e :U _rtc_ds_1337_setAlarm1Date ]
+[e :U _rtc_adafruit_setAlarm1Date ]
 [f ]
 [e :UE 865 ]
 }
-"479
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 479: uint8_t rtc_ds_1337_getAlarm1AMPM(void) { return 0; }
-[v _rtc_ds_1337_getAlarm1AMPM `(uc ~T0 @X0 1 ef ]
+"489
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 489: uint8_t rtc_adafruit_getAlarm1AMPM(void) { return 0; }
+[v _rtc_adafruit_getAlarm1AMPM `(uc ~T0 @X0 1 ef ]
 {
-[e :U _rtc_ds_1337_getAlarm1AMPM ]
+[e :U _rtc_adafruit_getAlarm1AMPM ]
 [f ]
 [e ) -> -> 0 `i `uc ]
 [e $UE 866  ]
 [e :UE 866 ]
 }
-"480
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 480: void rtc_ds_1337_setAlarm1AMPM(void) {}
-[v _rtc_ds_1337_setAlarm1AMPM `(v ~T0 @X0 1 ef ]
+"490
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 490: void rtc_adafruit_setAlarm1AMPM(void) {}
+[v _rtc_adafruit_setAlarm1AMPM `(v ~T0 @X0 1 ef ]
 {
-[e :U _rtc_ds_1337_setAlarm1AMPM ]
+[e :U _rtc_adafruit_setAlarm1AMPM ]
 [f ]
 [e :UE 867 ]
 }
-"483
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 483: void rtc_ds_1337_setAlarm1A1M4(void)
-[v _rtc_ds_1337_setAlarm1A1M4 `(v ~T0 @X0 1 ef ]
-"484
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 484: {
+"493
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 493: void rtc_adafruit_setAlarm1A1M4(void)
+[v _rtc_adafruit_setAlarm1A1M4 `(v ~T0 @X0 1 ef ]
+"494
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 494: {
 {
-[e :U _rtc_ds_1337_setAlarm1A1M4 ]
+[e :U _rtc_adafruit_setAlarm1A1M4 ]
 [f ]
-"485
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 485:     uint8_t tmp = rtc_ds_1337_getAlarm1Date();
+"495
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 495:     uint8_t tmp = rtc_adafruit_getAlarm1Date();
 [v _tmp `uc ~T0 @X0 1 a ]
-[e = _tmp ( _rtc_ds_1337_getAlarm1Date ..  ]
-"486
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 486: }
+[e = _tmp ( _rtc_adafruit_getAlarm1Date ..  ]
+"496
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 496: }
 [e :UE 868 ]
 }
-"489
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 489: void rtc_ds_1337_setAlarm1A1M3(void)
-[v _rtc_ds_1337_setAlarm1A1M3 `(v ~T0 @X0 1 ef ]
-"490
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 490: {
+"499
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 499: void rtc_adafruit_setAlarm1A1M3(void)
+[v _rtc_adafruit_setAlarm1A1M3 `(v ~T0 @X0 1 ef ]
+"500
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 500: {
 {
-[e :U _rtc_ds_1337_setAlarm1A1M3 ]
+[e :U _rtc_adafruit_setAlarm1A1M3 ]
 [f ]
-"491
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 491:     uint8_t tmp = rtc_ds_1337_getAlarm1Hours();
+"501
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 501:     uint8_t tmp = rtc_adafruit_getAlarm1Hours();
 [v _tmp `uc ~T0 @X0 1 a ]
-[e = _tmp ( _rtc_ds_1337_getAlarm1Hours ..  ]
-"492
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 492: }
+[e = _tmp ( _rtc_adafruit_getAlarm1Hours ..  ]
+"502
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 502: }
 [e :UE 869 ]
 }
-"495
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 495: void rtc_ds_1337_setAlarm1A1M2(void)
-[v _rtc_ds_1337_setAlarm1A1M2 `(v ~T0 @X0 1 ef ]
-"496
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 496: {
+"505
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 505: void rtc_adafruit_setAlarm1A1M2(void)
+[v _rtc_adafruit_setAlarm1A1M2 `(v ~T0 @X0 1 ef ]
+"506
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 506: {
 {
-[e :U _rtc_ds_1337_setAlarm1A1M2 ]
+[e :U _rtc_adafruit_setAlarm1A1M2 ]
 [f ]
-"497
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 497:     uint8_t minsReg = rtc_ds_1337_getAlarm1Minutes();
+"507
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 507:     uint8_t minsReg = rtc_adafruit_getAlarm1Minutes();
 [v _minsReg `uc ~T0 @X0 1 a ]
-[e = _minsReg ( _rtc_ds_1337_getAlarm1Minutes ..  ]
-"498
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 498:     time.alarm1Minutes = minsReg & ~0b10000000;
+[e = _minsReg ( _rtc_adafruit_getAlarm1Minutes ..  ]
+"508
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 508:     time.alarm1Minutes = minsReg & ~0b10000000;
 [e = . _time 15 -> & -> _minsReg `i ~ -> 128 `i `uc ]
-"500
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 500:     rtc_ds_1337_setAlarm1Minutes();
-[e ( _rtc_ds_1337_setAlarm1Minutes ..  ]
-"501
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 501: }
+"510
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 510:     rtc_adafruit_setAlarm1Minutes();
+[e ( _rtc_adafruit_setAlarm1Minutes ..  ]
+"511
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 511: }
 [e :UE 870 ]
 }
-"504
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 504: void rtc_ds_1337_setAlarm1A1M1(void)
-[v _rtc_ds_1337_setAlarm1A1M1 `(v ~T0 @X0 1 ef ]
-"505
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 505: {
+"514
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 514: void rtc_adafruit_setAlarm1A1M1(void)
+[v _rtc_adafruit_setAlarm1A1M1 `(v ~T0 @X0 1 ef ]
+"515
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 515: {
 {
-[e :U _rtc_ds_1337_setAlarm1A1M1 ]
+[e :U _rtc_adafruit_setAlarm1A1M1 ]
 [f ]
-"506
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 506:     uint8_t secsReg = rtc_ds_1337_getAlarm1Seconds();
+"516
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 516:     uint8_t secsReg = rtc_adafruit_getAlarm1Seconds();
 [v _secsReg `uc ~T0 @X0 1 a ]
-[e = _secsReg ( _rtc_ds_1337_getAlarm1Seconds ..  ]
-"507
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 507:     time.alarm1Seconds = secsReg & ~0b10000000;
+[e = _secsReg ( _rtc_adafruit_getAlarm1Seconds ..  ]
+"517
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 517:     time.alarm1Seconds = secsReg & ~0b10000000;
 [e = . _time 14 -> & -> _secsReg `i ~ -> 128 `i `uc ]
-"508
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 508:     secsReg = time.alarm1Seconds + (uint8_t)( time.A1M1<<7 );
-[e = _secsReg -> + -> . _time 14 `i -> -> << -> . _time 10 `i -> 7 `i `uc `i `uc ]
-"509
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 509:     rtc_ds_1337_setAlarm1Seconds();
-[e ( _rtc_ds_1337_setAlarm1Seconds ..  ]
-"510
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 510: }
+"518
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 518:     secsReg = (time.alarm1Seconds + ( (uint8_t)time.A1M1<<7 ));
+[e = _secsReg -> + -> . _time 14 `i << -> -> . _time 10 `uc `i -> 7 `i `uc ]
+"519
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 519:     rtc_adafruit_setAlarm1Seconds();
+[e ( _rtc_adafruit_setAlarm1Seconds ..  ]
+"520
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 520: }
 [e :UE 871 ]
 }
-"537
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 537: void rtc_ds_1337_setAlarm2Type(uint8_t alarm2Mask)
-[v _rtc_ds_1337_setAlarm2Type `(v ~T0 @X0 1 ef1`uc ]
-"538
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 538: {
-{
-[e :U _rtc_ds_1337_setAlarm2Type ]
-"537
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 537: void rtc_ds_1337_setAlarm2Type(uint8_t alarm2Mask)
-[v _alarm2Mask `uc ~T0 @X0 1 r1 ]
-"538
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 538: {
-[f ]
-"539
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 539:     time.A2M4 = alarm2Mask & 0b00000100;
-[e = . _time 24 -> & -> _alarm2Mask `i -> 4 `i `a ]
-"540
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 540:     rtc_ds_1337_setAlarm2A2M4();
-[e ( _rtc_ds_1337_setAlarm2A2M4 ..  ]
-"542
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 542:     time.A2M3 = alarm2Mask & 0b00000010;
-[e = . _time 23 -> & -> _alarm2Mask `i -> 2 `i `a ]
-"543
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 543:     rtc_ds_1337_setAlarm2A2M3();
-[e ( _rtc_ds_1337_setAlarm2A2M3 ..  ]
-"545
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 545:     time.A2M2 = alarm2Mask & 0b00100001;
-[e = . _time 22 -> & -> _alarm2Mask `i -> 33 `i `a ]
-"546
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 546:     rtc_ds_1337_setAlarm2A2M2();
-[e ( _rtc_ds_1337_setAlarm2A2M2 ..  ]
 "547
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 547: }
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 547: void rtc_adafruit_setAlarm2Type(uint8_t alarm2Mask)
+[v _rtc_adafruit_setAlarm2Type `(v ~T0 @X0 1 ef1`uc ]
+"548
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 548: {
+{
+[e :U _rtc_adafruit_setAlarm2Type ]
+"547
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 547: void rtc_adafruit_setAlarm2Type(uint8_t alarm2Mask)
+[v _alarm2Mask `uc ~T0 @X0 1 r1 ]
+"548
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 548: {
+[f ]
+"549
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 549:     time.A2M4 = alarm2Mask & 0b00000100;
+[e = . _time 24 -> & -> _alarm2Mask `i -> 4 `i `a ]
+"550
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 550:     rtc_adafruit_setAlarm2A2M4();
+[e ( _rtc_adafruit_setAlarm2A2M4 ..  ]
+"552
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 552:     time.A2M3 = alarm2Mask & 0b00000010;
+[e = . _time 23 -> & -> _alarm2Mask `i -> 2 `i `a ]
+"553
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 553:     rtc_adafruit_setAlarm2A2M3();
+[e ( _rtc_adafruit_setAlarm2A2M3 ..  ]
+"555
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 555:     time.A2M2 = alarm2Mask & 0b00100001;
+[e = . _time 22 -> & -> _alarm2Mask `i -> 33 `i `a ]
+"556
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 556:     rtc_adafruit_setAlarm2A2M2();
+[e ( _rtc_adafruit_setAlarm2A2M2 ..  ]
+"557
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 557: }
 [e :UE 872 ]
 }
-"549
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 549: uint8_t rtc_ds_1337_getAlarm2Seconds(void) { return 0; }
-[v _rtc_ds_1337_getAlarm2Seconds `(uc ~T0 @X0 1 ef ]
+"559
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 559: uint8_t rtc_adafruit_getAlarm2Seconds(void) { return 0; }
+[v _rtc_adafruit_getAlarm2Seconds `(uc ~T0 @X0 1 ef ]
 {
-[e :U _rtc_ds_1337_getAlarm2Seconds ]
+[e :U _rtc_adafruit_getAlarm2Seconds ]
 [f ]
 [e ) -> -> 0 `i `uc ]
 [e $UE 873  ]
 [e :UE 873 ]
 }
-"550
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 550: void rtc_ds_1337_setAlarm2Seconds(void) {}
-[v _rtc_ds_1337_setAlarm2Seconds `(v ~T0 @X0 1 ef ]
+"560
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 560: void rtc_adafruit_setAlarm2Seconds(void) {}
+[v _rtc_adafruit_setAlarm2Seconds `(v ~T0 @X0 1 ef ]
 {
-[e :U _rtc_ds_1337_setAlarm2Seconds ]
+[e :U _rtc_adafruit_setAlarm2Seconds ]
 [f ]
 [e :UE 874 ]
 }
-"552
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 552: uint8_t rtc_ds_1337_getAlarm2Minutes(void) { return 0; }
-[v _rtc_ds_1337_getAlarm2Minutes `(uc ~T0 @X0 1 ef ]
+"562
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 562: uint8_t rtc_adafruit_getAlarm2Minutes(void) { return 0; }
+[v _rtc_adafruit_getAlarm2Minutes `(uc ~T0 @X0 1 ef ]
 {
-[e :U _rtc_ds_1337_getAlarm2Minutes ]
+[e :U _rtc_adafruit_getAlarm2Minutes ]
 [f ]
 [e ) -> -> 0 `i `uc ]
 [e $UE 875  ]
 [e :UE 875 ]
 }
-"553
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 553: void rtc_ds_1337_setAlarm2Minutes(void) {}
-[v _rtc_ds_1337_setAlarm2Minutes `(v ~T0 @X0 1 ef ]
+"563
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 563: void rtc_adafruit_setAlarm2Minutes(void) {}
+[v _rtc_adafruit_setAlarm2Minutes `(v ~T0 @X0 1 ef ]
 {
-[e :U _rtc_ds_1337_setAlarm2Minutes ]
+[e :U _rtc_adafruit_setAlarm2Minutes ]
 [f ]
 [e :UE 876 ]
 }
-"555
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 555: uint8_t rtc_ds_1337_getAlarm2Hours(void) { return 0; }
-[v _rtc_ds_1337_getAlarm2Hours `(uc ~T0 @X0 1 ef ]
+"565
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 565: uint8_t rtc_adafruit_getAlarm2Hours(void) { return 0; }
+[v _rtc_adafruit_getAlarm2Hours `(uc ~T0 @X0 1 ef ]
 {
-[e :U _rtc_ds_1337_getAlarm2Hours ]
+[e :U _rtc_adafruit_getAlarm2Hours ]
 [f ]
 [e ) -> -> 0 `i `uc ]
 [e $UE 877  ]
 [e :UE 877 ]
 }
-"556
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 556: void rtc_ds_1337_setAlarm2Hours(void) {}
-[v _rtc_ds_1337_setAlarm2Hours `(v ~T0 @X0 1 ef ]
+"566
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 566: void rtc_adafruit_setAlarm2Hours(void) {}
+[v _rtc_adafruit_setAlarm2Hours `(v ~T0 @X0 1 ef ]
 {
-[e :U _rtc_ds_1337_setAlarm2Hours ]
+[e :U _rtc_adafruit_setAlarm2Hours ]
 [f ]
 [e :UE 878 ]
 }
-"558
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 558: uint8_t rtc_ds_1337_getAlarm2Date(void) { return 0; }
-[v _rtc_ds_1337_getAlarm2Date `(uc ~T0 @X0 1 ef ]
+"568
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 568: uint8_t rtc_adafruit_getAlarm2Date(void) { return 0; }
+[v _rtc_adafruit_getAlarm2Date `(uc ~T0 @X0 1 ef ]
 {
-[e :U _rtc_ds_1337_getAlarm2Date ]
+[e :U _rtc_adafruit_getAlarm2Date ]
 [f ]
 [e ) -> -> 0 `i `uc ]
 [e $UE 879  ]
 [e :UE 879 ]
 }
-"560
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 560: void rtc_ds_1337_setAlarm2Date(void) {}
-[v _rtc_ds_1337_setAlarm2Date `(v ~T0 @X0 1 ef ]
+"570
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 570: void rtc_adafruit_setAlarm2Date(void) {}
+[v _rtc_adafruit_setAlarm2Date `(v ~T0 @X0 1 ef ]
 {
-[e :U _rtc_ds_1337_setAlarm2Date ]
+[e :U _rtc_adafruit_setAlarm2Date ]
 [f ]
 [e :UE 880 ]
 }
-"562
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 562: _Bool rtc_ds_1337_getAlarm2AMPM(void) { return 0; }
-[v _rtc_ds_1337_getAlarm2AMPM `(a ~T0 @X0 1 ef ]
+"572
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 572: _Bool rtc_adafruit_getAlarm2AMPM(void) { return 0; }
+[v _rtc_adafruit_getAlarm2AMPM `(a ~T0 @X0 1 ef ]
 {
-[e :U _rtc_ds_1337_getAlarm2AMPM ]
+[e :U _rtc_adafruit_getAlarm2AMPM ]
 [f ]
 [e ) -> -> 0 `i `a ]
 [e $UE 881  ]
 [e :UE 881 ]
 }
-"563
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 563: void rtc_ds_1337_setAlarm2AMPM(void) {}
-[v _rtc_ds_1337_setAlarm2AMPM `(v ~T0 @X0 1 ef ]
+"573
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 573: void rtc_adafruit_setAlarm2AMPM(void) {}
+[v _rtc_adafruit_setAlarm2AMPM `(v ~T0 @X0 1 ef ]
 {
-[e :U _rtc_ds_1337_setAlarm2AMPM ]
+[e :U _rtc_adafruit_setAlarm2AMPM ]
 [f ]
 [e :UE 882 ]
 }
-"565
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 565: void rtc_ds_1337_setAlarm2A2M2(void) {}
-[v _rtc_ds_1337_setAlarm2A2M2 `(v ~T0 @X0 1 ef ]
+"575
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 575: void rtc_adafruit_setAlarm2A2M2(void) {}
+[v _rtc_adafruit_setAlarm2A2M2 `(v ~T0 @X0 1 ef ]
 {
-[e :U _rtc_ds_1337_setAlarm2A2M2 ]
+[e :U _rtc_adafruit_setAlarm2A2M2 ]
 [f ]
 [e :UE 883 ]
 }
-"567
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 567: void rtc_ds_1337_setAlarm2A2M3(void)
-[v _rtc_ds_1337_setAlarm2A2M3 `(v ~T0 @X0 1 ef ]
-"568
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 568: {
+"577
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 577: void rtc_adafruit_setAlarm2A2M3(void)
+[v _rtc_adafruit_setAlarm2A2M3 `(v ~T0 @X0 1 ef ]
+"578
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 578: {
 {
-[e :U _rtc_ds_1337_setAlarm2A2M3 ]
+[e :U _rtc_adafruit_setAlarm2A2M3 ]
 [f ]
-"569
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 569:     rtc_ds_1337_getAlarm2Hours();
-[e ( _rtc_ds_1337_getAlarm2Hours ..  ]
-"570
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 570: }
+"579
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 579:     rtc_adafruit_getAlarm2Hours();
+[e ( _rtc_adafruit_getAlarm2Hours ..  ]
+"580
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 580: }
 [e :UE 884 ]
 }
-"572
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 572: void rtc_ds_1337_setAlarm2A2M4(void)
-[v _rtc_ds_1337_setAlarm2A2M4 `(v ~T0 @X0 1 ef ]
-"573
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 573: {
+"582
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 582: void rtc_adafruit_setAlarm2A2M4(void)
+[v _rtc_adafruit_setAlarm2A2M4 `(v ~T0 @X0 1 ef ]
+"583
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 583: {
 {
-[e :U _rtc_ds_1337_setAlarm2A2M4 ]
+[e :U _rtc_adafruit_setAlarm2A2M4 ]
 [f ]
-"574
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 574:     rtc_ds_1337_getAlarm2Date();
-[e ( _rtc_ds_1337_getAlarm2Date ..  ]
-"575
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 575: }
+"584
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 584:     rtc_adafruit_getAlarm2Date();
+[e ( _rtc_adafruit_getAlarm2Date ..  ]
+"585
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 585: }
 [e :UE 885 ]
 }
-"577
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 577: _Bool rtc_ds_1337_getEnableOscillator(void) { return 0;}
-[v _rtc_ds_1337_getEnableOscillator `(a ~T0 @X0 1 ef ]
+"587
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 587: _Bool rtc_adafruit_getEnableOscillator(void) { return 0;}
+[v _rtc_adafruit_getEnableOscillator `(a ~T0 @X0 1 ef ]
 {
-[e :U _rtc_ds_1337_getEnableOscillator ]
+[e :U _rtc_adafruit_getEnableOscillator ]
 [f ]
 [e ) -> -> 0 `i `a ]
 [e $UE 886  ]
 [e :UE 886 ]
 }
-"578
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 578: void rtc_ds_1337_setEnableOscillator(_Bool EOSC) {}
-[v _rtc_ds_1337_setEnableOscillator `(v ~T0 @X0 1 ef1`a ]
+"588
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 588: void rtc_adafruit_setEnableOscillator(_Bool EOSC) {}
+[v _rtc_adafruit_setEnableOscillator `(v ~T0 @X0 1 ef1`a ]
 {
-[e :U _rtc_ds_1337_setEnableOscillator ]
+[e :U _rtc_adafruit_setEnableOscillator ]
 [v _EOSC `a ~T0 @X0 1 r1 ]
 [f ]
 [e :UE 887 ]
