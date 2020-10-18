@@ -9509,6 +9509,7 @@ const char rtc_scriptTemplate[] = "<script>function startTime(){var today=new Da
 
 uint8_t _clockDataString[] = {"hh:mm:ss - dd-mm-yyyy"};
 uint8_t rtcData[16];
+uint8_t rtc_data[1];
 
 
 
@@ -9835,7 +9836,7 @@ void rtc_ds_1337_setTimeAll(uint8_t hours, uint8_t mins, uint8_t secs, uint8_t d
         convertByte2BCD(day),
         convertByte2BCD(date),
         (century)?(convertByte2BCD(month) & 0x80):(convertByte2BCD(month)),
-        convertByte2BCD(years)
+        convertByte2BCD((uint8_t)(years-1900))
     };
 
     i2c_write_serial(0b1101000, rtc_date, 7);
@@ -9872,7 +9873,7 @@ uint8_t rtc_ds_1337_getMinutes(void)
 {
     uint8_t data[1];
 
-    i2c_write_serial(0b1101000, *0x01, 1);
+    i2c_write_serial(0b1101000, 0x01, 1);
     i2c_read_serial(0b1101000, data , 1);
     time.minutes = convertBCD2Bytes(data);
 
@@ -9892,11 +9893,9 @@ void rtc_ds_1337_setMinutes(void)
 
 uint8_t rtc_ds_1337_getHour(void)
 {
-    uint8_t data[1];
-
     i2c_write_serial(0b1101000, *0x02, 1);
-    i2c_read_serial(0b1101000, data , 1);
-    time.hours = convertBCD2Bytes(data);
+    i2c_read_serial(0b1101000, rtc_data , 1);
+    time.hours = convertBCD2Bytes(rtc_data);
 
     return time.hours;
 }
@@ -9925,11 +9924,9 @@ void rtc_ds_1337_setAMPM(void)
 
 uint8_t rtc_ds_1337_getDay(void)
 {
-    uint8_t data[1];
-
-    i2c_write_serial(0b1101000, *0x03, 1);
-    i2c_read_serial(0b1101000, data , 1);
-    time.day = convertBCD2Bytes(*data);
+    i2c_write_serial(0b1101000, (uint8_t)0x03, 1);
+    i2c_read_serial(0b1101000, rtc_data , 1);
+    time.day = convertBCD2Bytes(rtc_data[1]);
 
     return time.day;
 }
@@ -9964,7 +9961,7 @@ void rtc_ds_1337_setYear(void)
     uint8_t rtcRegister[] = { 0x06, data };
     i2c_write_serial(0b1101000, rtcRegister, 2);
 }
-# 417 "rtc/rtc_ds1337/rtc_ds1337.c"
+# 413 "rtc/rtc_ds1337/rtc_ds1337.c"
 void rtc_ds_1337_setAlarm1Type(_Bool DYnDT, uint8_t alarm1Mask)
 {
     time.A1M4 = alarm1Mask & 0b00001000;
@@ -10059,7 +10056,7 @@ void rtc_ds_1337_setAlarm1A1M1(void)
     secsReg = time.alarm1Seconds + (uint8_t)( time.A1M1<<7 );
     rtc_ds_1337_setAlarm1Seconds();
 }
-# 537 "rtc/rtc_ds1337/rtc_ds1337.c"
+# 533 "rtc/rtc_ds1337/rtc_ds1337.c"
 void rtc_ds_1337_setAlarm2Type(uint8_t alarm2Mask)
 {
     time.A2M4 = alarm2Mask & 0b00000100;

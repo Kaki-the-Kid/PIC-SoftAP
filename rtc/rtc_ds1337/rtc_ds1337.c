@@ -233,7 +233,7 @@ void rtc_ds_1337_setTimeAll(uint8_t hours, uint8_t mins, uint8_t secs, uint8_t d
         convertByte2BCD(day),
         convertByte2BCD(date),
         (century)?(convertByte2BCD(month) & 0x80):(convertByte2BCD(month)),
-        convertByte2BCD(years)
+        convertByte2BCD((uint8_t)(years-1900))
     };
     
     i2c_write_serial(rtc_addr, rtc_date, 7);
@@ -268,11 +268,9 @@ void rtc_ds_1337_setSeconds(void)
  ***************************************************************************/
 uint8_t rtc_ds_1337_getMinutes(void) 
 { 
-    uint8_t data[1];
-    
-    i2c_write_serial(rtc_addr, *minutesAddr, 1); 
-    i2c_read_serial(rtc_addr, data , 1);
-    time.minutes = convertBCD2Bytes(data);
+    i2c_write_serial(rtc_addr, (uint8_t)minutesAddr, 1); 
+    i2c_read_serial(rtc_addr, rtc_data , 1);
+    time.minutes = convertBCD2Bytes(rtc_data[1]);
     
     return time.minutes; 
 }
@@ -290,11 +288,9 @@ void rtc_ds_1337_setMinutes(void)
  ***************************************************************************/
 uint8_t rtc_ds_1337_getHour(void) 
 { 
-    uint8_t data[1];
-    
     i2c_write_serial(rtc_addr, *hoursAddr, 1); 
-    i2c_read_serial(rtc_addr, data , 1);
-    time.hours = convertBCD2Bytes(data);
+    i2c_read_serial(rtc_addr, rtc_data , 1);
+    time.hours = convertBCD2Bytes(rtc_data);
     
     return time.hours; 
 }
@@ -323,11 +319,9 @@ void rtc_ds_1337_setAMPM(void)
  ***************************************************************************/
 uint8_t rtc_ds_1337_getDay(void) 
 {
-    uint8_t data[1];
-    
-    i2c_write_serial(rtc_addr, *dayAddr, 1); 
-    i2c_read_serial(rtc_addr, data , 1);
-    time.day = convertBCD2Bytes(*data);
+    i2c_write_serial(rtc_addr, (uint8_t)dayAddr, 1); 
+    i2c_read_serial(rtc_addr, rtc_data , 1);
+    time.day = convertBCD2Bytes(rtc_data[1]);
     
     return time.day; 
 }

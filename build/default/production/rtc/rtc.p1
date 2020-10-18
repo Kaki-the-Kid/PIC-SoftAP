@@ -1,6 +1,6 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"38 rtc/rtc.h
-[; ;rtc/rtc.h: 38: typedef struct TIME {
+"39 rtc/rtc.h
+[; ;rtc/rtc.h: 39: typedef struct TIME {
 [s S833 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `uc 1 `uc 1 `uc 1 `uc 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 ]
 [n S833 TIME seconds minutes hours day date month year time12_n24 timePM_nAM century A1M1 A1M2 A1M3 A1M4 alarm1Seconds alarm1Minutes alarm1Hour alarm1Day alarm1Date alarm112n24 alarm1PMnAM alarm1DYnDT A2M2 A2M3 A2M4 alarm2Minutes alarm2Hours alarm2Day alarm2Date alarm212n24 alarm2PMnAM alarm2DYnDT EOSC RS2 RS1 INTCN A2IE A1IE OSF A2F A1F ]
 "54 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k22.h
@@ -1451,8 +1451,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 "34
 [; ;rtc/rtc.h: 34: uint8_t rtcData[16];
 [v _rtcData `uc ~T0 @X0 -> 16 `i e ]
-"85
-[; ;rtc/rtc.h: 85: time_t time;
+"35
+[; ;rtc/rtc.h: 35: uint8_t rtc_data[1];
+[v _rtc_data `uc ~T0 @X0 -> -> 1 `i `ux e ]
+"86
+[; ;rtc/rtc.h: 86: time_t time;
 [v _time `S833 ~T0 @X0 1 e ]
 "31 rtc/rtc.c
 [; ;rtc/rtc.c: 31: uint8_t convertBCD2Bytes(uint8_t bcdByte)

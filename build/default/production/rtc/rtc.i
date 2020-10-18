@@ -9614,6 +9614,7 @@ const char rtc_scriptTemplate[] = "<script>function startTime(){var today=new Da
 
 uint8_t _clockDataString[] = {"hh:mm:ss - dd-mm-yyyy"};
 uint8_t rtcData[16];
+uint8_t rtc_data[1];
 
 
 

@@ -335,11 +335,9 @@ void rtc_adafruit_setAMPM(void)
  ***************************************************************************/
 uint8_t rtc_adafruit_getDay(void) 
 {
-    uint8_t data[1];
-    
-    i2c_write_serial(rtc_addr, (char *) dayAddr, 1); 
-    i2c_read_serial(rtc_addr, data , 1);
-    time.day = (uint8_t) convertBCD2Bytes(*data);
+    i2c_write_serial(rtc_addr, dayAddr, 1); 
+    i2c_read_serial(rtc_addr, rtc_data , 1);
+    time.day = (uint8_t) convertBCD2Bytes(rtc_data[1]);
     
     return time.day; 
 }
