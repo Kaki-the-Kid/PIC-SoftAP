@@ -20,20 +20,20 @@
  **************************************************************/
 struct SERVER {
     bool    busy;                // Er ESP modulet optaget? Bruges ved kommandoer som tager lang tid
-    uint8_t wifiMode;            // Hvad for en mode kører vi i? Station, SoftAP eller begge
-    bool    multibleConnections; //CIMUX skal være 1 for at vi kan starte en server
+    uint8_t wifiMode;            // Hvad for en mode kÃ¸rer vi i? Station, SoftAP eller begge
+    bool    multibleConnections; //CIMUX skal vÃ¦re 1 for at vi kan starte en server
     uint8_t maxConnections;      // Hvad er de maksimale antale forbindelser <links>
-    char*   ssid[20];            // ssid for stærkeste signal
-    char*   password[20];        // password for stærkeste signal
-    char*   encryption[20];      // krytering for stærkeste signal
+    char*   ssid[20];            // ssid for stÃ¦rkeste signal
+    char*   password[20];        // password for stï¿½rkeste signal
+    char*   encryption[20];      // krytering for stï¿½rkeste signal
     bool    wificonnected;       // Er enheden forbundet til AP (Station)
-    bool    wifigotip;           // og har vi fået IP fra enheden
+    bool    wifigotip;           // og har vi fÃ¥et IP fra enheden
     bool    internet;            // Kan vi pinge? Har vi adgang til internettet?
     char    remote_ip[20];       // Hvad er vores Station IP
     char    local_ip[15];        // Hvad er vores SoftAP IP
-    uint8_t running;             // Er serveren oppe at køre?
+    uint8_t running;             // Er serveren oppe at kÃ¸re?
     bool    clientConnected;     // Er der en klient? 0,CONNECTED
-    bool    clientAvailable;     // ... og har vi fået en forespørgsel
+    bool    clientAvailable;     // ... og har vi fÃ¥et en forespï¿½rgsel
     #define esp_serverInit() do { strcpy((char*)server.ssid, ""); server.wifiMode = 1; server.multibleConnections = 1; server.maxConnections = 1; server.wificonnected = 0; server.wifigotip = 0; server.internet = 0; server.running = 0;} while (0);
 };
 
@@ -43,7 +43,7 @@ server_t server; // Ny instans af tcpip server
 
 
 /* Prototypes wifi Station
- * Er funktioner som forbinder til et eksisterende netværk. 
+ * Er funktioner som forbinder til et eksisterende netvï¿½rk. 
  * Kun wifi forbindelsen.
  */
 void    tcpip_serverSetup(void);
@@ -75,7 +75,7 @@ void    tcpip_checkInternet(void);
  ************************************************************/
 
 /* Prototypes server pages
- * Leverer og håndterer HTML sider og HTTP GET requests
+ * Leverer og hï¿½ndterer HTML sider og HTTP GET requests
  */
 void tcpip_serverPage(void);
 void tcpip_sendHTTPHeader(void);
@@ -93,25 +93,12 @@ const char htmlMsgPart1[] = "<!DOCTYPE html><html xmlns=\"http://www.w3.org/1999
 
 //typedef enum {} 
 
-
 //AT+CIPSENDBUF
 //AT+CIPSEND
 //AT+CIPSENDEX
 //AT+CIPBUFRESET
 //AT+CIPBUFSTATUS
 //AT+CIPCHECKSEQ
-
-
-
-
-
-
-
-
-
-
-
-
 
 /**************************************************************/
 #endif	/* TCPIP_H */

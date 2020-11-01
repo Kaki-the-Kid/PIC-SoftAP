@@ -172,7 +172,7 @@ bool wifi_network_lookup(const char *ssid_name) {
 
 // AT_CWJAP - Forbinder til AP
 /*  
- * Viser sig på LAN som: 
+ * Viser sig pÃ¥ LAN som: 
  * Hostname:   ESP_0B81FB, 
  * MAC:        2c:3a:e8:0b:81:fb
  * 

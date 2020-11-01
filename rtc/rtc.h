@@ -14,17 +14,17 @@
 #define	RTC_H
 
 uint8_t rtc_addr;
-#define rtc_type        0x00 // Brug denne til at vælge i mellem de forskellige RTC moduler
+#define rtc_type        0x00 // Brug denne til at vï¿½lge i mellem de forskellige RTC moduler
                              //    Type 0: DS1337
                              //    Type 1: Adafruit RTC
-// Understøttede enheder
+// Understï¿½ttede enheder
 #if (rtc_type == 0)
     #include "rtc_ds1337/rtc_ds1337.h"
 #else
     #include "rtc_adafruit/rtc_adafruit.h"
 #endif
 
-// Skabeloner som bruges hvis der ønskes at udprinte til webside
+// Skabeloner som bruges hvis der Ã¸nskes at udprinte til webside
 const char rtc_htmlTemplate[]   = "<h1>Server tid</h1><div id ='clock' onload='startTime()'></div>";
 const char rtc_fontTemplate[]   = "<link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>";
 const char rtc_cssTemplate[]    = "body{background:black;}#clock{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#FFFF00;font-family:Orbitron;letter-spacing:7px;font-weight:bold;font-size:10em;}";

@@ -13,6 +13,7 @@
 #include "../mcc_generated_files/mcc.h"
 #endif
 
+#include <stdio.h>
 #include <string.h>
 
 

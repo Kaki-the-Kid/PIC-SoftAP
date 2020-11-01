@@ -1,12 +1,10 @@
 /**************************************************************
-                   I2C generelle kommandoer 
- **************************************************************/
-/* 
- * File:   i2c.h
- * Author: krs
+ * @name    i2c.h
+ * @author  krs - Karsten Reitan Sørensen
  *
  * Created on September 6, 2019, 8:51 AM
- */
+ * @brief   I2C generelle kommandoer
+ **************************************************************/
 #pragma once
 
 #ifndef MCC_H
