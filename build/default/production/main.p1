@@ -1627,21 +1627,21 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> 3 `i 851
  852 ]
 [e :U 847 ]
-"124
-[; ;main.c: 124:     while (1) {
+"123
+[; ;main.c: 123:     while (1) {
 [e :U 854 ]
 {
-"125
-[; ;main.c: 125:         esp_uartReceive(0);
+"124
+[; ;main.c: 124:         esp_uartReceive(0);
 [e ( _esp_uartReceive (1 -> -> 0 `i `*uc ]
-"126
-[; ;main.c: 126:     }
+"125
+[; ;main.c: 125:     }
 }
 [e :U 853 ]
 [e $U 854  ]
 [e :U 855 ]
-"127
-[; ;main.c: 127: }
+"126
+[; ;main.c: 126: }
 [e :UE 840 ]
 }
 [a 4C 87 117 103 103 97 78 101 116 0 ]

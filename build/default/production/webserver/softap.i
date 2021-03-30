@@ -7,7 +7,7 @@
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
 # 1 "webserver/softap.c" 2
-# 46 "webserver/softap.c"
+# 45 "webserver/softap.c"
 # 1 "webserver/esp8266.h" 1
 # 13 "webserver/esp8266.h"
 # 1 "webserver/../mcc_generated_files/mcc.h" 1
@@ -9803,8 +9803,8 @@ _Bool esp_waitForOK(void);
 void esp_terminalReceive(void);
 void esp_terminalTransmit(char *);
 void esp_adjustLeds(void);
-# 46 "webserver/softap.c" 2
-# 97 "webserver/softap.c"
+# 45 "webserver/softap.c" 2
+# 96 "webserver/softap.c"
 void softap_SoftAPInit(void) {
 
     printf("AT+CWSAP=\"%s\",\"%s\",%d,%d,%d,%d\r\n", SOFTAP_SSIDNAME, SOFTAP_PASSWORD, SOFTAP_CHANNELID, SOFTAP_ECN, SOFTAP_MAXCONN, SOFTAP_HIDDEN );
@@ -9814,11 +9814,11 @@ void softap_SoftAPInit(void) {
     } else {
     }
 }
-# 125 "webserver/softap.c"
+# 124 "webserver/softap.c"
 void softap_getSoftAPConnectedIPs(void) {
     printf("AT+CWLIF\r\n");
 }
-# 167 "webserver/softap.c"
+# 166 "webserver/softap.c"
 int softap_getSoftAPIP(void) {
     int ip;
 

@@ -5,7 +5,7 @@
  * Device           : PIC18F26K22                                       *
  * Driver Version   : 1.00-development                                  *
  ************************************************************************
- I forbindelse med løsning af opgave i Embedded  Controller skulle      *
+ * I forbindelse med løsning af opgave i Embedded  Controller skulle    *
  * vi lave en styring af ESP01 fra PIC kreds. Opgaven var, at vise en   *
  * webside med data fra PIC kredsen og datalogger, som var opbygget i   *
  * tidligere fag. Derfra kom ideen til, at lave en fuldt understøttelse *
@@ -119,7 +119,6 @@ void main(void)
         default:
             break;
     }
-
 
     while (1) {
         esp_uartReceive(0); 

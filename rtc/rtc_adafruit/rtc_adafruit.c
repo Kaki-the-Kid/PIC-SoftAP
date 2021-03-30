@@ -304,7 +304,7 @@ uint8_t rtc_adafruit_getHour(void)
 { 
     uint8_t data[1];
     
-    i2c_write_serial(rtc_addr, hoursAddr, 1); 
+    i2c_write_serial((uint8_t)rtc_addr, hoursAddr, 1); 
     i2c_read_serial(rtc_addr, data , 1);
     time.hours = convertBCD2Bytes(data);
     

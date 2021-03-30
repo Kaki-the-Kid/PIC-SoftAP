@@ -9861,7 +9861,6 @@ void main(void)
             break;
     }
 
-
     while (1) {
         esp_uartReceive(0);
     }
