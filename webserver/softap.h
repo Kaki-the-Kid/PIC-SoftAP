@@ -22,18 +22,18 @@
 /**************************************************************/                
 
 // SoftAP indstllinger
-const char*    SOFTAP_SSIDNAME  = "KRS_PIC_AP";
-const char*    SOFTAP_PASSWORD  = "1234567890"; //Minimun 8 tegn
-const uint8_t  SOFTAP_CHANNELID = 3;
-const uint8_t  SOFTAP_ECN       = 4;
-const uint8_t  SOFTAP_MAXCONN   = 1;
-const uint8_t  SOFTAP_HIDDEN    = 0;
+const char     SOFTAP_SSIDNAME[] = {"KRS_PIC_AP"};
+const char     SOFTAP_PASSWORD[] = {"1234567890"}; //Minimun 8 tegn
+const uint8_t  SOFTAP_CHANNELID  = 3;
+const uint8_t  SOFTAP_ECN        = 4;
+const uint8_t  SOFTAP_MAXCONN    = 1;
+const uint8_t  SOFTAP_HIDDEN     = 0;
 
 /**************************************************************/                
 
 void softap_SoftAPInit(void);
 void softap_getSoftAPConnectedIPs(void);
-int  softap_getSoftAPIP(void);
+void softap_getSoftAPIP(void);
 void softap_setSoftAPIP(void);
 
 /**************************************************************/                

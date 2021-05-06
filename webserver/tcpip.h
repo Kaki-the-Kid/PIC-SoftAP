@@ -5,10 +5,12 @@
  * Created on September 1, 2019, 12:14 AM
  */
 #pragma once
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
 
 #ifndef MCC_H
 #include "mcc_generated_files/mcc.h"
-#include <string.h>
 #include <xc.h>
 #endif
 

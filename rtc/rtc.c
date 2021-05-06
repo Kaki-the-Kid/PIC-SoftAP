@@ -41,13 +41,13 @@ uint8_t convertBCD2Bytes(uint8_t bcdByte)
 /**************************************************************
  * Funktion som ..
  **************************************************************/
-uint8_t convertByte2BCD(uint8_t byte) 
+uint8_t convertByte2BCD(uint8_t select_byte)
 {
     uint8_t result = 0;
     
     //Eks. 12
-    result  = ((uint8_t)( byte / 10 ) << 4); // Eks. hi = 1, result = 0b0001 0000
-    result += byte % 10; // Eks. lo = 2 result = 0b0001 0010
+    result  = (uint8_t)(( select_byte / 10 ) << 4); // Eks. hi = 1, result = 0b0001 0000
+    result += select_byte % 10; // Eks. lo = 2 result = 0b0001 0010
     
     return result;
 }

@@ -163,12 +163,12 @@ void softap_getSoftAPConnectedIPs(void) {
  * AT+CIPAP_CUR
  * AT+CIPAP_DEF
  */
-int softap_getSoftAPIP(void) {
-    int ip;
+void softap_getSoftAPIP(void) {
+    int ip=0;
     
     printf( "AT+CIPAP?\r\n" );
     //resolve uart output
-    return ip;
+    //return ip;
 }
 
 
