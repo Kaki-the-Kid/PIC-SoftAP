@@ -15,7 +15,7 @@
 # 1 "sensor/sensor.h" 1
 # 11 "sensor/sensor.h"
 # 1 "sensor/../mcc_generated_files/mcc.h" 1
-# 49 "sensor/../mcc_generated_files/mcc.h"
+# 51 "sensor/../mcc_generated_files/mcc.h"
 # 1 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -9136,17 +9136,19 @@ extern __attribute__((nonreentrant)) void _delaywdt(unsigned long);
 #pragma intrinsic(_delay3)
 extern __attribute__((nonreentrant)) void _delay3(unsigned char);
 # 33 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\\pic\\include\\xc.h" 2 3
-# 49 "sensor/../mcc_generated_files/mcc.h" 2
+# 51 "sensor/../mcc_generated_files/mcc.h" 2
+
+
 
 # 1 "sensor/../mcc_generated_files/device_config.h" 1
-# 50 "sensor/../mcc_generated_files/mcc.h" 2
+# 54 "sensor/../mcc_generated_files/mcc.h" 2
 
 # 1 "sensor/../mcc_generated_files/pin_manager.h" 1
 # 201 "sensor/../mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
 # 213 "sensor/../mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
-# 51 "sensor/../mcc_generated_files/mcc.h" 2
+# 55 "sensor/../mcc_generated_files/mcc.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdint.h" 1 3
 # 22 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdint.h" 3
@@ -9233,15 +9235,15 @@ typedef int32_t int_fast32_t;
 typedef uint16_t uint_fast16_t;
 typedef uint32_t uint_fast32_t;
 # 144 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdint.h" 2 3
-# 52 "sensor/../mcc_generated_files/mcc.h" 2
+# 56 "sensor/../mcc_generated_files/mcc.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdbool.h" 1 3
-# 53 "sensor/../mcc_generated_files/mcc.h" 2
+# 57 "sensor/../mcc_generated_files/mcc.h" 2
 
 # 1 "sensor/../mcc_generated_files/interrupt_manager.h" 1
 # 110 "sensor/../mcc_generated_files/interrupt_manager.h"
 void INTERRUPT_Initialize (void);
-# 54 "sensor/../mcc_generated_files/mcc.h" 2
+# 58 "sensor/../mcc_generated_files/mcc.h" 2
 
 # 1 "sensor/../mcc_generated_files/tmr2.h" 1
 # 104 "sensor/../mcc_generated_files/tmr2.h"
@@ -9266,7 +9268,7 @@ void TMR2_ISR(void);
 extern void (*TMR2_InterruptHandler)(void);
 # 380 "sensor/../mcc_generated_files/tmr2.h"
 void TMR2_DefaultInterruptHandler(void);
-# 55 "sensor/../mcc_generated_files/mcc.h" 2
+# 59 "sensor/../mcc_generated_files/mcc.h" 2
 
 # 1 "sensor/../mcc_generated_files/tmr4.h" 1
 # 104 "sensor/../mcc_generated_files/tmr4.h"
@@ -9291,7 +9293,7 @@ void TMR4_ISR(void);
 extern void (*TMR4_InterruptHandler)(void);
 # 380 "sensor/../mcc_generated_files/tmr4.h"
 void TMR4_DefaultInterruptHandler(void);
-# 56 "sensor/../mcc_generated_files/mcc.h" 2
+# 60 "sensor/../mcc_generated_files/mcc.h" 2
 
 # 1 "sensor/../mcc_generated_files/eusart1.h" 1
 # 57 "sensor/../mcc_generated_files/eusart1.h"
@@ -9486,10 +9488,10 @@ void EUSART1_SetErrorHandler(void (* interruptHandler)(void));
 void EUSART1_SetTxInterruptHandler(void (* interruptHandler)(void));
 # 506 "sensor/../mcc_generated_files/eusart1.h"
 void EUSART1_SetRxInterruptHandler(void (* interruptHandler)(void));
-# 57 "sensor/../mcc_generated_files/mcc.h" 2
-# 72 "sensor/../mcc_generated_files/mcc.h"
+# 61 "sensor/../mcc_generated_files/mcc.h" 2
+# 76 "sensor/../mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
-# 85 "sensor/../mcc_generated_files/mcc.h"
+# 89 "sensor/../mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
 # 11 "sensor/sensor.h" 2
 
@@ -9599,8 +9601,8 @@ uint8_t data_out[4];
 
 void i2c_init(void);
 void i2c_portScan(void);
-void i2c_write_serial(uint8_t, uint8_t*, uint8_t);
-void i2c_read_serial(uint8_t, uint8_t *, uint8_t);
+void i2c_write_serial(uint8_t, char*, uint8_t);
+void i2c_read_serial(uint8_t, char*, uint8_t);
 
 void i2c_master_wait(void);
 void i2c_master_start(void);
@@ -9633,15 +9635,15 @@ void lcd_outputPosXY(char *string, uint8_t posX, uint8_t posY);
 
 
 
-const uint8_t temperature_addr = 0b0100111;
-const uint8_t temp_string[] = "@Temp: xx,xo     ";
-const uint8_t moist_string[] = "@Humidity: xxx%  ";
-const uint8_t minus[] = {0x40, 0b00101101};
-const uint8_t degree_pos[] = {0x00, 0x8A};
-const uint8_t temp_pos[] = {0x00, 0x84};
-const uint8_t moist_pos[] = {0x00, 0xC6};
-const uint8_t custom_char0[] = {0x80, 0x40, 0x40, 0b01100, 0b10010, 0b10010, 0b01100, 0b00000, 0b00000, 0b00000, 0b00000};
-uint8_t tmp_string[0x0F];
+const char temperature_addr = 0b0100111;
+const char temp_string[] = "@Temp: xx,xo     ";
+const char moist_string[] = "@Humidity: xxx%  ";
+const char minus[] = {0x40, 0b00101101};
+const char degree_pos[] = {0x00, 0x8A};
+const char temp_pos[] = {0x00, 0x84};
+const char moist_pos[] = {0x00, 0xC6};
+const char custom_char0[] = {0x80, 0x40, 0x40, 0b01100, 0b10010, 0b10010, 0b01100, 0b00000, 0b00000, 0b00000, 0b00000};
+char tmp_string[0x0F];
 
 void sensor_testTempSensor(void);
 void sensor_getReading(void);
@@ -9768,6 +9770,6 @@ void sensor_updateHumidity(uint8_t moist) {
         output[3] = moist | 0b00110000;
     }
 
-    i2c_write_serial(display_addr, (uint8_t*) moist_pos, 2);
-    i2c_write_serial(display_addr, output, 4);
+    i2c_write_serial(display_addr, *moist_pos, 2);
+    i2c_write_serial(display_addr, *output, 4);
 }

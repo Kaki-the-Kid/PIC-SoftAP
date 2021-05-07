@@ -1,6 +1,6 @@
 /**************************************************************
  * @name    i2c.h
- * @author  krs - Karsten Reitan SÃ¸rensen
+ * @author  krs - Karsten Reitan Sørensen
  *
  * Created on September 6, 2019, 8:51 AM
  * @brief   I2C generelle kommandoer
@@ -31,8 +31,8 @@ uint8_t data_out[4];
 
 void i2c_init(void);
 void i2c_portScan(void);
-void i2c_write_serial(uint8_t, uint8_t*, uint8_t);
-void i2c_read_serial(uint8_t, uint8_t *, uint8_t);
+void i2c_write_serial(uint8_t, char*, uint8_t);
+void i2c_read_serial(uint8_t, char*, uint8_t);
 
 void i2c_master_wait(void);
 void i2c_master_start(void);

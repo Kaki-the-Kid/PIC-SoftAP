@@ -37,7 +37,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "111 C:\Program Files\Microchip\xc8\v2.32\pic\include\c99\stdio.h
 [v _printf `(i ~T0 @X0 0 ev`*Cuc ]
 "34 i2c/i2c.h
-[; ;i2c/i2c.h: 34: void i2c_write_serial(uint8_t, uint8_t*, uint8_t);
+[; ;i2c/i2c.h: 34: void i2c_write_serial(uint8_t, char*, uint8_t);
 [v _i2c_write_serial `(v ~T0 @X0 0 ef3`uc`*uc`uc ]
 "37
 [; ;i2c/i2c.h: 37: void i2c_master_wait(void);
@@ -957,7 +957,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :UE 834 ]
 }
 "46
-[; ;i2c/i2c.c: 46: void i2c_write_serial(uint8_t addr, uint8_t* data, uint8_t length) {
+[; ;i2c/i2c.c: 46: void i2c_write_serial(uint8_t addr, char* data, uint8_t length) {
 [v _i2c_write_serial `(v ~T0 @X0 1 ef3`uc`*uc`uc ]
 {
 [e :U _i2c_write_serial ]
@@ -969,7 +969,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;i2c/i2c.c: 47:     char msg[50];
 [v _msg `uc ~T0 @X0 -> 50 `i a ]
 "49
-[; ;i2c/i2c.c: 49:     uint8_t targetAddr = (addr<<1);
+[; ;i2c/i2c.c: 49:     uint8_t targetAddr = (uint8_t)(addr<<1);
 [v _targetAddr `uc ~T0 @X0 1 a ]
 [e = _targetAddr -> << -> _addr `i -> 1 `i `uc ]
 "54
@@ -1002,7 +1002,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "69
 [; ;i2c/i2c.c: 69:             SSP1BUF = (uint8_t) data[i];
-[e = _SSP1BUF *U + _data * -> _i `ux -> -> # *U _data `ui `ux ]
+[e = _SSP1BUF -> *U + _data * -> _i `ux -> -> # *U _data `ui `ux `uc ]
 "70
 [; ;i2c/i2c.c: 70:             while(SSP1STATbits.R_nW);
 [e $U 847  ]
@@ -1032,7 +1032,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 854 ]
 "83
 [; ;i2c/i2c.c: 83:                 SSP1BUF = (uint8_t) data[i];
-[e = _SSP1BUF *U + _data * -> _i `ux -> -> # *U _data `ui `ux ]
+[e = _SSP1BUF -> *U + _data * -> _i `ux -> -> # *U _data `ui `ux `uc ]
 "84
 [; ;i2c/i2c.c: 84:                 while(SSP1STATbits.R_nW);
 [e $U 855  ]
@@ -1084,7 +1084,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :UE 838 ]
 }
 "112
-[; ;i2c/i2c.c: 112: void i2c_read_serial(uint8_t addr, uint8_t *data_out, uint8_t length) {
+[; ;i2c/i2c.c: 112: void i2c_read_serial(uint8_t addr, char *data_out, uint8_t length) {
 [v _i2c_read_serial `(v ~T0 @X0 1 ef3`uc`*uc`uc ]
 {
 [e :U _i2c_read_serial ]
@@ -1096,7 +1096,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;i2c/i2c.c: 113:     char msg[50];
 [v _msg `uc ~T0 @X0 -> 50 `i a ]
 "114
-[; ;i2c/i2c.c: 114:     uint8_t targetAddr = ((addr<<1)+1);
+[; ;i2c/i2c.c: 114:     uint8_t targetAddr = (uint8_t)((addr<<1)+1);
 [v _targetAddr `uc ~T0 @X0 1 a ]
 [e = _targetAddr -> + << -> _addr `i -> 1 `i -> 1 `i `uc ]
 "116
@@ -1143,7 +1143,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 872 ]
 "127
 [; ;i2c/i2c.c: 127:             data_out[i] = SSP1BUF;
-[e = *U + _data_out * -> _i `ux -> -> # *U _data_out `ui `ux _SSP1BUF ]
+[e = *U + _data_out * -> _i `ux -> -> # *U _data_out `ui `ux -> _SSP1BUF `uc ]
 "130
 [; ;i2c/i2c.c: 130:             if( i != length -1)
 [e $ ! != -> _i `i - -> _length `i -> 1 `i 873  ]

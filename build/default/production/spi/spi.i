@@ -16,7 +16,7 @@
 # 1 "spi/spi.h" 1
 # 21 "spi/spi.h"
 # 1 "spi/../mcc_generated_files/mcc.h" 1
-# 49 "spi/../mcc_generated_files/mcc.h"
+# 51 "spi/../mcc_generated_files/mcc.h"
 # 1 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -9137,17 +9137,19 @@ extern __attribute__((nonreentrant)) void _delaywdt(unsigned long);
 #pragma intrinsic(_delay3)
 extern __attribute__((nonreentrant)) void _delay3(unsigned char);
 # 33 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\\pic\\include\\xc.h" 2 3
-# 49 "spi/../mcc_generated_files/mcc.h" 2
+# 51 "spi/../mcc_generated_files/mcc.h" 2
+
+
 
 # 1 "spi/../mcc_generated_files/device_config.h" 1
-# 50 "spi/../mcc_generated_files/mcc.h" 2
+# 54 "spi/../mcc_generated_files/mcc.h" 2
 
 # 1 "spi/../mcc_generated_files/pin_manager.h" 1
 # 201 "spi/../mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
 # 213 "spi/../mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
-# 51 "spi/../mcc_generated_files/mcc.h" 2
+# 55 "spi/../mcc_generated_files/mcc.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdint.h" 1 3
 # 22 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdint.h" 3
@@ -9234,15 +9236,15 @@ typedef int32_t int_fast32_t;
 typedef uint16_t uint_fast16_t;
 typedef uint32_t uint_fast32_t;
 # 144 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdint.h" 2 3
-# 52 "spi/../mcc_generated_files/mcc.h" 2
+# 56 "spi/../mcc_generated_files/mcc.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdbool.h" 1 3
-# 53 "spi/../mcc_generated_files/mcc.h" 2
+# 57 "spi/../mcc_generated_files/mcc.h" 2
 
 # 1 "spi/../mcc_generated_files/interrupt_manager.h" 1
 # 110 "spi/../mcc_generated_files/interrupt_manager.h"
 void INTERRUPT_Initialize (void);
-# 54 "spi/../mcc_generated_files/mcc.h" 2
+# 58 "spi/../mcc_generated_files/mcc.h" 2
 
 # 1 "spi/../mcc_generated_files/tmr2.h" 1
 # 104 "spi/../mcc_generated_files/tmr2.h"
@@ -9267,7 +9269,7 @@ void TMR2_ISR(void);
 extern void (*TMR2_InterruptHandler)(void);
 # 380 "spi/../mcc_generated_files/tmr2.h"
 void TMR2_DefaultInterruptHandler(void);
-# 55 "spi/../mcc_generated_files/mcc.h" 2
+# 59 "spi/../mcc_generated_files/mcc.h" 2
 
 # 1 "spi/../mcc_generated_files/tmr4.h" 1
 # 104 "spi/../mcc_generated_files/tmr4.h"
@@ -9292,7 +9294,7 @@ void TMR4_ISR(void);
 extern void (*TMR4_InterruptHandler)(void);
 # 380 "spi/../mcc_generated_files/tmr4.h"
 void TMR4_DefaultInterruptHandler(void);
-# 56 "spi/../mcc_generated_files/mcc.h" 2
+# 60 "spi/../mcc_generated_files/mcc.h" 2
 
 # 1 "spi/../mcc_generated_files/eusart1.h" 1
 # 57 "spi/../mcc_generated_files/eusart1.h"
@@ -9487,10 +9489,10 @@ void EUSART1_SetErrorHandler(void (* interruptHandler)(void));
 void EUSART1_SetTxInterruptHandler(void (* interruptHandler)(void));
 # 506 "spi/../mcc_generated_files/eusart1.h"
 void EUSART1_SetRxInterruptHandler(void (* interruptHandler)(void));
-# 57 "spi/../mcc_generated_files/mcc.h" 2
-# 72 "spi/../mcc_generated_files/mcc.h"
+# 61 "spi/../mcc_generated_files/mcc.h" 2
+# 76 "spi/../mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
-# 85 "spi/../mcc_generated_files/mcc.h"
+# 89 "spi/../mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
 # 21 "spi/spi.h" 2
 

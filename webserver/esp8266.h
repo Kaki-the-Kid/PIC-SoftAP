@@ -8,12 +8,14 @@
  * Created on August 29, 2019, 8:26 PM
  */
 #pragma once
-#include <stdio.h>
-#include <ctype.h>
 
 #ifndef MCC_H
-#include "../mcc_generated_files/mcc.h"
+#include "mcc_generated_files/mcc.h"
 #endif
+
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
 
 #ifndef TCPIP_H
 #include "tcpip.h"

@@ -8,28 +8,28 @@ Version 4.0 HI-TECH Software Intermediate Code
 [s S835 `uc 1 `uc 1 `uc 1 ]
 [n S835 WIFIMode stationMode softAPMode multibleConnections ]
 "53
-[; ;webserver/wifi.h: 53: typedef struct item_t { char *ssid; char *password; char *encryption; } item_t;
-[s S836 `*uc 1 `*uc 1 `*uc 1 ]
-[n S836 item_t ssid password encryption ]
-"73 webserver/esp8266.h
-[; ;webserver/esp8266.h: 73: struct ESPUART {
+[; ;webserver/wifi.h: 53: typedef struct KnownNetworks {
+[s S836 `uc -> 50 `i `uc -> 50 `i `uc -> 50 `i ]
+[n S836 KnownNetworks ssid password encryption ]
+"75 webserver/esp8266.h
+[; ;webserver/esp8266.h: 75: struct ESPUART {
 [s S837 `l 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
 [n S837 ESPUART baudrate databits stopbits parity flowcontrol ]
-"82
-[; ;webserver/esp8266.h: 82: struct ESPFirmWare {
+"84
+[; ;webserver/esp8266.h: 84: struct ESPFirmWare {
 [s S838 `*uc 1 `*uc 1 `*uc 1 `uc 1 ]
 [n S838 ESPFirmWare ATVersion SDKVersion BinVersion updated ]
-"92
-[; ;webserver/esp8266.h: 92: struct States {
+"94
+[; ;webserver/esp8266.h: 94: struct States {
 [s S839 `a 1 `a 1 `a 1 ]
 [n S839 States ok error ready ]
 "111 C:\Program Files\Microchip\xc8\v2.32\pic\include\c99\stdio.h
 [v _printf `(i ~T0 @X0 0 ev`*Cuc ]
-"113 webserver/esp8266.h
-[; ;webserver/esp8266.h: 113: uint8_t esp_uartReceive(char *);
+"115 webserver/esp8266.h
+[; ;webserver/esp8266.h: 115: uint8_t esp_uartReceive(char *);
 [v _esp_uartReceive `(uc ~T0 @X0 0 ef1`*uc ]
-"116
-[; ;webserver/esp8266.h: 116: _Bool esp_waitForOK(void);
+"118
+[; ;webserver/esp8266.h: 118: _Bool esp_waitForOK(void);
 [v _esp_waitForOK `(a ~T0 @X0 0 ef ]
 "214 webserver/../mcc_generated_files/eusart1.h
 [; ;webserver/../mcc_generated_files/eusart1.h: 214: _Bool EUSART1_is_rx_ready(void);
@@ -1332,35 +1332,148 @@ Version 4.0 HI-TECH Software Intermediate Code
 "50 webserver/wifi.h
 [; ;webserver/wifi.h: 50: WIFIMode_t wifi;
 [v _wifi `S835 ~T0 @X0 1 e ]
-"54
-[; ;webserver/wifi.h: 54: item_t network_table[] = {
+"59
+[; ;webserver/wifi.h: 59: knownnetworks network_table[] = {
 [v _network_table `S836 ~T0 @X0 -> 5 `i e ]
 [i _network_table
 :U ..
 :U ..
-:s 1C
-:s 2C
-:s 3C
+:U ..
+-> 83 `c
+-> 83 `c
+-> 73 `c
+-> 68 `c
+-> 45 `c
+-> 74 `c
+-> 82 `c
+-> 122 `c
+-> 99 `c
+-> 77 `c
+-> 52 `c
+-> 0 `c
 ..
 :U ..
-:s 4C
-:s 5C
-:s 6C
+-> 102 `c
+-> 114 `c
+-> 98 `c
+-> 80 `c
+-> 67 `c
+-> 119 `c
+-> 118 `c
+-> 82 `c
+-> 75 `c
+-> 113 `c
+-> 0 `c
 ..
 :U ..
-:s 7C
-:s 8C
-:s 9C
+-> 87 `c
+-> 80 `c
+-> 65 `c
+-> 50 `c
+-> 32 `c
+-> 65 `c
+-> 69 `c
+-> 83 `c
+-> 0 `c
+..
 ..
 :U ..
-:s 10C
-:s 11C
-:s 12C
+:U ..
+-> 87 `c
+-> 117 `c
+-> 103 `c
+-> 103 `c
+-> 97 `c
+-> 78 `c
+-> 101 `c
+-> 116 `c
+-> 0 `c
 ..
 :U ..
-:s 13C
-:s 14C
-:s 15C
+-> 102 `c
+-> 114 `c
+-> 101 `c
+-> 100 `c
+-> 97 `c
+-> 103 `c
+-> 115 `c
+-> 98 `c
+-> 97 `c
+-> 110 `c
+-> 97 `c
+-> 110 `c
+-> 0 `c
+..
+:U ..
+-> 87 `c
+-> 80 `c
+-> 65 `c
+-> 50 `c
+-> 32 `c
+-> 65 `c
+-> 69 `c
+-> 83 `c
+-> 0 `c
+..
+..
+:U ..
+:U ..
+-> 65 `c
+-> 83 `c
+-> 85 `c
+-> 83 `c
+-> 95 `c
+-> 88 `c
+-> 48 `c
+-> 48 `c
+-> 80 `c
+-> 68 `c
+-> 0 `c
+..
+:U ..
+-> 48 `c
+-> 99 `c
+-> 48 `c
+-> 100 `c
+-> 56 `c
+-> 53 `c
+-> 57 `c
+-> 57 `c
+-> 0 `c
+..
+:U ..
+-> 87 `c
+-> 80 `c
+-> 65 `c
+-> 50 `c
+-> 32 `c
+-> 65 `c
+-> 69 `c
+-> 83 `c
+-> 0 `c
+..
+..
+:U ..
+:U ..
+-> 0 `c
+..
+:U ..
+-> 0 `c
+..
+:U ..
+-> 0 `c
+..
+..
+:U ..
+:U ..
+-> 0 `c
+..
+:U ..
+-> 0 `c
+..
+:U ..
+-> 0 `c
+..
 ..
 ..
 ]
@@ -1494,17 +1607,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-"70 webserver/esp8266.h
-[; ;webserver/esp8266.h: 70: uint8_t uartInput[128];
+"72 webserver/esp8266.h
+[; ;webserver/esp8266.h: 72: uint8_t uartInput[128];
 [v _uartInput `uc ~T0 @X0 -> 128 `i e ]
-"80
-[; ;webserver/esp8266.h: 80: struct ESPUART uart;
+"82
+[; ;webserver/esp8266.h: 82: struct ESPUART uart;
 [v _uart `S837 ~T0 @X0 1 e ]
-"90
-[; ;webserver/esp8266.h: 90: espfirmware_t firmware;
+"92
+[; ;webserver/esp8266.h: 92: espfirmware_t firmware;
 [v _firmware `S838 ~T0 @X0 1 e ]
-"100
-[; ;webserver/esp8266.h: 100: states_t states;
+"102
+[; ;webserver/esp8266.h: 102: states_t states;
 [v _states `S839 ~T0 @X0 1 e ]
 "62 webserver/esp8266.c
 [; ;webserver/esp8266.c: 62: void esp_setUARTConfiguration(void) {
@@ -1514,7 +1627,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "63
 [; ;webserver/esp8266.c: 63:     printf("AT+UART=%d,%d,%d,%d,%d", uart.baudrate, uart.databits, uart.flowcontrol, uart.parity, uart.stopbits);
-[e ( _printf , , , , , (. :s 16C . _uart 0 -> . _uart 1 `i -> . _uart 4 `i -> . _uart 3 `i -> . _uart 2 `i ]
+[e ( _printf , , , , , (. :s 1C . _uart 0 -> . _uart 1 `i -> . _uart 4 `i -> . _uart 3 `i -> . _uart 2 `i ]
 "64
 [; ;webserver/esp8266.c: 64: }
 [e :UE 840 ]
@@ -1527,7 +1640,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "68
 [; ;webserver/esp8266.c: 68:     printf("AT+UART?");
-[e ( _printf :s 17C ]
+[e ( _printf :s 2C ]
 "69
 [; ;webserver/esp8266.c: 69:     while(!esp_uartReceive("OK")) {};
 [e $U 842  ]
@@ -1535,7 +1648,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 }
 [e :U 842 ]
-[e $ ! != -> ( _esp_uartReceive (1 :s 19C `i -> 0 `i 843  ]
+[e $ ! != -> ( _esp_uartReceive (1 :s 4C `i -> 0 `i 843  ]
 [e :U 844 ]
 "70
 [; ;webserver/esp8266.c: 70: }
@@ -1549,7 +1662,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "74
 [; ;webserver/esp8266.c: 74:     printf("AT+RST\r\n");
-[e ( _printf :s 20C ]
+[e ( _printf :s 5C ]
 "75
 [; ;webserver/esp8266.c: 75:     while(!esp_uartReceive("OK")) {};
 [e $U 846  ]
@@ -1557,7 +1670,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 }
 [e :U 846 ]
-[e $ ! != -> ( _esp_uartReceive (1 :s 22C `i -> 0 `i 847  ]
+[e $ ! != -> ( _esp_uartReceive (1 :s 7C `i -> 0 `i 847  ]
 [e :U 848 ]
 "76
 [; ;webserver/esp8266.c: 76: }
@@ -1571,7 +1684,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "104
 [; ;webserver/esp8266.c: 104:     printf("AT+GMR\r\n");
-[e ( _printf :s 23C ]
+[e ( _printf :s 8C ]
 "105
 [; ;webserver/esp8266.c: 105:     while (!esp_uartReceive("OK") || !esp_uartReceive("ERROR")) {};
 [e $U 850  ]
@@ -1579,7 +1692,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 }
 [e :U 850 ]
-[e $ || ! != -> ( _esp_uartReceive (1 :s 25C `i -> 0 `i ! != -> ( _esp_uartReceive (1 :s 27C `i -> 0 `i 851  ]
+[e $ || ! != -> ( _esp_uartReceive (1 :s 10C `i -> 0 `i ! != -> ( _esp_uartReceive (1 :s 12C `i -> 0 `i 851  ]
 [e :U 852 ]
 "106
 [; ;webserver/esp8266.c: 106: }
@@ -1593,7 +1706,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "140
 [; ;webserver/esp8266.c: 140:     printf("AT+CIUPDATE\r\n");
-[e ( _printf :s 28C ]
+[e ( _printf :s 13C ]
 "141
 [; ;webserver/esp8266.c: 141:     while (!esp_uartReceive("1") || !esp_uartReceive("ERROR")) {};
 [e $U 854  ]
@@ -1601,7 +1714,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 }
 [e :U 854 ]
-[e $ || ! != -> ( _esp_uartReceive (1 :s 30C `i -> 0 `i ! != -> ( _esp_uartReceive (1 :s 32C `i -> 0 `i 855  ]
+[e $ || ! != -> ( _esp_uartReceive (1 :s 15C `i -> 0 `i ! != -> ( _esp_uartReceive (1 :s 17C `i -> 0 `i 855  ]
 [e :U 856 ]
 "142
 [; ;webserver/esp8266.c: 142:     while (!esp_uartReceive("2") || !esp_uartReceive("ERROR")) {};
@@ -1610,7 +1723,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 }
 [e :U 857 ]
-[e $ || ! != -> ( _esp_uartReceive (1 :s 34C `i -> 0 `i ! != -> ( _esp_uartReceive (1 :s 36C `i -> 0 `i 858  ]
+[e $ || ! != -> ( _esp_uartReceive (1 :s 19C `i -> 0 `i ! != -> ( _esp_uartReceive (1 :s 21C `i -> 0 `i 858  ]
 [e :U 859 ]
 "143
 [; ;webserver/esp8266.c: 143:     while (!esp_uartReceive("3") || !esp_uartReceive("ERROR")) {};
@@ -1619,7 +1732,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 }
 [e :U 860 ]
-[e $ || ! != -> ( _esp_uartReceive (1 :s 38C `i -> 0 `i ! != -> ( _esp_uartReceive (1 :s 40C `i -> 0 `i 861  ]
+[e $ || ! != -> ( _esp_uartReceive (1 :s 23C `i -> 0 `i ! != -> ( _esp_uartReceive (1 :s 25C `i -> 0 `i 861  ]
 [e :U 862 ]
 "144
 [; ;webserver/esp8266.c: 144:     while (!esp_uartReceive("4") || !esp_uartReceive("ERROR")) {};
@@ -1628,7 +1741,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 }
 [e :U 863 ]
-[e $ || ! != -> ( _esp_uartReceive (1 :s 42C `i -> 0 `i ! != -> ( _esp_uartReceive (1 :s 44C `i -> 0 `i 864  ]
+[e $ || ! != -> ( _esp_uartReceive (1 :s 27C `i -> 0 `i ! != -> ( _esp_uartReceive (1 :s 29C `i -> 0 `i 864  ]
 [e :U 865 ]
 "145
 [; ;webserver/esp8266.c: 145:     while (!esp_uartReceive("OK") || !esp_uartReceive("ERROR")) {};
@@ -1637,7 +1750,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 }
 [e :U 866 ]
-[e $ || ! != -> ( _esp_uartReceive (1 :s 46C `i -> 0 `i ! != -> ( _esp_uartReceive (1 :s 48C `i -> 0 `i 867  ]
+[e $ || ! != -> ( _esp_uartReceive (1 :s 31C `i -> 0 `i ! != -> ( _esp_uartReceive (1 :s 33C `i -> 0 `i 867  ]
 [e :U 868 ]
 "146
 [; ;webserver/esp8266.c: 146: }
@@ -1651,7 +1764,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "151
 [; ;webserver/esp8266.c: 151:     printf("AT\r\n");
-[e ( _printf :s 49C ]
+[e ( _printf :s 34C ]
 "152
 [; ;webserver/esp8266.c: 152: }
 [e :UE 869 ]
@@ -1664,7 +1777,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "170
 [; ;webserver/esp8266.c: 170:     printf("ATE0\r\n");
-[e ( _printf :s 50C ]
+[e ( _printf :s 35C ]
 "171
 [; ;webserver/esp8266.c: 171:     while( !esp_uartReceive("OK") || !esp_uartReceive("ERROR") )
 [e $U 871  ]
@@ -1674,7 +1787,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 871 ]
 "171
 [; ;webserver/esp8266.c: 171:     while( !esp_uartReceive("OK") || !esp_uartReceive("ERROR") )
-[e $ || ! != -> ( _esp_uartReceive (1 :s 52C `i -> 0 `i ! != -> ( _esp_uartReceive (1 :s 54C `i -> 0 `i 872  ]
+[e $ || ! != -> ( _esp_uartReceive (1 :s 37C `i -> 0 `i ! != -> ( _esp_uartReceive (1 :s 39C `i -> 0 `i 872  ]
 [e :U 873 ]
 "173
 [; ;webserver/esp8266.c: 173: }
@@ -1688,7 +1801,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "191
 [; ;webserver/esp8266.c: 191:     printf("ATE1\r\n");
-[e ( _printf :s 55C ]
+[e ( _printf :s 40C ]
 "192
 [; ;webserver/esp8266.c: 192:     do { esp_waitForOK(); } while( server.busy );
 [e :U 877 ]
@@ -1714,7 +1827,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _AP_AUTOCONNECT -> -> 0 `i `uc ]
 "217
 [; ;webserver/esp8266.c: 217:     printf("AT+CWAUTOCONN=1\r\n");
-[e ( _printf :s 56C ]
+[e ( _printf :s 41C ]
 "219
 [; ;webserver/esp8266.c: 219: }
 [e :UE 878 ]
@@ -1818,7 +1931,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = *U + &U _string * -> _index `ux -> -> # *U &U _string `ui `ux -> -> 0 `i `uc ]
 "252
 [; ;webserver/esp8266.c: 252:                 if( (strcmp(string, "OK") == 0) || (strcmp(string, "no change") == 0) || (strcmp(string, "Send OK") == 0) ) {
-[e $ ! || || == ( _strcmp (2 , -> &U _string `*Cuc :s 57C -> 0 `i == ( _strcmp (2 , -> &U _string `*Cuc :s 58C -> 0 `i == ( _strcmp (2 , -> &U _string `*Cuc :s 59C -> 0 `i 888  ]
+[e $ ! || || == ( _strcmp (2 , -> &U _string `*Cuc :s 42C -> 0 `i == ( _strcmp (2 , -> &U _string `*Cuc :s 43C -> 0 `i == ( _strcmp (2 , -> &U _string `*Cuc :s 44C -> 0 `i 888  ]
 {
 "253
 [; ;webserver/esp8266.c: 253:                     states.ok = 1;
@@ -1840,7 +1953,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e $U 889  ]
 [e :U 888 ]
-[e $ ! == ( _strcmp (2 , -> &U _string `*Cuc :s 60C -> 0 `i 890  ]
+[e $ ! == ( _strcmp (2 , -> &U _string `*Cuc :s 45C -> 0 `i 890  ]
 {
 "259
 [; ;webserver/esp8266.c: 259:                     server.busy = 1;
@@ -1853,7 +1966,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e $U 891  ]
 [e :U 890 ]
-[e $ ! == ( _strcmp (2 , -> &U _string `*Cuc :s 61C -> 0 `i 892  ]
+[e $ ! == ( _strcmp (2 , -> &U _string `*Cuc :s 46C -> 0 `i 892  ]
 {
 "262
 [; ;webserver/esp8266.c: 262:                     states.ok = 0;
@@ -1872,7 +1985,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e $U 893  ]
 [e :U 892 ]
-[e $ ! == ( _strcmp (2 , -> &U _string `*Cuc :s 62C -> 0 `i 894  ]
+[e $ ! == ( _strcmp (2 , -> &U _string `*Cuc :s 47C -> 0 `i 894  ]
 {
 "267
 [; ;webserver/esp8266.c: 267:                     states.ok = 0;
@@ -1891,11 +2004,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e $U 895  ]
 [e :U 894 ]
-[e $ ! == ( _strcmp (2 , -> &U _string `*Cuc :s 63C -> 0 `i 896  ]
+[e $ ! == ( _strcmp (2 , -> &U _string `*Cuc :s 48C -> 0 `i 896  ]
 {
 "272
 [; ;webserver/esp8266.c: 272:                     strcpy((char*)server.ssid, "");
-[e ( _strcpy (2 , -> &U . _server 4 `*uc :s 64C ]
+[e ( _strcpy (2 , -> &U . _server 4 `*uc :s 49C ]
 "273
 [; ;webserver/esp8266.c: 273:                     server.wificonnected = 0;
 [e = . _server 7 -> -> 0 `i `a ]
@@ -1916,7 +2029,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e $U 897  ]
 [e :U 896 ]
-[e $ ! == ( _strcmp (2 , -> &U _string `*Cuc :s 65C -> 0 `i 898  ]
+[e $ ! == ( _strcmp (2 , -> &U _string `*Cuc :s 50C -> 0 `i 898  ]
 {
 "279
 [; ;webserver/esp8266.c: 279:                     server.wificonnected = 1;
@@ -1929,7 +2042,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e $U 899  ]
 [e :U 898 ]
-[e $ ! == ( _strcmp (2 , -> &U _string `*Cuc :s 66C -> 0 `i 900  ]
+[e $ ! == ( _strcmp (2 , -> &U _string `*Cuc :s 51C -> 0 `i 900  ]
 {
 "282
 [; ;webserver/esp8266.c: 282:                     server.wifigotip = 1;
@@ -1948,7 +2061,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e $U 901  ]
 [e :U 900 ]
-[e $ ! == ( _strcmp (2 , -> &U _string `*Cuc :s 67C -> 0 `i 902  ]
+[e $ ! == ( _strcmp (2 , -> &U _string `*Cuc :s 52C -> 0 `i 902  ]
 {
 "287
 [; ;webserver/esp8266.c: 287:                     server.clientConnected = 0;
@@ -1961,7 +2074,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e $U 903  ]
 [e :U 902 ]
-[e $ ! == ( _strcmp (2 , -> &U _string `*Cuc :s 68C -> 0 `i 904  ]
+[e $ ! == ( _strcmp (2 , -> &U _string `*Cuc :s 53C -> 0 `i 904  ]
 {
 "290
 [; ;webserver/esp8266.c: 290:                     server.clientConnected = 0;
@@ -1974,7 +2087,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e $U 905  ]
 [e :U 904 ]
-[e $ ! == ( _strcmp (2 , -> &U _string `*Cuc :s 69C -> 0 `i 906  ]
+[e $ ! == ( _strcmp (2 , -> &U _string `*Cuc :s 54C -> 0 `i 906  ]
 {
 "293
 [; ;webserver/esp8266.c: 293:                     server.clientConnected = 1;
@@ -1987,7 +2100,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e $U 907  ]
 [e :U 906 ]
-[e $ ! == ( _strcmp (2 , -> &U _string `*Cuc :s 70C -> 0 `i 908  ]
+[e $ ! == ( _strcmp (2 , -> &U _string `*Cuc :s 55C -> 0 `i 908  ]
 {
 "296
 [; ;webserver/esp8266.c: 296:                     server.clientConnected = 1;
@@ -2000,7 +2113,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e $U 909  ]
 [e :U 908 ]
-[e $ ! == ( _strncmp (3 , , -> &U _string `*Cuc :s 71C -> -> 4 `i `ui -> 0 `i 910  ]
+[e $ ! == ( _strncmp (3 , , -> &U _string `*Cuc :s 56C -> -> 4 `i `ui -> 0 `i 910  ]
 {
 "299
 [; ;webserver/esp8266.c: 299:                     server.clientAvailable = 1;
@@ -2016,7 +2129,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e $U 911  ]
 [e :U 910 ]
-[e $ ! == ( _strncmp (3 , , -> &U _string `*Cuc :s 72C -> -> 6 `i `ui -> 0 `i 912  ]
+[e $ ! == ( _strncmp (3 , , -> &U _string `*Cuc :s 57C -> -> 6 `i `ui -> 0 `i 912  ]
 {
 "303
 [; ;webserver/esp8266.c: 303:                     do { LATAbits.LATA4 = 1; } while(0);
@@ -2030,7 +2143,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e $U 916  ]
 [e :U 912 ]
-[e $ ! == ( _strncmp (3 , , -> &U _string `*Cuc :s 73C -> -> 5 `i `ui -> 0 `i 917  ]
+[e $ ! == ( _strncmp (3 , , -> &U _string `*Cuc :s 58C -> -> 5 `i `ui -> 0 `i 917  ]
 {
 "305
 [; ;webserver/esp8266.c: 305:                     server.wificonnected = 0;
@@ -2046,7 +2159,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e $U 918  ]
 [e :U 917 ]
-[e $ ! == ( _strncmp (3 , , -> &U _string `*Cuc :s 74C -> -> 6 `i `ui -> 0 `i 919  ]
+[e $ ! == ( _strncmp (3 , , -> &U _string `*Cuc :s 59C -> -> 6 `i `ui -> 0 `i 919  ]
 {
 "309
 [; ;webserver/esp8266.c: 309:                     char src[40];
@@ -2059,7 +2172,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _length `uc ~T0 @X0 1 a ]
 "312
 [; ;webserver/esp8266.c: 312:                     if( strcmp((char*)server.ssid, "") == 0) {
-[e $ ! == ( _strcmp (2 , -> -> &U . _server 4 `*uc `*Cuc :s 75C -> 0 `i 920  ]
+[e $ ! == ( _strcmp (2 , -> -> &U . _server 4 `*uc `*Cuc :s 60C -> 0 `i 920  ]
 {
 "313
 [; ;webserver/esp8266.c: 313:                         memset(dest, '\0', sizeof(dest));
@@ -2085,11 +2198,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e $U 921  ]
 [e :U 919 ]
-[e $ ! == ( _strncmp (3 , , -> &U _string `*Cuc :s 76C -> -> 14 `i `ui -> 0 `i 922  ]
+[e $ ! == ( _strncmp (3 , , -> &U _string `*Cuc :s 61C -> -> 14 `i `ui -> 0 `i 922  ]
 {
 "320
 [; ;webserver/esp8266.c: 320:                     printf("SoftAP Client connected\r\n");
-[e ( _printf :s 77C ]
+[e ( _printf :s 62C ]
 "321
 [; ;webserver/esp8266.c: 321:                     break;
 [e $U 883  ]
@@ -2098,18 +2211,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e $U 923  ]
 [e :U 922 ]
-[e $ ! == ( _strncmp (3 , , -> &U _string `*Cuc :s 78C -> -> 12 `i `ui -> 0 `i 924  ]
+[e $ ! == ( _strncmp (3 , , -> &U _string `*Cuc :s 63C -> -> 12 `i `ui -> 0 `i 924  ]
 {
 "325
 [; ;webserver/esp8266.c: 325:                 }else if ( strncmp(string, ">", 1) == 0 ) {
 }
 [e $U 925  ]
 [e :U 924 ]
-[e $ ! == ( _strncmp (3 , , -> &U _string `*Cuc :s 79C -> -> 1 `i `ui -> 0 `i 926  ]
+[e $ ! == ( _strncmp (3 , , -> &U _string `*Cuc :s 64C -> -> 1 `i `ui -> 0 `i 926  ]
 {
 "326
 [; ;webserver/esp8266.c: 326:                     if ( strncmp(response, ">", 1) == 0 )
-[e $ ! == ( _strncmp (3 , , -> _response `*Cuc :s 80C -> -> 1 `i `ui -> 0 `i 927  ]
+[e $ ! == ( _strncmp (3 , , -> _response `*Cuc :s 65C -> -> 1 `i `ui -> 0 `i 927  ]
 "327
 [; ;webserver/esp8266.c: 327:                         return 1;
 [e ) -> -> 1 `i `uc ]
@@ -2221,7 +2334,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "434
 [; ;webserver/esp8266.c: 434:         esp_uartReceive("OK");
-[e ( _esp_uartReceive (1 :s 81C ]
+[e ( _esp_uartReceive (1 :s 66C ]
 "435
 [; ;webserver/esp8266.c: 435:     }
 }
@@ -2466,84 +2579,69 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :UE 939 ]
 }
 [p f _printf 9437824 ]
-[a 62C 114 101 97 100 121 0 ]
-[a 4C 87 117 103 103 97 78 101 116 0 ]
-[a 2C 102 114 98 80 67 119 118 82 75 113 0 ]
-[a 5C 102 114 101 100 97 103 115 98 97 110 97 110 0 ]
-[a 58C 110 111 32 99 104 97 110 103 101 0 ]
-[a 16C 65 84 43 85 65 82 84 61 37 100 44 37 100 44 37 100 44 37 100 44 37 100 0 ]
-[a 63C 87 73 70 73 32 68 73 83 67 79 78 78 69 67 84 0 ]
-[a 70C 49 44 67 79 78 78 69 67 84 0 ]
-[a 69C 48 44 67 79 78 78 69 67 84 0 ]
-[a 3C 87 80 65 50 32 65 69 83 0 ]
-[a 6C 87 80 65 50 32 65 69 83 0 ]
-[a 9C 87 80 65 50 32 65 69 83 0 ]
-[a 26C 69 82 82 79 82 0 ]
-[a 27C 69 82 82 79 82 0 ]
-[a 31C 69 82 82 79 82 0 ]
+[a 47C 114 101 97 100 121 0 ]
+[a 43C 110 111 32 99 104 97 110 103 101 0 ]
+[a 1C 65 84 43 85 65 82 84 61 37 100 44 37 100 44 37 100 44 37 100 44 37 100 0 ]
+[a 48C 87 73 70 73 32 68 73 83 67 79 78 78 69 67 84 0 ]
+[a 55C 49 44 67 79 78 78 69 67 84 0 ]
+[a 54C 48 44 67 79 78 78 69 67 84 0 ]
+[a 11C 69 82 82 79 82 0 ]
+[a 12C 69 82 82 79 82 0 ]
+[a 16C 69 82 82 79 82 0 ]
+[a 17C 69 82 82 79 82 0 ]
+[a 20C 69 82 82 79 82 0 ]
+[a 21C 69 82 82 79 82 0 ]
+[a 24C 69 82 82 79 82 0 ]
+[a 25C 69 82 82 79 82 0 ]
+[a 28C 69 82 82 79 82 0 ]
+[a 29C 69 82 82 79 82 0 ]
 [a 32C 69 82 82 79 82 0 ]
-[a 35C 69 82 82 79 82 0 ]
-[a 36C 69 82 82 79 82 0 ]
+[a 33C 69 82 82 79 82 0 ]
+[a 38C 69 82 82 79 82 0 ]
 [a 39C 69 82 82 79 82 0 ]
-[a 40C 69 82 82 79 82 0 ]
-[a 43C 69 82 82 79 82 0 ]
-[a 44C 69 82 82 79 82 0 ]
-[a 47C 69 82 82 79 82 0 ]
-[a 48C 69 82 82 79 82 0 ]
-[a 53C 69 82 82 79 82 0 ]
-[a 54C 69 82 82 79 82 0 ]
-[a 61C 69 82 82 79 82 0 ]
-[a 78C 43 67 73 70 83 82 58 83 84 65 73 80 0 ]
-[a 66C 87 73 70 73 32 71 79 84 32 73 80 0 ]
-[a 74C 43 67 87 76 65 80 0 ]
-[a 72C 43 67 87 74 65 80 0 ]
-[a 73C 78 111 32 65 80 0 ]
-[a 59C 83 101 110 100 32 79 75 0 ]
-[a 18C 79 75 0 ]
-[a 19C 79 75 0 ]
-[a 21C 79 75 0 ]
-[a 22C 79 75 0 ]
-[a 24C 79 75 0 ]
-[a 25C 79 75 0 ]
-[a 45C 79 75 0 ]
-[a 46C 79 75 0 ]
-[a 51C 79 75 0 ]
-[a 52C 79 75 0 ]
-[a 57C 79 75 0 ]
-[a 81C 79 75 0 ]
-[a 71C 43 73 80 68 0 ]
-[a 7C 65 83 85 83 95 88 48 48 80 68 0 ]
-[a 76C 43 83 84 65 95 67 79 78 78 69 67 84 69 68 0 ]
-[a 65C 87 73 70 73 32 67 79 78 78 69 67 84 69 68 0 ]
-[a 68C 49 44 67 76 79 83 69 68 0 ]
-[a 67C 48 44 67 76 79 83 69 68 0 ]
-[a 17C 65 84 43 85 65 82 84 63 0 ]
-[a 79C 62 0 ]
-[a 80C 62 0 ]
-[a 8C 48 99 48 100 56 53 57 57 0 ]
-[a 1C 83 83 73 68 45 74 82 122 99 77 52 0 ]
-[a 41C 52 0 ]
-[a 42C 52 0 ]
-[a 37C 51 0 ]
-[a 38C 51 0 ]
-[a 33C 50 0 ]
-[a 34C 50 0 ]
-[a 29C 49 0 ]
-[a 30C 49 0 ]
-[a 60C 98 117 115 121 32 112 46 46 46 0 ]
-[a 77C 83 111 102 116 65 80 32 67 108 105 101 110 116 32 99 111 110 110 101 99 116 101 100 13 10 0 ]
-[a 20C 65 84 43 82 83 84 13 10 0 ]
-[a 49C 65 84 13 10 0 ]
-[a 23C 65 84 43 71 77 82 13 10 0 ]
-[a 28C 65 84 43 67 73 85 80 68 65 84 69 13 10 0 ]
-[a 55C 65 84 69 49 13 10 0 ]
-[a 56C 65 84 43 67 87 65 85 84 79 67 79 78 78 61 49 13 10 0 ]
-[a 50C 65 84 69 48 13 10 0 ]
-[a 10C 0 ]
-[a 11C 0 ]
-[a 12C 0 ]
-[a 13C 0 ]
-[a 14C 0 ]
-[a 15C 0 ]
-[a 64C 0 ]
-[a 75C 0 ]
+[a 46C 69 82 82 79 82 0 ]
+[a 63C 43 67 73 70 83 82 58 83 84 65 73 80 0 ]
+[a 51C 87 73 70 73 32 71 79 84 32 73 80 0 ]
+[a 59C 43 67 87 76 65 80 0 ]
+[a 57C 43 67 87 74 65 80 0 ]
+[a 58C 78 111 32 65 80 0 ]
+[a 44C 83 101 110 100 32 79 75 0 ]
+[a 3C 79 75 0 ]
+[a 4C 79 75 0 ]
+[a 6C 79 75 0 ]
+[a 7C 79 75 0 ]
+[a 9C 79 75 0 ]
+[a 10C 79 75 0 ]
+[a 30C 79 75 0 ]
+[a 31C 79 75 0 ]
+[a 36C 79 75 0 ]
+[a 37C 79 75 0 ]
+[a 42C 79 75 0 ]
+[a 66C 79 75 0 ]
+[a 56C 43 73 80 68 0 ]
+[a 61C 43 83 84 65 95 67 79 78 78 69 67 84 69 68 0 ]
+[a 50C 87 73 70 73 32 67 79 78 78 69 67 84 69 68 0 ]
+[a 53C 49 44 67 76 79 83 69 68 0 ]
+[a 52C 48 44 67 76 79 83 69 68 0 ]
+[a 2C 65 84 43 85 65 82 84 63 0 ]
+[a 64C 62 0 ]
+[a 65C 62 0 ]
+[a 26C 52 0 ]
+[a 27C 52 0 ]
+[a 22C 51 0 ]
+[a 23C 51 0 ]
+[a 18C 50 0 ]
+[a 19C 50 0 ]
+[a 14C 49 0 ]
+[a 15C 49 0 ]
+[a 45C 98 117 115 121 32 112 46 46 46 0 ]
+[a 62C 83 111 102 116 65 80 32 67 108 105 101 110 116 32 99 111 110 110 101 99 116 101 100 13 10 0 ]
+[a 5C 65 84 43 82 83 84 13 10 0 ]
+[a 34C 65 84 13 10 0 ]
+[a 8C 65 84 43 71 77 82 13 10 0 ]
+[a 13C 65 84 43 67 73 85 80 68 65 84 69 13 10 0 ]
+[a 40C 65 84 69 49 13 10 0 ]
+[a 41C 65 84 43 67 87 65 85 84 79 67 79 78 78 61 49 13 10 0 ]
+[a 35C 65 84 69 48 13 10 0 ]
+[a 49C 0 ]
+[a 60C 0 ]

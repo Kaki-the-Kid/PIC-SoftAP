@@ -18,7 +18,7 @@
 # 1 "eeprom/eeprom.h" 1
 # 10 "eeprom/eeprom.h"
 # 1 "eeprom/../mcc_generated_files/mcc.h" 1
-# 49 "eeprom/../mcc_generated_files/mcc.h"
+# 51 "eeprom/../mcc_generated_files/mcc.h"
 # 1 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -9139,17 +9139,19 @@ extern __attribute__((nonreentrant)) void _delaywdt(unsigned long);
 #pragma intrinsic(_delay3)
 extern __attribute__((nonreentrant)) void _delay3(unsigned char);
 # 33 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\\pic\\include\\xc.h" 2 3
-# 49 "eeprom/../mcc_generated_files/mcc.h" 2
+# 51 "eeprom/../mcc_generated_files/mcc.h" 2
+
+
 
 # 1 "eeprom/../mcc_generated_files/device_config.h" 1
-# 50 "eeprom/../mcc_generated_files/mcc.h" 2
+# 54 "eeprom/../mcc_generated_files/mcc.h" 2
 
 # 1 "eeprom/../mcc_generated_files/pin_manager.h" 1
 # 201 "eeprom/../mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
 # 213 "eeprom/../mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
-# 51 "eeprom/../mcc_generated_files/mcc.h" 2
+# 55 "eeprom/../mcc_generated_files/mcc.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdint.h" 1 3
 # 22 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdint.h" 3
@@ -9236,15 +9238,15 @@ typedef int32_t int_fast32_t;
 typedef uint16_t uint_fast16_t;
 typedef uint32_t uint_fast32_t;
 # 144 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdint.h" 2 3
-# 52 "eeprom/../mcc_generated_files/mcc.h" 2
+# 56 "eeprom/../mcc_generated_files/mcc.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdbool.h" 1 3
-# 53 "eeprom/../mcc_generated_files/mcc.h" 2
+# 57 "eeprom/../mcc_generated_files/mcc.h" 2
 
 # 1 "eeprom/../mcc_generated_files/interrupt_manager.h" 1
 # 110 "eeprom/../mcc_generated_files/interrupt_manager.h"
 void INTERRUPT_Initialize (void);
-# 54 "eeprom/../mcc_generated_files/mcc.h" 2
+# 58 "eeprom/../mcc_generated_files/mcc.h" 2
 
 # 1 "eeprom/../mcc_generated_files/tmr2.h" 1
 # 104 "eeprom/../mcc_generated_files/tmr2.h"
@@ -9269,7 +9271,7 @@ void TMR2_ISR(void);
 extern void (*TMR2_InterruptHandler)(void);
 # 380 "eeprom/../mcc_generated_files/tmr2.h"
 void TMR2_DefaultInterruptHandler(void);
-# 55 "eeprom/../mcc_generated_files/mcc.h" 2
+# 59 "eeprom/../mcc_generated_files/mcc.h" 2
 
 # 1 "eeprom/../mcc_generated_files/tmr4.h" 1
 # 104 "eeprom/../mcc_generated_files/tmr4.h"
@@ -9294,7 +9296,7 @@ void TMR4_ISR(void);
 extern void (*TMR4_InterruptHandler)(void);
 # 380 "eeprom/../mcc_generated_files/tmr4.h"
 void TMR4_DefaultInterruptHandler(void);
-# 56 "eeprom/../mcc_generated_files/mcc.h" 2
+# 60 "eeprom/../mcc_generated_files/mcc.h" 2
 
 # 1 "eeprom/../mcc_generated_files/eusart1.h" 1
 # 57 "eeprom/../mcc_generated_files/eusart1.h"
@@ -9489,10 +9491,10 @@ void EUSART1_SetErrorHandler(void (* interruptHandler)(void));
 void EUSART1_SetTxInterruptHandler(void (* interruptHandler)(void));
 # 506 "eeprom/../mcc_generated_files/eusart1.h"
 void EUSART1_SetRxInterruptHandler(void (* interruptHandler)(void));
-# 57 "eeprom/../mcc_generated_files/mcc.h" 2
-# 72 "eeprom/../mcc_generated_files/mcc.h"
+# 61 "eeprom/../mcc_generated_files/mcc.h" 2
+# 76 "eeprom/../mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
-# 85 "eeprom/../mcc_generated_files/mcc.h"
+# 89 "eeprom/../mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
 # 10 "eeprom/eeprom.h" 2
 
@@ -9603,8 +9605,8 @@ uint8_t data_out[4];
 
 void i2c_init(void);
 void i2c_portScan(void);
-void i2c_write_serial(uint8_t, uint8_t*, uint8_t);
-void i2c_read_serial(uint8_t, uint8_t *, uint8_t);
+void i2c_write_serial(uint8_t, char*, uint8_t);
+void i2c_read_serial(uint8_t, char*, uint8_t);
 
 void i2c_master_wait(void);
 void i2c_master_start(void);

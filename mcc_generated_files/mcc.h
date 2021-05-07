@@ -43,10 +43,14 @@
     OF FEES, IF ANY, THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS 
     SOFTWARE.
 */
-
+#pragma once
 #ifndef MCC_H
 #define	MCC_H
+
+#ifndef _XC_H_
 #include <xc.h>
+#endif
+
 #include "device_config.h"
 #include "pin_manager.h"
 #include <stdint.h>

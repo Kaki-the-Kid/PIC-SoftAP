@@ -130,8 +130,8 @@ void sensor_updateHumidity(uint8_t moist) {
         output[3] = moist | 0b00110000;
     }
 
-    i2c_write_serial(display_addr, (uint8_t*) moist_pos, 2);
-    i2c_write_serial(display_addr, output, 4);
+    i2c_write_serial(display_addr, *moist_pos, 2);
+    i2c_write_serial(display_addr, *output, 4);
 }
 
 

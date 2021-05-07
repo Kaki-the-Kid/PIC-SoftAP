@@ -14,7 +14,7 @@
 
 
 # 1 "webserver/../mcc_generated_files/mcc.h" 1
-# 49 "webserver/../mcc_generated_files/mcc.h"
+# 51 "webserver/../mcc_generated_files/mcc.h"
 # 1 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -9135,17 +9135,19 @@ extern __attribute__((nonreentrant)) void _delaywdt(unsigned long);
 #pragma intrinsic(_delay3)
 extern __attribute__((nonreentrant)) void _delay3(unsigned char);
 # 33 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\\pic\\include\\xc.h" 2 3
-# 49 "webserver/../mcc_generated_files/mcc.h" 2
+# 51 "webserver/../mcc_generated_files/mcc.h" 2
+
+
 
 # 1 "webserver/../mcc_generated_files/device_config.h" 1
-# 50 "webserver/../mcc_generated_files/mcc.h" 2
+# 54 "webserver/../mcc_generated_files/mcc.h" 2
 
 # 1 "webserver/../mcc_generated_files/pin_manager.h" 1
 # 201 "webserver/../mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
 # 213 "webserver/../mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
-# 51 "webserver/../mcc_generated_files/mcc.h" 2
+# 55 "webserver/../mcc_generated_files/mcc.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdint.h" 1 3
 # 22 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdint.h" 3
@@ -9232,15 +9234,15 @@ typedef int32_t int_fast32_t;
 typedef uint16_t uint_fast16_t;
 typedef uint32_t uint_fast32_t;
 # 144 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdint.h" 2 3
-# 52 "webserver/../mcc_generated_files/mcc.h" 2
+# 56 "webserver/../mcc_generated_files/mcc.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdbool.h" 1 3
-# 53 "webserver/../mcc_generated_files/mcc.h" 2
+# 57 "webserver/../mcc_generated_files/mcc.h" 2
 
 # 1 "webserver/../mcc_generated_files/interrupt_manager.h" 1
 # 110 "webserver/../mcc_generated_files/interrupt_manager.h"
 void INTERRUPT_Initialize (void);
-# 54 "webserver/../mcc_generated_files/mcc.h" 2
+# 58 "webserver/../mcc_generated_files/mcc.h" 2
 
 # 1 "webserver/../mcc_generated_files/tmr2.h" 1
 # 104 "webserver/../mcc_generated_files/tmr2.h"
@@ -9265,7 +9267,7 @@ void TMR2_ISR(void);
 extern void (*TMR2_InterruptHandler)(void);
 # 380 "webserver/../mcc_generated_files/tmr2.h"
 void TMR2_DefaultInterruptHandler(void);
-# 55 "webserver/../mcc_generated_files/mcc.h" 2
+# 59 "webserver/../mcc_generated_files/mcc.h" 2
 
 # 1 "webserver/../mcc_generated_files/tmr4.h" 1
 # 104 "webserver/../mcc_generated_files/tmr4.h"
@@ -9290,7 +9292,7 @@ void TMR4_ISR(void);
 extern void (*TMR4_InterruptHandler)(void);
 # 380 "webserver/../mcc_generated_files/tmr4.h"
 void TMR4_DefaultInterruptHandler(void);
-# 56 "webserver/../mcc_generated_files/mcc.h" 2
+# 60 "webserver/../mcc_generated_files/mcc.h" 2
 
 # 1 "webserver/../mcc_generated_files/eusart1.h" 1
 # 57 "webserver/../mcc_generated_files/eusart1.h"
@@ -9485,10 +9487,10 @@ void EUSART1_SetErrorHandler(void (* interruptHandler)(void));
 void EUSART1_SetTxInterruptHandler(void (* interruptHandler)(void));
 # 506 "webserver/../mcc_generated_files/eusart1.h"
 void EUSART1_SetRxInterruptHandler(void (* interruptHandler)(void));
-# 57 "webserver/../mcc_generated_files/mcc.h" 2
-# 72 "webserver/../mcc_generated_files/mcc.h"
+# 61 "webserver/../mcc_generated_files/mcc.h" 2
+# 76 "webserver/../mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
-# 85 "webserver/../mcc_generated_files/mcc.h"
+# 89 "webserver/../mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
 # 7 "webserver/esp8266.c" 2
 
@@ -9553,7 +9555,7 @@ void *memccpy (void *restrict, const void *restrict, int, size_t);
 
 
 # 1 "webserver/esp8266.h" 1
-# 12 "webserver/esp8266.h"
+# 18 "webserver/esp8266.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\ctype.h" 1 3
 # 10 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\ctype.h" 3
 int isalnum(int);
@@ -9592,11 +9594,7 @@ int toupper_l(int, locale_t);
 
 int isascii(int);
 int toascii(int);
-# 12 "webserver/esp8266.h" 2
-
-
-
-
+# 18 "webserver/esp8266.h" 2
 
 
 
@@ -9659,7 +9657,7 @@ void tcpip_sendHTTPPage(void);
 void toogleGPIO(uint8_t, uint8_t);
 # 94 "webserver/tcpip.h"
 const char htmlMsgPart1[] = "<!DOCTYPE html><html xmlns=\"http://www.w3.org/1999/xhtml\"><head><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><link rel=\"icon\" href=\"data:,\"><style>html { font-family: Helvetica; display: inline-block; margin: 0px auto; text-align: center;} .button { background-color: #195B6A; border: none; color: white; padding: 16px 40px; text-decoration: none; font-size: 30px; margin: 2px; cursor: pointer;} .button2 {background-color: #77878A;}</style></head><body><h1>ESP8266 Web Server</h1>";
-# 19 "webserver/esp8266.h" 2
+# 21 "webserver/esp8266.h" 2
 
 
 
@@ -9687,15 +9685,20 @@ typedef struct WIFIMode WIFIMode_t;
 WIFIMode_t wifi;
 
 
-typedef struct item_t { char *ssid; char *password; char *encryption; } item_t;
-item_t network_table[] = {
+typedef struct KnownNetworks {
+    char ssid[50];
+    char password[50];
+    char encryption[50];
+} knownnetworks;
+
+knownnetworks network_table[] = {
     { "SSID-JRzcM4", "frbPCwvRKq", "WPA2 AES" },
     { "WuggaNet", "fredagsbanan", "WPA2 AES" },
     { "ASUS_X00PD", "0c0d8599", "WPA2 AES" },
     { "", "", "" },
     { "", "", ""}
 };
-# 23 "webserver/esp8266.h" 2
+# 25 "webserver/esp8266.h" 2
 
 
 
@@ -9704,7 +9707,7 @@ item_t network_table[] = {
 # 16 "webserver/dhcp.h"
 void setupDHCP(void);
 void esp_setSoftAPDHCPIP(uint8_t *, uint8_t *, uint8_t, uint8_t );
-# 27 "webserver/esp8266.h" 2
+# 29 "webserver/esp8266.h" 2
 
 
 
@@ -9714,13 +9717,13 @@ void esp_setSoftAPDHCPIP(uint8_t *, uint8_t *, uint8_t, uint8_t );
 void setDNSServers(void);
 void setDNSDomain(void);
 void wifi_mDNSConfig(void);
-# 31 "webserver/esp8266.h" 2
+# 33 "webserver/esp8266.h" 2
 
 
 
 
 # 1 "webserver/esptouch.h" 1
-# 35 "webserver/esp8266.h" 2
+# 37 "webserver/esp8266.h" 2
 
 
 
@@ -9729,7 +9732,7 @@ void wifi_mDNSConfig(void);
 # 17 "webserver/sntp.h"
 void sntp_sntpInit(void);
 void sntp_checkTime(void);
-# 39 "webserver/esp8266.h" 2
+# 41 "webserver/esp8266.h" 2
 
 
 
@@ -9749,19 +9752,19 @@ void softap_SoftAPInit(void);
 void softap_getSoftAPConnectedIPs(void);
 void softap_getSoftAPIP(void);
 void softap_setSoftAPIP(void);
-# 43 "webserver/esp8266.h" 2
+# 45 "webserver/esp8266.h" 2
 
 
 
 
 # 1 "webserver/ssl.h" 1
-# 47 "webserver/esp8266.h" 2
+# 49 "webserver/esp8266.h" 2
 
 
 
 
 # 1 "webserver/wps.h" 1
-# 51 "webserver/esp8266.h" 2
+# 53 "webserver/esp8266.h" 2
 
 
 
@@ -9772,15 +9775,15 @@ uint8_t data_out[4];
 
 void i2c_init(void);
 void i2c_portScan(void);
-void i2c_write_serial(uint8_t, uint8_t*, uint8_t);
-void i2c_read_serial(uint8_t, uint8_t *, uint8_t);
+void i2c_write_serial(uint8_t, char*, uint8_t);
+void i2c_read_serial(uint8_t, char*, uint8_t);
 
 void i2c_master_wait(void);
 void i2c_master_start(void);
 void i2c_master_stop(void);
 void i2c_master_ack(void);
 void i2c_master_nack(void);
-# 55 "webserver/esp8266.h" 2
+# 57 "webserver/esp8266.h" 2
 
 
 
@@ -9799,8 +9802,8 @@ char text[50] = "";
 void lcd_displayInit(void);
 void lcd_write(char *, uint8_t, uint8_t);
 void lcd_outputPosXY(char *string, uint8_t posX, uint8_t posY);
-# 59 "webserver/esp8266.h" 2
-# 70 "webserver/esp8266.h"
+# 61 "webserver/esp8266.h" 2
+# 72 "webserver/esp8266.h"
 uint8_t uartInput[128];
 
 

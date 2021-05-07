@@ -31,7 +31,7 @@ const char rtc_cssTemplate[]    = "body{background:black;}#clock{position:absolu
 const char rtc_scriptTemplate[] = "<script>function startTime(){var today=new Date();var h=today.getHours();var m=today.getMinutes();var s=today.getSeconds();m=checkTime(m);s=checkTime(s);document.getElementById('clock').innerHTML=h+':'+m+':'+s;var t=setTimeout(startTime,500);}function checkTime(i){if(i<10){i='0'+i};return i;}</script>";
 
 uint8_t       _clockDataString[] = {"hh:mm:ss - dd-mm-yyyy"};
-uint8_t       rtcData[16];
+char        rtcData[16];
 uint8_t       rtc_data[1];
 
 

@@ -2,14 +2,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 "111 C:\Program Files\Microchip\xc8\v2.32\pic\include\c99\stdio.h
 [v _printf `(i ~T0 @X0 0 ev`*Cuc ]
 "34 eeprom/../i2c/i2c.h
-[; ;eeprom/../i2c/i2c.h: 34: void i2c_write_serial(uint8_t, uint8_t*, uint8_t);
+[; ;eeprom/../i2c/i2c.h: 34: void i2c_write_serial(uint8_t, char*, uint8_t);
 [v _i2c_write_serial `(v ~T0 @X0 0 ef3`uc`*uc`uc ]
 [v F5708 `(v ~T0 @X0 1 tf1`ul ]
 "203 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\pic18.h
 [v __delay `JF5708 ~T0 @X0 0 e ]
 [p i __delay ]
 "35 eeprom/../i2c/i2c.h
-[; ;eeprom/../i2c/i2c.h: 35: void i2c_read_serial(uint8_t, uint8_t *, uint8_t);
+[; ;eeprom/../i2c/i2c.h: 35: void i2c_read_serial(uint8_t, char*, uint8_t);
 [v _i2c_read_serial `(v ~T0 @X0 0 ef3`uc`*uc`uc ]
 "113 C:\Program Files\Microchip\xc8\v2.32\pic\include\c99\stdio.h
 [v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
@@ -2913,13 +2913,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _printf :s 1C ]
 "22
 [; ;eeprom/eeprom.c: 22:     i2c_write_serial(eeprom_addr, (char*) eeprom_test, 17);
-[e ( _i2c_write_serial (3 , , _eeprom_addr -> -> &U _eeprom_test `*uc `*uc -> -> 17 `i `uc ]
+[e ( _i2c_write_serial (3 , , _eeprom_addr -> &U _eeprom_test `*uc -> -> 17 `i `uc ]
 "23
 [; ;eeprom/eeprom.c: 23:     printf("Skrivning faerdig\r\n");
 [e ( _printf :s 2C ]
 "25
 [; ;eeprom/eeprom.c: 25:     i2c_write_serial(eeprom_addr, (char*) eeprom_pointer, 2);
-[e ( _i2c_write_serial (3 , , _eeprom_addr -> -> &U _eeprom_pointer `*uc `*uc -> -> 2 `i `uc ]
+[e ( _i2c_write_serial (3 , , _eeprom_addr -> &U _eeprom_pointer `*uc -> -> 2 `i `uc ]
 "26
 [; ;eeprom/eeprom.c: 26:     printf("Laes fra EEPRROM\r\n");
 [e ( _printf :s 3C ]
@@ -2928,7 +2928,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( __delay (1 -> * -> -> 20 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
 "29
 [; ;eeprom/eeprom.c: 29:     i2c_read_serial(eeprom_addr, eeprom_buffer, 15);
-[e ( _i2c_read_serial (3 , , _eeprom_addr &U _eeprom_buffer -> -> 15 `i `uc ]
+[e ( _i2c_read_serial (3 , , _eeprom_addr -> &U _eeprom_buffer `*uc -> -> 15 `i `uc ]
 "30
 [; ;eeprom/eeprom.c: 30:     printf("Og print dem ud igen\r\n");
 [e ( _printf :s 4C ]
@@ -2963,10 +2963,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "40
 [; ;eeprom/eeprom.c: 40:     i2c_write_serial(eeprom_addr, (char*) eeprom_pointer, 2);
-[e ( _i2c_write_serial (3 , , _eeprom_addr -> -> &U _eeprom_pointer `*uc `*uc -> -> 2 `i `uc ]
+[e ( _i2c_write_serial (3 , , _eeprom_addr -> &U _eeprom_pointer `*uc -> -> 2 `i `uc ]
 "41
 [; ;eeprom/eeprom.c: 41:     i2c_read_serial(eeprom_addr, eeprom_buffer, 4);
-[e ( _i2c_read_serial (3 , , _eeprom_addr &U _eeprom_buffer -> -> 4 `i `uc ]
+[e ( _i2c_read_serial (3 , , _eeprom_addr -> &U _eeprom_buffer `*uc -> -> 4 `i `uc ]
 "52
 [; ;eeprom/eeprom.c: 52: }
 [e :UE 838 ]
@@ -2979,10 +2979,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "57
 [; ;eeprom/eeprom.c: 57:     i2c_write_serial(eeprom_addr, (char*) eeprom_init, 6);
-[e ( _i2c_write_serial (3 , , _eeprom_addr -> -> &U _eeprom_init `*uc `*uc -> -> 6 `i `uc ]
+[e ( _i2c_write_serial (3 , , _eeprom_addr -> &U _eeprom_init `*uc -> -> 6 `i `uc ]
 "58
 [; ;eeprom/eeprom.c: 58:     i2c_write_serial(eeprom_addr, (char*) eeprom_pointer, 2);
-[e ( _i2c_write_serial (3 , , _eeprom_addr -> -> &U _eeprom_pointer `*uc `*uc -> -> 2 `i `uc ]
+[e ( _i2c_write_serial (3 , , _eeprom_addr -> &U _eeprom_pointer `*uc -> -> 2 `i `uc ]
 "59
 [; ;eeprom/eeprom.c: 59: }
 [e :UE 839 ]
@@ -3032,7 +3032,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "83
 [; ;eeprom/eeprom.c: 83:         i2c_read_serial(eeprom_addr, (uint8_t*) eeprom_buffer, 8);
-[e ( _i2c_read_serial (3 , , _eeprom_addr -> &U _eeprom_buffer `*uc -> -> 8 `i `uc ]
+[e ( _i2c_read_serial (3 , , _eeprom_addr -> -> &U _eeprom_buffer `*uc `*uc -> -> 8 `i `uc ]
 "86
 [; ;eeprom/eeprom.c: 86:         j = 0;
 [e = _j -> -> 0 `i `uc ]
@@ -3112,8 +3112,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;eeprom/eeprom.c: 114: }
 [e :UE 840 ]
 }
-[p f _sprintf 552978365 ]
 [p f _printf 11600548 ]
+[p f _sprintf 552978365 ]
 [a 4C 79 103 32 112 114 105 110 116 32 100 101 109 32 117 100 32 105 103 101 110 13 10 0 ]
 [a 2C 83 107 114 105 118 110 105 110 103 32 102 97 101 114 100 105 103 13 10 0 ]
 [a 6C 65 84 43 67 73 80 83 69 78 68 61 48 44 37 100 13 10 0 ]

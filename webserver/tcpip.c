@@ -8,7 +8,7 @@
  */
 
 #ifndef MCC_H
-    #include "../mcc_generated_files/mcc.h"
+#include "mcc_generated_files/mcc.h"
 #endif
 
 #ifndef TCPIP_H
@@ -27,6 +27,7 @@
 #include "lcd.h"
 #endif
 
+#include <stdio.h>
 #include <string.h>
 
 /**************************************************************

@@ -50,8 +50,13 @@ typedef struct WIFIMode WIFIMode_t; // Angiver type definintion
 WIFIMode_t wifi; // Ny instans af wifi
 
 /* Opret forbindelse til Access Point*/
-typedef struct item_t { char *ssid; char *password; char *encryption; } item_t;
-item_t network_table[] = {
+typedef struct KnownNetworks { 
+    char ssid[50]; 
+    char password[50]; 
+    char encryption[50]; 
+} knownnetworks;
+
+knownnetworks network_table[] = {
     { "SSID-JRzcM4", "frbPCwvRKq",   "WPA2 AES" },
     { "WuggaNet",    "fredagsbanan", "WPA2 AES" },
     { "ASUS_X00PD",  "0c0d8599",     "WPA2 AES" },

@@ -39,7 +39,7 @@
  * AT+CWMODE=1
  * AT+WPS=1
  */
-#define AT_WPS { printf("AT+CWMODE=1"); printf("AT+WPS=1"); }
+#define AT_WPS { printf("AT+CWMODE=1\n"); printf("AT+WPS=1\n"); }
 
 /**************************************************************/                
 #endif	/* WPS_H */

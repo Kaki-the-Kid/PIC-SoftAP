@@ -32,6 +32,11 @@ void wifi_setWifiMode(uint8_t mode) {
     do { esp_waitForOK(); } while( server.busy );
 }
 
+// AT+CWMODE? - gets the Current Wi-Fi mode;
+void wifi_getWifiMode(void) {
+    printf("AT+CWMODE?");
+    do { esp_waitForOK(); } while( server.busy );
+}
 
 
 // AT+CIPMODE Configures the transmission mode
@@ -79,12 +84,6 @@ void wifi_SetTransmissionMode(uint8_t mode) {
     } else {
         //return 0; // Fail
     }
-}
-
-
-void wifi_getWifiMode(void) {
-    printf("AT+CWMODE?");
-    do { esp_waitForOK(); } while( server.busy );
 }
 
 
@@ -155,15 +154,25 @@ void wifi_network_request(void) {
     do { esp_waitForOK(); } while( server.busy );
 }
 
-
+//
+/*
+ */
 bool wifi_network_lookup(const char *ssid_name) {
-    for (item_t *p = network_table; p->ssid != NULL; ++p) {
-        if (strcmp(p->ssid, ssid_name) == 0) {
-            strcpy((char*)server.ssid, p->ssid);
-            strcpy((char*)server.password, p->password);
-            strcpy((char*)server.encryption, p->encryption);
+    knownnetworks* ptr    = network_table;
+    knownnetworks* endPtr = network_table + sizeof(network_table)/sizeof(network_table[0]);
+    
+    while (ptr < endPtr)
+    {
+        if (strcmp(ptr->ssid, ssid_name) == 0) 
+        {
+            strcpy((char*)server.ssid, ptr->ssid);
+            strcpy((char*)server.password, ptr->password);
+            strcpy((char*)server.encryption, ptr->encryption);
+            
             return true;
         }
+        
+        ptr++;
     }
     
     return false;
