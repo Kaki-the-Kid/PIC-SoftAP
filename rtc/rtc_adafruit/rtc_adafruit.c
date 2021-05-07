@@ -238,7 +238,7 @@ void rtc_adafruit_setTimeAll(uint8_t hours, uint8_t mins, uint8_t secs, uint8_t 
     bool century = (years>1999 || (years>=0 && years <=99) )?1:0;
     
     // Så rtc adresse til 0x00    
-    uint8_t rtc_date[] = {
+    char rtc_date[] = {
         convertByte2BCD(secs),
         convertByte2BCD(mins),
         convertByte2BCD(hours),
@@ -258,11 +258,11 @@ void rtc_adafruit_setTimeAll(uint8_t hours, uint8_t mins, uint8_t secs, uint8_t 
  ***************************************************************************/
 uint8_t rtc_adafruit_getSeconds(void) 
 { 
-    uint8_t data[1];
+    char data[1];
     
-    i2c_write_serial(rtc_addr, (uint8_t)secondsAddr, 1); 
+    i2c_write_serial(rtc_addr, (char*)secondsAddr, 1); 
     i2c_read_serial(rtc_addr, data , 1);
-    time.seconds = convertBCD2Bytes(data);
+    time.seconds = convertBCD2Bytes((uint8_t)data[0]);
     
     return time.seconds; 
 }
@@ -270,7 +270,7 @@ uint8_t rtc_adafruit_getSeconds(void)
 void rtc_adafruit_setSeconds(void) 
 {
     uint8_t data = convertByte2BCD(time.seconds);
-    uint8_t rtcRegister[] = { (char) secondsAddr, data};
+    char rtcRegister[] = { (char) secondsAddr, (char) data};
     i2c_write_serial(rtc_addr, rtcRegister, 2);
 }
 
@@ -280,11 +280,11 @@ void rtc_adafruit_setSeconds(void)
  ***************************************************************************/
 uint8_t rtc_adafruit_getMinutes(void) 
 { 
-    uint8_t data[1];
+    char data[1];
     
-    i2c_write_serial(rtc_addr, minutesAddr, 1); 
+    i2c_write_serial(rtc_addr, (char*) minutesAddr, 1); 
     i2c_read_serial(rtc_addr, data, 1);
-    time.minutes = convertBCD2Bytes(data);
+    time.minutes = convertBCD2Bytes((uint8_t)data[0]);
     
     return time.minutes; 
 }
@@ -293,7 +293,7 @@ void rtc_adafruit_setMinutes(void)
 {
     uint8_t data = convertByte2BCD(time.minutes);
     uint8_t rtcRegister[] = { minutesAddr, data};
-    i2c_write_serial(rtc_addr, rtcRegister, 2);
+    i2c_write_serial(rtc_addr, (char*)rtcRegister, 2);
 }
 
 /***************************************************************************
@@ -304,9 +304,9 @@ uint8_t rtc_adafruit_getHour(void)
 { 
     uint8_t data[1];
     
-    i2c_write_serial((uint8_t)rtc_addr, hoursAddr, 1); 
+    i2c_write_serial((uint8_t)rtc_addr, (char)hoursAddr, 1); 
     i2c_read_serial(rtc_addr, data , 1);
-    time.hours = convertBCD2Bytes(data);
+    time.hours = convertBCD2Bytes((uint8_t*)data);
     
     return time.hours; 
 }
@@ -513,7 +513,7 @@ void rtc_adafruit_setAlarm1A1M1(void)
 {
     uint8_t secsReg = rtc_adafruit_getAlarm1Seconds(); // read from rtc
     time.alarm1Seconds = secsReg & ~bit7; // update local value
-    secsReg = (time.alarm1Seconds + ( (uint8_t)time.A1M1<<7 ));
+    secsReg = (time.alarm1Seconds + ( (uint8_t)(time.A1M1<<7) ));
     rtc_adafruit_setAlarm1Seconds();
 }
 

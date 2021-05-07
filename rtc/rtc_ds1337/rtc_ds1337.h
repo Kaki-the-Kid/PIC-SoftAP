@@ -43,8 +43,7 @@
    0EH: |    EOSC   | 0 | 0 | RS2 | RS1 | INTCN | A2IE | A1IE |            Function: Control
    0FH: |    OSF    | 0 | 0 | 0 | 0 | 0 | A2F | A1F |                      Funtion: Status
  */
-
-#define rtc_addr            0b1101000 // 7-bit adresse på Real-time clock
+const uint8_t rtc_addr = 0b1101000; // 7-bit adresse på Real-time clock
 
 //
 #define secondsAddr         0x00

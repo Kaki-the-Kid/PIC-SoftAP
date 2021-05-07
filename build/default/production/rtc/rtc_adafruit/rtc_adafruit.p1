@@ -1,6 +1,6 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"39 rtc/rtc_adafruit/../rtc.h
-[; ;rtc/rtc_adafruit/../rtc.h: 39: typedef struct TIME {
+"38 rtc/rtc_adafruit/../rtc.h
+[; ;rtc/rtc_adafruit/../rtc.h: 38: typedef struct TIME {
 [s S833 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `uc 1 `uc 1 `uc 1 `uc 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 ]
 [n S833 TIME seconds minutes hours day date month year time12_n24 timePM_nAM century A1M1 A1M2 A1M3 A1M4 alarm1Seconds alarm1Minutes alarm1Hour alarm1Day alarm1Date alarm112n24 alarm1PMnAM alarm1DYnDT A2M2 A2M3 A2M4 alarm2Minutes alarm2Hours alarm2Day alarm2Date alarm212n24 alarm2PMnAM alarm2DYnDT EOSC RS2 RS1 INTCN A2IE A1IE OSF A2F A1F ]
 "34 rtc/rtc_adafruit/../../i2c/i2c.h
@@ -770,12 +770,21 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k22.h: 16609: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
 "16 rtc/rtc_adafruit/../rtc.h
-[; ;rtc/rtc_adafruit/../rtc.h: 16: uint8_t rtc_addr;
-[v _rtc_addr `uc ~T0 @X0 1 e ]
+[; ;rtc/rtc_adafruit/../rtc.h: 16: const uint8_t rtc_type = 0;
+[v _rtc_type `Cuc ~T0 @X0 1 e ]
+[i _rtc_type
+-> -> 0 `i `uc
+]
 "30 rtc/rtc_adafruit/../../i2c/i2c.h
 [v _data_out `uc ~T0 @X0 -> 4 `i e ]
-"28 rtc/rtc_adafruit/../rtc.h
-[; ;rtc/rtc_adafruit/../rtc.h: 28: const char rtc_htmlTemplate[] = "<h1>Server tid</h1><div id ='clock' onload='startTime()'></div>";
+"46 rtc/rtc_adafruit/../rtc_ds1337/rtc_ds1337.h
+[; ;rtc/rtc_adafruit/../rtc_ds1337/rtc_ds1337.h: 46: const uint8_t rtc_addr = 0b1101000;
+[v _rtc_addr `Cuc ~T0 @X0 1 e ]
+[i _rtc_addr
+-> -> 104 `i `uc
+]
+"27 rtc/rtc_adafruit/../rtc.h
+[; ;rtc/rtc_adafruit/../rtc.h: 27: const char rtc_htmlTemplate[] = "<h1>Server tid</h1><div id ='clock' onload='startTime()'></div>";
 [v _rtc_htmlTemplate `Cuc ~T0 @X0 -> 64 `i e ]
 [i _rtc_htmlTemplate
 :U ..
@@ -845,8 +854,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-"29
-[; ;rtc/rtc_adafruit/../rtc.h: 29: const char rtc_fontTemplate[] = "<link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>";
+"28
+[; ;rtc/rtc_adafruit/../rtc.h: 28: const char rtc_fontTemplate[] = "<link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>";
 [v _rtc_fontTemplate `Cuc ~T0 @X0 -> 96 `i e ]
 [i _rtc_fontTemplate
 :U ..
@@ -948,8 +957,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-"30
-[; ;rtc/rtc_adafruit/../rtc.h: 30: const char rtc_cssTemplate[] = "body{background:black;}#clock{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#FFFF00;font-family:Orbitron;letter-spacing:7px;font-weight:bold;font-size:10em;}";
+"29
+[; ;rtc/rtc_adafruit/../rtc.h: 29: const char rtc_cssTemplate[] = "body{background:black;}#clock{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#FFFF00;font-family:Orbitron;letter-spacing:7px;font-weight:bold;font-size:10em;}";
 [v _rtc_cssTemplate `Cuc ~T0 @X0 -> 184 `i e ]
 [i _rtc_cssTemplate
 :U ..
@@ -1139,8 +1148,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-"31
-[; ;rtc/rtc_adafruit/../rtc.h: 31: const char rtc_scriptTemplate[] = "<script>function startTime(){var today=new Date();var h=today.getHours();var m=today.getMinutes();var s=today.getSeconds();m=checkTime(m);s=checkTime(s);document.getElementById('clock').innerHTML=h+':'+m+':'+s;var t=setTimeout(startTime,500);}function checkTime(i){if(i<10){i='0'+i};return i;}</script>";
+"30
+[; ;rtc/rtc_adafruit/../rtc.h: 30: const char rtc_scriptTemplate[] = "<script>function startTime(){var today=new Date();var h=today.getHours();var m=today.getMinutes();var s=today.getSeconds();m=checkTime(m);s=checkTime(s);document.getElementById('clock').innerHTML=h+':'+m+':'+s;var t=setTimeout(startTime,500);}function checkTime(i){if(i<10){i='0'+i};return i;}</script>";
 [v _rtc_scriptTemplate `Cuc ~T0 @X0 -> 303 `i e ]
 [i _rtc_scriptTemplate
 :U ..
@@ -1449,8 +1458,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-"33
-[; ;rtc/rtc_adafruit/../rtc.h: 33: uint8_t _clockDataString[] = {"hh:mm:ss - dd-mm-yyyy"};
+"32
+[; ;rtc/rtc_adafruit/../rtc.h: 32: uint8_t _clockDataString[] = {"hh:mm:ss - dd-mm-yyyy"};
 [v __clockDataString `uc ~T0 @X0 -> 22 `i e ]
 [i __clockDataString
 :U ..
@@ -1478,14 +1487,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-"34
-[; ;rtc/rtc_adafruit/../rtc.h: 34: char rtcData[16];
+"33
+[; ;rtc/rtc_adafruit/../rtc.h: 33: char rtcData[16];
 [v _rtcData `uc ~T0 @X0 -> 16 `i e ]
-"35
-[; ;rtc/rtc_adafruit/../rtc.h: 35: uint8_t rtc_data[1];
+"34
+[; ;rtc/rtc_adafruit/../rtc.h: 34: uint8_t rtc_data[1];
 [v _rtc_data `uc ~T0 @X0 -> -> 1 `i `ux e ]
-"86
-[; ;rtc/rtc_adafruit/../rtc.h: 86: time_t time;
+"85
+[; ;rtc/rtc_adafruit/../rtc.h: 85: time_t time;
 [v _time `S833 ~T0 @X0 1 e ]
 "34 rtc/rtc_adafruit/rtc_adafruit.c
 [; ;rtc/rtc_adafruit/rtc_adafruit.c: 34: void rtc_adafruit_getTimeAll(void)
@@ -1496,11 +1505,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _rtc_adafruit_getTimeAll ]
 [f ]
 "37
-[; ;rtc/rtc_adafruit/rtc_adafruit.c: 37:     i2c_write_serial(0b1101000, 0, 1);
-[e ( _i2c_write_serial (3 , , -> -> 104 `i `uc -> -> 0 `i `*uc -> -> 1 `i `uc ]
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 37:     i2c_write_serial(rtc_addr, 0, 1);
+[e ( _i2c_write_serial (3 , , _rtc_addr -> -> 0 `i `*uc -> -> 1 `i `uc ]
 "38
-[; ;rtc/rtc_adafruit/rtc_adafruit.c: 38:     i2c_read_serial(0b1101000, rtcData, 16);
-[e ( _i2c_read_serial (3 , , -> -> 104 `i `uc &U _rtcData -> -> 16 `i `uc ]
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 38:     i2c_read_serial(rtc_addr, rtcData, 16);
+[e ( _i2c_read_serial (3 , , _rtc_addr &U _rtcData -> -> 16 `i `uc ]
 "43
 [; ;rtc/rtc_adafruit/rtc_adafruit.c: 43:     time.seconds = convertBCD2Bytes(rtcData[0x00]);
 [e = . _time 0 ( _convertBCD2Bytes (1 -> *U + &U _rtcData * -> -> -> 0 `i `ui `ux -> -> # *U &U _rtcData `ui `ux `uc ]
@@ -1781,11 +1790,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;rtc/rtc_adafruit/rtc_adafruit.c: 238:     _Bool century = (years>1999 || (years>=0 && years <=99) )?1:0;
 [v _century `a ~T0 @X0 1 a ]
 [e = _century -> ? || > -> _years `i -> 1999 `i && >= -> _years `i -> 0 `i <= -> _years `i -> 99 `i : -> 1 `i -> 0 `i `a ]
-[v F6350 `uc ~T0 @X0 -> 7 `i s ]
-[i F6350
+[v F6351 `uc ~T0 @X0 -> 7 `i s ]
+[i F6351
 :U ..
 "241
-[; ;rtc/rtc_adafruit/rtc_adafruit.c: 241:     uint8_t rtc_date[] = {
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 241:     char rtc_date[] = {
 -> -> 0 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
@@ -1796,11 +1805,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v _rtc_date `uc ~T0 @X0 -> 7 `i a ]
-[e = _rtc_date F6350 ]
-[e ; = *U + &U _rtc_date * -> -> -> 0 `i `ui `ux -> -> # *U &U _rtc_date `ui `ux ( _convertByte2BCD (1 _secs ; = *U + &U _rtc_date * -> -> -> 1 `i `ui `ux -> -> # *U &U _rtc_date `ui `ux ( _convertByte2BCD (1 _mins ; = *U + &U _rtc_date * -> -> -> 2 `i `ui `ux -> -> # *U &U _rtc_date `ui `ux ( _convertByte2BCD (1 _hours ; = *U + &U _rtc_date * -> -> -> 3 `i `ui `ux -> -> # *U &U _rtc_date `ui `ux ( _convertByte2BCD (1 _day ; = *U + &U _rtc_date * -> -> -> 4 `i `ui `ux -> -> # *U &U _rtc_date `ui `ux ( _convertByte2BCD (1 _date ; = *U + &U _rtc_date * -> -> -> 5 `i `ui `ux -> -> # *U &U _rtc_date `ui `ux -> ? != -> _century `i -> 0 `i : & -> ( _convertByte2BCD (1 _month `i -> 128 `i -> ( _convertByte2BCD (1 _month `i `uc = *U + &U _rtc_date * -> -> -> 6 `i `ui `ux -> -> # *U &U _rtc_date `ui `ux ( _convertByte2BCD (1 -> _years `uc ]
+[e = _rtc_date F6351 ]
+[e ; = *U + &U _rtc_date * -> -> -> 0 `i `ui `ux -> -> # *U &U _rtc_date `ui `ux -> ( _convertByte2BCD (1 _secs `uc ; = *U + &U _rtc_date * -> -> -> 1 `i `ui `ux -> -> # *U &U _rtc_date `ui `ux -> ( _convertByte2BCD (1 _mins `uc ; = *U + &U _rtc_date * -> -> -> 2 `i `ui `ux -> -> # *U &U _rtc_date `ui `ux -> ( _convertByte2BCD (1 _hours `uc ; = *U + &U _rtc_date * -> -> -> 3 `i `ui `ux -> -> # *U &U _rtc_date `ui `ux -> ( _convertByte2BCD (1 _day `uc ; = *U + &U _rtc_date * -> -> -> 4 `i `ui `ux -> -> # *U &U _rtc_date `ui `ux -> ( _convertByte2BCD (1 _date `uc ; = *U + &U _rtc_date * -> -> -> 5 `i `ui `ux -> -> # *U &U _rtc_date `ui `ux -> ? != -> _century `i -> 0 `i : & -> ( _convertByte2BCD (1 _month `i -> 128 `i -> ( _convertByte2BCD (1 _month `i `uc = *U + &U _rtc_date * -> -> -> 6 `i `ui `ux -> -> # *U &U _rtc_date `ui `ux -> ( _convertByte2BCD (1 -> _years `uc `uc ]
 "251
-[; ;rtc/rtc_adafruit/rtc_adafruit.c: 251:     i2c_write_serial(0b1101000, rtc_date, 7);
-[e ( _i2c_write_serial (3 , , -> -> 104 `i `uc -> &U _rtc_date `*uc -> -> 7 `i `uc ]
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 251:     i2c_write_serial(rtc_addr, rtc_date, 7);
+[e ( _i2c_write_serial (3 , , _rtc_addr &U _rtc_date -> -> 7 `i `uc ]
 "252
 [; ;rtc/rtc_adafruit/rtc_adafruit.c: 252: }
 [e :UE 842 ]
@@ -1814,17 +1823,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _rtc_adafruit_getSeconds ]
 [f ]
 "261
-[; ;rtc/rtc_adafruit/rtc_adafruit.c: 261:     uint8_t data[1];
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 261:     char data[1];
 [v _data `uc ~T0 @X0 -> -> 1 `i `ux a ]
 "263
-[; ;rtc/rtc_adafruit/rtc_adafruit.c: 263:     i2c_write_serial(0b1101000, (uint8_t)0x00, 1);
-[e ( _i2c_write_serial (3 , , -> -> 104 `i `uc -> -> -> 0 `i `uc `*uc -> -> 1 `i `uc ]
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 263:     i2c_write_serial(rtc_addr, (char*)0x00, 1);
+[e ( _i2c_write_serial (3 , , _rtc_addr -> -> 0 `i `*uc -> -> 1 `i `uc ]
 "264
-[; ;rtc/rtc_adafruit/rtc_adafruit.c: 264:     i2c_read_serial(0b1101000, data , 1);
-[e ( _i2c_read_serial (3 , , -> -> 104 `i `uc -> &U _data `*uc -> -> 1 `i `uc ]
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 264:     i2c_read_serial(rtc_addr, data , 1);
+[e ( _i2c_read_serial (3 , , _rtc_addr &U _data -> -> 1 `i `uc ]
 "265
-[; ;rtc/rtc_adafruit/rtc_adafruit.c: 265:     time.seconds = convertBCD2Bytes(data);
-[e = . _time 0 ( _convertBCD2Bytes (1 -> &U _data `uc ]
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 265:     time.seconds = convertBCD2Bytes((uint8_t)data[0]);
+[e = . _time 0 ( _convertBCD2Bytes (1 -> *U + &U _data * -> -> -> 0 `i `ui `ux -> -> # *U &U _data `ui `ux `uc ]
 "267
 [; ;rtc/rtc_adafruit/rtc_adafruit.c: 267:     return time.seconds;
 [e ) . _time 0 ]
@@ -1845,21 +1854,21 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;rtc/rtc_adafruit/rtc_adafruit.c: 272:     uint8_t data = convertByte2BCD(time.seconds);
 [v _data `uc ~T0 @X0 1 a ]
 [e = _data ( _convertByte2BCD (1 . _time 0 ]
-[v F6356 `uc ~T0 @X0 -> 2 `i s ]
-[i F6356
+[v F6357 `uc ~T0 @X0 -> 2 `i s ]
+[i F6357
 :U ..
 "273
-[; ;rtc/rtc_adafruit/rtc_adafruit.c: 273:     uint8_t rtcRegister[] = { (char) 0x00, data};
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 273:     char rtcRegister[] = { (char) 0x00, (char) data};
 -> -> 0 `i `uc
 -> -> 0 `i `uc
 ..
 ]
 [v _rtcRegister `uc ~T0 @X0 -> 2 `i a ]
-[e = _rtcRegister F6356 ]
-[e ; = *U + &U _rtcRegister * -> -> -> 0 `i `ui `ux -> -> # *U &U _rtcRegister `ui `ux -> -> -> 0 `i `uc `uc = *U + &U _rtcRegister * -> -> -> 1 `i `ui `ux -> -> # *U &U _rtcRegister `ui `ux _data ]
+[e = _rtcRegister F6357 ]
+[e ; = *U + &U _rtcRegister * -> -> -> 0 `i `ui `ux -> -> # *U &U _rtcRegister `ui `ux -> -> 0 `i `uc = *U + &U _rtcRegister * -> -> -> 1 `i `ui `ux -> -> # *U &U _rtcRegister `ui `ux -> _data `uc ]
 "274
-[; ;rtc/rtc_adafruit/rtc_adafruit.c: 274:     i2c_write_serial(0b1101000, rtcRegister, 2);
-[e ( _i2c_write_serial (3 , , -> -> 104 `i `uc -> &U _rtcRegister `*uc -> -> 2 `i `uc ]
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 274:     i2c_write_serial(rtc_addr, rtcRegister, 2);
+[e ( _i2c_write_serial (3 , , _rtc_addr &U _rtcRegister -> -> 2 `i `uc ]
 "275
 [; ;rtc/rtc_adafruit/rtc_adafruit.c: 275: }
 [e :UE 844 ]
@@ -1873,17 +1882,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _rtc_adafruit_getMinutes ]
 [f ]
 "283
-[; ;rtc/rtc_adafruit/rtc_adafruit.c: 283:     uint8_t data[1];
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 283:     char data[1];
 [v _data `uc ~T0 @X0 -> -> 1 `i `ux a ]
 "285
-[; ;rtc/rtc_adafruit/rtc_adafruit.c: 285:     i2c_write_serial(0b1101000, 0x01, 1);
-[e ( _i2c_write_serial (3 , , -> -> 104 `i `uc -> -> 1 `i `*uc -> -> 1 `i `uc ]
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 285:     i2c_write_serial(rtc_addr, (char*) 0x01, 1);
+[e ( _i2c_write_serial (3 , , _rtc_addr -> -> 1 `i `*uc -> -> 1 `i `uc ]
 "286
-[; ;rtc/rtc_adafruit/rtc_adafruit.c: 286:     i2c_read_serial(0b1101000, data, 1);
-[e ( _i2c_read_serial (3 , , -> -> 104 `i `uc -> &U _data `*uc -> -> 1 `i `uc ]
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 286:     i2c_read_serial(rtc_addr, data, 1);
+[e ( _i2c_read_serial (3 , , _rtc_addr &U _data -> -> 1 `i `uc ]
 "287
-[; ;rtc/rtc_adafruit/rtc_adafruit.c: 287:     time.minutes = convertBCD2Bytes(data);
-[e = . _time 1 ( _convertBCD2Bytes (1 -> &U _data `uc ]
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 287:     time.minutes = convertBCD2Bytes((uint8_t)data[0]);
+[e = . _time 1 ( _convertBCD2Bytes (1 -> *U + &U _data * -> -> -> 0 `i `ui `ux -> -> # *U &U _data `ui `ux `uc ]
 "289
 [; ;rtc/rtc_adafruit/rtc_adafruit.c: 289:     return time.minutes;
 [e ) . _time 1 ]
@@ -1904,21 +1913,21 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;rtc/rtc_adafruit/rtc_adafruit.c: 294:     uint8_t data = convertByte2BCD(time.minutes);
 [v _data `uc ~T0 @X0 1 a ]
 [e = _data ( _convertByte2BCD (1 . _time 1 ]
-[v F6362 `uc ~T0 @X0 -> 2 `i s ]
-[i F6362
+[v F6363 `uc ~T0 @X0 -> 2 `i s ]
+[i F6363
 :U ..
 "295
-[; ;rtc/rtc_adafruit/rtc_adafruit.c: 295:     char rtcRegister[] = { 0x01, data};
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 295:     uint8_t rtcRegister[] = { 0x01, data};
 -> -> 0 `i `uc
 -> -> 0 `i `uc
 ..
 ]
 [v _rtcRegister `uc ~T0 @X0 -> 2 `i a ]
-[e = _rtcRegister F6362 ]
-[e ; = *U + &U _rtcRegister * -> -> -> 0 `i `ui `ux -> -> # *U &U _rtcRegister `ui `ux -> -> 1 `i `uc = *U + &U _rtcRegister * -> -> -> 1 `i `ui `ux -> -> # *U &U _rtcRegister `ui `ux -> _data `uc ]
+[e = _rtcRegister F6363 ]
+[e ; = *U + &U _rtcRegister * -> -> -> 0 `i `ui `ux -> -> # *U &U _rtcRegister `ui `ux -> -> 1 `i `uc = *U + &U _rtcRegister * -> -> -> 1 `i `ui `ux -> -> # *U &U _rtcRegister `ui `ux _data ]
 "296
-[; ;rtc/rtc_adafruit/rtc_adafruit.c: 296:     i2c_write_serial(0b1101000, rtcRegister, 2);
-[e ( _i2c_write_serial (3 , , -> -> 104 `i `uc &U _rtcRegister -> -> 2 `i `uc ]
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 296:     i2c_write_serial(rtc_addr, (char*)rtcRegister, 2);
+[e ( _i2c_write_serial (3 , , _rtc_addr -> &U _rtcRegister `*uc -> -> 2 `i `uc ]
 "297
 [; ;rtc/rtc_adafruit/rtc_adafruit.c: 297: }
 [e :UE 846 ]
@@ -1935,13 +1944,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;rtc/rtc_adafruit/rtc_adafruit.c: 305:     uint8_t data[1];
 [v _data `uc ~T0 @X0 -> -> 1 `i `ux a ]
 "307
-[; ;rtc/rtc_adafruit/rtc_adafruit.c: 307:     i2c_write_serial((uint8_t)0b1101000, 0x02, 1);
-[e ( _i2c_write_serial (3 , , -> -> 104 `i `uc -> -> 2 `i `*uc -> -> 1 `i `uc ]
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 307:     i2c_write_serial((uint8_t)rtc_addr, (char)0x02, 1);
+[e ( _i2c_write_serial (3 , , _rtc_addr -> -> -> 2 `i `uc `*uc -> -> 1 `i `uc ]
 "308
-[; ;rtc/rtc_adafruit/rtc_adafruit.c: 308:     i2c_read_serial(0b1101000, data , 1);
-[e ( _i2c_read_serial (3 , , -> -> 104 `i `uc -> &U _data `*uc -> -> 1 `i `uc ]
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 308:     i2c_read_serial(rtc_addr, data , 1);
+[e ( _i2c_read_serial (3 , , _rtc_addr -> &U _data `*uc -> -> 1 `i `uc ]
 "309
-[; ;rtc/rtc_adafruit/rtc_adafruit.c: 309:     time.hours = convertBCD2Bytes(data);
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 309:     time.hours = convertBCD2Bytes((uint8_t*)data);
 [e = . _time 2 ( _convertBCD2Bytes (1 -> &U _data `uc ]
 "311
 [; ;rtc/rtc_adafruit/rtc_adafruit.c: 311:     return time.hours;
@@ -1963,8 +1972,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;rtc/rtc_adafruit/rtc_adafruit.c: 316:     char data = convertByte2BCD(time.hours);
 [v _data `uc ~T0 @X0 1 a ]
 [e = _data -> ( _convertByte2BCD (1 . _time 2 `uc ]
-[v F6368 `uc ~T0 @X0 -> 2 `i s ]
-[i F6368
+[v F6369 `uc ~T0 @X0 -> 2 `i s ]
+[i F6369
 :U ..
 "317
 [; ;rtc/rtc_adafruit/rtc_adafruit.c: 317:     char rtcRegister[] = { (char) 0x02, data};
@@ -1973,11 +1982,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v _rtcRegister `uc ~T0 @X0 -> 2 `i a ]
-[e = _rtcRegister F6368 ]
+[e = _rtcRegister F6369 ]
 [e ; = *U + &U _rtcRegister * -> -> -> 0 `i `ui `ux -> -> # *U &U _rtcRegister `ui `ux -> -> 2 `i `uc = *U + &U _rtcRegister * -> -> -> 1 `i `ui `ux -> -> # *U &U _rtcRegister `ui `ux _data ]
 "318
-[; ;rtc/rtc_adafruit/rtc_adafruit.c: 318:     i2c_write_serial(0b1101000, rtcRegister, 2);
-[e ( _i2c_write_serial (3 , , -> -> 104 `i `uc &U _rtcRegister -> -> 2 `i `uc ]
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 318:     i2c_write_serial(rtc_addr, rtcRegister, 2);
+[e ( _i2c_write_serial (3 , , _rtc_addr &U _rtcRegister -> -> 2 `i `uc ]
 "319
 [; ;rtc/rtc_adafruit/rtc_adafruit.c: 319: }
 [e :UE 848 ]
@@ -2013,11 +2022,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _rtc_adafruit_getDay ]
 [f ]
 "338
-[; ;rtc/rtc_adafruit/rtc_adafruit.c: 338:     i2c_write_serial(0b1101000, 0x03, 1);
-[e ( _i2c_write_serial (3 , , -> -> 104 `i `uc -> -> 3 `i `*uc -> -> 1 `i `uc ]
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 338:     i2c_write_serial(rtc_addr, 0x03, 1);
+[e ( _i2c_write_serial (3 , , _rtc_addr -> -> 3 `i `*uc -> -> 1 `i `uc ]
 "339
-[; ;rtc/rtc_adafruit/rtc_adafruit.c: 339:     i2c_read_serial(0b1101000, rtc_data , 1);
-[e ( _i2c_read_serial (3 , , -> -> 104 `i `uc -> &U _rtc_data `*uc -> -> 1 `i `uc ]
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 339:     i2c_read_serial(rtc_addr, rtc_data , 1);
+[e ( _i2c_read_serial (3 , , _rtc_addr -> &U _rtc_data `*uc -> -> 1 `i `uc ]
 "340
 [; ;rtc/rtc_adafruit/rtc_adafruit.c: 340:     time.day = (uint8_t) convertBCD2Bytes(rtc_data[1]);
 [e = . _time 3 ( _convertBCD2Bytes (1 *U + &U _rtc_data * -> -> -> 1 `i `ui `ux -> -> # *U &U _rtc_data `ui `ux ]
@@ -2037,8 +2046,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 [e :U _rtc_adafruit_setDay ]
 [f ]
-[v F6374 `uc ~T0 @X0 -> 2 `i s ]
-[i F6374
+[v F6375 `uc ~T0 @X0 -> 2 `i s ]
+[i F6375
 :U ..
 "347
 [; ;rtc/rtc_adafruit/rtc_adafruit.c: 347:     char rtcRegister[] = { (char) 0x03, (char) convertByte2BCD(time.day) };
@@ -2047,11 +2056,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v _rtcRegister `uc ~T0 @X0 -> 2 `i a ]
-[e = _rtcRegister F6374 ]
+[e = _rtcRegister F6375 ]
 [e ; = *U + &U _rtcRegister * -> -> -> 0 `i `ui `ux -> -> # *U &U _rtcRegister `ui `ux -> -> 3 `i `uc = *U + &U _rtcRegister * -> -> -> 1 `i `ui `ux -> -> # *U &U _rtcRegister `ui `ux -> ( _convertByte2BCD (1 . _time 3 `uc ]
 "348
-[; ;rtc/rtc_adafruit/rtc_adafruit.c: 348:     i2c_write_serial(0b1101000, rtcRegister, 2);
-[e ( _i2c_write_serial (3 , , -> -> 104 `i `uc &U _rtcRegister -> -> 2 `i `uc ]
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 348:     i2c_write_serial(rtc_addr, rtcRegister, 2);
+[e ( _i2c_write_serial (3 , , _rtc_addr &U _rtcRegister -> -> 2 `i `uc ]
 "349
 [; ;rtc/rtc_adafruit/rtc_adafruit.c: 349: }
 [e :UE 852 ]
@@ -2084,8 +2093,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;rtc/rtc_adafruit/rtc_adafruit.c: 361:     char data = convertByte2BCD(time.month);
 [v _data `uc ~T0 @X0 1 a ]
 [e = _data -> ( _convertByte2BCD (1 . _time 5 `uc ]
-[v F6379 `uc ~T0 @X0 -> 2 `i s ]
-[i F6379
+[v F6380 `uc ~T0 @X0 -> 2 `i s ]
+[i F6380
 :U ..
 "362
 [; ;rtc/rtc_adafruit/rtc_adafruit.c: 362:     char rtcRegister[] = { (char) 0x05, data };
@@ -2094,11 +2103,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v _rtcRegister `uc ~T0 @X0 -> 2 `i a ]
-[e = _rtcRegister F6379 ]
+[e = _rtcRegister F6380 ]
 [e ; = *U + &U _rtcRegister * -> -> -> 0 `i `ui `ux -> -> # *U &U _rtcRegister `ui `ux -> -> 5 `i `uc = *U + &U _rtcRegister * -> -> -> 1 `i `ui `ux -> -> # *U &U _rtcRegister `ui `ux _data ]
 "363
-[; ;rtc/rtc_adafruit/rtc_adafruit.c: 363:     i2c_write_serial(0b1101000, rtcRegister, 2);
-[e ( _i2c_write_serial (3 , , -> -> 104 `i `uc &U _rtcRegister -> -> 2 `i `uc ]
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 363:     i2c_write_serial(rtc_addr, rtcRegister, 2);
+[e ( _i2c_write_serial (3 , , _rtc_addr &U _rtcRegister -> -> 2 `i `uc ]
 "364
 [; ;rtc/rtc_adafruit/rtc_adafruit.c: 364: }
 [e :UE 854 ]
@@ -2125,8 +2134,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;rtc/rtc_adafruit/rtc_adafruit.c: 369:     char data = convertByte2BCD(time.year);
 [v _data `uc ~T0 @X0 1 a ]
 [e = _data -> ( _convertByte2BCD (1 . _time 6 `uc ]
-[v F6384 `uc ~T0 @X0 -> 2 `i s ]
-[i F6384
+[v F6385 `uc ~T0 @X0 -> 2 `i s ]
+[i F6385
 :U ..
 "370
 [; ;rtc/rtc_adafruit/rtc_adafruit.c: 370:     char rtcRegister[] = { 0x06, data };
@@ -2135,11 +2144,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v _rtcRegister `uc ~T0 @X0 -> 2 `i a ]
-[e = _rtcRegister F6384 ]
+[e = _rtcRegister F6385 ]
 [e ; = *U + &U _rtcRegister * -> -> -> 0 `i `ui `ux -> -> # *U &U _rtcRegister `ui `ux -> -> 6 `i `uc = *U + &U _rtcRegister * -> -> -> 1 `i `ui `ux -> -> # *U &U _rtcRegister `ui `ux _data ]
 "371
-[; ;rtc/rtc_adafruit/rtc_adafruit.c: 371:     i2c_write_serial(0b1101000, rtcRegister, 2);
-[e ( _i2c_write_serial (3 , , -> -> 104 `i `uc &U _rtcRegister -> -> 2 `i `uc ]
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 371:     i2c_write_serial(rtc_addr, rtcRegister, 2);
+[e ( _i2c_write_serial (3 , , _rtc_addr &U _rtcRegister -> -> 2 `i `uc ]
 "372
 [; ;rtc/rtc_adafruit/rtc_adafruit.c: 372: }
 [e :UE 856 ]
@@ -2233,8 +2242,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "453
 [; ;rtc/rtc_adafruit/rtc_adafruit.c: 453:     minsReg += time.A1M2<<7;
 [e =+ _minsReg -> << -> . _time 11 `i -> 7 `i `uc ]
-[v F6394 `uc ~T0 @X0 -> 2 `i s ]
-[i F6394
+[v F6395 `uc ~T0 @X0 -> 2 `i s ]
+[i F6395
 :U ..
 "455
 [; ;rtc/rtc_adafruit/rtc_adafruit.c: 455:     uint8_t transmit[] = { 0x08, minsReg };
@@ -2243,11 +2252,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v _transmit `uc ~T0 @X0 -> 2 `i a ]
-[e = _transmit F6394 ]
+[e = _transmit F6395 ]
 [e ; = *U + &U _transmit * -> -> -> 0 `i `ui `ux -> -> # *U &U _transmit `ui `ux -> -> 8 `i `uc = *U + &U _transmit * -> -> -> 1 `i `ui `ux -> -> # *U &U _transmit `ui `ux _minsReg ]
 "456
-[; ;rtc/rtc_adafruit/rtc_adafruit.c: 456:     i2c_write_serial(0b1101000, transmit, 2 );
-[e ( _i2c_write_serial (3 , , -> -> 104 `i `uc -> &U _transmit `*uc -> -> 2 `i `uc ]
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 456:     i2c_write_serial(rtc_addr, transmit, 2 );
+[e ( _i2c_write_serial (3 , , _rtc_addr -> &U _transmit `*uc -> -> 2 `i `uc ]
 "457
 [; ;rtc/rtc_adafruit/rtc_adafruit.c: 457: }
 [e :UE 861 ]
@@ -2285,21 +2294,21 @@ Version 4.0 HI-TECH Software Intermediate Code
 "474
 [; ;rtc/rtc_adafruit/rtc_adafruit.c: 474:     hoursReg += (time.alarm112n24)?time.alarm2PMnAM<<5:0;
 [e =+ _hoursReg -> ? != -> . _time 19 `i -> 0 `i : << -> . _time 30 `i -> 5 `i -> 0 `i `uc ]
-[v F6399 `uc ~T0 @X0 -> 2 `i s ]
-[i F6399
+[v F6400 `uc ~T0 @X0 -> 2 `i s ]
+[i F6400
 :U ..
 "476
-[; ;rtc/rtc_adafruit/rtc_adafruit.c: 476:     char transmit[] = { 0x09, hoursReg };
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 476:     uint8_t transmit[] = { 0x09, hoursReg };
 -> -> 0 `i `uc
 -> -> 0 `i `uc
 ..
 ]
 [v _transmit `uc ~T0 @X0 -> 2 `i a ]
-[e = _transmit F6399 ]
-[e ; = *U + &U _transmit * -> -> -> 0 `i `ui `ux -> -> # *U &U _transmit `ui `ux -> -> 9 `i `uc = *U + &U _transmit * -> -> -> 1 `i `ui `ux -> -> # *U &U _transmit `ui `ux -> _hoursReg `uc ]
+[e = _transmit F6400 ]
+[e ; = *U + &U _transmit * -> -> -> 0 `i `ui `ux -> -> # *U &U _transmit `ui `ux -> -> 9 `i `uc = *U + &U _transmit * -> -> -> 1 `i `ui `ux -> -> # *U &U _transmit `ui `ux _hoursReg ]
 "477
-[; ;rtc/rtc_adafruit/rtc_adafruit.c: 477:     i2c_write_serial(0b1101000, transmit, 2 );
-[e ( _i2c_write_serial (3 , , -> -> 104 `i `uc &U _transmit -> -> 2 `i `uc ]
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 477:     i2c_write_serial(rtc_addr, transmit, 2 );
+[e ( _i2c_write_serial (3 , , _rtc_addr -> &U _transmit `*uc -> -> 2 `i `uc ]
 "478
 [; ;rtc/rtc_adafruit/rtc_adafruit.c: 478: }
 [e :UE 863 ]
@@ -2416,8 +2425,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;rtc/rtc_adafruit/rtc_adafruit.c: 515:     time.alarm1Seconds = secsReg & ~0b10000000;
 [e = . _time 14 -> & -> _secsReg `i ~ -> 128 `i `uc ]
 "516
-[; ;rtc/rtc_adafruit/rtc_adafruit.c: 516:     secsReg = (time.alarm1Seconds + ( (uint8_t)time.A1M1<<7 ));
-[e = _secsReg -> + -> . _time 14 `i << -> -> . _time 10 `uc `i -> 7 `i `uc ]
+[; ;rtc/rtc_adafruit/rtc_adafruit.c: 516:     secsReg = (time.alarm1Seconds + ( (uint8_t)(time.A1M1<<7) ));
+[e = _secsReg -> + -> . _time 14 `i -> -> << -> . _time 10 `i -> 7 `i `uc `i `uc ]
 "517
 [; ;rtc/rtc_adafruit/rtc_adafruit.c: 517:     rtc_adafruit_setAlarm1Seconds();
 [e ( _rtc_adafruit_setAlarm1Seconds ..  ]

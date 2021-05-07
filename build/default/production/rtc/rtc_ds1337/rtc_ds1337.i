@@ -9502,8 +9502,8 @@ void OSCILLATOR_Initialize(void);
 
 # 1 "rtc/rtc_ds1337/../rtc.h" 1
 # 16 "rtc/rtc_ds1337/../rtc.h"
-uint8_t rtc_addr;
-# 28 "rtc/rtc_ds1337/../rtc.h"
+const uint8_t rtc_type = 0;
+# 27 "rtc/rtc_ds1337/../rtc.h"
 const char rtc_htmlTemplate[] = "<h1>Server tid</h1><div id ='clock' onload='startTime()'></div>";
 const char rtc_fontTemplate[] = "<link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>";
 const char rtc_cssTemplate[] = "body{background:black;}#clock{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#FFFF00;font-family:Orbitron;letter-spacing:7px;font-weight:bold;font-size:10em;}";
@@ -9586,7 +9586,9 @@ void i2c_master_stop(void);
 void i2c_master_ack(void);
 void i2c_master_nack(void);
 # 18 "rtc/rtc_ds1337/../rtc_ds1337/rtc_ds1337.h" 2
-# 83 "rtc/rtc_ds1337/../rtc_ds1337/rtc_ds1337.h"
+# 46 "rtc/rtc_ds1337/../rtc_ds1337/rtc_ds1337.h"
+const uint8_t rtc_addr = 0b1101000;
+# 82 "rtc/rtc_ds1337/../rtc_ds1337/rtc_ds1337.h"
 void rtc_init(void);
 
 
@@ -9621,7 +9623,7 @@ void rtc_ds_1337_setMonth(void);
 
 uint8_t rtc_ds_1337_getYear(void);
 void rtc_ds_1337_setYear(void);
-# 125 "rtc/rtc_ds1337/../rtc_ds1337/rtc_ds1337.h"
+# 124 "rtc/rtc_ds1337/../rtc_ds1337/rtc_ds1337.h"
 void setAlarm1(void);
 
 uint8_t rtc_ds_1337_getAlarm1Seconds(void);
@@ -9682,8 +9684,8 @@ void rtc_ds_1337_setEnableOscillator(_Bool);
 void rtc_ds_1337_getTimeAll(void)
 {
 
-    i2c_write_serial(0b1101000, 0, 1);
-    i2c_read_serial(0b1101000, rtcData, 16);
+    i2c_write_serial(rtc_addr, 0, 1);
+    i2c_read_serial(rtc_addr, rtcData, 16);
 
 
 
@@ -9837,7 +9839,7 @@ void rtc_ds_1337_setTimeAll(uint8_t hours, uint8_t mins, uint8_t secs, uint8_t d
     _Bool century = (years>1999 || (years>=0 && years <=99) )?1:0;
 
 
-    uint8_t rtc_date[] = {
+    char rtc_date[] = {
         convertByte2BCD(secs),
         convertByte2BCD(mins),
         convertByte2BCD(hours),
@@ -9847,7 +9849,7 @@ void rtc_ds_1337_setTimeAll(uint8_t hours, uint8_t mins, uint8_t secs, uint8_t d
         convertByte2BCD((uint8_t)(years-1900))
     };
 
-    i2c_write_serial(0b1101000, rtc_date, 7);
+    i2c_write_serial(rtc_addr, rtc_date, 7);
 }
 
 
@@ -9859,8 +9861,8 @@ uint8_t rtc_ds_1337_getSeconds(void)
 {
     uint8_t data[1];
 
-    i2c_write_serial(0b1101000, 0x00, 1);
-    i2c_read_serial(0b1101000, data , 1);
+    i2c_write_serial(rtc_addr, 0x00, 1);
+    i2c_read_serial(rtc_addr, data , 1);
     time.seconds = (uint8_t) convertBCD2Bytes(data);
 
     return time.seconds;
@@ -9870,7 +9872,7 @@ void rtc_ds_1337_setSeconds(void)
 {
     uint8_t data = convertByte2BCD(time.seconds);
     uint8_t rtcRegister[] = { 0x00, data};
-    i2c_write_serial(0b1101000, rtcRegister, 2);
+    i2c_write_serial(rtc_addr, (char)rtcRegister, 2);
 }
 
 
@@ -9879,9 +9881,9 @@ void rtc_ds_1337_setSeconds(void)
 
 uint8_t rtc_ds_1337_getMinutes(void)
 {
-    i2c_write_serial(0b1101000, (uint8_t)0x01, 1);
-    i2c_read_serial(0b1101000, rtc_data , 1);
-    time.minutes = convertBCD2Bytes(rtc_data[1]);
+    i2c_write_serial(rtc_addr, (char*)0x01, 1);
+    i2c_read_serial(rtc_addr, rtc_data , 1);
+    time.minutes = convertBCD2Bytes((uint8_t)rtc_data[0]);
 
     return time.minutes;
 }
@@ -9890,7 +9892,7 @@ void rtc_ds_1337_setMinutes(void)
 {
     uint8_t data = convertByte2BCD(time.minutes);
     uint8_t rtcRegister[] = { 0x01, data};
-    i2c_write_serial(0b1101000, rtcRegister, 2);
+    i2c_write_serial(rtc_addr, (char)rtcRegister, 2);
 }
 
 
@@ -9899,8 +9901,8 @@ void rtc_ds_1337_setMinutes(void)
 
 uint8_t rtc_ds_1337_getHour(void)
 {
-    i2c_write_serial(0b1101000, (uint8_t)0x02, 1);
-    i2c_read_serial(0b1101000, rtc_data , 1);
+    i2c_write_serial(rtc_addr, (char)0x02, 1);
+    i2c_read_serial(rtc_addr, rtc_data , 1);
     time.hours = convertBCD2Bytes(rtc_data);
 
     return time.hours;
@@ -9910,7 +9912,7 @@ void rtc_ds_1337_setHour(void)
 {
     uint8_t data = convertByte2BCD(time.hours);
     uint8_t rtcRegister[] = { (uint8_t)0x02, data};
-    i2c_write_serial(0b1101000, rtcRegister, 2);
+    i2c_write_serial(rtc_addr, rtcRegister, 2);
 }
 
 uint8_t rtc_ds_1337_getAMPM(void) { return 0; }
@@ -9930,8 +9932,8 @@ void rtc_ds_1337_setAMPM(void)
 
 uint8_t rtc_ds_1337_getDay(void)
 {
-    i2c_write_serial((uint8_t)0b1101000, (uint8_t)0x03, 1);
-    i2c_read_serial(0b1101000, rtc_data , 1);
+    i2c_write_serial((uint8_t)rtc_addr, (uint8_t)0x03, 1);
+    i2c_read_serial(rtc_addr, rtc_data , 1);
     time.day = convertBCD2Bytes((uint8_t)rtc_data[1]);
 
     return time.day;
@@ -9940,7 +9942,7 @@ uint8_t rtc_ds_1337_getDay(void)
 void rtc_ds_1337_setDay(void)
 {
     uint8_t rtcRegister[] = { 0x03, convertByte2BCD(time.day) };
-    i2c_write_serial(0b1101000, rtcRegister, 2);
+    i2c_write_serial(rtc_addr, rtcRegister, 2);
 }
 
 
@@ -9957,7 +9959,7 @@ void rtc_ds_1337_setMonth(void)
 {
     uint8_t data = convertByte2BCD(time.month);
     uint8_t rtcRegister[] = { (uint8_t) 0x05, data };
-    i2c_write_serial(0b1101000, rtcRegister, 2);
+    i2c_write_serial(rtc_addr, (char*)rtcRegister, 2);
 }
 
 uint8_t rtc_ds_1337_getYear(void) { return 0; }
@@ -9965,7 +9967,7 @@ void rtc_ds_1337_setYear(void)
 {
     uint8_t data = convertByte2BCD(time.year);
     uint8_t rtcRegister[] = { 0x06, data };
-    i2c_write_serial(0b1101000, rtcRegister, 2);
+    i2c_write_serial(rtc_addr, (char*)rtcRegister, 2);
 }
 # 411 "rtc/rtc_ds1337/rtc_ds1337.c"
 void rtc_ds_1337_setAlarm1Type(_Bool DYnDT, uint8_t alarm1Mask)
@@ -9999,7 +10001,7 @@ void rtc_ds_1337_setAlarm1Minutes(void)
     minsReg += time.A1M2<<7;
 
     uint8_t transmit[] = { 0x08, minsReg };
-    i2c_write_serial(0b1101000, transmit, 2 );
+    i2c_write_serial(rtc_addr, (char*)transmit, 2 );
 }
 
 uint8_t rtc_ds_1337_getAlarm1Hours(void) { return 0; }
@@ -10020,7 +10022,7 @@ void rtc_ds_1337_setAlarm1Hours(void)
     hoursReg += (time.alarm112n24)?time.alarm2PMnAM<<5:0;
 
     uint8_t transmit[] = { 0x09, hoursReg };
-    i2c_write_serial(0b1101000, transmit, 2 );
+    i2c_write_serial(rtc_addr, (char*)transmit, 2 );
 }
 
 uint8_t rtc_ds_1337_getAlarm1Date(void)

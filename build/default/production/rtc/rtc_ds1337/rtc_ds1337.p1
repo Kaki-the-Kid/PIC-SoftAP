@@ -1,6 +1,6 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"39 rtc/rtc_ds1337/../rtc.h
-[; ;rtc/rtc_ds1337/../rtc.h: 39: typedef struct TIME {
+"38 rtc/rtc_ds1337/../rtc.h
+[; ;rtc/rtc_ds1337/../rtc.h: 38: typedef struct TIME {
 [s S833 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `uc 1 `uc 1 `uc 1 `uc 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 `a 1 ]
 [n S833 TIME seconds minutes hours day date month year time12_n24 timePM_nAM century A1M1 A1M2 A1M3 A1M4 alarm1Seconds alarm1Minutes alarm1Hour alarm1Day alarm1Date alarm112n24 alarm1PMnAM alarm1DYnDT A2M2 A2M3 A2M4 alarm2Minutes alarm2Hours alarm2Day alarm2Date alarm212n24 alarm2PMnAM alarm2DYnDT EOSC RS2 RS1 INTCN A2IE A1IE OSF A2F A1F ]
 "34 rtc/rtc_ds1337/../../i2c/i2c.h
@@ -9,32 +9,32 @@ Version 4.0 HI-TECH Software Intermediate Code
 "35
 [; ;rtc/rtc_ds1337/../../i2c/i2c.h: 35: void i2c_read_serial(uint8_t, char*, uint8_t);
 [v _i2c_read_serial `(v ~T0 @X0 0 ef3`uc`*uc`uc ]
-"88 rtc/rtc_ds1337/../rtc.h
-[; ;rtc/rtc_ds1337/../rtc.h: 88: uint8_t convertBCD2Bytes(uint8_t);
+"87 rtc/rtc_ds1337/../rtc.h
+[; ;rtc/rtc_ds1337/../rtc.h: 87: uint8_t convertBCD2Bytes(uint8_t);
 [v _convertBCD2Bytes `(uc ~T0 @X0 0 ef1`uc ]
-"89
-[; ;rtc/rtc_ds1337/../rtc.h: 89: uint8_t convertByte2BCD(uint8_t);
+"88
+[; ;rtc/rtc_ds1337/../rtc.h: 88: uint8_t convertByte2BCD(uint8_t);
 [v _convertByte2BCD `(uc ~T0 @X0 0 ef1`uc ]
-"142 rtc/rtc_ds1337/../rtc_ds1337/rtc_ds1337.h
-[; ;rtc/rtc_ds1337/../rtc_ds1337/rtc_ds1337.h: 142: void rtc_ds_1337_setAlarm1A1M4(void);
+"141 rtc/rtc_ds1337/../rtc_ds1337/rtc_ds1337.h
+[; ;rtc/rtc_ds1337/../rtc_ds1337/rtc_ds1337.h: 141: void rtc_ds_1337_setAlarm1A1M4(void);
 [v _rtc_ds_1337_setAlarm1A1M4 `(v ~T0 @X0 0 ef ]
-"143
-[; ;rtc/rtc_ds1337/../rtc_ds1337/rtc_ds1337.h: 143: void rtc_ds_1337_setAlarm1A1M2(void);
+"142
+[; ;rtc/rtc_ds1337/../rtc_ds1337/rtc_ds1337.h: 142: void rtc_ds_1337_setAlarm1A1M2(void);
 [v _rtc_ds_1337_setAlarm1A1M2 `(v ~T0 @X0 0 ef ]
-"144
-[; ;rtc/rtc_ds1337/../rtc_ds1337/rtc_ds1337.h: 144: void rtc_ds_1337_setAlarm1A1M3(void);
+"143
+[; ;rtc/rtc_ds1337/../rtc_ds1337/rtc_ds1337.h: 143: void rtc_ds_1337_setAlarm1A1M3(void);
 [v _rtc_ds_1337_setAlarm1A1M3 `(v ~T0 @X0 0 ef ]
-"145
-[; ;rtc/rtc_ds1337/../rtc_ds1337/rtc_ds1337.h: 145: void rtc_ds_1337_setAlarm1A1M1(void);
+"144
+[; ;rtc/rtc_ds1337/../rtc_ds1337/rtc_ds1337.h: 144: void rtc_ds_1337_setAlarm1A1M1(void);
 [v _rtc_ds_1337_setAlarm1A1M1 `(v ~T0 @X0 0 ef ]
-"169
-[; ;rtc/rtc_ds1337/../rtc_ds1337/rtc_ds1337.h: 169: void rtc_ds_1337_setAlarm2A2M4(void);
+"168
+[; ;rtc/rtc_ds1337/../rtc_ds1337/rtc_ds1337.h: 168: void rtc_ds_1337_setAlarm2A2M4(void);
 [v _rtc_ds_1337_setAlarm2A2M4 `(v ~T0 @X0 0 ef ]
-"170
-[; ;rtc/rtc_ds1337/../rtc_ds1337/rtc_ds1337.h: 170: void rtc_ds_1337_setAlarm2A2M3(void);
+"169
+[; ;rtc/rtc_ds1337/../rtc_ds1337/rtc_ds1337.h: 169: void rtc_ds_1337_setAlarm2A2M3(void);
 [v _rtc_ds_1337_setAlarm2A2M3 `(v ~T0 @X0 0 ef ]
-"171
-[; ;rtc/rtc_ds1337/../rtc_ds1337/rtc_ds1337.h: 171: void rtc_ds_1337_setAlarm2A2M2(void);
+"170
+[; ;rtc/rtc_ds1337/../rtc_ds1337/rtc_ds1337.h: 170: void rtc_ds_1337_setAlarm2A2M2(void);
 [v _rtc_ds_1337_setAlarm2A2M2 `(v ~T0 @X0 0 ef ]
 "54 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k22.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k22.h: 54: __asm("ANSELA equ 0F38h");
@@ -772,10 +772,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k22.h: 16609: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
 "16 rtc/rtc_ds1337/../rtc.h
-[; ;rtc/rtc_ds1337/../rtc.h: 16: uint8_t rtc_addr;
-[v _rtc_addr `uc ~T0 @X0 1 e ]
-"28
-[; ;rtc/rtc_ds1337/../rtc.h: 28: const char rtc_htmlTemplate[] = "<h1>Server tid</h1><div id ='clock' onload='startTime()'></div>";
+[; ;rtc/rtc_ds1337/../rtc.h: 16: const uint8_t rtc_type = 0;
+[v _rtc_type `Cuc ~T0 @X0 1 e ]
+[i _rtc_type
+-> -> 0 `i `uc
+]
+"27
+[; ;rtc/rtc_ds1337/../rtc.h: 27: const char rtc_htmlTemplate[] = "<h1>Server tid</h1><div id ='clock' onload='startTime()'></div>";
 [v _rtc_htmlTemplate `Cuc ~T0 @X0 -> 64 `i e ]
 [i _rtc_htmlTemplate
 :U ..
@@ -845,8 +848,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-"29
-[; ;rtc/rtc_ds1337/../rtc.h: 29: const char rtc_fontTemplate[] = "<link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>";
+"28
+[; ;rtc/rtc_ds1337/../rtc.h: 28: const char rtc_fontTemplate[] = "<link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>";
 [v _rtc_fontTemplate `Cuc ~T0 @X0 -> 96 `i e ]
 [i _rtc_fontTemplate
 :U ..
@@ -948,8 +951,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-"30
-[; ;rtc/rtc_ds1337/../rtc.h: 30: const char rtc_cssTemplate[] = "body{background:black;}#clock{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#FFFF00;font-family:Orbitron;letter-spacing:7px;font-weight:bold;font-size:10em;}";
+"29
+[; ;rtc/rtc_ds1337/../rtc.h: 29: const char rtc_cssTemplate[] = "body{background:black;}#clock{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#FFFF00;font-family:Orbitron;letter-spacing:7px;font-weight:bold;font-size:10em;}";
 [v _rtc_cssTemplate `Cuc ~T0 @X0 -> 184 `i e ]
 [i _rtc_cssTemplate
 :U ..
@@ -1139,8 +1142,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-"31
-[; ;rtc/rtc_ds1337/../rtc.h: 31: const char rtc_scriptTemplate[] = "<script>function startTime(){var today=new Date();var h=today.getHours();var m=today.getMinutes();var s=today.getSeconds();m=checkTime(m);s=checkTime(s);document.getElementById('clock').innerHTML=h+':'+m+':'+s;var t=setTimeout(startTime,500);}function checkTime(i){if(i<10){i='0'+i};return i;}</script>";
+"30
+[; ;rtc/rtc_ds1337/../rtc.h: 30: const char rtc_scriptTemplate[] = "<script>function startTime(){var today=new Date();var h=today.getHours();var m=today.getMinutes();var s=today.getSeconds();m=checkTime(m);s=checkTime(s);document.getElementById('clock').innerHTML=h+':'+m+':'+s;var t=setTimeout(startTime,500);}function checkTime(i){if(i<10){i='0'+i};return i;}</script>";
 [v _rtc_scriptTemplate `Cuc ~T0 @X0 -> 303 `i e ]
 [i _rtc_scriptTemplate
 :U ..
@@ -1449,8 +1452,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-"33
-[; ;rtc/rtc_ds1337/../rtc.h: 33: uint8_t _clockDataString[] = {"hh:mm:ss - dd-mm-yyyy"};
+"32
+[; ;rtc/rtc_ds1337/../rtc.h: 32: uint8_t _clockDataString[] = {"hh:mm:ss - dd-mm-yyyy"};
 [v __clockDataString `uc ~T0 @X0 -> 22 `i e ]
 [i __clockDataString
 :U ..
@@ -1478,18 +1481,24 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-"34
-[; ;rtc/rtc_ds1337/../rtc.h: 34: char rtcData[16];
+"33
+[; ;rtc/rtc_ds1337/../rtc.h: 33: char rtcData[16];
 [v _rtcData `uc ~T0 @X0 -> 16 `i e ]
-"35
-[; ;rtc/rtc_ds1337/../rtc.h: 35: uint8_t rtc_data[1];
+"34
+[; ;rtc/rtc_ds1337/../rtc.h: 34: uint8_t rtc_data[1];
 [v _rtc_data `uc ~T0 @X0 -> -> 1 `i `ux e ]
-"86
-[; ;rtc/rtc_ds1337/../rtc.h: 86: time_t time;
+"85
+[; ;rtc/rtc_ds1337/../rtc.h: 85: time_t time;
 [v _time `S833 ~T0 @X0 1 e ]
 "30 rtc/rtc_ds1337/../../i2c/i2c.h
 [; ;rtc/rtc_ds1337/../../i2c/i2c.h: 30: uint8_t data_out[4];
 [v _data_out `uc ~T0 @X0 -> 4 `i e ]
+"46 rtc/rtc_ds1337/../rtc_ds1337/rtc_ds1337.h
+[; ;rtc/rtc_ds1337/../rtc_ds1337/rtc_ds1337.h: 46: const uint8_t rtc_addr = 0b1101000;
+[v _rtc_addr `Cuc ~T0 @X0 1 e ]
+[i _rtc_addr
+-> -> 104 `i `uc
+]
 "22 rtc/rtc_ds1337/rtc_ds1337.c
 [; ;rtc/rtc_ds1337/rtc_ds1337.c: 22: void rtc_ds_1337_getTimeAll(void)
 [v _rtc_ds_1337_getTimeAll `(v ~T0 @X0 1 ef ]
@@ -1499,11 +1508,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _rtc_ds_1337_getTimeAll ]
 [f ]
 "25
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 25:     i2c_write_serial(0b1101000, 0, 1);
-[e ( _i2c_write_serial (3 , , -> -> 104 `i `uc -> -> 0 `i `*uc -> -> 1 `i `uc ]
+[; ;rtc/rtc_ds1337/rtc_ds1337.c: 25:     i2c_write_serial(rtc_addr, 0, 1);
+[e ( _i2c_write_serial (3 , , _rtc_addr -> -> 0 `i `*uc -> -> 1 `i `uc ]
 "26
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 26:     i2c_read_serial(0b1101000, rtcData, 16);
-[e ( _i2c_read_serial (3 , , -> -> 104 `i `uc &U _rtcData -> -> 16 `i `uc ]
+[; ;rtc/rtc_ds1337/rtc_ds1337.c: 26:     i2c_read_serial(rtc_addr, rtcData, 16);
+[e ( _i2c_read_serial (3 , , _rtc_addr &U _rtcData -> -> 16 `i `uc ]
 "31
 [; ;rtc/rtc_ds1337/rtc_ds1337.c: 31:     time.seconds = convertBCD2Bytes(rtcData[0x00]);
 [e = . _time 0 ( _convertBCD2Bytes (1 -> *U + &U _rtcData * -> -> -> 0 `i `ui `ux -> -> # *U &U _rtcData `ui `ux `uc ]
@@ -1784,11 +1793,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;rtc/rtc_ds1337/rtc_ds1337.c: 226:     _Bool century = (years>1999 || (years>=0 && years <=99) )?1:0;
 [v _century `a ~T0 @X0 1 a ]
 [e = _century -> ? || > -> _years `i -> 1999 `i && >= -> _years `i -> 0 `i <= -> _years `i -> 99 `i : -> 1 `i -> 0 `i `a ]
-[v F6290 `uc ~T0 @X0 -> 7 `i s ]
-[i F6290
+[v F6291 `uc ~T0 @X0 -> 7 `i s ]
+[i F6291
 :U ..
 "229
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 229:     uint8_t rtc_date[] = {
+[; ;rtc/rtc_ds1337/rtc_ds1337.c: 229:     char rtc_date[] = {
 -> -> 0 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
@@ -1799,11 +1808,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v _rtc_date `uc ~T0 @X0 -> 7 `i a ]
-[e = _rtc_date F6290 ]
-[e ; = *U + &U _rtc_date * -> -> -> 0 `i `ui `ux -> -> # *U &U _rtc_date `ui `ux ( _convertByte2BCD (1 _secs ; = *U + &U _rtc_date * -> -> -> 1 `i `ui `ux -> -> # *U &U _rtc_date `ui `ux ( _convertByte2BCD (1 _mins ; = *U + &U _rtc_date * -> -> -> 2 `i `ui `ux -> -> # *U &U _rtc_date `ui `ux ( _convertByte2BCD (1 _hours ; = *U + &U _rtc_date * -> -> -> 3 `i `ui `ux -> -> # *U &U _rtc_date `ui `ux ( _convertByte2BCD (1 _day ; = *U + &U _rtc_date * -> -> -> 4 `i `ui `ux -> -> # *U &U _rtc_date `ui `ux ( _convertByte2BCD (1 _date ; = *U + &U _rtc_date * -> -> -> 5 `i `ui `ux -> -> # *U &U _rtc_date `ui `ux -> ? != -> _century `i -> 0 `i : & -> ( _convertByte2BCD (1 _month `i -> 128 `i -> ( _convertByte2BCD (1 _month `i `uc = *U + &U _rtc_date * -> -> -> 6 `i `ui `ux -> -> # *U &U _rtc_date `ui `ux ( _convertByte2BCD (1 -> - -> _years `i -> 1900 `i `uc ]
+[e = _rtc_date F6291 ]
+[e ; = *U + &U _rtc_date * -> -> -> 0 `i `ui `ux -> -> # *U &U _rtc_date `ui `ux -> ( _convertByte2BCD (1 _secs `uc ; = *U + &U _rtc_date * -> -> -> 1 `i `ui `ux -> -> # *U &U _rtc_date `ui `ux -> ( _convertByte2BCD (1 _mins `uc ; = *U + &U _rtc_date * -> -> -> 2 `i `ui `ux -> -> # *U &U _rtc_date `ui `ux -> ( _convertByte2BCD (1 _hours `uc ; = *U + &U _rtc_date * -> -> -> 3 `i `ui `ux -> -> # *U &U _rtc_date `ui `ux -> ( _convertByte2BCD (1 _day `uc ; = *U + &U _rtc_date * -> -> -> 4 `i `ui `ux -> -> # *U &U _rtc_date `ui `ux -> ( _convertByte2BCD (1 _date `uc ; = *U + &U _rtc_date * -> -> -> 5 `i `ui `ux -> -> # *U &U _rtc_date `ui `ux -> ? != -> _century `i -> 0 `i : & -> ( _convertByte2BCD (1 _month `i -> 128 `i -> ( _convertByte2BCD (1 _month `i `uc = *U + &U _rtc_date * -> -> -> 6 `i `ui `ux -> -> # *U &U _rtc_date `ui `ux -> ( _convertByte2BCD (1 -> - -> _years `i -> 1900 `i `uc `uc ]
 "239
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 239:     i2c_write_serial(0b1101000, rtc_date, 7);
-[e ( _i2c_write_serial (3 , , -> -> 104 `i `uc -> &U _rtc_date `*uc -> -> 7 `i `uc ]
+[; ;rtc/rtc_ds1337/rtc_ds1337.c: 239:     i2c_write_serial(rtc_addr, rtc_date, 7);
+[e ( _i2c_write_serial (3 , , _rtc_addr &U _rtc_date -> -> 7 `i `uc ]
 "240
 [; ;rtc/rtc_ds1337/rtc_ds1337.c: 240: }
 [e :UE 842 ]
@@ -1820,11 +1829,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;rtc/rtc_ds1337/rtc_ds1337.c: 249:     uint8_t data[1];
 [v _data `uc ~T0 @X0 -> -> 1 `i `ux a ]
 "251
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 251:     i2c_write_serial(0b1101000, 0x00, 1);
-[e ( _i2c_write_serial (3 , , -> -> 104 `i `uc -> -> 0 `i `*uc -> -> 1 `i `uc ]
+[; ;rtc/rtc_ds1337/rtc_ds1337.c: 251:     i2c_write_serial(rtc_addr, 0x00, 1);
+[e ( _i2c_write_serial (3 , , _rtc_addr -> -> 0 `i `*uc -> -> 1 `i `uc ]
 "252
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 252:     i2c_read_serial(0b1101000, data , 1);
-[e ( _i2c_read_serial (3 , , -> -> 104 `i `uc -> &U _data `*uc -> -> 1 `i `uc ]
+[; ;rtc/rtc_ds1337/rtc_ds1337.c: 252:     i2c_read_serial(rtc_addr, data , 1);
+[e ( _i2c_read_serial (3 , , _rtc_addr -> &U _data `*uc -> -> 1 `i `uc ]
 "253
 [; ;rtc/rtc_ds1337/rtc_ds1337.c: 253:     time.seconds = (uint8_t) convertBCD2Bytes(data);
 [e = . _time 0 ( _convertBCD2Bytes (1 -> &U _data `uc ]
@@ -1848,8 +1857,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;rtc/rtc_ds1337/rtc_ds1337.c: 260:     uint8_t data = convertByte2BCD(time.seconds);
 [v _data `uc ~T0 @X0 1 a ]
 [e = _data ( _convertByte2BCD (1 . _time 0 ]
-[v F6296 `uc ~T0 @X0 -> 2 `i s ]
-[i F6296
+[v F6297 `uc ~T0 @X0 -> 2 `i s ]
+[i F6297
 :U ..
 "261
 [; ;rtc/rtc_ds1337/rtc_ds1337.c: 261:     uint8_t rtcRegister[] = { 0x00, data};
@@ -1858,11 +1867,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v _rtcRegister `uc ~T0 @X0 -> 2 `i a ]
-[e = _rtcRegister F6296 ]
+[e = _rtcRegister F6297 ]
 [e ; = *U + &U _rtcRegister * -> -> -> 0 `i `ui `ux -> -> # *U &U _rtcRegister `ui `ux -> -> 0 `i `uc = *U + &U _rtcRegister * -> -> -> 1 `i `ui `ux -> -> # *U &U _rtcRegister `ui `ux _data ]
 "262
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 262:     i2c_write_serial(0b1101000, rtcRegister, 2);
-[e ( _i2c_write_serial (3 , , -> -> 104 `i `uc -> &U _rtcRegister `*uc -> -> 2 `i `uc ]
+[; ;rtc/rtc_ds1337/rtc_ds1337.c: 262:     i2c_write_serial(rtc_addr, (char)rtcRegister, 2);
+[e ( _i2c_write_serial (3 , , _rtc_addr -> -> &U _rtcRegister `uc `*uc -> -> 2 `i `uc ]
 "263
 [; ;rtc/rtc_ds1337/rtc_ds1337.c: 263: }
 [e :UE 844 ]
@@ -1876,14 +1885,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _rtc_ds_1337_getMinutes ]
 [f ]
 "271
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 271:     i2c_write_serial(0b1101000, (uint8_t)0x01, 1);
-[e ( _i2c_write_serial (3 , , -> -> 104 `i `uc -> -> -> 1 `i `uc `*uc -> -> 1 `i `uc ]
+[; ;rtc/rtc_ds1337/rtc_ds1337.c: 271:     i2c_write_serial(rtc_addr, (char*)0x01, 1);
+[e ( _i2c_write_serial (3 , , _rtc_addr -> -> 1 `i `*uc -> -> 1 `i `uc ]
 "272
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 272:     i2c_read_serial(0b1101000, rtc_data , 1);
-[e ( _i2c_read_serial (3 , , -> -> 104 `i `uc -> &U _rtc_data `*uc -> -> 1 `i `uc ]
+[; ;rtc/rtc_ds1337/rtc_ds1337.c: 272:     i2c_read_serial(rtc_addr, rtc_data , 1);
+[e ( _i2c_read_serial (3 , , _rtc_addr -> &U _rtc_data `*uc -> -> 1 `i `uc ]
 "273
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 273:     time.minutes = convertBCD2Bytes(rtc_data[1]);
-[e = . _time 1 ( _convertBCD2Bytes (1 *U + &U _rtc_data * -> -> -> 1 `i `ui `ux -> -> # *U &U _rtc_data `ui `ux ]
+[; ;rtc/rtc_ds1337/rtc_ds1337.c: 273:     time.minutes = convertBCD2Bytes((uint8_t)rtc_data[0]);
+[e = . _time 1 ( _convertBCD2Bytes (1 *U + &U _rtc_data * -> -> -> 0 `i `ui `ux -> -> # *U &U _rtc_data `ui `ux ]
 "275
 [; ;rtc/rtc_ds1337/rtc_ds1337.c: 275:     return time.minutes;
 [e ) . _time 1 ]
@@ -1904,8 +1913,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;rtc/rtc_ds1337/rtc_ds1337.c: 280:     uint8_t data = convertByte2BCD(time.minutes);
 [v _data `uc ~T0 @X0 1 a ]
 [e = _data ( _convertByte2BCD (1 . _time 1 ]
-[v F6301 `uc ~T0 @X0 -> 2 `i s ]
-[i F6301
+[v F6302 `uc ~T0 @X0 -> 2 `i s ]
+[i F6302
 :U ..
 "281
 [; ;rtc/rtc_ds1337/rtc_ds1337.c: 281:     uint8_t rtcRegister[] = { 0x01, data};
@@ -1914,11 +1923,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v _rtcRegister `uc ~T0 @X0 -> 2 `i a ]
-[e = _rtcRegister F6301 ]
+[e = _rtcRegister F6302 ]
 [e ; = *U + &U _rtcRegister * -> -> -> 0 `i `ui `ux -> -> # *U &U _rtcRegister `ui `ux -> -> 1 `i `uc = *U + &U _rtcRegister * -> -> -> 1 `i `ui `ux -> -> # *U &U _rtcRegister `ui `ux _data ]
 "282
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 282:     i2c_write_serial(0b1101000, rtcRegister, 2);
-[e ( _i2c_write_serial (3 , , -> -> 104 `i `uc -> &U _rtcRegister `*uc -> -> 2 `i `uc ]
+[; ;rtc/rtc_ds1337/rtc_ds1337.c: 282:     i2c_write_serial(rtc_addr, (char)rtcRegister, 2);
+[e ( _i2c_write_serial (3 , , _rtc_addr -> -> &U _rtcRegister `uc `*uc -> -> 2 `i `uc ]
 "283
 [; ;rtc/rtc_ds1337/rtc_ds1337.c: 283: }
 [e :UE 846 ]
@@ -1932,11 +1941,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _rtc_ds_1337_getHour ]
 [f ]
 "291
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 291:     i2c_write_serial(0b1101000, (uint8_t)0x02, 1);
-[e ( _i2c_write_serial (3 , , -> -> 104 `i `uc -> -> -> 2 `i `uc `*uc -> -> 1 `i `uc ]
+[; ;rtc/rtc_ds1337/rtc_ds1337.c: 291:     i2c_write_serial(rtc_addr, (char)0x02, 1);
+[e ( _i2c_write_serial (3 , , _rtc_addr -> -> -> 2 `i `uc `*uc -> -> 1 `i `uc ]
 "292
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 292:     i2c_read_serial(0b1101000, rtc_data , 1);
-[e ( _i2c_read_serial (3 , , -> -> 104 `i `uc -> &U _rtc_data `*uc -> -> 1 `i `uc ]
+[; ;rtc/rtc_ds1337/rtc_ds1337.c: 292:     i2c_read_serial(rtc_addr, rtc_data , 1);
+[e ( _i2c_read_serial (3 , , _rtc_addr -> &U _rtc_data `*uc -> -> 1 `i `uc ]
 "293
 [; ;rtc/rtc_ds1337/rtc_ds1337.c: 293:     time.hours = convertBCD2Bytes(rtc_data);
 [e = . _time 2 ( _convertBCD2Bytes (1 -> &U _rtc_data `uc ]
@@ -1960,8 +1969,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;rtc/rtc_ds1337/rtc_ds1337.c: 300:     uint8_t data = convertByte2BCD(time.hours);
 [v _data `uc ~T0 @X0 1 a ]
 [e = _data ( _convertByte2BCD (1 . _time 2 ]
-[v F6306 `uc ~T0 @X0 -> 2 `i s ]
-[i F6306
+[v F6307 `uc ~T0 @X0 -> 2 `i s ]
+[i F6307
 :U ..
 "301
 [; ;rtc/rtc_ds1337/rtc_ds1337.c: 301:     uint8_t rtcRegister[] = { (uint8_t)0x02, data};
@@ -1970,11 +1979,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v _rtcRegister `uc ~T0 @X0 -> 2 `i a ]
-[e = _rtcRegister F6306 ]
+[e = _rtcRegister F6307 ]
 [e ; = *U + &U _rtcRegister * -> -> -> 0 `i `ui `ux -> -> # *U &U _rtcRegister `ui `ux -> -> 2 `i `uc = *U + &U _rtcRegister * -> -> -> 1 `i `ui `ux -> -> # *U &U _rtcRegister `ui `ux _data ]
 "302
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 302:     i2c_write_serial(0b1101000, rtcRegister, 2);
-[e ( _i2c_write_serial (3 , , -> -> 104 `i `uc -> &U _rtcRegister `*uc -> -> 2 `i `uc ]
+[; ;rtc/rtc_ds1337/rtc_ds1337.c: 302:     i2c_write_serial(rtc_addr, rtcRegister, 2);
+[e ( _i2c_write_serial (3 , , _rtc_addr -> &U _rtcRegister `*uc -> -> 2 `i `uc ]
 "303
 [; ;rtc/rtc_ds1337/rtc_ds1337.c: 303: }
 [e :UE 848 ]
@@ -2010,11 +2019,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _rtc_ds_1337_getDay ]
 [f ]
 "322
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 322:     i2c_write_serial((uint8_t)0b1101000, (uint8_t)0x03, 1);
-[e ( _i2c_write_serial (3 , , -> -> 104 `i `uc -> -> -> 3 `i `uc `*uc -> -> 1 `i `uc ]
+[; ;rtc/rtc_ds1337/rtc_ds1337.c: 322:     i2c_write_serial((uint8_t)rtc_addr, (uint8_t)0x03, 1);
+[e ( _i2c_write_serial (3 , , _rtc_addr -> -> -> 3 `i `uc `*uc -> -> 1 `i `uc ]
 "323
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 323:     i2c_read_serial(0b1101000, rtc_data , 1);
-[e ( _i2c_read_serial (3 , , -> -> 104 `i `uc -> &U _rtc_data `*uc -> -> 1 `i `uc ]
+[; ;rtc/rtc_ds1337/rtc_ds1337.c: 323:     i2c_read_serial(rtc_addr, rtc_data , 1);
+[e ( _i2c_read_serial (3 , , _rtc_addr -> &U _rtc_data `*uc -> -> 1 `i `uc ]
 "324
 [; ;rtc/rtc_ds1337/rtc_ds1337.c: 324:     time.day = convertBCD2Bytes((uint8_t)rtc_data[1]);
 [e = . _time 3 ( _convertBCD2Bytes (1 *U + &U _rtc_data * -> -> -> 1 `i `ui `ux -> -> # *U &U _rtc_data `ui `ux ]
@@ -2034,8 +2043,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 [e :U _rtc_ds_1337_setDay ]
 [f ]
-[v F6312 `uc ~T0 @X0 -> 2 `i s ]
-[i F6312
+[v F6313 `uc ~T0 @X0 -> 2 `i s ]
+[i F6313
 :U ..
 "331
 [; ;rtc/rtc_ds1337/rtc_ds1337.c: 331:     uint8_t rtcRegister[] = { 0x03, convertByte2BCD(time.day) };
@@ -2044,11 +2053,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v _rtcRegister `uc ~T0 @X0 -> 2 `i a ]
-[e = _rtcRegister F6312 ]
+[e = _rtcRegister F6313 ]
 [e ; = *U + &U _rtcRegister * -> -> -> 0 `i `ui `ux -> -> # *U &U _rtcRegister `ui `ux -> -> 3 `i `uc = *U + &U _rtcRegister * -> -> -> 1 `i `ui `ux -> -> # *U &U _rtcRegister `ui `ux ( _convertByte2BCD (1 . _time 3 ]
 "332
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 332:     i2c_write_serial(0b1101000, rtcRegister, 2);
-[e ( _i2c_write_serial (3 , , -> -> 104 `i `uc -> &U _rtcRegister `*uc -> -> 2 `i `uc ]
+[; ;rtc/rtc_ds1337/rtc_ds1337.c: 332:     i2c_write_serial(rtc_addr, rtcRegister, 2);
+[e ( _i2c_write_serial (3 , , _rtc_addr -> &U _rtcRegister `*uc -> -> 2 `i `uc ]
 "333
 [; ;rtc/rtc_ds1337/rtc_ds1337.c: 333: }
 [e :UE 852 ]
@@ -2081,8 +2090,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;rtc/rtc_ds1337/rtc_ds1337.c: 347:     uint8_t data = convertByte2BCD(time.month);
 [v _data `uc ~T0 @X0 1 a ]
 [e = _data ( _convertByte2BCD (1 . _time 5 ]
-[v F6317 `uc ~T0 @X0 -> 2 `i s ]
-[i F6317
+[v F6318 `uc ~T0 @X0 -> 2 `i s ]
+[i F6318
 :U ..
 "348
 [; ;rtc/rtc_ds1337/rtc_ds1337.c: 348:     uint8_t rtcRegister[] = { (uint8_t) 0x05, data };
@@ -2091,11 +2100,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v _rtcRegister `uc ~T0 @X0 -> 2 `i a ]
-[e = _rtcRegister F6317 ]
+[e = _rtcRegister F6318 ]
 [e ; = *U + &U _rtcRegister * -> -> -> 0 `i `ui `ux -> -> # *U &U _rtcRegister `ui `ux -> -> 5 `i `uc = *U + &U _rtcRegister * -> -> -> 1 `i `ui `ux -> -> # *U &U _rtcRegister `ui `ux _data ]
 "349
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 349:     i2c_write_serial(0b1101000, rtcRegister, 2);
-[e ( _i2c_write_serial (3 , , -> -> 104 `i `uc -> &U _rtcRegister `*uc -> -> 2 `i `uc ]
+[; ;rtc/rtc_ds1337/rtc_ds1337.c: 349:     i2c_write_serial(rtc_addr, (char*)rtcRegister, 2);
+[e ( _i2c_write_serial (3 , , _rtc_addr -> &U _rtcRegister `*uc -> -> 2 `i `uc ]
 "350
 [; ;rtc/rtc_ds1337/rtc_ds1337.c: 350: }
 [e :UE 854 ]
@@ -2122,8 +2131,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;rtc/rtc_ds1337/rtc_ds1337.c: 355:     uint8_t data = convertByte2BCD(time.year);
 [v _data `uc ~T0 @X0 1 a ]
 [e = _data ( _convertByte2BCD (1 . _time 6 ]
-[v F6322 `uc ~T0 @X0 -> 2 `i s ]
-[i F6322
+[v F6323 `uc ~T0 @X0 -> 2 `i s ]
+[i F6323
 :U ..
 "356
 [; ;rtc/rtc_ds1337/rtc_ds1337.c: 356:     uint8_t rtcRegister[] = { 0x06, data };
@@ -2132,11 +2141,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v _rtcRegister `uc ~T0 @X0 -> 2 `i a ]
-[e = _rtcRegister F6322 ]
+[e = _rtcRegister F6323 ]
 [e ; = *U + &U _rtcRegister * -> -> -> 0 `i `ui `ux -> -> # *U &U _rtcRegister `ui `ux -> -> 6 `i `uc = *U + &U _rtcRegister * -> -> -> 1 `i `ui `ux -> -> # *U &U _rtcRegister `ui `ux _data ]
 "357
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 357:     i2c_write_serial(0b1101000, rtcRegister, 2);
-[e ( _i2c_write_serial (3 , , -> -> 104 `i `uc -> &U _rtcRegister `*uc -> -> 2 `i `uc ]
+[; ;rtc/rtc_ds1337/rtc_ds1337.c: 357:     i2c_write_serial(rtc_addr, (char*)rtcRegister, 2);
+[e ( _i2c_write_serial (3 , , _rtc_addr -> &U _rtcRegister `*uc -> -> 2 `i `uc ]
 "358
 [; ;rtc/rtc_ds1337/rtc_ds1337.c: 358: }
 [e :UE 856 ]
@@ -2230,8 +2239,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "439
 [; ;rtc/rtc_ds1337/rtc_ds1337.c: 439:     minsReg += time.A1M2<<7;
 [e =+ _minsReg -> << -> . _time 11 `i -> 7 `i `uc ]
-[v F6332 `uc ~T0 @X0 -> 2 `i s ]
-[i F6332
+[v F6333 `uc ~T0 @X0 -> 2 `i s ]
+[i F6333
 :U ..
 "441
 [; ;rtc/rtc_ds1337/rtc_ds1337.c: 441:     uint8_t transmit[] = { 0x08, minsReg };
@@ -2240,11 +2249,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v _transmit `uc ~T0 @X0 -> 2 `i a ]
-[e = _transmit F6332 ]
+[e = _transmit F6333 ]
 [e ; = *U + &U _transmit * -> -> -> 0 `i `ui `ux -> -> # *U &U _transmit `ui `ux -> -> 8 `i `uc = *U + &U _transmit * -> -> -> 1 `i `ui `ux -> -> # *U &U _transmit `ui `ux _minsReg ]
 "442
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 442:     i2c_write_serial(0b1101000, transmit, 2 );
-[e ( _i2c_write_serial (3 , , -> -> 104 `i `uc -> &U _transmit `*uc -> -> 2 `i `uc ]
+[; ;rtc/rtc_ds1337/rtc_ds1337.c: 442:     i2c_write_serial(rtc_addr, (char*)transmit, 2 );
+[e ( _i2c_write_serial (3 , , _rtc_addr -> &U _transmit `*uc -> -> 2 `i `uc ]
 "443
 [; ;rtc/rtc_ds1337/rtc_ds1337.c: 443: }
 [e :UE 861 ]
@@ -2282,8 +2291,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "460
 [; ;rtc/rtc_ds1337/rtc_ds1337.c: 460:     hoursReg += (time.alarm112n24)?time.alarm2PMnAM<<5:0;
 [e =+ _hoursReg -> ? != -> . _time 19 `i -> 0 `i : << -> . _time 30 `i -> 5 `i -> 0 `i `uc ]
-[v F6337 `uc ~T0 @X0 -> 2 `i s ]
-[i F6337
+[v F6338 `uc ~T0 @X0 -> 2 `i s ]
+[i F6338
 :U ..
 "462
 [; ;rtc/rtc_ds1337/rtc_ds1337.c: 462:     uint8_t transmit[] = { 0x09, hoursReg };
@@ -2292,11 +2301,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v _transmit `uc ~T0 @X0 -> 2 `i a ]
-[e = _transmit F6337 ]
+[e = _transmit F6338 ]
 [e ; = *U + &U _transmit * -> -> -> 0 `i `ui `ux -> -> # *U &U _transmit `ui `ux -> -> 9 `i `uc = *U + &U _transmit * -> -> -> 1 `i `ui `ux -> -> # *U &U _transmit `ui `ux _hoursReg ]
 "463
-[; ;rtc/rtc_ds1337/rtc_ds1337.c: 463:     i2c_write_serial(0b1101000, transmit, 2 );
-[e ( _i2c_write_serial (3 , , -> -> 104 `i `uc -> &U _transmit `*uc -> -> 2 `i `uc ]
+[; ;rtc/rtc_ds1337/rtc_ds1337.c: 463:     i2c_write_serial(rtc_addr, (char*)transmit, 2 );
+[e ( _i2c_write_serial (3 , , _rtc_addr -> &U _transmit `*uc -> -> 2 `i `uc ]
 "464
 [; ;rtc/rtc_ds1337/rtc_ds1337.c: 464: }
 [e :UE 863 ]

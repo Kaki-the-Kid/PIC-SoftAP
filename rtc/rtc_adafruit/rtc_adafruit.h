@@ -44,7 +44,7 @@
    0FH: |    OSF    | 0 | 0 | 0 | 0 | 0 | A2F | A1F |                      Funtion: Status
  */
 
-#define rtc_address         0x68; // 7-bit adresse på Real-time clock
+#define rtc_address         0x68 // 7-bit adresse på Real-time clock
 
 //
 #define secondsAddr         0x00

@@ -7,16 +7,15 @@
 #pragma once
 
 #ifndef MCC_H
-    #include "../mcc_generated_files/mcc.h"
+#include "../mcc_generated_files/mcc.h"
 #endif
 
 #ifndef RTC_H
 #define	RTC_H
 
-uint8_t rtc_addr;
-#define rtc_type        0x00 // Brug denne til at vï¿½lge i mellem de forskellige RTC moduler
-                             //    Type 0: DS1337
-                             //    Type 1: Adafruit RTC
+const uint8_t rtc_type = 0; // Brug denne til at vælge i mellem de forskellige RTC moduler
+                            //    Type 0: DS1337
+                            //    Type 1: Adafruit RTC
 // Understï¿½ttede enheder
 #if (rtc_type == 0)
     #include "rtc_ds1337/rtc_ds1337.h"
@@ -24,15 +23,15 @@ uint8_t rtc_addr;
     #include "rtc_adafruit/rtc_adafruit.h"
 #endif
 
-// Skabeloner som bruges hvis der Ã¸nskes at udprinte til webside
+// Skabeloner som bruges hvis der ønskes at udprinte til webside
 const char rtc_htmlTemplate[]   = "<h1>Server tid</h1><div id ='clock' onload='startTime()'></div>";
 const char rtc_fontTemplate[]   = "<link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>";
 const char rtc_cssTemplate[]    = "body{background:black;}#clock{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#FFFF00;font-family:Orbitron;letter-spacing:7px;font-weight:bold;font-size:10em;}";
 const char rtc_scriptTemplate[] = "<script>function startTime(){var today=new Date();var h=today.getHours();var m=today.getMinutes();var s=today.getSeconds();m=checkTime(m);s=checkTime(s);document.getElementById('clock').innerHTML=h+':'+m+':'+s;var t=setTimeout(startTime,500);}function checkTime(i){if(i<10){i='0'+i};return i;}</script>";
 
-uint8_t       _clockDataString[] = {"hh:mm:ss - dd-mm-yyyy"};
-char        rtcData[16];
-uint8_t       rtc_data[1];
+uint8_t    _clockDataString[] = {"hh:mm:ss - dd-mm-yyyy"};
+char       rtcData[16];
+uint8_t    rtc_data[1];
 
 
 // Struct som indeholder indkomne data fra den valgte RTC

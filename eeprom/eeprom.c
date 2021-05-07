@@ -26,7 +26,7 @@ void eeprom_testData(void) {
     printf("Laes fra EEPRROM\r\n");
     __delay_ms(20);
     
-    i2c_read_serial(eeprom_addr, eeprom_buffer, 15);
+    i2c_read_serial(eeprom_addr, (char*)eeprom_buffer, 15);
     printf("Og print dem ud igen\r\n");
     
     for(uint8_t i=0; i < 15; i++) {
@@ -80,7 +80,7 @@ void eeprom_dumpLogData(void) {
     
     // EEPROM holder den interne pointe ved reads. 4 byte * 4 linier * 105 tegn = 1680 tegn
     while ( i <= i_max ) {
-        i2c_read_serial(eeprom_addr, (uint8_t*) eeprom_buffer, 8); // 4 bytes x 2 linier = 8 bytes
+        i2c_read_serial(eeprom_addr, eeprom_buffer, 8); // 4 bytes x 2 linier = 8 bytes
         
         // 2 bytes * 6 linier
         j = 0;

@@ -9625,7 +9625,7 @@ const uint8_t eeprom_addr = 0b1010000;
 const char eeprom_test[] = {0x00, 0x00, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0x0a, 0x0b, 0x0c, 0x0d, 0x0e, 0x0f};
 const char eeprom_init[] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x04};
 const char eeprom_pointer[] = {0x00, 0x00};
-uint8_t eeprom_buffer[128];
+char eeprom_buffer[128];
 
 
 const char eeprom_htmlTemplate[] = "<h1>Temperatur og luftfugtighed</h1><div style='width: 100%;'><canvas id='canvas'></canvas></div>";
@@ -9653,7 +9653,7 @@ void eeprom_testData(void) {
     printf("Laes fra EEPRROM\r\n");
     _delay((unsigned long)((20)*(64000000/4000.0)));
 
-    i2c_read_serial(eeprom_addr, eeprom_buffer, 15);
+    i2c_read_serial(eeprom_addr, (char*)eeprom_buffer, 15);
     printf("Og print dem ud igen\r\n");
 
     for(uint8_t i=0; i < 15; i++) {
@@ -9698,7 +9698,7 @@ void eeprom_dumpLogData(void) {
 
 
     while ( i <= i_max ) {
-        i2c_read_serial(eeprom_addr, (uint8_t*) eeprom_buffer, 8);
+        i2c_read_serial(eeprom_addr, eeprom_buffer, 8);
 
 
         j = 0;

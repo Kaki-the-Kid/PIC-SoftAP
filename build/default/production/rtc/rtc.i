@@ -9493,8 +9493,7 @@ void OSCILLATOR_Initialize(void);
 
 
 
-uint8_t rtc_addr;
-
+const uint8_t rtc_type = 0;
 
 
 
@@ -9517,7 +9516,9 @@ void i2c_master_stop(void);
 void i2c_master_ack(void);
 void i2c_master_nack(void);
 # 18 "rtc/rtc_ds1337/rtc_ds1337.h" 2
-# 83 "rtc/rtc_ds1337/rtc_ds1337.h"
+# 46 "rtc/rtc_ds1337/rtc_ds1337.h"
+const uint8_t rtc_addr = 0b1101000;
+# 82 "rtc/rtc_ds1337/rtc_ds1337.h"
 void rtc_init(void);
 
 
@@ -9552,7 +9553,7 @@ void rtc_ds_1337_setMonth(void);
 
 uint8_t rtc_ds_1337_getYear(void);
 void rtc_ds_1337_setYear(void);
-# 125 "rtc/rtc_ds1337/rtc_ds1337.h"
+# 124 "rtc/rtc_ds1337/rtc_ds1337.h"
 void setAlarm1(void);
 
 uint8_t rtc_ds_1337_getAlarm1Seconds(void);
@@ -9608,7 +9609,7 @@ void rtc_ds_1337_setAlarm2A2M2(void);
 
 _Bool rtc_ds_1337_getEnableOscillator(void);
 void rtc_ds_1337_setEnableOscillator(_Bool);
-# 22 "rtc/rtc.h" 2
+# 21 "rtc/rtc.h" 2
 
 
 
@@ -9683,8 +9684,11 @@ uint8_t convertBCD2Bytes(uint8_t bcdByte)
 {
     uint8_t result = 0;
 
-    result += (bcdByte & 0x00001111);
-    result += ((bcdByte & 0x11110000) << 4);
+    if(bcdByte)
+    {
+        result += (bcdByte & 0x00001111);
+        result += ((bcdByte & 0x11110000) << 4);
+    }
 
     return result;
 }

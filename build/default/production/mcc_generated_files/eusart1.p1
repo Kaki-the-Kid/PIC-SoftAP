@@ -1,24 +1,151 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"111 C:\Program Files\Microchip\xc8\v2.32\pic\include\c99\stdio.h
-[v _printf `(i ~T0 @X0 0 ev`*Cuc ]
-"34 eeprom/../i2c/i2c.h
-[; ;eeprom/../i2c/i2c.h: 34: void i2c_write_serial(uint8_t, char*, uint8_t);
-[v _i2c_write_serial `(v ~T0 @X0 0 ef3`uc`*uc`uc ]
-[v F5708 `(v ~T0 @X0 1 tf1`ul ]
-"203 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\pic18.h
-[v __delay `JF5708 ~T0 @X0 0 e ]
-[p i __delay ]
-"35 eeprom/../i2c/i2c.h
-[; ;eeprom/../i2c/i2c.h: 35: void i2c_read_serial(uint8_t, char*, uint8_t);
-[v _i2c_read_serial `(v ~T0 @X0 0 ef3`uc`*uc`uc ]
-"113 C:\Program Files\Microchip\xc8\v2.32\pic\include\c99\stdio.h
-[v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
-"36 C:\Program Files\Microchip\xc8\v2.32\pic\include\c99\string.h
-[; ;C:\Program Files\Microchip\xc8\v2.32\pic\include\c99\string.h: 36: char *strcat (char *restrict, const char *restrict);
-[v _strcat `(*uc ~T0 @X0 0 ef2`*uc`*Cuc ]
-"54
-[; ;C:\Program Files\Microchip\xc8\v2.32\pic\include\c99\string.h: 54: size_t strlen (const char *);
-[v _strlen `(ui ~T0 @X0 0 ef1`*Cuc ]
+"77 mcc_generated_files/eusart1.h
+[; ;mcc_generated_files/eusart1.h: 77:     struct {
+[s S832 :1 `uc 1 :1 `uc 1 :1 `uc 1 :5 `uc 1 ]
+[n S832 . perr ferr oerr reserved ]
+"76
+[; ;mcc_generated_files/eusart1.h: 76: typedef union {
+[u S831 `S832 1 `uc 1 ]
+[n S831 . . status ]
+[v F6123 `(v ~T0 @X0 0 tf ]
+[v F6125 `(v ~T0 @X0 0 tf ]
+[v F6127 `(v ~T0 @X0 0 tf ]
+[v F6129 `(v ~T0 @X0 0 tf ]
+[v F6131 `(v ~T0 @X0 0 tf ]
+"8623 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k22.h
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k22.h: 8623:     struct {
+[s S413 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S413 . TMR1IE TMR2IE CCP1IE SSP1IE TX1IE RC1IE ADIE ]
+"8632
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k22.h: 8632:     struct {
+[s S414 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S414 . . SSPIE TXIE RCIE ]
+"8622
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k22.h: 8622: typedef union {
+[u S412 `S413 1 `S414 1 ]
+[n S412 . . . ]
+"8639
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k22.h: 8639: extern volatile PIE1bits_t PIE1bits __attribute__((address(0xF9D)));
+[v _PIE1bits `VS412 ~T0 @X0 0 e@3997 ]
+[v F6109 `(v ~T0 @X0 0 tf ]
+"506 mcc_generated_files/eusart1.h
+[; ;mcc_generated_files/eusart1.h: 506: void EUSART1_SetRxInterruptHandler(void (* interruptHandler)(void));
+[v _EUSART1_SetRxInterruptHandler `(v ~T0 @X0 0 ef1`*F6109 ]
+"391
+[; ;mcc_generated_files/eusart1.h: 391: void EUSART1_Receive_ISR(void);
+[v _EUSART1_Receive_ISR `(v ~T0 @X0 0 ef ]
+[v F6105 `(v ~T0 @X0 0 tf ]
+"486
+[; ;mcc_generated_files/eusart1.h: 486: void EUSART1_SetTxInterruptHandler(void (* interruptHandler)(void));
+[v _EUSART1_SetTxInterruptHandler `(v ~T0 @X0 0 ef1`*F6105 ]
+"370
+[; ;mcc_generated_files/eusart1.h: 370: void EUSART1_Transmit_ISR(void);
+[v _EUSART1_Transmit_ISR `(v ~T0 @X0 0 ef ]
+"11611 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k22.h
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k22.h: 11611: extern volatile unsigned char BAUDCON1 __attribute__((address(0xFB8)));
+[v _BAUDCON1 `Vuc ~T0 @X0 0 e@4024 ]
+"9582
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k22.h: 9582: extern volatile unsigned char RCSTA1 __attribute__((address(0xFAB)));
+[v _RCSTA1 `Vuc ~T0 @X0 0 e@4011 ]
+"10038
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k22.h: 10038: extern volatile unsigned char TXSTA1 __attribute__((address(0xFAC)));
+[v _TXSTA1 `Vuc ~T0 @X0 0 e@4012 ]
+"10569
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k22.h: 10569: extern volatile unsigned char SPBRG1 __attribute__((address(0xFAF)));
+[v _SPBRG1 `Vuc ~T0 @X0 0 e@4015 ]
+"10647
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k22.h: 10647: extern volatile unsigned char SPBRGH1 __attribute__((address(0xFB0)));
+[v _SPBRGH1 `Vuc ~T0 @X0 0 e@4016 ]
+[v F6093 `(v ~T0 @X0 0 tf ]
+"430 mcc_generated_files/eusart1.h
+[; ;mcc_generated_files/eusart1.h: 430: void EUSART1_SetFramingErrorHandler(void (* interruptHandler)(void));
+[v _EUSART1_SetFramingErrorHandler `(v ~T0 @X0 0 ef1`*F6093 ]
+"84 mcc_generated_files/eusart1.c
+[; ;mcc_generated_files/eusart1.c: 84: void EUSART1_DefaultFramingErrorHandler(void);
+[v _EUSART1_DefaultFramingErrorHandler `(v ~T0 @X0 0 ef ]
+[v F6097 `(v ~T0 @X0 0 tf ]
+"448 mcc_generated_files/eusart1.h
+[; ;mcc_generated_files/eusart1.h: 448: void EUSART1_SetOverrunErrorHandler(void (* interruptHandler)(void));
+[v _EUSART1_SetOverrunErrorHandler `(v ~T0 @X0 0 ef1`*F6097 ]
+"85 mcc_generated_files/eusart1.c
+[; ;mcc_generated_files/eusart1.c: 85: void EUSART1_DefaultOverrunErrorHandler(void);
+[v _EUSART1_DefaultOverrunErrorHandler `(v ~T0 @X0 0 ef ]
+[v F6101 `(v ~T0 @X0 0 tf ]
+"466 mcc_generated_files/eusart1.h
+[; ;mcc_generated_files/eusart1.h: 466: void EUSART1_SetErrorHandler(void (* interruptHandler)(void));
+[v _EUSART1_SetErrorHandler `(v ~T0 @X0 0 ef1`*F6101 ]
+"86 mcc_generated_files/eusart1.c
+[; ;mcc_generated_files/eusart1.c: 86: void EUSART1_DefaultErrorHandler(void);
+[v _EUSART1_DefaultErrorHandler `(v ~T0 @X0 0 ef ]
+"10053 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k22.h
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k22.h: 10053:     struct {
+[s S478 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S478 . TX9D TRMT BRGH SENDB SYNC TXEN TX9 CSRC ]
+"10063
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k22.h: 10063:     struct {
+[s S479 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S479 . TX9D1 TRMT1 BRGH1 SENDB1 SYNC1 TXEN1 TX91 CSRC1 ]
+"10073
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k22.h: 10073:     struct {
+[s S480 :1 `uc 1 :5 `uc 1 :1 `uc 1 ]
+[n S480 . TXD8 . TX8_9 ]
+"10052
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k22.h: 10052: typedef union {
+[u S477 `S478 1 `S479 1 `S480 1 ]
+[n S477 . . . . ]
+"10079
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k22.h: 10079: extern volatile TXSTA1bits_t TXSTA1bits __attribute__((address(0xFAC)));
+[v _TXSTA1bits `VS477 ~T0 @X0 0 e@4012 ]
+"10413
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k22.h: 10413: extern volatile unsigned char TXREG1 __attribute__((address(0xFAD)));
+[v _TXREG1 `Vuc ~T0 @X0 0 e@4013 ]
+"9597
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k22.h: 9597:     struct {
+[s S457 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S457 . RX9D OERR FERR ADDEN CREN SREN RX9 SPEN ]
+"9607
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k22.h: 9607:     struct {
+[s S458 :3 `uc 1 :1 `uc 1 ]
+[n S458 . . ADEN ]
+"9611
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k22.h: 9611:     struct {
+[s S459 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S459 . RX9D1 OERR1 FERR1 ADDEN1 CREN1 SREN1 RX91 SPEN1 ]
+"9621
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k22.h: 9621:     struct {
+[s S460 :1 `uc 1 :5 `uc 1 :1 `uc 1 ]
+[n S460 . RCD8 . RC8_9 ]
+"9626
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k22.h: 9626:     struct {
+[s S461 :6 `uc 1 :1 `uc 1 ]
+[n S461 . . RC9 ]
+"9630
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k22.h: 9630:     struct {
+[s S462 :5 `uc 1 :1 `uc 1 ]
+[n S462 . . SRENA ]
+"9596
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k22.h: 9596: typedef union {
+[u S456 `S457 1 `S458 1 `S459 1 `S460 1 `S461 1 `S462 1 ]
+[n S456 . . . . . . . ]
+"9635
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k22.h: 9635: extern volatile RCSTA1bits_t RCSTA1bits __attribute__((address(0xFAB)));
+[v _RCSTA1bits `VS456 ~T0 @X0 0 e@4011 ]
+"412 mcc_generated_files/eusart1.h
+[; ;mcc_generated_files/eusart1.h: 412: void EUSART1_RxDataHandler(void);
+[v _EUSART1_RxDataHandler `(v ~T0 @X0 0 ef ]
+"10491 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k22.h
+[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k22.h: 10491: extern volatile unsigned char RCREG1 __attribute__((address(0xFAE)));
+[v _RCREG1 `Vuc ~T0 @X0 0 e@4014 ]
+[v F6159 `(v ~T0 @X0 0 tf ]
+[v F6161 `(v ~T0 @X0 0 tf ]
+[v F6164 `(v ~T0 @X0 0 tf ]
+[v F6166 `(v ~T0 @X0 0 tf ]
+[v F6169 `(v ~T0 @X0 0 tf ]
+[v F6171 `(v ~T0 @X0 0 tf ]
+[v F6174 `(v ~T0 @X0 0 tf ]
+[v F6176 `(v ~T0 @X0 0 tf ]
+[v F6179 `(v ~T0 @X0 0 tf ]
+[v F6181 `(v ~T0 @X0 0 tf ]
 "54 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k22.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k22.h: 54: __asm("ANSELA equ 0F38h");
 [; <" ANSELA equ 0F38h ;# ">
@@ -754,2369 +881,626 @@ Version 4.0 HI-TECH Software Intermediate Code
 "16609
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k22.h: 16609: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"30 eeprom/../i2c/i2c.h
-[; ;eeprom/../i2c/i2c.h: 30: uint8_t data_out[4];
-[v _data_out `uc ~T0 @X0 -> 4 `i e ]
-"24 eeprom/eeprom.h
-[; ;eeprom/eeprom.h: 24: const uint8_t eeprom_addr = 0b1010000;
-[v _eeprom_addr `Cuc ~T0 @X0 1 e ]
-[i _eeprom_addr
--> -> 80 `i `uc
-]
-"25
-[; ;eeprom/eeprom.h: 25: const char eeprom_test[] = {0x00, 0x00, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0x0a, 0x0b, 0x0c, 0x0d, 0x0e, 0x0f};
-[v _eeprom_test `Cuc ~T0 @X0 -> 17 `i e ]
-[i _eeprom_test
-:U ..
+"62 mcc_generated_files/eusart1.c
+[; ;mcc_generated_files/eusart1.c: 62: volatile uint8_t eusart1TxHead = 0;
+[v _eusart1TxHead `Vuc ~T0 @X0 1 e ]
+[i _eusart1TxHead
 -> -> 0 `i `uc
+]
+"63
+[; ;mcc_generated_files/eusart1.c: 63: volatile uint8_t eusart1TxTail = 0;
+[v _eusart1TxTail `Vuc ~T0 @X0 1 e ]
+[i _eusart1TxTail
 -> -> 0 `i `uc
--> -> 1 `i `uc
--> -> 2 `i `uc
--> -> 3 `i `uc
--> -> 4 `i `uc
--> -> 5 `i `uc
--> -> 6 `i `uc
--> -> 7 `i `uc
--> -> 8 `i `uc
--> -> 9 `i `uc
--> -> 10 `i `uc
--> -> 11 `i `uc
--> -> 12 `i `uc
--> -> 13 `i `uc
--> -> 14 `i `uc
--> -> 15 `i `uc
-..
 ]
-"26
-[; ;eeprom/eeprom.h: 26: const char eeprom_init[] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x04};
-[v _eeprom_init `Cuc ~T0 @X0 -> 6 `i e ]
-[i _eeprom_init
-:U ..
+"64
+[; ;mcc_generated_files/eusart1.c: 64: volatile uint8_t eusart1TxBuffer[64];
+[v _eusart1TxBuffer `Vuc ~T0 @X0 -> 64 `i e ]
+"65
+[; ;mcc_generated_files/eusart1.c: 65: volatile uint8_t eusart1TxBufferRemaining;
+[v _eusart1TxBufferRemaining `Vuc ~T0 @X0 1 e ]
+"67
+[; ;mcc_generated_files/eusart1.c: 67: volatile uint8_t eusart1RxHead = 0;
+[v _eusart1RxHead `Vuc ~T0 @X0 1 e ]
+[i _eusart1RxHead
 -> -> 0 `i `uc
+]
+"68
+[; ;mcc_generated_files/eusart1.c: 68: volatile uint8_t eusart1RxTail = 0;
+[v _eusart1RxTail `Vuc ~T0 @X0 1 e ]
+[i _eusart1RxTail
 -> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 4 `i `uc
-..
 ]
-"27
-[; ;eeprom/eeprom.h: 27: const char eeprom_pointer[] = {0x00, 0x00};
-[v _eeprom_pointer `Cuc ~T0 @X0 -> 2 `i e ]
-[i _eeprom_pointer
-:U ..
--> -> 0 `i `uc
--> -> 0 `i `uc
-..
-]
-"28
-[; ;eeprom/eeprom.h: 28: char eeprom_buffer[128];
-[v _eeprom_buffer `uc ~T0 @X0 -> 128 `i e ]
-"31
-[; ;eeprom/eeprom.h: 31: const char eeprom_htmlTemplate[] = "<h1>Temperatur og luftfugtighed</h1><div style='width: 100%;'><canvas id='canvas'></canvas></div>";
-[v _eeprom_htmlTemplate `Cuc ~T0 @X0 -> 98 `i e ]
-[i _eeprom_htmlTemplate
-:U ..
--> 60 `c
--> 104 `c
--> 49 `c
--> 62 `c
--> 84 `c
--> 101 `c
--> 109 `c
--> 112 `c
--> 101 `c
--> 114 `c
--> 97 `c
--> 116 `c
--> 117 `c
--> 114 `c
--> 32 `c
--> 111 `c
--> 103 `c
--> 32 `c
--> 108 `c
--> 117 `c
--> 102 `c
--> 116 `c
--> 102 `c
--> 117 `c
--> 103 `c
--> 116 `c
--> 105 `c
--> 103 `c
--> 104 `c
--> 101 `c
--> 100 `c
--> 60 `c
--> 47 `c
--> 104 `c
--> 49 `c
--> 62 `c
--> 60 `c
--> 100 `c
--> 105 `c
--> 118 `c
--> 32 `c
--> 115 `c
--> 116 `c
--> 121 `c
--> 108 `c
--> 101 `c
--> 61 `c
--> 39 `c
--> 119 `c
--> 105 `c
--> 100 `c
--> 116 `c
--> 104 `c
--> 58 `c
--> 32 `c
--> 49 `c
--> 48 `c
--> 48 `c
--> 37 `c
--> 59 `c
--> 39 `c
--> 62 `c
--> 60 `c
--> 99 `c
--> 97 `c
--> 110 `c
--> 118 `c
--> 97 `c
--> 115 `c
--> 32 `c
--> 105 `c
--> 100 `c
--> 61 `c
--> 39 `c
--> 99 `c
--> 97 `c
--> 110 `c
--> 118 `c
--> 97 `c
--> 115 `c
--> 39 `c
--> 62 `c
--> 60 `c
--> 47 `c
--> 99 `c
--> 97 `c
--> 110 `c
--> 118 `c
--> 97 `c
--> 115 `c
--> 62 `c
--> 60 `c
--> 47 `c
--> 100 `c
--> 105 `c
--> 118 `c
--> 62 `c
--> 0 `c
-..
-]
-"32
-[; ;eeprom/eeprom.h: 32: const char eeprom_fontTemplate[] = "";
-[v _eeprom_fontTemplate `Cuc ~T0 @X0 -> -> 1 `i `ux e ]
-[i _eeprom_fontTemplate
-:U ..
--> 0 `c
-..
-]
-"33
-[; ;eeprom/eeprom.h: 33: const char eeprom_cssTemplate[] = "<style>canvas {-moz-user-select: none;-webkit-user-select: none;-ms-user-select: none;}</style>";
-[v _eeprom_cssTemplate `Cuc ~T0 @X0 -> 96 `i e ]
-[i _eeprom_cssTemplate
-:U ..
--> 60 `c
--> 115 `c
--> 116 `c
--> 121 `c
--> 108 `c
--> 101 `c
--> 62 `c
--> 99 `c
--> 97 `c
--> 110 `c
--> 118 `c
--> 97 `c
--> 115 `c
--> 32 `c
--> 123 `c
--> 45 `c
--> 109 `c
--> 111 `c
--> 122 `c
--> 45 `c
--> 117 `c
--> 115 `c
--> 101 `c
--> 114 `c
--> 45 `c
--> 115 `c
--> 101 `c
--> 108 `c
--> 101 `c
--> 99 `c
--> 116 `c
--> 58 `c
--> 32 `c
--> 110 `c
--> 111 `c
--> 110 `c
--> 101 `c
--> 59 `c
--> 45 `c
--> 119 `c
--> 101 `c
--> 98 `c
--> 107 `c
--> 105 `c
--> 116 `c
--> 45 `c
--> 117 `c
--> 115 `c
--> 101 `c
--> 114 `c
--> 45 `c
--> 115 `c
--> 101 `c
--> 108 `c
--> 101 `c
--> 99 `c
--> 116 `c
--> 58 `c
--> 32 `c
--> 110 `c
--> 111 `c
--> 110 `c
--> 101 `c
--> 59 `c
--> 45 `c
--> 109 `c
--> 115 `c
--> 45 `c
--> 117 `c
--> 115 `c
--> 101 `c
--> 114 `c
--> 45 `c
--> 115 `c
--> 101 `c
--> 108 `c
--> 101 `c
--> 99 `c
--> 116 `c
--> 58 `c
--> 32 `c
--> 110 `c
--> 111 `c
--> 110 `c
--> 101 `c
--> 59 `c
--> 125 `c
--> 60 `c
--> 47 `c
--> 115 `c
--> 116 `c
--> 121 `c
--> 108 `c
--> 101 `c
--> 62 `c
--> 0 `c
-..
-]
-"34
-[; ;eeprom/eeprom.h: 34: const char eeprom_scriptTemplate[] = "<script src='/node_modules/chart.js/dist/Chart.bundle.js'></script><script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script>var data=[],labels=[],	temperature=[], humidity=[];$.get('GetTestData.php', function(dataGet) {data=JSON.parse(dataGet);data['labels'].forEach(function(singleResult){labels.push(singleResult);});data['temperature'].forEach(function(singleResult){temperature.push(singleResult);});data['humidity'].forEach(function(singleResult){humidity.push(singleResult);});var ctx=document.getElementById('canvas').getContext('2d');window.myLine=new Chart(ctx,config);});var randomScalingFactor=function(){ return Math.round(Math.random()*100); };var randomColorFactor=function(){ return Math.round(Math.random()*255); };var randomColor=function(opacity){return'rgba('+randomColorFactor()+','+randomColorFactor()+','+randomColorFactor()+','+(opacity||'.9')+')'; };varconfig={type:'line',data:{labels:labels,datasets:[{ label:'Temperatur',data:temperature,fill:false },{ data:humidity,fill:false}]},options:{responsive:true,title:{display:true,text:'Temperatur og Luftfugtighed'},tooltips:{mode:'label'},hover:{mode:'dataset'},scales:{xAxes:[{display:true,scaleLabel:{display:true,labelString:'Dato'}}],yAxes:[{display:true,scaleLabel:{display:true,labelString:'V&aelig;rdi'},ticks:{suggestedMin:-20,suggestedMax:250,}}],}}};$.each(config.data.datasets,function(i,dataset){dataset.borderColor=randomColor(1.0);dataset.borderColor=randomColor(1.0);dataset.pointBorderColor=randomColor(1.0);dataset.pointBackgroundColor=randomColor(1.0);dataset.pointBorderWidth=1;});window.onload=function(){var ctx=document.getElementById('canvas').getContext('2d');window.myLine=new Chart(ctx,config);};</script>";
-[v _eeprom_scriptTemplate `Cuc ~T0 @X0 -> 1745 `i e ]
-[i _eeprom_scriptTemplate
-:U ..
--> 60 `c
--> 115 `c
--> 99 `c
--> 114 `c
--> 105 `c
--> 112 `c
--> 116 `c
--> 32 `c
--> 115 `c
--> 114 `c
--> 99 `c
--> 61 `c
--> 39 `c
--> 47 `c
--> 110 `c
--> 111 `c
--> 100 `c
--> 101 `c
--> 95 `c
--> 109 `c
--> 111 `c
--> 100 `c
--> 117 `c
--> 108 `c
--> 101 `c
--> 115 `c
--> 47 `c
--> 99 `c
--> 104 `c
--> 97 `c
--> 114 `c
--> 116 `c
--> 46 `c
--> 106 `c
--> 115 `c
--> 47 `c
--> 100 `c
--> 105 `c
--> 115 `c
--> 116 `c
--> 47 `c
--> 67 `c
--> 104 `c
--> 97 `c
--> 114 `c
--> 116 `c
--> 46 `c
--> 98 `c
--> 117 `c
--> 110 `c
--> 100 `c
--> 108 `c
--> 101 `c
--> 46 `c
--> 106 `c
--> 115 `c
--> 39 `c
--> 62 `c
--> 60 `c
--> 47 `c
--> 115 `c
--> 99 `c
--> 114 `c
--> 105 `c
--> 112 `c
--> 116 `c
--> 62 `c
--> 60 `c
--> 115 `c
--> 99 `c
--> 114 `c
--> 105 `c
--> 112 `c
--> 116 `c
--> 32 `c
--> 115 `c
--> 114 `c
--> 99 `c
--> 61 `c
--> 39 `c
--> 104 `c
--> 116 `c
--> 116 `c
--> 112 `c
--> 58 `c
--> 47 `c
--> 47 `c
--> 99 `c
--> 100 `c
--> 110 `c
--> 106 `c
--> 115 `c
--> 46 `c
--> 99 `c
--> 108 `c
--> 111 `c
--> 117 `c
--> 100 `c
--> 102 `c
--> 108 `c
--> 97 `c
--> 114 `c
--> 101 `c
--> 46 `c
--> 99 `c
--> 111 `c
--> 109 `c
--> 47 `c
--> 97 `c
--> 106 `c
--> 97 `c
--> 120 `c
--> 47 `c
--> 108 `c
--> 105 `c
--> 98 `c
--> 115 `c
--> 47 `c
--> 106 `c
--> 113 `c
--> 117 `c
--> 101 `c
--> 114 `c
--> 121 `c
--> 47 `c
--> 50 `c
--> 46 `c
--> 49 `c
--> 46 `c
--> 51 `c
--> 47 `c
--> 106 `c
--> 113 `c
--> 117 `c
--> 101 `c
--> 114 `c
--> 121 `c
--> 46 `c
--> 109 `c
--> 105 `c
--> 110 `c
--> 46 `c
--> 106 `c
--> 115 `c
--> 39 `c
--> 62 `c
--> 60 `c
--> 47 `c
--> 115 `c
--> 99 `c
--> 114 `c
--> 105 `c
--> 112 `c
--> 116 `c
--> 62 `c
--> 60 `c
--> 115 `c
--> 99 `c
--> 114 `c
--> 105 `c
--> 112 `c
--> 116 `c
--> 62 `c
--> 118 `c
--> 97 `c
--> 114 `c
--> 32 `c
--> 100 `c
--> 97 `c
--> 116 `c
--> 97 `c
--> 61 `c
--> 91 `c
--> 93 `c
--> 44 `c
--> 108 `c
--> 97 `c
--> 98 `c
--> 101 `c
--> 108 `c
--> 115 `c
--> 61 `c
--> 91 `c
--> 93 `c
--> 44 `c
--> 9 `c
--> 116 `c
--> 101 `c
--> 109 `c
--> 112 `c
--> 101 `c
--> 114 `c
--> 97 `c
--> 116 `c
--> 117 `c
--> 114 `c
--> 101 `c
--> 61 `c
--> 91 `c
--> 93 `c
--> 44 `c
--> 32 `c
--> 104 `c
--> 117 `c
--> 109 `c
--> 105 `c
--> 100 `c
--> 105 `c
--> 116 `c
--> 121 `c
--> 61 `c
--> 91 `c
--> 93 `c
--> 59 `c
--> 36 `c
--> 46 `c
--> 103 `c
--> 101 `c
--> 116 `c
--> 40 `c
--> 39 `c
--> 71 `c
--> 101 `c
--> 116 `c
--> 84 `c
--> 101 `c
--> 115 `c
--> 116 `c
--> 68 `c
--> 97 `c
--> 116 `c
--> 97 `c
--> 46 `c
--> 112 `c
--> 104 `c
--> 112 `c
--> 39 `c
--> 44 `c
--> 32 `c
--> 102 `c
--> 117 `c
--> 110 `c
--> 99 `c
--> 116 `c
--> 105 `c
--> 111 `c
--> 110 `c
--> 40 `c
--> 100 `c
--> 97 `c
--> 116 `c
--> 97 `c
--> 71 `c
--> 101 `c
--> 116 `c
--> 41 `c
--> 32 `c
--> 123 `c
--> 100 `c
--> 97 `c
--> 116 `c
--> 97 `c
--> 61 `c
--> 74 `c
--> 83 `c
--> 79 `c
--> 78 `c
--> 46 `c
--> 112 `c
--> 97 `c
--> 114 `c
--> 115 `c
--> 101 `c
--> 40 `c
--> 100 `c
--> 97 `c
--> 116 `c
--> 97 `c
--> 71 `c
--> 101 `c
--> 116 `c
--> 41 `c
--> 59 `c
--> 100 `c
--> 97 `c
--> 116 `c
--> 97 `c
--> 91 `c
--> 39 `c
--> 108 `c
--> 97 `c
--> 98 `c
--> 101 `c
--> 108 `c
--> 115 `c
--> 39 `c
--> 93 `c
--> 46 `c
--> 102 `c
--> 111 `c
--> 114 `c
--> 69 `c
--> 97 `c
--> 99 `c
--> 104 `c
--> 40 `c
--> 102 `c
--> 117 `c
--> 110 `c
--> 99 `c
--> 116 `c
--> 105 `c
--> 111 `c
--> 110 `c
--> 40 `c
--> 115 `c
--> 105 `c
--> 110 `c
--> 103 `c
--> 108 `c
--> 101 `c
--> 82 `c
--> 101 `c
--> 115 `c
--> 117 `c
--> 108 `c
--> 116 `c
--> 41 `c
--> 123 `c
--> 108 `c
--> 97 `c
--> 98 `c
--> 101 `c
--> 108 `c
--> 115 `c
--> 46 `c
--> 112 `c
--> 117 `c
--> 115 `c
--> 104 `c
--> 40 `c
--> 115 `c
--> 105 `c
--> 110 `c
--> 103 `c
--> 108 `c
--> 101 `c
--> 82 `c
--> 101 `c
--> 115 `c
--> 117 `c
--> 108 `c
--> 116 `c
--> 41 `c
--> 59 `c
--> 125 `c
--> 41 `c
--> 59 `c
--> 100 `c
--> 97 `c
--> 116 `c
--> 97 `c
--> 91 `c
--> 39 `c
--> 116 `c
--> 101 `c
--> 109 `c
--> 112 `c
--> 101 `c
--> 114 `c
--> 97 `c
--> 116 `c
--> 117 `c
--> 114 `c
--> 101 `c
--> 39 `c
--> 93 `c
--> 46 `c
--> 102 `c
--> 111 `c
--> 114 `c
--> 69 `c
--> 97 `c
--> 99 `c
--> 104 `c
--> 40 `c
--> 102 `c
--> 117 `c
--> 110 `c
--> 99 `c
--> 116 `c
--> 105 `c
--> 111 `c
--> 110 `c
--> 40 `c
--> 115 `c
--> 105 `c
--> 110 `c
--> 103 `c
--> 108 `c
--> 101 `c
--> 82 `c
--> 101 `c
--> 115 `c
--> 117 `c
--> 108 `c
--> 116 `c
--> 41 `c
--> 123 `c
--> 116 `c
--> 101 `c
--> 109 `c
--> 112 `c
--> 101 `c
--> 114 `c
--> 97 `c
--> 116 `c
--> 117 `c
--> 114 `c
--> 101 `c
--> 46 `c
--> 112 `c
--> 117 `c
--> 115 `c
--> 104 `c
--> 40 `c
--> 115 `c
--> 105 `c
--> 110 `c
--> 103 `c
--> 108 `c
--> 101 `c
--> 82 `c
--> 101 `c
--> 115 `c
--> 117 `c
--> 108 `c
--> 116 `c
--> 41 `c
--> 59 `c
--> 125 `c
--> 41 `c
--> 59 `c
--> 100 `c
--> 97 `c
--> 116 `c
--> 97 `c
--> 91 `c
--> 39 `c
--> 104 `c
--> 117 `c
--> 109 `c
--> 105 `c
--> 100 `c
--> 105 `c
--> 116 `c
--> 121 `c
--> 39 `c
--> 93 `c
--> 46 `c
--> 102 `c
--> 111 `c
--> 114 `c
--> 69 `c
--> 97 `c
--> 99 `c
--> 104 `c
--> 40 `c
--> 102 `c
--> 117 `c
--> 110 `c
--> 99 `c
--> 116 `c
--> 105 `c
--> 111 `c
--> 110 `c
--> 40 `c
--> 115 `c
--> 105 `c
--> 110 `c
--> 103 `c
--> 108 `c
--> 101 `c
--> 82 `c
--> 101 `c
--> 115 `c
--> 117 `c
--> 108 `c
--> 116 `c
--> 41 `c
--> 123 `c
--> 104 `c
--> 117 `c
--> 109 `c
--> 105 `c
--> 100 `c
--> 105 `c
--> 116 `c
--> 121 `c
--> 46 `c
--> 112 `c
--> 117 `c
--> 115 `c
--> 104 `c
--> 40 `c
--> 115 `c
--> 105 `c
--> 110 `c
--> 103 `c
--> 108 `c
--> 101 `c
--> 82 `c
--> 101 `c
--> 115 `c
--> 117 `c
--> 108 `c
--> 116 `c
--> 41 `c
--> 59 `c
--> 125 `c
--> 41 `c
--> 59 `c
--> 118 `c
--> 97 `c
--> 114 `c
--> 32 `c
--> 99 `c
--> 116 `c
--> 120 `c
--> 61 `c
--> 100 `c
--> 111 `c
--> 99 `c
--> 117 `c
--> 109 `c
--> 101 `c
--> 110 `c
--> 116 `c
--> 46 `c
--> 103 `c
--> 101 `c
--> 116 `c
--> 69 `c
--> 108 `c
--> 101 `c
--> 109 `c
--> 101 `c
--> 110 `c
--> 116 `c
--> 66 `c
--> 121 `c
--> 73 `c
--> 100 `c
--> 40 `c
--> 39 `c
--> 99 `c
--> 97 `c
--> 110 `c
--> 118 `c
--> 97 `c
--> 115 `c
--> 39 `c
--> 41 `c
--> 46 `c
--> 103 `c
--> 101 `c
--> 116 `c
--> 67 `c
--> 111 `c
--> 110 `c
--> 116 `c
--> 101 `c
--> 120 `c
--> 116 `c
--> 40 `c
--> 39 `c
--> 50 `c
--> 100 `c
--> 39 `c
--> 41 `c
--> 59 `c
--> 119 `c
--> 105 `c
--> 110 `c
--> 100 `c
--> 111 `c
--> 119 `c
--> 46 `c
--> 109 `c
--> 121 `c
--> 76 `c
--> 105 `c
--> 110 `c
--> 101 `c
--> 61 `c
--> 110 `c
--> 101 `c
--> 119 `c
--> 32 `c
--> 67 `c
--> 104 `c
--> 97 `c
--> 114 `c
--> 116 `c
--> 40 `c
--> 99 `c
--> 116 `c
--> 120 `c
--> 44 `c
--> 99 `c
--> 111 `c
--> 110 `c
--> 102 `c
--> 105 `c
--> 103 `c
--> 41 `c
--> 59 `c
--> 125 `c
--> 41 `c
--> 59 `c
--> 118 `c
--> 97 `c
--> 114 `c
--> 32 `c
--> 114 `c
--> 97 `c
--> 110 `c
--> 100 `c
--> 111 `c
--> 109 `c
--> 83 `c
--> 99 `c
--> 97 `c
--> 108 `c
--> 105 `c
--> 110 `c
--> 103 `c
--> 70 `c
--> 97 `c
--> 99 `c
--> 116 `c
--> 111 `c
--> 114 `c
--> 61 `c
--> 102 `c
--> 117 `c
--> 110 `c
--> 99 `c
--> 116 `c
--> 105 `c
--> 111 `c
--> 110 `c
--> 40 `c
--> 41 `c
--> 123 `c
--> 32 `c
--> 114 `c
--> 101 `c
--> 116 `c
--> 117 `c
--> 114 `c
--> 110 `c
--> 32 `c
--> 77 `c
--> 97 `c
--> 116 `c
--> 104 `c
--> 46 `c
--> 114 `c
--> 111 `c
--> 117 `c
--> 110 `c
--> 100 `c
--> 40 `c
--> 77 `c
--> 97 `c
--> 116 `c
--> 104 `c
--> 46 `c
--> 114 `c
--> 97 `c
--> 110 `c
--> 100 `c
--> 111 `c
--> 109 `c
--> 40 `c
--> 41 `c
--> 42 `c
--> 49 `c
--> 48 `c
--> 48 `c
--> 41 `c
--> 59 `c
--> 32 `c
--> 125 `c
--> 59 `c
--> 118 `c
--> 97 `c
--> 114 `c
--> 32 `c
--> 114 `c
--> 97 `c
--> 110 `c
--> 100 `c
--> 111 `c
--> 109 `c
--> 67 `c
--> 111 `c
--> 108 `c
--> 111 `c
--> 114 `c
--> 70 `c
--> 97 `c
--> 99 `c
--> 116 `c
--> 111 `c
--> 114 `c
--> 61 `c
--> 102 `c
--> 117 `c
--> 110 `c
--> 99 `c
--> 116 `c
--> 105 `c
--> 111 `c
--> 110 `c
--> 40 `c
--> 41 `c
--> 123 `c
--> 32 `c
--> 114 `c
--> 101 `c
--> 116 `c
--> 117 `c
--> 114 `c
--> 110 `c
--> 32 `c
--> 77 `c
--> 97 `c
--> 116 `c
--> 104 `c
--> 46 `c
--> 114 `c
--> 111 `c
--> 117 `c
--> 110 `c
--> 100 `c
--> 40 `c
--> 77 `c
--> 97 `c
--> 116 `c
--> 104 `c
--> 46 `c
--> 114 `c
--> 97 `c
--> 110 `c
--> 100 `c
--> 111 `c
--> 109 `c
--> 40 `c
--> 41 `c
--> 42 `c
--> 50 `c
--> 53 `c
--> 53 `c
--> 41 `c
--> 59 `c
--> 32 `c
--> 125 `c
--> 59 `c
--> 118 `c
--> 97 `c
--> 114 `c
--> 32 `c
--> 114 `c
--> 97 `c
--> 110 `c
--> 100 `c
--> 111 `c
--> 109 `c
--> 67 `c
--> 111 `c
--> 108 `c
--> 111 `c
--> 114 `c
--> 61 `c
--> 102 `c
--> 117 `c
--> 110 `c
--> 99 `c
--> 116 `c
--> 105 `c
--> 111 `c
--> 110 `c
--> 40 `c
--> 111 `c
--> 112 `c
--> 97 `c
--> 99 `c
--> 105 `c
--> 116 `c
--> 121 `c
--> 41 `c
--> 123 `c
--> 114 `c
--> 101 `c
--> 116 `c
--> 117 `c
--> 114 `c
--> 110 `c
--> 39 `c
--> 114 `c
--> 103 `c
--> 98 `c
--> 97 `c
--> 40 `c
--> 39 `c
--> 43 `c
--> 114 `c
--> 97 `c
--> 110 `c
--> 100 `c
--> 111 `c
--> 109 `c
--> 67 `c
--> 111 `c
--> 108 `c
--> 111 `c
--> 114 `c
--> 70 `c
--> 97 `c
--> 99 `c
--> 116 `c
--> 111 `c
--> 114 `c
--> 40 `c
--> 41 `c
--> 43 `c
--> 39 `c
--> 44 `c
--> 39 `c
--> 43 `c
--> 114 `c
--> 97 `c
--> 110 `c
--> 100 `c
--> 111 `c
--> 109 `c
--> 67 `c
--> 111 `c
--> 108 `c
--> 111 `c
--> 114 `c
--> 70 `c
--> 97 `c
--> 99 `c
--> 116 `c
--> 111 `c
--> 114 `c
--> 40 `c
--> 41 `c
--> 43 `c
--> 39 `c
--> 44 `c
--> 39 `c
--> 43 `c
--> 114 `c
--> 97 `c
--> 110 `c
--> 100 `c
--> 111 `c
--> 109 `c
--> 67 `c
--> 111 `c
--> 108 `c
--> 111 `c
--> 114 `c
--> 70 `c
--> 97 `c
--> 99 `c
--> 116 `c
--> 111 `c
--> 114 `c
--> 40 `c
--> 41 `c
--> 43 `c
--> 39 `c
--> 44 `c
--> 39 `c
--> 43 `c
--> 40 `c
--> 111 `c
--> 112 `c
--> 97 `c
--> 99 `c
--> 105 `c
--> 116 `c
--> 121 `c
--> 124 `c
--> 124 `c
--> 39 `c
--> 46 `c
--> 57 `c
--> 39 `c
--> 41 `c
--> 43 `c
--> 39 `c
--> 41 `c
--> 39 `c
--> 59 `c
--> 32 `c
--> 125 `c
--> 59 `c
--> 118 `c
--> 97 `c
--> 114 `c
--> 99 `c
--> 111 `c
--> 110 `c
--> 102 `c
--> 105 `c
--> 103 `c
--> 61 `c
--> 123 `c
--> 116 `c
--> 121 `c
--> 112 `c
--> 101 `c
--> 58 `c
--> 39 `c
--> 108 `c
--> 105 `c
--> 110 `c
--> 101 `c
--> 39 `c
--> 44 `c
--> 100 `c
--> 97 `c
--> 116 `c
--> 97 `c
--> 58 `c
--> 123 `c
--> 108 `c
--> 97 `c
--> 98 `c
--> 101 `c
--> 108 `c
--> 115 `c
--> 58 `c
--> 108 `c
--> 97 `c
--> 98 `c
--> 101 `c
--> 108 `c
--> 115 `c
--> 44 `c
--> 100 `c
--> 97 `c
--> 116 `c
--> 97 `c
--> 115 `c
--> 101 `c
--> 116 `c
--> 115 `c
--> 58 `c
--> 91 `c
--> 123 `c
--> 32 `c
--> 108 `c
--> 97 `c
--> 98 `c
--> 101 `c
--> 108 `c
--> 58 `c
--> 39 `c
--> 84 `c
--> 101 `c
--> 109 `c
--> 112 `c
--> 101 `c
--> 114 `c
--> 97 `c
--> 116 `c
--> 117 `c
--> 114 `c
--> 39 `c
--> 44 `c
--> 100 `c
--> 97 `c
--> 116 `c
--> 97 `c
--> 58 `c
--> 116 `c
--> 101 `c
--> 109 `c
--> 112 `c
--> 101 `c
--> 114 `c
--> 97 `c
--> 116 `c
--> 117 `c
--> 114 `c
--> 101 `c
--> 44 `c
--> 102 `c
--> 105 `c
--> 108 `c
--> 108 `c
--> 58 `c
--> 102 `c
--> 97 `c
--> 108 `c
--> 115 `c
--> 101 `c
--> 32 `c
--> 125 `c
--> 44 `c
--> 123 `c
--> 32 `c
--> 100 `c
--> 97 `c
--> 116 `c
--> 97 `c
--> 58 `c
--> 104 `c
--> 117 `c
--> 109 `c
--> 105 `c
--> 100 `c
--> 105 `c
--> 116 `c
--> 121 `c
--> 44 `c
--> 102 `c
--> 105 `c
--> 108 `c
--> 108 `c
--> 58 `c
--> 102 `c
--> 97 `c
--> 108 `c
--> 115 `c
--> 101 `c
--> 125 `c
--> 93 `c
--> 125 `c
--> 44 `c
--> 111 `c
--> 112 `c
--> 116 `c
--> 105 `c
--> 111 `c
--> 110 `c
--> 115 `c
--> 58 `c
--> 123 `c
--> 114 `c
--> 101 `c
--> 115 `c
--> 112 `c
--> 111 `c
--> 110 `c
--> 115 `c
--> 105 `c
--> 118 `c
--> 101 `c
--> 58 `c
--> 116 `c
--> 114 `c
--> 117 `c
--> 101 `c
--> 44 `c
--> 116 `c
--> 105 `c
--> 116 `c
--> 108 `c
--> 101 `c
--> 58 `c
--> 123 `c
--> 100 `c
--> 105 `c
--> 115 `c
--> 112 `c
--> 108 `c
--> 97 `c
--> 121 `c
--> 58 `c
--> 116 `c
--> 114 `c
--> 117 `c
--> 101 `c
--> 44 `c
--> 116 `c
--> 101 `c
--> 120 `c
--> 116 `c
--> 58 `c
--> 39 `c
--> 84 `c
--> 101 `c
--> 109 `c
--> 112 `c
--> 101 `c
--> 114 `c
--> 97 `c
--> 116 `c
--> 117 `c
--> 114 `c
--> 32 `c
--> 111 `c
--> 103 `c
--> 32 `c
--> 76 `c
--> 117 `c
--> 102 `c
--> 116 `c
--> 102 `c
--> 117 `c
--> 103 `c
--> 116 `c
--> 105 `c
--> 103 `c
--> 104 `c
--> 101 `c
--> 100 `c
--> 39 `c
--> 125 `c
--> 44 `c
--> 116 `c
--> 111 `c
--> 111 `c
--> 108 `c
--> 116 `c
--> 105 `c
--> 112 `c
--> 115 `c
--> 58 `c
--> 123 `c
--> 109 `c
--> 111 `c
--> 100 `c
--> 101 `c
--> 58 `c
--> 39 `c
--> 108 `c
--> 97 `c
--> 98 `c
--> 101 `c
--> 108 `c
--> 39 `c
--> 125 `c
--> 44 `c
--> 104 `c
--> 111 `c
--> 118 `c
--> 101 `c
--> 114 `c
--> 58 `c
--> 123 `c
--> 109 `c
--> 111 `c
--> 100 `c
--> 101 `c
--> 58 `c
--> 39 `c
--> 100 `c
--> 97 `c
--> 116 `c
--> 97 `c
--> 115 `c
--> 101 `c
--> 116 `c
--> 39 `c
--> 125 `c
--> 44 `c
--> 115 `c
--> 99 `c
--> 97 `c
--> 108 `c
--> 101 `c
--> 115 `c
--> 58 `c
--> 123 `c
--> 120 `c
--> 65 `c
--> 120 `c
--> 101 `c
--> 115 `c
--> 58 `c
--> 91 `c
--> 123 `c
--> 100 `c
--> 105 `c
--> 115 `c
--> 112 `c
--> 108 `c
--> 97 `c
--> 121 `c
--> 58 `c
--> 116 `c
--> 114 `c
--> 117 `c
--> 101 `c
--> 44 `c
--> 115 `c
--> 99 `c
--> 97 `c
--> 108 `c
--> 101 `c
--> 76 `c
--> 97 `c
--> 98 `c
--> 101 `c
--> 108 `c
--> 58 `c
--> 123 `c
--> 100 `c
--> 105 `c
--> 115 `c
--> 112 `c
--> 108 `c
--> 97 `c
--> 121 `c
--> 58 `c
--> 116 `c
--> 114 `c
--> 117 `c
--> 101 `c
--> 44 `c
--> 108 `c
--> 97 `c
--> 98 `c
--> 101 `c
--> 108 `c
--> 83 `c
--> 116 `c
--> 114 `c
--> 105 `c
--> 110 `c
--> 103 `c
--> 58 `c
--> 39 `c
--> 68 `c
--> 97 `c
--> 116 `c
--> 111 `c
--> 39 `c
--> 125 `c
--> 125 `c
--> 93 `c
--> 44 `c
--> 121 `c
--> 65 `c
--> 120 `c
--> 101 `c
--> 115 `c
--> 58 `c
--> 91 `c
--> 123 `c
--> 100 `c
--> 105 `c
--> 115 `c
--> 112 `c
--> 108 `c
--> 97 `c
--> 121 `c
--> 58 `c
--> 116 `c
--> 114 `c
--> 117 `c
--> 101 `c
--> 44 `c
--> 115 `c
--> 99 `c
--> 97 `c
--> 108 `c
--> 101 `c
--> 76 `c
--> 97 `c
--> 98 `c
--> 101 `c
--> 108 `c
--> 58 `c
--> 123 `c
--> 100 `c
--> 105 `c
--> 115 `c
--> 112 `c
--> 108 `c
--> 97 `c
--> 121 `c
--> 58 `c
--> 116 `c
--> 114 `c
--> 117 `c
--> 101 `c
--> 44 `c
--> 108 `c
--> 97 `c
--> 98 `c
--> 101 `c
--> 108 `c
--> 83 `c
--> 116 `c
--> 114 `c
--> 105 `c
--> 110 `c
--> 103 `c
--> 58 `c
--> 39 `c
--> 86 `c
--> 38 `c
--> 97 `c
--> 101 `c
--> 108 `c
--> 105 `c
--> 103 `c
--> 59 `c
--> 114 `c
--> 100 `c
--> 105 `c
--> 39 `c
--> 125 `c
--> 44 `c
--> 116 `c
--> 105 `c
--> 99 `c
--> 107 `c
--> 115 `c
--> 58 `c
--> 123 `c
--> 115 `c
--> 117 `c
--> 103 `c
--> 103 `c
--> 101 `c
--> 115 `c
--> 116 `c
--> 101 `c
--> 100 `c
--> 77 `c
--> 105 `c
--> 110 `c
--> 58 `c
--> 45 `c
--> 50 `c
--> 48 `c
--> 44 `c
--> 115 `c
--> 117 `c
--> 103 `c
--> 103 `c
--> 101 `c
--> 115 `c
--> 116 `c
--> 101 `c
--> 100 `c
--> 77 `c
--> 97 `c
--> 120 `c
--> 58 `c
--> 50 `c
--> 53 `c
--> 48 `c
--> 44 `c
--> 125 `c
--> 125 `c
--> 93 `c
--> 44 `c
--> 125 `c
--> 125 `c
--> 125 `c
--> 59 `c
--> 36 `c
--> 46 `c
--> 101 `c
--> 97 `c
--> 99 `c
--> 104 `c
--> 40 `c
--> 99 `c
--> 111 `c
--> 110 `c
--> 102 `c
--> 105 `c
--> 103 `c
--> 46 `c
--> 100 `c
--> 97 `c
--> 116 `c
--> 97 `c
--> 46 `c
--> 100 `c
--> 97 `c
--> 116 `c
--> 97 `c
--> 115 `c
--> 101 `c
--> 116 `c
--> 115 `c
--> 44 `c
--> 102 `c
--> 117 `c
--> 110 `c
--> 99 `c
--> 116 `c
--> 105 `c
--> 111 `c
--> 110 `c
--> 40 `c
--> 105 `c
--> 44 `c
--> 100 `c
--> 97 `c
--> 116 `c
--> 97 `c
--> 115 `c
--> 101 `c
--> 116 `c
--> 41 `c
--> 123 `c
--> 100 `c
--> 97 `c
--> 116 `c
--> 97 `c
--> 115 `c
--> 101 `c
--> 116 `c
--> 46 `c
--> 98 `c
--> 111 `c
--> 114 `c
--> 100 `c
--> 101 `c
--> 114 `c
--> 67 `c
--> 111 `c
--> 108 `c
--> 111 `c
--> 114 `c
--> 61 `c
--> 114 `c
--> 97 `c
--> 110 `c
--> 100 `c
--> 111 `c
--> 109 `c
--> 67 `c
--> 111 `c
--> 108 `c
--> 111 `c
--> 114 `c
--> 40 `c
--> 49 `c
--> 46 `c
--> 48 `c
--> 41 `c
--> 59 `c
--> 100 `c
--> 97 `c
--> 116 `c
--> 97 `c
--> 115 `c
--> 101 `c
--> 116 `c
--> 46 `c
--> 98 `c
--> 111 `c
--> 114 `c
--> 100 `c
--> 101 `c
--> 114 `c
--> 67 `c
--> 111 `c
--> 108 `c
--> 111 `c
--> 114 `c
--> 61 `c
--> 114 `c
--> 97 `c
--> 110 `c
--> 100 `c
--> 111 `c
--> 109 `c
--> 67 `c
--> 111 `c
--> 108 `c
--> 111 `c
--> 114 `c
--> 40 `c
--> 49 `c
--> 46 `c
--> 48 `c
--> 41 `c
--> 59 `c
--> 100 `c
--> 97 `c
--> 116 `c
--> 97 `c
--> 115 `c
--> 101 `c
--> 116 `c
--> 46 `c
--> 112 `c
--> 111 `c
--> 105 `c
--> 110 `c
--> 116 `c
--> 66 `c
--> 111 `c
--> 114 `c
--> 100 `c
--> 101 `c
--> 114 `c
--> 67 `c
--> 111 `c
--> 108 `c
--> 111 `c
--> 114 `c
--> 61 `c
--> 114 `c
--> 97 `c
--> 110 `c
--> 100 `c
--> 111 `c
--> 109 `c
--> 67 `c
--> 111 `c
--> 108 `c
--> 111 `c
--> 114 `c
--> 40 `c
--> 49 `c
--> 46 `c
--> 48 `c
--> 41 `c
--> 59 `c
--> 100 `c
--> 97 `c
--> 116 `c
--> 97 `c
--> 115 `c
--> 101 `c
--> 116 `c
--> 46 `c
--> 112 `c
--> 111 `c
--> 105 `c
--> 110 `c
--> 116 `c
--> 66 `c
--> 97 `c
--> 99 `c
--> 107 `c
--> 103 `c
--> 114 `c
--> 111 `c
--> 117 `c
--> 110 `c
--> 100 `c
--> 67 `c
--> 111 `c
--> 108 `c
--> 111 `c
--> 114 `c
--> 61 `c
--> 114 `c
--> 97 `c
--> 110 `c
--> 100 `c
--> 111 `c
--> 109 `c
--> 67 `c
--> 111 `c
--> 108 `c
--> 111 `c
--> 114 `c
--> 40 `c
--> 49 `c
--> 46 `c
--> 48 `c
--> 41 `c
--> 59 `c
--> 100 `c
--> 97 `c
--> 116 `c
--> 97 `c
--> 115 `c
--> 101 `c
--> 116 `c
--> 46 `c
--> 112 `c
--> 111 `c
--> 105 `c
--> 110 `c
--> 116 `c
--> 66 `c
--> 111 `c
--> 114 `c
--> 100 `c
--> 101 `c
--> 114 `c
--> 87 `c
--> 105 `c
--> 100 `c
--> 116 `c
--> 104 `c
--> 61 `c
--> 49 `c
--> 59 `c
--> 125 `c
--> 41 `c
--> 59 `c
--> 119 `c
--> 105 `c
--> 110 `c
--> 100 `c
--> 111 `c
--> 119 `c
--> 46 `c
--> 111 `c
--> 110 `c
--> 108 `c
--> 111 `c
--> 97 `c
--> 100 `c
--> 61 `c
--> 102 `c
--> 117 `c
--> 110 `c
--> 99 `c
--> 116 `c
--> 105 `c
--> 111 `c
--> 110 `c
--> 40 `c
--> 41 `c
--> 123 `c
--> 118 `c
--> 97 `c
--> 114 `c
--> 32 `c
--> 99 `c
--> 116 `c
--> 120 `c
--> 61 `c
--> 100 `c
--> 111 `c
--> 99 `c
--> 117 `c
--> 109 `c
--> 101 `c
--> 110 `c
--> 116 `c
--> 46 `c
--> 103 `c
--> 101 `c
--> 116 `c
--> 69 `c
--> 108 `c
--> 101 `c
--> 109 `c
--> 101 `c
--> 110 `c
--> 116 `c
--> 66 `c
--> 121 `c
--> 73 `c
--> 100 `c
--> 40 `c
--> 39 `c
--> 99 `c
--> 97 `c
--> 110 `c
--> 118 `c
--> 97 `c
--> 115 `c
--> 39 `c
--> 41 `c
--> 46 `c
--> 103 `c
--> 101 `c
--> 116 `c
--> 67 `c
--> 111 `c
--> 110 `c
--> 116 `c
--> 101 `c
--> 120 `c
--> 116 `c
--> 40 `c
--> 39 `c
--> 50 `c
--> 100 `c
--> 39 `c
--> 41 `c
--> 59 `c
--> 119 `c
--> 105 `c
--> 110 `c
--> 100 `c
--> 111 `c
--> 119 `c
--> 46 `c
--> 109 `c
--> 121 `c
--> 76 `c
--> 105 `c
--> 110 `c
--> 101 `c
--> 61 `c
--> 110 `c
--> 101 `c
--> 119 `c
--> 32 `c
--> 67 `c
--> 104 `c
--> 97 `c
--> 114 `c
--> 116 `c
--> 40 `c
--> 99 `c
--> 116 `c
--> 120 `c
--> 44 `c
--> 99 `c
--> 111 `c
--> 110 `c
--> 102 `c
--> 105 `c
--> 103 `c
--> 41 `c
--> 59 `c
--> 125 `c
--> 59 `c
--> 60 `c
--> 47 `c
--> 115 `c
--> 99 `c
--> 114 `c
--> 105 `c
--> 112 `c
--> 116 `c
--> 62 `c
--> 0 `c
-..
-]
-"35
-[; ;eeprom/eeprom.h: 35: const char eeprom_json[] = "";
-[v _eeprom_json `Cuc ~T0 @X0 -> -> 1 `i `ux e ]
-[i _eeprom_json
-:U ..
--> 0 `c
-..
-]
-"36
-[; ;eeprom/eeprom.h: 36: const char eeprom_template[] = "<p class=\"log_line\"><span class=\"temperature_text\">%2.2f</span><span class=\"moisture_text\">%d%</span></p>\n";
-[v _eeprom_template `Cuc ~T0 @X0 -> 107 `i e ]
-[i _eeprom_template
-:U ..
--> 60 `c
--> 112 `c
--> 32 `c
--> 99 `c
--> 108 `c
--> 97 `c
--> 115 `c
--> 115 `c
--> 61 `c
--> 34 `c
--> 108 `c
--> 111 `c
--> 103 `c
--> 95 `c
--> 108 `c
--> 105 `c
--> 110 `c
--> 101 `c
--> 34 `c
--> 62 `c
--> 60 `c
--> 115 `c
--> 112 `c
--> 97 `c
--> 110 `c
--> 32 `c
--> 99 `c
--> 108 `c
--> 97 `c
--> 115 `c
--> 115 `c
--> 61 `c
--> 34 `c
--> 116 `c
--> 101 `c
--> 109 `c
--> 112 `c
--> 101 `c
--> 114 `c
--> 97 `c
--> 116 `c
--> 117 `c
--> 114 `c
--> 101 `c
--> 95 `c
--> 116 `c
--> 101 `c
--> 120 `c
--> 116 `c
--> 34 `c
--> 62 `c
--> 37 `c
--> 50 `c
--> 46 `c
--> 50 `c
--> 102 `c
--> 60 `c
--> 47 `c
--> 115 `c
--> 112 `c
--> 97 `c
--> 110 `c
--> 62 `c
--> 60 `c
--> 115 `c
--> 112 `c
--> 97 `c
--> 110 `c
--> 32 `c
--> 99 `c
--> 108 `c
--> 97 `c
--> 115 `c
--> 115 `c
--> 61 `c
--> 34 `c
--> 109 `c
--> 111 `c
--> 105 `c
--> 115 `c
--> 116 `c
--> 117 `c
--> 114 `c
--> 101 `c
--> 95 `c
--> 116 `c
--> 101 `c
--> 120 `c
--> 116 `c
--> 34 `c
--> 62 `c
--> 37 `c
--> 100 `c
--> 37 `c
--> 60 `c
--> 47 `c
--> 115 `c
--> 112 `c
--> 97 `c
--> 110 `c
--> 62 `c
--> 60 `c
--> 47 `c
--> 112 `c
--> 62 `c
--> 10 `c
--> 0 `c
-..
-]
-"18 eeprom/eeprom.c
-[; ;eeprom/eeprom.c: 18: void eeprom_testData(void) {
-[v _eeprom_testData `(v ~T0 @X0 1 ef ]
+"69
+[; ;mcc_generated_files/eusart1.c: 69: volatile uint8_t eusart1RxBuffer[64];
+[v _eusart1RxBuffer `Vuc ~T0 @X0 -> 64 `i e ]
+"70
+[; ;mcc_generated_files/eusart1.c: 70: volatile eusart1_status_t eusart1RxStatusBuffer[64];
+[v _eusart1RxStatusBuffer `VS831 ~T0 @X0 -> 64 `i e ]
+"71
+[; ;mcc_generated_files/eusart1.c: 71: volatile uint8_t eusart1RxCount;
+[v _eusart1RxCount `Vuc ~T0 @X0 1 e ]
+"72
+[; ;mcc_generated_files/eusart1.c: 72: volatile eusart1_status_t eusart1RxLastError;
+[v _eusart1RxLastError `VS831 ~T0 @X0 1 e ]
+"77
+[; ;mcc_generated_files/eusart1.c: 77: void (*EUSART1_TxDefaultInterruptHandler)(void);
+[v _EUSART1_TxDefaultInterruptHandler `*F6123 ~T0 @X0 1 e ]
+"78
+[; ;mcc_generated_files/eusart1.c: 78: void (*EUSART1_RxDefaultInterruptHandler)(void);
+[v _EUSART1_RxDefaultInterruptHandler `*F6125 ~T0 @X0 1 e ]
+"80
+[; ;mcc_generated_files/eusart1.c: 80: void (*EUSART1_FramingErrorHandler)(void);
+[v _EUSART1_FramingErrorHandler `*F6127 ~T0 @X0 1 e ]
+"81
+[; ;mcc_generated_files/eusart1.c: 81: void (*EUSART1_OverrunErrorHandler)(void);
+[v _EUSART1_OverrunErrorHandler `*F6129 ~T0 @X0 1 e ]
+"82
+[; ;mcc_generated_files/eusart1.c: 82: void (*EUSART1_ErrorHandler)(void);
+[v _EUSART1_ErrorHandler `*F6131 ~T0 @X0 1 e ]
+"88
+[; ;mcc_generated_files/eusart1.c: 88: void EUSART1_Initialize(void)
+[v _EUSART1_Initialize `(v ~T0 @X0 1 ef ]
+"89
+[; ;mcc_generated_files/eusart1.c: 89: {
 {
-[e :U _eeprom_testData ]
+[e :U _EUSART1_Initialize ]
 [f ]
-"19
-[; ;eeprom/eeprom.c: 19:     printf("\r\nSkriv tegn til EEPROM\r\n");
-[e ( _printf :s 1C ]
-"22
-[; ;eeprom/eeprom.c: 22:     i2c_write_serial(eeprom_addr, (char*) eeprom_test, 17);
-[e ( _i2c_write_serial (3 , , _eeprom_addr -> &U _eeprom_test `*uc -> -> 17 `i `uc ]
-"23
-[; ;eeprom/eeprom.c: 23:     printf("Skrivning faerdig\r\n");
-[e ( _printf :s 2C ]
-"25
-[; ;eeprom/eeprom.c: 25:     i2c_write_serial(eeprom_addr, (char*) eeprom_pointer, 2);
-[e ( _i2c_write_serial (3 , , _eeprom_addr -> &U _eeprom_pointer `*uc -> -> 2 `i `uc ]
-"26
-[; ;eeprom/eeprom.c: 26:     printf("Laes fra EEPRROM\r\n");
-[e ( _printf :s 3C ]
-"27
-[; ;eeprom/eeprom.c: 27:     _delay((unsigned long)((20)*(64000000/4000.0)));
-[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
-"29
-[; ;eeprom/eeprom.c: 29:     i2c_read_serial(eeprom_addr, (char*)eeprom_buffer, 15);
-[e ( _i2c_read_serial (3 , , _eeprom_addr &U _eeprom_buffer -> -> 15 `i `uc ]
-"30
-[; ;eeprom/eeprom.c: 30:     printf("Og print dem ud igen\r\n");
-[e ( _printf :s 4C ]
-"32
-[; ;eeprom/eeprom.c: 32:     for(uint8_t i=0; i < 15; i++) {
-{
-[v _i `uc ~T0 @X0 1 a ]
-[e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> 15 `i 835  ]
-[e $U 836  ]
-[e :U 835 ]
-{
-"33
-[; ;eeprom/eeprom.c: 33:         printf("Vaerdi fra EEPROM i buffer: %#0.2X\r\n", eeprom_buffer[i]);
-[e ( _printf , (. :s 5C -> *U + &U _eeprom_buffer * -> _i `ux -> -> # *U &U _eeprom_buffer `ui `ux `i ]
-"34
-[; ;eeprom/eeprom.c: 34:     }
+"91
+[; ;mcc_generated_files/eusart1.c: 91:     PIE1bits.RC1IE = 0;
+[e = . . _PIE1bits 0 5 -> -> 0 `i `uc ]
+"92
+[; ;mcc_generated_files/eusart1.c: 92:     EUSART1_SetRxInterruptHandler(EUSART1_Receive_ISR);
+[e ( _EUSART1_SetRxInterruptHandler (1 &U _EUSART1_Receive_ISR ]
+"93
+[; ;mcc_generated_files/eusart1.c: 93:     PIE1bits.TX1IE = 0;
+[e = . . _PIE1bits 0 4 -> -> 0 `i `uc ]
+"94
+[; ;mcc_generated_files/eusart1.c: 94:     EUSART1_SetTxInterruptHandler(EUSART1_Transmit_ISR);
+[e ( _EUSART1_SetTxInterruptHandler (1 &U _EUSART1_Transmit_ISR ]
+"98
+[; ;mcc_generated_files/eusart1.c: 98:     BAUDCON1 = 0x08;
+[e = _BAUDCON1 -> -> 8 `i `uc ]
+"101
+[; ;mcc_generated_files/eusart1.c: 101:     RCSTA1 = 0x90;
+[e = _RCSTA1 -> -> 144 `i `uc ]
+"104
+[; ;mcc_generated_files/eusart1.c: 104:     TXSTA1 = 0x24;
+[e = _TXSTA1 -> -> 36 `i `uc ]
+"107
+[; ;mcc_generated_files/eusart1.c: 107:     SPBRG1 = 0x8A;
+[e = _SPBRG1 -> -> 138 `i `uc ]
+"110
+[; ;mcc_generated_files/eusart1.c: 110:     SPBRGH1 = 0x00;
+[e = _SPBRGH1 -> -> 0 `i `uc ]
+"113
+[; ;mcc_generated_files/eusart1.c: 113:     EUSART1_SetFramingErrorHandler(EUSART1_DefaultFramingErrorHandler);
+[e ( _EUSART1_SetFramingErrorHandler (1 &U _EUSART1_DefaultFramingErrorHandler ]
+"114
+[; ;mcc_generated_files/eusart1.c: 114:     EUSART1_SetOverrunErrorHandler(EUSART1_DefaultOverrunErrorHandler);
+[e ( _EUSART1_SetOverrunErrorHandler (1 &U _EUSART1_DefaultOverrunErrorHandler ]
+"115
+[; ;mcc_generated_files/eusart1.c: 115:     EUSART1_SetErrorHandler(EUSART1_DefaultErrorHandler);
+[e ( _EUSART1_SetErrorHandler (1 &U _EUSART1_DefaultErrorHandler ]
+"117
+[; ;mcc_generated_files/eusart1.c: 117:     eusart1RxLastError.status = 0;
+[e = . _eusart1RxLastError 1 -> -> 0 `i `uc ]
+"120
+[; ;mcc_generated_files/eusart1.c: 120:     eusart1TxHead = 0;
+[e = _eusart1TxHead -> -> 0 `i `uc ]
+"121
+[; ;mcc_generated_files/eusart1.c: 121:     eusart1TxTail = 0;
+[e = _eusart1TxTail -> -> 0 `i `uc ]
+"122
+[; ;mcc_generated_files/eusart1.c: 122:     eusart1TxBufferRemaining = sizeof(eusart1TxBuffer);
+[e = _eusart1TxBufferRemaining -> -> # _eusart1TxBuffer `ui `uc ]
+"124
+[; ;mcc_generated_files/eusart1.c: 124:     eusart1RxHead = 0;
+[e = _eusart1RxHead -> -> 0 `i `uc ]
+"125
+[; ;mcc_generated_files/eusart1.c: 125:     eusart1RxTail = 0;
+[e = _eusart1RxTail -> -> 0 `i `uc ]
+"126
+[; ;mcc_generated_files/eusart1.c: 126:     eusart1RxCount = 0;
+[e = _eusart1RxCount -> -> 0 `i `uc ]
+"129
+[; ;mcc_generated_files/eusart1.c: 129:     PIE1bits.RC1IE = 1;
+[e = . . _PIE1bits 0 5 -> -> 1 `i `uc ]
+"130
+[; ;mcc_generated_files/eusart1.c: 130: }
+[e :UE 833 ]
 }
-[e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 15 `i 835  ]
-[e :U 836 ]
-}
-"35
-[; ;eeprom/eeprom.c: 35: }
+"132
+[; ;mcc_generated_files/eusart1.c: 132: _Bool EUSART1_is_tx_ready(void)
+[v _EUSART1_is_tx_ready `(a ~T0 @X0 1 ef ]
+"133
+[; ;mcc_generated_files/eusart1.c: 133: {
+{
+[e :U _EUSART1_is_tx_ready ]
+[f ]
+"134
+[; ;mcc_generated_files/eusart1.c: 134:     return (eusart1TxBufferRemaining ? 1 : 0);
+[e ) -> ? != -> _eusart1TxBufferRemaining `i -> 0 `i : -> 1 `i -> 0 `i `a ]
+[e $UE 834  ]
+"135
+[; ;mcc_generated_files/eusart1.c: 135: }
 [e :UE 834 ]
 }
-"38
-[; ;eeprom/eeprom.c: 38: void eeprom_logData(void) {
-[v _eeprom_logData `(v ~T0 @X0 1 ef ]
+"137
+[; ;mcc_generated_files/eusart1.c: 137: _Bool EUSART1_is_rx_ready(void)
+[v _EUSART1_is_rx_ready `(a ~T0 @X0 1 ef ]
+"138
+[; ;mcc_generated_files/eusart1.c: 138: {
 {
-[e :U _eeprom_logData ]
+[e :U _EUSART1_is_rx_ready ]
 [f ]
-"40
-[; ;eeprom/eeprom.c: 40:     i2c_write_serial(eeprom_addr, (char*) eeprom_pointer, 2);
-[e ( _i2c_write_serial (3 , , _eeprom_addr -> &U _eeprom_pointer `*uc -> -> 2 `i `uc ]
-"41
-[; ;eeprom/eeprom.c: 41:     i2c_read_serial(eeprom_addr, eeprom_buffer, 4);
-[e ( _i2c_read_serial (3 , , _eeprom_addr &U _eeprom_buffer -> -> 4 `i `uc ]
-"52
-[; ;eeprom/eeprom.c: 52: }
+"139
+[; ;mcc_generated_files/eusart1.c: 139:     return (eusart1RxCount ? 1 : 0);
+[e ) -> ? != -> _eusart1RxCount `i -> 0 `i : -> 1 `i -> 0 `i `a ]
+[e $UE 835  ]
+"140
+[; ;mcc_generated_files/eusart1.c: 140: }
+[e :UE 835 ]
+}
+"142
+[; ;mcc_generated_files/eusart1.c: 142: _Bool EUSART1_is_tx_done(void)
+[v _EUSART1_is_tx_done `(a ~T0 @X0 1 ef ]
+"143
+[; ;mcc_generated_files/eusart1.c: 143: {
+{
+[e :U _EUSART1_is_tx_done ]
+[f ]
+"144
+[; ;mcc_generated_files/eusart1.c: 144:     return TXSTA1bits.TRMT;
+[e ) -> . . _TXSTA1bits 0 1 `a ]
+[e $UE 836  ]
+"145
+[; ;mcc_generated_files/eusart1.c: 145: }
+[e :UE 836 ]
+}
+"147
+[; ;mcc_generated_files/eusart1.c: 147: eusart1_status_t EUSART1_get_last_status(void){
+[v _EUSART1_get_last_status `(S831 ~T0 @X0 1 ef ]
+{
+[e :U _EUSART1_get_last_status ]
+[f ]
+"148
+[; ;mcc_generated_files/eusart1.c: 148:     return eusart1RxLastError;
+[e ) _eusart1RxLastError ]
+[e $UE 837  ]
+"149
+[; ;mcc_generated_files/eusart1.c: 149: }
+[e :UE 837 ]
+}
+"151
+[; ;mcc_generated_files/eusart1.c: 151: uint8_t EUSART1_Read(void)
+[v _EUSART1_Read `(uc ~T0 @X0 1 ef ]
+"152
+[; ;mcc_generated_files/eusart1.c: 152: {
+{
+[e :U _EUSART1_Read ]
+[f ]
+"153
+[; ;mcc_generated_files/eusart1.c: 153:     uint8_t readValue = 0;
+[v _readValue `uc ~T0 @X0 1 a ]
+[e = _readValue -> -> 0 `i `uc ]
+"155
+[; ;mcc_generated_files/eusart1.c: 155:     while(0 == eusart1RxCount)
+[e $U 839  ]
+[e :U 840 ]
+"156
+[; ;mcc_generated_files/eusart1.c: 156:     {
+{
+"157
+[; ;mcc_generated_files/eusart1.c: 157:     }
+}
+[e :U 839 ]
+"155
+[; ;mcc_generated_files/eusart1.c: 155:     while(0 == eusart1RxCount)
+[e $ == -> 0 `i -> _eusart1RxCount `i 840  ]
+[e :U 841 ]
+"159
+[; ;mcc_generated_files/eusart1.c: 159:     eusart1RxLastError = eusart1RxStatusBuffer[eusart1RxTail];
+[e = _eusart1RxLastError *U + &U _eusart1RxStatusBuffer * -> _eusart1RxTail `ux -> -> # *U &U _eusart1RxStatusBuffer `ui `ux ]
+"161
+[; ;mcc_generated_files/eusart1.c: 161:     readValue = eusart1RxBuffer[eusart1RxTail++];
+[e = _readValue *U + &U _eusart1RxBuffer * -> ++ _eusart1RxTail -> -> 1 `i `Vuc `ux -> -> # *U &U _eusart1RxBuffer `ui `ux ]
+"162
+[; ;mcc_generated_files/eusart1.c: 162:     if(sizeof(eusart1RxBuffer) <= eusart1RxTail)
+[e $ ! <= -> # _eusart1RxBuffer `ui -> _eusart1RxTail `ui 842  ]
+"163
+[; ;mcc_generated_files/eusart1.c: 163:     {
+{
+"164
+[; ;mcc_generated_files/eusart1.c: 164:         eusart1RxTail = 0;
+[e = _eusart1RxTail -> -> 0 `i `uc ]
+"165
+[; ;mcc_generated_files/eusart1.c: 165:     }
+}
+[e :U 842 ]
+"166
+[; ;mcc_generated_files/eusart1.c: 166:     PIE1bits.RC1IE = 0;
+[e = . . _PIE1bits 0 5 -> -> 0 `i `uc ]
+"167
+[; ;mcc_generated_files/eusart1.c: 167:     eusart1RxCount--;
+[e -- _eusart1RxCount -> -> 1 `i `Vuc ]
+"168
+[; ;mcc_generated_files/eusart1.c: 168:     PIE1bits.RC1IE = 1;
+[e = . . _PIE1bits 0 5 -> -> 1 `i `uc ]
+"170
+[; ;mcc_generated_files/eusart1.c: 170:     return readValue;
+[e ) _readValue ]
+[e $UE 838  ]
+"171
+[; ;mcc_generated_files/eusart1.c: 171: }
 [e :UE 838 ]
 }
-"55
-[; ;eeprom/eeprom.c: 55: void eeprom_initEeprom(void) {
-[v _eeprom_initEeprom `(v ~T0 @X0 1 ef ]
+"173
+[; ;mcc_generated_files/eusart1.c: 173: void EUSART1_Write(uint8_t txData)
+[v _EUSART1_Write `(v ~T0 @X0 1 ef1`uc ]
+"174
+[; ;mcc_generated_files/eusart1.c: 174: {
 {
-[e :U _eeprom_initEeprom ]
+[e :U _EUSART1_Write ]
+"173
+[; ;mcc_generated_files/eusart1.c: 173: void EUSART1_Write(uint8_t txData)
+[v _txData `uc ~T0 @X0 1 r1 ]
+"174
+[; ;mcc_generated_files/eusart1.c: 174: {
 [f ]
-"57
-[; ;eeprom/eeprom.c: 57:     i2c_write_serial(eeprom_addr, (char*) eeprom_init, 6);
-[e ( _i2c_write_serial (3 , , _eeprom_addr -> &U _eeprom_init `*uc -> -> 6 `i `uc ]
-"58
-[; ;eeprom/eeprom.c: 58:     i2c_write_serial(eeprom_addr, (char*) eeprom_pointer, 2);
-[e ( _i2c_write_serial (3 , , _eeprom_addr -> &U _eeprom_pointer `*uc -> -> 2 `i `uc ]
-"59
-[; ;eeprom/eeprom.c: 59: }
-[e :UE 839 ]
-}
-"62
-[; ;eeprom/eeprom.c: 62: void eeprom_dumpLogData(void) {
-[v _eeprom_dumpLogData `(v ~T0 @X0 1 ef ]
-{
-[e :U _eeprom_dumpLogData ]
-[f ]
-"69
-[; ;eeprom/eeprom.c: 69:     uint8_t i = 0;
-[v _i `uc ~T0 @X0 1 a ]
-[e = _i -> -> 0 `i `uc ]
-"70
-[; ;eeprom/eeprom.c: 70:     uint32_t i_max = 0xFFFF;
-[v _i_max `ul ~T0 @X0 1 a ]
-[e = _i_max -> -> 65535 `ui `ul ]
-"71
-[; ;eeprom/eeprom.c: 71:     uint8_t j = 0;
-[v _j `uc ~T0 @X0 1 a ]
-[e = _j -> -> 0 `i `uc ]
-"72
-[; ;eeprom/eeprom.c: 72:     char eeprom_buffer[20];
-[v _eeprom_buffer `uc ~T0 @X0 -> 20 `i a ]
-"73
-[; ;eeprom/eeprom.c: 73:     char tmp[130];
-[v _tmp `uc ~T0 @X0 -> 130 `i a ]
-"74
-[; ;eeprom/eeprom.c: 74:     char msg[255];
-[v _msg `uc ~T0 @X0 -> 255 `i a ]
-"75
-[; ;eeprom/eeprom.c: 75:     uint32_t tmp_humid = 0;
-[v _tmp_humid `ul ~T0 @X0 1 a ]
-[e = _tmp_humid -> -> -> 0 `i `l `ul ]
-"76
-[; ;eeprom/eeprom.c: 76:     int32_t tmp_temp = 0;
-[v _tmp_temp `l ~T0 @X0 1 a ]
-[e = _tmp_temp -> -> 0 `i `l ]
-"79
-[; ;eeprom/eeprom.c: 79:     eeprom_initEeprom();
-[e ( _eeprom_initEeprom ..  ]
-"82
-[; ;eeprom/eeprom.c: 82:     while ( i <= i_max ) {
-[e $U 841  ]
-[e :U 842 ]
-{
-"83
-[; ;eeprom/eeprom.c: 83:         i2c_read_serial(eeprom_addr, eeprom_buffer, 8);
-[e ( _i2c_read_serial (3 , , _eeprom_addr &U _eeprom_buffer -> -> 8 `i `uc ]
-"86
-[; ;eeprom/eeprom.c: 86:         j = 0;
-[e = _j -> -> 0 `i `uc ]
-"87
-[; ;eeprom/eeprom.c: 87:         while ( j < 8 ) {
+"175
+[; ;mcc_generated_files/eusart1.c: 175:     while(0 == eusart1TxBufferRemaining)
 [e $U 844  ]
 [e :U 845 ]
+"176
+[; ;mcc_generated_files/eusart1.c: 176:     {
 {
-"89
-[; ;eeprom/eeprom.c: 89:             tmp_humid = (uint32_t)(( eeprom_buffer[j++] & (char)0b00111111 ) << (char)8);
-[e = _tmp_humid -> << & -> *U + &U _eeprom_buffer * -> ++ _j -> -> 1 `i `uc `ux -> -> # *U &U _eeprom_buffer `ui `ux `i -> -> -> 63 `i `uc `i -> -> -> 8 `i `uc `i `ul ]
-"90
-[; ;eeprom/eeprom.c: 90:             tmp_humid += eeprom_buffer[j++];
-[e =+ _tmp_humid -> *U + &U _eeprom_buffer * -> ++ _j -> -> 1 `i `uc `ux -> -> # *U &U _eeprom_buffer `ui `ux `ul ]
-"91
-[; ;eeprom/eeprom.c: 91:             tmp_humid *= 100;
-[e =* _tmp_humid -> -> -> 100 `i `l `ul ]
-"92
-[; ;eeprom/eeprom.c: 92:             tmp_humid /= 16382;
-[e =/ _tmp_humid -> -> -> 16382 `i `l `ul ]
-"95
-[; ;eeprom/eeprom.c: 95:             tmp_temp = eeprom_buffer[j++] << 8;
-[e = _tmp_temp -> << -> *U + &U _eeprom_buffer * -> ++ _j -> -> 1 `i `uc `ux -> -> # *U &U _eeprom_buffer `ui `ux `i -> 8 `i `l ]
-"96
-[; ;eeprom/eeprom.c: 96:             tmp_temp += eeprom_buffer[j++];
-[e =+ _tmp_temp -> *U + &U _eeprom_buffer * -> ++ _j -> -> 1 `i `uc `ux -> -> # *U &U _eeprom_buffer `ui `ux `l ]
-"97
-[; ;eeprom/eeprom.c: 97:             tmp_temp >>= 2;
-[e =>> _tmp_temp -> -> 2 `i `l ]
-"99
-[; ;eeprom/eeprom.c: 99:             tmp_temp *= 16500;
-[e =* _tmp_temp -> -> 16500 `i `l ]
-"100
-[; ;eeprom/eeprom.c: 100:             tmp_temp /= 16382;
-[e =/ _tmp_temp -> -> 16382 `i `l ]
-"101
-[; ;eeprom/eeprom.c: 101:             tmp_temp -= 4000;
-[e =- _tmp_temp -> -> 4000 `i `l ]
-"103
-[; ;eeprom/eeprom.c: 103:             sprintf((char*) tmp, (const char*) eeprom_template, tmp_humid, tmp_temp );
-[e ( _sprintf (1 , , (. , &U _tmp &U _eeprom_template _tmp_humid _tmp_temp ]
-"104
-[; ;eeprom/eeprom.c: 104:             strcat(msg, tmp);
-[e ( _strcat (2 , &U _msg -> &U _tmp `*Cuc ]
-"105
-[; ;eeprom/eeprom.c: 105:         }
+"177
+[; ;mcc_generated_files/eusart1.c: 177:     }
 }
 [e :U 844 ]
-"87
-[; ;eeprom/eeprom.c: 87:         while ( j < 8 ) {
-[e $ < -> _j `i -> 8 `i 845  ]
+"175
+[; ;mcc_generated_files/eusart1.c: 175:     while(0 == eusart1TxBufferRemaining)
+[e $ == -> 0 `i -> _eusart1TxBufferRemaining `i 845  ]
 [e :U 846 ]
-"107
-[; ;eeprom/eeprom.c: 107:         printf( "AT+CIPSEND=0,%d\r\n", (const char*) strlen(msg) );
-[e ( _printf , (. :s 6C -> ( _strlen (1 -> &U _msg `*Cuc `*Cuc ]
-"108
-[; ;eeprom/eeprom.c: 108:         _delay((unsigned long)((70)*(64000000/4000.0)));
-[e ( __delay (1 -> * -> -> 70 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
-"109
-[; ;eeprom/eeprom.c: 109:         printf(msg);
-[e ( _printf -> &U _msg `*Cuc ]
-"110
-[; ;eeprom/eeprom.c: 110:         _delay((unsigned long)((70)*(64000000/4000.0)));
-[e ( __delay (1 -> * -> -> 70 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
-"111
-[; ;eeprom/eeprom.c: 111:     }
+"179
+[; ;mcc_generated_files/eusart1.c: 179:     if(0 == PIE1bits.TX1IE)
+[e $ ! == -> 0 `i -> . . _PIE1bits 0 4 `i 847  ]
+"180
+[; ;mcc_generated_files/eusart1.c: 180:     {
+{
+"181
+[; ;mcc_generated_files/eusart1.c: 181:         TXREG1 = txData;
+[e = _TXREG1 _txData ]
+"182
+[; ;mcc_generated_files/eusart1.c: 182:     }
 }
-[e :U 841 ]
-"82
-[; ;eeprom/eeprom.c: 82:     while ( i <= i_max ) {
-[e $ <= -> _i `ul _i_max 842  ]
-[e :U 843 ]
-"113
-[; ;eeprom/eeprom.c: 113:     i += j;
-[e =+ _i -> _j `uc ]
-"114
-[; ;eeprom/eeprom.c: 114: }
-[e :UE 840 ]
+[e $U 848  ]
+"183
+[; ;mcc_generated_files/eusart1.c: 183:     else
+[e :U 847 ]
+"184
+[; ;mcc_generated_files/eusart1.c: 184:     {
+{
+"185
+[; ;mcc_generated_files/eusart1.c: 185:         PIE1bits.TX1IE = 0;
+[e = . . _PIE1bits 0 4 -> -> 0 `i `uc ]
+"186
+[; ;mcc_generated_files/eusart1.c: 186:         eusart1TxBuffer[eusart1TxHead++] = txData;
+[e = *U + &U _eusart1TxBuffer * -> ++ _eusart1TxHead -> -> 1 `i `Vuc `ux -> -> # *U &U _eusart1TxBuffer `ui `ux _txData ]
+"187
+[; ;mcc_generated_files/eusart1.c: 187:         if(sizeof(eusart1TxBuffer) <= eusart1TxHead)
+[e $ ! <= -> # _eusart1TxBuffer `ui -> _eusart1TxHead `ui 849  ]
+"188
+[; ;mcc_generated_files/eusart1.c: 188:         {
+{
+"189
+[; ;mcc_generated_files/eusart1.c: 189:             eusart1TxHead = 0;
+[e = _eusart1TxHead -> -> 0 `i `uc ]
+"190
+[; ;mcc_generated_files/eusart1.c: 190:         }
 }
-[p f _printf 11600548 ]
-[p f _sprintf 552978365 ]
-[a 4C 79 103 32 112 114 105 110 116 32 100 101 109 32 117 100 32 105 103 101 110 13 10 0 ]
-[a 2C 83 107 114 105 118 110 105 110 103 32 102 97 101 114 100 105 103 13 10 0 ]
-[a 6C 65 84 43 67 73 80 83 69 78 68 61 48 44 37 100 13 10 0 ]
-[a 5C 86 97 101 114 100 105 32 102 114 97 32 69 69 80 82 79 77 32 105 32 98 117 102 102 101 114 58 32 37 35 48 46 50 88 13 10 0 ]
-[a 3C 76 97 101 115 32 102 114 97 32 69 69 80 82 82 79 77 13 10 0 ]
-[a 1C 13 10 83 107 114 105 118 32 116 101 103 110 32 116 105 108 32 69 69 80 82 79 77 13 10 0 ]
+[e :U 849 ]
+"191
+[; ;mcc_generated_files/eusart1.c: 191:         eusart1TxBufferRemaining--;
+[e -- _eusart1TxBufferRemaining -> -> 1 `i `Vuc ]
+"192
+[; ;mcc_generated_files/eusart1.c: 192:     }
+}
+[e :U 848 ]
+"193
+[; ;mcc_generated_files/eusart1.c: 193:     PIE1bits.TX1IE = 1;
+[e = . . _PIE1bits 0 4 -> -> 1 `i `uc ]
+"194
+[; ;mcc_generated_files/eusart1.c: 194: }
+[e :UE 843 ]
+}
+"196
+[; ;mcc_generated_files/eusart1.c: 196: char getch(void)
+[v _getch `(uc ~T0 @X0 1 ef ]
+"197
+[; ;mcc_generated_files/eusart1.c: 197: {
+{
+[e :U _getch ]
+[f ]
+"198
+[; ;mcc_generated_files/eusart1.c: 198:     return EUSART1_Read();
+[e ) -> ( _EUSART1_Read ..  `uc ]
+[e $UE 850  ]
+"199
+[; ;mcc_generated_files/eusart1.c: 199: }
+[e :UE 850 ]
+}
+"201
+[; ;mcc_generated_files/eusart1.c: 201: void putch(char txData)
+[v _putch `(v ~T0 @X0 1 ef1`uc ]
+"202
+[; ;mcc_generated_files/eusart1.c: 202: {
+{
+[e :U _putch ]
+"201
+[; ;mcc_generated_files/eusart1.c: 201: void putch(char txData)
+[v _txData `uc ~T0 @X0 1 r1 ]
+"202
+[; ;mcc_generated_files/eusart1.c: 202: {
+[f ]
+"203
+[; ;mcc_generated_files/eusart1.c: 203:     EUSART1_Write(txData);
+[e ( _EUSART1_Write (1 -> _txData `uc ]
+"204
+[; ;mcc_generated_files/eusart1.c: 204: }
+[e :UE 851 ]
+}
+"206
+[; ;mcc_generated_files/eusart1.c: 206: void EUSART1_Transmit_ISR(void)
+[v _EUSART1_Transmit_ISR `(v ~T0 @X0 1 ef ]
+"207
+[; ;mcc_generated_files/eusart1.c: 207: {
+{
+[e :U _EUSART1_Transmit_ISR ]
+[f ]
+"210
+[; ;mcc_generated_files/eusart1.c: 210:     if(sizeof(eusart1TxBuffer) > eusart1TxBufferRemaining)
+[e $ ! > -> # _eusart1TxBuffer `ui -> _eusart1TxBufferRemaining `ui 853  ]
+"211
+[; ;mcc_generated_files/eusart1.c: 211:     {
+{
+"212
+[; ;mcc_generated_files/eusart1.c: 212:         TXREG1 = eusart1TxBuffer[eusart1TxTail++];
+[e = _TXREG1 *U + &U _eusart1TxBuffer * -> ++ _eusart1TxTail -> -> 1 `i `Vuc `ux -> -> # *U &U _eusart1TxBuffer `ui `ux ]
+"213
+[; ;mcc_generated_files/eusart1.c: 213:         if(sizeof(eusart1TxBuffer) <= eusart1TxTail)
+[e $ ! <= -> # _eusart1TxBuffer `ui -> _eusart1TxTail `ui 854  ]
+"214
+[; ;mcc_generated_files/eusart1.c: 214:         {
+{
+"215
+[; ;mcc_generated_files/eusart1.c: 215:             eusart1TxTail = 0;
+[e = _eusart1TxTail -> -> 0 `i `uc ]
+"216
+[; ;mcc_generated_files/eusart1.c: 216:         }
+}
+[e :U 854 ]
+"217
+[; ;mcc_generated_files/eusart1.c: 217:         eusart1TxBufferRemaining++;
+[e ++ _eusart1TxBufferRemaining -> -> 1 `i `Vuc ]
+"218
+[; ;mcc_generated_files/eusart1.c: 218:     }
+}
+[e $U 855  ]
+"219
+[; ;mcc_generated_files/eusart1.c: 219:     else
+[e :U 853 ]
+"220
+[; ;mcc_generated_files/eusart1.c: 220:     {
+{
+"221
+[; ;mcc_generated_files/eusart1.c: 221:         PIE1bits.TX1IE = 0;
+[e = . . _PIE1bits 0 4 -> -> 0 `i `uc ]
+"222
+[; ;mcc_generated_files/eusart1.c: 222:     }
+}
+[e :U 855 ]
+"223
+[; ;mcc_generated_files/eusart1.c: 223: }
+[e :UE 852 ]
+}
+"225
+[; ;mcc_generated_files/eusart1.c: 225: void EUSART1_Receive_ISR(void)
+[v _EUSART1_Receive_ISR `(v ~T0 @X0 1 ef ]
+"226
+[; ;mcc_generated_files/eusart1.c: 226: {
+{
+[e :U _EUSART1_Receive_ISR ]
+[f ]
+"228
+[; ;mcc_generated_files/eusart1.c: 228:     eusart1RxStatusBuffer[eusart1RxHead].status = 0;
+[e = . *U + &U _eusart1RxStatusBuffer * -> _eusart1RxHead `ux -> -> # *U &U _eusart1RxStatusBuffer `ui `ux 1 -> -> 0 `i `uc ]
+"230
+[; ;mcc_generated_files/eusart1.c: 230:     if(RCSTA1bits.FERR){
+[e $ ! != -> . . _RCSTA1bits 0 2 `i -> 0 `i 857  ]
+{
+"231
+[; ;mcc_generated_files/eusart1.c: 231:         eusart1RxStatusBuffer[eusart1RxHead].ferr = 1;
+[e = . . *U + &U _eusart1RxStatusBuffer * -> _eusart1RxHead `ux -> -> # *U &U _eusart1RxStatusBuffer `ui `ux 0 1 -> -> 1 `i `uc ]
+"232
+[; ;mcc_generated_files/eusart1.c: 232:         EUSART1_FramingErrorHandler();
+[e ( *U _EUSART1_FramingErrorHandler ..  ]
+"233
+[; ;mcc_generated_files/eusart1.c: 233:     }
+}
+[e :U 857 ]
+"235
+[; ;mcc_generated_files/eusart1.c: 235:     if(RCSTA1bits.OERR){
+[e $ ! != -> . . _RCSTA1bits 0 1 `i -> 0 `i 858  ]
+{
+"236
+[; ;mcc_generated_files/eusart1.c: 236:         eusart1RxStatusBuffer[eusart1RxHead].oerr = 1;
+[e = . . *U + &U _eusart1RxStatusBuffer * -> _eusart1RxHead `ux -> -> # *U &U _eusart1RxStatusBuffer `ui `ux 0 2 -> -> 1 `i `uc ]
+"237
+[; ;mcc_generated_files/eusart1.c: 237:         EUSART1_OverrunErrorHandler();
+[e ( *U _EUSART1_OverrunErrorHandler ..  ]
+"238
+[; ;mcc_generated_files/eusart1.c: 238:     }
+}
+[e :U 858 ]
+"240
+[; ;mcc_generated_files/eusart1.c: 240:     if(eusart1RxStatusBuffer[eusart1RxHead].status){
+[e $ ! != -> . *U + &U _eusart1RxStatusBuffer * -> _eusart1RxHead `ux -> -> # *U &U _eusart1RxStatusBuffer `ui `ux 1 `i -> 0 `i 859  ]
+{
+"241
+[; ;mcc_generated_files/eusart1.c: 241:         EUSART1_ErrorHandler();
+[e ( *U _EUSART1_ErrorHandler ..  ]
+"242
+[; ;mcc_generated_files/eusart1.c: 242:     } else {
+}
+[e $U 860  ]
+[e :U 859 ]
+{
+"243
+[; ;mcc_generated_files/eusart1.c: 243:         EUSART1_RxDataHandler();
+[e ( _EUSART1_RxDataHandler ..  ]
+"244
+[; ;mcc_generated_files/eusart1.c: 244:     }
+}
+[e :U 860 ]
+"247
+[; ;mcc_generated_files/eusart1.c: 247: }
+[e :UE 856 ]
+}
+"249
+[; ;mcc_generated_files/eusart1.c: 249: void EUSART1_RxDataHandler(void){
+[v _EUSART1_RxDataHandler `(v ~T0 @X0 1 ef ]
+{
+[e :U _EUSART1_RxDataHandler ]
+[f ]
+"251
+[; ;mcc_generated_files/eusart1.c: 251:     eusart1RxBuffer[eusart1RxHead++] = RCREG1;
+[e = *U + &U _eusart1RxBuffer * -> ++ _eusart1RxHead -> -> 1 `i `Vuc `ux -> -> # *U &U _eusart1RxBuffer `ui `ux _RCREG1 ]
+"252
+[; ;mcc_generated_files/eusart1.c: 252:     if(sizeof(eusart1RxBuffer) <= eusart1RxHead)
+[e $ ! <= -> # _eusart1RxBuffer `ui -> _eusart1RxHead `ui 862  ]
+"253
+[; ;mcc_generated_files/eusart1.c: 253:     {
+{
+"254
+[; ;mcc_generated_files/eusart1.c: 254:         eusart1RxHead = 0;
+[e = _eusart1RxHead -> -> 0 `i `uc ]
+"255
+[; ;mcc_generated_files/eusart1.c: 255:     }
+}
+[e :U 862 ]
+"256
+[; ;mcc_generated_files/eusart1.c: 256:     eusart1RxCount++;
+[e ++ _eusart1RxCount -> -> 1 `i `Vuc ]
+"257
+[; ;mcc_generated_files/eusart1.c: 257: }
+[e :UE 861 ]
+}
+"259
+[; ;mcc_generated_files/eusart1.c: 259: void EUSART1_DefaultFramingErrorHandler(void){}
+[v _EUSART1_DefaultFramingErrorHandler `(v ~T0 @X0 1 ef ]
+{
+[e :U _EUSART1_DefaultFramingErrorHandler ]
+[f ]
+[e :UE 863 ]
+}
+"261
+[; ;mcc_generated_files/eusart1.c: 261: void EUSART1_DefaultOverrunErrorHandler(void){
+[v _EUSART1_DefaultOverrunErrorHandler `(v ~T0 @X0 1 ef ]
+{
+[e :U _EUSART1_DefaultOverrunErrorHandler ]
+[f ]
+"264
+[; ;mcc_generated_files/eusart1.c: 264:     RCSTA1bits.CREN = 0;
+[e = . . _RCSTA1bits 0 4 -> -> 0 `i `uc ]
+"265
+[; ;mcc_generated_files/eusart1.c: 265:     RCSTA1bits.CREN = 1;
+[e = . . _RCSTA1bits 0 4 -> -> 1 `i `uc ]
+"267
+[; ;mcc_generated_files/eusart1.c: 267: }
+[e :UE 864 ]
+}
+"269
+[; ;mcc_generated_files/eusart1.c: 269: void EUSART1_DefaultErrorHandler(void){
+[v _EUSART1_DefaultErrorHandler `(v ~T0 @X0 1 ef ]
+{
+[e :U _EUSART1_DefaultErrorHandler ]
+[f ]
+"270
+[; ;mcc_generated_files/eusart1.c: 270:     EUSART1_RxDataHandler();
+[e ( _EUSART1_RxDataHandler ..  ]
+"271
+[; ;mcc_generated_files/eusart1.c: 271: }
+[e :UE 865 ]
+}
+"273
+[; ;mcc_generated_files/eusart1.c: 273: void EUSART1_SetFramingErrorHandler(void (* interruptHandler)(void)){
+[v _EUSART1_SetFramingErrorHandler `(v ~T0 @X0 1 ef1`*F6159 ]
+{
+[e :U _EUSART1_SetFramingErrorHandler ]
+[v _interruptHandler `*F6161 ~T0 @X0 1 r1 ]
+[f ]
+"274
+[; ;mcc_generated_files/eusart1.c: 274:     EUSART1_FramingErrorHandler = interruptHandler;
+[e = _EUSART1_FramingErrorHandler _interruptHandler ]
+"275
+[; ;mcc_generated_files/eusart1.c: 275: }
+[e :UE 866 ]
+}
+"277
+[; ;mcc_generated_files/eusart1.c: 277: void EUSART1_SetOverrunErrorHandler(void (* interruptHandler)(void)){
+[v _EUSART1_SetOverrunErrorHandler `(v ~T0 @X0 1 ef1`*F6164 ]
+{
+[e :U _EUSART1_SetOverrunErrorHandler ]
+[v _interruptHandler `*F6166 ~T0 @X0 1 r1 ]
+[f ]
+"278
+[; ;mcc_generated_files/eusart1.c: 278:     EUSART1_OverrunErrorHandler = interruptHandler;
+[e = _EUSART1_OverrunErrorHandler _interruptHandler ]
+"279
+[; ;mcc_generated_files/eusart1.c: 279: }
+[e :UE 867 ]
+}
+"281
+[; ;mcc_generated_files/eusart1.c: 281: void EUSART1_SetErrorHandler(void (* interruptHandler)(void)){
+[v _EUSART1_SetErrorHandler `(v ~T0 @X0 1 ef1`*F6169 ]
+{
+[e :U _EUSART1_SetErrorHandler ]
+[v _interruptHandler `*F6171 ~T0 @X0 1 r1 ]
+[f ]
+"282
+[; ;mcc_generated_files/eusart1.c: 282:     EUSART1_ErrorHandler = interruptHandler;
+[e = _EUSART1_ErrorHandler _interruptHandler ]
+"283
+[; ;mcc_generated_files/eusart1.c: 283: }
+[e :UE 868 ]
+}
+"285
+[; ;mcc_generated_files/eusart1.c: 285: void EUSART1_SetTxInterruptHandler(void (* interruptHandler)(void)){
+[v _EUSART1_SetTxInterruptHandler `(v ~T0 @X0 1 ef1`*F6174 ]
+{
+[e :U _EUSART1_SetTxInterruptHandler ]
+[v _interruptHandler `*F6176 ~T0 @X0 1 r1 ]
+[f ]
+"286
+[; ;mcc_generated_files/eusart1.c: 286:     EUSART1_TxDefaultInterruptHandler = interruptHandler;
+[e = _EUSART1_TxDefaultInterruptHandler _interruptHandler ]
+"287
+[; ;mcc_generated_files/eusart1.c: 287: }
+[e :UE 869 ]
+}
+"289
+[; ;mcc_generated_files/eusart1.c: 289: void EUSART1_SetRxInterruptHandler(void (* interruptHandler)(void)){
+[v _EUSART1_SetRxInterruptHandler `(v ~T0 @X0 1 ef1`*F6179 ]
+{
+[e :U _EUSART1_SetRxInterruptHandler ]
+[v _interruptHandler `*F6181 ~T0 @X0 1 r1 ]
+[f ]
+"290
+[; ;mcc_generated_files/eusart1.c: 290:     EUSART1_RxDefaultInterruptHandler = interruptHandler;
+[e = _EUSART1_RxDefaultInterruptHandler _interruptHandler ]
+"291
+[; ;mcc_generated_files/eusart1.c: 291: }
+[e :UE 870 ]
+}

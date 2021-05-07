@@ -1,24 +1,76 @@
 Version 4.0 HI-TECH Software Intermediate Code
+"23 webserver/tcpip.h
+[; ;webserver/tcpip.h: 23: struct SERVER {
+[s S834 `a 1 `uc 1 `a 1 `uc 1 `*uc -> 20 `i `*uc -> 20 `i `*uc -> 20 `i `a 1 `a 1 `a 1 `uc -> 20 `i `uc -> 15 `i `uc 1 `a 1 `a 1 ]
+[n S834 SERVER busy wifiMode multibleConnections maxConnections ssid password encryption wificonnected wifigotip internet remote_ip local_ip running clientConnected clientAvailable ]
+"42 webserver/wifi.h
+[; ;webserver/wifi.h: 42: struct WIFIMode {
+[s S835 `uc 1 `uc 1 `uc 1 ]
+[n S835 WIFIMode stationMode softAPMode multibleConnections ]
+"53
+[; ;webserver/wifi.h: 53: typedef struct KnownNetworks {
+[s S836 `uc -> 50 `i `uc -> 50 `i `uc -> 50 `i ]
+[n S836 KnownNetworks ssid password encryption ]
+"75 webserver/esp8266.h
+[; ;webserver/esp8266.h: 75: struct ESPUART {
+[s S837 `l 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
+[n S837 ESPUART baudrate databits stopbits parity flowcontrol ]
+"84
+[; ;webserver/esp8266.h: 84: struct ESPFirmWare {
+[s S838 `*uc 1 `*uc 1 `*uc 1 `uc 1 ]
+[n S838 ESPFirmWare ATVersion SDKVersion BinVersion updated ]
+"94
+[; ;webserver/esp8266.h: 94: struct States {
+[s S839 `a 1 `a 1 `a 1 ]
+[n S839 States ok error ready ]
+"113 C:\Program Files\Microchip\xc8\v2.32\pic\include\c99\stdio.h
+[v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
+"35 webserver/../lcd/lcd.h
+[; ;webserver/../lcd/lcd.h: 35: void lcd_write(char *, uint8_t, uint8_t);
+[v _lcd_write `(v ~T0 @X0 0 ef3`*uc`uc`uc ]
+"54 webserver/tcpip.h
+[; ;webserver/tcpip.h: 54: _Bool tcpip_setMaxConnections(uint8_t conn);
+[v _tcpip_setMaxConnections `(a ~T0 @X0 0 ef1`uc ]
+"64
+[; ;webserver/tcpip.h: 64: void tcpip_showIPDRemoteIP(uint8_t);
+[v _tcpip_showIPDRemoteIP `(v ~T0 @X0 0 ef1`uc ]
+"56
+[; ;webserver/tcpip.h: 56: _Bool tcpip_serverTCPIPBegin(uint16_t port);
+[v _tcpip_serverTCPIPBegin `(a ~T0 @X0 0 ef1`us ]
+"118 webserver/esp8266.h
+[; ;webserver/esp8266.h: 118: _Bool esp_waitForOK(void);
+[v _esp_waitForOK `(a ~T0 @X0 0 ef ]
 "111 C:\Program Files\Microchip\xc8\v2.32\pic\include\c99\stdio.h
 [v _printf `(i ~T0 @X0 0 ev`*Cuc ]
-"34 eeprom/../i2c/i2c.h
-[; ;eeprom/../i2c/i2c.h: 34: void i2c_write_serial(uint8_t, char*, uint8_t);
-[v _i2c_write_serial `(v ~T0 @X0 0 ef3`uc`*uc`uc ]
+"214 webserver/../mcc_generated_files/eusart1.h
+[; ;webserver/../mcc_generated_files/eusart1.h: 214: _Bool EUSART1_is_rx_ready(void);
+[v _EUSART1_is_rx_ready `(a ~T0 @X0 0 ef ]
+"329
+[; ;webserver/../mcc_generated_files/eusart1.h: 329: uint8_t EUSART1_Read(void);
+[v _EUSART1_Read `(uc ~T0 @X0 0 ef ]
+"349
+[; ;webserver/../mcc_generated_files/eusart1.h: 349: void EUSART1_Write(uint8_t txData);
+[v _EUSART1_Write `(v ~T0 @X0 0 ef1`uc ]
+"17 C:\Program Files\Microchip\xc8\v2.32\pic\include\c99\ctype.h
+[; ;C:\Program Files\Microchip\xc8\v2.32\pic\include\c99\ctype.h: 17: int isprint(int);
+[v _isprint `(i ~T0 @X0 0 ef1`i ]
+"83 webserver/tcpip.h
+[; ;webserver/tcpip.h: 83: void tcpip_sendHTTPHeader(void);
+[v _tcpip_sendHTTPHeader `(v ~T0 @X0 0 ef ]
+"84
+[; ;webserver/tcpip.h: 84: void tcpip_sendHTTPPage(void);
+[v _tcpip_sendHTTPPage `(v ~T0 @X0 0 ef ]
+"54 C:\Program Files\Microchip\xc8\v2.32\pic\include\c99\string.h
+[; ;C:\Program Files\Microchip\xc8\v2.32\pic\include\c99\string.h: 54: size_t strlen (const char *);
+[v _strlen `(ui ~T0 @X0 0 ef1`*Cuc ]
 [v F5708 `(v ~T0 @X0 1 tf1`ul ]
 "203 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\pic18.h
 [v __delay `JF5708 ~T0 @X0 0 e ]
 [p i __delay ]
-"35 eeprom/../i2c/i2c.h
-[; ;eeprom/../i2c/i2c.h: 35: void i2c_read_serial(uint8_t, char*, uint8_t);
-[v _i2c_read_serial `(v ~T0 @X0 0 ef3`uc`*uc`uc ]
-"113 C:\Program Files\Microchip\xc8\v2.32\pic\include\c99\stdio.h
-[v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
-"36 C:\Program Files\Microchip\xc8\v2.32\pic\include\c99\string.h
-[; ;C:\Program Files\Microchip\xc8\v2.32\pic\include\c99\string.h: 36: char *strcat (char *restrict, const char *restrict);
-[v _strcat `(*uc ~T0 @X0 0 ef2`*uc`*Cuc ]
-"54
-[; ;C:\Program Files\Microchip\xc8\v2.32\pic\include\c99\string.h: 54: size_t strlen (const char *);
-[v _strlen `(ui ~T0 @X0 0 ef1`*Cuc ]
+"984 webserver/tcpip.c
+[; ;webserver/tcpip.c: 984: struct GPIOState {
+[s S905 `uc 1 `uc 1 ]
+[n S905 GPIOState output4State output5State ]
 "54 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k22.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k22.h: 54: __asm("ANSELA equ 0F38h");
 [; <" ANSELA equ 0F38h ;# ">
@@ -754,2369 +806,1817 @@ Version 4.0 HI-TECH Software Intermediate Code
 "16609
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k22.h: 16609: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"30 eeprom/../i2c/i2c.h
-[; ;eeprom/../i2c/i2c.h: 30: uint8_t data_out[4];
-[v _data_out `uc ~T0 @X0 -> 4 `i e ]
-"24 eeprom/eeprom.h
-[; ;eeprom/eeprom.h: 24: const uint8_t eeprom_addr = 0b1010000;
-[v _eeprom_addr `Cuc ~T0 @X0 1 e ]
-[i _eeprom_addr
--> -> 80 `i `uc
-]
-"25
-[; ;eeprom/eeprom.h: 25: const char eeprom_test[] = {0x00, 0x00, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0x0a, 0x0b, 0x0c, 0x0d, 0x0e, 0x0f};
-[v _eeprom_test `Cuc ~T0 @X0 -> 17 `i e ]
-[i _eeprom_test
+"44 webserver/tcpip.h
+[; ;webserver/tcpip.h: 44: server_t server;
+[v _server `S834 ~T0 @X0 1 e ]
+"94
+[; ;webserver/tcpip.h: 94: const char htmlMsgPart1[] = "<!DOCTYPE html><html xmlns=\"http://www.w3.org/1999/xhtml\"><head><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><link rel=\"icon\" href=\"data:,\"><style>html { font-family: Helvetica; display: inline-block; margin: 0px auto; text-align: center;} .button { background-color: #195B6A; border: none; color: white; padding: 16px 40px; text-decoration: none; font-size: 30px; margin: 2px; cursor: pointer;} .button2 {background-color: #77878A;}</style></head><body><h1>ESP8266 Web Server</h1>";
+[v _htmlMsgPart1 `Cuc ~T0 @X0 -> 505 `i e ]
+[i _htmlMsgPart1
 :U ..
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 1 `i `uc
--> -> 2 `i `uc
--> -> 3 `i `uc
--> -> 4 `i `uc
--> -> 5 `i `uc
--> -> 6 `i `uc
--> -> 7 `i `uc
--> -> 8 `i `uc
--> -> 9 `i `uc
--> -> 10 `i `uc
--> -> 11 `i `uc
--> -> 12 `i `uc
--> -> 13 `i `uc
--> -> 14 `i `uc
--> -> 15 `i `uc
+-> 60 `c
+-> 33 `c
+-> 68 `c
+-> 79 `c
+-> 67 `c
+-> 84 `c
+-> 89 `c
+-> 80 `c
+-> 69 `c
+-> 32 `c
+-> 104 `c
+-> 116 `c
+-> 109 `c
+-> 108 `c
+-> 62 `c
+-> 60 `c
+-> 104 `c
+-> 116 `c
+-> 109 `c
+-> 108 `c
+-> 32 `c
+-> 120 `c
+-> 109 `c
+-> 108 `c
+-> 110 `c
+-> 115 `c
+-> 61 `c
+-> 34 `c
+-> 104 `c
+-> 116 `c
+-> 116 `c
+-> 112 `c
+-> 58 `c
+-> 47 `c
+-> 47 `c
+-> 119 `c
+-> 119 `c
+-> 119 `c
+-> 46 `c
+-> 119 `c
+-> 51 `c
+-> 46 `c
+-> 111 `c
+-> 114 `c
+-> 103 `c
+-> 47 `c
+-> 49 `c
+-> 57 `c
+-> 57 `c
+-> 57 `c
+-> 47 `c
+-> 120 `c
+-> 104 `c
+-> 116 `c
+-> 109 `c
+-> 108 `c
+-> 34 `c
+-> 62 `c
+-> 60 `c
+-> 104 `c
+-> 101 `c
+-> 97 `c
+-> 100 `c
+-> 62 `c
+-> 60 `c
+-> 109 `c
+-> 101 `c
+-> 116 `c
+-> 97 `c
+-> 32 `c
+-> 110 `c
+-> 97 `c
+-> 109 `c
+-> 101 `c
+-> 61 `c
+-> 34 `c
+-> 118 `c
+-> 105 `c
+-> 101 `c
+-> 119 `c
+-> 112 `c
+-> 111 `c
+-> 114 `c
+-> 116 `c
+-> 34 `c
+-> 32 `c
+-> 99 `c
+-> 111 `c
+-> 110 `c
+-> 116 `c
+-> 101 `c
+-> 110 `c
+-> 116 `c
+-> 61 `c
+-> 34 `c
+-> 119 `c
+-> 105 `c
+-> 100 `c
+-> 116 `c
+-> 104 `c
+-> 61 `c
+-> 100 `c
+-> 101 `c
+-> 118 `c
+-> 105 `c
+-> 99 `c
+-> 101 `c
+-> 45 `c
+-> 119 `c
+-> 105 `c
+-> 100 `c
+-> 116 `c
+-> 104 `c
+-> 44 `c
+-> 32 `c
+-> 105 `c
+-> 110 `c
+-> 105 `c
+-> 116 `c
+-> 105 `c
+-> 97 `c
+-> 108 `c
+-> 45 `c
+-> 115 `c
+-> 99 `c
+-> 97 `c
+-> 108 `c
+-> 101 `c
+-> 61 `c
+-> 49 `c
+-> 34 `c
+-> 62 `c
+-> 60 `c
+-> 108 `c
+-> 105 `c
+-> 110 `c
+-> 107 `c
+-> 32 `c
+-> 114 `c
+-> 101 `c
+-> 108 `c
+-> 61 `c
+-> 34 `c
+-> 105 `c
+-> 99 `c
+-> 111 `c
+-> 110 `c
+-> 34 `c
+-> 32 `c
+-> 104 `c
+-> 114 `c
+-> 101 `c
+-> 102 `c
+-> 61 `c
+-> 34 `c
+-> 100 `c
+-> 97 `c
+-> 116 `c
+-> 97 `c
+-> 58 `c
+-> 44 `c
+-> 34 `c
+-> 62 `c
+-> 60 `c
+-> 115 `c
+-> 116 `c
+-> 121 `c
+-> 108 `c
+-> 101 `c
+-> 62 `c
+-> 104 `c
+-> 116 `c
+-> 109 `c
+-> 108 `c
+-> 32 `c
+-> 123 `c
+-> 32 `c
+-> 102 `c
+-> 111 `c
+-> 110 `c
+-> 116 `c
+-> 45 `c
+-> 102 `c
+-> 97 `c
+-> 109 `c
+-> 105 `c
+-> 108 `c
+-> 121 `c
+-> 58 `c
+-> 32 `c
+-> 72 `c
+-> 101 `c
+-> 108 `c
+-> 118 `c
+-> 101 `c
+-> 116 `c
+-> 105 `c
+-> 99 `c
+-> 97 `c
+-> 59 `c
+-> 32 `c
+-> 100 `c
+-> 105 `c
+-> 115 `c
+-> 112 `c
+-> 108 `c
+-> 97 `c
+-> 121 `c
+-> 58 `c
+-> 32 `c
+-> 105 `c
+-> 110 `c
+-> 108 `c
+-> 105 `c
+-> 110 `c
+-> 101 `c
+-> 45 `c
+-> 98 `c
+-> 108 `c
+-> 111 `c
+-> 99 `c
+-> 107 `c
+-> 59 `c
+-> 32 `c
+-> 109 `c
+-> 97 `c
+-> 114 `c
+-> 103 `c
+-> 105 `c
+-> 110 `c
+-> 58 `c
+-> 32 `c
+-> 48 `c
+-> 112 `c
+-> 120 `c
+-> 32 `c
+-> 97 `c
+-> 117 `c
+-> 116 `c
+-> 111 `c
+-> 59 `c
+-> 32 `c
+-> 116 `c
+-> 101 `c
+-> 120 `c
+-> 116 `c
+-> 45 `c
+-> 97 `c
+-> 108 `c
+-> 105 `c
+-> 103 `c
+-> 110 `c
+-> 58 `c
+-> 32 `c
+-> 99 `c
+-> 101 `c
+-> 110 `c
+-> 116 `c
+-> 101 `c
+-> 114 `c
+-> 59 `c
+-> 125 `c
+-> 32 `c
+-> 46 `c
+-> 98 `c
+-> 117 `c
+-> 116 `c
+-> 116 `c
+-> 111 `c
+-> 110 `c
+-> 32 `c
+-> 123 `c
+-> 32 `c
+-> 98 `c
+-> 97 `c
+-> 99 `c
+-> 107 `c
+-> 103 `c
+-> 114 `c
+-> 111 `c
+-> 117 `c
+-> 110 `c
+-> 100 `c
+-> 45 `c
+-> 99 `c
+-> 111 `c
+-> 108 `c
+-> 111 `c
+-> 114 `c
+-> 58 `c
+-> 32 `c
+-> 35 `c
+-> 49 `c
+-> 57 `c
+-> 53 `c
+-> 66 `c
+-> 54 `c
+-> 65 `c
+-> 59 `c
+-> 32 `c
+-> 98 `c
+-> 111 `c
+-> 114 `c
+-> 100 `c
+-> 101 `c
+-> 114 `c
+-> 58 `c
+-> 32 `c
+-> 110 `c
+-> 111 `c
+-> 110 `c
+-> 101 `c
+-> 59 `c
+-> 32 `c
+-> 99 `c
+-> 111 `c
+-> 108 `c
+-> 111 `c
+-> 114 `c
+-> 58 `c
+-> 32 `c
+-> 119 `c
+-> 104 `c
+-> 105 `c
+-> 116 `c
+-> 101 `c
+-> 59 `c
+-> 32 `c
+-> 112 `c
+-> 97 `c
+-> 100 `c
+-> 100 `c
+-> 105 `c
+-> 110 `c
+-> 103 `c
+-> 58 `c
+-> 32 `c
+-> 49 `c
+-> 54 `c
+-> 112 `c
+-> 120 `c
+-> 32 `c
+-> 52 `c
+-> 48 `c
+-> 112 `c
+-> 120 `c
+-> 59 `c
+-> 32 `c
+-> 116 `c
+-> 101 `c
+-> 120 `c
+-> 116 `c
+-> 45 `c
+-> 100 `c
+-> 101 `c
+-> 99 `c
+-> 111 `c
+-> 114 `c
+-> 97 `c
+-> 116 `c
+-> 105 `c
+-> 111 `c
+-> 110 `c
+-> 58 `c
+-> 32 `c
+-> 110 `c
+-> 111 `c
+-> 110 `c
+-> 101 `c
+-> 59 `c
+-> 32 `c
+-> 102 `c
+-> 111 `c
+-> 110 `c
+-> 116 `c
+-> 45 `c
+-> 115 `c
+-> 105 `c
+-> 122 `c
+-> 101 `c
+-> 58 `c
+-> 32 `c
+-> 51 `c
+-> 48 `c
+-> 112 `c
+-> 120 `c
+-> 59 `c
+-> 32 `c
+-> 109 `c
+-> 97 `c
+-> 114 `c
+-> 103 `c
+-> 105 `c
+-> 110 `c
+-> 58 `c
+-> 32 `c
+-> 50 `c
+-> 112 `c
+-> 120 `c
+-> 59 `c
+-> 32 `c
+-> 99 `c
+-> 117 `c
+-> 114 `c
+-> 115 `c
+-> 111 `c
+-> 114 `c
+-> 58 `c
+-> 32 `c
+-> 112 `c
+-> 111 `c
+-> 105 `c
+-> 110 `c
+-> 116 `c
+-> 101 `c
+-> 114 `c
+-> 59 `c
+-> 125 `c
+-> 32 `c
+-> 46 `c
+-> 98 `c
+-> 117 `c
+-> 116 `c
+-> 116 `c
+-> 111 `c
+-> 110 `c
+-> 50 `c
+-> 32 `c
+-> 123 `c
+-> 98 `c
+-> 97 `c
+-> 99 `c
+-> 107 `c
+-> 103 `c
+-> 114 `c
+-> 111 `c
+-> 117 `c
+-> 110 `c
+-> 100 `c
+-> 45 `c
+-> 99 `c
+-> 111 `c
+-> 108 `c
+-> 111 `c
+-> 114 `c
+-> 58 `c
+-> 32 `c
+-> 35 `c
+-> 55 `c
+-> 55 `c
+-> 56 `c
+-> 55 `c
+-> 56 `c
+-> 65 `c
+-> 59 `c
+-> 125 `c
+-> 60 `c
+-> 47 `c
+-> 115 `c
+-> 116 `c
+-> 121 `c
+-> 108 `c
+-> 101 `c
+-> 62 `c
+-> 60 `c
+-> 47 `c
+-> 104 `c
+-> 101 `c
+-> 97 `c
+-> 100 `c
+-> 62 `c
+-> 60 `c
+-> 98 `c
+-> 111 `c
+-> 100 `c
+-> 121 `c
+-> 62 `c
+-> 60 `c
+-> 104 `c
+-> 49 `c
+-> 62 `c
+-> 69 `c
+-> 83 `c
+-> 80 `c
+-> 56 `c
+-> 50 `c
+-> 54 `c
+-> 54 `c
+-> 32 `c
+-> 87 `c
+-> 101 `c
+-> 98 `c
+-> 32 `c
+-> 83 `c
+-> 101 `c
+-> 114 `c
+-> 118 `c
+-> 101 `c
+-> 114 `c
+-> 60 `c
+-> 47 `c
+-> 104 `c
+-> 49 `c
+-> 62 `c
+-> 0 `c
+..
+]
+"50 webserver/wifi.h
+[; ;webserver/wifi.h: 50: WIFIMode_t wifi;
+[v _wifi `S835 ~T0 @X0 1 e ]
+"59
+[; ;webserver/wifi.h: 59: knownnetworks network_table[] = {
+[v _network_table `S836 ~T0 @X0 -> 5 `i e ]
+[i _network_table
+:U ..
+:U ..
+:U ..
+-> 83 `c
+-> 83 `c
+-> 73 `c
+-> 68 `c
+-> 45 `c
+-> 74 `c
+-> 82 `c
+-> 122 `c
+-> 99 `c
+-> 77 `c
+-> 52 `c
+-> 0 `c
+..
+:U ..
+-> 102 `c
+-> 114 `c
+-> 98 `c
+-> 80 `c
+-> 67 `c
+-> 119 `c
+-> 118 `c
+-> 82 `c
+-> 75 `c
+-> 113 `c
+-> 0 `c
+..
+:U ..
+-> 87 `c
+-> 80 `c
+-> 65 `c
+-> 50 `c
+-> 32 `c
+-> 65 `c
+-> 69 `c
+-> 83 `c
+-> 0 `c
+..
+..
+:U ..
+:U ..
+-> 87 `c
+-> 117 `c
+-> 103 `c
+-> 103 `c
+-> 97 `c
+-> 78 `c
+-> 101 `c
+-> 116 `c
+-> 0 `c
+..
+:U ..
+-> 102 `c
+-> 114 `c
+-> 101 `c
+-> 100 `c
+-> 97 `c
+-> 103 `c
+-> 115 `c
+-> 98 `c
+-> 97 `c
+-> 110 `c
+-> 97 `c
+-> 110 `c
+-> 0 `c
+..
+:U ..
+-> 87 `c
+-> 80 `c
+-> 65 `c
+-> 50 `c
+-> 32 `c
+-> 65 `c
+-> 69 `c
+-> 83 `c
+-> 0 `c
+..
+..
+:U ..
+:U ..
+-> 65 `c
+-> 83 `c
+-> 85 `c
+-> 83 `c
+-> 95 `c
+-> 88 `c
+-> 48 `c
+-> 48 `c
+-> 80 `c
+-> 68 `c
+-> 0 `c
+..
+:U ..
+-> 48 `c
+-> 99 `c
+-> 48 `c
+-> 100 `c
+-> 56 `c
+-> 53 `c
+-> 57 `c
+-> 57 `c
+-> 0 `c
+..
+:U ..
+-> 87 `c
+-> 80 `c
+-> 65 `c
+-> 50 `c
+-> 32 `c
+-> 65 `c
+-> 69 `c
+-> 83 `c
+-> 0 `c
+..
+..
+:U ..
+:U ..
+-> 0 `c
+..
+:U ..
+-> 0 `c
+..
+:U ..
+-> 0 `c
+..
+..
+:U ..
+:U ..
+-> 0 `c
+..
+:U ..
+-> 0 `c
+..
+:U ..
+-> 0 `c
+..
+..
+..
+]
+"25 webserver/softap.h
+[; ;webserver/softap.h: 25: const char SOFTAP_SSIDNAME[] = {"KRS_PIC_AP"};
+[v _SOFTAP_SSIDNAME `Cuc ~T0 @X0 -> 11 `i e ]
+[i _SOFTAP_SSIDNAME
+:U ..
+-> 75 `c
+-> 82 `c
+-> 83 `c
+-> 95 `c
+-> 80 `c
+-> 73 `c
+-> 67 `c
+-> 95 `c
+-> 65 `c
+-> 80 `c
+-> 0 `c
 ..
 ]
 "26
-[; ;eeprom/eeprom.h: 26: const char eeprom_init[] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x04};
-[v _eeprom_init `Cuc ~T0 @X0 -> 6 `i e ]
-[i _eeprom_init
+[; ;webserver/softap.h: 26: const char SOFTAP_PASSWORD[] = {"1234567890"};
+[v _SOFTAP_PASSWORD `Cuc ~T0 @X0 -> 11 `i e ]
+[i _SOFTAP_PASSWORD
 :U ..
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 4 `i `uc
+-> 49 `c
+-> 50 `c
+-> 51 `c
+-> 52 `c
+-> 53 `c
+-> 54 `c
+-> 55 `c
+-> 56 `c
+-> 57 `c
+-> 48 `c
+-> 0 `c
 ..
 ]
 "27
-[; ;eeprom/eeprom.h: 27: const char eeprom_pointer[] = {0x00, 0x00};
-[v _eeprom_pointer `Cuc ~T0 @X0 -> 2 `i e ]
-[i _eeprom_pointer
+[; ;webserver/softap.h: 27: const uint8_t SOFTAP_CHANNELID = 3;
+[v _SOFTAP_CHANNELID `Cuc ~T0 @X0 1 e ]
+[i _SOFTAP_CHANNELID
+-> -> 3 `i `uc
+]
+"28
+[; ;webserver/softap.h: 28: const uint8_t SOFTAP_ECN = 4;
+[v _SOFTAP_ECN `Cuc ~T0 @X0 1 e ]
+[i _SOFTAP_ECN
+-> -> 4 `i `uc
+]
+"29
+[; ;webserver/softap.h: 29: const uint8_t SOFTAP_MAXCONN = 1;
+[v _SOFTAP_MAXCONN `Cuc ~T0 @X0 1 e ]
+[i _SOFTAP_MAXCONN
+-> -> 1 `i `uc
+]
+"30
+[; ;webserver/softap.h: 30: const uint8_t SOFTAP_HIDDEN = 0;
+[v _SOFTAP_HIDDEN `Cuc ~T0 @X0 1 e ]
+[i _SOFTAP_HIDDEN
+-> -> 0 `i `uc
+]
+"30 webserver/../i2c/i2c.h
+[; ;webserver/../i2c/i2c.h: 30: uint8_t data_out[4];
+[v _data_out `uc ~T0 @X0 -> 4 `i e ]
+"25 webserver/../lcd/lcd.h
+[; ;webserver/../lcd/lcd.h: 25: const uint8_t display_addr = 0b0111100;
+[v _display_addr `Cuc ~T0 @X0 1 e ]
+[i _display_addr
+-> -> 60 `i `uc
+]
+"26
+[; ;webserver/../lcd/lcd.h: 26: const char display_init[] = {0x00, 0x38, 0x0C, 0x06};
+[v _display_init `Cuc ~T0 @X0 -> 4 `i e ]
+[i _display_init
 :U ..
 -> -> 0 `i `uc
+-> -> 56 `i `uc
+-> -> 12 `i `uc
+-> -> 6 `i `uc
+..
+]
+"27
+[; ;webserver/../lcd/lcd.h: 27: const char first_line[] = {0x00, 0x80};
+[v _first_line `Cuc ~T0 @X0 -> 2 `i e ]
+[i _first_line
+:U ..
 -> -> 0 `i `uc
+-> -> 128 `i `uc
 ..
 ]
 "28
-[; ;eeprom/eeprom.h: 28: char eeprom_buffer[128];
-[v _eeprom_buffer `uc ~T0 @X0 -> 128 `i e ]
-"31
-[; ;eeprom/eeprom.h: 31: const char eeprom_htmlTemplate[] = "<h1>Temperatur og luftfugtighed</h1><div style='width: 100%;'><canvas id='canvas'></canvas></div>";
-[v _eeprom_htmlTemplate `Cuc ~T0 @X0 -> 98 `i e ]
-[i _eeprom_htmlTemplate
+[; ;webserver/../lcd/lcd.h: 28: const char shift_line[] = {0x00, 0xC0};
+[v _shift_line `Cuc ~T0 @X0 -> 2 `i e ]
+[i _shift_line
 :U ..
--> 60 `c
--> 104 `c
--> 49 `c
--> 62 `c
--> 84 `c
--> 101 `c
--> 109 `c
--> 112 `c
--> 101 `c
--> 114 `c
--> 97 `c
--> 116 `c
--> 117 `c
--> 114 `c
+-> -> 0 `i `uc
+-> -> 192 `i `uc
+..
+]
+"29
+[; ;webserver/../lcd/lcd.h: 29: const char empty_line[] = "                ";
+[v _empty_line `Cuc ~T0 @X0 -> 17 `i e ]
+[i _empty_line
+:U ..
 -> 32 `c
--> 111 `c
--> 103 `c
 -> 32 `c
--> 108 `c
--> 117 `c
--> 102 `c
--> 116 `c
--> 102 `c
--> 117 `c
--> 103 `c
--> 116 `c
--> 105 `c
--> 103 `c
--> 104 `c
--> 101 `c
--> 100 `c
--> 60 `c
--> 47 `c
--> 104 `c
--> 49 `c
--> 62 `c
--> 60 `c
--> 100 `c
--> 105 `c
--> 118 `c
 -> 32 `c
--> 115 `c
--> 116 `c
--> 121 `c
--> 108 `c
--> 101 `c
--> 61 `c
--> 39 `c
--> 119 `c
--> 105 `c
--> 100 `c
--> 116 `c
--> 104 `c
--> 58 `c
 -> 32 `c
--> 49 `c
--> 48 `c
--> 48 `c
--> 37 `c
--> 59 `c
--> 39 `c
--> 62 `c
--> 60 `c
--> 99 `c
--> 97 `c
--> 110 `c
--> 118 `c
--> 97 `c
--> 115 `c
 -> 32 `c
--> 105 `c
--> 100 `c
--> 61 `c
--> 39 `c
--> 99 `c
--> 97 `c
--> 110 `c
--> 118 `c
--> 97 `c
--> 115 `c
--> 39 `c
--> 62 `c
--> 60 `c
--> 47 `c
--> 99 `c
--> 97 `c
--> 110 `c
--> 118 `c
--> 97 `c
--> 115 `c
--> 62 `c
--> 60 `c
--> 47 `c
--> 100 `c
--> 105 `c
--> 118 `c
--> 62 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
 -> 0 `c
 ..
 ]
-"32
-[; ;eeprom/eeprom.h: 32: const char eeprom_fontTemplate[] = "";
-[v _eeprom_fontTemplate `Cuc ~T0 @X0 -> -> 1 `i `ux e ]
-[i _eeprom_fontTemplate
+"30
+[; ;webserver/../lcd/lcd.h: 30: char text[50] = "";
+[v _text `uc ~T0 @X0 -> 50 `i e ]
+[i _text
 :U ..
 -> 0 `c
 ..
 ]
-"33
-[; ;eeprom/eeprom.h: 33: const char eeprom_cssTemplate[] = "<style>canvas {-moz-user-select: none;-webkit-user-select: none;-ms-user-select: none;}</style>";
-[v _eeprom_cssTemplate `Cuc ~T0 @X0 -> 96 `i e ]
-[i _eeprom_cssTemplate
+"72 webserver/esp8266.h
+[; ;webserver/esp8266.h: 72: uint8_t uartInput[128];
+[v _uartInput `uc ~T0 @X0 -> 128 `i e ]
+"82
+[; ;webserver/esp8266.h: 82: struct ESPUART uart;
+[v _uart `S837 ~T0 @X0 1 e ]
+"92
+[; ;webserver/esp8266.h: 92: espfirmware_t firmware;
+[v _firmware `S838 ~T0 @X0 1 e ]
+"102
+[; ;webserver/esp8266.h: 102: states_t states;
+[v _states `S839 ~T0 @X0 1 e ]
+"39 webserver/tcpip.c
+[; ;webserver/tcpip.c: 39: void tcpip_serverSetup(void) {
+[v _tcpip_serverSetup `(v ~T0 @X0 1 ef ]
+{
+[e :U _tcpip_serverSetup ]
+[f ]
+[v F6558 `uc ~T0 @X0 -> 50 `i s ]
+[i F6558
 :U ..
--> 60 `c
--> 115 `c
--> 116 `c
--> 121 `c
--> 108 `c
--> 101 `c
--> 62 `c
--> 99 `c
--> 97 `c
--> 110 `c
--> 118 `c
--> 97 `c
--> 115 `c
--> 32 `c
--> 123 `c
--> 45 `c
--> 109 `c
--> 111 `c
--> 122 `c
--> 45 `c
+"40
+[; ;webserver/tcpip.c: 40:     char buffer[50] = "";
+-> 0 `c
+..
+]
+[v _buffer `uc ~T0 @X0 -> 50 `i a ]
+[e = _buffer F6558 ]
+"42
+[; ;webserver/tcpip.c: 42:     sprintf(buffer, "@Connecting to:  ");
+[e ( _sprintf (1 , &U _buffer :s 1C ]
+"43
+[; ;webserver/tcpip.c: 43:     lcd_write(buffer, 1, 0);
+[e ( _lcd_write (3 , , &U _buffer -> -> 1 `i `uc -> -> 0 `i `uc ]
+"44
+[; ;webserver/tcpip.c: 44:     sprintf(buffer, "@%s", server.ssid);
+[e ( _sprintf (1 , (. , &U _buffer :s 2C &U . _server 4 ]
+"45
+[; ;webserver/tcpip.c: 45:     lcd_write(buffer, 2, 0);
+[e ( _lcd_write (3 , , &U _buffer -> -> 2 `i `uc -> -> 0 `i `uc ]
+"52
+[; ;webserver/tcpip.c: 52:     tcpip_setMaxConnections(1);
+[e ( _tcpip_setMaxConnections (1 -> -> 1 `i `uc ]
+"55
+[; ;webserver/tcpip.c: 55:     tcpip_showIPDRemoteIP(0);
+[e ( _tcpip_showIPDRemoteIP (1 -> -> 0 `i `uc ]
+"60
+[; ;webserver/tcpip.c: 60:     tcpip_serverTCPIPBegin(80);
+[e ( _tcpip_serverTCPIPBegin (1 -> -> 80 `i `us ]
+"61
+[; ;webserver/tcpip.c: 61:     if( esp_waitForOK() )
+[e $ ! != -> ( _esp_waitForOK ..  `i -> 0 `i 841  ]
+"62
+[; ;webserver/tcpip.c: 62:         server.running = 1;
+[e = . _server 12 -> -> 1 `i `uc ]
+[e $U 842  ]
+"63
+[; ;webserver/tcpip.c: 63:     else
+[e :U 841 ]
+"64
+[; ;webserver/tcpip.c: 64:         server.running = 0;
+[e = . _server 12 -> -> 0 `i `uc ]
+[e :U 842 ]
+"65
+[; ;webserver/tcpip.c: 65: }
+[e :UE 840 ]
+}
+"92
+[; ;webserver/tcpip.c: 92: _Bool tcpip_serverTCPIPBegin(uint16_t port) {
+[v _tcpip_serverTCPIPBegin `(a ~T0 @X0 1 ef1`us ]
+{
+[e :U _tcpip_serverTCPIPBegin ]
+[v _port `us ~T0 @X0 1 r1 ]
+[f ]
+"93
+[; ;webserver/tcpip.c: 93:     if (port==80 || port==333) {
+[e $ ! || == -> _port `ui -> -> 80 `i `ui == -> _port `ui -> -> 333 `i `ui 844  ]
+{
+"94
+[; ;webserver/tcpip.c: 94:         printf("AT+CIPSERVER=1,%d\r\n", port);
+[e ( _printf , (. :s 3C -> _port `ui ]
+"95
+[; ;webserver/tcpip.c: 95:         if( esp_waitForOK() ) {
+[e $ ! != -> ( _esp_waitForOK ..  `i -> 0 `i 845  ]
+{
+"96
+[; ;webserver/tcpip.c: 96:             return 1;
+[e ) -> -> 1 `i `a ]
+[e $UE 843  ]
+"97
+[; ;webserver/tcpip.c: 97:         } else {
+}
+[e $U 846  ]
+[e :U 845 ]
+{
+"98
+[; ;webserver/tcpip.c: 98:             return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 843  ]
+"99
+[; ;webserver/tcpip.c: 99:         }
+}
+[e :U 846 ]
+"100
+[; ;webserver/tcpip.c: 100:     } else {
+}
+[e $U 847  ]
+[e :U 844 ]
+{
+"101
+[; ;webserver/tcpip.c: 101:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 843  ]
+"102
+[; ;webserver/tcpip.c: 102:     }
+}
+[e :U 847 ]
+"103
+[; ;webserver/tcpip.c: 103: }
+[e :UE 843 ]
+}
+"106
+[; ;webserver/tcpip.c: 106: void tcpip_serverTCPIPStop(void) {
+[v _tcpip_serverTCPIPStop `(v ~T0 @X0 1 ef ]
+{
+[e :U _tcpip_serverTCPIPStop ]
+[f ]
+"107
+[; ;webserver/tcpip.c: 107:     printf("AT+CIPSERVER=0\r\n");
+[e ( _printf :s 4C ]
+"108
+[; ;webserver/tcpip.c: 108:     esp_waitForOK();
+[e ( _esp_waitForOK ..  ]
+"109
+[; ;webserver/tcpip.c: 109: }
+[e :UE 848 ]
+}
+"140
+[; ;webserver/tcpip.c: 140: void tcpip_setConnectionType(uint8_t multibleConnections) {
+[v _tcpip_setConnectionType `(v ~T0 @X0 1 ef1`uc ]
+{
+[e :U _tcpip_setConnectionType ]
+[v _multibleConnections `uc ~T0 @X0 1 r1 ]
+[f ]
+"141
+[; ;webserver/tcpip.c: 141:     server.multibleConnections = multibleConnections;
+[e = . _server 2 -> _multibleConnections `a ]
+"143
+[; ;webserver/tcpip.c: 143:     printf("AT+CIPMUX=%d\r\n", multibleConnections);
+[e ( _printf , (. :s 5C -> _multibleConnections `i ]
+"144
+[; ;webserver/tcpip.c: 144:     do { esp_waitForOK(); } while( server.busy );
+[e :U 852 ]
+{
+[e ( _esp_waitForOK ..  ]
+}
+[e $ != -> . _server 0 `i -> 0 `i 852  ]
+[e :U 851 ]
+"145
+[; ;webserver/tcpip.c: 145: }
+[e :UE 849 ]
+}
+"173
+[; ;webserver/tcpip.c: 173: _Bool tcpip_setMaxConnections(uint8_t conn) {
+[v _tcpip_setMaxConnections `(a ~T0 @X0 1 ef1`uc ]
+{
+[e :U _tcpip_setMaxConnections ]
+[v _conn `uc ~T0 @X0 1 r1 ]
+[f ]
+"174
+[; ;webserver/tcpip.c: 174:     if (conn>=1 && conn <=5 ) {
+[e $ ! && >= -> _conn `i -> 1 `i <= -> _conn `i -> 5 `i 854  ]
+{
+"175
+[; ;webserver/tcpip.c: 175:         printf("AT+CIPSERVERMAXCONN=%d\r\n", conn);
+[e ( _printf , (. :s 6C -> _conn `i ]
+"176
+[; ;webserver/tcpip.c: 176:         if( esp_waitForOK() )
+[e $ ! != -> ( _esp_waitForOK ..  `i -> 0 `i 855  ]
+"177
+[; ;webserver/tcpip.c: 177:             return 1;
+[e ) -> -> 1 `i `a ]
+[e $UE 853  ]
+[e $U 856  ]
+"178
+[; ;webserver/tcpip.c: 178:         else
+[e :U 855 ]
+"179
+[; ;webserver/tcpip.c: 179:             return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 853  ]
+[e :U 856 ]
+"180
+[; ;webserver/tcpip.c: 180:     } else {
+}
+[e $U 857  ]
+[e :U 854 ]
+{
+"181
+[; ;webserver/tcpip.c: 181:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 853  ]
+"182
+[; ;webserver/tcpip.c: 182:     }
+}
+[e :U 857 ]
+"183
+[; ;webserver/tcpip.c: 183: }
+[e :UE 853 ]
+}
+"203
+[; ;webserver/tcpip.c: 203: uint8_t dataLengthCon1 = 0;
+[v _dataLengthCon1 `uc ~T0 @X0 1 e ]
+[i _dataLengthCon1
+-> -> 0 `i `uc
+]
+"204
+[; ;webserver/tcpip.c: 204: uint8_t dataLengthCon2 = 0;
+[v _dataLengthCon2 `uc ~T0 @X0 1 e ]
+[i _dataLengthCon2
+-> -> 0 `i `uc
+]
+"205
+[; ;webserver/tcpip.c: 205: uint8_t dataLengthCon3 = 0;
+[v _dataLengthCon3 `uc ~T0 @X0 1 e ]
+[i _dataLengthCon3
+-> -> 0 `i `uc
+]
+"206
+[; ;webserver/tcpip.c: 206: uint8_t dataLengthCon4 = 0;
+[v _dataLengthCon4 `uc ~T0 @X0 1 e ]
+[i _dataLengthCon4
+-> -> 0 `i `uc
+]
+"207
+[; ;webserver/tcpip.c: 207: uint8_t dataLengthCon5 = 0;
+[v _dataLengthCon5 `uc ~T0 @X0 1 e ]
+[i _dataLengthCon5
+-> -> 0 `i `uc
+]
+"209
+[; ;webserver/tcpip.c: 209: void tcpip_getDataLength(void) {
+[v _tcpip_getDataLength `(v ~T0 @X0 1 ef ]
+{
+[e :U _tcpip_getDataLength ]
+[f ]
+"212
+[; ;webserver/tcpip.c: 212:     printf("AT+CIPRECVLEN?\r\n");
+[e ( _printf :s 7C ]
+"214
+[; ;webserver/tcpip.c: 214: }
+[e :UE 858 ]
+}
+"243
+[; ;webserver/tcpip.c: 243: void tcpip_closeTCPIPMode(void) {
+[v _tcpip_closeTCPIPMode `(v ~T0 @X0 1 ef ]
+{
+[e :U _tcpip_closeTCPIPMode ]
+[f ]
+"245
+[; ;webserver/tcpip.c: 245: }
+[e :UE 859 ]
+}
+"265
+[; ;webserver/tcpip.c: 265: void tcpip_closeTCPIPConnection(void) {
+[v _tcpip_closeTCPIPConnection `(v ~T0 @X0 1 ef ]
+{
+[e :U _tcpip_closeTCPIPConnection ]
+[f ]
+"266
+[; ;webserver/tcpip.c: 266: }
+[e :UE 860 ]
+}
+"301
+[; ;webserver/tcpip.c: 301: void tcpip_setTCPReceiveMode(uint8_t mode) {
+[v _tcpip_setTCPReceiveMode `(v ~T0 @X0 1 ef1`uc ]
+{
+[e :U _tcpip_setTCPReceiveMode ]
+[v _mode `uc ~T0 @X0 1 r1 ]
+[f ]
+"302
+[; ;webserver/tcpip.c: 302:     if(mode == 0 || mode == 1) {
+[e $ ! || == -> _mode `i -> 0 `i == -> _mode `i -> 1 `i 862  ]
+{
+"303
+[; ;webserver/tcpip.c: 303:         printf("AT+CIPRECVMODE=%d\r\n", mode);
+[e ( _printf , (. :s 8C -> _mode `i ]
+"304
+[; ;webserver/tcpip.c: 304:     }
+}
+[e :U 862 ]
+"305
+[; ;webserver/tcpip.c: 305:     do { esp_waitForOK(); }while( server.busy );
+[e :U 865 ]
+{
+[e ( _esp_waitForOK ..  ]
+}
+[e $ != -> . _server 0 `i -> 0 `i 865  ]
+[e :U 864 ]
+"306
+[; ;webserver/tcpip.c: 306: }
+[e :UE 861 ]
+}
+"339
+[; ;webserver/tcpip.c: 339: void tcpip_PassiveReceive(void) {
+[v _tcpip_PassiveReceive `(v ~T0 @X0 1 ef ]
+{
+[e :U _tcpip_PassiveReceive ]
+[f ]
+"341
+[; ;webserver/tcpip.c: 341:     char buffer[64];
+[v _buffer `uc ~T0 @X0 -> 64 `i a ]
+"342
+[; ;webserver/tcpip.c: 342:     uint16_t count = 0;
+[v _count `us ~T0 @X0 1 a ]
+[e = _count -> -> 0 `i `us ]
+"343
+[; ;webserver/tcpip.c: 343:     uint16_t bufferSize = 0;
+[v _bufferSize `us ~T0 @X0 1 a ]
+[e = _bufferSize -> -> 0 `i `us ]
+"344
+[; ;webserver/tcpip.c: 344:     uint16_t actualSize = 0;
+[v _actualSize `us ~T0 @X0 1 a ]
+[e = _actualSize -> -> 0 `i `us ]
+"345
+[; ;webserver/tcpip.c: 345:     uint8_t line[80];
+[v _line `uc ~T0 @X0 -> 80 `i a ]
+"354
+[; ;webserver/tcpip.c: 354:     if(server.clientConnected){
+[e $ ! != -> . _server 13 `i -> 0 `i 867  ]
+{
+"356
+[; ;webserver/tcpip.c: 356:         printf("AT+CIPRECVDATA=64\r\n");
+[e ( _printf :s 9C ]
+"358
+[; ;webserver/tcpip.c: 358:         do {
+[e :U 870 ]
+{
+"359
+[; ;webserver/tcpip.c: 359:             uint8_t index = 0;
+[v _index `uc ~T0 @X0 1 a ]
+[e = _index -> -> 0 `i `uc ]
+"361
+[; ;webserver/tcpip.c: 361:             while(index <= 64) {
+[e $U 871  ]
+[e :U 872 ]
+{
+"362
+[; ;webserver/tcpip.c: 362:                 if(count <= actualSize)
+[e $ ! <= -> _count `ui -> _actualSize `ui 874  ]
+"363
+[; ;webserver/tcpip.c: 363:                     break;
+[e $U 873  ]
+[e :U 874 ]
+"366
+[; ;webserver/tcpip.c: 366:                 if (EUSART1_is_rx_ready()) {
+[e $ ! != -> ( _EUSART1_is_rx_ready ..  `i -> 0 `i 875  ]
+{
+"367
+[; ;webserver/tcpip.c: 367:                     char tmp = EUSART1_Read();
+[v _tmp `uc ~T0 @X0 1 a ]
+[e = _tmp -> ( _EUSART1_Read ..  `uc ]
+"368
+[; ;webserver/tcpip.c: 368:                     EUSART1_Write(tmp);
+[e ( _EUSART1_Write (1 -> _tmp `uc ]
+"370
+[; ;webserver/tcpip.c: 370:                     if ((0 ? isprint(tmp) : ((unsigned)(tmp)-0x20) < 0x5f)) {
+[e $ ! != ? != -> 0 `i -> 0 `i : ( _isprint (1 -> _tmp `i -> < - -> _tmp `ui -> -> 32 `i `ui -> -> 95 `i `ui `i -> 0 `i 876  ]
+{
+"371
+[; ;webserver/tcpip.c: 371:                         buffer[index] = tmp;
+[e = *U + &U _buffer * -> _index `ux -> -> # *U &U _buffer `ui `ux _tmp ]
+"372
+[; ;webserver/tcpip.c: 372:                         index++;
+[e ++ _index -> -> 1 `i `uc ]
+"373
+[; ;webserver/tcpip.c: 373:                         buffer[index] = 0x00;
+[e = *U + &U _buffer * -> _index `ux -> -> # *U &U _buffer `ui `ux -> -> 0 `i `uc ]
+"374
+[; ;webserver/tcpip.c: 374:                         if (index >= sizeof(actualSize)) {
+[e $ ! >= -> _index `ui -> # _actualSize `ui 877  ]
+{
+"375
+[; ;webserver/tcpip.c: 375:                             index--;
+[e -- _index -> -> 1 `i `uc ]
+"376
+[; ;webserver/tcpip.c: 376:                         }
+}
+[e :U 877 ]
+"377
+[; ;webserver/tcpip.c: 377:                     }
+}
+[e :U 876 ]
+"379
+[; ;webserver/tcpip.c: 379:                     if (tmp == '\n' || tmp == '\r') {
+[e $ ! || == -> _tmp `ui -> 10 `ui == -> _tmp `ui -> 13 `ui 878  ]
+{
+"380
+[; ;webserver/tcpip.c: 380:                         index = 0;
+[e = _index -> -> 0 `i `uc ]
+"384
+[; ;webserver/tcpip.c: 384:                     }
+}
+[e :U 878 ]
+"385
+[; ;webserver/tcpip.c: 385:                 }
+}
+[e :U 875 ]
+"386
+[; ;webserver/tcpip.c: 386:                 index++;
+[e ++ _index -> -> 1 `i `uc ]
+"387
+[; ;webserver/tcpip.c: 387:                 count++;
+[e ++ _count -> -> 1 `i `us ]
+"388
+[; ;webserver/tcpip.c: 388:             }
+}
+[e :U 871 ]
+"361
+[; ;webserver/tcpip.c: 361:             while(index <= 64) {
+[e $ <= -> _index `i -> 64 `i 872  ]
+[e :U 873 ]
+"389
+[; ;webserver/tcpip.c: 389:         } while (count <= actualSize);
+}
+[e $ <= -> _count `ui -> _actualSize `ui 870  ]
+[e :U 869 ]
+"391
+[; ;webserver/tcpip.c: 391:     } else if ( server.multibleConnections ) {
+}
+[e $U 879  ]
+[e :U 867 ]
+[e $ ! != -> . _server 2 `i -> 0 `i 880  ]
+{
+"392
+[; ;webserver/tcpip.c: 392:         for(uint8_t clients = 1; clients<=5; clients++) {
+{
+[v _clients `uc ~T0 @X0 1 a ]
+[e = _clients -> -> 1 `i `uc ]
+[e $ <= -> _clients `i -> 5 `i 881  ]
+[e $U 882  ]
+[e :U 881 ]
+{
+"394
+[; ;webserver/tcpip.c: 394:         }
+}
+[e ++ _clients -> -> 1 `i `uc ]
+[e $ <= -> _clients `i -> 5 `i 881  ]
+[e :U 882 ]
+}
+"395
+[; ;webserver/tcpip.c: 395:     } else {
+}
+[e $U 884  ]
+[e :U 880 ]
+{
+[v F6586 `uc ~T0 @X0 -> 39 `i s ]
+[i F6586
+:U ..
+"396
+[; ;webserver/tcpip.c: 396:         char msg[] = "Kunne ikke hente data fra ESP buffer\r\n";
+-> 75 `c
 -> 117 `c
--> 115 `c
+-> 110 `c
+-> 110 `c
 -> 101 `c
--> 114 `c
--> 45 `c
--> 115 `c
--> 101 `c
--> 108 `c
--> 101 `c
--> 99 `c
--> 116 `c
--> 58 `c
 -> 32 `c
--> 110 `c
--> 111 `c
--> 110 `c
--> 101 `c
--> 59 `c
--> 45 `c
--> 119 `c
--> 101 `c
--> 98 `c
+-> 105 `c
 -> 107 `c
--> 105 `c
--> 116 `c
--> 45 `c
--> 117 `c
--> 115 `c
--> 101 `c
--> 114 `c
--> 45 `c
--> 115 `c
--> 101 `c
--> 108 `c
--> 101 `c
--> 99 `c
--> 116 `c
--> 58 `c
--> 32 `c
--> 110 `c
--> 111 `c
--> 110 `c
--> 101 `c
--> 59 `c
--> 45 `c
--> 109 `c
--> 115 `c
--> 45 `c
--> 117 `c
--> 115 `c
--> 101 `c
--> 114 `c
--> 45 `c
--> 115 `c
--> 101 `c
--> 108 `c
--> 101 `c
--> 99 `c
--> 116 `c
--> 58 `c
--> 32 `c
--> 110 `c
--> 111 `c
--> 110 `c
--> 101 `c
--> 59 `c
--> 125 `c
--> 60 `c
--> 47 `c
--> 115 `c
--> 116 `c
--> 121 `c
--> 108 `c
--> 101 `c
--> 62 `c
--> 0 `c
-..
-]
-"34
-[; ;eeprom/eeprom.h: 34: const char eeprom_scriptTemplate[] = "<script src='/node_modules/chart.js/dist/Chart.bundle.js'></script><script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script>var data=[],labels=[],	temperature=[], humidity=[];$.get('GetTestData.php', function(dataGet) {data=JSON.parse(dataGet);data['labels'].forEach(function(singleResult){labels.push(singleResult);});data['temperature'].forEach(function(singleResult){temperature.push(singleResult);});data['humidity'].forEach(function(singleResult){humidity.push(singleResult);});var ctx=document.getElementById('canvas').getContext('2d');window.myLine=new Chart(ctx,config);});var randomScalingFactor=function(){ return Math.round(Math.random()*100); };var randomColorFactor=function(){ return Math.round(Math.random()*255); };var randomColor=function(opacity){return'rgba('+randomColorFactor()+','+randomColorFactor()+','+randomColorFactor()+','+(opacity||'.9')+')'; };varconfig={type:'line',data:{labels:labels,datasets:[{ label:'Temperatur',data:temperature,fill:false },{ data:humidity,fill:false}]},options:{responsive:true,title:{display:true,text:'Temperatur og Luftfugtighed'},tooltips:{mode:'label'},hover:{mode:'dataset'},scales:{xAxes:[{display:true,scaleLabel:{display:true,labelString:'Dato'}}],yAxes:[{display:true,scaleLabel:{display:true,labelString:'V&aelig;rdi'},ticks:{suggestedMin:-20,suggestedMax:250,}}],}}};$.each(config.data.datasets,function(i,dataset){dataset.borderColor=randomColor(1.0);dataset.borderColor=randomColor(1.0);dataset.pointBorderColor=randomColor(1.0);dataset.pointBackgroundColor=randomColor(1.0);dataset.pointBorderWidth=1;});window.onload=function(){var ctx=document.getElementById('canvas').getContext('2d');window.myLine=new Chart(ctx,config);};</script>";
-[v _eeprom_scriptTemplate `Cuc ~T0 @X0 -> 1745 `i e ]
-[i _eeprom_scriptTemplate
-:U ..
--> 60 `c
--> 115 `c
--> 99 `c
--> 114 `c
--> 105 `c
--> 112 `c
--> 116 `c
--> 32 `c
--> 115 `c
--> 114 `c
--> 99 `c
--> 61 `c
--> 39 `c
--> 47 `c
--> 110 `c
--> 111 `c
--> 100 `c
--> 101 `c
--> 95 `c
--> 109 `c
--> 111 `c
--> 100 `c
--> 117 `c
--> 108 `c
--> 101 `c
--> 115 `c
--> 47 `c
--> 99 `c
--> 104 `c
--> 97 `c
--> 114 `c
--> 116 `c
--> 46 `c
--> 106 `c
--> 115 `c
--> 47 `c
--> 100 `c
--> 105 `c
--> 115 `c
--> 116 `c
--> 47 `c
--> 67 `c
--> 104 `c
--> 97 `c
--> 114 `c
--> 116 `c
--> 46 `c
--> 98 `c
--> 117 `c
--> 110 `c
--> 100 `c
--> 108 `c
--> 101 `c
--> 46 `c
--> 106 `c
--> 115 `c
--> 39 `c
--> 62 `c
--> 60 `c
--> 47 `c
--> 115 `c
--> 99 `c
--> 114 `c
--> 105 `c
--> 112 `c
--> 116 `c
--> 62 `c
--> 60 `c
--> 115 `c
--> 99 `c
--> 114 `c
--> 105 `c
--> 112 `c
--> 116 `c
--> 32 `c
--> 115 `c
--> 114 `c
--> 99 `c
--> 61 `c
--> 39 `c
--> 104 `c
--> 116 `c
--> 116 `c
--> 112 `c
--> 58 `c
--> 47 `c
--> 47 `c
--> 99 `c
--> 100 `c
--> 110 `c
--> 106 `c
--> 115 `c
--> 46 `c
--> 99 `c
--> 108 `c
--> 111 `c
--> 117 `c
--> 100 `c
--> 102 `c
--> 108 `c
--> 97 `c
--> 114 `c
--> 101 `c
--> 46 `c
--> 99 `c
--> 111 `c
--> 109 `c
--> 47 `c
--> 97 `c
--> 106 `c
--> 97 `c
--> 120 `c
--> 47 `c
--> 108 `c
--> 105 `c
--> 98 `c
--> 115 `c
--> 47 `c
--> 106 `c
--> 113 `c
--> 117 `c
--> 101 `c
--> 114 `c
--> 121 `c
--> 47 `c
--> 50 `c
--> 46 `c
--> 49 `c
--> 46 `c
--> 51 `c
--> 47 `c
--> 106 `c
--> 113 `c
--> 117 `c
--> 101 `c
--> 114 `c
--> 121 `c
--> 46 `c
--> 109 `c
--> 105 `c
--> 110 `c
--> 46 `c
--> 106 `c
--> 115 `c
--> 39 `c
--> 62 `c
--> 60 `c
--> 47 `c
--> 115 `c
--> 99 `c
--> 114 `c
--> 105 `c
--> 112 `c
--> 116 `c
--> 62 `c
--> 60 `c
--> 115 `c
--> 99 `c
--> 114 `c
--> 105 `c
--> 112 `c
--> 116 `c
--> 62 `c
--> 118 `c
--> 97 `c
--> 114 `c
--> 32 `c
--> 100 `c
--> 97 `c
--> 116 `c
--> 97 `c
--> 61 `c
--> 91 `c
--> 93 `c
--> 44 `c
--> 108 `c
--> 97 `c
--> 98 `c
--> 101 `c
--> 108 `c
--> 115 `c
--> 61 `c
--> 91 `c
--> 93 `c
--> 44 `c
--> 9 `c
--> 116 `c
--> 101 `c
--> 109 `c
--> 112 `c
--> 101 `c
--> 114 `c
--> 97 `c
--> 116 `c
--> 117 `c
--> 114 `c
--> 101 `c
--> 61 `c
--> 91 `c
--> 93 `c
--> 44 `c
--> 32 `c
--> 104 `c
--> 117 `c
--> 109 `c
--> 105 `c
--> 100 `c
--> 105 `c
--> 116 `c
--> 121 `c
--> 61 `c
--> 91 `c
--> 93 `c
--> 59 `c
--> 36 `c
--> 46 `c
--> 103 `c
--> 101 `c
--> 116 `c
--> 40 `c
--> 39 `c
--> 71 `c
--> 101 `c
--> 116 `c
--> 84 `c
--> 101 `c
--> 115 `c
--> 116 `c
--> 68 `c
--> 97 `c
--> 116 `c
--> 97 `c
--> 46 `c
--> 112 `c
--> 104 `c
--> 112 `c
--> 39 `c
--> 44 `c
--> 32 `c
--> 102 `c
--> 117 `c
--> 110 `c
--> 99 `c
--> 116 `c
--> 105 `c
--> 111 `c
--> 110 `c
--> 40 `c
--> 100 `c
--> 97 `c
--> 116 `c
--> 97 `c
--> 71 `c
--> 101 `c
--> 116 `c
--> 41 `c
--> 32 `c
--> 123 `c
--> 100 `c
--> 97 `c
--> 116 `c
--> 97 `c
--> 61 `c
--> 74 `c
--> 83 `c
--> 79 `c
--> 78 `c
--> 46 `c
--> 112 `c
--> 97 `c
--> 114 `c
--> 115 `c
--> 101 `c
--> 40 `c
--> 100 `c
--> 97 `c
--> 116 `c
--> 97 `c
--> 71 `c
--> 101 `c
--> 116 `c
--> 41 `c
--> 59 `c
--> 100 `c
--> 97 `c
--> 116 `c
--> 97 `c
--> 91 `c
--> 39 `c
--> 108 `c
--> 97 `c
--> 98 `c
--> 101 `c
--> 108 `c
--> 115 `c
--> 39 `c
--> 93 `c
--> 46 `c
--> 102 `c
--> 111 `c
--> 114 `c
--> 69 `c
--> 97 `c
--> 99 `c
--> 104 `c
--> 40 `c
--> 102 `c
--> 117 `c
--> 110 `c
--> 99 `c
--> 116 `c
--> 105 `c
--> 111 `c
--> 110 `c
--> 40 `c
--> 115 `c
--> 105 `c
--> 110 `c
--> 103 `c
--> 108 `c
--> 101 `c
--> 82 `c
--> 101 `c
--> 115 `c
--> 117 `c
--> 108 `c
--> 116 `c
--> 41 `c
--> 123 `c
--> 108 `c
--> 97 `c
--> 98 `c
--> 101 `c
--> 108 `c
--> 115 `c
--> 46 `c
--> 112 `c
--> 117 `c
--> 115 `c
--> 104 `c
--> 40 `c
--> 115 `c
--> 105 `c
--> 110 `c
--> 103 `c
--> 108 `c
--> 101 `c
--> 82 `c
--> 101 `c
--> 115 `c
--> 117 `c
--> 108 `c
--> 116 `c
--> 41 `c
--> 59 `c
--> 125 `c
--> 41 `c
--> 59 `c
--> 100 `c
--> 97 `c
--> 116 `c
--> 97 `c
--> 91 `c
--> 39 `c
--> 116 `c
--> 101 `c
--> 109 `c
--> 112 `c
--> 101 `c
--> 114 `c
--> 97 `c
--> 116 `c
--> 117 `c
--> 114 `c
--> 101 `c
--> 39 `c
--> 93 `c
--> 46 `c
--> 102 `c
--> 111 `c
--> 114 `c
--> 69 `c
--> 97 `c
--> 99 `c
--> 104 `c
--> 40 `c
--> 102 `c
--> 117 `c
--> 110 `c
--> 99 `c
--> 116 `c
--> 105 `c
--> 111 `c
--> 110 `c
--> 40 `c
--> 115 `c
--> 105 `c
--> 110 `c
--> 103 `c
--> 108 `c
--> 101 `c
--> 82 `c
--> 101 `c
--> 115 `c
--> 117 `c
--> 108 `c
--> 116 `c
--> 41 `c
--> 123 `c
--> 116 `c
--> 101 `c
--> 109 `c
--> 112 `c
--> 101 `c
--> 114 `c
--> 97 `c
--> 116 `c
--> 117 `c
--> 114 `c
--> 101 `c
--> 46 `c
--> 112 `c
--> 117 `c
--> 115 `c
--> 104 `c
--> 40 `c
--> 115 `c
--> 105 `c
--> 110 `c
--> 103 `c
--> 108 `c
--> 101 `c
--> 82 `c
--> 101 `c
--> 115 `c
--> 117 `c
--> 108 `c
--> 116 `c
--> 41 `c
--> 59 `c
--> 125 `c
--> 41 `c
--> 59 `c
--> 100 `c
--> 97 `c
--> 116 `c
--> 97 `c
--> 91 `c
--> 39 `c
--> 104 `c
--> 117 `c
--> 109 `c
--> 105 `c
--> 100 `c
--> 105 `c
--> 116 `c
--> 121 `c
--> 39 `c
--> 93 `c
--> 46 `c
--> 102 `c
--> 111 `c
--> 114 `c
--> 69 `c
--> 97 `c
--> 99 `c
--> 104 `c
--> 40 `c
--> 102 `c
--> 117 `c
--> 110 `c
--> 99 `c
--> 116 `c
--> 105 `c
--> 111 `c
--> 110 `c
--> 40 `c
--> 115 `c
--> 105 `c
--> 110 `c
--> 103 `c
--> 108 `c
--> 101 `c
--> 82 `c
--> 101 `c
--> 115 `c
--> 117 `c
--> 108 `c
--> 116 `c
--> 41 `c
--> 123 `c
--> 104 `c
--> 117 `c
--> 109 `c
--> 105 `c
--> 100 `c
--> 105 `c
--> 116 `c
--> 121 `c
--> 46 `c
--> 112 `c
--> 117 `c
--> 115 `c
--> 104 `c
--> 40 `c
--> 115 `c
--> 105 `c
--> 110 `c
--> 103 `c
--> 108 `c
--> 101 `c
--> 82 `c
--> 101 `c
--> 115 `c
--> 117 `c
--> 108 `c
--> 116 `c
--> 41 `c
--> 59 `c
--> 125 `c
--> 41 `c
--> 59 `c
--> 118 `c
--> 97 `c
--> 114 `c
--> 32 `c
--> 99 `c
--> 116 `c
--> 120 `c
--> 61 `c
--> 100 `c
--> 111 `c
--> 99 `c
--> 117 `c
--> 109 `c
--> 101 `c
--> 110 `c
--> 116 `c
--> 46 `c
--> 103 `c
--> 101 `c
--> 116 `c
--> 69 `c
--> 108 `c
--> 101 `c
--> 109 `c
--> 101 `c
--> 110 `c
--> 116 `c
--> 66 `c
--> 121 `c
--> 73 `c
--> 100 `c
--> 40 `c
--> 39 `c
--> 99 `c
--> 97 `c
--> 110 `c
--> 118 `c
--> 97 `c
--> 115 `c
--> 39 `c
--> 41 `c
--> 46 `c
--> 103 `c
--> 101 `c
--> 116 `c
--> 67 `c
--> 111 `c
--> 110 `c
--> 116 `c
--> 101 `c
--> 120 `c
--> 116 `c
--> 40 `c
--> 39 `c
--> 50 `c
--> 100 `c
--> 39 `c
--> 41 `c
--> 59 `c
--> 119 `c
--> 105 `c
--> 110 `c
--> 100 `c
--> 111 `c
--> 119 `c
--> 46 `c
--> 109 `c
--> 121 `c
--> 76 `c
--> 105 `c
--> 110 `c
--> 101 `c
--> 61 `c
--> 110 `c
--> 101 `c
--> 119 `c
--> 32 `c
--> 67 `c
--> 104 `c
--> 97 `c
--> 114 `c
--> 116 `c
--> 40 `c
--> 99 `c
--> 116 `c
--> 120 `c
--> 44 `c
--> 99 `c
--> 111 `c
--> 110 `c
--> 102 `c
--> 105 `c
--> 103 `c
--> 41 `c
--> 59 `c
--> 125 `c
--> 41 `c
--> 59 `c
--> 118 `c
--> 97 `c
--> 114 `c
--> 32 `c
--> 114 `c
--> 97 `c
--> 110 `c
--> 100 `c
--> 111 `c
--> 109 `c
--> 83 `c
--> 99 `c
--> 97 `c
--> 108 `c
--> 105 `c
--> 110 `c
--> 103 `c
--> 70 `c
--> 97 `c
--> 99 `c
--> 116 `c
--> 111 `c
--> 114 `c
--> 61 `c
--> 102 `c
--> 117 `c
--> 110 `c
--> 99 `c
--> 116 `c
--> 105 `c
--> 111 `c
--> 110 `c
--> 40 `c
--> 41 `c
--> 123 `c
--> 32 `c
--> 114 `c
--> 101 `c
--> 116 `c
--> 117 `c
--> 114 `c
--> 110 `c
--> 32 `c
--> 77 `c
--> 97 `c
--> 116 `c
--> 104 `c
--> 46 `c
--> 114 `c
--> 111 `c
--> 117 `c
--> 110 `c
--> 100 `c
--> 40 `c
--> 77 `c
--> 97 `c
--> 116 `c
--> 104 `c
--> 46 `c
--> 114 `c
--> 97 `c
--> 110 `c
--> 100 `c
--> 111 `c
--> 109 `c
--> 40 `c
--> 41 `c
--> 42 `c
--> 49 `c
--> 48 `c
--> 48 `c
--> 41 `c
--> 59 `c
--> 32 `c
--> 125 `c
--> 59 `c
--> 118 `c
--> 97 `c
--> 114 `c
--> 32 `c
--> 114 `c
--> 97 `c
--> 110 `c
--> 100 `c
--> 111 `c
--> 109 `c
--> 67 `c
--> 111 `c
--> 108 `c
--> 111 `c
--> 114 `c
--> 70 `c
--> 97 `c
--> 99 `c
--> 116 `c
--> 111 `c
--> 114 `c
--> 61 `c
--> 102 `c
--> 117 `c
--> 110 `c
--> 99 `c
--> 116 `c
--> 105 `c
--> 111 `c
--> 110 `c
--> 40 `c
--> 41 `c
--> 123 `c
--> 32 `c
--> 114 `c
--> 101 `c
--> 116 `c
--> 117 `c
--> 114 `c
--> 110 `c
--> 32 `c
--> 77 `c
--> 97 `c
--> 116 `c
--> 104 `c
--> 46 `c
--> 114 `c
--> 111 `c
--> 117 `c
--> 110 `c
--> 100 `c
--> 40 `c
--> 77 `c
--> 97 `c
--> 116 `c
--> 104 `c
--> 46 `c
--> 114 `c
--> 97 `c
--> 110 `c
--> 100 `c
--> 111 `c
--> 109 `c
--> 40 `c
--> 41 `c
--> 42 `c
--> 50 `c
--> 53 `c
--> 53 `c
--> 41 `c
--> 59 `c
--> 32 `c
--> 125 `c
--> 59 `c
--> 118 `c
--> 97 `c
--> 114 `c
--> 32 `c
--> 114 `c
--> 97 `c
--> 110 `c
--> 100 `c
--> 111 `c
--> 109 `c
--> 67 `c
--> 111 `c
--> 108 `c
--> 111 `c
--> 114 `c
--> 61 `c
--> 102 `c
--> 117 `c
--> 110 `c
--> 99 `c
--> 116 `c
--> 105 `c
--> 111 `c
--> 110 `c
--> 40 `c
--> 111 `c
--> 112 `c
--> 97 `c
--> 99 `c
--> 105 `c
--> 116 `c
--> 121 `c
--> 41 `c
--> 123 `c
--> 114 `c
--> 101 `c
--> 116 `c
--> 117 `c
--> 114 `c
--> 110 `c
--> 39 `c
--> 114 `c
--> 103 `c
--> 98 `c
--> 97 `c
--> 40 `c
--> 39 `c
--> 43 `c
--> 114 `c
--> 97 `c
--> 110 `c
--> 100 `c
--> 111 `c
--> 109 `c
--> 67 `c
--> 111 `c
--> 108 `c
--> 111 `c
--> 114 `c
--> 70 `c
--> 97 `c
--> 99 `c
--> 116 `c
--> 111 `c
--> 114 `c
--> 40 `c
--> 41 `c
--> 43 `c
--> 39 `c
--> 44 `c
--> 39 `c
--> 43 `c
--> 114 `c
--> 97 `c
--> 110 `c
--> 100 `c
--> 111 `c
--> 109 `c
--> 67 `c
--> 111 `c
--> 108 `c
--> 111 `c
--> 114 `c
--> 70 `c
--> 97 `c
--> 99 `c
--> 116 `c
--> 111 `c
--> 114 `c
--> 40 `c
--> 41 `c
--> 43 `c
--> 39 `c
--> 44 `c
--> 39 `c
--> 43 `c
--> 114 `c
--> 97 `c
--> 110 `c
--> 100 `c
--> 111 `c
--> 109 `c
--> 67 `c
--> 111 `c
--> 108 `c
--> 111 `c
--> 114 `c
--> 70 `c
--> 97 `c
--> 99 `c
--> 116 `c
--> 111 `c
--> 114 `c
--> 40 `c
--> 41 `c
--> 43 `c
--> 39 `c
--> 44 `c
--> 39 `c
--> 43 `c
--> 40 `c
--> 111 `c
--> 112 `c
--> 97 `c
--> 99 `c
--> 105 `c
--> 116 `c
--> 121 `c
--> 124 `c
--> 124 `c
--> 39 `c
--> 46 `c
--> 57 `c
--> 39 `c
--> 41 `c
--> 43 `c
--> 39 `c
--> 41 `c
--> 39 `c
--> 59 `c
--> 32 `c
--> 125 `c
--> 59 `c
--> 118 `c
--> 97 `c
--> 114 `c
--> 99 `c
--> 111 `c
--> 110 `c
--> 102 `c
--> 105 `c
--> 103 `c
--> 61 `c
--> 123 `c
--> 116 `c
--> 121 `c
--> 112 `c
--> 101 `c
--> 58 `c
--> 39 `c
--> 108 `c
--> 105 `c
--> 110 `c
--> 101 `c
--> 39 `c
--> 44 `c
--> 100 `c
--> 97 `c
--> 116 `c
--> 97 `c
--> 58 `c
--> 123 `c
--> 108 `c
--> 97 `c
--> 98 `c
--> 101 `c
--> 108 `c
--> 115 `c
--> 58 `c
--> 108 `c
--> 97 `c
--> 98 `c
--> 101 `c
--> 108 `c
--> 115 `c
--> 44 `c
--> 100 `c
--> 97 `c
--> 116 `c
--> 97 `c
--> 115 `c
--> 101 `c
--> 116 `c
--> 115 `c
--> 58 `c
--> 91 `c
--> 123 `c
--> 32 `c
--> 108 `c
--> 97 `c
--> 98 `c
--> 101 `c
--> 108 `c
--> 58 `c
--> 39 `c
--> 84 `c
--> 101 `c
--> 109 `c
--> 112 `c
--> 101 `c
--> 114 `c
--> 97 `c
--> 116 `c
--> 117 `c
--> 114 `c
--> 39 `c
--> 44 `c
--> 100 `c
--> 97 `c
--> 116 `c
--> 97 `c
--> 58 `c
--> 116 `c
--> 101 `c
--> 109 `c
--> 112 `c
--> 101 `c
--> 114 `c
--> 97 `c
--> 116 `c
--> 117 `c
--> 114 `c
--> 101 `c
--> 44 `c
--> 102 `c
--> 105 `c
--> 108 `c
--> 108 `c
--> 58 `c
--> 102 `c
--> 97 `c
--> 108 `c
--> 115 `c
--> 101 `c
--> 32 `c
--> 125 `c
--> 44 `c
--> 123 `c
--> 32 `c
--> 100 `c
--> 97 `c
--> 116 `c
--> 97 `c
--> 58 `c
--> 104 `c
--> 117 `c
--> 109 `c
--> 105 `c
--> 100 `c
--> 105 `c
--> 116 `c
--> 121 `c
--> 44 `c
--> 102 `c
--> 105 `c
--> 108 `c
--> 108 `c
--> 58 `c
--> 102 `c
--> 97 `c
--> 108 `c
--> 115 `c
--> 101 `c
--> 125 `c
--> 93 `c
--> 125 `c
--> 44 `c
--> 111 `c
--> 112 `c
--> 116 `c
--> 105 `c
--> 111 `c
--> 110 `c
--> 115 `c
--> 58 `c
--> 123 `c
--> 114 `c
--> 101 `c
--> 115 `c
--> 112 `c
--> 111 `c
--> 110 `c
--> 115 `c
--> 105 `c
--> 118 `c
--> 101 `c
--> 58 `c
--> 116 `c
--> 114 `c
--> 117 `c
--> 101 `c
--> 44 `c
--> 116 `c
--> 105 `c
--> 116 `c
--> 108 `c
--> 101 `c
--> 58 `c
--> 123 `c
--> 100 `c
--> 105 `c
--> 115 `c
--> 112 `c
--> 108 `c
--> 97 `c
--> 121 `c
--> 58 `c
--> 116 `c
--> 114 `c
--> 117 `c
--> 101 `c
--> 44 `c
--> 116 `c
--> 101 `c
--> 120 `c
--> 116 `c
--> 58 `c
--> 39 `c
--> 84 `c
--> 101 `c
--> 109 `c
--> 112 `c
--> 101 `c
--> 114 `c
--> 97 `c
--> 116 `c
--> 117 `c
--> 114 `c
--> 32 `c
--> 111 `c
--> 103 `c
--> 32 `c
--> 76 `c
--> 117 `c
--> 102 `c
--> 116 `c
--> 102 `c
--> 117 `c
--> 103 `c
--> 116 `c
--> 105 `c
--> 103 `c
--> 104 `c
--> 101 `c
--> 100 `c
--> 39 `c
--> 125 `c
--> 44 `c
--> 116 `c
--> 111 `c
--> 111 `c
--> 108 `c
--> 116 `c
--> 105 `c
--> 112 `c
--> 115 `c
--> 58 `c
--> 123 `c
--> 109 `c
--> 111 `c
--> 100 `c
--> 101 `c
--> 58 `c
--> 39 `c
--> 108 `c
--> 97 `c
--> 98 `c
--> 101 `c
--> 108 `c
--> 39 `c
--> 125 `c
--> 44 `c
--> 104 `c
--> 111 `c
--> 118 `c
--> 101 `c
--> 114 `c
--> 58 `c
--> 123 `c
--> 109 `c
--> 111 `c
--> 100 `c
--> 101 `c
--> 58 `c
--> 39 `c
--> 100 `c
--> 97 `c
--> 116 `c
--> 97 `c
--> 115 `c
--> 101 `c
--> 116 `c
--> 39 `c
--> 125 `c
--> 44 `c
--> 115 `c
--> 99 `c
--> 97 `c
--> 108 `c
--> 101 `c
--> 115 `c
--> 58 `c
--> 123 `c
--> 120 `c
--> 65 `c
--> 120 `c
--> 101 `c
--> 115 `c
--> 58 `c
--> 91 `c
--> 123 `c
--> 100 `c
--> 105 `c
--> 115 `c
--> 112 `c
--> 108 `c
--> 97 `c
--> 121 `c
--> 58 `c
--> 116 `c
--> 114 `c
--> 117 `c
--> 101 `c
--> 44 `c
--> 115 `c
--> 99 `c
--> 97 `c
--> 108 `c
--> 101 `c
--> 76 `c
--> 97 `c
--> 98 `c
--> 101 `c
--> 108 `c
--> 58 `c
--> 123 `c
--> 100 `c
--> 105 `c
--> 115 `c
--> 112 `c
--> 108 `c
--> 97 `c
--> 121 `c
--> 58 `c
--> 116 `c
--> 114 `c
--> 117 `c
--> 101 `c
--> 44 `c
--> 108 `c
--> 97 `c
--> 98 `c
--> 101 `c
--> 108 `c
--> 83 `c
--> 116 `c
--> 114 `c
--> 105 `c
--> 110 `c
--> 103 `c
--> 58 `c
--> 39 `c
--> 68 `c
--> 97 `c
--> 116 `c
--> 111 `c
--> 39 `c
--> 125 `c
--> 125 `c
--> 93 `c
--> 44 `c
--> 121 `c
--> 65 `c
--> 120 `c
--> 101 `c
--> 115 `c
--> 58 `c
--> 91 `c
--> 123 `c
--> 100 `c
--> 105 `c
--> 115 `c
--> 112 `c
--> 108 `c
--> 97 `c
--> 121 `c
--> 58 `c
--> 116 `c
--> 114 `c
--> 117 `c
--> 101 `c
--> 44 `c
--> 115 `c
--> 99 `c
--> 97 `c
--> 108 `c
--> 101 `c
--> 76 `c
--> 97 `c
--> 98 `c
--> 101 `c
--> 108 `c
--> 58 `c
--> 123 `c
--> 100 `c
--> 105 `c
--> 115 `c
--> 112 `c
--> 108 `c
--> 97 `c
--> 121 `c
--> 58 `c
--> 116 `c
--> 114 `c
--> 117 `c
--> 101 `c
--> 44 `c
--> 108 `c
--> 97 `c
--> 98 `c
--> 101 `c
--> 108 `c
--> 83 `c
--> 116 `c
--> 114 `c
--> 105 `c
--> 110 `c
--> 103 `c
--> 58 `c
--> 39 `c
--> 86 `c
--> 38 `c
--> 97 `c
--> 101 `c
--> 108 `c
--> 105 `c
--> 103 `c
--> 59 `c
--> 114 `c
--> 100 `c
--> 105 `c
--> 39 `c
--> 125 `c
--> 44 `c
--> 116 `c
--> 105 `c
--> 99 `c
 -> 107 `c
--> 115 `c
--> 58 `c
--> 123 `c
--> 115 `c
--> 117 `c
--> 103 `c
--> 103 `c
 -> 101 `c
--> 115 `c
--> 116 `c
--> 101 `c
--> 100 `c
--> 77 `c
--> 105 `c
--> 110 `c
--> 58 `c
--> 45 `c
--> 50 `c
--> 48 `c
--> 44 `c
--> 115 `c
--> 117 `c
--> 103 `c
--> 103 `c
--> 101 `c
--> 115 `c
--> 116 `c
--> 101 `c
--> 100 `c
--> 77 `c
--> 97 `c
--> 120 `c
--> 58 `c
--> 50 `c
--> 53 `c
--> 48 `c
--> 44 `c
--> 125 `c
--> 125 `c
--> 93 `c
--> 44 `c
--> 125 `c
--> 125 `c
--> 125 `c
--> 59 `c
--> 36 `c
--> 46 `c
--> 101 `c
--> 97 `c
--> 99 `c
--> 104 `c
--> 40 `c
--> 99 `c
--> 111 `c
--> 110 `c
--> 102 `c
--> 105 `c
--> 103 `c
--> 46 `c
--> 100 `c
--> 97 `c
--> 116 `c
--> 97 `c
--> 46 `c
--> 100 `c
--> 97 `c
--> 116 `c
--> 97 `c
--> 115 `c
--> 101 `c
--> 116 `c
--> 115 `c
--> 44 `c
--> 102 `c
--> 117 `c
--> 110 `c
--> 99 `c
--> 116 `c
--> 105 `c
--> 111 `c
--> 110 `c
--> 40 `c
--> 105 `c
--> 44 `c
--> 100 `c
--> 97 `c
--> 116 `c
--> 97 `c
--> 115 `c
--> 101 `c
--> 116 `c
--> 41 `c
--> 123 `c
--> 100 `c
--> 97 `c
--> 116 `c
--> 97 `c
--> 115 `c
--> 101 `c
--> 116 `c
--> 46 `c
--> 98 `c
--> 111 `c
--> 114 `c
--> 100 `c
--> 101 `c
--> 114 `c
--> 67 `c
--> 111 `c
--> 108 `c
--> 111 `c
--> 114 `c
--> 61 `c
--> 114 `c
--> 97 `c
--> 110 `c
--> 100 `c
--> 111 `c
--> 109 `c
--> 67 `c
--> 111 `c
--> 108 `c
--> 111 `c
--> 114 `c
--> 40 `c
--> 49 `c
--> 46 `c
--> 48 `c
--> 41 `c
--> 59 `c
--> 100 `c
--> 97 `c
--> 116 `c
--> 97 `c
--> 115 `c
--> 101 `c
--> 116 `c
--> 46 `c
--> 98 `c
--> 111 `c
--> 114 `c
--> 100 `c
--> 101 `c
--> 114 `c
--> 67 `c
--> 111 `c
--> 108 `c
--> 111 `c
--> 114 `c
--> 61 `c
--> 114 `c
--> 97 `c
--> 110 `c
--> 100 `c
--> 111 `c
--> 109 `c
--> 67 `c
--> 111 `c
--> 108 `c
--> 111 `c
--> 114 `c
--> 40 `c
--> 49 `c
--> 46 `c
--> 48 `c
--> 41 `c
--> 59 `c
--> 100 `c
--> 97 `c
--> 116 `c
--> 97 `c
--> 115 `c
--> 101 `c
--> 116 `c
--> 46 `c
--> 112 `c
--> 111 `c
--> 105 `c
--> 110 `c
--> 116 `c
--> 66 `c
--> 111 `c
--> 114 `c
--> 100 `c
--> 101 `c
--> 114 `c
--> 67 `c
--> 111 `c
--> 108 `c
--> 111 `c
--> 114 `c
--> 61 `c
--> 114 `c
--> 97 `c
--> 110 `c
--> 100 `c
--> 111 `c
--> 109 `c
--> 67 `c
--> 111 `c
--> 108 `c
--> 111 `c
--> 114 `c
--> 40 `c
--> 49 `c
--> 46 `c
--> 48 `c
--> 41 `c
--> 59 `c
--> 100 `c
--> 97 `c
--> 116 `c
--> 97 `c
--> 115 `c
--> 101 `c
--> 116 `c
--> 46 `c
--> 112 `c
--> 111 `c
--> 105 `c
--> 110 `c
--> 116 `c
--> 66 `c
--> 97 `c
--> 99 `c
--> 107 `c
--> 103 `c
--> 114 `c
--> 111 `c
--> 117 `c
--> 110 `c
--> 100 `c
--> 67 `c
--> 111 `c
--> 108 `c
--> 111 `c
--> 114 `c
--> 61 `c
--> 114 `c
--> 97 `c
--> 110 `c
--> 100 `c
--> 111 `c
--> 109 `c
--> 67 `c
--> 111 `c
--> 108 `c
--> 111 `c
--> 114 `c
--> 40 `c
--> 49 `c
--> 46 `c
--> 48 `c
--> 41 `c
--> 59 `c
--> 100 `c
--> 97 `c
--> 116 `c
--> 97 `c
--> 115 `c
--> 101 `c
--> 116 `c
--> 46 `c
--> 112 `c
--> 111 `c
--> 105 `c
--> 110 `c
--> 116 `c
--> 66 `c
--> 111 `c
--> 114 `c
--> 100 `c
--> 101 `c
--> 114 `c
--> 87 `c
--> 105 `c
--> 100 `c
--> 116 `c
--> 104 `c
--> 61 `c
--> 49 `c
--> 59 `c
--> 125 `c
--> 41 `c
--> 59 `c
--> 119 `c
--> 105 `c
--> 110 `c
--> 100 `c
--> 111 `c
--> 119 `c
--> 46 `c
--> 111 `c
--> 110 `c
--> 108 `c
--> 111 `c
--> 97 `c
--> 100 `c
--> 61 `c
--> 102 `c
--> 117 `c
--> 110 `c
--> 99 `c
--> 116 `c
--> 105 `c
--> 111 `c
--> 110 `c
--> 40 `c
--> 41 `c
--> 123 `c
--> 118 `c
--> 97 `c
--> 114 `c
 -> 32 `c
--> 99 `c
--> 116 `c
--> 120 `c
--> 61 `c
--> 100 `c
--> 111 `c
--> 99 `c
--> 117 `c
--> 109 `c
+-> 104 `c
 -> 101 `c
 -> 110 `c
 -> 116 `c
--> 46 `c
--> 103 `c
 -> 101 `c
+-> 32 `c
+-> 100 `c
+-> 97 `c
 -> 116 `c
+-> 97 `c
+-> 32 `c
+-> 102 `c
+-> 114 `c
+-> 97 `c
+-> 32 `c
 -> 69 `c
--> 108 `c
--> 101 `c
--> 109 `c
--> 101 `c
--> 110 `c
--> 116 `c
--> 66 `c
--> 121 `c
--> 73 `c
--> 100 `c
--> 40 `c
--> 39 `c
--> 99 `c
--> 97 `c
--> 110 `c
--> 118 `c
--> 97 `c
--> 115 `c
--> 39 `c
--> 41 `c
--> 46 `c
--> 103 `c
--> 101 `c
--> 116 `c
--> 67 `c
--> 111 `c
--> 110 `c
--> 116 `c
--> 101 `c
--> 120 `c
--> 116 `c
--> 40 `c
--> 39 `c
--> 50 `c
--> 100 `c
--> 39 `c
--> 41 `c
--> 59 `c
--> 119 `c
--> 105 `c
--> 110 `c
--> 100 `c
--> 111 `c
--> 119 `c
--> 46 `c
--> 109 `c
--> 121 `c
--> 76 `c
--> 105 `c
--> 110 `c
--> 101 `c
--> 61 `c
--> 110 `c
--> 101 `c
--> 119 `c
+-> 83 `c
+-> 80 `c
 -> 32 `c
--> 67 `c
--> 104 `c
--> 97 `c
--> 114 `c
--> 116 `c
--> 40 `c
--> 99 `c
--> 116 `c
--> 120 `c
--> 44 `c
--> 99 `c
--> 111 `c
--> 110 `c
--> 102 `c
--> 105 `c
--> 103 `c
--> 41 `c
--> 59 `c
--> 125 `c
--> 59 `c
--> 60 `c
--> 47 `c
--> 115 `c
--> 99 `c
--> 114 `c
--> 105 `c
--> 112 `c
--> 116 `c
--> 62 `c
--> 0 `c
-..
-]
-"35
-[; ;eeprom/eeprom.h: 35: const char eeprom_json[] = "";
-[v _eeprom_json `Cuc ~T0 @X0 -> -> 1 `i `ux e ]
-[i _eeprom_json
-:U ..
--> 0 `c
-..
-]
-"36
-[; ;eeprom/eeprom.h: 36: const char eeprom_template[] = "<p class=\"log_line\"><span class=\"temperature_text\">%2.2f</span><span class=\"moisture_text\">%d%</span></p>\n";
-[v _eeprom_template `Cuc ~T0 @X0 -> 107 `i e ]
-[i _eeprom_template
-:U ..
--> 60 `c
--> 112 `c
--> 32 `c
--> 99 `c
--> 108 `c
--> 97 `c
--> 115 `c
--> 115 `c
--> 61 `c
--> 34 `c
--> 108 `c
--> 111 `c
--> 103 `c
--> 95 `c
--> 108 `c
--> 105 `c
--> 110 `c
--> 101 `c
--> 34 `c
--> 62 `c
--> 60 `c
--> 115 `c
--> 112 `c
--> 97 `c
--> 110 `c
--> 32 `c
--> 99 `c
--> 108 `c
--> 97 `c
--> 115 `c
--> 115 `c
--> 61 `c
--> 34 `c
--> 116 `c
--> 101 `c
--> 109 `c
--> 112 `c
--> 101 `c
--> 114 `c
--> 97 `c
--> 116 `c
+-> 98 `c
 -> 117 `c
--> 114 `c
--> 101 `c
--> 95 `c
--> 116 `c
--> 101 `c
--> 120 `c
--> 116 `c
--> 34 `c
--> 62 `c
--> 37 `c
--> 50 `c
--> 46 `c
--> 50 `c
 -> 102 `c
--> 60 `c
--> 47 `c
--> 115 `c
--> 112 `c
--> 97 `c
--> 110 `c
--> 62 `c
--> 60 `c
--> 115 `c
--> 112 `c
--> 97 `c
--> 110 `c
--> 32 `c
--> 99 `c
--> 108 `c
--> 97 `c
--> 115 `c
--> 115 `c
--> 61 `c
--> 34 `c
--> 109 `c
--> 111 `c
--> 105 `c
--> 115 `c
--> 116 `c
--> 117 `c
+-> 102 `c
+-> 101 `c
 -> 114 `c
--> 101 `c
--> 95 `c
--> 116 `c
--> 101 `c
--> 120 `c
--> 116 `c
--> 34 `c
--> 62 `c
--> 37 `c
--> 100 `c
--> 37 `c
--> 60 `c
--> 47 `c
--> 115 `c
--> 112 `c
--> 97 `c
--> 110 `c
--> 62 `c
--> 60 `c
--> 47 `c
--> 112 `c
--> 62 `c
+-> 13 `c
 -> 10 `c
 -> 0 `c
 ..
 ]
-"18 eeprom/eeprom.c
-[; ;eeprom/eeprom.c: 18: void eeprom_testData(void) {
-[v _eeprom_testData `(v ~T0 @X0 1 ef ]
+[v _msg `uc ~T0 @X0 -> 39 `i a ]
+[e = _msg F6586 ]
+"398
+[; ;webserver/tcpip.c: 398:     }
+}
+[e :U 884 ]
+[e :U 879 ]
+"399
+[; ;webserver/tcpip.c: 399: }
+[e :UE 866 ]
+}
+"470
+[; ;webserver/tcpip.c: 470: void tcpip_showIPDRemoteIP(uint8_t mode) {
+[v _tcpip_showIPDRemoteIP `(v ~T0 @X0 1 ef1`uc ]
 {
-[e :U _eeprom_testData ]
+[e :U _tcpip_showIPDRemoteIP ]
+[v _mode `uc ~T0 @X0 1 r1 ]
 [f ]
-"19
-[; ;eeprom/eeprom.c: 19:     printf("\r\nSkriv tegn til EEPROM\r\n");
-[e ( _printf :s 1C ]
-"22
-[; ;eeprom/eeprom.c: 22:     i2c_write_serial(eeprom_addr, (char*) eeprom_test, 17);
-[e ( _i2c_write_serial (3 , , _eeprom_addr -> &U _eeprom_test `*uc -> -> 17 `i `uc ]
-"23
-[; ;eeprom/eeprom.c: 23:     printf("Skrivning faerdig\r\n");
-[e ( _printf :s 2C ]
-"25
-[; ;eeprom/eeprom.c: 25:     i2c_write_serial(eeprom_addr, (char*) eeprom_pointer, 2);
-[e ( _i2c_write_serial (3 , , _eeprom_addr -> &U _eeprom_pointer `*uc -> -> 2 `i `uc ]
-"26
-[; ;eeprom/eeprom.c: 26:     printf("Laes fra EEPRROM\r\n");
-[e ( _printf :s 3C ]
-"27
-[; ;eeprom/eeprom.c: 27:     _delay((unsigned long)((20)*(64000000/4000.0)));
-[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
-"29
-[; ;eeprom/eeprom.c: 29:     i2c_read_serial(eeprom_addr, (char*)eeprom_buffer, 15);
-[e ( _i2c_read_serial (3 , , _eeprom_addr &U _eeprom_buffer -> -> 15 `i `uc ]
-"30
-[; ;eeprom/eeprom.c: 30:     printf("Og print dem ud igen\r\n");
-[e ( _printf :s 4C ]
-"32
-[; ;eeprom/eeprom.c: 32:     for(uint8_t i=0; i < 15; i++) {
+"471
+[; ;webserver/tcpip.c: 471:     printf("AT+CIPDINFO=%d\r\n", mode);
+[e ( _printf , (. :s 10C -> _mode `i ]
+"472
+[; ;webserver/tcpip.c: 472:     do { esp_waitForOK(); } while( server.busy );
+[e :U 888 ]
 {
-[v _i `uc ~T0 @X0 1 a ]
-[e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> 15 `i 835  ]
-[e $U 836  ]
-[e :U 835 ]
+[e ( _esp_waitForOK ..  ]
+}
+[e $ != -> . _server 0 `i -> 0 `i 888  ]
+[e :U 887 ]
+"473
+[; ;webserver/tcpip.c: 473: }
+[e :UE 885 ]
+}
+"722
+[; ;webserver/tcpip.c: 722: void tcpip_getLocalIP(void) {
+[v _tcpip_getLocalIP `(v ~T0 @X0 1 ef ]
 {
-"33
-[; ;eeprom/eeprom.c: 33:         printf("Vaerdi fra EEPROM i buffer: %#0.2X\r\n", eeprom_buffer[i]);
-[e ( _printf , (. :s 5C -> *U + &U _eeprom_buffer * -> _i `ux -> -> # *U &U _eeprom_buffer `ui `ux `i ]
-"34
-[; ;eeprom/eeprom.c: 34:     }
-}
-[e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 15 `i 835  ]
-[e :U 836 ]
-}
-"35
-[; ;eeprom/eeprom.c: 35: }
-[e :UE 834 ]
-}
-"38
-[; ;eeprom/eeprom.c: 38: void eeprom_logData(void) {
-[v _eeprom_logData `(v ~T0 @X0 1 ef ]
-{
-[e :U _eeprom_logData ]
+[e :U _tcpip_getLocalIP ]
 [f ]
-"40
-[; ;eeprom/eeprom.c: 40:     i2c_write_serial(eeprom_addr, (char*) eeprom_pointer, 2);
-[e ( _i2c_write_serial (3 , , _eeprom_addr -> &U _eeprom_pointer `*uc -> -> 2 `i `uc ]
-"41
-[; ;eeprom/eeprom.c: 41:     i2c_read_serial(eeprom_addr, eeprom_buffer, 4);
-[e ( _i2c_read_serial (3 , , _eeprom_addr &U _eeprom_buffer -> -> 4 `i `uc ]
-"52
-[; ;eeprom/eeprom.c: 52: }
-[e :UE 838 ]
+"723
+[; ;webserver/tcpip.c: 723:     printf("AT+CIFSR\r\n");
+[e ( _printf :s 11C ]
+"725
+[; ;webserver/tcpip.c: 725: }
+[e :UE 889 ]
 }
-"55
-[; ;eeprom/eeprom.c: 55: void eeprom_initEeprom(void) {
-[v _eeprom_initEeprom `(v ~T0 @X0 1 ef ]
+"728
+[; ;webserver/tcpip.c: 728: void tcpip_getStationMac(void) {
+[v _tcpip_getStationMac `(v ~T0 @X0 1 ef ]
 {
-[e :U _eeprom_initEeprom ]
+[e :U _tcpip_getStationMac ]
 [f ]
-"57
-[; ;eeprom/eeprom.c: 57:     i2c_write_serial(eeprom_addr, (char*) eeprom_init, 6);
-[e ( _i2c_write_serial (3 , , _eeprom_addr -> &U _eeprom_init `*uc -> -> 6 `i `uc ]
-"58
-[; ;eeprom/eeprom.c: 58:     i2c_write_serial(eeprom_addr, (char*) eeprom_pointer, 2);
-[e ( _i2c_write_serial (3 , , _eeprom_addr -> &U _eeprom_pointer `*uc -> -> 2 `i `uc ]
-"59
-[; ;eeprom/eeprom.c: 59: }
-[e :UE 839 ]
+"729
+[; ;webserver/tcpip.c: 729:     printf("AT+CIFSR\r\n");
+[e ( _printf :s 12C ]
+"731
+[; ;webserver/tcpip.c: 731: }
+[e :UE 890 ]
 }
-"62
-[; ;eeprom/eeprom.c: 62: void eeprom_dumpLogData(void) {
-[v _eeprom_dumpLogData `(v ~T0 @X0 1 ef ]
+"734
+[; ;webserver/tcpip.c: 734: void tcpip_getSoftAPIP(void) {
+[v _tcpip_getSoftAPIP `(v ~T0 @X0 1 ef ]
 {
-[e :U _eeprom_dumpLogData ]
+[e :U _tcpip_getSoftAPIP ]
 [f ]
-"69
-[; ;eeprom/eeprom.c: 69:     uint8_t i = 0;
-[v _i `uc ~T0 @X0 1 a ]
-[e = _i -> -> 0 `i `uc ]
-"70
-[; ;eeprom/eeprom.c: 70:     uint32_t i_max = 0xFFFF;
-[v _i_max `ul ~T0 @X0 1 a ]
-[e = _i_max -> -> 65535 `ui `ul ]
-"71
-[; ;eeprom/eeprom.c: 71:     uint8_t j = 0;
-[v _j `uc ~T0 @X0 1 a ]
-[e = _j -> -> 0 `i `uc ]
-"72
-[; ;eeprom/eeprom.c: 72:     char eeprom_buffer[20];
-[v _eeprom_buffer `uc ~T0 @X0 -> 20 `i a ]
-"73
-[; ;eeprom/eeprom.c: 73:     char tmp[130];
-[v _tmp `uc ~T0 @X0 -> 130 `i a ]
-"74
-[; ;eeprom/eeprom.c: 74:     char msg[255];
-[v _msg `uc ~T0 @X0 -> 255 `i a ]
-"75
-[; ;eeprom/eeprom.c: 75:     uint32_t tmp_humid = 0;
-[v _tmp_humid `ul ~T0 @X0 1 a ]
-[e = _tmp_humid -> -> -> 0 `i `l `ul ]
-"76
-[; ;eeprom/eeprom.c: 76:     int32_t tmp_temp = 0;
-[v _tmp_temp `l ~T0 @X0 1 a ]
-[e = _tmp_temp -> -> 0 `i `l ]
-"79
-[; ;eeprom/eeprom.c: 79:     eeprom_initEeprom();
-[e ( _eeprom_initEeprom ..  ]
-"82
-[; ;eeprom/eeprom.c: 82:     while ( i <= i_max ) {
-[e $U 841  ]
-[e :U 842 ]
-{
-"83
-[; ;eeprom/eeprom.c: 83:         i2c_read_serial(eeprom_addr, eeprom_buffer, 8);
-[e ( _i2c_read_serial (3 , , _eeprom_addr &U _eeprom_buffer -> -> 8 `i `uc ]
-"86
-[; ;eeprom/eeprom.c: 86:         j = 0;
-[e = _j -> -> 0 `i `uc ]
-"87
-[; ;eeprom/eeprom.c: 87:         while ( j < 8 ) {
-[e $U 844  ]
-[e :U 845 ]
-{
-"89
-[; ;eeprom/eeprom.c: 89:             tmp_humid = (uint32_t)(( eeprom_buffer[j++] & (char)0b00111111 ) << (char)8);
-[e = _tmp_humid -> << & -> *U + &U _eeprom_buffer * -> ++ _j -> -> 1 `i `uc `ux -> -> # *U &U _eeprom_buffer `ui `ux `i -> -> -> 63 `i `uc `i -> -> -> 8 `i `uc `i `ul ]
-"90
-[; ;eeprom/eeprom.c: 90:             tmp_humid += eeprom_buffer[j++];
-[e =+ _tmp_humid -> *U + &U _eeprom_buffer * -> ++ _j -> -> 1 `i `uc `ux -> -> # *U &U _eeprom_buffer `ui `ux `ul ]
-"91
-[; ;eeprom/eeprom.c: 91:             tmp_humid *= 100;
-[e =* _tmp_humid -> -> -> 100 `i `l `ul ]
-"92
-[; ;eeprom/eeprom.c: 92:             tmp_humid /= 16382;
-[e =/ _tmp_humid -> -> -> 16382 `i `l `ul ]
-"95
-[; ;eeprom/eeprom.c: 95:             tmp_temp = eeprom_buffer[j++] << 8;
-[e = _tmp_temp -> << -> *U + &U _eeprom_buffer * -> ++ _j -> -> 1 `i `uc `ux -> -> # *U &U _eeprom_buffer `ui `ux `i -> 8 `i `l ]
-"96
-[; ;eeprom/eeprom.c: 96:             tmp_temp += eeprom_buffer[j++];
-[e =+ _tmp_temp -> *U + &U _eeprom_buffer * -> ++ _j -> -> 1 `i `uc `ux -> -> # *U &U _eeprom_buffer `ui `ux `l ]
-"97
-[; ;eeprom/eeprom.c: 97:             tmp_temp >>= 2;
-[e =>> _tmp_temp -> -> 2 `i `l ]
-"99
-[; ;eeprom/eeprom.c: 99:             tmp_temp *= 16500;
-[e =* _tmp_temp -> -> 16500 `i `l ]
-"100
-[; ;eeprom/eeprom.c: 100:             tmp_temp /= 16382;
-[e =/ _tmp_temp -> -> 16382 `i `l ]
-"101
-[; ;eeprom/eeprom.c: 101:             tmp_temp -= 4000;
-[e =- _tmp_temp -> -> 4000 `i `l ]
-"103
-[; ;eeprom/eeprom.c: 103:             sprintf((char*) tmp, (const char*) eeprom_template, tmp_humid, tmp_temp );
-[e ( _sprintf (1 , , (. , &U _tmp &U _eeprom_template _tmp_humid _tmp_temp ]
-"104
-[; ;eeprom/eeprom.c: 104:             strcat(msg, tmp);
-[e ( _strcat (2 , &U _msg -> &U _tmp `*Cuc ]
-"105
-[; ;eeprom/eeprom.c: 105:         }
+"735
+[; ;webserver/tcpip.c: 735:     printf("AT+CIFSR\r\n");
+[e ( _printf :s 13C ]
+"737
+[; ;webserver/tcpip.c: 737: }
+[e :UE 891 ]
 }
-[e :U 844 ]
-"87
-[; ;eeprom/eeprom.c: 87:         while ( j < 8 ) {
-[e $ < -> _j `i -> 8 `i 845  ]
-[e :U 846 ]
-"107
-[; ;eeprom/eeprom.c: 107:         printf( "AT+CIPSEND=0,%d\r\n", (const char*) strlen(msg) );
-[e ( _printf , (. :s 6C -> ( _strlen (1 -> &U _msg `*Cuc `*Cuc ]
-"108
-[; ;eeprom/eeprom.c: 108:         _delay((unsigned long)((70)*(64000000/4000.0)));
+"740
+[; ;webserver/tcpip.c: 740: void tcpip_getSoftAPMac(void) {
+[v _tcpip_getSoftAPMac `(v ~T0 @X0 1 ef ]
+{
+[e :U _tcpip_getSoftAPMac ]
+[f ]
+"741
+[; ;webserver/tcpip.c: 741:     printf("AT+CIFSR\r\n");
+[e ( _printf :s 14C ]
+"743
+[; ;webserver/tcpip.c: 743: }
+[e :UE 892 ]
+}
+"746
+[; ;webserver/tcpip.c: 746: void tcpip_getStationGateway(void) {
+[v _tcpip_getStationGateway `(v ~T0 @X0 1 ef ]
+{
+[e :U _tcpip_getStationGateway ]
+[f ]
+"747
+[; ;webserver/tcpip.c: 747:     printf("AT_CWDHCPS?;");
+[e ( _printf :s 15C ]
+"749
+[; ;webserver/tcpip.c: 749: }
+[e :UE 893 ]
+}
+"752
+[; ;webserver/tcpip.c: 752: void tcpip_getStationNetmask(void) {
+[v _tcpip_getStationNetmask `(v ~T0 @X0 1 ef ]
+{
+[e :U _tcpip_getStationNetmask ]
+[f ]
+"753
+[; ;webserver/tcpip.c: 753:     printf("AT_CWDHCPS?;");
+[e ( _printf :s 16C ]
+"755
+[; ;webserver/tcpip.c: 755: }
+[e :UE 894 ]
+}
+"806
+[; ;webserver/tcpip.c: 806: void tcpip_checkInternet(void) {
+[v _tcpip_checkInternet `(v ~T0 @X0 1 ef ]
+{
+[e :U _tcpip_checkInternet ]
+[f ]
+"807
+[; ;webserver/tcpip.c: 807:     printf("AT+PING=\"https://www.google.com/\"\r\n");
+[e ( _printf :s 17C ]
+"808
+[; ;webserver/tcpip.c: 808:     if( esp_waitForOK() ) {
+[e $ ! != -> ( _esp_waitForOK ..  `i -> 0 `i 896  ]
+{
+"809
+[; ;webserver/tcpip.c: 809:         server.internet = 1;
+[e = . _server 9 -> -> 1 `i `a ]
+"810
+[; ;webserver/tcpip.c: 810:     } else {
+}
+[e $U 897  ]
+[e :U 896 ]
+{
+"811
+[; ;webserver/tcpip.c: 811:         server.internet = 0;
+[e = . _server 9 -> -> 0 `i `a ]
+"812
+[; ;webserver/tcpip.c: 812:     }
+}
+[e :U 897 ]
+"813
+[; ;webserver/tcpip.c: 813: }
+[e :UE 895 ]
+}
+"940
+[; ;webserver/tcpip.c: 940: void tcpip_serverPage(void) {
+[v _tcpip_serverPage `(v ~T0 @X0 1 ef ]
+{
+[e :U _tcpip_serverPage ]
+[f ]
+"941
+[; ;webserver/tcpip.c: 941:     char msg[16];
+[v _msg `uc ~T0 @X0 -> 16 `i a ]
+"943
+[; ;webserver/tcpip.c: 943:     uint8_t client=1;
+[v _client `uc ~T0 @X0 1 a ]
+[e = _client -> -> 1 `i `uc ]
+"945
+[; ;webserver/tcpip.c: 945:     if( server.clientConnected && server.clientAvailable) {
+[e $ ! && != -> . _server 13 `i -> 0 `i != -> . _server 14 `i -> 0 `i 899  ]
+{
+"946
+[; ;webserver/tcpip.c: 946:         lcd_write("@Ny klient", 0, 0);
+[e ( _lcd_write (3 , , :s 18C -> -> 0 `i `uc -> -> 0 `i `uc ]
+"951
+[; ;webserver/tcpip.c: 951:         while ( server.clientConnected ) {
+[e $U 900  ]
+[e :U 901 ]
+{
+"955
+[; ;webserver/tcpip.c: 955:             if ( server.clientAvailable ) {
+[e $ ! != -> . _server 14 `i -> 0 `i 903  ]
+{
+"956
+[; ;webserver/tcpip.c: 956:                 tcpip_sendHTTPHeader();
+[e ( _tcpip_sendHTTPHeader ..  ]
+"958
+[; ;webserver/tcpip.c: 958:                 tcpip_sendHTTPPage();
+[e ( _tcpip_sendHTTPPage ..  ]
+"959
+[; ;webserver/tcpip.c: 959:             }
+}
+[e :U 903 ]
+"962
+[; ;webserver/tcpip.c: 962:             printf("AT+CIPCLOSE=0\r\n");
+[e ( _printf :s 19C ]
+"963
+[; ;webserver/tcpip.c: 963:             break;
+[e $U 902  ]
+"964
+[; ;webserver/tcpip.c: 964:         }
+}
+[e :U 900 ]
+"951
+[; ;webserver/tcpip.c: 951:         while ( server.clientConnected ) {
+[e $ != -> . _server 13 `i -> 0 `i 901  ]
+[e :U 902 ]
+"965
+[; ;webserver/tcpip.c: 965:     }
+}
+[e :U 899 ]
+"967
+[; ;webserver/tcpip.c: 967:     sprintf(msg, "@Klient afbrudt");
+[e ( _sprintf (1 , &U _msg :s 20C ]
+"968
+[; ;webserver/tcpip.c: 968:     lcd_write(msg, 0, 0);
+[e ( _lcd_write (3 , , &U _msg -> -> 0 `i `uc -> -> 0 `i `uc ]
+"969
+[; ;webserver/tcpip.c: 969:     printf("");
+[e ( _printf :s 21C ]
+"970
+[; ;webserver/tcpip.c: 970: }
+[e :UE 898 ]
+}
+"973
+[; ;webserver/tcpip.c: 973: void tcpip_sendHTTPHeader(void) {
+[v _tcpip_sendHTTPHeader `(v ~T0 @X0 1 ef ]
+{
+[e :U _tcpip_sendHTTPHeader ]
+[f ]
+[v F6601 `Cuc ~T0 @X0 -> 59 `i s ]
+[i F6601
+:U ..
+"976
+[; ;webserver/tcpip.c: 976:     const char headerMsg[] = { "HTTP/1.1 200 OK\nContent-type:text/html\nConnection: close\n\n" };
+-> 72 `c
+-> 84 `c
+-> 84 `c
+-> 80 `c
+-> 47 `c
+-> 49 `c
+-> 46 `c
+-> 49 `c
+-> 32 `c
+-> 50 `c
+-> 48 `c
+-> 48 `c
+-> 32 `c
+-> 79 `c
+-> 75 `c
+-> 10 `c
+-> 67 `c
+-> 111 `c
+-> 110 `c
+-> 116 `c
+-> 101 `c
+-> 110 `c
+-> 116 `c
+-> 45 `c
+-> 116 `c
+-> 121 `c
+-> 112 `c
+-> 101 `c
+-> 58 `c
+-> 116 `c
+-> 101 `c
+-> 120 `c
+-> 116 `c
+-> 47 `c
+-> 104 `c
+-> 116 `c
+-> 109 `c
+-> 108 `c
+-> 10 `c
+-> 67 `c
+-> 111 `c
+-> 110 `c
+-> 110 `c
+-> 101 `c
+-> 99 `c
+-> 116 `c
+-> 105 `c
+-> 111 `c
+-> 110 `c
+-> 58 `c
+-> 32 `c
+-> 99 `c
+-> 108 `c
+-> 111 `c
+-> 115 `c
+-> 101 `c
+-> 10 `c
+-> 10 `c
+-> 0 `c
+..
+]
+[v _headerMsg `Cuc ~T0 @X0 -> 59 `i a ]
+[e = _headerMsg F6601 ]
+"977
+[; ;webserver/tcpip.c: 977:     printf("AT+CIPSEND=0,%d\r\n", strlen(headerMsg) );
+[e ( _printf , (. :s 22C ( _strlen (1 &U _headerMsg ]
+"978
+[; ;webserver/tcpip.c: 978:     _delay((unsigned long)((70)*(64000000/4000.0)));
 [e ( __delay (1 -> * -> -> 70 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
-"109
-[; ;eeprom/eeprom.c: 109:         printf(msg);
-[e ( _printf -> &U _msg `*Cuc ]
-"110
-[; ;eeprom/eeprom.c: 110:         _delay((unsigned long)((70)*(64000000/4000.0)));
+"979
+[; ;webserver/tcpip.c: 979:     printf(headerMsg);
+[e ( _printf &U _headerMsg ]
+"980
+[; ;webserver/tcpip.c: 980:     _delay((unsigned long)((70)*(64000000/4000.0)));
 [e ( __delay (1 -> * -> -> 70 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
-"111
-[; ;eeprom/eeprom.c: 111:     }
+"981
+[; ;webserver/tcpip.c: 981: }
+[e :UE 904 ]
 }
-[e :U 841 ]
-"82
-[; ;eeprom/eeprom.c: 82:     while ( i <= i_max ) {
-[e $ <= -> _i `ul _i_max 842  ]
-[e :U 843 ]
-"113
-[; ;eeprom/eeprom.c: 113:     i += j;
-[e =+ _i -> _j `uc ]
-"114
-[; ;eeprom/eeprom.c: 114: }
-[e :UE 840 ]
+"991
+[; ;webserver/tcpip.c: 991: gpiostate_t gpio;
+[v _gpio `S905 ~T0 @X0 1 e ]
+"993
+[; ;webserver/tcpip.c: 993: void tcpip_sendHTTPPage(void) {
+[v _tcpip_sendHTTPPage `(v ~T0 @X0 1 ef ]
+{
+[e :U _tcpip_sendHTTPPage ]
+[f ]
+"994
+[; ;webserver/tcpip.c: 994:     char tmp[60];
+[v _tmp `uc ~T0 @X0 -> 60 `i a ]
+"995
+[; ;webserver/tcpip.c: 995:     unsigned int len = 0;
+[v _len `ui ~T0 @X0 1 a ]
+[e = _len -> -> 0 `i `ui ]
+"997
+[; ;webserver/tcpip.c: 997:     len += strlen(htmlMsgPart1);
+[e =+ _len ( _strlen (1 &U _htmlMsgPart1 ]
+[v F6611 `Cuc ~T0 @X0 -> 17 `i s ]
+[i F6611
+:U ..
+"1026
+[; ;webserver/tcpip.c: 1026:     const char htmlMsgPart2[] = { "</body></html>\n\n" };
+-> 60 `c
+-> 47 `c
+-> 98 `c
+-> 111 `c
+-> 100 `c
+-> 121 `c
+-> 62 `c
+-> 60 `c
+-> 47 `c
+-> 104 `c
+-> 116 `c
+-> 109 `c
+-> 108 `c
+-> 62 `c
+-> 10 `c
+-> 10 `c
+-> 0 `c
+..
+]
+[v _htmlMsgPart2 `Cuc ~T0 @X0 -> 17 `i a ]
+[e = _htmlMsgPart2 F6611 ]
+"1027
+[; ;webserver/tcpip.c: 1027:     len += strlen(htmlMsgPart2);
+[e =+ _len ( _strlen (1 &U _htmlMsgPart2 ]
+"1029
+[; ;webserver/tcpip.c: 1029:     printf("AT+CIPSEND=0,%d\r\n", len );
+[e ( _printf , (. :s 23C _len ]
+"1030
+[; ;webserver/tcpip.c: 1030:     _delay((unsigned long)((70)*(64000000/4000.0)));
+[e ( __delay (1 -> * -> -> 70 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
+"1031
+[; ;webserver/tcpip.c: 1031:     printf( htmlMsgPart1 );
+[e ( _printf &U _htmlMsgPart1 ]
+"1033
+[; ;webserver/tcpip.c: 1033:     printf( htmlMsgPart2 );
+[e ( _printf &U _htmlMsgPart2 ]
+"1034
+[; ;webserver/tcpip.c: 1034:     _delay((unsigned long)((200)*(64000000/4000.0)));
+[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
+"1035
+[; ;webserver/tcpip.c: 1035: }
+[e :UE 906 ]
 }
-[p f _printf 11600548 ]
-[p f _sprintf 552978365 ]
-[a 4C 79 103 32 112 114 105 110 116 32 100 101 109 32 117 100 32 105 103 101 110 13 10 0 ]
-[a 2C 83 107 114 105 118 110 105 110 103 32 102 97 101 114 100 105 103 13 10 0 ]
-[a 6C 65 84 43 67 73 80 83 69 78 68 61 48 44 37 100 13 10 0 ]
-[a 5C 86 97 101 114 100 105 32 102 114 97 32 69 69 80 82 79 77 32 105 32 98 117 102 102 101 114 58 32 37 35 48 46 50 88 13 10 0 ]
-[a 3C 76 97 101 115 32 102 114 97 32 69 69 80 82 82 79 77 13 10 0 ]
-[a 1C 13 10 83 107 114 105 118 32 116 101 103 110 32 116 105 108 32 69 69 80 82 79 77 13 10 0 ]
+"1038
+[; ;webserver/tcpip.c: 1038: void toogleGPIO(uint8_t ioPin, uint8_t state) {
+[v _toogleGPIO `(v ~T0 @X0 1 ef2`uc`uc ]
+{
+[e :U _toogleGPIO ]
+[v _ioPin `uc ~T0 @X0 1 r1 ]
+[v _state `uc ~T0 @X0 1 r2 ]
+[f ]
+"1040
+[; ;webserver/tcpip.c: 1040: }
+[e :UE 907 ]
+}
+"1103
+[; ;webserver/tcpip.c: 1103: void setDNSServers(void) {
+[v _setDNSServers `(v ~T0 @X0 1 ef ]
+{
+[e :U _setDNSServers ]
+[f ]
+"1104
+[; ;webserver/tcpip.c: 1104: }
+[e :UE 908 ]
+}
+"1126
+[; ;webserver/tcpip.c: 1126: void setDNSDomain(void) {
+[v _setDNSDomain `(v ~T0 @X0 1 ef ]
+{
+[e :U _setDNSDomain ]
+[f ]
+"1127
+[; ;webserver/tcpip.c: 1127:     printf("AT+CIPDOMAIN=\"iot.karsten.esp\"\r\n");
+[e ( _printf :s 24C ]
+"1128
+[; ;webserver/tcpip.c: 1128:     esp_waitForOK();
+[e ( _esp_waitForOK ..  ]
+"1129
+[; ;webserver/tcpip.c: 1129: }
+[e :UE 909 ]
+}
+"1158
+[; ;webserver/tcpip.c: 1158: void wifi_mDNSConfig(void) {
+[v _wifi_mDNSConfig `(v ~T0 @X0 1 ef ]
+{
+[e :U _wifi_mDNSConfig ]
+[f ]
+"1159
+[; ;webserver/tcpip.c: 1159:     printf("AT+MDNS=1,\"espressif\",\"iot\",8080");
+[e ( _printf :s 25C ]
+"1160
+[; ;webserver/tcpip.c: 1160: }
+[e :UE 910 ]
+}
+"1218
+[; ;webserver/tcpip.c: 1218: void setupDHCP(void) {
+[v _setupDHCP `(v ~T0 @X0 1 ef ]
+{
+[e :U _setupDHCP ]
+[f ]
+"1220
+[; ;webserver/tcpip.c: 1220: }
+[e :UE 911 ]
+}
+"1271
+[; ;webserver/tcpip.c: 1271: void esp_setSoftAPDHCPIP(uint8_t *startIP, uint8_t *endIP, uint8_t enable, uint8_t leasetime ) {
+[v _esp_setSoftAPDHCPIP `(v ~T0 @X0 1 ef4`*uc`*uc`uc`uc ]
+{
+[e :U _esp_setSoftAPDHCPIP ]
+[v _startIP `*uc ~T0 @X0 1 r1 ]
+[v _endIP `*uc ~T0 @X0 1 r2 ]
+[v _enable `uc ~T0 @X0 1 r3 ]
+[v _leasetime `uc ~T0 @X0 1 r4 ]
+[f ]
+"1272
+[; ;webserver/tcpip.c: 1272:     printf("AT+CWDHCPS=%d,%d,\"%s\",\"%s\"\r\n", enable, leasetime, startIP, endIP);
+[e ( _printf , , , , (. :s 26C -> _enable `i -> _leasetime `i _startIP _endIP ]
+"1273
+[; ;webserver/tcpip.c: 1273: }
+[e :UE 912 ]
+}
+"1314
+[; ;webserver/tcpip.c: 1314: void sntp_sntpInit(void) {
+[v _sntp_sntpInit `(v ~T0 @X0 1 ef ]
+{
+[e :U _sntp_sntpInit ]
+[f ]
+"1315
+[; ;webserver/tcpip.c: 1315:     printf("AT+CIPSNTPCFG=1,2,\"dk.pool.ntp.org\"\r\n");
+[e ( _printf :s 27C ]
+"1316
+[; ;webserver/tcpip.c: 1316:     esp_waitForOK();
+[e ( _esp_waitForOK ..  ]
+"1317
+[; ;webserver/tcpip.c: 1317: }
+[e :UE 913 ]
+}
+"1339
+[; ;webserver/tcpip.c: 1339: void sntp_checkTime(void) {
+[v _sntp_checkTime `(v ~T0 @X0 1 ef ]
+{
+[e :U _sntp_checkTime ]
+[f ]
+"1340
+[; ;webserver/tcpip.c: 1340:     if( server.internet ) {
+[e $ ! != -> . _server 9 `i -> 0 `i 915  ]
+{
+"1341
+[; ;webserver/tcpip.c: 1341:         printf("AT+CIPSNTPTIME?\r\n");
+[e ( _printf :s 28C ]
+"1342
+[; ;webserver/tcpip.c: 1342:         esp_waitForOK();
+[e ( _esp_waitForOK ..  ]
+"1343
+[; ;webserver/tcpip.c: 1343:     }
+}
+[e :U 915 ]
+"1344
+[; ;webserver/tcpip.c: 1344: }
+[e :UE 914 ]
+}
+[p f _printf 9699968 ]
+[p f _sprintf 8650752 ]
+[a 18C 64 78 121 32 107 108 105 101 110 116 0 ]
+[a 20C 64 75 108 105 101 110 116 32 97 102 98 114 117 100 116 0 ]
+[a 2C 64 37 115 0 ]
+[a 15C 65 84 95 67 87 68 72 67 80 83 63 59 0 ]
+[a 16C 65 84 95 67 87 68 72 67 80 83 63 59 0 ]
+[a 25C 65 84 43 77 68 78 83 61 49 44 34 101 115 112 114 101 115 115 105 102 34 44 34 105 111 116 34 44 56 48 56 48 0 ]
+[a 1C 64 67 111 110 110 101 99 116 105 110 103 32 116 111 58 32 32 0 ]
+[a 5C 65 84 43 67 73 80 77 85 88 61 37 100 13 10 0 ]
+[a 10C 65 84 43 67 73 80 68 73 78 70 79 61 37 100 13 10 0 ]
+[a 6C 65 84 43 67 73 80 83 69 82 86 69 82 77 65 88 67 79 78 78 61 37 100 13 10 0 ]
+[a 8C 65 84 43 67 73 80 82 69 67 86 77 79 68 69 61 37 100 13 10 0 ]
+[a 3C 65 84 43 67 73 80 83 69 82 86 69 82 61 49 44 37 100 13 10 0 ]
+[a 22C 65 84 43 67 73 80 83 69 78 68 61 48 44 37 100 13 10 0 ]
+[a 23C 65 84 43 67 73 80 83 69 78 68 61 48 44 37 100 13 10 0 ]
+[a 11C 65 84 43 67 73 70 83 82 13 10 0 ]
+[a 12C 65 84 43 67 73 70 83 82 13 10 0 ]
+[a 13C 65 84 43 67 73 70 83 82 13 10 0 ]
+[a 14C 65 84 43 67 73 70 83 82 13 10 0 ]
+[a 7C 65 84 43 67 73 80 82 69 67 86 76 69 78 63 13 10 0 ]
+[a 28C 65 84 43 67 73 80 83 78 84 80 84 73 77 69 63 13 10 0 ]
+[a 9C 65 84 43 67 73 80 82 69 67 86 68 65 84 65 61 54 52 13 10 0 ]
+[a 4C 65 84 43 67 73 80 83 69 82 86 69 82 61 48 13 10 0 ]
+[a 19C 65 84 43 67 73 80 67 76 79 83 69 61 48 13 10 0 ]
+[a 26C 65 84 43 67 87 68 72 67 80 83 61 37 100 44 37 100 44 34 37 115 34 44 34 37 115 34 13 10 0 ]
+[a 24C 65 84 43 67 73 80 68 79 77 65 73 78 61 34 105 111 116 46 107 97 114 115 116 101 110 46 101 115 112 34 13 10 0 ]
+[a 27C 65 84 43 67 73 80 83 78 84 80 67 70 71 61 49 44 50 44 34 100 107 46 112 111 111 108 46 110 116 112 46 111 114 103 34 13 10 0 ]
+[a 17C 65 84 43 80 73 78 71 61 34 104 116 116 112 115 58 47 47 119 119 119 46 103 111 111 103 108 101 46 99 111 109 47 34 13 10 0 ]
+[a 21C 0 ]

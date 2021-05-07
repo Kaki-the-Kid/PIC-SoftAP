@@ -32,8 +32,11 @@ uint8_t convertBCD2Bytes(uint8_t bcdByte)
 {
     uint8_t result = 0;    
 
-    result += (bcdByte & 0x00001111);
-    result += ((bcdByte & 0x11110000) << 4);
+    if(bcdByte)
+    {
+        result += (bcdByte & 0x00001111);
+        result += ((bcdByte & 0x11110000) << 4);
+    }
     
     return result;
 }

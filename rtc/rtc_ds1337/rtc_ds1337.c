@@ -226,7 +226,7 @@ void rtc_ds_1337_setTimeAll(uint8_t hours, uint8_t mins, uint8_t secs, uint8_t d
     bool century = (years>1999 || (years>=0 && years <=99) )?1:0;
     
     // Så rtc adresse til 0x00    
-    uint8_t rtc_date[] = {
+    char rtc_date[] = {
         convertByte2BCD(secs),
         convertByte2BCD(mins),
         convertByte2BCD(hours),
@@ -259,7 +259,7 @@ void rtc_ds_1337_setSeconds(void)
 {
     uint8_t data = convertByte2BCD(time.seconds);
     uint8_t rtcRegister[] = { secondsAddr, data};
-    i2c_write_serial(rtc_addr, rtcRegister, 2);
+    i2c_write_serial(rtc_addr, (char)rtcRegister, 2);
 }
 
 /***************************************************************************
@@ -268,9 +268,9 @@ void rtc_ds_1337_setSeconds(void)
  ***************************************************************************/
 uint8_t rtc_ds_1337_getMinutes(void) 
 { 
-    i2c_write_serial(rtc_addr, (uint8_t)minutesAddr, 1); 
+    i2c_write_serial(rtc_addr, (char*)minutesAddr, 1); 
     i2c_read_serial(rtc_addr, rtc_data , 1);
-    time.minutes = convertBCD2Bytes(rtc_data[1]);
+    time.minutes = convertBCD2Bytes((uint8_t)rtc_data[0]);
     
     return time.minutes; 
 }
@@ -279,7 +279,7 @@ void rtc_ds_1337_setMinutes(void)
 {
     uint8_t data = convertByte2BCD(time.minutes);
     uint8_t rtcRegister[] = { minutesAddr, data};
-    i2c_write_serial(rtc_addr, rtcRegister, 2);
+    i2c_write_serial(rtc_addr, (char)rtcRegister, 2);
 }
 
 /***************************************************************************
@@ -288,7 +288,7 @@ void rtc_ds_1337_setMinutes(void)
  ***************************************************************************/
 uint8_t rtc_ds_1337_getHour(void) 
 { 
-    i2c_write_serial(rtc_addr, (uint8_t)hoursAddr, 1); 
+    i2c_write_serial(rtc_addr, (char)hoursAddr, 1); 
     i2c_read_serial(rtc_addr, rtc_data , 1);
     time.hours = convertBCD2Bytes(rtc_data);
     
@@ -346,7 +346,7 @@ void rtc_ds_1337_setMonth(void)
 {
     uint8_t data = convertByte2BCD(time.month);
     uint8_t rtcRegister[] = { (uint8_t) monthAddr, data };
-    i2c_write_serial(rtc_addr, rtcRegister, 2);
+    i2c_write_serial(rtc_addr, (char*)rtcRegister, 2);
 }
 
 uint8_t rtc_ds_1337_getYear(void) { return false; }
@@ -354,7 +354,7 @@ void rtc_ds_1337_setYear(void)
 {
     uint8_t data = convertByte2BCD(time.year);
     uint8_t rtcRegister[] = { yearAddr, data };
-    i2c_write_serial(rtc_addr, rtcRegister, 2);
+    i2c_write_serial(rtc_addr, (char*)rtcRegister, 2);
 }
 
 /******************************************************************************
@@ -439,7 +439,7 @@ void rtc_ds_1337_setAlarm1Minutes(void)
     minsReg += time.A1M2<<7;
     
     uint8_t transmit[] = { 0x08, minsReg };
-    i2c_write_serial(rtc_addr, transmit, 2 );
+    i2c_write_serial(rtc_addr, (char*)transmit, 2 );
 }
 
 uint8_t rtc_ds_1337_getAlarm1Hours(void) { return false; }
@@ -460,7 +460,7 @@ void rtc_ds_1337_setAlarm1Hours(void)
     hoursReg += (time.alarm112n24)?time.alarm2PMnAM<<5:0; //kompenser for 12 timers tid
     
     uint8_t transmit[] = { 0x09, hoursReg };
-    i2c_write_serial(rtc_addr, transmit, 2 );
+    i2c_write_serial(rtc_addr, (char*)transmit, 2 );
 }
 
 uint8_t rtc_ds_1337_getAlarm1Date(void)

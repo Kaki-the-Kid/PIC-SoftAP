@@ -10,7 +10,7 @@
 #pragma once
 
 #ifndef MCC_H
-#include "mcc_generated_files/mcc.h"
+#include "../mcc_generated_files/mcc.h"
 #endif
 
 #include <stdio.h>
