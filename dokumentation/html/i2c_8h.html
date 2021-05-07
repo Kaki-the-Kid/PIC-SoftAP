@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PIC SoftAP: C:/Users/karst/OneDrive - AARHUS TECH/Dokumenter/Workspace/MPLABXProjects/Embedded Controller 3/SoftAP_webserver.X/i2c/i2c.h filreference</title>
+<title>PIC SoftAP: C:/Users/krs/OneDrive - AARHUS TECH/Dokumenter/Workspace/MPLABXProjects/SoftAP_webserver.X/i2c/i2c.h filreference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -60,22 +60,23 @@ $(document).ready(function(){initNavTree('i2c_8h.html',''); initResizable(); });
 </script>
 <div id="doc-content">
 <div class="header">
-  <div class="summary">
-<a href="#define-members">#Defines</a> &#124;
-<a href="#func-members">Funktioner</a> &#124;
-<a href="#var-members">Variable</a>  </div>
   <div class="headertitle">
 <div class="title">i2c.h filreference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="">./mcc_generated_files/mcc.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="">../mcc_generated_files/mcc.h</a>&quot;</code><br />
 </div>
 <p><a href="">Hop til denne fils kildekode.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
-#Defines</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+i2c.h</h2></td></tr>
+<tr><td class="ititle" colspan="2"><p><a class="anchor" id="amgrp637df49a57fba91fa69befb5da2f38a9"></a>I2C generelle kommandoer</p>
+<dl class="section author"><dt>Forfatter</dt><dd>krs - Karsten Reitan S�rensen</dd></dl>
+<p>Created on September 6, 2019, 8:51 AM </p>
+</td></tr>
+<tr class="memitem:a325b29e8978f1e5815c9df12c5d8f26d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="i2c_8h.html#a325b29e8978f1e5815c9df12c5d8f26d">I2C_H</a></td></tr>
+<tr class="separator:a325b29e8978f1e5815c9df12c5d8f26d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5ffc4751921608954bb7a5687566b2d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="i2c_8h.html#ab5ffc4751921608954bb7a5687566b2d">SCL</a>&#160;&#160;&#160;TRISCbits.RC3</td></tr>
-<tr class="memdesc:ab5ffc4751921608954bb7a5687566b2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C generelle kommandoer.  <a href="i2c_8h.html#ab5ffc4751921608954bb7a5687566b2d">Mere...</a><br /></td></tr>
 <tr class="separator:ab5ffc4751921608954bb7a5687566b2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6890442e1cc24a0d61597a13576b8727"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="i2c_8h.html#a6890442e1cc24a0d61597a13576b8727">SDA</a>&#160;&#160;&#160;TRISCbits.RC4</td></tr>
 <tr class="separator:a6890442e1cc24a0d61597a13576b8727"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -83,18 +84,17 @@ $(document).ready(function(){initNavTree('i2c_8h.html',''); initResizable(); });
 <tr class="separator:ae3bb1645bd52518d362f3a02a2c66700"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:accdabacb169a59828fa37ff89d8240d3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="i2c_8h.html#accdabacb169a59828fa37ff89d8240d3">SDA_IO</a>&#160;&#160;&#160;ANSELCbits.ANSC4</td></tr>
 <tr class="separator:accdabacb169a59828fa37ff89d8240d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Funktioner</h2></td></tr>
+<tr class="memitem:a8eac694cd48788e914ae973b41d1b8ec"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="i2c_8h.html#a8eac694cd48788e914ae973b41d1b8ec">data_out</a> [4]</td></tr>
+<tr class="separator:a8eac694cd48788e914ae973b41d1b8ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5730d9445429351b9f750084c5cb5aae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="i2c_8h.html#a5730d9445429351b9f750084c5cb5aae">i2c_init</a> (void)</td></tr>
-<tr class="memdesc:a5730d9445429351b9f750084c5cb5aae"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C generelle kommandoer.  <a href="i2c_8h.html#a5730d9445429351b9f750084c5cb5aae">Mere...</a><br /></td></tr>
+<tr class="memdesc:a5730d9445429351b9f750084c5cb5aae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Device : PIC18F26K22 Driver Version : 2.00.  <a href="i2c_8h.html#a5730d9445429351b9f750084c5cb5aae">Mere...</a><br /></td></tr>
 <tr class="separator:a5730d9445429351b9f750084c5cb5aae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b96df492284070c5fb8ac5daa5a53a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="i2c_8h.html#a1b96df492284070c5fb8ac5daa5a53a1">i2c_portScan</a> (void)</td></tr>
 <tr class="separator:a1b96df492284070c5fb8ac5daa5a53a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad44071ec6f7a4af5371efcabba402897"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="i2c_8h.html#ad44071ec6f7a4af5371efcabba402897">i2c_write_serial</a> (uint8_t, char *, uint8_t)</td></tr>
 <tr class="separator:ad44071ec6f7a4af5371efcabba402897"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5cb803da522d50c9cdb9eaeb473e625a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="i2c_8h.html#a5cb803da522d50c9cdb9eaeb473e625a">i2c_read_serial</a> (uint8_t, uint8_t *, uint8_t)</td></tr>
-<tr class="separator:a5cb803da522d50c9cdb9eaeb473e625a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b7dafcc0420bb4bd3b957d17b82ea75"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="i2c_8h.html#a0b7dafcc0420bb4bd3b957d17b82ea75">i2c_read_serial</a> (uint8_t, char *, uint8_t)</td></tr>
+<tr class="separator:a0b7dafcc0420bb4bd3b957d17b82ea75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb646b67ce754741a06e63ea28d05259"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="i2c_8h.html#adb646b67ce754741a06e63ea28d05259">i2c_master_wait</a> (void)</td></tr>
 <tr class="separator:adb646b67ce754741a06e63ea28d05259"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02d93c2bcdbbee7a791b77b0cf12467f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="i2c_8h.html#a02d93c2bcdbbee7a791b77b0cf12467f">i2c_master_start</a> (void)</td></tr>
@@ -105,13 +105,22 @@ Funktioner</h2></td></tr>
 <tr class="separator:a6caad88441987f83268d336d4322d07d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae60d3dfb3e2bcfacd1bbca9debd6e35c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="i2c_8h.html#ae60d3dfb3e2bcfacd1bbca9debd6e35c">i2c_master_nack</a> (void)</td></tr>
 <tr class="separator:ae60d3dfb3e2bcfacd1bbca9debd6e35c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
-Variable</h2></td></tr>
-<tr class="memitem:a8eac694cd48788e914ae973b41d1b8ec"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="i2c_8h.html#a8eac694cd48788e914ae973b41d1b8ec">data_out</a> [4]</td></tr>
-<tr class="separator:a8eac694cd48788e914ae973b41d1b8ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">#Define-dokumentation</h2>
+<a id="a325b29e8978f1e5815c9df12c5d8f26d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a325b29e8978f1e5815c9df12c5d8f26d">&#9670;&nbsp;</a></span>I2C_H</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define I2C_H</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ab5ffc4751921608954bb7a5687566b2d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab5ffc4751921608954bb7a5687566b2d">&#9670;&nbsp;</a></span>SCL</h2>
 
@@ -123,8 +132,6 @@ Variable</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>I2C generelle kommandoer. </p>
 
 </div>
 </div>
@@ -187,7 +194,8 @@ Variable</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>I2C generelle kommandoer. </p>
+<p>Device : PIC18F26K22 Driver Version : 2.00. </p>
+<p>I2C generelle kommandoer </p>
 <div class="fragment"><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;                    {</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#ifdef debug</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    printf(<span class="stringliteral">&quot;Initialiserer I2C bussen\r\n&quot;</span>);</div>
@@ -197,20 +205,20 @@ Variable</h2></td></tr>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="i2c_8h.html#accdabacb169a59828fa37ff89d8240d3">SDA_IO</a> = 0;</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    </div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="comment">// bit 5  Synchronous Serial Port Enable bit</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="comment">// bit3-0 bestemmer mÃĨden hvorpÃĨ clocken defineres</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="comment">// bit3-0 bestemmer måden hvorpå clocken defineres</span></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="comment">// 1000 = I2C Master mode, clock = FOSC / (4 * (SSPxADD+1))</span></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    </div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    SSP1CON1 = 0x28;<span class="comment">//0b00101000; // 0x28</span></div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    uint8_t i2c_clock = (<a class="code" href="device__config_8h.html#a024148e99a7143db044a48216664d03d">_XTAL_FREQ</a> /(4 * 100000)) - 1; <span class="comment">// SÃĶtter hastigheden til 100K for I2C bussen</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    uint8_t i2c_clock = (<a class="code" href="device__config_8h.html#a024148e99a7143db044a48216664d03d">_XTAL_FREQ</a> /(4 * 100000)) - 1; <span class="comment">// Sætter hastigheden til 100K for I2C bussen</span></div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    SSP1ADD  = i2c_clock; <span class="comment">// 0x9F ved 16MHz x 4 software pll</span></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    </div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    SSP1CON2 = 0; <span class="comment">//Resetter kontrol register SSPxCON2: SSPx CONTROL REGISTER 2</span></div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Indeholder referencer til <a class="el" href="#l00050">_XTAL_FREQ</a>, <a class="el" href="#l00025">SCL</a>, <a class="el" href="#l00027">SCL_IO</a>, <a class="el" href="#l00026">SDA</a> og <a class="el" href="#l00028">SDA_IO</a>.</p>
+<p class="reference">Indeholder referencer til <a class="el" href="#l00050">_XTAL_FREQ</a>, <a class="el" href="#l00023">SCL</a>, <a class="el" href="#l00025">SCL_IO</a>, <a class="el" href="#l00024">SDA</a> og <a class="el" href="#l00026">SDA_IO</a>.</p>
 
-<p class="reference">Refereret til af <a class="el" href="#l00062">main()</a>.</p>
+<p class="reference">Refereret til af <a class="el" href="#l00063">main()</a>.</p>
 
 </div>
 </div>
@@ -361,8 +369,8 @@ Variable</h2></td></tr>
 
 </div>
 </div>
-<a id="a5cb803da522d50c9cdb9eaeb473e625a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5cb803da522d50c9cdb9eaeb473e625a">&#9670;&nbsp;</a></span>i2c_read_serial()</h2>
+<a id="a0b7dafcc0420bb4bd3b957d17b82ea75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b7dafcc0420bb4bd3b957d17b82ea75">&#9670;&nbsp;</a></span>i2c_read_serial()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -376,7 +384,7 @@ Variable</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramtype">char *&#160;</td>
           <td class="paramname">, </td>
         </tr>
         <tr>
@@ -392,9 +400,9 @@ Variable</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                                                                      {</div>
+<div class="fragment"><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                                                                   {</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordtype">char</span> msg[50];</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    uint8_t targetAddr = (addr&lt;&lt;1)+1; <span class="comment">// Laver addressen om til 8 bit med READ condition</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    uint8_t targetAddr = (uint8_t)((addr&lt;&lt;1)+1); <span class="comment">// Laver addressen om til 8 bit med READ condition</span></div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    </div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <a class="code" href="i2c_8c.html#adb646b67ce754741a06e63ea28d05259">i2c_master_wait</a>();</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <a class="code" href="i2c_8c.html#a02d93c2bcdbbee7a791b77b0cf12467f">i2c_master_start</a>();</div>
@@ -403,14 +411,14 @@ Variable</h2></td></tr>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordflow">while</span>(SSP1STATbits.R_nW) {};</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    </div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keywordflow">if</span>(SSP1CON2bits.ACKSTAT == 0) {</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="keywordflow">for</span> (uint8_t i=0; i &lt; <a class="code" href="esp8266_8c.html#af9d495c1655d813d553030485d00fea7">length</a> ; i++) {</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="keywordflow">for</span> (uint8_t i=0; i &lt; length ; i++) {</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            SSP1CON2bits.RCEN = 1;</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            <span class="keywordflow">while</span>(SSP1CON2bits.RCEN) {};</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            </div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            <a class="code" href="i2c_8h.html#a8eac694cd48788e914ae973b41d1b8ec">data_out</a>[i] = SSP1BUF;</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            </div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            <span class="comment">// Sender ACK eller NACK til sidst</span></div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            <span class="keywordflow">if</span>( i != <a class="code" href="esp8266_8c.html#af9d495c1655d813d553030485d00fea7">length</a> -1)<span class="comment">// Sender ACK eller NACK til sidst</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            <span class="keywordflow">if</span>( i != length -1)<span class="comment">// Sender ACK eller NACK til sidst</span></div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;                <a class="code" href="i2c_8c.html#a6caad88441987f83268d336d4322d07d">i2c_master_ack</a>();</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;            <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                <a class="code" href="i2c_8c.html#ae60d3dfb3e2bcfacd1bbca9debd6e35c">i2c_master_nack</a>();</div>
@@ -437,9 +445,9 @@ Variable</h2></td></tr>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="preprocessor">    #endif</span></div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Indeholder referencer til <a class="el" href="#l00032">data_out</a>, <a class="el" href="#l00453">esp_terminalTransmit()</a>, <a class="el" href="#l00187">i2c_master_ack()</a>, <a class="el" href="#l00194">i2c_master_nack()</a>, <a class="el" href="#l00175">i2c_master_start()</a>, <a class="el" href="#l00181">i2c_master_stop()</a>, <a class="el" href="#l00170">i2c_master_wait()</a> og <a class="el" href="#l00315">length</a>.</p>
+<p class="reference">Indeholder referencer til <a class="el" href="#l00030">data_out</a>, <a class="el" href="#l00453">esp_terminalTransmit()</a>, <a class="el" href="#l00187">i2c_master_ack()</a>, <a class="el" href="#l00194">i2c_master_nack()</a>, <a class="el" href="#l00175">i2c_master_start()</a>, <a class="el" href="#l00181">i2c_master_stop()</a> og <a class="el" href="#l00170">i2c_master_wait()</a>.</p>
 
-<p class="reference">Refereret til af <a class="el" href="#l00062">eeprom_dumpLogData()</a>, <a class="el" href="#l00038">eeprom_logData()</a>, <a class="el" href="#l00018">eeprom_testData()</a>, <a class="el" href="#l00355">getDay()</a>, <a class="el" href="#l00322">getHour()</a>, <a class="el" href="#l00300">getMinutes()</a>, <a class="el" href="#l00278">getSeconds()</a>, <a class="el" href="#l00022">rtc_getTimeAll()</a>, <a class="el" href="#l00016">sensor_getReading()</a> og <a class="el" href="#l00010">sensor_testTempSensor()</a>.</p>
+<p class="reference">Refereret til af <a class="el" href="#l00062">eeprom_dumpLogData()</a>, <a class="el" href="#l00038">eeprom_logData()</a>, <a class="el" href="#l00018">eeprom_testData()</a>, <a class="el" href="#l00336">rtc_adafruit_getDay()</a>, <a class="el" href="#l00303">rtc_adafruit_getHour()</a>, <a class="el" href="#l00281">rtc_adafruit_getMinutes()</a>, <a class="el" href="#l00259">rtc_adafruit_getSeconds()</a>, <a class="el" href="#l00034">rtc_adafruit_getTimeAll()</a>, <a class="el" href="#l00320">rtc_ds_1337_getDay()</a>, <a class="el" href="#l00289">rtc_ds_1337_getHour()</a>, <a class="el" href="#l00269">rtc_ds_1337_getMinutes()</a>, <a class="el" href="#l00247">rtc_ds_1337_getSeconds()</a>, <a class="el" href="#l00022">rtc_ds_1337_getTimeAll()</a>, <a class="el" href="#l00016">sensor_getReading()</a> og <a class="el" href="#l00010">sensor_testTempSensor()</a>.</p>
 
 </div>
 </div>
@@ -477,7 +485,7 @@ Variable</h2></td></tr>
 <div class="fragment"><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                                                                {</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">char</span> msg[50];</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    uint8_t targetAddr = addr&lt;&lt;1; <span class="comment">// Laver addressen om til 8 bit med WRITE condition</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    uint8_t targetAddr = (uint8_t)(addr&lt;&lt;1); <span class="comment">// Laver addressen om til 8 bit med WRITE condition</span></div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">    #ifdef debug</span></div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        printf(<span class="stringliteral">&quot;\r\n***********WRITE****************\r\n&quot;</span>);</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">    #endif</span></div>
@@ -493,14 +501,14 @@ Variable</h2></td></tr>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            printf(<span class="stringliteral">&quot;ACK - Skrev adresse: 0x%02X\r\n&quot;</span>, targetAddr);</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">        #endif</span></div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordflow">for</span> (uint8_t i=0; i &lt; <a class="code" href="esp8266_8c.html#af9d495c1655d813d553030485d00fea7">length</a> ; i++) {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordflow">for</span> (uint8_t i=0; i &lt; length ; i++) {</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">            #ifdef debug</span></div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                printf(<span class="stringliteral">&quot;Data: 0x%02X\r\n&quot;</span>, data[i]);</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">            #endif</span></div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            SSP1BUF = (uint8_t) data[i];</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <span class="keywordflow">while</span>(SSP1STATbits.R_nW);</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <span class="keywordflow">if</span>( SSP1CON2bits.ACKSTAT == 0 ) { <span class="comment">// Hvis vi fÃĨr en Acknowledge</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <span class="keywordflow">if</span>( SSP1CON2bits.ACKSTAT == 0 ) { <span class="comment">// Hvis vi får en Acknowledge</span></div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">                #ifdef debug</span></div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                    printf(<span class="stringliteral">&quot;ACK - Skrev data: 0x%02X - %c\r\n&quot;</span>, data[i], data[i]);</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">                #endif</span></div>
@@ -539,9 +547,9 @@ Variable</h2></td></tr>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="preprocessor">    #endif</span></div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Indeholder referencer til <a class="el" href="#l00093">States::error</a>, <a class="el" href="#l00175">i2c_master_start()</a>, <a class="el" href="#l00181">i2c_master_stop()</a>, <a class="el" href="#l00170">i2c_master_wait()</a>, <a class="el" href="#l00315">length</a> og <a class="el" href="#l00099">states</a>.</p>
+<p class="reference">Indeholder referencer til <a class="el" href="#l00096">States::error</a>, <a class="el" href="#l00175">i2c_master_start()</a>, <a class="el" href="#l00181">i2c_master_stop()</a>, <a class="el" href="#l00170">i2c_master_wait()</a> og <a class="el" href="#l00102">states</a>.</p>
 
-<p class="reference">Refereret til af <a class="el" href="#l00055">eeprom_initEeprom()</a>, <a class="el" href="#l00038">eeprom_logData()</a>, <a class="el" href="#l00018">eeprom_testData()</a>, <a class="el" href="#l00355">getDay()</a>, <a class="el" href="#l00322">getHour()</a>, <a class="el" href="#l00300">getMinutes()</a>, <a class="el" href="#l00278">getSeconds()</a>, <a class="el" href="#l00038">i2c_portScan()</a>, <a class="el" href="#l00014">lcd_displayInit()</a>, <a class="el" href="#l00031">lcd_write()</a>, <a class="el" href="#l00022">rtc_getTimeAll()</a>, <a class="el" href="#l00224">rtc_setTimeAll()</a>, <a class="el" href="#l00016">sensor_getReading()</a>, <a class="el" href="#l00010">sensor_testTempSensor()</a>, <a class="el" href="#l00112">sensor_updateHumidity()</a>, <a class="el" href="#l00096">sensor_updateTemperature()</a>, <a class="el" href="#l00471">setAlarm1Minutes()</a>, <a class="el" href="#l00366">setDay()</a>, <a class="el" href="#l00333">setHour()</a>, <a class="el" href="#l00311">setMinutes()</a>, <a class="el" href="#l00380">setMonth()</a>, <a class="el" href="#l00289">setSeconds()</a> og <a class="el" href="#l00388">setYear()</a>.</p>
+<p class="reference">Refereret til af <a class="el" href="#l00055">eeprom_initEeprom()</a>, <a class="el" href="#l00038">eeprom_logData()</a>, <a class="el" href="#l00018">eeprom_testData()</a>, <a class="el" href="#l00038">i2c_portScan()</a>, <a class="el" href="#l00014">lcd_displayInit()</a>, <a class="el" href="#l00031">lcd_write()</a>, <a class="el" href="#l00336">rtc_adafruit_getDay()</a>, <a class="el" href="#l00303">rtc_adafruit_getHour()</a>, <a class="el" href="#l00281">rtc_adafruit_getMinutes()</a>, <a class="el" href="#l00259">rtc_adafruit_getSeconds()</a>, <a class="el" href="#l00034">rtc_adafruit_getTimeAll()</a>, <a class="el" href="#l00450">rtc_adafruit_setAlarm1Minutes()</a>, <a class="el" href="#l00345">rtc_adafruit_setDay()</a>, <a class="el" href="#l00314">rtc_adafruit_setHour()</a>, <a class="el" href="#l00292">rtc_adafruit_setMinutes()</a>, <a class="el" href="#l00359">rtc_adafruit_setMonth()</a>, <a class="el" href="#l00270">rtc_adafruit_setSeconds()</a>, <a class="el" href="#l00236">rtc_adafruit_setTimeAll()</a>, <a class="el" href="#l00367">rtc_adafruit_setYear()</a>, <a class="el" href="#l00320">rtc_ds_1337_getDay()</a>, <a class="el" href="#l00289">rtc_ds_1337_getHour()</a>, <a class="el" href="#l00269">rtc_ds_1337_getMinutes()</a>, <a class="el" href="#l00247">rtc_ds_1337_getSeconds()</a>, <a class="el" href="#l00022">rtc_ds_1337_getTimeAll()</a>, <a class="el" href="#l00436">rtc_ds_1337_setAlarm1Minutes()</a>, <a class="el" href="#l00329">rtc_ds_1337_setDay()</a>, <a class="el" href="#l00298">rtc_ds_1337_setHour()</a>, <a class="el" href="#l00278">rtc_ds_1337_setMinutes()</a>, <a class="el" href="#l00345">rtc_ds_1337_setMonth()</a>, <a class="el" href="#l00258">rtc_ds_1337_setSeconds()</a>, <a class="el" href="#l00224">rtc_ds_1337_setTimeAll()</a>, <a class="el" href="#l00353">rtc_ds_1337_setYear()</a>, <a class="el" href="#l00016">sensor_getReading()</a>, <a class="el" href="#l00010">sensor_testTempSensor()</a>, <a class="el" href="#l00112">sensor_updateHumidity()</a> og <a class="el" href="#l00096">sensor_updateTemperature()</a>.</p>
 
 </div>
 </div>
@@ -564,20 +572,19 @@ Variable</h2></td></tr>
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="ai2c_8h_html_a8eac694cd48788e914ae973b41d1b8ec"><div class="ttname"><a href="i2c_8h.html#a8eac694cd48788e914ae973b41d1b8ec">data_out</a></div><div class="ttdeci">uint8_t data_out[4]</div><div class="ttdef"><b>Definition:</b> i2c.h:32</div></div>
+<div class="ttc" id="ai2c_8h_html_a8eac694cd48788e914ae973b41d1b8ec"><div class="ttname"><a href="i2c_8h.html#a8eac694cd48788e914ae973b41d1b8ec">data_out</a></div><div class="ttdeci">uint8_t data_out[4]</div><div class="ttdef"><b>Definition:</b> i2c.h:30</div></div>
 <div class="ttc" id="ai2c_8c_html_a6caad88441987f83268d336d4322d07d"><div class="ttname"><a href="i2c_8c.html#a6caad88441987f83268d336d4322d07d">i2c_master_ack</a></div><div class="ttdeci">void i2c_master_ack(void)</div><div class="ttdef"><b>Definition:</b> i2c.c:187</div></div>
-<div class="ttc" id="ai2c_8h_html_ae3bb1645bd52518d362f3a02a2c66700"><div class="ttname"><a href="i2c_8h.html#ae3bb1645bd52518d362f3a02a2c66700">SCL_IO</a></div><div class="ttdeci">#define SCL_IO</div><div class="ttdef"><b>Definition:</b> i2c.h:27</div></div>
-<div class="ttc" id="aesp8266_8h_html_a4952c1b7f3ed488d08e34f466ba70db8"><div class="ttname"><a href="esp8266_8h.html#a4952c1b7f3ed488d08e34f466ba70db8">states</a></div><div class="ttdeci">states_t states</div><div class="ttdef"><b>Definition:</b> esp8266.h:99</div></div>
+<div class="ttc" id="ai2c_8h_html_ae3bb1645bd52518d362f3a02a2c66700"><div class="ttname"><a href="i2c_8h.html#ae3bb1645bd52518d362f3a02a2c66700">SCL_IO</a></div><div class="ttdeci">#define SCL_IO</div><div class="ttdef"><b>Definition:</b> i2c.h:25</div></div>
+<div class="ttc" id="aesp8266_8h_html_a4952c1b7f3ed488d08e34f466ba70db8"><div class="ttname"><a href="esp8266_8h.html#a4952c1b7f3ed488d08e34f466ba70db8">states</a></div><div class="ttdeci">states_t states</div><div class="ttdef"><b>Definition:</b> esp8266.h:102</div></div>
 <div class="ttc" id="aesp8266_8c_html_aa5e1cb340835d3ac9cb4c407ca03c1a2"><div class="ttname"><a href="esp8266_8c.html#aa5e1cb340835d3ac9cb4c407ca03c1a2">esp_terminalTransmit</a></div><div class="ttdeci">void esp_terminalTransmit(char *sendmsg)</div><div class="ttdef"><b>Definition:</b> esp8266.c:453</div></div>
 <div class="ttc" id="ai2c_8c_html_a02d93c2bcdbbee7a791b77b0cf12467f"><div class="ttname"><a href="i2c_8c.html#a02d93c2bcdbbee7a791b77b0cf12467f">i2c_master_start</a></div><div class="ttdeci">void i2c_master_start(void)</div><div class="ttdef"><b>Definition:</b> i2c.c:175</div></div>
 <div class="ttc" id="ai2c_8c_html_adb646b67ce754741a06e63ea28d05259"><div class="ttname"><a href="i2c_8c.html#adb646b67ce754741a06e63ea28d05259">i2c_master_wait</a></div><div class="ttdeci">void i2c_master_wait(void)</div><div class="ttdef"><b>Definition:</b> i2c.c:170</div></div>
-<div class="ttc" id="astruct_states_html_a7a3172cc98e93d8eadfb9ab30373799e"><div class="ttname"><a href="struct_states.html#a7a3172cc98e93d8eadfb9ab30373799e">States::error</a></div><div class="ttdeci">bool error</div><div class="ttdef"><b>Definition:</b> esp8266.h:93</div></div>
-<div class="ttc" id="aesp8266_8c_html_af9d495c1655d813d553030485d00fea7"><div class="ttname"><a href="esp8266_8c.html#af9d495c1655d813d553030485d00fea7">length</a></div><div class="ttdeci">length</div><div class="ttdoc">UART kommandoer.</div><div class="ttdef"><b>Definition:</b> esp8266.c:315</div></div>
+<div class="ttc" id="astruct_states_html_a7a3172cc98e93d8eadfb9ab30373799e"><div class="ttname"><a href="struct_states.html#a7a3172cc98e93d8eadfb9ab30373799e">States::error</a></div><div class="ttdeci">bool error</div><div class="ttdef"><b>Definition:</b> esp8266.h:96</div></div>
 <div class="ttc" id="adevice__config_8h_html_a024148e99a7143db044a48216664d03d"><div class="ttname"><a href="device__config_8h.html#a024148e99a7143db044a48216664d03d">_XTAL_FREQ</a></div><div class="ttdeci">#define _XTAL_FREQ</div><div class="ttdoc">@Generated PIC10 / PIC12 / PIC16 / PIC18 MCUs Header File</div><div class="ttdef"><b>Definition:</b> device_config.h:50</div></div>
 <div class="ttc" id="ai2c_8c_html_a4524baa32fdd90e664342c610dc1d177"><div class="ttname"><a href="i2c_8c.html#a4524baa32fdd90e664342c610dc1d177">i2c_master_stop</a></div><div class="ttdeci">void i2c_master_stop(void)</div><div class="ttdef"><b>Definition:</b> i2c.c:181</div></div>
-<div class="ttc" id="ai2c_8h_html_a6890442e1cc24a0d61597a13576b8727"><div class="ttname"><a href="i2c_8h.html#a6890442e1cc24a0d61597a13576b8727">SDA</a></div><div class="ttdeci">#define SDA</div><div class="ttdef"><b>Definition:</b> i2c.h:26</div></div>
-<div class="ttc" id="ai2c_8h_html_ab5ffc4751921608954bb7a5687566b2d"><div class="ttname"><a href="i2c_8h.html#ab5ffc4751921608954bb7a5687566b2d">SCL</a></div><div class="ttdeci">#define SCL</div><div class="ttdoc">I2C generelle kommandoer.</div><div class="ttdef"><b>Definition:</b> i2c.h:25</div></div>
-<div class="ttc" id="ai2c_8h_html_accdabacb169a59828fa37ff89d8240d3"><div class="ttname"><a href="i2c_8h.html#accdabacb169a59828fa37ff89d8240d3">SDA_IO</a></div><div class="ttdeci">#define SDA_IO</div><div class="ttdef"><b>Definition:</b> i2c.h:28</div></div>
+<div class="ttc" id="ai2c_8h_html_a6890442e1cc24a0d61597a13576b8727"><div class="ttname"><a href="i2c_8h.html#a6890442e1cc24a0d61597a13576b8727">SDA</a></div><div class="ttdeci">#define SDA</div><div class="ttdef"><b>Definition:</b> i2c.h:24</div></div>
+<div class="ttc" id="ai2c_8h_html_ab5ffc4751921608954bb7a5687566b2d"><div class="ttname"><a href="i2c_8h.html#ab5ffc4751921608954bb7a5687566b2d">SCL</a></div><div class="ttdeci">#define SCL</div><div class="ttdef"><b>Definition:</b> i2c.h:23</div></div>
+<div class="ttc" id="ai2c_8h_html_accdabacb169a59828fa37ff89d8240d3"><div class="ttname"><a href="i2c_8h.html#accdabacb169a59828fa37ff89d8240d3">SDA_IO</a></div><div class="ttdeci">#define SDA_IO</div><div class="ttdef"><b>Definition:</b> i2c.h:26</div></div>
 <div class="ttc" id="ai2c_8c_html_a2afd8da70c8c74e56659da3dd6f60dd0"><div class="ttname"><a href="i2c_8c.html#a2afd8da70c8c74e56659da3dd6f60dd0">i2c_write_serial</a></div><div class="ttdeci">void i2c_write_serial(uint8_t addr, char *data, uint8_t length)</div><div class="ttdef"><b>Definition:</b> i2c.c:46</div></div>
 <div class="ttc" id="ai2c_8c_html_ae60d3dfb3e2bcfacd1bbca9debd6e35c"><div class="ttname"><a href="i2c_8c.html#ae60d3dfb3e2bcfacd1bbca9debd6e35c">i2c_master_nack</a></div><div class="ttdeci">void i2c_master_nack(void)</div><div class="ttdef"><b>Definition:</b> i2c.c:194</div></div>
 <!-- start footer part -->

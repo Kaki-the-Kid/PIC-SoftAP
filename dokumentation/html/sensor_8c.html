@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PIC SoftAP: C:/Users/karst/OneDrive - AARHUS TECH/Dokumenter/Workspace/MPLABXProjects/Embedded Controller 3/SoftAP_webserver.X/sensor/sensor.c filreference</title>
+<title>PIC SoftAP: C:/Users/krs/OneDrive - AARHUS TECH/Dokumenter/Workspace/MPLABXProjects/SoftAP_webserver.X/sensor/sensor.c filreference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -101,11 +101,11 @@ Funktioner</h2></td></tr>
 <div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;                             {</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    uint32_t tmp_moist = 0;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    int32_t  tmp_temp  = 0;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    uint8_t  <a class="code" href="esp8266_8c.html#af9d495c1655d813d553030485d00fea7">length</a>    = 0;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    uint8_t  length    = 0;</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="comment">//LÃ¦s fra sensor</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="i2c_8c.html#a2afd8da70c8c74e56659da3dd6f60dd0">i2c_write_serial</a>(<a class="code" href="sensor_8h.html#abd4afcc16efaddacd3e1078677f09aea">temperature_addr</a>, 0, 0);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="i2c_8c.html#abeb4d291e6ada6f8ad8cdfde914e92ab">i2c_read_serial</a>(<a class="code" href="sensor_8h.html#abd4afcc16efaddacd3e1078677f09aea">temperature_addr</a>, <a class="code" href="i2c_8h.html#a8eac694cd48788e914ae973b41d1b8ec">data_out</a>, 4);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="comment">//Læs fra sensor</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="i2c_8c.html#a2afd8da70c8c74e56659da3dd6f60dd0">i2c_write_serial</a>(<a class="code" href="sensor_8h.html#af33c45cd09140f4746de80027e49e656">temperature_addr</a>, 0, 0);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="i2c_8c.html#a37341f60c7a53b22056ff2c3b014b8da">i2c_read_serial</a>(<a class="code" href="sensor_8h.html#af33c45cd09140f4746de80027e49e656">temperature_addr</a>, <a class="code" href="i2c_8h.html#a8eac694cd48788e914ae973b41d1b8ec">data_out</a>, 4);</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;   </div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    tmp_moist  = ( <a class="code" href="i2c_8h.html#a8eac694cd48788e914ae973b41d1b8ec">data_out</a>[0] &amp; 0b00111111 ) &lt;&lt; 8;</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    tmp_moist += <a class="code" href="i2c_8h.html#a8eac694cd48788e914ae973b41d1b8ec">data_out</a>[1];</div>
@@ -123,20 +123,20 @@ Funktioner</h2></td></tr>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    tmp_temp /= 16382;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    tmp_temp -= 4000;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="comment">// IndsÃ¦tter start kommando: skriver tegn</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="sensor_8h.html#a9eec345fbe35bae76df320fc80e492d6">tmp_string</a>[<a class="code" href="esp8266_8c.html#af9d495c1655d813d553030485d00fea7">length</a>++] = 0x40;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="comment">// Indsætter start kommando: skriver tegn</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="sensor_8h.html#a9eec345fbe35bae76df320fc80e492d6">tmp_string</a>[length++] = 0x40;</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    </div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="comment">// Vi tjekker om tallet er negativt</span></div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordflow">if</span>(tmp_temp &lt; 0) {</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <a class="code" href="sensor_8h.html#a9eec345fbe35bae76df320fc80e492d6">tmp_string</a>[<a class="code" href="esp8266_8c.html#af9d495c1655d813d553030485d00fea7">length</a>++] = 0x2D;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <a class="code" href="sensor_8h.html#a9eec345fbe35bae76df320fc80e492d6">tmp_string</a>[length++] = 0x2D;</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        tmp_temp *= -1;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    }</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="comment">// MÃ¥ler pÃ¥ sidste ciffer 00,0x</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="comment">// Måler på sidste ciffer 00,0x</span></div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    int8_t decimal2 = tmp_temp % 10;</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    tmp_temp /= 10;</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="comment">// MÃ¥ler pÃ¥ 2. sidste ciffer 00,x</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="comment">// Måler på 2. sidste ciffer 00,x</span></div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    int8_t decimal1 = tmp_temp % 10;</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    </div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">if</span>(decimal2 &gt;= 5 ) {</div>
@@ -152,19 +152,32 @@ Funktioner</h2></td></tr>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        tmp_temp /= 10;</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        uint8_t tens = (uint8_t) tmp_temp;</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <a class="code" href="sensor_8h.html#a9eec345fbe35bae76df320fc80e492d6">tmp_string</a>[<a class="code" href="esp8266_8c.html#af9d495c1655d813d553030485d00fea7">length</a>++] = tens | 0b00110000; <span class="comment">// Laver tallet til ASCII</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <a class="code" href="sensor_8h.html#a9eec345fbe35bae76df320fc80e492d6">tmp_string</a>[<a class="code" href="esp8266_8c.html#af9d495c1655d813d553030485d00fea7">length</a>++] = ones | 0b00110000; <span class="comment">// --&quot;--</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <a class="code" href="sensor_8h.html#a9eec345fbe35bae76df320fc80e492d6">tmp_string</a>[length++] = tens | 0b00110000; <span class="comment">// Laver tallet til ASCII</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <a class="code" href="sensor_8h.html#a9eec345fbe35bae76df320fc80e492d6">tmp_string</a>[length++] = ones | 0b00110000; <span class="comment">// --&quot;--</span></div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <a class="code" href="sensor_8h.html#a9eec345fbe35bae76df320fc80e492d6">tmp_string</a>[<a class="code" href="esp8266_8c.html#af9d495c1655d813d553030485d00fea7">length</a>++] = tmp_temp;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <a class="code" href="sensor_8h.html#a9eec345fbe35bae76df320fc80e492d6">tmp_string</a>[length++] = tmp_temp;</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    }</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    </div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="comment">// Formatterer komma tal</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <a class="code" href="sensor_8h.html#a9eec345fbe35bae76df320fc80e492d6">tmp_string</a>[<a class="code" href="esp8266_8c.html#af9d495c1655d813d553030485d00fea7">length</a>++] = 0x2C; <span class="comment">//Komma tegn</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <a class="code" href="sensor_8h.html#a9eec345fbe35bae76df320fc80e492d6">tmp_string</a>[<a class="code" href="esp8266_8c.html#af9d495c1655d813d553030485d00fea7">length</a>++] = decimal1 | 0b00110000; <span class="comment">// Laver tallet til ASCII;</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <a class="code" href="sensor_8h.html#a9eec345fbe35bae76df320fc80e492d6">tmp_string</a>[length++] = 0x2C; <span class="comment">//Komma tegn</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <a class="code" href="sensor_8h.html#a9eec345fbe35bae76df320fc80e492d6">tmp_string</a>[length++] = decimal1 | 0b00110000; <span class="comment">// Laver tallet til ASCII;</span></div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="comment">// SÃ¦tter gradtegn pÃ¥</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="comment">// Sætter gradtegn på     //tmp_string[length++] = 0xDF; // Eksisterende grad tegn
+    tmp_string[length++] = 0x00;
+    /*tmp_string[length++] = 0x01;
+    tmp_string[length++] = 0x02;
+    tmp_string[length++] = 0x03;
+    tmp_string[length++] = 0x04;
+    tmp_string[length++] = 0x05;
+    tmp_string[length++] = 0x06;
+    tmp_string[length++] = 0x07;*/
+
+    i2c_write_serial(display_addr, temp_pos, 2);
+    i2c_write_serial(display_addr, tmp_string, length);
+}
+</span> </div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="comment">//tmp_string[length++] = 0xDF; // Eksisterende grad tegn</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <a class="code" href="sensor_8h.html#a9eec345fbe35bae76df320fc80e492d6">tmp_string</a>[<a class="code" href="esp8266_8c.html#af9d495c1655d813d553030485d00fea7">length</a>++] = 0x00;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <a class="code" href="sensor_8h.html#a9eec345fbe35bae76df320fc80e492d6">tmp_string</a>[length++] = 0x00;</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="comment">/*tmp_string[length++] = 0x01;</span></div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment">    tmp_string[length++] = 0x02;</span></div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment">    tmp_string[length++] = 0x03;</span></div>
@@ -173,11 +186,11 @@ Funktioner</h2></td></tr>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment">    tmp_string[length++] = 0x06;</span></div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="comment">    tmp_string[length++] = 0x07;*/</span></div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <a class="code" href="i2c_8c.html#a2afd8da70c8c74e56659da3dd6f60dd0">i2c_write_serial</a>(<a class="code" href="lcd_8h.html#a8683f936ecb5cd7b43c33a01a435a7ba">display_addr</a>, (<span class="keywordtype">char</span>*) <a class="code" href="sensor_8h.html#ac7bc4c6b2054a016f7d53f237f1ebdd6">temp_pos</a>, 2);</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <a class="code" href="i2c_8c.html#a2afd8da70c8c74e56659da3dd6f60dd0">i2c_write_serial</a>(<a class="code" href="lcd_8h.html#a8683f936ecb5cd7b43c33a01a435a7ba">display_addr</a>, <a class="code" href="sensor_8h.html#a9eec345fbe35bae76df320fc80e492d6">tmp_string</a>, <a class="code" href="esp8266_8c.html#af9d495c1655d813d553030485d00fea7">length</a>);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <a class="code" href="i2c_8c.html#a2afd8da70c8c74e56659da3dd6f60dd0">i2c_write_serial</a>(<a class="code" href="lcd_8h.html#a8683f936ecb5cd7b43c33a01a435a7ba">display_addr</a>, <a class="code" href="sensor_8h.html#ac7bc4c6b2054a016f7d53f237f1ebdd6">temp_pos</a>, 2);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <a class="code" href="i2c_8c.html#a2afd8da70c8c74e56659da3dd6f60dd0">i2c_write_serial</a>(<a class="code" href="lcd_8h.html#a8683f936ecb5cd7b43c33a01a435a7ba">display_addr</a>, <a class="code" href="sensor_8h.html#a9eec345fbe35bae76df320fc80e492d6">tmp_string</a>, length);</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Indeholder referencer til <a class="el" href="#l00032">data_out</a>, <a class="el" href="#l00023">display_addr</a>, <a class="el" href="#l00112">i2c_read_serial()</a>, <a class="el" href="#l00046">i2c_write_serial()</a>, <a class="el" href="#l00315">length</a>, <a class="el" href="#l00112">sensor_updateHumidity()</a>, <a class="el" href="#l00031">temp_pos</a>, <a class="el" href="#l00026">temperature_addr</a> og <a class="el" href="#l00034">tmp_string</a>.</p>
+<p class="reference">Indeholder referencer til <a class="el" href="#l00030">data_out</a>, <a class="el" href="#l00025">display_addr</a>, <a class="el" href="#l00112">i2c_read_serial()</a>, <a class="el" href="#l00046">i2c_write_serial()</a>, <a class="el" href="#l00112">sensor_updateHumidity()</a>, <a class="el" href="#l00032">temp_pos</a>, <a class="el" href="#l00027">temperature_addr</a> og <a class="el" href="#l00035">tmp_string</a>.</p>
 
 </div>
 </div>
@@ -199,11 +212,11 @@ Funktioner</h2></td></tr>
 
 <p>Temperatur sensor. </p>
 <div class="fragment"><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;                                 {</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <a class="code" href="i2c_8c.html#a2afd8da70c8c74e56659da3dd6f60dd0">i2c_write_serial</a>(<a class="code" href="sensor_8h.html#abd4afcc16efaddacd3e1078677f09aea">temperature_addr</a>, 0, 0);</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="i2c_8c.html#abeb4d291e6ada6f8ad8cdfde914e92ab">i2c_read_serial</a>(<a class="code" href="sensor_8h.html#abd4afcc16efaddacd3e1078677f09aea">temperature_addr</a>, <a class="code" href="i2c_8h.html#a8eac694cd48788e914ae973b41d1b8ec">data_out</a>, 4);</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <a class="code" href="i2c_8c.html#a2afd8da70c8c74e56659da3dd6f60dd0">i2c_write_serial</a>(<a class="code" href="sensor_8h.html#af33c45cd09140f4746de80027e49e656">temperature_addr</a>, 0, 0);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="i2c_8c.html#a37341f60c7a53b22056ff2c3b014b8da">i2c_read_serial</a>(<a class="code" href="sensor_8h.html#af33c45cd09140f4746de80027e49e656">temperature_addr</a>, <a class="code" href="i2c_8h.html#a8eac694cd48788e914ae973b41d1b8ec">data_out</a>, 4);</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Indeholder referencer til <a class="el" href="#l00032">data_out</a>, <a class="el" href="#l00112">i2c_read_serial()</a>, <a class="el" href="#l00046">i2c_write_serial()</a> og <a class="el" href="#l00026">temperature_addr</a>.</p>
+<p class="reference">Indeholder referencer til <a class="el" href="#l00030">data_out</a>, <a class="el" href="#l00112">i2c_read_serial()</a>, <a class="el" href="#l00046">i2c_write_serial()</a> og <a class="el" href="#l00027">temperature_addr</a>.</p>
 
 </div>
 </div>
@@ -243,11 +256,11 @@ Funktioner</h2></td></tr>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        output[3] = moist | 0b00110000;</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    }</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <a class="code" href="i2c_8c.html#a2afd8da70c8c74e56659da3dd6f60dd0">i2c_write_serial</a>(<a class="code" href="lcd_8h.html#a8683f936ecb5cd7b43c33a01a435a7ba">display_addr</a>, (<span class="keywordtype">char</span>*) <a class="code" href="sensor_8h.html#af641e3ac716e60485e1748d9e013a15d">moist_pos</a>, 2);</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <a class="code" href="i2c_8c.html#a2afd8da70c8c74e56659da3dd6f60dd0">i2c_write_serial</a>(<a class="code" href="lcd_8h.html#a8683f936ecb5cd7b43c33a01a435a7ba">display_addr</a>, output, 4);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <a class="code" href="i2c_8c.html#a2afd8da70c8c74e56659da3dd6f60dd0">i2c_write_serial</a>(<a class="code" href="lcd_8h.html#a8683f936ecb5cd7b43c33a01a435a7ba">display_addr</a>, *<a class="code" href="sensor_8h.html#af641e3ac716e60485e1748d9e013a15d">moist_pos</a>, 2);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <a class="code" href="i2c_8c.html#a2afd8da70c8c74e56659da3dd6f60dd0">i2c_write_serial</a>(<a class="code" href="lcd_8h.html#a8683f936ecb5cd7b43c33a01a435a7ba">display_addr</a>, *output, 4);</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Indeholder referencer til <a class="el" href="#l00023">display_addr</a>, <a class="el" href="#l00046">i2c_write_serial()</a> og <a class="el" href="#l00032">moist_pos</a>.</p>
+<p class="reference">Indeholder referencer til <a class="el" href="#l00025">display_addr</a>, <a class="el" href="#l00046">i2c_write_serial()</a> og <a class="el" href="#l00033">moist_pos</a>.</p>
 
 <p class="reference">Refereret til af <a class="el" href="#l00016">sensor_getReading()</a>.</p>
 
@@ -270,36 +283,35 @@ Funktioner</h2></td></tr>
 </div><div class="memdoc">
 <div class="fragment"><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                                           {</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordflow">if</span>(temp &lt; 0) {</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <a class="code" href="i2c_8c.html#a2afd8da70c8c74e56659da3dd6f60dd0">i2c_write_serial</a>(<a class="code" href="lcd_8h.html#a8683f936ecb5cd7b43c33a01a435a7ba">display_addr</a>, (<span class="keywordtype">char</span>*) <a class="code" href="sensor_8h.html#ac7bc4c6b2054a016f7d53f237f1ebdd6">temp_pos</a>, 2);</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <a class="code" href="i2c_8c.html#a2afd8da70c8c74e56659da3dd6f60dd0">i2c_write_serial</a>(<a class="code" href="lcd_8h.html#a8683f936ecb5cd7b43c33a01a435a7ba">display_addr</a>, (<span class="keywordtype">char</span>*) <a class="code" href="sensor_8h.html#afd2f05c788bfded35a08a7ff199d5c10">minus</a>, 2);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <a class="code" href="i2c_8c.html#a2afd8da70c8c74e56659da3dd6f60dd0">i2c_write_serial</a>(<a class="code" href="lcd_8h.html#a8683f936ecb5cd7b43c33a01a435a7ba">display_addr</a>, <a class="code" href="sensor_8h.html#ac7bc4c6b2054a016f7d53f237f1ebdd6">temp_pos</a>, 2);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <a class="code" href="i2c_8c.html#a2afd8da70c8c74e56659da3dd6f60dd0">i2c_write_serial</a>(<a class="code" href="lcd_8h.html#a8683f936ecb5cd7b43c33a01a435a7ba">display_addr</a>, <a class="code" href="sensor_8h.html#afd2f05c788bfded35a08a7ff199d5c10">minus</a>, 2);</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        temp *= -1;</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (temp &gt; 9) {</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        uint8_t tens = (uint8_t) (temp / 10) | 0b00110000;</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        uint8_t ones = (uint8_t) (temp % 10) | 0b00110000;        </div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keywordtype">char</span>    output[] = {0x40, tens , ones, 3};</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        </div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <a class="code" href="i2c_8c.html#a2afd8da70c8c74e56659da3dd6f60dd0">i2c_write_serial</a>(<a class="code" href="lcd_8h.html#a8683f936ecb5cd7b43c33a01a435a7ba">display_addr</a>, (<span class="keywordtype">char</span>*) <a class="code" href="sensor_8h.html#ac7bc4c6b2054a016f7d53f237f1ebdd6">temp_pos</a>, 2);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <a class="code" href="i2c_8c.html#a2afd8da70c8c74e56659da3dd6f60dd0">i2c_write_serial</a>(<a class="code" href="lcd_8h.html#a8683f936ecb5cd7b43c33a01a435a7ba">display_addr</a>, <a class="code" href="sensor_8h.html#ac7bc4c6b2054a016f7d53f237f1ebdd6">temp_pos</a>, 2);</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <a class="code" href="i2c_8c.html#a2afd8da70c8c74e56659da3dd6f60dd0">i2c_write_serial</a>(<a class="code" href="lcd_8h.html#a8683f936ecb5cd7b43c33a01a435a7ba">display_addr</a>, output, 3);</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    }</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Indeholder referencer til <a class="el" href="#l00023">display_addr</a>, <a class="el" href="#l00046">i2c_write_serial()</a>, <a class="el" href="#l00029">minus</a> og <a class="el" href="#l00031">temp_pos</a>.</p>
+<p class="reference">Indeholder referencer til <a class="el" href="#l00025">display_addr</a>, <a class="el" href="#l00046">i2c_write_serial()</a>, <a class="el" href="#l00030">minus</a> og <a class="el" href="#l00032">temp_pos</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="asensor_8h_html_ac7bc4c6b2054a016f7d53f237f1ebdd6"><div class="ttname"><a href="sensor_8h.html#ac7bc4c6b2054a016f7d53f237f1ebdd6">temp_pos</a></div><div class="ttdeci">const char temp_pos[]</div><div class="ttdef"><b>Definition:</b> sensor.h:31</div></div>
-<div class="ttc" id="ai2c_8h_html_a8eac694cd48788e914ae973b41d1b8ec"><div class="ttname"><a href="i2c_8h.html#a8eac694cd48788e914ae973b41d1b8ec">data_out</a></div><div class="ttdeci">uint8_t data_out[4]</div><div class="ttdef"><b>Definition:</b> i2c.h:32</div></div>
-<div class="ttc" id="asensor_8h_html_abd4afcc16efaddacd3e1078677f09aea"><div class="ttname"><a href="sensor_8h.html#abd4afcc16efaddacd3e1078677f09aea">temperature_addr</a></div><div class="ttdeci">const uint8_t temperature_addr</div><div class="ttdoc">File: sensor.h Author: krs.</div><div class="ttdef"><b>Definition:</b> sensor.h:26</div></div>
-<div class="ttc" id="ai2c_8c_html_abeb4d291e6ada6f8ad8cdfde914e92ab"><div class="ttname"><a href="i2c_8c.html#abeb4d291e6ada6f8ad8cdfde914e92ab">i2c_read_serial</a></div><div class="ttdeci">void i2c_read_serial(uint8_t addr, uint8_t *data_out, uint8_t length)</div><div class="ttdef"><b>Definition:</b> i2c.c:112</div></div>
-<div class="ttc" id="alcd_8h_html_a8683f936ecb5cd7b43c33a01a435a7ba"><div class="ttname"><a href="lcd_8h.html#a8683f936ecb5cd7b43c33a01a435a7ba">display_addr</a></div><div class="ttdeci">const uint8_t display_addr</div><div class="ttdoc">LCD generelle kommandoer.</div><div class="ttdef"><b>Definition:</b> lcd.h:23</div></div>
-<div class="ttc" id="asensor_8h_html_a9eec345fbe35bae76df320fc80e492d6"><div class="ttname"><a href="sensor_8h.html#a9eec345fbe35bae76df320fc80e492d6">tmp_string</a></div><div class="ttdeci">char tmp_string[0x0F]</div><div class="ttdef"><b>Definition:</b> sensor.h:34</div></div>
+<div class="ttc" id="asensor_8h_html_ac7bc4c6b2054a016f7d53f237f1ebdd6"><div class="ttname"><a href="sensor_8h.html#ac7bc4c6b2054a016f7d53f237f1ebdd6">temp_pos</a></div><div class="ttdeci">const char temp_pos[]</div><div class="ttdef"><b>Definition:</b> sensor.h:32</div></div>
+<div class="ttc" id="ai2c_8h_html_a8eac694cd48788e914ae973b41d1b8ec"><div class="ttname"><a href="i2c_8h.html#a8eac694cd48788e914ae973b41d1b8ec">data_out</a></div><div class="ttdeci">uint8_t data_out[4]</div><div class="ttdef"><b>Definition:</b> i2c.h:30</div></div>
+<div class="ttc" id="alcd_8h_html_a8683f936ecb5cd7b43c33a01a435a7ba"><div class="ttname"><a href="lcd_8h.html#a8683f936ecb5cd7b43c33a01a435a7ba">display_addr</a></div><div class="ttdeci">const uint8_t display_addr</div><div class="ttdef"><b>Definition:</b> lcd.h:25</div></div>
+<div class="ttc" id="asensor_8h_html_a9eec345fbe35bae76df320fc80e492d6"><div class="ttname"><a href="sensor_8h.html#a9eec345fbe35bae76df320fc80e492d6">tmp_string</a></div><div class="ttdeci">char tmp_string[0x0F]</div><div class="ttdef"><b>Definition:</b> sensor.h:35</div></div>
 <div class="ttc" id="asensor_8c_html_ac4f3c0b120f0cc21b307e8e3962a1883"><div class="ttname"><a href="sensor_8c.html#ac4f3c0b120f0cc21b307e8e3962a1883">sensor_updateHumidity</a></div><div class="ttdeci">void sensor_updateHumidity(uint8_t moist)</div><div class="ttdef"><b>Definition:</b> sensor.c:112</div></div>
-<div class="ttc" id="aesp8266_8c_html_af9d495c1655d813d553030485d00fea7"><div class="ttname"><a href="esp8266_8c.html#af9d495c1655d813d553030485d00fea7">length</a></div><div class="ttdeci">length</div><div class="ttdoc">UART kommandoer.</div><div class="ttdef"><b>Definition:</b> esp8266.c:315</div></div>
-<div class="ttc" id="asensor_8h_html_afd2f05c788bfded35a08a7ff199d5c10"><div class="ttname"><a href="sensor_8h.html#afd2f05c788bfded35a08a7ff199d5c10">minus</a></div><div class="ttdeci">const char minus[]</div><div class="ttdef"><b>Definition:</b> sensor.h:29</div></div>
+<div class="ttc" id="asensor_8h_html_af33c45cd09140f4746de80027e49e656"><div class="ttname"><a href="sensor_8h.html#af33c45cd09140f4746de80027e49e656">temperature_addr</a></div><div class="ttdeci">const char temperature_addr</div><div class="ttdef"><b>Definition:</b> sensor.h:27</div></div>
+<div class="ttc" id="ai2c_8c_html_a37341f60c7a53b22056ff2c3b014b8da"><div class="ttname"><a href="i2c_8c.html#a37341f60c7a53b22056ff2c3b014b8da">i2c_read_serial</a></div><div class="ttdeci">void i2c_read_serial(uint8_t addr, char *data_out, uint8_t length)</div><div class="ttdef"><b>Definition:</b> i2c.c:112</div></div>
+<div class="ttc" id="asensor_8h_html_afd2f05c788bfded35a08a7ff199d5c10"><div class="ttname"><a href="sensor_8h.html#afd2f05c788bfded35a08a7ff199d5c10">minus</a></div><div class="ttdeci">const char minus[]</div><div class="ttdef"><b>Definition:</b> sensor.h:30</div></div>
 <div class="ttc" id="ai2c_8c_html_a2afd8da70c8c74e56659da3dd6f60dd0"><div class="ttname"><a href="i2c_8c.html#a2afd8da70c8c74e56659da3dd6f60dd0">i2c_write_serial</a></div><div class="ttdeci">void i2c_write_serial(uint8_t addr, char *data, uint8_t length)</div><div class="ttdef"><b>Definition:</b> i2c.c:46</div></div>
-<div class="ttc" id="asensor_8h_html_af641e3ac716e60485e1748d9e013a15d"><div class="ttname"><a href="sensor_8h.html#af641e3ac716e60485e1748d9e013a15d">moist_pos</a></div><div class="ttdeci">const char moist_pos[]</div><div class="ttdef"><b>Definition:</b> sensor.h:32</div></div>
+<div class="ttc" id="asensor_8h_html_af641e3ac716e60485e1748d9e013a15d"><div class="ttname"><a href="sensor_8h.html#af641e3ac716e60485e1748d9e013a15d">moist_pos</a></div><div class="ttdeci">const char moist_pos[]</div><div class="ttdef"><b>Definition:</b> sensor.h:33</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

@@ -24,7 +24,7 @@ var NAVTREE =
 [
   [ "PIC SoftAP", "index.html", [
     [ "PIC SoftAP Project", "index.html", "index" ],
-    [ ":<em>Users_karst_OneDrive</em>-_AARHUS_TECH_Dokumenter_Workspace_MPLABXProjects_Embedded_Controller_3_SoftAP_webserver.X_README PIC-SoftAP", "md__c.html", null ],
+    [ ":<em>Users_krs_OneDrive</em>-_AARHUS_TECH_Dokumenter_Workspace_MPLABXProjects_SoftAP_webserver.X_README PIC-SoftAP", "md__c.html", null ],
     [ "Datastrukturer", "annotated.html", [
       [ "Datastrukturer", "annotated.html", "annotated_dup" ],
       [ "Indeks over datastrukturer", "classes.html", null ],
@@ -50,9 +50,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 ".html",
-"globals_func_r.html",
-"rtc_8c.html#a97f1febfde610df12b0a464ba3d8ca41",
-"tcpip_8c.html#a49465dfef55aa093dca3d0a7bf4cfb4d"
+"i2c_8c.html",
+"rtc__adafruit_8c.html#addf5bd628648c24cd9cd99fcd5420335",
+"struct_t_i_m_e.html#a7af2065789bc84419b8d5fe109be83b5"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

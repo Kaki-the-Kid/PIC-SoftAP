@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PIC SoftAP: C:/Users/karst/OneDrive - AARHUS TECH/Dokumenter/Workspace/MPLABXProjects/Embedded Controller 3/SoftAP_webserver.X/webserver/esp8266.c filreference</title>
+<title>PIC SoftAP: C:/Users/krs/OneDrive - AARHUS TECH/Dokumenter/Workspace/MPLABXProjects/SoftAP_webserver.X/webserver/esp8266.c filreference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -61,36 +61,45 @@ $(document).ready(function(){initNavTree('esp8266_8c.html',''); initResizable();
 <div id="doc-content">
 <div class="header">
   <div class="summary">
-<a href="#define-members">#Defines</a> &#124;
 <a href="#func-members">Funktioner</a> &#124;
 <a href="#var-members">Variable</a>  </div>
   <div class="headertitle">
 <div class="title">esp8266.c filreference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="">mcc_generated_files/mcc.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="">../mcc_generated_files/mcc.h</a>&quot;</code><br />
 <code>#include &lt;string.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="">esp8266.h</a>&quot;</code><br />
 </div>
 <p><a href="">Hop til denne fils kildekode.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
-#Defines</h2></td></tr>
-<tr class="memitem:a8ee52f8f44e9e14f7ec278421b3b05ba"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="esp8266_8c.html#a8ee52f8f44e9e14f7ec278421b3b05ba">AT_CWSTOPSMART</a>&#160;&#160;&#160;{ printf(&quot;AT+CWSTOPSMART\r\&quot;); }                #endif	/* ESPTOUCH_H */#endif#ifndef SNTP_H#include &quot;sntp.h&quot;#endif#ifndef SOFTAP_H#include &quot;softap.h&quot;#endif#ifndef SSL_H#include &quot;ssl.h&quot;#endif#ifndef WPS_H#include &quot;wps.h&quot;#endif#ifndef I2C_H#include &quot;i2c.h&quot;#endif#ifndef LCD_H#include &quot;lcd.h&quot;#endif#ifndef <a class="el" href="esp8266_8h.html#a48b3f94559b5c494cd8e216ddd409a93">ESP8266_H</a>#define	<a class="el" href="esp8266_8h.html#a48b3f94559b5c494cd8e216ddd409a93">ESP8266_H</a>//Globalsuint8_t <a class="el" href="esp8266_8h.html#abc2fa392bead55bec7642ee4bb41070c">uartInput</a>[128];//struct <a class="el" href="struct_e_s_p_u_a_r_t.html">ESPUART</a> {    long    baudrate;     uint8_t databits;    uint8_t stopbits;    uint8_t parity;    uint8_t flowcontrol;};struct <a class="el" href="struct_e_s_p_u_a_r_t.html">ESPUART</a> <a class="el" href="esp8266_8h.html#aae664464ddb16646191b294e2cae1e2d">uart</a>; // Ny instans af uartstruct <a class="el" href="struct_e_s_p_firm_ware.html">ESPFirmWare</a> {    char *ATVersion;    char *SDKVersion;    char *BinVersion;    uint8_t updated;};typedef struct <a class="el" href="struct_e_s_p_firm_ware.html">ESPFirmWare</a> <a class="el" href="esp8266_8h.html#a71677c696284209acbe44e1c01eb2211">espfirmware_t</a>; // Angiver type definintionespfirmware_t <a class="el" href="esp8266_8h.html#a2f6ff3a18ee5ddfe7ffb5c15a984de16">firmware</a>; // Ny instans af firmwarestruct <a class="el" href="struct_states.html">States</a> {    bool ok;    bool <a class="el" href="esp8266_8c.html#a920f9b2da3066bafd9a0a55f0bca2e82">error</a>;    bool <a class="el" href="esp8266_8c.html#aac54229b6e6a5356792d0df5435e155d">ready</a>;    #define <a class="el" href="esp8266_8h.html#ae6667b87a2509a0b2ab9234692967c20">esp_statesInit</a>() do { states.ok = 0; <a class="el" href="esp8266_8c.html#a920f9b2da3066bafd9a0a55f0bca2e82">states.error</a> = 0; <a class="el" href="esp8266_8c.html#aac54229b6e6a5356792d0df5435e155d">states.ready</a> = 0; } while (0);};typedef struct <a class="el" href="struct_states.html">States</a> <a class="el" href="esp8266_8h.html#a26ef4ebaf03c102ee32ce527f84e5d74">states_t</a>;<a class="el" href="esp8266_8h.html#a26ef4ebaf03c102ee32ce527f84e5d74">states_t</a> <a class="el" href="esp8266_8h.html#a4952c1b7f3ed488d08e34f466ba70db8">states</a>;                void    <a class="el" href="esp8266_8h.html#a9013f3a30c63c4827be5da85353fe58b">esp_getUARTConfiguration</a>(void);void    <a class="el" href="esp8266_8h.html#a4020d440d391862b0179d1948e29f4ab">esp_setUARTConfiguration</a>(void);void    <a class="el" href="esp8266_8h.html#af7b4773aaf25d26d57301662045fbcc2">esp_uartInitialize</a>(void);void    <a class="el" href="esp8266_8h.html#a878e212ec1d120aaf8149946cff1b655">esp_restartModule</a>(void);void    <a class="el" href="esp8266_8h.html#aa27e91a53cfef79618a81c77d74114b5">esp_getVersion</a>(void);void    <a class="el" href="esp8266_8h.html#ab784bcaa0560b6b3746229f6604043a9">esp_ATTestStartup</a>(void);void    <a class="el" href="esp8266_8h.html#a422ce84e6a2661494abe432b25396af4">esp_echoOff</a>(void);void    <a class="el" href="esp8266_8h.html#a6b0763f6969ee07d739acc8050a2a52f">esp_echoOn</a>(void);void    <a class="el" href="esp8266_8h.html#af2d67f61a1cd9a25baf7acaaf52e398b">esp_autoconnect</a>(uint8_t);uint8_t <a class="el" href="esp8266_8h.html#a987219a0eccd68b289e00d7fb82f76a7">esp_uartReceive</a>(char *);void    <a class="el" href="esp8266_8h.html#ad74be5991b7bbea9d727cc97a2754f45">esp_upgradeFirmware</a>(void);void    <a class="el" href="esp8266_8h.html#a686b62cb1cb16a396e1283aaa6f54f71">esp_uartTransmit</a>(char *);bool    <a class="el" href="esp8266_8h.html#abb024ad17ab55c2f29a20c91b4fe2853">esp_waitForOK</a>(void);/* Måden som der kommunikeres til FTDI over USB */void    <a class="el" href="esp8266_8h.html#aa02d860e62d39e919524b87dfacd48e2">esp_terminalReceive</a>(void);void    <a class="el" href="esp8266_8h.html#a34e0a151512a61a4fd2b93d74c2cb3ba">esp_terminalTransmit</a>(char *);void    <a class="el" href="esp8266_8h.html#a27b33a4a37a028e508bf0af4f1e8cbf8">esp_adjustLeds</a>(void);                #endif	/* <a class="el" href="esp8266_8h.html#a48b3f94559b5c494cd8e216ddd409a93">ESP8266_H</a> */#endif// AT+UART - UART configuration/*  * Query Command: AT+UART_DEF? * Response:  * +UART_DEF:&lt;baudrate&gt;,&lt;databits&gt;,&lt;stopbits&gt;,&lt;parity&gt;,&lt;flow control&gt; * OK *  * Set Command:  * AT+UART_DEF=&lt;baudrate&gt;,&lt;databits&gt;,&lt;stopbits&gt;,&lt;parity&gt;,&lt;flow control&gt; * Response: * OK *  * Parameter: * &lt;baudrate&gt;: UART baud rate * &lt;databits&gt;: data bits *   5: 5-bit data *   6: 6-bit data *   7: 7-bit data *   8: 8-bit data * &lt;stopbits&gt;: stop bits *   1: 1-bit stop bit *   2: 1.5-bit stop bit *   3: 2-bit stop bit * &lt;parity&gt;: parity bit *   0: None *   1: Odd *   2: Even * &lt;flow control&gt;: flow control *   0: flow control is not enabled *   1: enable RTS *   2: enable CTS *   3: enable both RTS and CTS *  * Notes * 1. The configuration changes will be saved in the user parameter area in the *    flash, and will still be valid when the chip is powered on again. * 2. The use of flow control requires the support of hardware: *   MTCK is UART0 CTS *   MTDO is UART0 RTS * 3. The range of baud rates supported: 110~115200*40. *  * Example AT+UART_DEF=115200,8,1,0,3 */void <a class="el" href="esp8266_8h.html#a4020d440d391862b0179d1948e29f4ab">esp_setUARTConfiguration</a>(void) {    printf(&quot;AT+UART=%d,%d,%d,%d,%d&quot;, uart.baudrate, uart.databits, uart.flowcontrol, uart.parity, uart.stopbits);}// Se ovenfor ...void <a class="el" href="esp8266_8h.html#a9013f3a30c63c4827be5da85353fe58b">esp_getUARTConfiguration</a>(void) {    printf(&quot;AT+UART?&quot;); // Hent konfiguration    while(!<a class="el" href="esp8266_8h.html#a987219a0eccd68b289e00d7fb82f76a7">esp_uartReceive</a>(&quot;OK&quot;)) {};}// Reset ESP01 moduletvoid <a class="el" href="esp8266_8h.html#a878e212ec1d120aaf8149946cff1b655">esp_restartModule</a>(void) {    printf(&quot;AT+RST\r\n&quot;);    while(!<a class="el" href="esp8266_8h.html#a987219a0eccd68b289e00d7fb82f76a7">esp_uartReceive</a>(&quot;OK&quot;)) {};}// AT+GMR?Checks Version Information/* * Response old firmware: * AT version:1.2.0.0(Jul  1 2016 20:04:45) * SDK version:1.5.4.1(39cb9a32) * Ai-Thinker Technology Co. Ltd. * Dec  2 2016 14:21:16 * OK *  * Response updataed formware: * AT version:1.2.0.0(Jul  1 2016 20:04:45) * SDK version:1.5.4.1(39cb9a32) * Ai-Thinker Technology Co. Ltd. * v1.5.4.1-a Nov 30 2017 15:54:51 * OK *  * Response new firmware: * AT version:1.7.0.0(Aug 16 2018 00:57:04) * SDK version:3.0.0(d49923c) * compile time:Aug 23 2018 16:58:12 * Bin version(Wroom 02):v1.7.0 * OK */void <a class="el" href="esp8266_8h.html#aa27e91a53cfef79618a81c77d74114b5">esp_getVersion</a>(void) {    printf(&quot;AT+GMR\r\n&quot;);    while (!<a class="el" href="esp8266_8h.html#a987219a0eccd68b289e00d7fb82f76a7">esp_uartReceive</a>(&quot;OK&quot;) || !esp_uartReceive(&quot;ERROR&quot;)) {};}// AT+CIUPDATE - Upgrades the software through network/* * Execute Command: AT+CIUPDATE * Function: updates software. *  * Response: * +CIPUPDATE:&lt;n&gt; * OK *  * Parameters: * &lt;n&gt;: *  - 1: find the server. *  - 2: connect to server. *  - 3: get the software version. *  - 4: start updating. *  * Notes: *  - The speed of the upgrade is susceptible to the connectivity of the network. *  - ERROR will be returned <a class="el" href="esp8266_8c.html#a3d0b2804084ecc1f9e8e169666ea4ce9">if</a> the upgrade fails due to unfavourable network  *    conditions. Please wait for some <a class="el" href="rtc_8h.html#ab842bdb7d02be824fb48613032b4ff36">time</a> before retrying. *  * Notes: *  - If using Espressif?s AT BIN (/ESP8266_NONOS_SDK/bin/at), AT+CIUPDATE will  *    download a new AT BIN from the Espressif Cloud. *  - If using a user-compiled AT BIN, users need to make their own AT+CIUPDATE  *    upgrade. Espressif provides a demo as a reference for local upgrade  *    (/ESP8266_NONOS_SDK/example/at). *  - It is suggested that users call AT+RESTORE to restore the factory default  *    settings after upgrading the AT firmware. */void <a class="el" href="esp8266_8h.html#ad74be5991b7bbea9d727cc97a2754f45">esp_upgradeFirmware</a>(void) {    printf(&quot;AT+CIUPDATE\r\n&quot;);    while (!<a class="el" href="esp8266_8h.html#a987219a0eccd68b289e00d7fb82f76a7">esp_uartReceive</a>(&quot;1&quot;) || !<a class="el" href="esp8266_8h.html#a987219a0eccd68b289e00d7fb82f76a7">esp_uartReceive</a>(&quot;ERROR&quot;)) {};    while (!<a class="el" href="esp8266_8h.html#a987219a0eccd68b289e00d7fb82f76a7">esp_uartReceive</a>(&quot;2&quot;) || !<a class="el" href="esp8266_8h.html#a987219a0eccd68b289e00d7fb82f76a7">esp_uartReceive</a>(&quot;ERROR&quot;)) {};    while (!<a class="el" href="esp8266_8h.html#a987219a0eccd68b289e00d7fb82f76a7">esp_uartReceive</a>(&quot;3&quot;) || !<a class="el" href="esp8266_8h.html#a987219a0eccd68b289e00d7fb82f76a7">esp_uartReceive</a>(&quot;ERROR&quot;)) {};    while (!<a class="el" href="esp8266_8h.html#a987219a0eccd68b289e00d7fb82f76a7">esp_uartReceive</a>(&quot;4&quot;) || !<a class="el" href="esp8266_8h.html#a987219a0eccd68b289e00d7fb82f76a7">esp_uartReceive</a>(&quot;ERROR&quot;)) {};    while (!<a class="el" href="esp8266_8h.html#a987219a0eccd68b289e00d7fb82f76a7">esp_uartReceive</a>(&quot;OK&quot;) || !esp_uartReceive(&quot;ERROR&quot;)) {};}// AT - Tester om der er forbindelse til ATvoid <a class="el" href="esp8266_8h.html#ab784bcaa0560b6b3746229f6604043a9">esp_ATTestStartup</a>(void) {    printf(&quot;AT\r\n&quot;);}// ATE - AT Commands Echoing on/of/* Execute Command: ATE * Response OK *  * Parameters: *  - ATE0: Switches echo off. *  - ATE1: Switches echo on. *  * Note: * This command ATE is used to trigger command echo. It means that entered  * commands can be echoed back to the sender when ATE command is used. Two  * parameters are possible. The command returns OK in normal cases and ERROR  * when a parameter other than 0 or 1 was specified. */void <a class="el" href="esp8266_8h.html#a422ce84e6a2661494abe432b25396af4">esp_echoOff</a>(void) {    printf(&quot;ATE0\r\n&quot;);    while( !<a class="el" href="esp8266_8h.html#a987219a0eccd68b289e00d7fb82f76a7">esp_uartReceive</a>(&quot;OK&quot;) || !esp_uartReceive(&quot;ERROR&quot;) )        ;}/// ATE - AT Commands Echoing on/of/* Execute Command: ATE * Response OK *  * Parameters: *  - ATE0: Switches echo off. *  - ATE1: Switches echo on. *  * Note: * This command ATE is used to trigger command echo. It means that entered  * commands can be echoed back to the sender when ATE command is used. Two  * parameters are possible. The command returns OK in normal cases and ERROR  * when a parameter other than 0 or 1 was specified. */void <a class="el" href="esp8266_8h.html#a6b0763f6969ee07d739acc8050a2a52f">esp_echoOn</a>(void) {    printf(&quot;ATE1\r\n&quot;);    do { <a class="el" href="esp8266_8h.html#abb024ad17ab55c2f29a20c91b4fe2853">esp_waitForOK</a>(); } while( server.busy );}/// AT+CWAUTOCONN - Auto-Connects to the AP or Not/* * Set Command AT+CWAUTOCONN=&lt;enable&gt; * Response OK * Parameters * &lt;enable&gt;: *  - 0: does NOT auto-connect to AP on power-up. *  - 1: connects to AP automatically on power-up. *  * The ESP8266 Station connects to the AP automatically on power-up by default. *  * Note: * The configuration changes will be saved in the system parameter area in the  * flash. *  * Example: * AT+CWAUTOCONN=1 */void <a class="el" href="esp8266_8h.html#af2d67f61a1cd9a25baf7acaaf52e398b">esp_autoconnect</a>(uint8_t mode) {    uint8_t AP_AUTOCONNECT = 0;    printf(&quot;AT+CWAUTOCONN=1\r\n&quot;);    //#define AT_CWAUTOCONN_QUERY { printf(&quot;AT+CWAUTOCONN=?\r\n&quot;); }}void <a class="el" href="esp8266_8h.html#af7b4773aaf25d26d57301662045fbcc2">esp_uartInitialize</a>(void) {            uart.baudrate    = 155200;    uart.databits    = 8;    uart.stopbits    = 1;    uart.parity      = 0;    uart.flowcontrol = 1;}uint8_t <a class="el" href="esp8266_8c.html#a6784e1c334dfceb8f017667c0b0f6a3e">index</a> = 0;uint8_t <a class="el" href="esp8266_8h.html#a987219a0eccd68b289e00d7fb82f76a7">esp_uartReceive</a>(char *response){    char string[256];    char tmpip[20];    char tmp;    <a class="el" href="esp8266_8c.html#a3d0b2804084ecc1f9e8e169666ea4ce9">if</a> (<a class="el" href="eusart1_8h.html#a51236ea81a98a25986a6733fbf291621">EUSART1_is_rx_ready</a>()) {        int i = 0;        uint8_t <a class="el" href="esp8266_8c.html#a6784e1c334dfceb8f017667c0b0f6a3e">index</a> = 0;                for(i=0; i&lt;= 64; i++){            uint8_t tmp = <a class="el" href="eusart1_8h.html#ab4dd58b431d4f59c5b78f909b0b9cb0b">EUSART1_Read</a>();            <a class="el" href="esp8266_8c.html#a3d0b2804084ecc1f9e8e169666ea4ce9">if</a>(tmp != 0x0D &amp;&amp; tmp != 0x0A) { // Spring \r og \n over                <a class="el" href="esp8266_8c.html#a3d0b2804084ecc1f9e8e169666ea4ce9">if</a>(isprint(tmp)) {                    string[<a class="el" href="esp8266_8c.html#a6784e1c334dfceb8f017667c0b0f6a3e">index</a>++] = tmp;                }            }             <a class="el" href="esp8266_8c.html#a3d0b2804084ecc1f9e8e169666ea4ce9">if</a>(tmp == 0x0A) { // Er vi nået til enden af en linie?                string[<a class="el" href="esp8266_8c.html#a6784e1c334dfceb8f017667c0b0f6a3e">index</a>] = 0; // 0-termineret streng                                <a class="el" href="esp8266_8c.html#a3d0b2804084ecc1f9e8e169666ea4ce9">if</a>( (strcmp(string, &quot;OK&quot;) == 0) || (strcmp(string, &quot;no change&quot;) == 0) || (strcmp(string, &quot;Send OK&quot;) == 0) ) {                    states.ok = true;                    <a class="el" href="esp8266_8c.html#a920f9b2da3066bafd9a0a55f0bca2e82">states.error</a> = false;                    <a class="el" href="esp8266_8c.html#aac54229b6e6a5356792d0df5435e155d">states.ready</a> = false;                    server.busy = false;                    break; // OK er den sidste kommando sendt fra ESP                } <a class="el" href="esp8266_8c.html#a0544c3fe466e421738dae463968b70ba">else</a> <a class="el" href="esp8266_8c.html#a3d0b2804084ecc1f9e8e169666ea4ce9">if</a> ( strcmp(string, &quot;busy p...&quot;) == 0) {                    server.busy = true;                    break;                } <a class="el" href="esp8266_8c.html#a0544c3fe466e421738dae463968b70ba">else</a> <a class="el" href="esp8266_8c.html#a3d0b2804084ecc1f9e8e169666ea4ce9">if</a> ( strcmp(string, &quot;ERROR&quot;) == 0) {                    states.ok = false;                    <a class="el" href="esp8266_8c.html#a920f9b2da3066bafd9a0a55f0bca2e82">states.error</a> = true;                    <a class="el" href="esp8266_8c.html#aac54229b6e6a5356792d0df5435e155d">states.ready</a> = false;                    break;                } <a class="el" href="esp8266_8c.html#a0544c3fe466e421738dae463968b70ba">else</a> <a class="el" href="esp8266_8c.html#a3d0b2804084ecc1f9e8e169666ea4ce9">if</a> ( strcmp(string, &quot;ready&quot;) == 0 ) {                     states.ok = false;                    <a class="el" href="esp8266_8c.html#a920f9b2da3066bafd9a0a55f0bca2e82">states.error</a> = false;                    <a class="el" href="esp8266_8c.html#aac54229b6e6a5356792d0df5435e155d">states.ready</a> = true;                    break;                } <a class="el" href="esp8266_8c.html#a0544c3fe466e421738dae463968b70ba">else</a> <a class="el" href="esp8266_8c.html#a3d0b2804084ecc1f9e8e169666ea4ce9">if</a> ( strcmp(string, &quot;WIFI DISCONNECT&quot;) == 0) {                    strcpy((char*)server.ssid, &quot;&quot;);                    server.wificonnected = false;                    server.wifigotip = false;                    states.ok = false;                    <a class="el" href="esp8266_8c.html#a920f9b2da3066bafd9a0a55f0bca2e82">states.error</a> = true;                    break;                } <a class="el" href="esp8266_8c.html#a0544c3fe466e421738dae463968b70ba">else</a> <a class="el" href="esp8266_8c.html#a3d0b2804084ecc1f9e8e169666ea4ce9">if</a> ( strcmp(string, &quot;WIFI CONNECTED&quot;) == 0 ) {                    server.wificonnected = true;                    break;                } <a class="el" href="esp8266_8c.html#a0544c3fe466e421738dae463968b70ba">else</a> <a class="el" href="esp8266_8c.html#a3d0b2804084ecc1f9e8e169666ea4ce9">if</a> ( strcmp(string, &quot;WIFI GOT IP&quot;) == 0) {                    server.wifigotip = true;                    <a class="el" href="esp8266_8c.html#a920f9b2da3066bafd9a0a55f0bca2e82">states.error</a> = false;                    <a class="el" href="esp8266_8c.html#aac54229b6e6a5356792d0df5435e155d">states.ready</a> = false;                    break;                } <a class="el" href="esp8266_8c.html#a0544c3fe466e421738dae463968b70ba">else</a> <a class="el" href="esp8266_8c.html#a3d0b2804084ecc1f9e8e169666ea4ce9">if</a> ( strcmp(string, &quot;0,CLOSED&quot;) == 0 ) {                    server.clientConnected = false;                    break;                } <a class="el" href="esp8266_8c.html#a0544c3fe466e421738dae463968b70ba">else</a> <a class="el" href="esp8266_8c.html#a3d0b2804084ecc1f9e8e169666ea4ce9">if</a> ( strcmp(string, &quot;1,CLOSED&quot;) == 0 ) {                    server.clientConnected = false;                    break;                } <a class="el" href="esp8266_8c.html#a0544c3fe466e421738dae463968b70ba">else</a> <a class="el" href="esp8266_8c.html#a3d0b2804084ecc1f9e8e169666ea4ce9">if</a> ( strcmp(string, &quot;0,CONNECT&quot;) == 0 ) {                    server.clientConnected = true;                    break;                } <a class="el" href="esp8266_8c.html#a0544c3fe466e421738dae463968b70ba">else</a> <a class="el" href="esp8266_8c.html#a3d0b2804084ecc1f9e8e169666ea4ce9">if</a> ( strcmp(string, &quot;1,CONNECT&quot;) == 0 ) {                    server.clientConnected = true;                    break;                } <a class="el" href="esp8266_8c.html#a0544c3fe466e421738dae463968b70ba">else</a> <a class="el" href="esp8266_8c.html#a3d0b2804084ecc1f9e8e169666ea4ce9">if</a> ( strncmp(string, &quot;+IPD&quot; ,4) == 0 ) { //+IPD,0,478:GET / HTTP/1.1                    server.clientAvailable = true;                    <a class="el" href="tcpip_8h.html#a72738039f1d689df92c84000174c9327">tcpip_serverPage</a>();                    break;                } <a class="el" href="esp8266_8c.html#a0544c3fe466e421738dae463968b70ba">else</a> <a class="el" href="esp8266_8c.html#a3d0b2804084ecc1f9e8e169666ea4ce9">if</a> ( strncmp(string, &quot;+CWJAP&quot;, 6) == 0 ) { //+CWJAP:&quot;SSID-JRzcM4&quot;,&quot;00:1e:80:2d:ba:61&quot;,10,-62,0                    led_getrequest_SetHigh();                } <a class="el" href="esp8266_8c.html#a0544c3fe466e421738dae463968b70ba">else</a> <a class="el" href="esp8266_8c.html#a3d0b2804084ecc1f9e8e169666ea4ce9">if</a> ( strncmp(string, &quot;No AP&quot;, 5) == 0) { // Vi får No AP efter AT+CWJAB?                    server.wificonnected = false;                    server.wifigotip = false;                    break;                } <a class="el" href="esp8266_8c.html#a0544c3fe466e421738dae463968b70ba">else</a> <a class="el" href="esp8266_8c.html#a3d0b2804084ecc1f9e8e169666ea4ce9">if</a> ( strncmp(string, &quot;+CWLAP&quot;, 6) == 0 ) {                    char src[40];                    char dest[20];                    uint8_t <a class="el" href="esp8266_8c.html#af9d495c1655d813d553030485d00fea7">length</a>;                    <a class="el" href="esp8266_8c.html#a3d0b2804084ecc1f9e8e169666ea4ce9">if</a>( strcmp((char*)server.ssid, &quot;&quot;) == 0) {                        memset(dest, '\0', sizeof(dest));                        strcpy(src, string+9); // Ser bort fra +CWLAP:(&quot;</td></tr>
-<tr class="separator:a8ee52f8f44e9e14f7ec278421b3b05ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Funktioner</h2></td></tr>
-<tr class="memitem:adfdcaed5e94b3ae33ac6514361f416cc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="esp8266_8c.html#adfdcaed5e94b3ae33ac6514361f416cc">strncpy</a> (dest, src, <a class="el" href="esp8266_8c.html#af9d495c1655d813d553030485d00fea7">length</a>)</td></tr>
-<tr class="separator:adfdcaed5e94b3ae33ac6514361f416cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a020c8b9972f82dedd20f0ad130d6780a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="esp8266_8c.html#a020c8b9972f82dedd20f0ad130d6780a">wifi_network_lookup</a> (dest)</td></tr>
-<tr class="separator:a020c8b9972f82dedd20f0ad130d6780a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d43effbee0a311c226e73e67721f769"><td class="memItemLeft" align="right" valign="top"><a class="el" href="esp8266_8c.html#a0544c3fe466e421738dae463968b70ba">else</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="esp8266_8c.html#a4d43effbee0a311c226e73e67721f769">if</a> (strncmp(string, &quot;+STA_CONNECTED&quot;, 14)==0)</td></tr>
-<tr class="separator:a4d43effbee0a311c226e73e67721f769"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae3056a11ebaace5fe7830d3aa6e49f31"><td class="memItemLeft" align="right" valign="top"><a class="el" href="esp8266_8c.html#a0544c3fe466e421738dae463968b70ba">else</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="esp8266_8c.html#ae3056a11ebaace5fe7830d3aa6e49f31">if</a> (strncmp(string, &quot;+CIFSR:STAIP&quot;, 12)==0)</td></tr>
-<tr class="separator:ae3056a11ebaace5fe7830d3aa6e49f31"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d0b2804084ecc1f9e8e169666ea4ce9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="esp8266_8c.html#a0544c3fe466e421738dae463968b70ba">else</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="esp8266_8c.html#a3d0b2804084ecc1f9e8e169666ea4ce9">if</a> (strncmp(string, &quot;&gt;&quot;, 1)==0)</td></tr>
-<tr class="separator:a3d0b2804084ecc1f9e8e169666ea4ce9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4020d440d391862b0179d1948e29f4ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="esp8266_8c.html#a4020d440d391862b0179d1948e29f4ab">esp_setUARTConfiguration</a> (void)</td></tr>
+<tr class="memdesc:a4020d440d391862b0179d1948e29f4ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">UART kommandoer.  <a href="esp8266_8c.html#a4020d440d391862b0179d1948e29f4ab">Mere...</a><br /></td></tr>
+<tr class="separator:a4020d440d391862b0179d1948e29f4ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9013f3a30c63c4827be5da85353fe58b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="esp8266_8c.html#a9013f3a30c63c4827be5da85353fe58b">esp_getUARTConfiguration</a> (void)</td></tr>
+<tr class="separator:a9013f3a30c63c4827be5da85353fe58b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a878e212ec1d120aaf8149946cff1b655"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="esp8266_8c.html#a878e212ec1d120aaf8149946cff1b655">esp_restartModule</a> (void)</td></tr>
+<tr class="separator:a878e212ec1d120aaf8149946cff1b655"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa27e91a53cfef79618a81c77d74114b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="esp8266_8c.html#aa27e91a53cfef79618a81c77d74114b5">esp_getVersion</a> (void)</td></tr>
+<tr class="separator:aa27e91a53cfef79618a81c77d74114b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad74be5991b7bbea9d727cc97a2754f45"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="esp8266_8c.html#ad74be5991b7bbea9d727cc97a2754f45">esp_upgradeFirmware</a> (void)</td></tr>
+<tr class="separator:ad74be5991b7bbea9d727cc97a2754f45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab784bcaa0560b6b3746229f6604043a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="esp8266_8c.html#ab784bcaa0560b6b3746229f6604043a9">esp_ATTestStartup</a> (void)</td></tr>
+<tr class="separator:ab784bcaa0560b6b3746229f6604043a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a422ce84e6a2661494abe432b25396af4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="esp8266_8c.html#a422ce84e6a2661494abe432b25396af4">esp_echoOff</a> (void)</td></tr>
+<tr class="separator:a422ce84e6a2661494abe432b25396af4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b0763f6969ee07d739acc8050a2a52f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="esp8266_8c.html#a6b0763f6969ee07d739acc8050a2a52f">esp_echoOn</a> (void)</td></tr>
+<tr class="memdesc:a6b0763f6969ee07d739acc8050a2a52f"><td class="mdescLeft">&#160;</td><td class="mdescRight">ATE - AT Commands Echoing on/of.  <a href="esp8266_8c.html#a6b0763f6969ee07d739acc8050a2a52f">Mere...</a><br /></td></tr>
+<tr class="separator:a6b0763f6969ee07d739acc8050a2a52f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3063f293755ce10420ca0b764b5dcf7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="esp8266_8c.html#ac3063f293755ce10420ca0b764b5dcf7">esp_autoconnect</a> (uint8_t mode)</td></tr>
+<tr class="memdesc:ac3063f293755ce10420ca0b764b5dcf7"><td class="mdescLeft">&#160;</td><td class="mdescRight">AT+CWAUTOCONN - Auto-Connects to the AP or Not.  <a href="esp8266_8c.html#ac3063f293755ce10420ca0b764b5dcf7">Mere...</a><br /></td></tr>
+<tr class="separator:ac3063f293755ce10420ca0b764b5dcf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7b4773aaf25d26d57301662045fbcc2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="esp8266_8c.html#af7b4773aaf25d26d57301662045fbcc2">esp_uartInitialize</a> (void)</td></tr>
+<tr class="separator:af7b4773aaf25d26d57301662045fbcc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3deffb46f2867734db9977c89db63bd0"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="esp8266_8c.html#a3deffb46f2867734db9977c89db63bd0">esp_uartReceive</a> (char *response)</td></tr>
+<tr class="separator:a3deffb46f2867734db9977c89db63bd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac7b38c73e67f75d27fe1f2d62e367c0b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="esp8266_8c.html#ac7b38c73e67f75d27fe1f2d62e367c0b">esp_uartTransmit</a> (char *msg)</td></tr>
 <tr class="memdesc:ac7b38c73e67f75d27fe1f2d62e367c0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">AT+.  <a href="esp8266_8c.html#ac7b38c73e67f75d27fe1f2d62e367c0b">Mere...</a><br /></td></tr>
 <tr class="separator:ac7b38c73e67f75d27fe1f2d62e367c0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -105,35 +114,9 @@ Funktioner</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variable</h2></td></tr>
-<tr class="memitem:af9d495c1655d813d553030485d00fea7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="esp8266_8c.html#af9d495c1655d813d553030485d00fea7">length</a> = (uint8_t) strlen(string)-11</td></tr>
-<tr class="memdesc:af9d495c1655d813d553030485d00fea7"><td class="mdescLeft">&#160;</td><td class="mdescRight">UART kommandoer.  <a href="esp8266_8c.html#af9d495c1655d813d553030485d00fea7">Mere...</a><br /></td></tr>
-<tr class="separator:af9d495c1655d813d553030485d00fea7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0544c3fe466e421738dae463968b70ba"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="esp8266_8c.html#a0544c3fe466e421738dae463968b70ba">else</a></td></tr>
-<tr class="separator:a0544c3fe466e421738dae463968b70ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a920f9b2da3066bafd9a0a55f0bca2e82"><td class="memItemLeft" align="right" valign="top"><a class="el" href="esp8266_8h.html#a4952c1b7f3ed488d08e34f466ba70db8">states</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="esp8266_8c.html#a920f9b2da3066bafd9a0a55f0bca2e82">error</a> =0</td></tr>
-<tr class="separator:a920f9b2da3066bafd9a0a55f0bca2e82"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac54229b6e6a5356792d0df5435e155d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="esp8266_8h.html#a4952c1b7f3ed488d08e34f466ba70db8">states</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="esp8266_8c.html#aac54229b6e6a5356792d0df5435e155d">ready</a> = 0</td></tr>
-<tr class="separator:aac54229b6e6a5356792d0df5435e155d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6784e1c334dfceb8f017667c0b0f6a3e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="esp8266_8c.html#a6784e1c334dfceb8f017667c0b0f6a3e">index</a> =0</td></tr>
-<tr class="separator:a6784e1c334dfceb8f017667c0b0f6a3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9717e7bbecb906637e86cef6da3d83c2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="esp8266_8c.html#a9717e7bbecb906637e86cef6da3d83c2">return</a></td></tr>
-<tr class="separator:a9717e7bbecb906637e86cef6da3d83c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae5a12e607d0f782506d9e6ec6179c64"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="esp8266_8c.html#aae5a12e607d0f782506d9e6ec6179c64">index</a> = 0</td></tr>
+<tr class="separator:aae5a12e607d0f782506d9e6ec6179c64"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">#Define-dokumentation</h2>
-<a id="a8ee52f8f44e9e14f7ec278421b3b05ba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8ee52f8f44e9e14f7ec278421b3b05ba">&#9670;&nbsp;</a></span>AT_CWSTOPSMART</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define AT_CWSTOPSMART&#160;&#160;&#160;{ printf(&quot;AT+CWSTOPSMART\r\&quot;); }                #endif	/* ESPTOUCH_H */#endif#ifndef SNTP_H#include &quot;sntp.h&quot;#endif#ifndef SOFTAP_H#include &quot;softap.h&quot;#endif#ifndef SSL_H#include &quot;ssl.h&quot;#endif#ifndef WPS_H#include &quot;wps.h&quot;#endif#ifndef I2C_H#include &quot;i2c.h&quot;#endif#ifndef LCD_H#include &quot;lcd.h&quot;#endif#ifndef <a class="el" href="esp8266_8h.html#a48b3f94559b5c494cd8e216ddd409a93">ESP8266_H</a>#define	<a class="el" href="esp8266_8h.html#a48b3f94559b5c494cd8e216ddd409a93">ESP8266_H</a>//Globalsuint8_t <a class="el" href="esp8266_8h.html#abc2fa392bead55bec7642ee4bb41070c">uartInput</a>[128];//struct <a class="el" href="struct_e_s_p_u_a_r_t.html">ESPUART</a> {    long    baudrate;     uint8_t databits;    uint8_t stopbits;    uint8_t parity;    uint8_t flowcontrol;};struct <a class="el" href="struct_e_s_p_u_a_r_t.html">ESPUART</a> <a class="el" href="esp8266_8h.html#aae664464ddb16646191b294e2cae1e2d">uart</a>; // Ny instans af uartstruct <a class="el" href="struct_e_s_p_firm_ware.html">ESPFirmWare</a> {    char *ATVersion;    char *SDKVersion;    char *BinVersion;    uint8_t updated;};typedef struct <a class="el" href="struct_e_s_p_firm_ware.html">ESPFirmWare</a> <a class="el" href="esp8266_8h.html#a71677c696284209acbe44e1c01eb2211">espfirmware_t</a>; // Angiver type definintionespfirmware_t <a class="el" href="esp8266_8h.html#a2f6ff3a18ee5ddfe7ffb5c15a984de16">firmware</a>; // Ny instans af firmwarestruct <a class="el" href="struct_states.html">States</a> {    bool ok;    bool <a class="el" href="esp8266_8c.html#a920f9b2da3066bafd9a0a55f0bca2e82">error</a>;    bool <a class="el" href="esp8266_8c.html#aac54229b6e6a5356792d0df5435e155d">ready</a>;    #define <a class="el" href="esp8266_8h.html#ae6667b87a2509a0b2ab9234692967c20">esp_statesInit</a>() do { states.ok = 0; <a class="el" href="esp8266_8c.html#a920f9b2da3066bafd9a0a55f0bca2e82">states.error</a> = 0; <a class="el" href="esp8266_8c.html#aac54229b6e6a5356792d0df5435e155d">states.ready</a> = 0; } while (0);};typedef struct <a class="el" href="struct_states.html">States</a> <a class="el" href="esp8266_8h.html#a26ef4ebaf03c102ee32ce527f84e5d74">states_t</a>;<a class="el" href="esp8266_8h.html#a26ef4ebaf03c102ee32ce527f84e5d74">states_t</a> <a class="el" href="esp8266_8h.html#a4952c1b7f3ed488d08e34f466ba70db8">states</a>;                void    <a class="el" href="esp8266_8h.html#a9013f3a30c63c4827be5da85353fe58b">esp_getUARTConfiguration</a>(void);void    <a class="el" href="esp8266_8h.html#a4020d440d391862b0179d1948e29f4ab">esp_setUARTConfiguration</a>(void);void    <a class="el" href="esp8266_8h.html#af7b4773aaf25d26d57301662045fbcc2">esp_uartInitialize</a>(void);void    <a class="el" href="esp8266_8h.html#a878e212ec1d120aaf8149946cff1b655">esp_restartModule</a>(void);void    <a class="el" href="esp8266_8h.html#aa27e91a53cfef79618a81c77d74114b5">esp_getVersion</a>(void);void    <a class="el" href="esp8266_8h.html#ab784bcaa0560b6b3746229f6604043a9">esp_ATTestStartup</a>(void);void    <a class="el" href="esp8266_8h.html#a422ce84e6a2661494abe432b25396af4">esp_echoOff</a>(void);void    <a class="el" href="esp8266_8h.html#a6b0763f6969ee07d739acc8050a2a52f">esp_echoOn</a>(void);void    <a class="el" href="esp8266_8h.html#af2d67f61a1cd9a25baf7acaaf52e398b">esp_autoconnect</a>(uint8_t);uint8_t <a class="el" href="esp8266_8h.html#a987219a0eccd68b289e00d7fb82f76a7">esp_uartReceive</a>(char *);void    <a class="el" href="esp8266_8h.html#ad74be5991b7bbea9d727cc97a2754f45">esp_upgradeFirmware</a>(void);void    <a class="el" href="esp8266_8h.html#a686b62cb1cb16a396e1283aaa6f54f71">esp_uartTransmit</a>(char *);bool    <a class="el" href="esp8266_8h.html#abb024ad17ab55c2f29a20c91b4fe2853">esp_waitForOK</a>(void);/* Måden som der kommunikeres til FTDI over USB */void    <a class="el" href="esp8266_8h.html#aa02d860e62d39e919524b87dfacd48e2">esp_terminalReceive</a>(void);void    <a class="el" href="esp8266_8h.html#a34e0a151512a61a4fd2b93d74c2cb3ba">esp_terminalTransmit</a>(char *);void    <a class="el" href="esp8266_8h.html#a27b33a4a37a028e508bf0af4f1e8cbf8">esp_adjustLeds</a>(void);                #endif	/* <a class="el" href="esp8266_8h.html#a48b3f94559b5c494cd8e216ddd409a93">ESP8266_H</a> */#endif// AT+UART - UART configuration/*  * Query Command: AT+UART_DEF? * Response:  * +UART_DEF:&lt;baudrate&gt;,&lt;databits&gt;,&lt;stopbits&gt;,&lt;parity&gt;,&lt;flow control&gt; * OK *  * Set Command:  * AT+UART_DEF=&lt;baudrate&gt;,&lt;databits&gt;,&lt;stopbits&gt;,&lt;parity&gt;,&lt;flow control&gt; * Response: * OK *  * Parameter: * &lt;baudrate&gt;: UART baud rate * &lt;databits&gt;: data bits *   5: 5-bit data *   6: 6-bit data *   7: 7-bit data *   8: 8-bit data * &lt;stopbits&gt;: stop bits *   1: 1-bit stop bit *   2: 1.5-bit stop bit *   3: 2-bit stop bit * &lt;parity&gt;: parity bit *   0: None *   1: Odd *   2: Even * &lt;flow control&gt;: flow control *   0: flow control is not enabled *   1: enable RTS *   2: enable CTS *   3: enable both RTS and CTS *  * Notes * 1. The configuration changes will be saved in the user parameter area in the *    flash, and will still be valid when the chip is powered on again. * 2. The use of flow control requires the support of hardware: *   MTCK is UART0 CTS *   MTDO is UART0 RTS * 3. The range of baud rates supported: 110~115200*40. *  * Example AT+UART_DEF=115200,8,1,0,3 */void <a class="el" href="esp8266_8h.html#a4020d440d391862b0179d1948e29f4ab">esp_setUARTConfiguration</a>(void) {    printf(&quot;AT+UART=%d,%d,%d,%d,%d&quot;, uart.baudrate, uart.databits, uart.flowcontrol, uart.parity, uart.stopbits);}// Se ovenfor ...void <a class="el" href="esp8266_8h.html#a9013f3a30c63c4827be5da85353fe58b">esp_getUARTConfiguration</a>(void) {    printf(&quot;AT+UART?&quot;); // Hent konfiguration    while(!<a class="el" href="esp8266_8h.html#a987219a0eccd68b289e00d7fb82f76a7">esp_uartReceive</a>(&quot;OK&quot;)) {};}// Reset ESP01 moduletvoid <a class="el" href="esp8266_8h.html#a878e212ec1d120aaf8149946cff1b655">esp_restartModule</a>(void) {    printf(&quot;AT+RST\r\n&quot;);    while(!<a class="el" href="esp8266_8h.html#a987219a0eccd68b289e00d7fb82f76a7">esp_uartReceive</a>(&quot;OK&quot;)) {};}// AT+GMR?Checks Version Information/* * Response old firmware: * AT version:1.2.0.0(Jul  1 2016 20:04:45) * SDK version:1.5.4.1(39cb9a32) * Ai-Thinker Technology Co. Ltd. * Dec  2 2016 14:21:16 * OK *  * Response updataed formware: * AT version:1.2.0.0(Jul  1 2016 20:04:45) * SDK version:1.5.4.1(39cb9a32) * Ai-Thinker Technology Co. Ltd. * v1.5.4.1-a Nov 30 2017 15:54:51 * OK *  * Response new firmware: * AT version:1.7.0.0(Aug 16 2018 00:57:04) * SDK version:3.0.0(d49923c) * compile time:Aug 23 2018 16:58:12 * Bin version(Wroom 02):v1.7.0 * OK */void <a class="el" href="esp8266_8h.html#aa27e91a53cfef79618a81c77d74114b5">esp_getVersion</a>(void) {    printf(&quot;AT+GMR\r\n&quot;);    while (!<a class="el" href="esp8266_8h.html#a987219a0eccd68b289e00d7fb82f76a7">esp_uartReceive</a>(&quot;OK&quot;) || !esp_uartReceive(&quot;ERROR&quot;)) {};}// AT+CIUPDATE - Upgrades the software through network/* * Execute Command: AT+CIUPDATE * Function: updates software. *  * Response: * +CIPUPDATE:&lt;n&gt; * OK *  * Parameters: * &lt;n&gt;: *  - 1: find the server. *  - 2: connect to server. *  - 3: get the software version. *  - 4: start updating. *  * Notes: *  - The speed of the upgrade is susceptible to the connectivity of the network. *  - ERROR will be returned <a class="el" href="esp8266_8c.html#a3d0b2804084ecc1f9e8e169666ea4ce9">if</a> the upgrade fails due to unfavourable network  *    conditions. Please wait for some <a class="el" href="rtc_8h.html#ab842bdb7d02be824fb48613032b4ff36">time</a> before retrying. *  * Notes: *  - If using Espressif?s AT BIN (/ESP8266_NONOS_SDK/bin/at), AT+CIUPDATE will  *    download a new AT BIN from the Espressif Cloud. *  - If using a user-compiled AT BIN, users need to make their own AT+CIUPDATE  *    upgrade. Espressif provides a demo as a reference for local upgrade  *    (/ESP8266_NONOS_SDK/example/at). *  - It is suggested that users call AT+RESTORE to restore the factory default  *    settings after upgrading the AT firmware. */void <a class="el" href="esp8266_8h.html#ad74be5991b7bbea9d727cc97a2754f45">esp_upgradeFirmware</a>(void) {    printf(&quot;AT+CIUPDATE\r\n&quot;);    while (!<a class="el" href="esp8266_8h.html#a987219a0eccd68b289e00d7fb82f76a7">esp_uartReceive</a>(&quot;1&quot;) || !<a class="el" href="esp8266_8h.html#a987219a0eccd68b289e00d7fb82f76a7">esp_uartReceive</a>(&quot;ERROR&quot;)) {};    while (!<a class="el" href="esp8266_8h.html#a987219a0eccd68b289e00d7fb82f76a7">esp_uartReceive</a>(&quot;2&quot;) || !<a class="el" href="esp8266_8h.html#a987219a0eccd68b289e00d7fb82f76a7">esp_uartReceive</a>(&quot;ERROR&quot;)) {};    while (!<a class="el" href="esp8266_8h.html#a987219a0eccd68b289e00d7fb82f76a7">esp_uartReceive</a>(&quot;3&quot;) || !<a class="el" href="esp8266_8h.html#a987219a0eccd68b289e00d7fb82f76a7">esp_uartReceive</a>(&quot;ERROR&quot;)) {};    while (!<a class="el" href="esp8266_8h.html#a987219a0eccd68b289e00d7fb82f76a7">esp_uartReceive</a>(&quot;4&quot;) || !<a class="el" href="esp8266_8h.html#a987219a0eccd68b289e00d7fb82f76a7">esp_uartReceive</a>(&quot;ERROR&quot;)) {};    while (!<a class="el" href="esp8266_8h.html#a987219a0eccd68b289e00d7fb82f76a7">esp_uartReceive</a>(&quot;OK&quot;) || !esp_uartReceive(&quot;ERROR&quot;)) {};}// AT - Tester om der er forbindelse til ATvoid <a class="el" href="esp8266_8h.html#ab784bcaa0560b6b3746229f6604043a9">esp_ATTestStartup</a>(void) {    printf(&quot;AT\r\n&quot;);}// ATE - AT Commands Echoing on/of/* Execute Command: ATE * Response OK *  * Parameters: *  - ATE0: Switches echo off. *  - ATE1: Switches echo on. *  * Note: * This command ATE is used to trigger command echo. It means that entered  * commands can be echoed back to the sender when ATE command is used. Two  * parameters are possible. The command returns OK in normal cases and ERROR  * when a parameter other than 0 or 1 was specified. */void <a class="el" href="esp8266_8h.html#a422ce84e6a2661494abe432b25396af4">esp_echoOff</a>(void) {    printf(&quot;ATE0\r\n&quot;);    while( !<a class="el" href="esp8266_8h.html#a987219a0eccd68b289e00d7fb82f76a7">esp_uartReceive</a>(&quot;OK&quot;) || !esp_uartReceive(&quot;ERROR&quot;) )        ;}/// ATE - AT Commands Echoing on/of/* Execute Command: ATE * Response OK *  * Parameters: *  - ATE0: Switches echo off. *  - ATE1: Switches echo on. *  * Note: * This command ATE is used to trigger command echo. It means that entered  * commands can be echoed back to the sender when ATE command is used. Two  * parameters are possible. The command returns OK in normal cases and ERROR  * when a parameter other than 0 or 1 was specified. */void <a class="el" href="esp8266_8h.html#a6b0763f6969ee07d739acc8050a2a52f">esp_echoOn</a>(void) {    printf(&quot;ATE1\r\n&quot;);    do { <a class="el" href="esp8266_8h.html#abb024ad17ab55c2f29a20c91b4fe2853">esp_waitForOK</a>(); } while( server.busy );}/// AT+CWAUTOCONN - Auto-Connects to the AP or Not/* * Set Command AT+CWAUTOCONN=&lt;enable&gt; * Response OK * Parameters * &lt;enable&gt;: *  - 0: does NOT auto-connect to AP on power-up. *  - 1: connects to AP automatically on power-up. *  * The ESP8266 Station connects to the AP automatically on power-up by default. *  * Note: * The configuration changes will be saved in the system parameter area in the  * flash. *  * Example: * AT+CWAUTOCONN=1 */void <a class="el" href="esp8266_8h.html#af2d67f61a1cd9a25baf7acaaf52e398b">esp_autoconnect</a>(uint8_t mode) {    uint8_t AP_AUTOCONNECT = 0;    printf(&quot;AT+CWAUTOCONN=1\r\n&quot;);    //#define AT_CWAUTOCONN_QUERY { printf(&quot;AT+CWAUTOCONN=?\r\n&quot;); }}void <a class="el" href="esp8266_8h.html#af7b4773aaf25d26d57301662045fbcc2">esp_uartInitialize</a>(void) {            uart.baudrate    = 155200;    uart.databits    = 8;    uart.stopbits    = 1;    uart.parity      = 0;    uart.flowcontrol = 1;}uint8_t <a class="el" href="esp8266_8c.html#a6784e1c334dfceb8f017667c0b0f6a3e">index</a> = 0;uint8_t <a class="el" href="esp8266_8h.html#a987219a0eccd68b289e00d7fb82f76a7">esp_uartReceive</a>(char *response){    char string[256];    char tmpip[20];    char tmp;    <a class="el" href="esp8266_8c.html#a3d0b2804084ecc1f9e8e169666ea4ce9">if</a> (<a class="el" href="eusart1_8h.html#a51236ea81a98a25986a6733fbf291621">EUSART1_is_rx_ready</a>()) {        int i = 0;        uint8_t <a class="el" href="esp8266_8c.html#a6784e1c334dfceb8f017667c0b0f6a3e">index</a> = 0;                for(i=0; i&lt;= 64; i++){            uint8_t tmp = <a class="el" href="eusart1_8h.html#ab4dd58b431d4f59c5b78f909b0b9cb0b">EUSART1_Read</a>();            <a class="el" href="esp8266_8c.html#a3d0b2804084ecc1f9e8e169666ea4ce9">if</a>(tmp != 0x0D &amp;&amp; tmp != 0x0A) { // Spring \r og \n over                <a class="el" href="esp8266_8c.html#a3d0b2804084ecc1f9e8e169666ea4ce9">if</a>(isprint(tmp)) {                    string[<a class="el" href="esp8266_8c.html#a6784e1c334dfceb8f017667c0b0f6a3e">index</a>++] = tmp;                }            }             <a class="el" href="esp8266_8c.html#a3d0b2804084ecc1f9e8e169666ea4ce9">if</a>(tmp == 0x0A) { // Er vi nået til enden af en linie?                string[<a class="el" href="esp8266_8c.html#a6784e1c334dfceb8f017667c0b0f6a3e">index</a>] = 0; // 0-termineret streng                                <a class="el" href="esp8266_8c.html#a3d0b2804084ecc1f9e8e169666ea4ce9">if</a>( (strcmp(string, &quot;OK&quot;) == 0) || (strcmp(string, &quot;no change&quot;) == 0) || (strcmp(string, &quot;Send OK&quot;) == 0) ) {                    states.ok = true;                    <a class="el" href="esp8266_8c.html#a920f9b2da3066bafd9a0a55f0bca2e82">states.error</a> = false;                    <a class="el" href="esp8266_8c.html#aac54229b6e6a5356792d0df5435e155d">states.ready</a> = false;                    server.busy = false;                    break; // OK er den sidste kommando sendt fra ESP                } <a class="el" href="esp8266_8c.html#a0544c3fe466e421738dae463968b70ba">else</a> <a class="el" href="esp8266_8c.html#a3d0b2804084ecc1f9e8e169666ea4ce9">if</a> ( strcmp(string, &quot;busy p...&quot;) == 0) {                    server.busy = true;                    break;                } <a class="el" href="esp8266_8c.html#a0544c3fe466e421738dae463968b70ba">else</a> <a class="el" href="esp8266_8c.html#a3d0b2804084ecc1f9e8e169666ea4ce9">if</a> ( strcmp(string, &quot;ERROR&quot;) == 0) {                    states.ok = false;                    <a class="el" href="esp8266_8c.html#a920f9b2da3066bafd9a0a55f0bca2e82">states.error</a> = true;                    <a class="el" href="esp8266_8c.html#aac54229b6e6a5356792d0df5435e155d">states.ready</a> = false;                    break;                } <a class="el" href="esp8266_8c.html#a0544c3fe466e421738dae463968b70ba">else</a> <a class="el" href="esp8266_8c.html#a3d0b2804084ecc1f9e8e169666ea4ce9">if</a> ( strcmp(string, &quot;ready&quot;) == 0 ) {                     states.ok = false;                    <a class="el" href="esp8266_8c.html#a920f9b2da3066bafd9a0a55f0bca2e82">states.error</a> = false;                    <a class="el" href="esp8266_8c.html#aac54229b6e6a5356792d0df5435e155d">states.ready</a> = true;                    break;                } <a class="el" href="esp8266_8c.html#a0544c3fe466e421738dae463968b70ba">else</a> <a class="el" href="esp8266_8c.html#a3d0b2804084ecc1f9e8e169666ea4ce9">if</a> ( strcmp(string, &quot;WIFI DISCONNECT&quot;) == 0) {                    strcpy((char*)server.ssid, &quot;&quot;);                    server.wificonnected = false;                    server.wifigotip = false;                    states.ok = false;                    <a class="el" href="esp8266_8c.html#a920f9b2da3066bafd9a0a55f0bca2e82">states.error</a> = true;                    break;                } <a class="el" href="esp8266_8c.html#a0544c3fe466e421738dae463968b70ba">else</a> <a class="el" href="esp8266_8c.html#a3d0b2804084ecc1f9e8e169666ea4ce9">if</a> ( strcmp(string, &quot;WIFI CONNECTED&quot;) == 0 ) {                    server.wificonnected = true;                    break;                } <a class="el" href="esp8266_8c.html#a0544c3fe466e421738dae463968b70ba">else</a> <a class="el" href="esp8266_8c.html#a3d0b2804084ecc1f9e8e169666ea4ce9">if</a> ( strcmp(string, &quot;WIFI GOT IP&quot;) == 0) {                    server.wifigotip = true;                    <a class="el" href="esp8266_8c.html#a920f9b2da3066bafd9a0a55f0bca2e82">states.error</a> = false;                    <a class="el" href="esp8266_8c.html#aac54229b6e6a5356792d0df5435e155d">states.ready</a> = false;                    break;                } <a class="el" href="esp8266_8c.html#a0544c3fe466e421738dae463968b70ba">else</a> <a class="el" href="esp8266_8c.html#a3d0b2804084ecc1f9e8e169666ea4ce9">if</a> ( strcmp(string, &quot;0,CLOSED&quot;) == 0 ) {                    server.clientConnected = false;                    break;                } <a class="el" href="esp8266_8c.html#a0544c3fe466e421738dae463968b70ba">else</a> <a class="el" href="esp8266_8c.html#a3d0b2804084ecc1f9e8e169666ea4ce9">if</a> ( strcmp(string, &quot;1,CLOSED&quot;) == 0 ) {                    server.clientConnected = false;                    break;                } <a class="el" href="esp8266_8c.html#a0544c3fe466e421738dae463968b70ba">else</a> <a class="el" href="esp8266_8c.html#a3d0b2804084ecc1f9e8e169666ea4ce9">if</a> ( strcmp(string, &quot;0,CONNECT&quot;) == 0 ) {                    server.clientConnected = true;                    break;                } <a class="el" href="esp8266_8c.html#a0544c3fe466e421738dae463968b70ba">else</a> <a class="el" href="esp8266_8c.html#a3d0b2804084ecc1f9e8e169666ea4ce9">if</a> ( strcmp(string, &quot;1,CONNECT&quot;) == 0 ) {                    server.clientConnected = true;                    break;                } <a class="el" href="esp8266_8c.html#a0544c3fe466e421738dae463968b70ba">else</a> <a class="el" href="esp8266_8c.html#a3d0b2804084ecc1f9e8e169666ea4ce9">if</a> ( strncmp(string, &quot;+IPD&quot; ,4) == 0 ) { //+IPD,0,478:GET / HTTP/1.1                    server.clientAvailable = true;                    <a class="el" href="tcpip_8h.html#a72738039f1d689df92c84000174c9327">tcpip_serverPage</a>();                    break;                } <a class="el" href="esp8266_8c.html#a0544c3fe466e421738dae463968b70ba">else</a> <a class="el" href="esp8266_8c.html#a3d0b2804084ecc1f9e8e169666ea4ce9">if</a> ( strncmp(string, &quot;+CWJAP&quot;, 6) == 0 ) { //+CWJAP:&quot;SSID-JRzcM4&quot;,&quot;00:1e:80:2d:ba:61&quot;,10,-62,0                    led_getrequest_SetHigh();                } <a class="el" href="esp8266_8c.html#a0544c3fe466e421738dae463968b70ba">else</a> <a class="el" href="esp8266_8c.html#a3d0b2804084ecc1f9e8e169666ea4ce9">if</a> ( strncmp(string, &quot;No AP&quot;, 5) == 0) { // Vi får No AP efter AT+CWJAB?                    server.wificonnected = false;                    server.wifigotip = false;                    break;                } <a class="el" href="esp8266_8c.html#a0544c3fe466e421738dae463968b70ba">else</a> <a class="el" href="esp8266_8c.html#a3d0b2804084ecc1f9e8e169666ea4ce9">if</a> ( strncmp(string, &quot;+CWLAP&quot;, 6) == 0 ) {                    char src[40];                    char dest[20];                    uint8_t <a class="el" href="esp8266_8c.html#af9d495c1655d813d553030485d00fea7">length</a>;                    <a class="el" href="esp8266_8c.html#a3d0b2804084ecc1f9e8e169666ea4ce9">if</a>( strcmp((char*)server.ssid, &quot;&quot;) == 0) {                        memset(dest, '\0', sizeof(dest));                        strcpy(src, string+9); // Ser bort fra +CWLAP:(&quot;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <h2 class="groupheader">Funktions-dokumentation</h2>
 <a id="a27b33a4a37a028e508bf0af4f1e8cbf8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a27b33a4a37a028e508bf0af4f1e8cbf8">&#9670;&nbsp;</a></span>esp_adjustLeds()</h2>
@@ -195,9 +178,206 @@ Variable</h2></td></tr>
 <div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;        <a class="code" href="pin__manager_8h.html#af7113d52b64e9ea89070e94e5ed0d266">led_tcp_server_SetLow</a>();</div>
 <div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Indeholder referencer til <a class="el" href="#l00036">SERVER::clientConnected</a>, <a class="el" href="#l00093">States::error</a>, <a class="el" href="#l00032">SERVER::internet</a>, <a class="el" href="#l00140">led_ap_connected_SetHigh</a>, <a class="el" href="#l00141">led_ap_connected_SetLow</a>, <a class="el" href="#l00115">led_client_connected_SetHigh</a>, <a class="el" href="#l00116">led_client_connected_SetLow</a>, <a class="el" href="#l00074">led_error_SetLow</a>, <a class="el" href="#l00075">led_error_Toggle</a>, <a class="el" href="#l00087">led_ok_SetHigh</a>, <a class="el" href="#l00088">led_ok_SetLow</a>, <a class="el" href="#l00101">led_ready_SetHigh</a>, <a class="el" href="#l00102">led_ready_SetLow</a>, <a class="el" href="#l00164">led_tcp_server_SetHigh</a>, <a class="el" href="#l00165">led_tcp_server_SetLow</a>, <a class="el" href="#l00166">led_tcp_server_Toggle</a>, <a class="el" href="#l00092">States::ok</a>, <a class="el" href="#l00094">States::ready</a>, <a class="el" href="#l00035">SERVER::running</a>, <a class="el" href="#l00043">server</a>, <a class="el" href="#l00099">states</a>, <a class="el" href="#l00030">SERVER::wificonnected</a> og <a class="el" href="#l00031">SERVER::wifigotip</a>.</p>
+<p class="reference">Indeholder referencer til <a class="el" href="#l00037">SERVER::clientConnected</a>, <a class="el" href="#l00096">States::error</a>, <a class="el" href="#l00033">SERVER::internet</a>, <a class="el" href="#l00140">led_ap_connected_SetHigh</a>, <a class="el" href="#l00141">led_ap_connected_SetLow</a>, <a class="el" href="#l00115">led_client_connected_SetHigh</a>, <a class="el" href="#l00116">led_client_connected_SetLow</a>, <a class="el" href="#l00074">led_error_SetLow</a>, <a class="el" href="#l00075">led_error_Toggle</a>, <a class="el" href="#l00087">led_ok_SetHigh</a>, <a class="el" href="#l00088">led_ok_SetLow</a>, <a class="el" href="#l00101">led_ready_SetHigh</a>, <a class="el" href="#l00102">led_ready_SetLow</a>, <a class="el" href="#l00164">led_tcp_server_SetHigh</a>, <a class="el" href="#l00165">led_tcp_server_SetLow</a>, <a class="el" href="#l00166">led_tcp_server_Toggle</a>, <a class="el" href="#l00095">States::ok</a>, <a class="el" href="#l00097">States::ready</a>, <a class="el" href="#l00036">SERVER::running</a>, <a class="el" href="#l00044">server</a>, <a class="el" href="#l00102">states</a>, <a class="el" href="#l00031">SERVER::wificonnected</a> og <a class="el" href="#l00032">SERVER::wifigotip</a>.</p>
 
-<p class="reference">Refereret til af <a class="el" href="#l00062">main()</a>.</p>
+<p class="reference">Refereret til af <a class="el" href="#l00063">main()</a>.</p>
+
+</div>
+</div>
+<a id="ab784bcaa0560b6b3746229f6604043a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab784bcaa0560b6b3746229f6604043a9">&#9670;&nbsp;</a></span>esp_ATTestStartup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void esp_ATTestStartup </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                             {</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    printf(<span class="stringliteral">&quot;AT\r\n&quot;</span>);</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac3063f293755ce10420ca0b764b5dcf7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3063f293755ce10420ca0b764b5dcf7">&#9670;&nbsp;</a></span>esp_autoconnect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void esp_autoconnect </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>mode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>AT+CWAUTOCONN - Auto-Connects to the AP or Not. </p>
+<div class="fragment"><div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;                                   {</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    uint8_t AP_AUTOCONNECT = 0;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160; </div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    printf(<span class="stringliteral">&quot;AT+CWAUTOCONN=1\r\n&quot;</span>);</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    <span class="comment">//#define AT_CWAUTOCONN_QUERY { printf(&quot;AT+CWAUTOCONN=?\r\n&quot;); }</span></div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a422ce84e6a2661494abe432b25396af4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a422ce84e6a2661494abe432b25396af4">&#9670;&nbsp;</a></span>esp_echoOff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void esp_echoOff </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;                       {</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    printf(<span class="stringliteral">&quot;ATE0\r\n&quot;</span>);</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="keywordflow">while</span>( !<a class="code" href="esp8266_8c.html#a3deffb46f2867734db9977c89db63bd0">esp_uartReceive</a>(<span class="stringliteral">&quot;OK&quot;</span>) || !<a class="code" href="esp8266_8c.html#a3deffb46f2867734db9977c89db63bd0">esp_uartReceive</a>(<span class="stringliteral">&quot;ERROR&quot;</span>) )</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        ;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Indeholder referencer til <a class="el" href="#l00231">esp_uartReceive()</a>.</p>
+
+<p class="reference">Refereret til af <a class="el" href="#l00063">main()</a>.</p>
+
+</div>
+</div>
+<a id="a6b0763f6969ee07d739acc8050a2a52f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b0763f6969ee07d739acc8050a2a52f">&#9670;&nbsp;</a></span>esp_echoOn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void esp_echoOn </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ATE - AT Commands Echoing on/of. </p>
+<div class="fragment"><div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;                      {</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    printf(<span class="stringliteral">&quot;ATE1\r\n&quot;</span>);</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    <span class="keywordflow">do</span> { <a class="code" href="esp8266_8c.html#abb024ad17ab55c2f29a20c91b4fe2853">esp_waitForOK</a>(); } <span class="keywordflow">while</span>( <a class="code" href="tcpip_8h.html#a589e4f516d0f2129018cd6260892be0f">server</a>.<a class="code" href="struct_s_e_r_v_e_r.html#abbe792bb2cf67584b86443440a194f46">busy</a> );</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Indeholder referencer til <a class="el" href="#l00024">SERVER::busy</a>, <a class="el" href="#l00429">esp_waitForOK()</a> og <a class="el" href="#l00044">server</a>.</p>
+
+</div>
+</div>
+<a id="a9013f3a30c63c4827be5da85353fe58b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9013f3a30c63c4827be5da85353fe58b">&#9670;&nbsp;</a></span>esp_getUARTConfiguration()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void esp_getUARTConfiguration </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                                    {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    printf(<span class="stringliteral">&quot;AT+UART?&quot;</span>); <span class="comment">// Hent konfiguration</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">while</span>(!<a class="code" href="esp8266_8c.html#a3deffb46f2867734db9977c89db63bd0">esp_uartReceive</a>(<span class="stringliteral">&quot;OK&quot;</span>)) {};</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Indeholder referencer til <a class="el" href="#l00231">esp_uartReceive()</a>.</p>
+
+</div>
+</div>
+<a id="aa27e91a53cfef79618a81c77d74114b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa27e91a53cfef79618a81c77d74114b5">&#9670;&nbsp;</a></span>esp_getVersion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void esp_getVersion </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                          {</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    printf(<span class="stringliteral">&quot;AT+GMR\r\n&quot;</span>);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordflow">while</span> (!<a class="code" href="esp8266_8c.html#a3deffb46f2867734db9977c89db63bd0">esp_uartReceive</a>(<span class="stringliteral">&quot;OK&quot;</span>) || !<a class="code" href="esp8266_8c.html#a3deffb46f2867734db9977c89db63bd0">esp_uartReceive</a>(<span class="stringliteral">&quot;ERROR&quot;</span>)) {};</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Indeholder referencer til <a class="el" href="#l00231">esp_uartReceive()</a>.</p>
+
+</div>
+</div>
+<a id="a878e212ec1d120aaf8149946cff1b655"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a878e212ec1d120aaf8149946cff1b655">&#9670;&nbsp;</a></span>esp_restartModule()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void esp_restartModule </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                             {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    printf(<span class="stringliteral">&quot;AT+RST\r\n&quot;</span>);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">while</span>(!<a class="code" href="esp8266_8c.html#a3deffb46f2867734db9977c89db63bd0">esp_uartReceive</a>(<span class="stringliteral">&quot;OK&quot;</span>)) {};</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Indeholder referencer til <a class="el" href="#l00231">esp_uartReceive()</a>.</p>
+
+</div>
+</div>
+<a id="a4020d440d391862b0179d1948e29f4ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4020d440d391862b0179d1948e29f4ab">&#9670;&nbsp;</a></span>esp_setUARTConfiguration()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void esp_setUARTConfiguration </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>UART kommandoer. </p>
+<div class="fragment"><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                                    {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    printf(<span class="stringliteral">&quot;AT+UART=%d,%d,%d,%d,%d&quot;</span>, <a class="code" href="esp8266_8h.html#aae664464ddb16646191b294e2cae1e2d">uart</a>.<a class="code" href="struct_e_s_p_u_a_r_t.html#a758f659f15b3784c13d14aee2e89e6a2">baudrate</a>, <a class="code" href="esp8266_8h.html#aae664464ddb16646191b294e2cae1e2d">uart</a>.<a class="code" href="struct_e_s_p_u_a_r_t.html#a46fa9ba7ed2a4f21a56eea505c49d462">databits</a>, <a class="code" href="esp8266_8h.html#aae664464ddb16646191b294e2cae1e2d">uart</a>.<a class="code" href="struct_e_s_p_u_a_r_t.html#ac71816212f4d863f515c782f5b687d97">flowcontrol</a>, <a class="code" href="esp8266_8h.html#aae664464ddb16646191b294e2cae1e2d">uart</a>.<a class="code" href="struct_e_s_p_u_a_r_t.html#aa0e72b59c63431c62f5b5eba36a65d17">parity</a>, <a class="code" href="esp8266_8h.html#aae664464ddb16646191b294e2cae1e2d">uart</a>.<a class="code" href="struct_e_s_p_u_a_r_t.html#a9de35842403baab5738ea16162012d4f">stopbits</a>);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Indeholder referencer til <a class="el" href="#l00076">ESPUART::baudrate</a>, <a class="el" href="#l00077">ESPUART::databits</a>, <a class="el" href="#l00080">ESPUART::flowcontrol</a>, <a class="el" href="#l00079">ESPUART::parity</a>, <a class="el" href="#l00078">ESPUART::stopbits</a> og <a class="el" href="#l00082">uart</a>.</p>
 
 </div>
 </div>
@@ -248,6 +428,243 @@ Variable</h2></td></tr>
 
 </div>
 </div>
+<a id="af7b4773aaf25d26d57301662045fbcc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7b4773aaf25d26d57301662045fbcc2">&#9670;&nbsp;</a></span>esp_uartInitialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void esp_uartInitialize </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;                              {        </div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <a class="code" href="esp8266_8h.html#aae664464ddb16646191b294e2cae1e2d">uart</a>.<a class="code" href="struct_e_s_p_u_a_r_t.html#a758f659f15b3784c13d14aee2e89e6a2">baudrate</a>    = 155200;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <a class="code" href="esp8266_8h.html#aae664464ddb16646191b294e2cae1e2d">uart</a>.<a class="code" href="struct_e_s_p_u_a_r_t.html#a46fa9ba7ed2a4f21a56eea505c49d462">databits</a>    = 8;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <a class="code" href="esp8266_8h.html#aae664464ddb16646191b294e2cae1e2d">uart</a>.<a class="code" href="struct_e_s_p_u_a_r_t.html#a9de35842403baab5738ea16162012d4f">stopbits</a>    = 1;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <a class="code" href="esp8266_8h.html#aae664464ddb16646191b294e2cae1e2d">uart</a>.<a class="code" href="struct_e_s_p_u_a_r_t.html#aa0e72b59c63431c62f5b5eba36a65d17">parity</a>      = 0;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <a class="code" href="esp8266_8h.html#aae664464ddb16646191b294e2cae1e2d">uart</a>.<a class="code" href="struct_e_s_p_u_a_r_t.html#ac71816212f4d863f515c782f5b687d97">flowcontrol</a> = 1;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Indeholder referencer til <a class="el" href="#l00076">ESPUART::baudrate</a>, <a class="el" href="#l00077">ESPUART::databits</a>, <a class="el" href="#l00080">ESPUART::flowcontrol</a>, <a class="el" href="#l00079">ESPUART::parity</a>, <a class="el" href="#l00078">ESPUART::stopbits</a> og <a class="el" href="#l00082">uart</a>.</p>
+
+</div>
+</div>
+<a id="a3deffb46f2867734db9977c89db63bd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3deffb46f2867734db9977c89db63bd0">&#9670;&nbsp;</a></span>esp_uartReceive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t esp_uartReceive </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>response</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;                                       {</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    <span class="keywordtype">char</span> <span class="keywordtype">string</span>[256];</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    <span class="keywordtype">char</span> tmpip[20];</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <span class="keywordtype">char</span> tmp;</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160; </div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160; </div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="eusart1_8c.html#a51236ea81a98a25986a6733fbf291621">EUSART1_is_rx_ready</a>()) {</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        <span class="keywordtype">int</span> i = 0;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        uint8_t <a class="code" href="esp8266_8c.html#aae5a12e607d0f782506d9e6ec6179c64">index</a> = 0;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        </div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        <span class="keywordflow">for</span>(i=0; i&lt;= 64; i++){</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;            uint8_t tmp = <a class="code" href="eusart1_8c.html#ab4dd58b431d4f59c5b78f909b0b9cb0b">EUSART1_Read</a>();</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;            <span class="keywordflow">if</span>(tmp != 0x0D &amp;&amp; tmp != 0x0A) { <span class="comment">// Spring \r og \n over</span></div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;                <span class="keywordflow">if</span>(isprint(tmp)) {</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;                    <span class="keywordtype">string</span>[<a class="code" href="esp8266_8c.html#aae5a12e607d0f782506d9e6ec6179c64">index</a>++] = tmp;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;                }</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;            }</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160; </div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;            <span class="keywordflow">if</span>(tmp == 0x0A) { <span class="comment">// Er vi n�et til enden af en linie?</span></div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;                <span class="keywordtype">string</span>[<a class="code" href="esp8266_8c.html#aae5a12e607d0f782506d9e6ec6179c64">index</a>] = 0; <span class="comment">// 0-termineret streng</span></div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;                </div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;                <span class="keywordflow">if</span>( (strcmp(<span class="keywordtype">string</span>, <span class="stringliteral">&quot;OK&quot;</span>) == 0) || (strcmp(<span class="keywordtype">string</span>, <span class="stringliteral">&quot;no change&quot;</span>) == 0) || (strcmp(<span class="keywordtype">string</span>, <span class="stringliteral">&quot;Send OK&quot;</span>) == 0) ) {</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;                    <a class="code" href="esp8266_8h.html#a4952c1b7f3ed488d08e34f466ba70db8">states</a>.<a class="code" href="struct_states.html#a1d67bd6634a9002df97231d8c8dbc66c">ok</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;                    <a class="code" href="esp8266_8h.html#a4952c1b7f3ed488d08e34f466ba70db8">states</a>.<a class="code" href="struct_states.html#a7a3172cc98e93d8eadfb9ab30373799e">error</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;                    <a class="code" href="esp8266_8h.html#a4952c1b7f3ed488d08e34f466ba70db8">states</a>.<a class="code" href="struct_states.html#a65cf7d7f8e531611b245355ab91fd749">ready</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;                    <a class="code" href="tcpip_8h.html#a589e4f516d0f2129018cd6260892be0f">server</a>.<a class="code" href="struct_s_e_r_v_e_r.html#abbe792bb2cf67584b86443440a194f46">busy</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;                    <span class="keywordflow">break</span>; <span class="comment">// OK er den sidste kommando sendt fra ESP</span></div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( strcmp(<span class="keywordtype">string</span>, <span class="stringliteral">&quot;busy p...&quot;</span>) == 0) {</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;                    <a class="code" href="tcpip_8h.html#a589e4f516d0f2129018cd6260892be0f">server</a>.<a class="code" href="struct_s_e_r_v_e_r.html#abbe792bb2cf67584b86443440a194f46">busy</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( strcmp(<span class="keywordtype">string</span>, <span class="stringliteral">&quot;ERROR&quot;</span>) == 0) {</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;                    <a class="code" href="esp8266_8h.html#a4952c1b7f3ed488d08e34f466ba70db8">states</a>.<a class="code" href="struct_states.html#a1d67bd6634a9002df97231d8c8dbc66c">ok</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;                    <a class="code" href="esp8266_8h.html#a4952c1b7f3ed488d08e34f466ba70db8">states</a>.<a class="code" href="struct_states.html#a7a3172cc98e93d8eadfb9ab30373799e">error</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;                    <a class="code" href="esp8266_8h.html#a4952c1b7f3ed488d08e34f466ba70db8">states</a>.<a class="code" href="struct_states.html#a65cf7d7f8e531611b245355ab91fd749">ready</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( strcmp(<span class="keywordtype">string</span>, <span class="stringliteral">&quot;ready&quot;</span>) == 0 ) { </div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;                    <a class="code" href="esp8266_8h.html#a4952c1b7f3ed488d08e34f466ba70db8">states</a>.<a class="code" href="struct_states.html#a1d67bd6634a9002df97231d8c8dbc66c">ok</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;                    <a class="code" href="esp8266_8h.html#a4952c1b7f3ed488d08e34f466ba70db8">states</a>.<a class="code" href="struct_states.html#a7a3172cc98e93d8eadfb9ab30373799e">error</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;                    <a class="code" href="esp8266_8h.html#a4952c1b7f3ed488d08e34f466ba70db8">states</a>.<a class="code" href="struct_states.html#a65cf7d7f8e531611b245355ab91fd749">ready</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( strcmp(<span class="keywordtype">string</span>, <span class="stringliteral">&quot;WIFI DISCONNECT&quot;</span>) == 0) {</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;                    strcpy((<span class="keywordtype">char</span>*)<a class="code" href="tcpip_8h.html#a589e4f516d0f2129018cd6260892be0f">server</a>.<a class="code" href="struct_s_e_r_v_e_r.html#ab4fd81ab322605872a2b090805f2ed8f">ssid</a>, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;                    <a class="code" href="tcpip_8h.html#a589e4f516d0f2129018cd6260892be0f">server</a>.<a class="code" href="struct_s_e_r_v_e_r.html#a5d06114b5370f6ec7661415203a20b3a">wificonnected</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;                    <a class="code" href="tcpip_8h.html#a589e4f516d0f2129018cd6260892be0f">server</a>.<a class="code" href="struct_s_e_r_v_e_r.html#a20aa0aa35bef9245b05479074a002f52">wifigotip</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;                    <a class="code" href="esp8266_8h.html#a4952c1b7f3ed488d08e34f466ba70db8">states</a>.<a class="code" href="struct_states.html#a1d67bd6634a9002df97231d8c8dbc66c">ok</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;                    <a class="code" href="esp8266_8h.html#a4952c1b7f3ed488d08e34f466ba70db8">states</a>.<a class="code" href="struct_states.html#a7a3172cc98e93d8eadfb9ab30373799e">error</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( strcmp(<span class="keywordtype">string</span>, <span class="stringliteral">&quot;WIFI CONNECTED&quot;</span>) == 0 ) {</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;                    <a class="code" href="tcpip_8h.html#a589e4f516d0f2129018cd6260892be0f">server</a>.<a class="code" href="struct_s_e_r_v_e_r.html#a5d06114b5370f6ec7661415203a20b3a">wificonnected</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( strcmp(<span class="keywordtype">string</span>, <span class="stringliteral">&quot;WIFI GOT IP&quot;</span>) == 0) {</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;                    <a class="code" href="tcpip_8h.html#a589e4f516d0f2129018cd6260892be0f">server</a>.<a class="code" href="struct_s_e_r_v_e_r.html#a20aa0aa35bef9245b05479074a002f52">wifigotip</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;                    <a class="code" href="esp8266_8h.html#a4952c1b7f3ed488d08e34f466ba70db8">states</a>.<a class="code" href="struct_states.html#a7a3172cc98e93d8eadfb9ab30373799e">error</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;                    <a class="code" href="esp8266_8h.html#a4952c1b7f3ed488d08e34f466ba70db8">states</a>.<a class="code" href="struct_states.html#a65cf7d7f8e531611b245355ab91fd749">ready</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( strcmp(<span class="keywordtype">string</span>, <span class="stringliteral">&quot;0,CLOSED&quot;</span>) == 0 ) {</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;                    <a class="code" href="tcpip_8h.html#a589e4f516d0f2129018cd6260892be0f">server</a>.<a class="code" href="struct_s_e_r_v_e_r.html#a028ce4496d0ac99939c34ee47b984e21">clientConnected</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( strcmp(<span class="keywordtype">string</span>, <span class="stringliteral">&quot;1,CLOSED&quot;</span>) == 0 ) {</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;                    <a class="code" href="tcpip_8h.html#a589e4f516d0f2129018cd6260892be0f">server</a>.<a class="code" href="struct_s_e_r_v_e_r.html#a028ce4496d0ac99939c34ee47b984e21">clientConnected</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( strcmp(<span class="keywordtype">string</span>, <span class="stringliteral">&quot;0,CONNECT&quot;</span>) == 0 ) {</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;                    <a class="code" href="tcpip_8h.html#a589e4f516d0f2129018cd6260892be0f">server</a>.<a class="code" href="struct_s_e_r_v_e_r.html#a028ce4496d0ac99939c34ee47b984e21">clientConnected</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( strcmp(<span class="keywordtype">string</span>, <span class="stringliteral">&quot;1,CONNECT&quot;</span>) == 0 ) {</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;                    <a class="code" href="tcpip_8h.html#a589e4f516d0f2129018cd6260892be0f">server</a>.<a class="code" href="struct_s_e_r_v_e_r.html#a028ce4496d0ac99939c34ee47b984e21">clientConnected</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( strncmp(<span class="keywordtype">string</span>, <span class="stringliteral">&quot;+IPD&quot;</span> ,4) == 0 ) { <span class="comment">//+IPD,0,478:GET / HTTP/1.1</span></div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;                    <a class="code" href="tcpip_8h.html#a589e4f516d0f2129018cd6260892be0f">server</a>.<a class="code" href="struct_s_e_r_v_e_r.html#ae9574a8844fec9b4877ef5e1debac98f">clientAvailable</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;                    <a class="code" href="tcpip_8c.html#a72738039f1d689df92c84000174c9327">tcpip_serverPage</a>();</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( strncmp(<span class="keywordtype">string</span>, <span class="stringliteral">&quot;+CWJAP&quot;</span>, 6) == 0 ) { <span class="comment">//+CWJAP:&quot;SSID-JRzcM4&quot;,&quot;00:1e:80:2d:ba:61&quot;,10,-62,0</span></div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;                    <a class="code" href="pin__manager_8h.html#ab54cacb91c41feece3ecea555b1131c7">led_getrequest_SetHigh</a>();</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( strncmp(<span class="keywordtype">string</span>, <span class="stringliteral">&quot;No AP&quot;</span>, 5) == 0) { <span class="comment">// Vi f�r No AP efter AT+CWJAB?</span></div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;                    <a class="code" href="tcpip_8h.html#a589e4f516d0f2129018cd6260892be0f">server</a>.<a class="code" href="struct_s_e_r_v_e_r.html#a5d06114b5370f6ec7661415203a20b3a">wificonnected</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;                    <a class="code" href="tcpip_8h.html#a589e4f516d0f2129018cd6260892be0f">server</a>.<a class="code" href="struct_s_e_r_v_e_r.html#a20aa0aa35bef9245b05479074a002f52">wifigotip</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( strncmp(<span class="keywordtype">string</span>, <span class="stringliteral">&quot;+CWLAP&quot;</span>, 6) == 0 ) {</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;                    <span class="keywordtype">char</span> src[40];</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;                    <span class="keywordtype">char</span> dest[20];</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;                    uint8_t length;</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;                    <span class="keywordflow">if</span>( strcmp((<span class="keywordtype">char</span>*)<a class="code" href="tcpip_8h.html#a589e4f516d0f2129018cd6260892be0f">server</a>.<a class="code" href="struct_s_e_r_v_e_r.html#ab4fd81ab322605872a2b090805f2ed8f">ssid</a>, <span class="stringliteral">&quot;&quot;</span>) == 0) {</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;                        memset(dest, <span class="charliteral">&#39;\0&#39;</span>, <span class="keyword">sizeof</span>(dest));</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;                        strcpy(src, <span class="keywordtype">string</span>+9); <span class="comment">// Ser bort fra +CWLAP:(&quot;</span></div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;                        length = (uint8_t) strlen(<span class="keywordtype">string</span>)-11; <span class="comment">// Klipper &quot;) i enden</span></div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;                        strncpy(dest, src, length ); </div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;                        <a class="code" href="wifi_8c.html#a9c6f183b5b028fdda9736a1b3f138ff7">wifi_network_lookup</a>(dest);</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;                    }</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( strncmp(<span class="keywordtype">string</span>, <span class="stringliteral">&quot;+STA_CONNECTED&quot;</span>, 14) == 0) {</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;                    printf(<span class="stringliteral">&quot;SoftAP Client connected\r\n&quot;</span>);</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( strncmp(<span class="keywordtype">string</span>, <span class="stringliteral">&quot;+CIFSR:STAIP&quot;</span>, 12) == 0 ) {</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;                    <span class="comment">//+CIPSTA:ip:&quot;192.168.0.22&quot;</span></div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;                    <span class="comment">//strncpy( server.remote_ip, (string+14), (strlen(string) -14 -2 ) );</span></div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;                }<span class="keywordflow">else</span> <span class="keywordflow">if</span> ( strncmp(<span class="keywordtype">string</span>, <span class="stringliteral">&quot;&gt;&quot;</span>, 1) == 0 ) {</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;                    <span class="keywordflow">if</span> ( strncmp(response, <span class="stringliteral">&quot;&gt;&quot;</span>, 1) == 0 )</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;                        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;                    <span class="keywordflow">else</span> </div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;                        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;                } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;                    <a class="code" href="esp8266_8h.html#a4952c1b7f3ed488d08e34f466ba70db8">states</a>.<a class="code" href="struct_states.html#a1d67bd6634a9002df97231d8c8dbc66c">ok</a>=0;</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;                    <a class="code" href="esp8266_8h.html#a4952c1b7f3ed488d08e34f466ba70db8">states</a>.<a class="code" href="struct_states.html#a7a3172cc98e93d8eadfb9ab30373799e">error</a>=0;</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;                    <a class="code" href="esp8266_8h.html#a4952c1b7f3ed488d08e34f466ba70db8">states</a>.<a class="code" href="struct_states.html#a65cf7d7f8e531611b245355ab91fd749">ready</a> = 0;</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;                }</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;                </div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;                <a class="code" href="esp8266_8c.html#aae5a12e607d0f782506d9e6ec6179c64">index</a>=0;</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;            }</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;        }</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;        </div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    }</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160; </div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;<span class="comment">    // Firmware control</span></div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;<span class="comment">    if ( !strcmp(string, &quot;AT version&quot;) ) {</span></div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;<span class="comment">        if ( !strcmp(string, &quot;1.7.0.0&quot;) ) {</span></div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;<span class="comment">            firmware.ATVersion = &quot;1.7.0.0&quot;;</span></div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;<span class="comment">            firmware.updated = 1;</span></div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;<span class="comment">        } else if ( !strcmp(string, &quot;1.2.0.0&quot;) ) {</span></div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;<span class="comment">            firmware.ATVersion = &quot;1.2.0.0&quot;;</span></div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;<span class="comment">            firmware.updated = 0;</span></div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;<span class="comment">        } else {</span></div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;<span class="comment">            //something</span></div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;<span class="comment">        }</span></div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;<span class="comment">    } else if ( !strcmp(string, &quot;+UART&quot;) ) {</span></div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;<span class="comment">        //Eks. +UART:115273,8,1,0,1</span></div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;<span class="comment">        uart.baudrate = 115200;</span></div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;<span class="comment">        uart.databits = 8;</span></div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;<span class="comment">        uart.flowcontrol = 1;</span></div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;<span class="comment">        uart.parity = 0;</span></div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;<span class="comment">        uart.stopbits = 1;</span></div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;<span class="comment">    } else if ( !strcmp(string, &quot;+CWMODE:&quot;) ) { // wifi mode indstilling</span></div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;<span class="comment">        if ( !strcmp(string, &quot;:1&quot;) ) {</span></div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;<span class="comment">            wifi.softAPMode  = 0;</span></div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;<span class="comment">            wifi.stationMode = 1;</span></div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;<span class="comment">        } else if( !strcmp(string, &quot;:2&quot;) ) {</span></div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;<span class="comment">            wifi.softAPMode  = 1;</span></div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;<span class="comment">            wifi.stationMode = 0;</span></div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;<span class="comment">        } else if( !strcmp(string, &quot;:3&quot;) ) {</span></div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;<span class="comment">            wifi.softAPMode  = 1;</span></div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;<span class="comment">            wifi.stationMode = 1;            </span></div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;<span class="comment">        } else {</span></div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;<span class="comment">            // something</span></div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;<span class="comment">        }</span></div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;<span class="comment">    }</span></div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;<span class="comment">    </span></div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;<span class="comment">    if ( strcmp(string, &quot;GET /&quot;) == 0 ) {// Har f�et en GET til rod request fra klient</span></div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;<span class="comment">        if ( !strcmp(string, &quot;HTTP/1.1&quot;) ) { // Er det en gyldig HTTP Resquest?</span></div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;<span class="comment">            //send header + page</span></div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;<span class="comment">            </span></div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;<span class="comment">        } else {</span></div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;<span class="comment">            esp_uartTransmit(&quot;Kun HTTP forbindelser&quot;);</span></div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;<span class="comment">        }</span></div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;<span class="comment">    }</span></div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;<span class="comment">    if ( strcmp(string, &quot;Upgrade-Insecure-Requests: 1&quot;) == 0 ) {// Klienten vil gerne have SSL forbindelse</span></div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;<span class="comment">        //do something</span></div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;<span class="comment">    }</span></div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;<span class="comment">    if ( strcmp(string, &quot;Accept-Language&quot; ) == 0 ) {</span></div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;<span class="comment">        //resolve language</span></div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;<span class="comment">    }</span></div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;<span class="comment">        //sprintf(msg, &quot;GPIO 1 on&quot;);</span></div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;<span class="comment">        //LCD_output(msg, 0 ,0);</span></div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;<span class="comment">        //toogleGPIO(1, 1);</span></div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;<span class="comment">    }</span></div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;<span class="comment">    </span></div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;<span class="comment">    if ( strcmp( string, &quot;GET /1/off&quot; ) == 0 ) { // turns the GPIOs on and off</span></div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;<span class="comment">        //sprintf(msg, &quot;GPIO 1 off&quot;);</span></div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;<span class="comment">        //LCD_output(msg, 0, 0);</span></div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;<span class="comment">        //toogleGPIO(1,0);</span></div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;<span class="comment">    }    </span></div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;<span class="comment">    </span></div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;<span class="comment">    if ( strcmp(string, &quot;GET /2/on&quot;) == 0 ) { // turns the GPIOs on and off</span></div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;<span class="comment">        //sprintf(msg, &quot;GPIO 2 on&quot;);</span></div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;<span class="comment">        //LCD_output(msg, 0, 0);</span></div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;<span class="comment">        //toogleGPIO(2, 1);</span></div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;<span class="comment">    } </span></div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;<span class="comment">    </span></div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;<span class="comment">    if ( strcmp(string, &quot;GET /2/off&quot;) == 0 ) { // turns the GPIOs on and off</span></div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;<span class="comment">        //sprintf(msg, &quot;GPIO 5 off&quot;);</span></div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;<span class="comment">        //LCD_output(msg, 0, 0);</span></div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;<span class="comment">        //toogleGPIO(2, 0);</span></div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;<span class="comment">    }</span></div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;    <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Indeholder referencer til <a class="el" href="#l00024">SERVER::busy</a>, <a class="el" href="#l00038">SERVER::clientAvailable</a>, <a class="el" href="#l00037">SERVER::clientConnected</a>, <a class="el" href="#l00096">States::error</a>, <a class="el" href="#l00137">EUSART1_is_rx_ready()</a>, <a class="el" href="#l00151">EUSART1_Read()</a>, <a class="el" href="#l00230">index</a>, <a class="el" href="#l00128">led_getrequest_SetHigh</a>, <a class="el" href="#l00095">States::ok</a>, <a class="el" href="#l00097">States::ready</a>, <a class="el" href="#l00044">server</a>, <a class="el" href="#l00028">SERVER::ssid</a>, <a class="el" href="#l00102">states</a>, <a class="el" href="#l00940">tcpip_serverPage()</a>, <a class="el" href="#l00160">wifi_network_lookup()</a>, <a class="el" href="#l00031">SERVER::wificonnected</a> og <a class="el" href="#l00032">SERVER::wifigotip</a>.</p>
+
+<p class="reference">Refereret til af <a class="el" href="#l00169">esp_echoOff()</a>, <a class="el" href="#l00067">esp_getUARTConfiguration()</a>, <a class="el" href="#l00103">esp_getVersion()</a>, <a class="el" href="#l00073">esp_restartModule()</a>, <a class="el" href="#l00139">esp_upgradeFirmware()</a>, <a class="el" href="#l00429">esp_waitForOK()</a>, <a class="el" href="#l00063">main()</a>, <a class="el" href="#l00096">softap_SoftAPInit()</a>, <a class="el" href="#l00195">wifi_connectToAP()</a> og <a class="el" href="#l00224">wifi_disconnectFromAP()</a>.</p>
+
+</div>
+</div>
 <a id="ac7b38c73e67f75d27fe1f2d62e367c0b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac7b38c73e67f75d27fe1f2d62e367c0b">&#9670;&nbsp;</a></span>esp_uartTransmit()</h2>
 
@@ -272,6 +689,34 @@ Variable</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
+<a id="ad74be5991b7bbea9d727cc97a2754f45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad74be5991b7bbea9d727cc97a2754f45">&#9670;&nbsp;</a></span>esp_upgradeFirmware()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void esp_upgradeFirmware </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;                               {</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    printf(<span class="stringliteral">&quot;AT+CIUPDATE\r\n&quot;</span>);</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <span class="keywordflow">while</span> (!<a class="code" href="esp8266_8c.html#a3deffb46f2867734db9977c89db63bd0">esp_uartReceive</a>(<span class="stringliteral">&quot;1&quot;</span>) || !<a class="code" href="esp8266_8c.html#a3deffb46f2867734db9977c89db63bd0">esp_uartReceive</a>(<span class="stringliteral">&quot;ERROR&quot;</span>)) {};</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="keywordflow">while</span> (!<a class="code" href="esp8266_8c.html#a3deffb46f2867734db9977c89db63bd0">esp_uartReceive</a>(<span class="stringliteral">&quot;2&quot;</span>) || !<a class="code" href="esp8266_8c.html#a3deffb46f2867734db9977c89db63bd0">esp_uartReceive</a>(<span class="stringliteral">&quot;ERROR&quot;</span>)) {};</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="keywordflow">while</span> (!<a class="code" href="esp8266_8c.html#a3deffb46f2867734db9977c89db63bd0">esp_uartReceive</a>(<span class="stringliteral">&quot;3&quot;</span>) || !<a class="code" href="esp8266_8c.html#a3deffb46f2867734db9977c89db63bd0">esp_uartReceive</a>(<span class="stringliteral">&quot;ERROR&quot;</span>)) {};</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="keywordflow">while</span> (!<a class="code" href="esp8266_8c.html#a3deffb46f2867734db9977c89db63bd0">esp_uartReceive</a>(<span class="stringliteral">&quot;4&quot;</span>) || !<a class="code" href="esp8266_8c.html#a3deffb46f2867734db9977c89db63bd0">esp_uartReceive</a>(<span class="stringliteral">&quot;ERROR&quot;</span>)) {};</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keywordflow">while</span> (!<a class="code" href="esp8266_8c.html#a3deffb46f2867734db9977c89db63bd0">esp_uartReceive</a>(<span class="stringliteral">&quot;OK&quot;</span>) || !<a class="code" href="esp8266_8c.html#a3deffb46f2867734db9977c89db63bd0">esp_uartReceive</a>(<span class="stringliteral">&quot;ERROR&quot;</span>)) {};</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Indeholder referencer til <a class="el" href="#l00231">esp_uartReceive()</a>.</p>
+
+</div>
+</div>
 <a id="abb024ad17ab55c2f29a20c91b4fe2853"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abb024ad17ab55c2f29a20c91b4fe2853">&#9670;&nbsp;</a></span>esp_waitForOK()</h2>
 
@@ -292,7 +737,7 @@ Variable</h2></td></tr>
 <div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;    <a class="code" href="esp8266_8h.html#a4952c1b7f3ed488d08e34f466ba70db8">states</a>.<a class="code" href="struct_states.html#a7a3172cc98e93d8eadfb9ab30373799e">error</a> = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;    </div>
 <div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;    <span class="keywordflow">while</span>( !<a class="code" href="esp8266_8h.html#a4952c1b7f3ed488d08e34f466ba70db8">states</a>.<a class="code" href="struct_states.html#a1d67bd6634a9002df97231d8c8dbc66c">ok</a> &amp;&amp; !<a class="code" href="esp8266_8h.html#a4952c1b7f3ed488d08e34f466ba70db8">states</a>.<a class="code" href="struct_states.html#a7a3172cc98e93d8eadfb9ab30373799e">error</a> ) {</div>
-<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;        <a class="code" href="esp8266_8h.html#a987219a0eccd68b289e00d7fb82f76a7">esp_uartReceive</a>(<span class="stringliteral">&quot;OK&quot;</span>);</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;        <a class="code" href="esp8266_8c.html#a3deffb46f2867734db9977c89db63bd0">esp_uartReceive</a>(<span class="stringliteral">&quot;OK&quot;</span>);</div>
 <div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;    }</div>
 <div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;    </div>
 <div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="esp8266_8h.html#a4952c1b7f3ed488d08e34f466ba70db8">states</a>.<a class="code" href="struct_states.html#a1d67bd6634a9002df97231d8c8dbc66c">ok</a>) {</div>
@@ -302,221 +747,26 @@ Variable</h2></td></tr>
 <div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;    }</div>
 <div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Indeholder referencer til <a class="el" href="#l00093">States::error</a>, <a class="el" href="esp8266_8h.html#a987219a0eccd68b289e00d7fb82f76a7">esp_uartReceive()</a>, <a class="el" href="#l00092">States::ok</a> og <a class="el" href="#l00099">states</a>.</p>
+<p class="reference">Indeholder referencer til <a class="el" href="#l00096">States::error</a>, <a class="el" href="#l00231">esp_uartReceive()</a>, <a class="el" href="#l00095">States::ok</a> og <a class="el" href="#l00102">states</a>.</p>
 
-<p class="reference">Refereret til af <a class="el" href="#l01126">setDNSDomain()</a>, <a class="el" href="#l01339">sntp_checkTime()</a>, <a class="el" href="#l01314">sntp_sntpInit()</a>, <a class="el" href="#l00097">softap_SoftAPInit()</a>, <a class="el" href="#l00805">tcpip_checkInternet()</a>, <a class="el" href="#l00038">tcpip_serverSetup()</a>, <a class="el" href="#l00091">tcpip_serverTCPIPBegin()</a>, <a class="el" href="#l00105">tcpip_serverTCPIPStop()</a>, <a class="el" href="#l00139">tcpip_setConnectionType()</a>, <a class="el" href="#l00172">tcpip_setMaxConnections()</a>, <a class="el" href="#l00300">tcpip_setTCPReceiveMode()</a>, <a class="el" href="#l00469">tcpip_showIPDRemoteIP()</a>, <a class="el" href="#l00186">wifi_connectToAP()</a>, <a class="el" href="#l00085">wifi_getWifiMode()</a>, <a class="el" href="#l00228">wifi_isConnectedAP()</a>, <a class="el" href="#l00150">wifi_network_request()</a> og <a class="el" href="#l00021">wifi_setWifiMode()</a>.</p>
-
-</div>
-</div>
-<a id="ae3056a11ebaace5fe7830d3aa6e49f31"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae3056a11ebaace5fe7830d3aa6e49f31">&#9670;&nbsp;</a></span>if() <span class="overload">[1/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="esp8266_8c.html#a0544c3fe466e421738dae463968b70ba">else</a> if </td>
-          <td>(</td>
-          <td class="paramtype">strncmp(string, &quot;+CIFSR:STAIP&quot;, 12)&#160;</td>
-          <td class="paramname"> = <code>=&#160;0</code></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;                                                   :STAIP<span class="stringliteral">&quot;, 12) == 0 ) {</span></div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;<span class="stringliteral">                    //+CIPSTA:ip:&quot;</span>192.168.0.22<span class="stringliteral">&quot;</span></div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;<span class="stringliteral">                    //strncpy( server.remote_ip, (string+14), (strlen(string) -14 -2 ) );</span></div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;<span class="stringliteral">                }else if ( strncmp(string, &quot;</span>&gt;<span class="stringliteral">&quot;, 1) == 0 ) {</span></div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a4d43effbee0a311c226e73e67721f769"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4d43effbee0a311c226e73e67721f769">&#9670;&nbsp;</a></span>if() <span class="overload">[2/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="esp8266_8c.html#a0544c3fe466e421738dae463968b70ba">else</a> if </td>
-          <td>(</td>
-          <td class="paramtype">strncmp(string, &quot;+STA_CONNECTED&quot;, 14)&#160;</td>
-          <td class="paramname"> = <code>=&#160;0</code></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;                                                                        {</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;                    printf(<span class="stringliteral">&quot;SoftAP Client connected\r\n&quot;</span>);</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;                } <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( strncmp(<span class="keywordtype">string</span>, <span class="stringliteral">&quot;+CIFSR:STAIP&quot;</span>, 12) == 0 ) {</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a3d0b2804084ecc1f9e8e169666ea4ce9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3d0b2804084ecc1f9e8e169666ea4ce9">&#9670;&nbsp;</a></span>if() <span class="overload">[3/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="esp8266_8c.html#a0544c3fe466e421738dae463968b70ba">else</a> if </td>
-          <td>(</td>
-          <td class="paramtype">strncmp(string, &quot;&gt;&quot;, 1)&#160;</td>
-          <td class="paramname"> = <code>=&#160;0</code></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;                                                          {</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;                    <span class="keywordflow">if</span> ( strncmp(response, <span class="stringliteral">&quot;&gt;&quot;</span>, 1) == 0 )</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;                        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;                    <span class="keywordflow">else</span> </div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;                        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;                } <span class="keywordflow">else</span> {</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="adfdcaed5e94b3ae33ac6514361f416cc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adfdcaed5e94b3ae33ac6514361f416cc">&#9670;&nbsp;</a></span>strncpy()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">strncpy </td>
-          <td>(</td>
-          <td class="paramtype">dest&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">src&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="esp8266_8c.html#af9d495c1655d813d553030485d00fea7">length</a>&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a020c8b9972f82dedd20f0ad130d6780a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a020c8b9972f82dedd20f0ad130d6780a">&#9670;&nbsp;</a></span>wifi_network_lookup()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">wifi_network_lookup </td>
-          <td>(</td>
-          <td class="paramtype">dest&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<p class="reference">Refereret til af <a class="el" href="#l00190">esp_echoOn()</a>, <a class="el" href="#l01126">setDNSDomain()</a>, <a class="el" href="#l01339">sntp_checkTime()</a>, <a class="el" href="#l01314">sntp_sntpInit()</a>, <a class="el" href="#l00096">softap_SoftAPInit()</a>, <a class="el" href="#l00806">tcpip_checkInternet()</a>, <a class="el" href="#l00039">tcpip_serverSetup()</a>, <a class="el" href="#l00092">tcpip_serverTCPIPBegin()</a>, <a class="el" href="#l00106">tcpip_serverTCPIPStop()</a>, <a class="el" href="#l00140">tcpip_setConnectionType()</a>, <a class="el" href="#l00173">tcpip_setMaxConnections()</a>, <a class="el" href="#l00301">tcpip_setTCPReceiveMode()</a>, <a class="el" href="#l00470">tcpip_showIPDRemoteIP()</a>, <a class="el" href="#l00195">wifi_connectToAP()</a>, <a class="el" href="#l00036">wifi_getWifiMode()</a>, <a class="el" href="#l00237">wifi_isConnectedAP()</a>, <a class="el" href="#l00149">wifi_network_request()</a> og <a class="el" href="#l00021">wifi_setWifiMode()</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Variabel-dokumentation</h2>
-<a id="a0544c3fe466e421738dae463968b70ba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0544c3fe466e421738dae463968b70ba">&#9670;&nbsp;</a></span>else</h2>
+<a id="aae5a12e607d0f782506d9e6ec6179c64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae5a12e607d0f782506d9e6ec6179c64">&#9670;&nbsp;</a></span>index</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">else</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Startværdi:</b><div class="fragment"><div class="line">{</div>
-<div class="line">                    <a class="code" href="esp8266_8h.html#a4952c1b7f3ed488d08e34f466ba70db8">states</a>.<a class="code" href="struct_states.html#a1d67bd6634a9002df97231d8c8dbc66c">ok</a>=0</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a920f9b2da3066bafd9a0a55f0bca2e82"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a920f9b2da3066bafd9a0a55f0bca2e82">&#9670;&nbsp;</a></span>error</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="esp8266_8h.html#a4952c1b7f3ed488d08e34f466ba70db8">states</a> error =0</td>
+          <td class="memname">uint8_t index = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a id="a6784e1c334dfceb8f017667c0b0f6a3e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6784e1c334dfceb8f017667c0b0f6a3e">&#9670;&nbsp;</a></span>index</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">index =0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="af9d495c1655d813d553030485d00fea7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af9d495c1655d813d553030485d00fea7">&#9670;&nbsp;</a></span>length</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">length = (uint8_t) strlen(string)-11</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>UART kommandoer. </p>
-
-<p class="reference">Refereret til af <a class="el" href="#l00112">i2c_read_serial()</a>, <a class="el" href="#l00046">i2c_write_serial()</a> og <a class="el" href="#l00016">sensor_getReading()</a>.</p>
-
-</div>
-</div>
-<a id="aac54229b6e6a5356792d0df5435e155d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aac54229b6e6a5356792d0df5435e155d">&#9670;&nbsp;</a></span>ready</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="esp8266_8h.html#a4952c1b7f3ed488d08e34f466ba70db8">states</a> ready = 0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a9717e7bbecb906637e86cef6da3d83c2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9717e7bbecb906637e86cef6da3d83c2">&#9670;&nbsp;</a></span>return</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">return</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<p class="reference">Refereret til af <a class="el" href="#l00231">esp_uartReceive()</a> og <a class="el" href="#l00339">tcpip_PassiveReceive()</a>.</p>
 
 </div>
 </div>
@@ -524,28 +774,44 @@ Variable</h2></td></tr>
 </div><!-- doc-content -->
 <div class="ttc" id="apin__manager_8h_html_a63e21e30e1ce8bdf75fed3e005667aef"><div class="ttname"><a href="pin__manager_8h.html#a63e21e30e1ce8bdf75fed3e005667aef">led_ready_SetLow</a></div><div class="ttdeci">#define led_ready_SetLow()</div><div class="ttdef"><b>Definition:</b> pin_manager.h:102</div></div>
 <div class="ttc" id="apin__manager_8h_html_add19f3c6f18e56d782d61caa27beda6d"><div class="ttname"><a href="pin__manager_8h.html#add19f3c6f18e56d782d61caa27beda6d">led_client_connected_SetLow</a></div><div class="ttdeci">#define led_client_connected_SetLow()</div><div class="ttdef"><b>Definition:</b> pin_manager.h:116</div></div>
+<div class="ttc" id="astruct_s_e_r_v_e_r_html_abbe792bb2cf67584b86443440a194f46"><div class="ttname"><a href="struct_s_e_r_v_e_r.html#abbe792bb2cf67584b86443440a194f46">SERVER::busy</a></div><div class="ttdeci">bool busy</div><div class="ttdef"><b>Definition:</b> tcpip.h:24</div></div>
 <div class="ttc" id="apin__manager_8h_html_acb137fab7de729350db577da7f0be309"><div class="ttname"><a href="pin__manager_8h.html#acb137fab7de729350db577da7f0be309">led_client_connected_SetHigh</a></div><div class="ttdeci">#define led_client_connected_SetHigh()</div><div class="ttdef"><b>Definition:</b> pin_manager.h:115</div></div>
 <div class="ttc" id="apin__manager_8h_html_acba97cfad3cda7708a445f478a129f69"><div class="ttname"><a href="pin__manager_8h.html#acba97cfad3cda7708a445f478a129f69">led_tcp_server_SetHigh</a></div><div class="ttdeci">#define led_tcp_server_SetHigh()</div><div class="ttdef"><b>Definition:</b> pin_manager.h:164</div></div>
-<div class="ttc" id="aesp8266_8h_html_a4952c1b7f3ed488d08e34f466ba70db8"><div class="ttname"><a href="esp8266_8h.html#a4952c1b7f3ed488d08e34f466ba70db8">states</a></div><div class="ttdeci">states_t states</div><div class="ttdef"><b>Definition:</b> esp8266.h:99</div></div>
-<div class="ttc" id="astruct_s_e_r_v_e_r_html_a57c2b9d0b00fb7f6d6601ea666d76919"><div class="ttname"><a href="struct_s_e_r_v_e_r.html#a57c2b9d0b00fb7f6d6601ea666d76919">SERVER::internet</a></div><div class="ttdeci">bool internet</div><div class="ttdef"><b>Definition:</b> tcpip.h:32</div></div>
+<div class="ttc" id="aesp8266_8h_html_a4952c1b7f3ed488d08e34f466ba70db8"><div class="ttname"><a href="esp8266_8h.html#a4952c1b7f3ed488d08e34f466ba70db8">states</a></div><div class="ttdeci">states_t states</div><div class="ttdef"><b>Definition:</b> esp8266.h:102</div></div>
+<div class="ttc" id="astruct_s_e_r_v_e_r_html_ae9574a8844fec9b4877ef5e1debac98f"><div class="ttname"><a href="struct_s_e_r_v_e_r.html#ae9574a8844fec9b4877ef5e1debac98f">SERVER::clientAvailable</a></div><div class="ttdeci">bool clientAvailable</div><div class="ttdef"><b>Definition:</b> tcpip.h:38</div></div>
+<div class="ttc" id="astruct_s_e_r_v_e_r_html_a57c2b9d0b00fb7f6d6601ea666d76919"><div class="ttname"><a href="struct_s_e_r_v_e_r.html#a57c2b9d0b00fb7f6d6601ea666d76919">SERVER::internet</a></div><div class="ttdeci">bool internet</div><div class="ttdef"><b>Definition:</b> tcpip.h:33</div></div>
 <div class="ttc" id="apin__manager_8h_html_a6dc49219a384ef840d4e3dbde949c6d3"><div class="ttname"><a href="pin__manager_8h.html#a6dc49219a384ef840d4e3dbde949c6d3">led_tcp_server_Toggle</a></div><div class="ttdeci">#define led_tcp_server_Toggle()</div><div class="ttdef"><b>Definition:</b> pin_manager.h:166</div></div>
-<div class="ttc" id="atcpip_8h_html_a589e4f516d0f2129018cd6260892be0f"><div class="ttname"><a href="tcpip_8h.html#a589e4f516d0f2129018cd6260892be0f">server</a></div><div class="ttdeci">server_t server</div><div class="ttdef"><b>Definition:</b> tcpip.h:43</div></div>
-<div class="ttc" id="astruct_s_e_r_v_e_r_html_a20aa0aa35bef9245b05479074a002f52"><div class="ttname"><a href="struct_s_e_r_v_e_r.html#a20aa0aa35bef9245b05479074a002f52">SERVER::wifigotip</a></div><div class="ttdeci">bool wifigotip</div><div class="ttdef"><b>Definition:</b> tcpip.h:31</div></div>
+<div class="ttc" id="atcpip_8h_html_a589e4f516d0f2129018cd6260892be0f"><div class="ttname"><a href="tcpip_8h.html#a589e4f516d0f2129018cd6260892be0f">server</a></div><div class="ttdeci">server_t server</div><div class="ttdef"><b>Definition:</b> tcpip.h:44</div></div>
+<div class="ttc" id="astruct_s_e_r_v_e_r_html_a20aa0aa35bef9245b05479074a002f52"><div class="ttname"><a href="struct_s_e_r_v_e_r.html#a20aa0aa35bef9245b05479074a002f52">SERVER::wifigotip</a></div><div class="ttdeci">bool wifigotip</div><div class="ttdef"><b>Definition:</b> tcpip.h:32</div></div>
+<div class="ttc" id="astruct_s_e_r_v_e_r_html_ab4fd81ab322605872a2b090805f2ed8f"><div class="ttname"><a href="struct_s_e_r_v_e_r.html#ab4fd81ab322605872a2b090805f2ed8f">SERVER::ssid</a></div><div class="ttdeci">char * ssid[20]</div><div class="ttdef"><b>Definition:</b> tcpip.h:28</div></div>
+<div class="ttc" id="aesp8266_8c_html_a3deffb46f2867734db9977c89db63bd0"><div class="ttname"><a href="esp8266_8c.html#a3deffb46f2867734db9977c89db63bd0">esp_uartReceive</a></div><div class="ttdeci">uint8_t esp_uartReceive(char *response)</div><div class="ttdef"><b>Definition:</b> esp8266.c:231</div></div>
 <div class="ttc" id="apin__manager_8h_html_aa0e99c3daed159bfac3ff37ac6f5db6d"><div class="ttname"><a href="pin__manager_8h.html#aa0e99c3daed159bfac3ff37ac6f5db6d">led_ok_SetLow</a></div><div class="ttdeci">#define led_ok_SetLow()</div><div class="ttdef"><b>Definition:</b> pin_manager.h:88</div></div>
 <div class="ttc" id="apin__manager_8h_html_aa01ce1b596a1576480fb397a395a3a90"><div class="ttname"><a href="pin__manager_8h.html#aa01ce1b596a1576480fb397a395a3a90">led_ap_connected_SetLow</a></div><div class="ttdeci">#define led_ap_connected_SetLow()</div><div class="ttdef"><b>Definition:</b> pin_manager.h:141</div></div>
-<div class="ttc" id="astruct_states_html_a7a3172cc98e93d8eadfb9ab30373799e"><div class="ttname"><a href="struct_states.html#a7a3172cc98e93d8eadfb9ab30373799e">States::error</a></div><div class="ttdeci">bool error</div><div class="ttdef"><b>Definition:</b> esp8266.h:93</div></div>
+<div class="ttc" id="aeusart1_8c_html_ab4dd58b431d4f59c5b78f909b0b9cb0b"><div class="ttname"><a href="eusart1_8c.html#ab4dd58b431d4f59c5b78f909b0b9cb0b">EUSART1_Read</a></div><div class="ttdeci">uint8_t EUSART1_Read(void)</div><div class="ttdoc">@Summary Read a byte of data from the EUSART1.</div><div class="ttdef"><b>Definition:</b> eusart1.c:151</div></div>
+<div class="ttc" id="astruct_states_html_a7a3172cc98e93d8eadfb9ab30373799e"><div class="ttname"><a href="struct_states.html#a7a3172cc98e93d8eadfb9ab30373799e">States::error</a></div><div class="ttdeci">bool error</div><div class="ttdef"><b>Definition:</b> esp8266.h:96</div></div>
 <div class="ttc" id="apin__manager_8h_html_a7fe15b3ee3d79fcb3a66d649b4d27fa3"><div class="ttname"><a href="pin__manager_8h.html#a7fe15b3ee3d79fcb3a66d649b4d27fa3">led_ok_SetHigh</a></div><div class="ttdeci">#define led_ok_SetHigh()</div><div class="ttdef"><b>Definition:</b> pin_manager.h:87</div></div>
-<div class="ttc" id="astruct_s_e_r_v_e_r_html_af77f8244799e85284b8b438289f5f689"><div class="ttname"><a href="struct_s_e_r_v_e_r.html#af77f8244799e85284b8b438289f5f689">SERVER::running</a></div><div class="ttdeci">uint8_t running</div><div class="ttdef"><b>Definition:</b> tcpip.h:35</div></div>
+<div class="ttc" id="astruct_s_e_r_v_e_r_html_af77f8244799e85284b8b438289f5f689"><div class="ttname"><a href="struct_s_e_r_v_e_r.html#af77f8244799e85284b8b438289f5f689">SERVER::running</a></div><div class="ttdeci">uint8_t running</div><div class="ttdef"><b>Definition:</b> tcpip.h:36</div></div>
+<div class="ttc" id="astruct_e_s_p_u_a_r_t_html_ac71816212f4d863f515c782f5b687d97"><div class="ttname"><a href="struct_e_s_p_u_a_r_t.html#ac71816212f4d863f515c782f5b687d97">ESPUART::flowcontrol</a></div><div class="ttdeci">uint8_t flowcontrol</div><div class="ttdef"><b>Definition:</b> esp8266.h:80</div></div>
+<div class="ttc" id="astruct_e_s_p_u_a_r_t_html_a46fa9ba7ed2a4f21a56eea505c49d462"><div class="ttname"><a href="struct_e_s_p_u_a_r_t.html#a46fa9ba7ed2a4f21a56eea505c49d462">ESPUART::databits</a></div><div class="ttdeci">uint8_t databits</div><div class="ttdef"><b>Definition:</b> esp8266.h:77</div></div>
 <div class="ttc" id="apin__manager_8h_html_ae1f7fd553993612d6bc7c8906f4ecb8c"><div class="ttname"><a href="pin__manager_8h.html#ae1f7fd553993612d6bc7c8906f4ecb8c">led_error_Toggle</a></div><div class="ttdeci">#define led_error_Toggle()</div><div class="ttdef"><b>Definition:</b> pin_manager.h:75</div></div>
-<div class="ttc" id="astruct_s_e_r_v_e_r_html_a028ce4496d0ac99939c34ee47b984e21"><div class="ttname"><a href="struct_s_e_r_v_e_r.html#a028ce4496d0ac99939c34ee47b984e21">SERVER::clientConnected</a></div><div class="ttdeci">bool clientConnected</div><div class="ttdef"><b>Definition:</b> tcpip.h:36</div></div>
+<div class="ttc" id="aeusart1_8c_html_a51236ea81a98a25986a6733fbf291621"><div class="ttname"><a href="eusart1_8c.html#a51236ea81a98a25986a6733fbf291621">EUSART1_is_rx_ready</a></div><div class="ttdeci">bool EUSART1_is_rx_ready(void)</div><div class="ttdoc">@Summary Checks if the EUSART1 receiver ready for reading</div><div class="ttdef"><b>Definition:</b> eusart1.c:137</div></div>
+<div class="ttc" id="aesp8266_8c_html_abb024ad17ab55c2f29a20c91b4fe2853"><div class="ttname"><a href="esp8266_8c.html#abb024ad17ab55c2f29a20c91b4fe2853">esp_waitForOK</a></div><div class="ttdeci">bool esp_waitForOK(void)</div><div class="ttdef"><b>Definition:</b> esp8266.c:429</div></div>
+<div class="ttc" id="astruct_e_s_p_u_a_r_t_html_a758f659f15b3784c13d14aee2e89e6a2"><div class="ttname"><a href="struct_e_s_p_u_a_r_t.html#a758f659f15b3784c13d14aee2e89e6a2">ESPUART::baudrate</a></div><div class="ttdeci">long baudrate</div><div class="ttdef"><b>Definition:</b> esp8266.h:76</div></div>
+<div class="ttc" id="astruct_s_e_r_v_e_r_html_a028ce4496d0ac99939c34ee47b984e21"><div class="ttname"><a href="struct_s_e_r_v_e_r.html#a028ce4496d0ac99939c34ee47b984e21">SERVER::clientConnected</a></div><div class="ttdeci">bool clientConnected</div><div class="ttdef"><b>Definition:</b> tcpip.h:37</div></div>
 <div class="ttc" id="apin__manager_8h_html_a25b04c2bd14fd18edd92a687ad3af8a2"><div class="ttname"><a href="pin__manager_8h.html#a25b04c2bd14fd18edd92a687ad3af8a2">led_ready_SetHigh</a></div><div class="ttdeci">#define led_ready_SetHigh()</div><div class="ttdef"><b>Definition:</b> pin_manager.h:101</div></div>
-<div class="ttc" id="astruct_states_html_a1d67bd6634a9002df97231d8c8dbc66c"><div class="ttname"><a href="struct_states.html#a1d67bd6634a9002df97231d8c8dbc66c">States::ok</a></div><div class="ttdeci">bool ok</div><div class="ttdef"><b>Definition:</b> esp8266.h:92</div></div>
-<div class="ttc" id="astruct_s_e_r_v_e_r_html_a5d06114b5370f6ec7661415203a20b3a"><div class="ttname"><a href="struct_s_e_r_v_e_r.html#a5d06114b5370f6ec7661415203a20b3a">SERVER::wificonnected</a></div><div class="ttdeci">bool wificonnected</div><div class="ttdef"><b>Definition:</b> tcpip.h:30</div></div>
+<div class="ttc" id="astruct_states_html_a1d67bd6634a9002df97231d8c8dbc66c"><div class="ttname"><a href="struct_states.html#a1d67bd6634a9002df97231d8c8dbc66c">States::ok</a></div><div class="ttdeci">bool ok</div><div class="ttdef"><b>Definition:</b> esp8266.h:95</div></div>
+<div class="ttc" id="aesp8266_8h_html_aae664464ddb16646191b294e2cae1e2d"><div class="ttname"><a href="esp8266_8h.html#aae664464ddb16646191b294e2cae1e2d">uart</a></div><div class="ttdeci">struct ESPUART uart</div><div class="ttdef"><b>Definition:</b> esp8266.h:82</div></div>
+<div class="ttc" id="astruct_s_e_r_v_e_r_html_a5d06114b5370f6ec7661415203a20b3a"><div class="ttname"><a href="struct_s_e_r_v_e_r.html#a5d06114b5370f6ec7661415203a20b3a">SERVER::wificonnected</a></div><div class="ttdeci">bool wificonnected</div><div class="ttdef"><b>Definition:</b> tcpip.h:31</div></div>
 <div class="ttc" id="apin__manager_8h_html_af7113d52b64e9ea89070e94e5ed0d266"><div class="ttname"><a href="pin__manager_8h.html#af7113d52b64e9ea89070e94e5ed0d266">led_tcp_server_SetLow</a></div><div class="ttdeci">#define led_tcp_server_SetLow()</div><div class="ttdef"><b>Definition:</b> pin_manager.h:165</div></div>
+<div class="ttc" id="apin__manager_8h_html_ab54cacb91c41feece3ecea555b1131c7"><div class="ttname"><a href="pin__manager_8h.html#ab54cacb91c41feece3ecea555b1131c7">led_getrequest_SetHigh</a></div><div class="ttdeci">#define led_getrequest_SetHigh()</div><div class="ttdef"><b>Definition:</b> pin_manager.h:128</div></div>
+<div class="ttc" id="atcpip_8c_html_a72738039f1d689df92c84000174c9327"><div class="ttname"><a href="tcpip_8c.html#a72738039f1d689df92c84000174c9327">tcpip_serverPage</a></div><div class="ttdeci">void tcpip_serverPage(void)</div><div class="ttdoc">TCP/IP Client.</div><div class="ttdef"><b>Definition:</b> tcpip.c:940</div></div>
+<div class="ttc" id="aesp8266_8c_html_aae5a12e607d0f782506d9e6ec6179c64"><div class="ttname"><a href="esp8266_8c.html#aae5a12e607d0f782506d9e6ec6179c64">index</a></div><div class="ttdeci">uint8_t index</div><div class="ttdef"><b>Definition:</b> esp8266.c:230</div></div>
 <div class="ttc" id="apin__manager_8h_html_a8500ffa3b3512bc51d4e4ae2d9c93152"><div class="ttname"><a href="pin__manager_8h.html#a8500ffa3b3512bc51d4e4ae2d9c93152">led_error_SetLow</a></div><div class="ttdeci">#define led_error_SetLow()</div><div class="ttdef"><b>Definition:</b> pin_manager.h:74</div></div>
+<div class="ttc" id="astruct_e_s_p_u_a_r_t_html_aa0e72b59c63431c62f5b5eba36a65d17"><div class="ttname"><a href="struct_e_s_p_u_a_r_t.html#aa0e72b59c63431c62f5b5eba36a65d17">ESPUART::parity</a></div><div class="ttdeci">uint8_t parity</div><div class="ttdef"><b>Definition:</b> esp8266.h:79</div></div>
 <div class="ttc" id="apin__manager_8h_html_a51693ec8c518208ffc3015816545b8e1"><div class="ttname"><a href="pin__manager_8h.html#a51693ec8c518208ffc3015816545b8e1">led_ap_connected_SetHigh</a></div><div class="ttdeci">#define led_ap_connected_SetHigh()</div><div class="ttdef"><b>Definition:</b> pin_manager.h:140</div></div>
-<div class="ttc" id="astruct_states_html_a65cf7d7f8e531611b245355ab91fd749"><div class="ttname"><a href="struct_states.html#a65cf7d7f8e531611b245355ab91fd749">States::ready</a></div><div class="ttdeci">bool ready</div><div class="ttdef"><b>Definition:</b> esp8266.h:94</div></div>
-<div class="ttc" id="aesp8266_8h_html_a987219a0eccd68b289e00d7fb82f76a7"><div class="ttname"><a href="esp8266_8h.html#a987219a0eccd68b289e00d7fb82f76a7">esp_uartReceive</a></div><div class="ttdeci">uint8_t esp_uartReceive(char *)</div></div>
+<div class="ttc" id="awifi_8c_html_a9c6f183b5b028fdda9736a1b3f138ff7"><div class="ttname"><a href="wifi_8c.html#a9c6f183b5b028fdda9736a1b3f138ff7">wifi_network_lookup</a></div><div class="ttdeci">bool wifi_network_lookup(const char *ssid_name)</div><div class="ttdef"><b>Definition:</b> wifi.c:160</div></div>
+<div class="ttc" id="astruct_e_s_p_u_a_r_t_html_a9de35842403baab5738ea16162012d4f"><div class="ttname"><a href="struct_e_s_p_u_a_r_t.html#a9de35842403baab5738ea16162012d4f">ESPUART::stopbits</a></div><div class="ttdeci">uint8_t stopbits</div><div class="ttdef"><b>Definition:</b> esp8266.h:78</div></div>
+<div class="ttc" id="astruct_states_html_a65cf7d7f8e531611b245355ab91fd749"><div class="ttname"><a href="struct_states.html#a65cf7d7f8e531611b245355ab91fd749">States::ready</a></div><div class="ttdeci">bool ready</div><div class="ttdef"><b>Definition:</b> esp8266.h:97</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

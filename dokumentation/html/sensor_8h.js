@@ -1,5 +1,6 @@
 var sensor_8h =
 [
+    [ "SENSOR_H", "sensor_8h.html#a06e646d1fd3953e71bc679f2781dc806", null ],
     [ "sensor_getReading", "sensor_8h.html#a313d74d7c92fea5d890a72b7b7538858", null ],
     [ "sensor_testTempSensor", "sensor_8h.html#a60ea92d8d640e9b1d9d8d45d48837348", null ],
     [ "sensor_updateHumidity", "sensor_8h.html#ab62dbb09e1fe18495cbffe9dca0b39fb", null ],
@@ -11,6 +12,6 @@ var sensor_8h =
     [ "moist_string", "sensor_8h.html#a5e76e79d34d74f5006a268b78b85ee64", null ],
     [ "temp_pos", "sensor_8h.html#ac7bc4c6b2054a016f7d53f237f1ebdd6", null ],
     [ "temp_string", "sensor_8h.html#a48724d7424499ca35dcc4d22a4830977", null ],
-    [ "temperature_addr", "sensor_8h.html#abd4afcc16efaddacd3e1078677f09aea", null ],
+    [ "temperature_addr", "sensor_8h.html#af33c45cd09140f4746de80027e49e656", null ],
     [ "tmp_string", "sensor_8h.html#a9eec345fbe35bae76df320fc80e492d6", null ]
 ];

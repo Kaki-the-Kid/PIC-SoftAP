@@ -1,12 +1,12 @@
 var index =
 [
     [ "Resume", "index.html#intro_sec", null ],
-    [ "MÃĨl med projektet", "index.html#project_goals", null ],
+    [ "Mål med projektet", "index.html#project_goals", null ],
     [ "Projekt struktur", "index.html#project_structure", null ],
     [ "Fil struktur", "index.html#file_structure", null ],
     [ "Hardware", "index.html#project_hardware", null ],
-    [ "VÃĶrktÃļjer", "index.html#project_tools", null ],
-    [ "Kilder, inspiration og lÃĶring", "index.html#project_other_text", null ],
+    [ "Værktøjer", "index.html#project_tools", null ],
+    [ "Kilder, inspiration og læring", "index.html#project_other_text", null ],
     [ "Licens", "index.html#project_license", null ],
     [ "Information om I2C protokollen", "_i2_c.html", [
       [ "Filer for I2C forbindelser", "_i2_c.html#i2c_files", null ]

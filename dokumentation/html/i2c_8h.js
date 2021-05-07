@@ -1,5 +1,6 @@
 var i2c_8h =
 [
+    [ "I2C_H", "i2c_8h.html#a325b29e8978f1e5815c9df12c5d8f26d", null ],
     [ "SCL", "i2c_8h.html#ab5ffc4751921608954bb7a5687566b2d", null ],
     [ "SCL_IO", "i2c_8h.html#ae3bb1645bd52518d362f3a02a2c66700", null ],
     [ "SDA", "i2c_8h.html#a6890442e1cc24a0d61597a13576b8727", null ],
@@ -11,7 +12,7 @@ var i2c_8h =
     [ "i2c_master_stop", "i2c_8h.html#a4524baa32fdd90e664342c610dc1d177", null ],
     [ "i2c_master_wait", "i2c_8h.html#adb646b67ce754741a06e63ea28d05259", null ],
     [ "i2c_portScan", "i2c_8h.html#a1b96df492284070c5fb8ac5daa5a53a1", null ],
-    [ "i2c_read_serial", "i2c_8h.html#a5cb803da522d50c9cdb9eaeb473e625a", null ],
+    [ "i2c_read_serial", "i2c_8h.html#a0b7dafcc0420bb4bd3b957d17b82ea75", null ],
     [ "i2c_write_serial", "i2c_8h.html#ad44071ec6f7a4af5371efcabba402897", null ],
     [ "data_out", "i2c_8h.html#a8eac694cd48788e914ae973b41d1b8ec", null ]
 ];

@@ -4,8 +4,6 @@ var dir_0ad8aa10ae8c15a00cc43e117933779f =
     [ "device_config.h", "device__config_8h.html", "device__config_8h" ],
     [ "eusart1.c", "eusart1_8c.html", "eusart1_8c" ],
     [ "eusart1.h", "eusart1_8h.html", "eusart1_8h" ],
-    [ "eusart2.c", "eusart2_8c.html", "eusart2_8c" ],
-    [ "eusart2.h", "eusart2_8h.html", "eusart2_8h" ],
     [ "interrupt_manager.c", "interrupt__manager_8c.html", "interrupt__manager_8c" ],
     [ "interrupt_manager.h", "interrupt__manager_8h.html", "interrupt__manager_8h" ],
     [ "mcc.c", "mcc_8c.html", "mcc_8c" ],

@@ -1,6 +1,6 @@
 /**********************************************************//**
  * File:	eeprom.cc
- * Author:  Karsten 'Kaki' Reitan S�rensen
+ * Author:  Karsten 'Kaki' Reitan Sørensen
  * Created on September 8, 2019, 10:02 PM
  * @brief:  EEPROM styring 
  **************************************************************/
@@ -13,7 +13,7 @@
 /***********************************************************//*
  * @function:	eepromTest
  * @param:		none
- * @brief:		Skriver $00-0F til adresse $0000 p� EEPROM 
+ * @brief:		Skriver $00-0F på EEPROM fra adresse $0000 
  **************************************************************/
 void eeprom_testData(void) {
     printf("\r\nSkriv tegn til EEPROM\r\n");
@@ -36,7 +36,7 @@ void eeprom_testData(void) {
 
 
 void eeprom_logData(void) {
-    // Læs sidste adresse p� EEPROM i register 0 og register 1
+    // Læs sidste adresse på EEPROM i register 0 og register 1
     i2c_write_serial(eeprom_addr, (char*) eeprom_pointer, 2); //0x00, 0x00
     i2c_read_serial(eeprom_addr, eeprom_buffer, 4);
 
@@ -44,7 +44,7 @@ void eeprom_logData(void) {
 
     // er det en start på måling
     // eller hvis register 1 er forskellig fra 4 er der sket en fejl
-    // Flut adresse til register 1
+    // Flyt adresse til register 1
     // Skriv 0 på register 0
     // Læs fra sensor
     // Skriv data på eeprom
@@ -60,9 +60,9 @@ void eeprom_initEeprom(void) {
 
 
 void eeprom_dumpLogData(void) {
-    // L�s adresse i resister 0
+    // Læs adresse i register 0
     // Hvis adressen er forskellig fra 0x0000
-    // eller er der o�tr�dt en fejl
+    // eller er der optrådt en fejl
     
     // Udl�s data udfra skabelon
     
@@ -101,7 +101,7 @@ void eeprom_dumpLogData(void) {
             tmp_temp -= 4000;
 
             sprintf((char*) tmp, (const char*) eeprom_template, tmp_humid, tmp_temp ); // Lav linie fra skabelon
-            strcat(msg, tmp); // l�g den til besked
+            strcat(msg, tmp); // læg den til besked
         }
         
         printf( "AT+CIPSEND=0,%d\r\n", (const char*) strlen(msg) ); // Starter sending

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PIC SoftAP: C:/Users/karst/OneDrive - AARHUS TECH/Dokumenter/Workspace/MPLABXProjects/Embedded Controller 3/SoftAP_webserver.X/lcd/lcd.h filreference</title>
+<title>PIC SoftAP: C:/Users/krs/OneDrive - AARHUS TECH/Dokumenter/Workspace/MPLABXProjects/SoftAP_webserver.X/lcd/lcd.h filreference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -61,6 +61,7 @@ $(document).ready(function(){initNavTree('lcd_8h.html',''); initResizable(); });
 <div id="doc-content">
 <div class="header">
   <div class="summary">
+<a href="#define-members">#Defines</a> &#124;
 <a href="#func-members">Funktioner</a> &#124;
 <a href="#var-members">Variable</a>  </div>
   <div class="headertitle">
@@ -68,10 +69,17 @@ $(document).ready(function(){initNavTree('lcd_8h.html',''); initResizable(); });
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="">../mcc_generated_files/mcc.h</a>&quot;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;string.h&gt;</code><br />
 </div>
 <p><a href="">Hop til denne fils kildekode.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+#Defines</h2></td></tr>
+<tr class="memitem:a137b94e8638bc4b6a0740668aefe5a58"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lcd_8h.html#a137b94e8638bc4b6a0740668aefe5a58">LCD_H</a></td></tr>
+<tr class="memdesc:a137b94e8638bc4b6a0740668aefe5a58"><td class="mdescLeft">&#160;</td><td class="mdescRight">LCD generelle kommandoer.  <a href="lcd_8h.html#a137b94e8638bc4b6a0740668aefe5a58">Mere...</a><br /></td></tr>
+<tr class="separator:a137b94e8638bc4b6a0740668aefe5a58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Funktioner</h2></td></tr>
 <tr class="memitem:ada897427870351cc36fe4d710ed4e5bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lcd_8h.html#ada897427870351cc36fe4d710ed4e5bd">lcd_displayInit</a> (void)</td></tr>
@@ -85,7 +93,6 @@ Funktioner</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variable</h2></td></tr>
 <tr class="memitem:a8683f936ecb5cd7b43c33a01a435a7ba"><td class="memItemLeft" align="right" valign="top">const uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lcd_8h.html#a8683f936ecb5cd7b43c33a01a435a7ba">display_addr</a> = 0b0111100</td></tr>
-<tr class="memdesc:a8683f936ecb5cd7b43c33a01a435a7ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">LCD generelle kommandoer.  <a href="lcd_8h.html#a8683f936ecb5cd7b43c33a01a435a7ba">Mere...</a><br /></td></tr>
 <tr class="separator:a8683f936ecb5cd7b43c33a01a435a7ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac625d7a605ca9aca6a1775119fc307d"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lcd_8h.html#aac625d7a605ca9aca6a1775119fc307d">display_init</a> [] = {0x00, 0x38, 0x0C, 0x06}</td></tr>
 <tr class="separator:aac625d7a605ca9aca6a1775119fc307d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -98,6 +105,23 @@ Variable</h2></td></tr>
 <tr class="memitem:ad2539ff4fdff2f9713c37cca32c87b0d"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lcd_8h.html#ad2539ff4fdff2f9713c37cca32c87b0d">text</a> [50] = &quot;&quot;</td></tr>
 <tr class="separator:ad2539ff4fdff2f9713c37cca32c87b0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">#Define-dokumentation</h2>
+<a id="a137b94e8638bc4b6a0740668aefe5a58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a137b94e8638bc4b6a0740668aefe5a58">&#9670;&nbsp;</a></span>LCD_H</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LCD_H</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>LCD generelle kommandoer. </p>
+
+</div>
+</div>
 <h2 class="groupheader">Funktions-dokumentation</h2>
 <a id="ada897427870351cc36fe4d710ed4e5bd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ada897427870351cc36fe4d710ed4e5bd">&#9670;&nbsp;</a></span>lcd_displayInit()</h2>
@@ -120,17 +144,17 @@ Variable</h2></td></tr>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">    #ifdef debug</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <a class="code" href="esp8266_8c.html#aa5e1cb340835d3ac9cb4c407ca03c1a2">esp_terminalTransmit</a>(<span class="stringliteral">&quot;Initialiserer I2C bussen\r\n&quot;</span>);</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">    #endif</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="i2c_8c.html#a2afd8da70c8c74e56659da3dd6f60dd0">i2c_write_serial</a>(<a class="code" href="lcd_8h.html#a8683f936ecb5cd7b43c33a01a435a7ba">display_addr</a>, (<span class="keywordtype">char</span>*) <a class="code" href="lcd_8h.html#aac625d7a605ca9aca6a1775119fc307d">display_init</a>, 10);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="i2c_8c.html#a2afd8da70c8c74e56659da3dd6f60dd0">i2c_write_serial</a>(<a class="code" href="lcd_8h.html#a8683f936ecb5cd7b43c33a01a435a7ba">display_addr</a>, (<span class="keywordtype">char</span>*) <a class="code" href="lcd_8h.html#a2190e3cca1f36422ffbff3de09bccbec">first_line</a>, 2);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="i2c_8c.html#a2afd8da70c8c74e56659da3dd6f60dd0">i2c_write_serial</a>(<a class="code" href="lcd_8h.html#a8683f936ecb5cd7b43c33a01a435a7ba">display_addr</a>, (<span class="keywordtype">char</span>*) <a class="code" href="lcd_8h.html#a47c73631070ab0c6b9e7574163b90d87">empty_line</a>, 16);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="i2c_8c.html#a2afd8da70c8c74e56659da3dd6f60dd0">i2c_write_serial</a>(<a class="code" href="lcd_8h.html#a8683f936ecb5cd7b43c33a01a435a7ba">display_addr</a>, <a class="code" href="lcd_8h.html#aac625d7a605ca9aca6a1775119fc307d">display_init</a>, 10);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="i2c_8c.html#a2afd8da70c8c74e56659da3dd6f60dd0">i2c_write_serial</a>(<a class="code" href="lcd_8h.html#a8683f936ecb5cd7b43c33a01a435a7ba">display_addr</a>, <a class="code" href="lcd_8h.html#a2190e3cca1f36422ffbff3de09bccbec">first_line</a>, 2);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="i2c_8c.html#a2afd8da70c8c74e56659da3dd6f60dd0">i2c_write_serial</a>(<a class="code" href="lcd_8h.html#a8683f936ecb5cd7b43c33a01a435a7ba">display_addr</a>, <a class="code" href="lcd_8h.html#a47c73631070ab0c6b9e7574163b90d87">empty_line</a>, 16);</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="i2c_8c.html#a2afd8da70c8c74e56659da3dd6f60dd0">i2c_write_serial</a>(<a class="code" href="lcd_8h.html#a8683f936ecb5cd7b43c33a01a435a7ba">display_addr</a>, (<span class="keywordtype">char</span>*) <a class="code" href="lcd_8h.html#a7c8aec3447e717abf7f853bd11b8a5ec">shift_line</a>, 2);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="i2c_8c.html#a2afd8da70c8c74e56659da3dd6f60dd0">i2c_write_serial</a>(<a class="code" href="lcd_8h.html#a8683f936ecb5cd7b43c33a01a435a7ba">display_addr</a>, (<span class="keywordtype">char</span>*) <a class="code" href="lcd_8h.html#a47c73631070ab0c6b9e7574163b90d87">empty_line</a>, 16);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="i2c_8c.html#a2afd8da70c8c74e56659da3dd6f60dd0">i2c_write_serial</a>(<a class="code" href="lcd_8h.html#a8683f936ecb5cd7b43c33a01a435a7ba">display_addr</a>, <a class="code" href="lcd_8h.html#a7c8aec3447e717abf7f853bd11b8a5ec">shift_line</a>, 2);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="i2c_8c.html#a2afd8da70c8c74e56659da3dd6f60dd0">i2c_write_serial</a>(<a class="code" href="lcd_8h.html#a8683f936ecb5cd7b43c33a01a435a7ba">display_addr</a>, <a class="code" href="lcd_8h.html#a47c73631070ab0c6b9e7574163b90d87">empty_line</a>, 16);</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Indeholder referencer til <a class="el" href="#l00023">display_addr</a>, <a class="el" href="#l00024">display_init</a>, <a class="el" href="#l00027">empty_line</a>, <a class="el" href="#l00453">esp_terminalTransmit()</a>, <a class="el" href="#l00025">first_line</a>, <a class="el" href="#l00046">i2c_write_serial()</a> og <a class="el" href="#l00026">shift_line</a>.</p>
+<p class="reference">Indeholder referencer til <a class="el" href="#l00025">display_addr</a>, <a class="el" href="#l00026">display_init</a>, <a class="el" href="#l00029">empty_line</a>, <a class="el" href="#l00453">esp_terminalTransmit()</a>, <a class="el" href="#l00027">first_line</a>, <a class="el" href="#l00046">i2c_write_serial()</a> og <a class="el" href="#l00028">shift_line</a>.</p>
 
-<p class="reference">Refereret til af <a class="el" href="#l00062">main()</a>.</p>
+<p class="reference">Refereret til af <a class="el" href="#l00063">main()</a>.</p>
 
 </div>
 </div>
@@ -167,7 +191,7 @@ Variable</h2></td></tr>
 </div><div class="memdoc">
 <div class="fragment"><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                                                               {</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="comment">//[TODO] Lav en funktion som hïŋ―ndterer output til LCD display</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="comment">//[TODO] Lav en funktion som h�ndterer output til LCD display</span></div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
@@ -209,13 +233,13 @@ Variable</h2></td></tr>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    strcpy(msg, <a class="code" href="lcd_8h.html#a47c73631070ab0c6b9e7574163b90d87">empty_line</a>);</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    strcpy(msg, tmpmsg);</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="i2c_8c.html#a2afd8da70c8c74e56659da3dd6f60dd0">i2c_write_serial</a>(<a class="code" href="lcd_8h.html#a8683f936ecb5cd7b43c33a01a435a7ba">display_addr</a>, (<span class="keywordtype">char</span>*) posLcd, 2);   <span class="comment">// Indstil &quot;cursor&quot;</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="i2c_8c.html#a2afd8da70c8c74e56659da3dd6f60dd0">i2c_write_serial</a>(<a class="code" href="lcd_8h.html#a8683f936ecb5cd7b43c33a01a435a7ba">display_addr</a>, (<span class="keywordtype">char</span>*) tmpmsg, 16 ); <span class="comment">// og skriv besked</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="i2c_8c.html#a2afd8da70c8c74e56659da3dd6f60dd0">i2c_write_serial</a>(<a class="code" href="lcd_8h.html#a8683f936ecb5cd7b43c33a01a435a7ba">display_addr</a>, posLcd, 2);   <span class="comment">// Indstil &quot;cursor&quot;</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="i2c_8c.html#a2afd8da70c8c74e56659da3dd6f60dd0">i2c_write_serial</a>(<a class="code" href="lcd_8h.html#a8683f936ecb5cd7b43c33a01a435a7ba">display_addr</a>, tmpmsg, 16 ); <span class="comment">// og skriv besked</span></div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Indeholder referencer til <a class="el" href="#l00023">display_addr</a>, <a class="el" href="#l00027">empty_line</a> og <a class="el" href="#l00046">i2c_write_serial()</a>.</p>
+<p class="reference">Indeholder referencer til <a class="el" href="#l00025">display_addr</a>, <a class="el" href="#l00029">empty_line</a> og <a class="el" href="#l00046">i2c_write_serial()</a>.</p>
 
-<p class="reference">Refereret til af <a class="el" href="#l00939">tcpip_serverPage()</a>, <a class="el" href="#l00038">tcpip_serverSetup()</a>, <a class="el" href="#l00186">wifi_connectToAP()</a> og <a class="el" href="#l00021">wifi_setWifiMode()</a>.</p>
+<p class="reference">Refereret til af <a class="el" href="#l00940">tcpip_serverPage()</a>, <a class="el" href="#l00039">tcpip_serverSetup()</a>, <a class="el" href="#l00195">wifi_connectToAP()</a> og <a class="el" href="#l00021">wifi_setWifiMode()</a>.</p>
 
 </div>
 </div>
@@ -231,8 +255,6 @@ Variable</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>LCD generelle kommandoer. </p>
 
 <p class="reference">Refereret til af <a class="el" href="#l00014">lcd_displayInit()</a>, <a class="el" href="#l00031">lcd_write()</a>, <a class="el" href="#l00016">sensor_getReading()</a>, <a class="el" href="#l00112">sensor_updateHumidity()</a> og <a class="el" href="#l00096">sensor_updateTemperature()</a>.</p>
 
@@ -319,12 +341,12 @@ Variable</h2></td></tr>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aesp8266_8c_html_aa5e1cb340835d3ac9cb4c407ca03c1a2"><div class="ttname"><a href="esp8266_8c.html#aa5e1cb340835d3ac9cb4c407ca03c1a2">esp_terminalTransmit</a></div><div class="ttdeci">void esp_terminalTransmit(char *sendmsg)</div><div class="ttdef"><b>Definition:</b> esp8266.c:453</div></div>
-<div class="ttc" id="alcd_8h_html_a2190e3cca1f36422ffbff3de09bccbec"><div class="ttname"><a href="lcd_8h.html#a2190e3cca1f36422ffbff3de09bccbec">first_line</a></div><div class="ttdeci">const char first_line[]</div><div class="ttdef"><b>Definition:</b> lcd.h:25</div></div>
-<div class="ttc" id="alcd_8h_html_a8683f936ecb5cd7b43c33a01a435a7ba"><div class="ttname"><a href="lcd_8h.html#a8683f936ecb5cd7b43c33a01a435a7ba">display_addr</a></div><div class="ttdeci">const uint8_t display_addr</div><div class="ttdoc">LCD generelle kommandoer.</div><div class="ttdef"><b>Definition:</b> lcd.h:23</div></div>
-<div class="ttc" id="alcd_8h_html_a47c73631070ab0c6b9e7574163b90d87"><div class="ttname"><a href="lcd_8h.html#a47c73631070ab0c6b9e7574163b90d87">empty_line</a></div><div class="ttdeci">const char empty_line[]</div><div class="ttdef"><b>Definition:</b> lcd.h:27</div></div>
+<div class="ttc" id="alcd_8h_html_a2190e3cca1f36422ffbff3de09bccbec"><div class="ttname"><a href="lcd_8h.html#a2190e3cca1f36422ffbff3de09bccbec">first_line</a></div><div class="ttdeci">const char first_line[]</div><div class="ttdef"><b>Definition:</b> lcd.h:27</div></div>
+<div class="ttc" id="alcd_8h_html_a8683f936ecb5cd7b43c33a01a435a7ba"><div class="ttname"><a href="lcd_8h.html#a8683f936ecb5cd7b43c33a01a435a7ba">display_addr</a></div><div class="ttdeci">const uint8_t display_addr</div><div class="ttdef"><b>Definition:</b> lcd.h:25</div></div>
+<div class="ttc" id="alcd_8h_html_a47c73631070ab0c6b9e7574163b90d87"><div class="ttname"><a href="lcd_8h.html#a47c73631070ab0c6b9e7574163b90d87">empty_line</a></div><div class="ttdeci">const char empty_line[]</div><div class="ttdef"><b>Definition:</b> lcd.h:29</div></div>
 <div class="ttc" id="ai2c_8c_html_a2afd8da70c8c74e56659da3dd6f60dd0"><div class="ttname"><a href="i2c_8c.html#a2afd8da70c8c74e56659da3dd6f60dd0">i2c_write_serial</a></div><div class="ttdeci">void i2c_write_serial(uint8_t addr, char *data, uint8_t length)</div><div class="ttdef"><b>Definition:</b> i2c.c:46</div></div>
-<div class="ttc" id="alcd_8h_html_aac625d7a605ca9aca6a1775119fc307d"><div class="ttname"><a href="lcd_8h.html#aac625d7a605ca9aca6a1775119fc307d">display_init</a></div><div class="ttdeci">const char display_init[]</div><div class="ttdef"><b>Definition:</b> lcd.h:24</div></div>
-<div class="ttc" id="alcd_8h_html_a7c8aec3447e717abf7f853bd11b8a5ec"><div class="ttname"><a href="lcd_8h.html#a7c8aec3447e717abf7f853bd11b8a5ec">shift_line</a></div><div class="ttdeci">const char shift_line[]</div><div class="ttdef"><b>Definition:</b> lcd.h:26</div></div>
+<div class="ttc" id="alcd_8h_html_aac625d7a605ca9aca6a1775119fc307d"><div class="ttname"><a href="lcd_8h.html#aac625d7a605ca9aca6a1775119fc307d">display_init</a></div><div class="ttdeci">const char display_init[]</div><div class="ttdef"><b>Definition:</b> lcd.h:26</div></div>
+<div class="ttc" id="alcd_8h_html_a7c8aec3447e717abf7f853bd11b8a5ec"><div class="ttname"><a href="lcd_8h.html#a7c8aec3447e717abf7f853bd11b8a5ec">shift_line</a></div><div class="ttdeci">const char shift_line[]</div><div class="ttdef"><b>Definition:</b> lcd.h:28</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

@@ -7,6 +7,6 @@ var i2c_8c =
     [ "i2c_master_stop", "i2c_8c.html#a4524baa32fdd90e664342c610dc1d177", null ],
     [ "i2c_master_wait", "i2c_8c.html#adb646b67ce754741a06e63ea28d05259", null ],
     [ "i2c_portScan", "i2c_8c.html#a1b96df492284070c5fb8ac5daa5a53a1", null ],
-    [ "i2c_read_serial", "i2c_8c.html#abeb4d291e6ada6f8ad8cdfde914e92ab", null ],
+    [ "i2c_read_serial", "i2c_8c.html#a37341f60c7a53b22056ff2c3b014b8da", null ],
     [ "i2c_write_serial", "i2c_8c.html#a2afd8da70c8c74e56659da3dd6f60dd0", null ]
 ];

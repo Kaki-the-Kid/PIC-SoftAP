@@ -2,6 +2,7 @@ var tcpip_8h =
 [
     [ "SERVER", "struct_s_e_r_v_e_r.html", "struct_s_e_r_v_e_r" ],
     [ "esp_serverInit", "tcpip_8h.html#a41d46cd76c6df3172ba689fcc762741d", null ],
+    [ "TCPIP_H", "tcpip_8h.html#a9993657cbd456df304c19a45162c9129", null ],
     [ "server_t", "tcpip_8h.html#aa7e020a372915ca19b85ae705d48b642", null ],
     [ "tcpip_checkInternet", "tcpip_8h.html#aa7fc5a1fc8a0ab5d1905aaddc0caba86", null ],
     [ "tcpip_closeTCPIPConnection", "tcpip_8h.html#a0236b391402914d487f7836b2dbcfa7e", null ],
@@ -26,5 +27,6 @@ var tcpip_8h =
     [ "tcpip_setTCPReceiveMode", "tcpip_8h.html#a160d21a4dfbe5d0cb838838b907644d1", null ],
     [ "tcpip_showIPDRemoteIP", "tcpip_8h.html#afd01b6a66109621bee805374a816fac0", null ],
     [ "toogleGPIO", "tcpip_8h.html#acd18b612a71ce6aa5683c3d027951193", null ],
+    [ "htmlMsgPart1", "tcpip_8h.html#a3abc3df4ec32e6ef02d3303a53c96c84", null ],
     [ "server", "tcpip_8h.html#a589e4f516d0f2129018cd6260892be0f", null ]
 ];

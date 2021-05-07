@@ -66,15 +66,15 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 <div class="contents">
 <div class="textblock"><h1><a class="anchor" id="intro_sec"></a>
 Resume</h1>
-<p>I forbindelse med lÃļsning af opgave i Embedded Controller skulle <br  />
+<p>I forbindelse med løsning af opgave i Embedded Controller skulle <br  />
  vi lave en styring af ESP01 fra PIC kreds. Opgaven var, at vise en <br  />
  webside med data fra PIC kredsen og datalogger, som var opbygget i <br  />
- tidligere fag. Derfra kom ideen til, at lave en fuldt understÃļttelse af alle funktioner som ESP01 har. <br  />
+ tidligere fag. Derfra kom ideen til, at lave en fuldt understøttelse af alle funktioner som ESP01 har. <br  />
 </p>
 <p>PIC kreds brugt i udvikling af projektet: PIC18F26K22</p>
 <p>ESP01 er firmware opdateret til [TODO]</p>
 <p>EEPROM henviser til ekstern eeprom</p>
-<p>Copyright 2019-2020 Karsten 'Kaki' Reitan SÃļrensen<br  />
+<p>Copyright 2019-2020 Karsten 'Kaki' Reitan Sørensen<br  />
  version 1.00-development</p>
 <ul>
 <li><a class="el" href="_i2_c.html">Information om I2C protokollen</a></li>
@@ -85,13 +85,13 @@ Resume</h1>
 </ul>
 <hr  />
 <h1><a class="anchor" id="project_goals"></a>
-MÃĨl med projektet</h1>
+Mål med projektet</h1>
 <p>[TODO] </p><h4>TCP/IP forbindelse</h4>
 <h4>SoftAP funktionen</h4>
 <h4>HTML side</h4>
-<h4>HÃĨndtering af GET request</h4>
+<h4>Håndtering af GET request</h4>
 <ul>
-<li>TÃĶnde og slukke lysdiode pÃĨ IO pin</li>
+<li>Tænde og slukke lysdiode på IO pin</li>
 </ul>
 <hr  />
 <h1><a class="anchor" id="project_structure"></a>
@@ -101,7 +101,7 @@ Projekt struktur</h1>
 <li>MCC Generated Files<ul>
 <li><a class="el" href="device__config_8h.html">device_config.h</a></li>
 <li><a class="el" href="eusart1_8h.html">eusart1.h</a></li>
-<li><a class="el" href="eusart2_8h.html">eusart2.h</a></li>
+<li>eusart2.h</li>
 <li><a class="el" href="interrupt__manager_8h.html">interrupt_manager.h</a></li>
 <li><a class="el" href="mcc_8h.html">mcc.h</a></li>
 <li><a class="el" href="pin__manager_8h.html">pin_manager.h</a></li>
@@ -156,7 +156,7 @@ Projekt struktur</h1>
 <li>MCC Generated Files<ul>
 <li><a class="el" href="device__config_8c.html">device_config.c</a></li>
 <li><a class="el" href="eusart1_8c.html">eusart1.c</a></li>
-<li><a class="el" href="eusart2_8c.html">eusart2.c</a></li>
+<li>eusart2.c</li>
 <li><a class="el" href="interrupt__manager_8c.html">interrupt_manager.c</a></li>
 <li><a class="el" href="mcc_8c.html">mcc.c</a></li>
 <li><a class="el" href="pin__manager_8c.html">pin_manager.c</a></li>
@@ -181,7 +181,7 @@ Fil struktur</h1>
 <li><em>dist</em><br  />
  Filer generet af compiler</li>
 <li><em>docs</em><br  />
- <em><a class="el" href="mainpage_8dox.html">mainpage.dox</a></em> bliver brugt af Doxygen til at generere forsiden pÃĨ projektet</li>
+ <em><a class="el" href="mainpage_8dox.html">mainpage.dox</a></em> bliver brugt af Doxygen til at generere forsiden på projektet</li>
 <li><em>doxygen</em><br  />
  Indeholder den overordnede dokumentation af projektet i HTML version. Genreret med Doxygen</li>
 <li><em>mcc_generated_files</em><br  />
@@ -198,26 +198,26 @@ Hardware</h1>
 <p><img src="./assets/img/schematic.png" alt="" class="inline"/></p>
 <hr  />
 <h1><a class="anchor" id="project_tools"></a>
-VÃĶrktÃļjer</h1>
+Værktøjer</h1>
 <ul>
 <li>MPLAB X IDE v5.25<br  />
- IDE fra Microchips baseret pÃĨ Netbeans. Indeholder alle biblioteker til de forskellige PIC kredse.<br  />
+ IDE fra Microchips baseret på Netbeans. Indeholder alle biblioteker til de forskellige PIC kredse.<br  />
  Webside: <a href="https://www.microchip.com/mplab/mplab-x-ide">https://www.microchip.com/mplab/mplab-x-ide</a></li>
 <li>Microchip Code Configurator<br  />
- HjÃĶlpevÃĶrktÃļj til MPLABS IDE, som gÃļr det nemmere, at konfigurerer de forskellige dele af PIC kredsens opsÃĶtning.</li>
+ Hjælpeværktøj til MPLABS IDE, som gør det nemmere, at konfigurerer de forskellige dele af PIC kredsens opsætning.</li>
 <li>Microchip XC8 compiler v2.10<br  />
  Webside: <a href="https://www.microchip.com/mplab/compilers">https://www.microchip.com/mplab/compilers</a></li>
 <li>Doxygen v1.8.17<br  />
  Kan implementeres som plugin i MPLabs / NetBeans IDE.<br  />
- Fordi jeg har skrevet stÃļrstedelen af kommentarer pÃĨ dansk skal DoxyWizard instilles til <em>Windows-1252</em> formattering af teksten. I IDE kan man bruge UTF-8 som normalt.<br  />
- DoxÃ―gen dokumentation: <a href="https://http://www.doxygen.nl/index.html">https://http://www.doxygen.nl/index.html</a></li>
+ Fordi jeg har skrevet størstedelen af kommentarer på dansk skal DoxyWizard instilles til <em>Windows-1252</em> formattering af teksten. I IDE kan man bruge UTF-8 som normalt.<br  />
+ Doxýgen dokumentation: <a href="https://http://www.doxygen.nl/index.html">https://http://www.doxygen.nl/index.html</a></li>
 </ul>
 <hr  />
 <h1><a class="anchor" id="project_other_text"></a>
-Kilder, inspiration og lÃĶring</h1>
+Kilder, inspiration og læring</h1>
 <ul>
 <li>Deepblue: UART | Serial Communication With PIC Microcontrollers Tutorial<br  />
- Side som indeholder et vÃĶld af information om seriel kommunikation.<br  />
+ Side som indeholder et væld af information om seriel kommunikation.<br  />
  Webside: <a href="https://deepbluembedded.com/uart-pic-microcontroller-tutorial/">https://deepbluembedded.com/uart-pic-microcontroller-tutorial/</a></li>
 </ul>
 <hr  />

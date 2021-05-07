@@ -1,11 +1,12 @@
 var eeprom_8h =
 [
+    [ "EEPROM_H", "eeprom_8h.html#a3ad140addc3ca8973cbc89b2fb52a916", null ],
     [ "eeprom_dumpLogData", "eeprom_8h.html#a5e4d2a7203e2352507292f67bf2935f0", null ],
     [ "eeprom_initEeprom", "eeprom_8h.html#a6f2a4555ed864aace393eb03dee81a93", null ],
     [ "eeprom_logData", "eeprom_8h.html#ada42121a8af0be6bbe25de6ab07d0867", null ],
     [ "eeprom_testData", "eeprom_8h.html#a3af89e4418fc56e2b435ae02f4dd7dd8", null ],
     [ "eeprom_addr", "eeprom_8h.html#a40bea318237f8ef4c61e6e4cf8dfcdb1", null ],
-    [ "eeprom_buffer", "eeprom_8h.html#a6c08150b4246c98a4eca674fe133a4ff", null ],
+    [ "eeprom_buffer", "eeprom_8h.html#a26363bf933cc65414eca4056b39071be", null ],
     [ "eeprom_cssTemplate", "eeprom_8h.html#a053d1350c0edb955fdcc66bc6afcefbb", null ],
     [ "eeprom_fontTemplate", "eeprom_8h.html#a9dc7e41e7e4d0ccd8d4982765b4ea219", null ],
     [ "eeprom_htmlTemplate", "eeprom_8h.html#af286fe48f0b254c814c4c6d263b654be", null ],
